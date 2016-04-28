@@ -50,7 +50,7 @@ logbook:
 sun:
 
 http:
-  api_password: dummy
+  api_password: ***REMOVED***
 
 mqtt:
   broker: localhost
