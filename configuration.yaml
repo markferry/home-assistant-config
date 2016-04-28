@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Whale Barn
+  name: WB
   # Location required to calculate the time the sun rises and sets
   latitude: 52.23492
   longitude: -0.04496
@@ -8,6 +8,22 @@ homeassistant:
   temperature_unit: C
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
+
+  customize:
+      device_tracker.mark_phone:
+        entity_picture: static/wb-icons/wb_mark.png
+        friendly_name: "Mark's Phone"
+      device_tracker.anne_phone:
+        entity_picture: static/wb-icons/wb_anne.png
+      device_tracker.jerome_phone:
+        entity_picture: static/wb-icons/wb_jerome.png
+      device_tracker.ros_phone:
+        entity_picture: static/wb-icons/wb_ros.png
+      device_tracker.thomas_phone:
+        entity_picture: static/wb-icons/wb_thomas.png
+      device_tracker.liane_phone:
+        entity_picture: static/wb-icons/wb_liane.png
+
 
 # Discover some devices automatically
 discovery:
@@ -52,6 +68,7 @@ mqtt:
 #  device: /dev/ttyUSB22
 #  debug: False
 #
+
 device_tracker:
 - platform: snmp
   host: 192.168.7.1
