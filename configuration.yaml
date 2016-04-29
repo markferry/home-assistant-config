@@ -11,18 +11,18 @@ homeassistant:
 
   customize:
       device_tracker.mark_phone:
-        entity_picture: static/wb-icons/wb_mark.png
+        entity_picture: /local/wb-icons/wb_mark.png
         friendly_name: "Mark's Phone"
       device_tracker.anne_phone:
-        entity_picture: static/wb-icons/wb_anne.png
+        entity_picture: /local/wb-icons/wb_anne.png
       device_tracker.jerome_phone:
-        entity_picture: static/wb-icons/wb_jerome.png
+        entity_picture: /local/wb-icons/wb_jerome.png
       device_tracker.ros_phone:
-        entity_picture: static/wb-icons/wb_ros.png
+        entity_picture: /local/wb-icons/wb_ros.png
       device_tracker.thomas_phone:
-        entity_picture: static/wb-icons/wb_thomas.png
+        entity_picture: /local/wb-icons/wb_thomas.png
       device_tracker.liane_phone:
-        entity_picture: static/wb-icons/wb_liane.png
+        entity_picture: /local/wb-icons/wb_liane.png
 
 
 # Discover some devices automatically
