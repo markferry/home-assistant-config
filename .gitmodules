@@ -1,0 +1,3 @@
+[submodule "www/wb-icons"]
+	path = www/wb-icons
+	url = hastur:/home/gnome/repos/wb-icons.git
