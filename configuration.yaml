@@ -54,7 +54,7 @@ rfxtrx:
   device: /dev/ttyUSB22
   debug: False
 
-#device_tracker:
+device_tracker:
 #- platform: snmp
 #  host: 192.168.7.1
 #  community: public
