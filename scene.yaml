@@ -1,0 +1,37 @@
+- name: Lounge Off
+  entities:
+    group.lounge_lights:
+      state: off
+    thermostat.lounge_east_comfort_setpoint_30:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30:
+      temperature: 10
+    media_player.lounge:
+      state: paused
+- name: Lounge Cosy
+  entities:
+    group.lounge_lights:
+      state: on
+      brightness: 20
+    thermostat.lounge_east_comfort_setpoint_30:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30:
+      temperature: 20
+- name: Lounge Movie
+  entities:
+    group.lounge_lights:
+      state: on
+      brightness: 50
+    thermostat.lounge_east_comfort_setpoint_30:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30:
+      temperature: 20
+- name: Lounge Bright
+  entities:
+    group.lounge_lights:
+      state: on
+      brightness: 100
+    thermostat.lounge_east_comfort_setpoint_30:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30:
+      temperature: 20
