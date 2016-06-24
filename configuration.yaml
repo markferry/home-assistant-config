@@ -54,14 +54,14 @@ rfxtrx:
   device: /dev/ttyUSB22
   debug: False
 
-device_tracker:
-- platform: snmp
-  host: 192.168.7.1
-  community: public
-  baseoid: 1.3.6.1.2.1.4.22.1.2
-  track_new_devices: yes
-  interval_seconds: 30
-  consider_home: 180
+#device_tracker:
+#- platform: snmp
+#  host: 192.168.7.1
+#  community: public
+#  baseoid: 1.3.6.1.2.1.4.22.1.2
+#  track_new_devices: yes
+#  interval_seconds: 30
+#  consider_home: 180
 
 - platform: owntracks
   max_gps_accuracy: 200
@@ -408,8 +408,8 @@ switch:
   platform: mqtt
   retain: true
 
-light: !include mock_light.yaml
-sensor: !include mock_sensor.yaml
-switch: !include mock_switch.yaml
-thermostat: !include mock_thermostat.yaml
+#light: !include mock_light.yaml
+#sensor: !include mock_sensor.yaml
+#switch: !include mock_switch.yaml
+#thermostat: !include mock_thermostat.yaml
 
