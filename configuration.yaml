@@ -9,160 +9,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
 
-  customize:
-      device_tracker.mark_phone:
-        entity_picture: /local/wb-icons/wb_mark.png
-        friendly_name: "Mark's Phone"
-      device_tracker.anne_phone:
-        entity_picture: /local/wb-icons/wb_anne.png
-      device_tracker.jerome_phone:
-        entity_picture: /local/wb-icons/wb_jerome.png
-      device_tracker.ros_phone:
-        entity_picture: /local/wb-icons/wb_ros.png
-      device_tracker.thomas_phone:
-        entity_picture: /local/wb-icons/wb_thomas.png
-      device_tracker.liane_phone:
-        entity_picture: /local/wb-icons/wb_liane.png
-      sensor.aeotec_multi_sensor_luminance_3:
-        friendly_name: Hall Luminance
-      sensor.aeotec_multi_sensor_relative_humidity_3:
-        friendly_name: Hall Humidity
-      sensor.aeotec_multi_sensor_temperature_3:
-        friendly_name: Hall Temperature
-      binary_sensor.aeotec_multi_sensor_sensor_3:
-        friendly_name: Hall Motion
-      light.__level_40:
-        friendly_name: Unused Dimmer
-      light.__level_41:
-        friendly_name: Ballroom North
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13:
-        friendly_name: Hall West Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_14:
-        friendly_name: Study East Valve
-        polling_intensity: 0
-      light._level_14:
-        friendly_name: Study East Valve_
-        polling_intensity: 0
-      light.__level_14:
-        friendly_name: Study East Valve__
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_15:
-        friendly_name: Study West Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_24:
-        friendly_name: Hall East Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_25:
-        friendly_name: Library Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_29:
-        friendly_name: Mark's Bedroom Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_30:
-        friendly_name: Lounge East Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_33:
-        friendly_name: Ballroom East Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_34:
-        friendly_name: Kitchen Valve
-        polling_intensity: 0
-      light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_43:
-        friendly_name: Hall Annex Valve
-        polling_intensity: 0
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_13:
-        friendly_name: Hall West Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_14:
-        friendly_name: Study East Temperature
-        polling_intensity: 5
-      sensor.study_east_temperature_14:
-        friendly_name: Study-East Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_15:
-        friendly_name: Study West Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_24:
-        friendly_name: Hall East Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_25:
-        friendly_name: Library Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_29:
-        friendly_name: Mark's Bedroom Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_30:
-        friendly_name: Lounge East Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_33:
-        friendly_name: Ballroom East Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_34:
-        friendly_name: Kitchen Temperature
-        polling_intensity: 5
-      sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_43:
-        friendly_name: Hall Annex Temperature
-        polling_intensity: 5
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13:
-        friendly_name: Hall West Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14:
-        friendly_name: Study East Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15:
-        friendly_name: Study West Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24:
-        friendly_name: Hall East Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25:
-        friendly_name: Library Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29:
-        friendly_name: Mark's Bedroom Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30:
-        friendly_name: Lounge East Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33:
-        friendly_name: Ballroom East Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34:
-        friendly_name: Kitchen Setpoint
-      thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43:
-        friendly_name: Hall Annex Setpoint
-      light.fibaro_system_fgd212_dimmer_2_level_39:
-        friendly_name: Mark's Bedroom Overhead
-      thermostat.horstmann_scsc17_thermostat_heating_1_35:
-        friendly_name: Main Heating Setpoint
-      sensor.horstmann_scsc17_thermostat_temperature_35:
-        friendly_name: Main Heating Temperature
-      switch.horstmann_scsc17_thermostat_switch_35:
-        friendly_name: Main Heating Holiday Mode
-      thermostat.horstmann_scsc17_thermostat_heating_1_50:
-        friendly_name: Annex Heating Setpoint
-      sensor.horstmann_scsc17_thermostat_temperature_50:
-        friendly_name: Annex Heating Temperature
-      switch.horstmann_scsc17_thermostat_switch_50:
-        friendly_name: Annex Heating Holiday Mode
-      thermostat.horstmann_unknown_type0003_id0002_mode_36:
-        friendly_name: Main Heating Mode
-      thermostat.horstmann_unknown_type0003_id0002_mode_36_2:
-        friendly_name: Main Hot Water Mode
-      thermostat.horstmann_unknown_type0003_id0002_mode_36_3:
-        friendly_name: Main Boiler All Modes
-      switch.horstmann_unknown_type0003_id0002_switch_36:
-        friendly_name: Main Heating Manual
-      switch.horstmann_unknown_type0003_id0002_switch_36_2:
-        friendly_name: Main Hot Water Manual
-      switch.horstmann_unknown_type0003_id0002_switch_36_3:
-        friendly_name: Main Boiler All Circuits
-      switch.f40fa81__0a140000f40fa801010060:
-        friendly_name: Lounge East
-      switch.0a140000f40fa801010050:
-        friendly_name: RFX8010
-      switch.0a140001f40fa810050040:
-        friendly_name: RFX8100
-      switch.0a14000cf40fa910020040:
-        friendly_name: RFX9100
-      switch.f40fa816__0a140002f40fa810020050:
-        friendly_name: Lounge Lights Off
-      media_player.txnr636_0009b09961fb:
-        friendly_name: Ballroom Amplifier
+  customize: !include customize.yaml
 
 # Discover some devices automatically
 discovery:
@@ -230,23 +77,35 @@ device_tracker:
 ifttt:
   key: ***REMOVED***
 
+scene: !include scene.yaml
+automation: !include automation.yaml
+
 ########## AUTOGENERATED ############
 #
 
 group:
   heating_valves:
     entities:
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_14
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_15
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_24
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_25
+    - light.hall_west_level_13
+    - light.study_east_level_14
+    - light.study_west_level_15
+    - light.hall_east_level_24
     - light.library_level_25
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_29
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_30
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_33
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_34
-    - light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_43
+    - light.bedroom_mark_level_29
+    - light.lounge_east_level_30
+    - light.ballroom_east_level_33
+    - light.kitchen_level_34
+    - light.annex_hall_level_43
+    - light._level_13
+    - light._level_14
+    - light._level_15
+    - light._level_24
+    - light._level_25
+    - light._level_29
+    - light._level_30
+    - light._level_33
+    - light._level_34
+    - light._level_43
     name: Heating Demand
     view: false
   annex_heating:
@@ -270,13 +129,12 @@ group:
     view: true
   ballroom_heating:
     entities:
+    - thermostat.ballroom_east_comfort_setpoint_33
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_33
+    - sensor.ballroom_east_temperature_33
     name: Ballroom Heating
     view: false
   ballroom_lights:
-    entities:
-    - light.__level_41
     name: Ballroom Lights
     view: false
   ballroom_scenes:
@@ -313,12 +171,15 @@ group:
     view: true
   hall_heating:
     entities:
+    - thermostat.hall_west_comfort_setpoint_13
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_13
+    - sensor.hall_west_temperature_13
+    - thermostat.hall_east_comfort_setpoint_24
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_24
+    - sensor.hall_east_temperature_24
+    - thermostat.annex_hall_comfort_setpoint_43
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_43
+    - sensor.annex_hall_temperature_43
     name: Hall Heating
     view: false
   hall_lights:
@@ -338,8 +199,9 @@ group:
     view: true
   kitchen_heating:
     entities:
+    - thermostat.kitchen_comfort_setpoint_34
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_34
+    - sensor.kitchen_temperature_34
     name: Kitchen Heating
     view: false
   kitchen_lights:
@@ -363,9 +225,8 @@ group:
     view: true
   library_heating:
     entities:
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_25
     - thermostat.library_comfort_setpoint_25
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
     - sensor.library_temperature_25
     name: Library Heating
     view: false
@@ -390,8 +251,9 @@ group:
     view: true
   lounge_heating:
     entities:
+    - thermostat.lounge_east_comfort_setpoint_30
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_30
+    - sensor.lounge_east_temperature_30
     name: Lounge Heating
     view: false
   lounge_lights:
@@ -422,8 +284,9 @@ group:
     view: false
   marks_bedroom_heating:
     entities:
+    - thermostat.bedroom_mark_comfort_setpoint_29
     - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_29
+    - sensor.bedroom_mark_temperature_29
     name: Mark's Bedroom Heating
     view: false
   marks_bedroom_lights:
@@ -458,13 +321,11 @@ group:
     view: true
   study_heating:
     entities:
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_15
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
-    - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_14
     - thermostat.study_east_comfort_setpoint_14
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
     - sensor.study_east_temperature_14
     - thermostat.study_west_comfort_setpoint_15
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
     - sensor.study_west_temperature_15
     name: Study Heating
     view: false
@@ -503,85 +364,6 @@ media_player:
 - name: Ballroom Amplifier
   platform: onkyo
   host: ballroom-amp
-scene:
-- entities: {}
-  name: Study Off
-- entities: {}
-  name: Study Work
-- entities: {}
-  name: Study Relax
-- entities:
-    light.159782931:
-      state: false
-    light.159782932:
-      state: false
-    light.159947921:
-      state: false
-  name: Lounge Off
-- entities:
-    light.159782931:
-      state: false
-    light.159782932:
-      state: false
-    light.159947921:
-      state: false
-  name: Lounge Cosy
-- entities:
-    light.159782931:
-      state: false
-    light.159782932:
-      state: false
-    light.159947921:
-      state: false
-  name: Lounge Movie
-- entities:
-    light.159782931:
-      state: false
-    light.159782932:
-      state: false
-    light.159947921:
-      state: false
-  name: Lounge Bright
-- entities:
-    light.fibaro_system_fgd212_dimmer_2_level_39:
-      state: false
-  name: Mark's Bedroom Off
-- entities:
-    light.fibaro_system_fgd212_dimmer_2_level_39:
-      state: false
-  name: Mark's Bedroom Sleep
-- entities:
-    light.fibaro_system_fgd212_dimmer_2_level_39:
-      state: false
-  name: Mark's Bedroom Play
-- entities: {}
-  name: Kitchen Off
-- entities: {}
-  name: Kitchen Cosy
-- entities: {}
-  name: Kitchen Bright
-- entities:
-    light.__level_41:
-      state: false
-  name: Ballroom Off
-- entities:
-    light.__level_41:
-      state: false
-  name: Ballroom Party
-- entities:
-    light.__level_41:
-      state: false
-  name: Ballroom Movie
-- entities:
-    light.__level_41:
-      state: false
-  name: Ballroom Bright
-- entities: {}
-  name: Library Off
-- entities: {}
-  name: Library Chat
-- entities: {}
-  name: Library Read
 switch:
 - command_topic: ha/study/demand/command
   name: Study Demand
@@ -625,12 +407,9 @@ switch:
   payload_on: 'ON'
   platform: mqtt
   retain: true
-thermostat: []
 
-light:
- platform: rfxtrx
- automatic_add: True
+light: !include mock_light.yaml
+sensor: !include mock_sensor.yaml
+switch: !include mock_switch.yaml
+thermostat: !include mock_thermostat.yaml
 
-switch:
- platform: rfxtrx
- automatic_add: True
