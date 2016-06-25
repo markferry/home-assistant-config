@@ -1,0 +1,5 @@
+name: WB
+view: true
+entities:
+- updater.updater
+- group.people

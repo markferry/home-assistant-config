@@ -1,0 +1,23 @@
+#- platform: snmp
+#  host: 192.168.7.1
+#  community: public
+#  baseoid: 1.3.6.1.2.1.4.22.1.2
+#  track_new_devices: yes
+#  interval_seconds: 30
+#  consider_home: 180
+
+- platform: owntracks
+  max_gps_accuracy: 200
+
+- platform: nmap_tracker
+  hosts: 192.168.7.7-250
+  home_interval: 30
+  track_new_devices: yes
+  consider_home: 1800
+
+- platform: bluetooth_tracker
+
+#- platform: ubus
+#  host: 192.168.7.1
+#  username: root
+#  password: XXXX
