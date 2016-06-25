@@ -134,7 +134,15 @@ group:
     - sensor.ballroom_east_temperature_33
     name: Ballroom Heating
     view: false
+  ballroom_setpoints:
+    entities:
+    - thermostat.ballroom_east_comfort_setpoint_33
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
+    name: Ballroom Setpoints
+    view: false
   ballroom_lights:
+    entities:
+    - light.unused_41_level_41
     name: Ballroom Lights
     view: false
   ballroom_scenes:
@@ -182,6 +190,16 @@ group:
     - sensor.annex_hall_temperature_43
     name: Hall Heating
     view: false
+  hall_setpoints:
+    name: Hall Setpoints
+    view: false
+    entities:
+    - thermostat.hall_west_comfort_setpoint_13
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
+    - thermostat.hall_east_comfort_setpoint_24
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
+    - thermostat.annex_hall_comfort_setpoint_43
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
   hall_lights:
     name: Hall Lights
     view: false
@@ -204,6 +222,12 @@ group:
     - sensor.kitchen_temperature_34
     name: Kitchen Heating
     view: false
+  kitchen_setpoints:
+    name: Kitchen Setpoints
+    view: false
+    entities:
+    - thermostat.kitchen_comfort_setpoint_34
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
   kitchen_lights:
     name: Kitchen Lights
     view: false
@@ -230,6 +254,12 @@ group:
     - sensor.library_temperature_25
     name: Library Heating
     view: false
+  library_setpoints:
+    name: Library Setpoints
+    view: false
+    entities:
+    - thermostat.library_comfort_setpoint_25
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
   library_lights:
     name: Library Lights
     view: false
@@ -256,6 +286,12 @@ group:
     - sensor.lounge_east_temperature_30
     name: Lounge Heating
     view: false
+  lounge_setpoints:
+    name: Lounge Setpoints
+    view: false
+    entities:
+    - thermostat.lounge_east_comfort_setpoint_30
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
   lounge_lights:
     entities:
     - light.159947921
@@ -289,9 +325,16 @@ group:
     - sensor.bedroom_mark_temperature_29
     name: Mark's Bedroom Heating
     view: false
+  marks_bedroom_setpoints:
+    name: Mark's Bedroom Setpoints
+    view: false
+    entities:
+    - thermostat.bedroom_mark_comfort_setpoint_29
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
   marks_bedroom_lights:
     entities:
     - light.fibaro_system_fgd212_dimmer_2_level_39
+    - light.bedroom_mark_level_39
     name: Mark's Bedroom Lights
     view: false
   marks_bedroom_scenes:
@@ -329,6 +372,14 @@ group:
     - sensor.study_west_temperature_15
     name: Study Heating
     view: false
+  study_setpoints:
+    name: Study Setpoints
+    view: false
+    entities:
+    - thermostat.study_east_comfort_setpoint_14
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
+    - thermostat.study_west_comfort_setpoint_15
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
   study_lights:
     name: Study Lights
     view: false
