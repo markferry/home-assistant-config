@@ -1,27 +1,45 @@
+group.mark_present:
+  entity_picture: /local/wb-icons/wb_mark.png
+  friendly_name: "Mark"
+group.anne_present:
+  entity_picture: /local/wb-icons/wb_anne.png
+  friendly_name: "Anne"
+group.jerome_present:
+  entity_picture: /local/wb-icons/wb_jerome.png
+  friendly_name: "Jerome"
+group.ros_present:
+  entity_picture: /local/wb-icons/wb_ros.png
+  friendly_name: "Ros"
+group.thomas_present:
+  entity_picture: /local/wb-icons/wb_tom.png
+  friendly_name: "Thomas"
+group.liane_present:
+  entity_picture: /local/wb-icons/wb_liane.png
+  friendly_name: "Liane"
 device_tracker.mark_phone:
   entity_picture: /local/wb-icons/wb_mark.png
   friendly_name: "Mark's Phone"
 device_tracker.anne_phone:
-  entity_picture: /local/wb-icons/wb_anne.png
+  entity_picture: /local/wb-icons/ext_owntracks.png
 device_tracker.jerome_phone:
-  entity_picture: /local/wb-icons/wb_jerome.png
+  entity_picture: /local/wb-icons/ext_owntracks.png
 device_tracker.ros_phone:
-  entity_picture: /local/wb-icons/wb_ros.png
+  entity_picture: /local/wb-icons/ext_owntracks.png
 device_tracker.thomas_phone:
-  entity_picture: /local/wb-icons/wb_thomas.png
+  entity_picture: /local/wb-icons/ext_owntracks.png
 device_tracker.liane_phone:
-  entity_picture: /local/wb-icons/wb_liane.png
-sensor.aeotec_multi_sensor_luminance_3:
+  entity_picture: /local/wb-icons/ext_owntracks.png
+sensor.aeotec_dsb05_multisensor_luminance_3:
   friendly_name: Hall Luminance
-sensor.aeotec_multi_sensor_relative_humidity_3:
+sensor.aeotec_dsb05_multisensor_relative_humidity_3:
   friendly_name: Hall Humidity
-sensor.aeotec_multi_sensor_temperature_3:
+sensor.aeotec_dsb05_multisensor_temperature_3:
   friendly_name: Hall Temperature
-binary_sensor.aeotec_multi_sensor_sensor_3:
+binary_sensor.aeotec_dsb05_multisensor_sensor_3:
   friendly_name: Hall Motion
 light.__level_40:
   friendly_name: Unused Dimmer
-light.__level_41:
+light.unused41_level_41:
   friendly_name: Ballroom North
   polling_intensity: 0
 light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13:
@@ -29,12 +47,6 @@ light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13:
   polling_intensity: 0
 light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_14:
   friendly_name: Study East Valve
-  polling_intensity: 0
-light._level_14:
-  friendly_name: Study East Valve_
-  polling_intensity: 0
-light.__level_14:
-  friendly_name: Study East Valve__
   polling_intensity: 0
 light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_15:
   friendly_name: Study West Valve

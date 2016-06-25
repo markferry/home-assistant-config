@@ -54,25 +54,8 @@ rfxtrx:
   device: /dev/ttyUSB22
   debug: False
 
-device_tracker:
-- platform: snmp
-  host: 192.168.7.1
-  community: public
-  baseoid: 1.3.6.1.2.1.4.22.1.2
-  track_new_devices: yes
-  interval_seconds: 30
-  consider_home: 180
 
-- platform: owntracks
-  max_gps_accuracy: 200
-
-#- platform: nmap_tracker
-#  hosts: 192.168.7.7-250
-#  home_interval: 30
-#  track_new_devices: yes
-# consider_home will be the number of seconds to wait till marking someone as not home after not being seen on scans.
-# 900 seconds = 15 minutes
-#  consider_home: 1800
+device_tracker: !include device_tracker.yaml
 
 ifttt:
   key: ***REMOVED***
@@ -84,6 +67,7 @@ automation: !include automation.yaml
 #
 
 group:
+  default_view: !include default_view.yaml
   heating_valves:
     entities:
     - light.hall_west_level_13
@@ -155,10 +139,10 @@ group:
     view: false
   bedroommark:
     entities:
-    - switch.marks_bedroom_amp
     - media_player.marks_bedroom
     - group.marks_bedroom_lights
     - group.marks_bedroom_heating
+    - group.marks_bedroom_appliances
     - group.marks_bedroom_scenes
     icon: mdi:hotel
     name: Mark's Bedroom
@@ -170,10 +154,10 @@ group:
     - group.hall_scenes
     - group.main_heating
     - group.annex_heating
-    - sensor.aeotec_multi_sensor_luminance_3
-    - sensor.aeotec_multi_sensor_relative_humidity_3
-    - sensor.aeotec_multi_sensor_temperature_3
-    - binary_sensor.aeotec_multi_sensor_sensor_3
+    - sensor.aeotec_dsb05_multisensor_luminance_3
+    - sensor.aeotec_dsb05_multisensor_relative_humidity_3
+    - sensor.aeotec_dsb05_multisensor_temperature_3
+    - binary_sensor.aeotec_dsb05_multisensor_sensor_3
     icon: mdi:fullscreen-exit
     name: Hall
     view: true
@@ -344,21 +328,19 @@ group:
     - scene.marks_bedroom_play
     name: Mark's Bedroom Scenes
     view: false
-  people:
+  marks_bedroom_appliances:
     entities:
-    - device_tracker.mark_phone
-    - device_tracker.anne_phone
-    - device_tracker.jerome_phone
-    - device_tracker.ros_phone
-    - device_tracker.thomas_phone
-    name: Who's In?
+    - switch.marks_bedroom_amp
+    name: Mark's Bedroom Appliances
     view: false
+
   study:
     entities:
+    - group.study_scenes
     - media_player.study
     - group.study_lights
     - group.study_heating
-    - group.study_scenes
+    - group.study_appliances
     icon: mdi:printer
     name: Study
     view: true
@@ -390,6 +372,52 @@ group:
     - scene.study_relax
     name: Study Scenes
     view: false
+  study_appliances:
+    name: Study Appliances
+    view: false
+    entities:
+    - device_tracker.canonmg5550homewhalebarncom
+
+  people:
+    name: Where is Everyone?
+    view: false
+    entities:
+    - group.mark_present
+    - group.anne_present
+    - group.jerome_present
+    - group.ros_present
+    - group.thomas_present
+    - group.liane_present
+  mark_present:
+    entities:
+    - device_tracker.mark_phone
+    - device_tracker.omenmotog
+    - device_tracker.shochu
+  anne_present:
+    entities:
+    - device_tracker.anne_phone
+    - device_tracker.anniesiphone2
+  jerome_present:
+    entities:
+    - device_tracker.jerome_phone
+  ros_present:
+    entities:
+    - device_tracker.ros_phone
+  thomas_present:
+    entities:
+    - device_tracker.thomas_phone
+    - device_tracker.thomascmtcd
+  liane_present:
+    entities: {}
+
+  network:
+    entities:
+    - device_tracker.kitchenhomewhalebarncom
+    - device_tracker.bedroommarkhomewhalebarncom
+    - device_tracker.ballroomhomewhalebarncom
+    - device_tracker.loungehomewhalebarncom
+    - device_tracker.libraryhomewhalebarncom
+    - device_tracker.canonmg5550homewhalebarncom
 
 media_player:
 - name: Study
