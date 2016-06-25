@@ -1,4 +1,7 @@
+*.log
+*.db
+*.swp
+*.swo
 pyozw.sqlite
-home-assistant.db
-home-assistant.log
 OZW_Log.txt
+deps
