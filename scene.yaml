@@ -35,3 +35,169 @@
       temperature: 20
     thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30:
       temperature: 20
+
+- name: Study Off
+  entities:
+    group.study_lights:
+      state: off
+    thermostat.study_east_comfort_setpoint_14:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14:
+      temperature: 10
+    thermostat.study_west_comfort_setpoint_15:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15:
+      temperature: 10
+    media_player.study:
+      state: paused
+- name: Study Work
+  entities:
+    group.study_lights:
+      state: on
+      brightness: 100
+    thermostat.study_east_comfort_setpoint_14:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14:
+      temperature: 20
+    thermostat.study_west_comfort_setpoint_15:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15:
+      temperature: 20
+- name: Study Relax
+  entities:
+    group.study_lights:
+      state: on
+      brightness: 50
+    thermostat.study_east_comfort_setpoint_14:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14:
+      temperature: 20
+    thermostat.study_west_comfort_setpoint_15:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15:
+      temperature: 20
+
+- name: Mark's Bedroom Off
+  entities:
+    group.marks_bedroom_lights:
+      state: off
+    switch.marks_bedroom_amp:
+      state: off
+    thermostat.bedroom_mark_comfort_setpoint_29:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29:
+      temperature: 10
+    media_player.marks_bedroom:
+      state: paused
+- name: Mark's Bedroom Sleep
+  entities:
+    group.marks_bedroom_lights:
+      state: off
+    thermostat.bedroom_mark_comfort_setpoint_29:
+      temperature: 15
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29:
+      temperature: 15
+- name: Mark's Bedroom Play
+  entities:
+    group.marks_bedroom_lights:
+      state: on
+    thermostat.bedroom_mark_comfort_setpoint_29:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29:
+      temperature: 20
+
+- name: Kitchen Off
+  entities:
+    group.kitchen_lights:
+      state: off
+    thermostat.kitchen_comfort_setpoint_34:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34:
+      temperature: 10
+    media_player.kitchen:
+      state: paused
+- name: Kitchen Cosy
+  entities:
+    group.kitchen_lights:
+      state: on
+      brightness: 50
+    thermostat.kitchen_comfort_setpoint_34:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34:
+      temperature: 20
+- name: Kitchen Bright
+  entities:
+    group.kitchen_lights:
+      state: on
+      brightness: 100
+    thermostat.kitchen_comfort_setpoint_34:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34:
+      temperature: 20
+
+- name: Ballroom Off
+  entities:
+    group.ballroom_lights:
+      state: off
+    thermostat.ballroom_east_comfort_setpoint_33:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33:
+      temperature: 10
+    media_player.ballroom:
+      state: paused
+- name: Ballroom Party
+  entities:
+    group.ballroom_lights:
+      state: on
+      brightness: 20
+    thermostat.ballroom_east_comfort_setpoint_33:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33:
+      temperature: 20
+- name: Ballroom Movie
+  entities:
+    group.ballroom_lights:
+      state: off
+    thermostat.ballroom_east_comfort_setpoint_33:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33:
+      temperature: 20
+- name: Ballroom Bright
+  entities:
+    group.ballroom_lights:
+      state: on
+      brightness: 100
+    thermostat.ballroom_east_comfort_setpoint_33:
+      temperature: 20
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33:
+      temperature: 20
+
+- name: Library Off
+  entities:
+    group.library_lights:
+      state: off
+    thermostat.library_comfort_setpoint_25:
+      temperature: 10
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25:
+      temperature: 10
+    media_player.library:
+      state: paused
+- name: Library Chat
+  entities:
+    group.library_lights:
+      state: off
+      brightness: 50
+    thermostat.library_comfort_setpoint_25:
+      temperature: 22
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25:
+      temperature: 22
+- name: Library Read
+  entities:
+    group.library_lights:
+      state: on
+      brightness: 100
+    thermostat.library_comfort_setpoint_25:
+      temperature: 22
+    thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25:
+      temperature: 22
+
