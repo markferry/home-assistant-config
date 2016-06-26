@@ -1,21 +1,15 @@
 group.mark_present:
   entity_picture: /local/wb-icons/wb_mark.png
-  friendly_name: "Mark"
 group.anne_present:
   entity_picture: /local/wb-icons/wb_anne.png
-  friendly_name: "Anne"
 group.jerome_present:
   entity_picture: /local/wb-icons/wb_jerome.png
-  friendly_name: "Jerome"
 group.ros_present:
   entity_picture: /local/wb-icons/wb_ros.png
-  friendly_name: "Ros"
 group.thomas_present:
   entity_picture: /local/wb-icons/wb_tom.png
-  friendly_name: "Thomas"
 group.liane_present:
   entity_picture: /local/wb-icons/wb_liane.png
-  friendly_name: "Liane"
 device_tracker.mark_phone:
   entity_picture: /local/wb-icons/wb_mark.png
   friendly_name: "Mark's Phone"

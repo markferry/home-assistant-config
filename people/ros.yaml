@@ -1,0 +1,4 @@
+name: "Ros"
+entities:
+- device_tracker.ros_phone
+- device_tracker.rosiphone

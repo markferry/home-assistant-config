@@ -380,43 +380,16 @@ group:
   people:
     name: Where is Everyone?
     view: false
-    entities:
-    - group.mark_present
-    - group.anne_present
-    - group.jerome_present
-    - group.ros_present
-    - group.thomas_present
-    - group.liane_present
-  mark_present:
-    entities:
-    - device_tracker.mark_phone
-    - device_tracker.omenmotog
-    - device_tracker.shochu
-  anne_present:
-    entities:
-    - device_tracker.anne_phone
-    - device_tracker.anniesiphone2
-  jerome_present:
-    entities:
-    - device_tracker.jerome_phone
-  ros_present:
-    entities:
-    - device_tracker.ros_phone
-  thomas_present:
-    entities:
-    - device_tracker.thomas_phone
-    - device_tracker.thomascmtcd
-  liane_present:
-    entities: {}
+    entities: !include people/whalebarn.yaml
 
-  network:
-    entities:
-    - device_tracker.kitchenhomewhalebarncom
-    - device_tracker.bedroommarkhomewhalebarncom
-    - device_tracker.ballroomhomewhalebarncom
-    - device_tracker.loungehomewhalebarncom
-    - device_tracker.libraryhomewhalebarncom
-    - device_tracker.canonmg5550homewhalebarncom
+  mark_present: !include people/mark.yaml
+  anne_present: !include people/anne.yaml
+  jerome_present: !include people/jerome.yaml
+  ros_present: !include people/ros.yaml
+  thomas_present: !include people/thomas.yaml
+  liane_present: !include people/liane.yaml
+
+  network: !include network.yaml
 
 media_player:
 - name: Study
