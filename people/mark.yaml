@@ -1,0 +1,5 @@
+name: "Mark"
+- device_tracker.mark_phone
+- device_tracker.omenmotog
+- device_tracker.shochu
+- device_tracker.android42cfe66a93652814homewhalebarncom
