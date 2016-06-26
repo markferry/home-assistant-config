@@ -1,4 +1,5 @@
 name: "Mark"
+entities:
 - device_tracker.mark_phone
 - device_tracker.omenmotog
 - device_tracker.shochu
