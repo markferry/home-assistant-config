@@ -383,6 +383,11 @@ group:
     view: false
     entities: !include people/whalebarn.yaml
 
+  barnacles:
+    name: Who's Visiting?
+    view: false
+    entities: !include people/barnacles.yaml
+
   mark_present: !include people/mark.yaml
   anne_present: !include people/anne.yaml
   jerome_present: !include people/jerome.yaml

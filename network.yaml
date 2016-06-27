@@ -1,3 +1,6 @@
+name: Network
+view: false
+entities:
 - device_tracker.kitchenhomewhalebarncom
 - device_tracker.bedroommarkhomewhalebarncom
 - device_tracker.ballroomhomewhalebarncom
