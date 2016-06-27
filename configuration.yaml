@@ -68,6 +68,42 @@ automation: !include automation.yaml
 
 group:
   default_view: !include default_view.yaml
+  thermostats:
+    entities:
+    - thermostat.annex_hall_comfort_setpoint_43
+    - thermostat.ballroom_east_comfort_setpoint_33
+    - thermostat.bedroom_mark_comfort_setpoint_29
+    - thermostat.hall_east_comfort_setpoint_24
+    - thermostat.hall_west_comfort_setpoint_13
+    - thermostat.horstmann_scsc17_thermostat_heating_1_35
+    - thermostat.horstmann_scsc17_thermostat_heating_1_50
+    - thermostat.horstmann_unknown_type0003_id0001_mode_45
+    - thermostat.horstmann_unknown_type0003_id0002_mode_36
+    - thermostat.horstmann_unknown_type0003_id0002_mode_36_2
+    - thermostat.kitchen_comfort_setpoint_34
+    - thermostat.library_comfort_setpoint_25
+    - thermostat.lounge_east_comfort_setpoint_30
+    - thermostat.study_east_comfort_setpoint_14
+    - thermostat.study_west_comfort_setpoint_15
+    name: Thermostats
+    view: false
+  temperatures:
+    entities:
+    - sensor.horstmann_scsc17_thermostat_temperature_35
+    - sensor.horstmann_scsc17_thermostat_temperature_50
+    - sensor.aeotec_dsb05_multisensor_temperature_3
+    - sensor.ballroom_east_temperature_33
+    - sensor.hall_west_temperature_13
+    - sensor.hall_east_temperature_24
+    - sensor.annex_hall_temperature_43
+    - sensor.kitchen_temperature_34
+    - sensor.library_temperature_25
+    - sensor.lounge_east_temperature_30
+    - sensor.bedroom_mark_temperature_29
+    - sensor.study_east_temperature_14
+    - sensor.study_west_temperature_15
+    name: Temperatures
+    view: false
   heating_valves:
     entities:
     - light.hall_west_level_13
