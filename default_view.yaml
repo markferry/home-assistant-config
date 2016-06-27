@@ -3,3 +3,4 @@ view: true
 entities:
 - updater.updater
 - group.people
+- group.barnacles
