@@ -1,9 +1,13 @@
 name: Network
 view: false
 entities:
-- device_tracker.kitchenhomewhalebarncom
-- device_tracker.bedroommarkhomewhalebarncom
-- device_tracker.ballroomhomewhalebarncom
-- device_tracker.loungehomewhalebarncom
-- device_tracker.libraryhomewhalebarncom
-- device_tracker.canonmg5550homewhalebarncom
+- device_tracker.router0
+- device_tracker.router1
+- device_tracker.hastur
+- device_tracker.study
+- device_tracker.kitchen
+- device_tracker.ballroom
+- device_tracker.lounge
+- device_tracker.library
+- device_tracker.bedroommark
+- device_tracker.canonmg5550

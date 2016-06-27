@@ -376,7 +376,7 @@ group:
     name: Study Appliances
     view: false
     entities:
-    - device_tracker.canonmg5550homewhalebarncom
+    - device_tracker.canonmg5550
 
   people:
     name: Where is Everyone?
