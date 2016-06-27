@@ -137,7 +137,7 @@ group:
     - scene.ballroom_bright
     name: Ballroom Scenes
     view: false
-  bedroommark:
+  bedroom_mark:
     entities:
     - media_player.marks_bedroom
     - group.marks_bedroom_lights
