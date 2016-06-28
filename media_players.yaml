@@ -1,0 +1,23 @@
+- name: Study
+  platform: kodi
+  url: http://study/jsonrpc
+- name: Lounge
+  platform: kodi
+  url: http://lounge/jsonrpc
+- name: Mark's Bedroom
+  password: ***REMOVED***
+  platform: kodi
+  url: http://bedroom-mark/jsonrpc
+  username: gnome
+- name: Kitchen
+  platform: kodi
+  url: http://kitchen:8080/jsonrpc
+- name: Ballroom
+  platform: kodi
+  url: http://ballroom/jsonrpc
+- name: Library
+  platform: kodi
+  url: http://library/jsonrpc
+- name: Ballroom Amplifier
+  platform: onkyo
+  host: ballroom-amp
