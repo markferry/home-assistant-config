@@ -432,76 +432,8 @@ group:
 
   network: !include network.yaml
 
-media_player:
-- name: Study
-  platform: kodi
-  url: http://study/jsonrpc
-- name: Lounge
-  platform: kodi
-  url: http://lounge/jsonrpc
-- name: Mark's Bedroom
-  password: ***REMOVED***
-  platform: kodi
-  url: http://bedroom-mark/jsonrpc
-  username: gnome
-- name: Kitchen
-  platform: kodi
-  url: http://kitchen:8080/jsonrpc
-- name: Ballroom
-  platform: kodi
-  url: http://ballroom/jsonrpc
-- name: Library
-  platform: kodi
-  url: http://library/jsonrpc
-- name: Ballroom Amplifier
-  platform: onkyo
-  host: ballroom-amp
-switch:
-- command_topic: ha/study/demand/command
-  name: Study Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-- command_topic: ha/lounge/demand/command
-  name: Lounge Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-- command_topic: ha/bedroom-mark/demand/command
-  name: Mark's Bedroom Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-- command_topic: ha/kitchen/demand/command
-  name: Kitchen Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-- command_topic: ha/ballroom/demand/command
-  name: Ballroom Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-- command_topic: ha/library/demand/command
-  name: Library Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-- command_topic: ha/hall/demand/command
-  name: Hall Demand
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-  retain: true
-
-#light: !include mock_light.yaml
-#sensor: !include mock_sensor.yaml
-#switch: !include mock_switch.yaml
-#thermostat: !include mock_thermostat.yaml
-
+media_player: !include media_players.yaml
+light: !include_dir_merge_list lights
+sensor: !include_dir_merge_list sensors
+switch: !include_dir_merge_list switches
+thermostat: !include_dir_merge_list thermostats
