@@ -2,3 +2,4 @@ name: "Anne"
 entities:
 - device_tracker.anne_phone
 - device_tracker.anniesiphone2
+- device_tracker.anniehp

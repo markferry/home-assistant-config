@@ -11,3 +11,4 @@ entities:
 - device_tracker.library
 - device_tracker.bedroommark
 - device_tracker.canonmg5550
+- device_tracker.loungetv
