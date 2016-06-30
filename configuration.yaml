@@ -448,6 +448,7 @@ group:
   ros_present: !include people/ros.yaml
   thomas_present: !include people/thomas.yaml
   liane_present: !include people/liane.yaml
+  aneta_present: !include people/aneta.yaml
 
   network: !include network.yaml
 
