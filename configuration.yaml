@@ -68,6 +68,299 @@ automation: !include automation.yaml
 
 group:
   default_view: !include default_view.yaml
+
+  study:
+    entities:
+    - group.study_scenes
+    - media_player.study
+    - group.study_lights
+    - group.study_heating
+    - group.study_appliances
+    icon: mdi:printer
+    name: Study
+    view: true
+  study_heating:
+    entities:
+    - thermostat.study_east_comfort_setpoint_14
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
+    - sensor.study_east_temperature_14
+    - thermostat.study_west_comfort_setpoint_15
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
+    - sensor.study_west_temperature_15
+    name: Study Heating
+    view: false
+  study_setpoints:
+    name: Study Setpoints
+    view: false
+    entities:
+    - thermostat.study_east_comfort_setpoint_14
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
+    - thermostat.study_west_comfort_setpoint_15
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
+  study_lights:
+    name: Study Lights
+    view: false
+  study_scenes:
+    entities:
+    - scene.study_off
+    - scene.study_work
+    - scene.study_relax
+    name: Study Scenes
+    view: false
+  study_appliances:
+    name: Study Appliances
+    view: false
+    entities:
+    - device_tracker.canonmg5550
+
+  kitchen:
+    entities:
+    - media_player.kitchen
+    - group.kitchen_lights
+    - group.kitchen_heating
+    - group.kitchen_scenes
+    icon: mdi:stove
+    name: Kitchen
+    view: true
+  kitchen_heating:
+    entities:
+    - thermostat.kitchen_comfort_setpoint_34
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
+    - sensor.kitchen_temperature_34
+    name: Kitchen Heating
+    view: false
+  kitchen_setpoints:
+    name: Kitchen Setpoints
+    view: false
+    entities:
+    - thermostat.kitchen_comfort_setpoint_34
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
+  kitchen_lights:
+    name: Kitchen Lights
+    view: false
+  kitchen_scenes:
+    entities:
+    - scene.kitchen_off
+    - scene.kitchen_cosy
+    - scene.kitchen_bright
+    name: Kitchen Scenes
+    view: false
+
+  hall:
+    entities:
+    - group.hall_lights
+    - group.hall_heating
+    - group.hall_scenes
+    - group.main_heating
+    - group.annex_heating
+    - sensor.aeotec_dsb05_multisensor_luminance_3
+    - sensor.aeotec_dsb05_multisensor_relative_humidity_3
+    - sensor.aeotec_dsb05_multisensor_temperature_3
+    - binary_sensor.aeotec_dsb05_multisensor_sensor_3
+    icon: mdi:fullscreen-exit
+    name: Hall
+    view: true
+  hall_heating:
+    entities:
+    - thermostat.hall_west_comfort_setpoint_13
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
+    - sensor.hall_west_temperature_13
+    - thermostat.hall_east_comfort_setpoint_24
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
+    - sensor.hall_east_temperature_24
+    - thermostat.annex_hall_comfort_setpoint_43
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
+    - sensor.annex_hall_temperature_43
+    name: Hall Heating
+    view: false
+  hall_setpoints:
+    name: Hall Setpoints
+    view: false
+    entities:
+    - thermostat.hall_west_comfort_setpoint_13
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
+    - thermostat.hall_east_comfort_setpoint_24
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
+    - thermostat.annex_hall_comfort_setpoint_43
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
+  hall_lights:
+    name: Hall Lights
+    view: false
+  hall_scenes:
+    name: Hall Scenes
+    view: false
+
+  lounge:
+    entities:
+    - media_player.lounge
+    - group.lounge_lights
+    - group.lounge_heating
+    - group.lounge_scenes
+    icon: mdi:sofa
+    name: Lounge
+    view: true
+  lounge_heating:
+    entities:
+    - thermostat.lounge_east_comfort_setpoint_30
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
+    - sensor.lounge_east_temperature_30
+    name: Lounge Heating
+    view: false
+  lounge_setpoints:
+    name: Lounge Setpoints
+    view: false
+    entities:
+    - thermostat.lounge_east_comfort_setpoint_30
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
+  lounge_lights:
+    entities:
+    - light.159947921
+    - light.159782931
+    - light.159782932
+    name: Lounge Lights
+    view: false
+  lounge_scenes:
+    entities:
+    - scene.lounge_off
+    - scene.lounge_cosy
+    - scene.lounge_movie
+    - scene.lounge_bright
+    name: Lounge Scenes
+    view: false
+  main_heating:
+    entities:
+    - thermostat.horstmann_scsc17_thermostat_heating_1_35
+    - sensor.horstmann_scsc17_thermostat_temperature_35
+    - switch.horstmann_scsc17_thermostat_switch_35
+    - switch.horstmann_unknown_type0003_id0002_switch_36
+    - thermostat.horstmann_unknown_type0003_id0002_mode_36
+    - switch.horstmann_unknown_type0003_id0002_switch_36_2
+    - thermostat.horstmann_unknown_type0003_id0002_mode_36_2
+    name: Main Heating
+    view: false
+
+  library:
+    entities:
+    - media_player.library
+    - group.library_lights
+    - group.library_heating
+    - group.library_scenes
+    icon: mdi:library
+    name: Library
+    view: true
+  library_heating:
+    entities:
+    - thermostat.library_comfort_setpoint_25
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
+    - sensor.library_temperature_25
+    name: Library Heating
+    view: false
+  library_setpoints:
+    name: Library Setpoints
+    view: false
+    entities:
+    - thermostat.library_comfort_setpoint_25
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
+  library_lights:
+    name: Library Lights
+    view: false
+  library_scenes:
+    entities:
+    - scene.library_off
+    - scene.library_chat
+    - scene.library_read
+    name: Library Scenes
+    view: false
+
+  ballroom:
+    entities:
+    - media_player.ballroom
+    - media_player.ballroom_amplifier
+    - group.ballroom_lights
+    - group.ballroom_heating
+    - group.ballroom_scenes
+    icon: mdi:projector
+    name: Ballroom
+    view: true
+  ballroom_heating:
+    entities:
+    - thermostat.ballroom_east_comfort_setpoint_33
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
+    - sensor.ballroom_east_temperature_33
+    name: Ballroom Heating
+    view: false
+  ballroom_setpoints:
+    entities:
+    - thermostat.ballroom_east_comfort_setpoint_33
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
+    name: Ballroom Setpoints
+    view: false
+  ballroom_lights:
+    entities:
+    - light.unused_41_level_41
+    name: Ballroom Lights
+    view: false
+  ballroom_scenes:
+    entities:
+    - scene.ballroom_off
+    - scene.ballroom_party
+    - scene.ballroom_movie
+    - scene.ballroom_bright
+    name: Ballroom Scenes
+    view: false
+
+  bedroom_mark:
+    entities:
+    - media_player.marks_bedroom
+    - group.marks_bedroom_lights
+    - group.marks_bedroom_heating
+    - group.marks_bedroom_appliances
+    - group.marks_bedroom_scenes
+    icon: mdi:hotel
+    name: Mark's Bedroom
+    view: true
+  marks_bedroom_heating:
+    entities:
+    - thermostat.bedroom_mark_comfort_setpoint_29
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
+    - sensor.bedroom_mark_temperature_29
+    name: Mark's Bedroom Heating
+    view: false
+  marks_bedroom_setpoints:
+    name: Mark's Bedroom Setpoints
+    view: false
+    entities:
+    - thermostat.bedroom_mark_comfort_setpoint_29
+    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
+  marks_bedroom_lights:
+    entities:
+    - light.fibaro_system_fgd212_dimmer_2_level_39
+    - light.bedroom_mark_level_39
+    name: Mark's Bedroom Lights
+    view: false
+  marks_bedroom_scenes:
+    entities:
+    - scene.marks_bedroom_off
+    - scene.marks_bedroom_sleep
+    - scene.marks_bedroom_play
+    name: Mark's Bedroom Scenes
+    view: false
+  marks_bedroom_appliances:
+    entities:
+    - switch.marks_bedroom_amp
+    name: Mark's Bedroom Appliances
+    view: false
+
+  settings:
+    name: Settings
+    view: true
+    icon: mdi:settings
+    entities:
+    - group.network
+    - group.temperatures
+    - group.thermostats
+
+
   thermostats:
     entities:
     - thermostat.annex_hall_comfort_setpoint_43
@@ -128,6 +421,7 @@ group:
     - light._level_43
     name: Heating Demand
     view: false
+
   annex_heating:
     entities:
     - thermostat.horstmann_scsc17_thermostat_heating_1_50
@@ -137,282 +431,6 @@ group:
     - thermostat.horstmann_unknown_type0003_id0001_mode_45
     name: Annex Heating
     view: false
-  ballroom:
-    entities:
-    - media_player.ballroom
-    - media_player.ballroom_amplifier
-    - group.ballroom_lights
-    - group.ballroom_heating
-    - group.ballroom_scenes
-    icon: mdi:projector
-    name: Ballroom
-    view: true
-  ballroom_heating:
-    entities:
-    - thermostat.ballroom_east_comfort_setpoint_33
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
-    - sensor.ballroom_east_temperature_33
-    name: Ballroom Heating
-    view: false
-  ballroom_setpoints:
-    entities:
-    - thermostat.ballroom_east_comfort_setpoint_33
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
-    name: Ballroom Setpoints
-    view: false
-  ballroom_lights:
-    entities:
-    - light.unused_41_level_41
-    name: Ballroom Lights
-    view: false
-  ballroom_scenes:
-    entities:
-    - scene.ballroom_off
-    - scene.ballroom_party
-    - scene.ballroom_movie
-    - scene.ballroom_bright
-    name: Ballroom Scenes
-    view: false
-  bedroom_mark:
-    entities:
-    - media_player.marks_bedroom
-    - group.marks_bedroom_lights
-    - group.marks_bedroom_heating
-    - group.marks_bedroom_appliances
-    - group.marks_bedroom_scenes
-    icon: mdi:hotel
-    name: Mark's Bedroom
-    view: true
-  hall:
-    entities:
-    - group.hall_lights
-    - group.hall_heating
-    - group.hall_scenes
-    - group.main_heating
-    - group.annex_heating
-    - sensor.aeotec_dsb05_multisensor_luminance_3
-    - sensor.aeotec_dsb05_multisensor_relative_humidity_3
-    - sensor.aeotec_dsb05_multisensor_temperature_3
-    - binary_sensor.aeotec_dsb05_multisensor_sensor_3
-    icon: mdi:fullscreen-exit
-    name: Hall
-    view: true
-  hall_heating:
-    entities:
-    - thermostat.hall_west_comfort_setpoint_13
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
-    - sensor.hall_west_temperature_13
-    - thermostat.hall_east_comfort_setpoint_24
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
-    - sensor.hall_east_temperature_24
-    - thermostat.annex_hall_comfort_setpoint_43
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
-    - sensor.annex_hall_temperature_43
-    name: Hall Heating
-    view: false
-  hall_setpoints:
-    name: Hall Setpoints
-    view: false
-    entities:
-    - thermostat.hall_west_comfort_setpoint_13
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
-    - thermostat.hall_east_comfort_setpoint_24
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
-    - thermostat.annex_hall_comfort_setpoint_43
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
-  hall_lights:
-    name: Hall Lights
-    view: false
-  hall_scenes:
-    name: Hall Scenes
-    view: false
-  kitchen:
-    entities:
-    - media_player.kitchen
-    - group.kitchen_lights
-    - group.kitchen_heating
-    - group.kitchen_scenes
-    icon: mdi:stove
-    name: Kitchen
-    view: true
-  kitchen_heating:
-    entities:
-    - thermostat.kitchen_comfort_setpoint_34
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
-    - sensor.kitchen_temperature_34
-    name: Kitchen Heating
-    view: false
-  kitchen_setpoints:
-    name: Kitchen Setpoints
-    view: false
-    entities:
-    - thermostat.kitchen_comfort_setpoint_34
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
-  kitchen_lights:
-    name: Kitchen Lights
-    view: false
-  kitchen_scenes:
-    entities:
-    - scene.kitchen_off
-    - scene.kitchen_cosy
-    - scene.kitchen_bright
-    name: Kitchen Scenes
-    view: false
-  library:
-    entities:
-    - media_player.library
-    - group.library_lights
-    - group.library_heating
-    - group.library_scenes
-    icon: mdi:library
-    name: Library
-    view: true
-  library_heating:
-    entities:
-    - thermostat.library_comfort_setpoint_25
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
-    - sensor.library_temperature_25
-    name: Library Heating
-    view: false
-  library_setpoints:
-    name: Library Setpoints
-    view: false
-    entities:
-    - thermostat.library_comfort_setpoint_25
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
-  library_lights:
-    name: Library Lights
-    view: false
-  library_scenes:
-    entities:
-    - scene.library_off
-    - scene.library_chat
-    - scene.library_read
-    name: Library Scenes
-    view: false
-  lounge:
-    entities:
-    - media_player.lounge
-    - group.lounge_lights
-    - group.lounge_heating
-    - group.lounge_scenes
-    icon: mdi:sofa
-    name: Lounge
-    view: true
-  lounge_heating:
-    entities:
-    - thermostat.lounge_east_comfort_setpoint_30
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
-    - sensor.lounge_east_temperature_30
-    name: Lounge Heating
-    view: false
-  lounge_setpoints:
-    name: Lounge Setpoints
-    view: false
-    entities:
-    - thermostat.lounge_east_comfort_setpoint_30
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
-  lounge_lights:
-    entities:
-    - light.159947921
-    - light.159782931
-    - light.159782932
-    name: Lounge Lights
-    view: false
-  lounge_scenes:
-    entities:
-    - scene.lounge_off
-    - scene.lounge_cosy
-    - scene.lounge_movie
-    - scene.lounge_bright
-    name: Lounge Scenes
-    view: false
-  main_heating:
-    entities:
-    - thermostat.horstmann_scsc17_thermostat_heating_1_35
-    - sensor.horstmann_scsc17_thermostat_temperature_35
-    - switch.horstmann_scsc17_thermostat_switch_35
-    - switch.horstmann_unknown_type0003_id0002_switch_36
-    - thermostat.horstmann_unknown_type0003_id0002_mode_36
-    - switch.horstmann_unknown_type0003_id0002_switch_36_2
-    - thermostat.horstmann_unknown_type0003_id0002_mode_36_2
-    name: Main Heating
-    view: false
-  marks_bedroom_heating:
-    entities:
-    - thermostat.bedroom_mark_comfort_setpoint_29
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
-    - sensor.bedroom_mark_temperature_29
-    name: Mark's Bedroom Heating
-    view: false
-  marks_bedroom_setpoints:
-    name: Mark's Bedroom Setpoints
-    view: false
-    entities:
-    - thermostat.bedroom_mark_comfort_setpoint_29
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
-  marks_bedroom_lights:
-    entities:
-    - light.fibaro_system_fgd212_dimmer_2_level_39
-    - light.bedroom_mark_level_39
-    name: Mark's Bedroom Lights
-    view: false
-  marks_bedroom_scenes:
-    entities:
-    - scene.marks_bedroom_off
-    - scene.marks_bedroom_sleep
-    - scene.marks_bedroom_play
-    name: Mark's Bedroom Scenes
-    view: false
-  marks_bedroom_appliances:
-    entities:
-    - switch.marks_bedroom_amp
-    name: Mark's Bedroom Appliances
-    view: false
-
-  study:
-    entities:
-    - group.study_scenes
-    - media_player.study
-    - group.study_lights
-    - group.study_heating
-    - group.study_appliances
-    icon: mdi:printer
-    name: Study
-    view: true
-  study_heating:
-    entities:
-    - thermostat.study_east_comfort_setpoint_14
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
-    - sensor.study_east_temperature_14
-    - thermostat.study_west_comfort_setpoint_15
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
-    - sensor.study_west_temperature_15
-    name: Study Heating
-    view: false
-  study_setpoints:
-    name: Study Setpoints
-    view: false
-    entities:
-    - thermostat.study_east_comfort_setpoint_14
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
-    - thermostat.study_west_comfort_setpoint_15
-    - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
-  study_lights:
-    name: Study Lights
-    view: false
-  study_scenes:
-    entities:
-    - scene.study_off
-    - scene.study_work
-    - scene.study_relax
-    name: Study Scenes
-    view: false
-  study_appliances:
-    name: Study Appliances
-    view: false
-    entities:
-    - device_tracker.canonmg5550
 
   people:
     name: Where is Everyone?
