@@ -10,6 +10,8 @@ group.thomas_present:
   entity_picture: /local/wb-icons/wb_tom.png
 group.liane_present:
   entity_picture: /local/wb-icons/wb_liane.png
+group.aneta_present:
+  entity_picture: /local/wb-icons/wb_aneta.png
 device_tracker.mark_phone:
   entity_picture: /local/wb-icons/wb_mark.png
   friendly_name: "Mark's Phone"
