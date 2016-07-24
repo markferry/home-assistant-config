@@ -4,6 +4,7 @@ homeassistant:
   # Location required to calculate the time the sun rises and sets
   latitude: 52.23492
   longitude: -0.04496
+  elevation: 55
   # C for Celcius, F for Fahrenheit
   temperature_unit: C
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
