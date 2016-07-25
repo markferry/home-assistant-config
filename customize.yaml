@@ -208,10 +208,10 @@ sensor.annex_hall_temperature_43:
   polling_intensity: 5
 
 sensor.main_heating_thermostat_battery:
-  friendly_name: Main Heating Temperature
+  friendly_name: Main Heating Battery
   icon: mdi:battery
 sensor.annex_heating_thermostat_battery:
-  friendly_name: Annex Heating Temperature
+  friendly_name: Annex Heating Battery
   icon: mdi:battery
 sensor.hall_multisensor_battery:
   friendly_name: Hall Multisensor Battery
