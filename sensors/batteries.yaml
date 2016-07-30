@@ -3,39 +3,52 @@
     main_heating_thermostat_battery:
       value_template: '{{ states.sensor.horstmann_scsc17_thermostat_temperature_35.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     annex_heating_thermostat_battery:
       value_template: '{{ states.sensor.horstmann_scsc17_thermostat_temperature_50.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     hall_multisensor_battery:
       value_template: '{{ states.sensor.aeotec_dsb05_multisensor_temperature_3.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     hall_east_battery:
       value_template: '{{ states.sensor.hall_east_temperature_24.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     hall_west_battery:
       value_template: '{{ states.sensor.hall_west_temperature_13.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     hall_annex_battery:
       value_template: '{{ states.sensor.annex_hall_temperature_43.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     ballroom_east_battery:
       value_template: '{{ states.sensor.ballroom_east_temperature_33.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     bedroom_mark_battery:
       value_template: '{{ states.sensor.bedroom_mark_temperature_29.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     kitchen_battery:
       value_template: '{{ states.sensor.kitchen_temperature_34.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     library_battery:
       value_template: '{{ states.sensor.library_temperature_25.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     lounge_battery:
       value_template: '{{ states.sensor.lounge_east_temperature_30.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     study_east_battery:
       value_template: '{{ states.sensor.study_east_temperature_14.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
     study_west_battery:
       value_template: '{{ states.sensor.study_west_temperature_15.attributes.battery_level }}'
       unit_of_measurement: '%'
+      warnings: off
