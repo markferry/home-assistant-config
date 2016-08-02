@@ -5,10 +5,10 @@
   platform: kodi
   url: http://lounge/jsonrpc
 - name: Mark's Bedroom
-  password: ***REMOVED***
+  user: 'gnome'
+  password: !secret kodi_bedroom_mark
   platform: kodi
   url: http://bedroom-mark/jsonrpc
-  username: gnome
 - name: Kitchen
   platform: kodi
   url: http://kitchen:8080/jsonrpc

@@ -1,2 +1,3 @@
 name: "Aneta"
-entities: {}
+entities:
+- device_tracker.anetasiphone

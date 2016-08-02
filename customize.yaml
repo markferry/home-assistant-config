@@ -206,6 +206,47 @@ sensor.kitchen_temperature_34:
 sensor.annex_hall_temperature_43:
   friendly_name: Hall Annex Temperature
   polling_intensity: 5
+
+sensor.main_heating_thermostat_battery:
+  friendly_name: Main Heating Battery
+  icon: mdi:battery
+sensor.annex_heating_thermostat_battery:
+  friendly_name: Annex Heating Battery
+  icon: mdi:battery
+sensor.hall_multisensor_battery:
+  friendly_name: Hall Multisensor Battery
+  icon: mdi:battery
+sensor.hall_west_battery:
+  friendly_name: Hall West Battery
+  icon: mdi:battery
+sensor.study_east_battery:
+  friendly_name: Study East Battery
+  icon: mdi:battery
+sensor.study_west_battery:
+  friendly_name: Study West Battery
+  icon: mdi:battery
+sensor.hall_east_battery:
+  friendly_name: Hall East Battery
+  icon: mdi:battery
+sensor.library_battery:
+  friendly_name: Library Battery
+  icon: mdi:battery
+sensor.bedroom_mark_battery:
+  friendly_name: Mark's Bedroom Battery
+  icon: mdi:battery
+sensor.lounge_east_battery:
+  friendly_name: Lounge East Battery
+  icon: mdi:battery
+sensor.ballroom_east_battery:
+  friendly_name: Ballroom East Battery
+  icon: mdi:battery
+sensor.kitchen_battery:
+  friendly_name: Kitchen Battery
+  icon: mdi:battery
+sensor.annex_hall_battery:
+  friendly_name: Hall Annex Battery
+  icon: mdi:battery
+
 thermostat.hall_west_comfort_setpoint_13:
   friendly_name: Hall West Thermostat
 thermostat.study_east_comfort_setpoint_14:
