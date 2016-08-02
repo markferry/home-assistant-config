@@ -291,31 +291,43 @@ settings:
   - group.thermostats
   - group.batteries
   - group.media_players
+  - group.main_heating_override
+  - group.annex_heating_override
 
 #
 # Functional Groups
 #
 main_heating:
-  entities:
-  - thermostat.horstmann_scsc17_thermostat_heating_1_35
-  - sensor.horstmann_scsc17_thermostat_temperature_35
-  - switch.horstmann_scsc17_thermostat_switch_35
-  - switch.horstmann_unknown_type0003_id0002_switch_36
-  - thermostat.horstmann_unknown_type0003_id0002_mode_36
-  - switch.horstmann_unknown_type0003_id0002_switch_36_2
-  - thermostat.horstmann_unknown_type0003_id0002_mode_36_2
   name: Main Heating
   view: false
+  entities:
+  - sensor.horstmann_scsc17_thermostat_temperature_35
+  - thermostat.horstmann_scsc17_thermostat_heating_1_35
+  - thermostat.horstmann_unknown_type0003_id0002_mode_36_2
+  - thermostat.horstmann_unknown_type0003_id0002_mode_36_3
+  - switch.horstmann_scsc17_thermostat_switch_35
+
+main_heating_override:
+  name: Main Heating Override
+  view: false
+  entities:
+  - switch.horstmann_unknown_type0003_id0002_switch_36_2
+  - switch.horstmann_unknown_type0003_id0002_switch_36_3
 
 annex_heating:
-  entities:
-  - thermostat.horstmann_scsc17_thermostat_heating_1_50
-  - sensor.horstmann_scsc17_thermostat_temperature_50
-  - switch.horstmann_scsc17_thermostat_switch_50
-  - switch.horstmann_unknown_type0003_id0001_switch_45
-  - thermostat.horstmann_unknown_type0003_id0001_mode_45
   name: Annex Heating
   view: false
+  entities:
+  - sensor.horstmann_scsc17_thermostat_temperature_50
+  - thermostat.horstmann_scsc17_thermostat_heating_1_50
+  - thermostat.horstmann_unknown_type0003_id0001_mode_51
+  - switch.horstmann_scsc17_thermostat_switch_50
+
+annex_heating_override:
+  name: Annex Heating Override
+  view: false
+  entities:
+  - switch.horstmann_unknown_type0003_id0001_switch_51
 
 #
 # Type Groups
@@ -402,7 +414,7 @@ thermostats:
   - thermostat.hall_west_comfort_setpoint_13
   - thermostat.horstmann_scsc17_thermostat_heating_1_35
   - thermostat.horstmann_scsc17_thermostat_heating_1_50
-  - thermostat.horstmann_unknown_type0003_id0001_mode_45
+  - thermostat.horstmann_unknown_type0003_id0001_mode_51
   - thermostat.horstmann_unknown_type0003_id0002_mode_36
   - thermostat.horstmann_unknown_type0003_id0002_mode_36_2
   - thermostat.kitchen_comfort_setpoint_34
