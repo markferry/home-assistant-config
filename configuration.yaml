@@ -37,7 +37,7 @@ logbook:
 sun:
 
 http:
-  api_password: ***REMOVED***
+  api_password: !secret api_password
 
 mqtt:
   broker: localhost
@@ -59,7 +59,7 @@ rfxtrx:
 device_tracker: !include device_tracker.yaml
 
 ifttt:
-  key: ***REMOVED***
+  key: !secret ifttt_key
 
 scene: !include scene.yaml
 automation: !include automation.yaml
