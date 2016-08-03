@@ -1,0 +1,55 @@
+study_select:
+  name: Study Mood
+  options:
+    - 'Off'
+    - 'Work'
+    - 'Relax'
+  initial: None
+  icon: mdi:printer
+
+kitchen_select:
+  name: Kitchen Mood
+  options:
+    - 'Off'
+    - 'Cosy'
+    - 'Bright'
+  initial: None
+  icon: mdi:stove
+
+lounge_select:
+  name: Lounge Mood
+  options:
+    - 'Off'
+    - 'Cosy'
+    - 'Movie'
+    - 'Bright'
+  initial: None
+  icon: mdi:sofa
+
+library_select:
+  name: Library Mood
+  options:
+    - 'Off'
+    - 'Chat'
+    - 'Read'
+  initial: None
+  icon: mdi:library
+
+ballroom_select:
+  name: Ballroom Mood
+  options:
+    - 'Off'
+    - 'Party'
+    - 'Movie'
+    - 'Bright'
+  initial: None
+  icon: mdi:projector
+
+marks_bedroom_select:
+  name: Mark's Bedroom Mood
+  options:
+    - 'Off'
+    - 'Sleep'
+    - 'Play'
+  initial: None
+  icon: mdi:hotel

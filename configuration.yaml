@@ -71,4 +71,5 @@ light: !include_dir_merge_list lights
 sensor: !include_dir_merge_list sensors
 switch: !include_dir_merge_list switches
 thermostat: !include_dir_merge_list thermostats
+input_select: !include_dir_merge_named input_select
 

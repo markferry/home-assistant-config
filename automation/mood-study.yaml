@@ -1,0 +1,17 @@
+alias: "Study Mood"
+trigger:
+  platform: state
+  entity_id: input_select.study_select
+action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.study_select", "Off") %}
+          scene.study_off
+        {%-elif is_state("input_select.study_select", "Work") %}
+          scene.study_work
+        {%-elif is_state("input_select.study_select", "Relax") %}
+          scene.study_relax
+        {% else %}
+          none
+        {% endif %}
