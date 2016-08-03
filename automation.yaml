@@ -1,2 +1,8 @@
 - !include automation/hot-water-on.yaml
 - !include automation/hot-water-off.yaml
+- !include automation/mood-study.yaml
+- !include automation/mood-kitchen.yaml
+- !include automation/mood-lounge.yaml
+- !include automation/mood-library.yaml
+- !include automation/mood-ballroom.yaml
+- !include automation/mood-bedroom-mark.yaml

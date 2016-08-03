@@ -286,6 +286,7 @@ settings:
   view: true
   icon: mdi:settings
   entities:
+  - group.quick_scenes
   - group.network
   - group.temperatures
   - group.thermostats
@@ -328,6 +329,16 @@ annex_heating_override:
   view: false
   entities:
   - switch.horstmann_unknown_type0003_id0001_switch_51
+
+quick_scenes:
+  name: Quick Moods
+  entities:
+  - input_select.study_select
+  - input_select.kitchen_select
+  - input_select.lounge_select
+  - input_select.library_select
+  - input_select.ballroom_select
+  - input_select.marks_bedroom_select
 
 #
 # Type Groups
