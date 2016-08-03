@@ -14,7 +14,11 @@ study:
   - group.study_lights
   - group.study_heating
   - group.study_appliances
-
+study_scenes:
+  name: Study
+  view: false
+  entities:
+  - input_select.study_select
 study_heating:
   name: Study Heating
   view: false
@@ -25,7 +29,6 @@ study_heating:
   - thermostat.study_west_comfort_setpoint_15
   - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
   - sensor.study_west_temperature_15
-
 study_setpoints:
   name: Study Setpoints
   view: false
@@ -34,20 +37,10 @@ study_setpoints:
   - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
   - thermostat.study_west_comfort_setpoint_15
   - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
-
 study_lights:
   name: Study Lights
   view: false
   entities: {}
-
-study_scenes:
-  name: Study Scenes
-  view: false
-  entities:
-  - scene.study_off
-  - scene.study_work
-  - scene.study_relax
-
 study_appliances:
   name: Study Appliances
   view: false
@@ -55,14 +48,19 @@ study_appliances:
   - device_tracker.canonmg5550
 
 kitchen:
+  name: Kitchen
+  view: true
+  icon: mdi:stove
   entities:
   - media_player.kitchen
   - group.kitchen_lights
   - group.kitchen_heating
   - group.kitchen_scenes
-  icon: mdi:stove
+kitchen_scenes:
   name: Kitchen
-  view: true
+  view: false
+  entities:
+  - input_select.kitchen_select
 kitchen_heating:
   entities:
   - thermostat.kitchen_comfort_setpoint_34
@@ -79,15 +77,11 @@ kitchen_setpoints:
 kitchen_lights:
   name: Kitchen Lights
   view: false
-kitchen_scenes:
-  entities:
-  - scene.kitchen_off
-  - scene.kitchen_cosy
-  - scene.kitchen_bright
-  name: Kitchen Scenes
-  view: false
 
 hall:
+  name: Hall
+  view: true
+  icon: mdi:fullscreen-exit
   entities:
   - group.hall_lights
   - group.hall_heating
@@ -98,9 +92,9 @@ hall:
   - sensor.aeotec_dsb05_multisensor_relative_humidity_3
   - sensor.aeotec_dsb05_multisensor_temperature_3
   - binary_sensor.aeotec_dsb05_multisensor_sensor_3
-  icon: mdi:fullscreen-exit
-  name: Hall
-  view: true
+hall_scenes:
+  name: Hall Scenes
+  view: false
 hall_heating:
   entities:
   - thermostat.hall_west_comfort_setpoint_13
@@ -127,19 +121,21 @@ hall_setpoints:
 hall_lights:
   name: Hall Lights
   view: false
-hall_scenes:
-  name: Hall Scenes
-  view: false
 
 lounge:
+  name: Lounge
+  view: true
+  icon: mdi:sofa
   entities:
   - media_player.lounge
   - group.lounge_lights
   - group.lounge_heating
   - group.lounge_scenes
-  icon: mdi:sofa
+lounge_scenes:
   name: Lounge
-  view: true
+  view: false
+  entities:
+  - input_select.lounge_select
 lounge_heating:
   entities:
   - thermostat.lounge_east_comfort_setpoint_30
@@ -160,24 +156,21 @@ lounge_lights:
   - light.159782932
   name: Lounge Lights
   view: false
-lounge_scenes:
-  entities:
-  - scene.lounge_off
-  - scene.lounge_cosy
-  - scene.lounge_movie
-  - scene.lounge_bright
-  name: Lounge Scenes
-  view: false
 
 library:
+  name: Library
+  view: true
+  icon: mdi:library
   entities:
   - media_player.library
   - group.library_lights
   - group.library_heating
   - group.library_scenes
-  icon: mdi:library
+library_scenes:
   name: Library
-  view: true
+  view: false
+  entities:
+  - input_select.library_select
 library_heating:
   entities:
   - thermostat.library_comfort_setpoint_25
@@ -194,13 +187,6 @@ library_setpoints:
 library_lights:
   name: Library Lights
   view: false
-library_scenes:
-  entities:
-  - scene.library_off
-  - scene.library_chat
-  - scene.library_read
-  name: Library Scenes
-  view: false
 
 ballroom:
   entities:
@@ -212,6 +198,11 @@ ballroom:
   icon: mdi:projector
   name: Ballroom
   view: true
+ballroom_scenes:
+  name: Ballroom
+  view: false
+  entities:
+  - input_select.ballroom_select
 ballroom_heating:
   entities:
   - thermostat.ballroom_east_comfort_setpoint_33
@@ -230,14 +221,6 @@ ballroom_lights:
   - light.unused_41_level_41
   name: Ballroom Lights
   view: false
-ballroom_scenes:
-  entities:
-  - scene.ballroom_off
-  - scene.ballroom_party
-  - scene.ballroom_movie
-  - scene.ballroom_bright
-  name: Ballroom Scenes
-  view: false
 
 bedroom_mark:
   entities:
@@ -249,6 +232,11 @@ bedroom_mark:
   icon: mdi:hotel
   name: Mark's Bedroom
   view: true
+marks_bedroom_scenes:
+  name: Mark's Bedroom
+  view: false
+  entities:
+  - input_select.marks_bedroom_select
 marks_bedroom_heating:
   entities:
   - thermostat.bedroom_mark_comfort_setpoint_29
@@ -267,13 +255,6 @@ marks_bedroom_lights:
   - light.fibaro_system_fgd212_dimmer_2_level_39
   - light.bedroom_mark_level_39
   name: Mark's Bedroom Lights
-  view: false
-marks_bedroom_scenes:
-  entities:
-  - scene.marks_bedroom_off
-  - scene.marks_bedroom_sleep
-  - scene.marks_bedroom_play
-  name: Mark's Bedroom Scenes
   view: false
 marks_bedroom_appliances:
   entities:
