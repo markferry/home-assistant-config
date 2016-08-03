@@ -133,17 +133,21 @@ sensor.horstmann_scsc17_thermostat_temperature_50:
 switch.horstmann_scsc17_thermostat_switch_50:
   friendly_name: Annex Heating Holiday Mode
 thermostat.horstmann_unknown_type0003_id0002_mode_36:
-  friendly_name: Main Heating Mode
+  friendly_name: Main Heating Default Mode
 thermostat.horstmann_unknown_type0003_id0002_mode_36_2:
-  friendly_name: Main Hot Water Mode
+  friendly_name: Main Heating Mode
 thermostat.horstmann_unknown_type0003_id0002_mode_36_3:
-  friendly_name: Main Boiler All Modes
+  friendly_name: Main Hot Water Mode
 switch.horstmann_unknown_type0003_id0002_switch_36:
-  friendly_name: Main Heating Manual
+  friendly_name: Main Heating Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_2:
-  friendly_name: Main Hot Water Manual
+  friendly_name: Main Heating Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_3:
-  friendly_name: Main Boiler All Circuits
+  friendly_name: Main Hot Water Switch
+thermostat.horstmann_unknown_type0003_id0001_mode_51:
+  friendly_name: Annex Heating Mode
+switch.horstmann_unknown_type0003_id0001_switch_51:
+  friendly_name: Annex Heating Switch
 switch.f40fa81__0a140000f40fa801010060:
   friendly_name: Lounge East
 switch.0a140000f40fa801010050:

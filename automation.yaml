@@ -1,1 +1,2 @@
-- !include automation/hot-water.yaml
+- !include automation/hot-water-on.yaml
+- !include automation/hot-water-off.yaml
