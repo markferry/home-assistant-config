@@ -46,17 +46,17 @@ mqtt:
   keepalive: 60
   protocol: 3.1
 
-zwave:
-  usb_path: /dev/ttyUSB21
-  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.0b9-py3.4-linux-armv7l.egg/config
-  polling_interval: 60000
+#zwave:
+#  usb_path: /dev/ttyUSB21
+#  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.0b9-py3.4-linux-armv7l.egg/config
+#  polling_interval: 60000
 
-rfxtrx:
-  device: /dev/ttyUSB22
-  debug: False
+#rfxtrx:
+#  device: /dev/ttyUSB22
+#  debug: False
 
 
-device_tracker: !include device_tracker.yaml
+#device_tracker: !include device_tracker.yaml
 
 ifttt:
   key: !secret ifttt_key
