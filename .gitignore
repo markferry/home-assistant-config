@@ -2,6 +2,9 @@
 *.db
 *.swp
 *.swo
+.HA_VERSION
+secrets.yaml
 pyozw.sqlite
 OZW_Log.txt
 deps
+www/openhab-icons
