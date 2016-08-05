@@ -6,3 +6,8 @@
 - !include automation/mood-library.yaml
 - !include automation/mood-ballroom.yaml
 - !include automation/mood-bedroom-mark.yaml
+- !include automation/stream-radio-1.yaml
+- !include automation/stream-radio-2.yaml
+- !include automation/stream-radio-3.yaml
+- !include automation/stream-radio-none.yaml
+

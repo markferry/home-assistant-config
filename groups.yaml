@@ -262,6 +262,29 @@ marks_bedroom_appliances:
   name: Mark's Bedroom Appliances
   view: false
 
+radio:
+  name: Internet Radio
+  view: true
+  icon: mdi:radio
+  entities:
+  - group.radio_streams
+  - group.radio_stream_map
+radio_streams:
+  name: Radio Channels
+  entities:
+  - input_select.radio_stream_1
+  - input_select.radio_stream_2
+  - input_select.radio_stream_3
+radio_stream_map:
+  name: Player Streams
+  entities:
+  - input_select.study_stream
+  - input_select.kitchen_stream
+  - input_select.lounge_stream
+  - input_select.library_stream
+  - input_select.ballroom_stream
+  - input_select.marks_bedroom_stream
+
 settings:
   name: Settings
   view: true
