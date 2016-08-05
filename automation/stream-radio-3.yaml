@@ -1,0 +1,39 @@
+alias: Stream Radio 3
+trigger:
+  - platform: state
+    entity_id: input_select.study_stream
+    state:  "Stream 3"
+  - platform: state
+    entity_id: input_select.kitchen_stream
+    state:  "Stream 3"
+  - platform: state
+    entity_id: input_select.lounge_stream
+    state:  "Stream 3"
+  - platform: state
+    entity_id: input_select.library_stream
+    state:  "Stream 3"
+  - platform: state
+    entity_id: input_select.ballroom_stream
+    state:  "Stream 3"
+  - platform: state
+    entity_id: input_select.marks_bedroom_stream
+    state:  "Stream 3"
+action:
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
+      media_content_id: >
+        {% if is_state("input_select.radio_stream_3", "Z88.3") %}
+          http://ice.zradio.org/z/high.mp3
+        {%-elif is_state("input_select.radio_stream_3", "Virgin") %}
+          http://icecast.unitedradio.it/Virgin.mp3
+        {%-elif is_state("input_select.radio_stream_3", "RMC") %}
+          http://icecast.unitedradio.it/RMC.mp3
+        {%-elif is_state("input_select.radio_stream_3", "rmcHQ") %}
+          http://icecast.unitedradio.it/rmcHQ.mp3
+        {%-elif is_state("input_select.radio_stream_3", "105") %}
+          http://icecast.unitedradio.it/Radio105.mp3
+        {% else %}
+          none
+        {% endif %}
+      media_content_type: 'audio/mp4'

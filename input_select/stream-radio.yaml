@@ -1,0 +1,95 @@
+radio_stream_1:
+  name: Stream 1
+  options:
+    - none
+    - "Z88.3"
+    - "Virgin"
+    - "RMC"
+    - "rmcHQ"
+    - "105"
+  initial: none
+  icon: mdi:radio
+
+radio_stream_2:
+  name: Stream 2
+  options:
+    - none
+    - "Z88.3"
+    - "Virgin"
+    - "RMC"
+    - "rmcHQ"
+    - "105"
+  initial: none
+  icon: mdi:radio
+
+radio_stream_3:
+  name: Stream 3
+  options:
+    - none
+    - "Z88.3"
+    - "Virgin"
+    - "RMC"
+    - "rmcHQ"
+    - "105"
+  initial: none
+  icon: mdi:radio
+
+study_stream:
+  name: Study
+  initial: off
+  icon: mdi:printer
+  options:
+    - none
+    - "Stream 1"
+    - "Stream 2"
+    - "Stream 3"
+
+kitchen_stream:
+  name: Kitchen
+  initial: off
+  icon: mdi:stove
+  options:
+    - none
+    - "Stream 1"
+    - "Stream 2"
+    - "Stream 3"
+
+lounge_stream:
+  name: Lounge
+  initial: off
+  icon: mdi:sofa
+  options:
+    - none
+    - "Stream 1"
+    - "Stream 2"
+    - "Stream 3"
+
+library_stream:
+  name: Library
+  initial: off
+  icon: mdi:library
+  options:
+    - none
+    - "Stream 1"
+    - "Stream 2"
+    - "Stream 3"
+
+ballroom_stream:
+  name: Ballroom
+  initial: off
+  icon: mdi:projector
+  options:
+    - none
+    - "Stream 1"
+    - "Stream 2"
+    - "Stream 3"
+
+marks_bedroom_stream:
+  name: Mark's Bedroom
+  initial: off
+  icon: mdi:hotel
+  options:
+    - none
+    - "Stream 1"
+    - "Stream 2"
+    - "Stream 3"
