@@ -1,4 +1,4 @@
-alias: "Library Mood"
+alias: "Ballroom Mood"
 trigger:
   platform: state
   entity_id: input_select.ballroom_select

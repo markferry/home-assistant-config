@@ -40,7 +40,7 @@
       value_template: '{{ states.sensor.library_temperature_25.attributes.battery_level }}'
       unit_of_measurement: '%'
       warnings: off
-    lounge_battery:
+    lounge_east_battery:
       value_template: '{{ states.sensor.lounge_east_temperature_30.attributes.battery_level }}'
       unit_of_measurement: '%'
       warnings: off
