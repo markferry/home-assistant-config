@@ -298,6 +298,7 @@ settings:
   - group.media_players
   - group.main_heating_override
   - group.annex_heating_override
+  - group.lockouts
 
 #
 # Functional Groups
@@ -463,3 +464,11 @@ thomas_present: !include people/thomas.yaml
 liane_present: !include people/liane.yaml
 aneta_present: !include people/aneta.yaml
 
+#
+# Meta groups
+#
+lockouts:
+  name: Enable Automations
+  view: false
+  entities:
+  - input_boolean.media_lockout
