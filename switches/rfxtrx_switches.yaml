@@ -1,0 +1,17 @@
+- platform: rfxtrx
+  automatic_add: True
+  devices:
+    0a140000f15c7201010080:
+      name: Mark's Bedroom Amp
+    0a140003f15c7202010080:
+      name: Switch Remote 2
+    0a140006f15c7203010080:
+      name: Switch Remote 3
+    0a140009f3cf3510020080:
+      name: Dimmer Group 0
+    0a140002f40fa810020050:
+      name: Lounge Lights Off
+    0a140001f40fa810050040:
+      name: RFX8100
+    0a14000cf40fa910020040:
+      name: RFX9100
