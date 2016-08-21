@@ -2,7 +2,7 @@
 # Views
 #
 
-default_view: !include default_view.yaml
+#default_view: !include default_view.yaml
 
 study:
   name: Study
@@ -151,9 +151,9 @@ lounge_setpoints:
   - thermostat.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
 lounge_lights:
   entities:
-  - light.159947921
-  - light.159782931
-  - light.159782932
+  - light.lounge_east
+  - light.lounge_north
+  - light.lounge_west
   name: Lounge Lights
   view: false
 

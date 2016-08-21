@@ -2,11 +2,11 @@ radio_stream_1:
   name: Stream 1
   options:
     - none
-    - "Z88.3"
-    - "Virgin"
-    - "RMC"
-    - "rmcHQ"
-    - "105"
+    - "Absolute 80s"
+    - "Absolute 60s"
+    - "Absolute 70s"
+    - "Absolute 90s"
+    - "Absolute 00s"
   initial: none
   icon: mdi:radio
 
@@ -14,11 +14,11 @@ radio_stream_2:
   name: Stream 2
   options:
     - none
-    - "Z88.3"
-    - "Virgin"
-    - "RMC"
-    - "rmcHQ"
-    - "105"
+    - "Absolute 80s"
+    - "Absolute 60s"
+    - "Absolute 70s"
+    - "Absolute 90s"
+    - "Absolute 00s"
   initial: none
   icon: mdi:radio
 
@@ -26,11 +26,11 @@ radio_stream_3:
   name: Stream 3
   options:
     - none
-    - "Z88.3"
-    - "Virgin"
-    - "RMC"
-    - "rmcHQ"
-    - "105"
+    - "Absolute 80s"
+    - "Absolute 60s"
+    - "Absolute 70s"
+    - "Absolute 90s"
+    - "Absolute 00s"
   initial: none
   icon: mdi:radio
 
