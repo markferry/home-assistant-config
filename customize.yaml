@@ -14,17 +14,22 @@ group.aneta_present:
   entity_picture: /local/wb-icons/wb_aneta.png
 device_tracker.mark_phone:
   entity_picture: /local/wb-icons/wb_mark.png
-  friendly_name: "Mark's Phone"
+  friendly_name: "Mark Owntracks"
 device_tracker.anne_phone:
-  entity_picture: /local/wb-icons/ext_owntracks.png
+  entity_picture: /local/wb-icons/wb_anne.png
+  friendly_name: "Anne Owntracks"
 device_tracker.jerome_phone:
-  entity_picture: /local/wb-icons/ext_owntracks.png
+  entity_picture: /local/wb-icons/wb_jerome.png
+  friendly_name: "Jerome Owntracks"
 device_tracker.ros_phone:
-  entity_picture: /local/wb-icons/ext_owntracks.png
+  entity_picture: /local/wb-icons/wb_ros.png
+  friendly_name: "Ros Owntracks"
 device_tracker.thomas_phone:
-  entity_picture: /local/wb-icons/ext_owntracks.png
+  entity_picture: /local/wb-icons/wb_tom.png
+  friendly_name: "Tom Owntracks"
 device_tracker.liane_phone:
-  entity_picture: /local/wb-icons/ext_owntracks.png
+  entity_picture: /local/wb-icons/wb_liane.png
+  friendly_name: "Liane Owntracks"
 sensor.aeotec_dsb05_multisensor_luminance_3:
   friendly_name: Hall Luminance
 sensor.aeotec_dsb05_multisensor_relative_humidity_3:
