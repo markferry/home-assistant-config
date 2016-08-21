@@ -153,16 +153,7 @@ thermostat.horstmann_unknown_type0003_id0001_mode_51:
   friendly_name: Annex Heating Mode
 switch.horstmann_unknown_type0003_id0001_switch_51:
   friendly_name: Annex Heating Switch
-switch.f40fa81__0a140000f40fa801010060:
-  friendly_name: Lounge East
-switch.0a140000f40fa801010050:
-  friendly_name: RFX8010
-switch.0a140001f40fa810050040:
-  friendly_name: RFX8100
-switch.0a14000cf40fa910020040:
-  friendly_name: RFX9100
-switch.f40fa816__0a140002f40fa810020050:
-  friendly_name: Lounge Lights Off
+
 media_player.txnr636_0009b09961fb:
   friendly_name: Ballroom Amplifier
 light.hall_west_level_13:
