@@ -1,0 +1,144 @@
+- alias: Stream Radio none
+  trigger:
+    - platform: state
+      entity_id: input_select.study_stream
+      state:  none
+    - platform: state
+      entity_id: input_select.kitchen_stream
+      state:  none
+    - platform: state
+      entity_id: input_select.lounge_stream
+      state:  none
+    - platform: state
+      entity_id: input_select.library_stream
+      state:  none
+    - platform: state
+      entity_id: input_select.ballroom_stream
+      state:  none
+    - platform: state
+      entity_id: input_select.marks_bedroom_stream
+      state:  none
+  action:
+    - service: media_player.stop
+      data_template:
+        entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
+
+- alias: Stream Radio 1
+  trigger:
+    - platform: state
+      entity_id: input_select.study_stream
+      state:  "Stream 1"
+    - platform: state
+      entity_id: input_select.kitchen_stream
+      state:  "Stream 1"
+    - platform: state
+      entity_id: input_select.lounge_stream
+      state:  "Stream 1"
+    - platform: state
+      entity_id: input_select.library_stream
+      state:  "Stream 1"
+    - platform: state
+      entity_id: input_select.ballroom_stream
+      state:  "Stream 1"
+    - platform: state
+      entity_id: input_select.marks_bedroom_stream
+      state:  "Stream 1"
+  action:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
+        media_content_id: >
+          {% if is_state("input_select.radio_stream_1", "Absolute 60s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a6bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 70s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a7bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 80s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a8bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 90s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a9bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a0bb
+          {% else %}
+            none
+          {% endif %}
+        media_content_type: 'audio/mp3'
+
+- alias: Stream Radio 2
+  trigger:
+    - platform: state
+      entity_id: input_select.study_stream
+      state:  "Stream 2"
+    - platform: state
+      entity_id: input_select.kitchen_stream
+      state:  "Stream 2"
+    - platform: state
+      entity_id: input_select.lounge_stream
+      state:  "Stream 2"
+    - platform: state
+      entity_id: input_select.library_stream
+      state:  "Stream 2"
+    - platform: state
+      entity_id: input_select.ballroom_stream
+      state:  "Stream 2"
+    - platform: state
+      entity_id: input_select.marks_bedroom_stream
+      state:  "Stream 2"
+  action:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
+        media_content_id: >
+          {% if is_state("input_select.radio_stream_1", "Absolute 60s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a6bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 70s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a7bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 80s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a8bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 90s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a9bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a0bb
+          {% else %}
+            none
+          {% endif %}
+        media_content_type: 'audio/mp3'
+
+- alias: Stream Radio 3
+  trigger:
+    - platform: state
+      entity_id: input_select.study_stream
+      state:  "Stream 3"
+    - platform: state
+      entity_id: input_select.kitchen_stream
+      state:  "Stream 3"
+    - platform: state
+      entity_id: input_select.lounge_stream
+      state:  "Stream 3"
+    - platform: state
+      entity_id: input_select.library_stream
+      state:  "Stream 3"
+    - platform: state
+      entity_id: input_select.ballroom_stream
+      state:  "Stream 3"
+    - platform: state
+      entity_id: input_select.marks_bedroom_stream
+      state:  "Stream 3"
+  action:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
+        media_content_id: >
+          {% if is_state("input_select.radio_stream_1", "Absolute 60s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a6bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 70s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a7bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 80s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a8bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 90s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a9bb
+          {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
+            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a0bb
+          {% else %}
+            none
+          {% endif %}
+        media_content_type: 'audio/mp3'
