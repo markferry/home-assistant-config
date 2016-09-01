@@ -1,23 +1,23 @@
-- alias: Stream Radio none
+- alias: Stream Radio None
   trigger:
     - platform: state
       entity_id: input_select.study_stream
-      state:  none
+      state:  None
     - platform: state
       entity_id: input_select.kitchen_stream
-      state:  none
+      state:  None
     - platform: state
       entity_id: input_select.lounge_stream
-      state:  none
+      state:  None
     - platform: state
       entity_id: input_select.library_stream
-      state:  none
+      state:  None
     - platform: state
       entity_id: input_select.ballroom_stream
-      state:  none
+      state:  None
     - platform: state
       entity_id: input_select.marks_bedroom_stream
-      state:  none
+      state:  None
   action:
     - service: media_player.stop
       data_template:
@@ -59,7 +59,7 @@
           {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
             http://icy-e-bab-04-cr.sharp-stream.com/absolute00s.mp3
           {% else %}
-            none
+            None
           {% endif %}
         media_content_type: 'audio/mp3'
 
@@ -99,7 +99,7 @@
           {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
             http://icy-e-bab-04-cr.sharp-stream.com/absolute00s.mp3
           {% else %}
-            none
+            None
           {% endif %}
         media_content_type: 'audio/mp3'
 
@@ -139,6 +139,6 @@
           {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
             http://icy-e-bab-04-cr.sharp-stream.com/absolute00s.mp3
           {% else %}
-            none
+            None
           {% endif %}
         media_content_type: 'audio/mp3'
