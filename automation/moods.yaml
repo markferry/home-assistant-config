@@ -15,7 +15,7 @@
           {%-elif is_state("input_select.ballroom_select", "Bright") %}
             scene.ballroom_bright
           {% else %}
-            none
+            None
           {% endif %}
 
 - alias: "Mark's Bedroom Mood"
@@ -33,7 +33,7 @@
           {%-elif is_state("input_select.marks_bedroom_select", "Play") %}
             scene.marks_bedroom_play
           {% else %}
-            none
+            None
           {% endif %}
   
 
@@ -52,7 +52,7 @@
           {%-elif is_state("input_select.kitchen_select", "Bright") %}
             scene.kitchen_bright
           {% else %}
-            none
+            None
           {% endif %}
 
 - alias: "Library Mood"
@@ -70,7 +70,7 @@
           {%-elif is_state("input_select.library_select", "Read") %}
             scene.library_read
           {% else %}
-            none
+            None
           {% endif %}
 
 - alias: "Lounge Mood"
@@ -90,7 +90,7 @@
           {%-elif is_state("input_select.lounge_select", "Bright") %}
             scene.lounge_bright
           {% else %}
-            none
+            None
           {% endif %}
 
 - alias: "Study Mood"
@@ -108,5 +108,5 @@
           {%-elif is_state("input_select.study_select", "Relax") %}
             scene.study_relax
           {% else %}
-            none
+            None
           {% endif %}
