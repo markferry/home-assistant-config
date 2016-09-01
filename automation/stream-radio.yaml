@@ -49,15 +49,15 @@
         entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
         media_content_id: >
           {% if is_state("input_select.radio_stream_1", "Absolute 60s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a6bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute60s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 70s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a7bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute70s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 80s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a8bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute80s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 90s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a9bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute90s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a0bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute00s.mp3
           {% else %}
             none
           {% endif %}
@@ -89,15 +89,15 @@
         entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
         media_content_id: >
           {% if is_state("input_select.radio_stream_1", "Absolute 60s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a6bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute60s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 70s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a7bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute70s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 80s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a8bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute80s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 90s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a9bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute90s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a0bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute00s.mp3
           {% else %}
             none
           {% endif %}
@@ -129,15 +129,15 @@
         entity_id: media_player.{{ trigger.entity_id.split('.')[1].split('_stream')[0] }}
         media_content_id: >
           {% if is_state("input_select.radio_stream_1", "Absolute 60s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a6bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute60s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 70s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a7bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute70s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 80s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a8bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute80s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 90s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a9bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute90s.mp3
           {%-elif is_state("input_select.radio_stream_1", "Absolute 00s") %}
-            http://network.absoluteradio.co.uk/core/audio/mp3/live.pls?service=a0bb
+            http://icy-e-bab-04-cr.sharp-stream.com/absolute00s.mp3
           {% else %}
             none
           {% endif %}
