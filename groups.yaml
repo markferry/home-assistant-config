@@ -45,6 +45,7 @@ study_appliances:
   name: Study Appliances
   view: false
   entities:
+  - device_tracker.ricoh213w
   - device_tracker.canonmg5550
 
 kitchen:
