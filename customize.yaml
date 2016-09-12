@@ -1,3 +1,37 @@
+group.study:
+  order: 1
+group.kitchen:
+  order: 2
+group.hall:
+  order: 3
+group.lounge:
+  order: 4
+group.library:
+  order: 5
+group.ballroom:
+  order: 6
+group.bedroom_mark:
+  order: 7
+group.radio:
+  order: 8
+group.settings:
+  order: 9
+
+group.study_scenes:
+  order: 0
+group.kitchen_scenes:
+  order: 0
+group.hall_scenes:
+  order: 0
+group.lounge_scenes:
+  order: 0
+group.library_scenes:
+  order: 0
+group.ballroom_scenes:
+  order: 0
+group.marks_bedroom_scenes:
+  order: 0
+
 group.mark_present:
   entity_picture: /local/wb-icons/wb_mark.png
 group.anne_present:
@@ -40,8 +74,11 @@ binary_sensor.aeotec_dsb05_multisensor_sensor_3:
   friendly_name: Hall Motion
 light.__level_40:
   friendly_name: Unused Dimmer
-light.unused41_level_41:
+light.ballroom_north_level_41:
   friendly_name: Ballroom North
+  polling_intensity: 0
+light.unused41_level_41:
+  friendly_name: Ballroom North_
   polling_intensity: 0
 light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13:
   friendly_name: Hall West Valve_
