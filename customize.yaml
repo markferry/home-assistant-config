@@ -1,3 +1,22 @@
+group.study:
+  order: 1
+group.kitchen:
+  order: 2
+group.hall:
+  order: 3
+group.lounge:
+  order: 4
+group.library:
+  order: 5
+group.ballroom:
+  order: 6
+group.bedroom_mark:
+  order: 7
+group.radio:
+  order: 8
+group.settings:
+  order: 9
+
 group.mark_present:
   entity_picture: /local/wb-icons/wb_mark.png
 group.anne_present:
