@@ -67,7 +67,7 @@
 - brightness_command_topic: ha/mock/ballroom/north/brightness/command
   brightness_scale: 100
   command_topic: ha/mock/ballroom/north/dimmer/command
-  name: unused41_level_41
+  name: ballroom_north_level_41
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
