@@ -74,8 +74,11 @@ binary_sensor.aeotec_dsb05_multisensor_sensor_3:
   friendly_name: Hall Motion
 light.__level_40:
   friendly_name: Unused Dimmer
-light.unused41_level_41:
+light.ballroom_north_level_41:
   friendly_name: Ballroom North
+  polling_intensity: 0
+light.unused41_level_41:
+  friendly_name: Ballroom North_
   polling_intensity: 0
 light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13:
   friendly_name: Hall West Valve_
