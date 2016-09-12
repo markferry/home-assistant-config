@@ -219,6 +219,7 @@ ballroom_setpoints:
   view: false
 ballroom_lights:
   entities:
+  - light.ballroom_north_level_41
   - light.unused_41_level_41
   name: Ballroom Lights
   view: false
