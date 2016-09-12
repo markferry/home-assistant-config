@@ -1,23 +1,35 @@
 - name: Study
   platform: kodi
-  url: http://study/jsonrpc
+  host: http://study
+  port: 80
+
 - name: Lounge
   platform: kodi
-  url: http://lounge/jsonrpc
+  host: http://lounge
+  port: 80
+
 - name: Mark's Bedroom
-  user: 'gnome'
+  username: gnome
   password: !secret kodi_bedroom_mark
   platform: kodi
-  url: http://bedroom-mark/jsonrpc
+  host: http://bedroom-mark
+  port: 80
+
 - name: Kitchen
   platform: kodi
-  url: http://kitchen:8080/jsonrpc
+  host: http://kitchen
+  port: 8080
+
 - name: Ballroom
   platform: kodi
-  url: http://ballroom/jsonrpc
+  host: http://ballroom
+  port: 80
+
 - name: Library
   platform: kodi
-  url: http://library/jsonrpc
+  host: http://library
+  port: 80
+
 - name: Ballroom Amplifier
   platform: onkyo
   host: ballroom-amp
