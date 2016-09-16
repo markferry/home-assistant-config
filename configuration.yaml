@@ -5,8 +5,7 @@ homeassistant:
   latitude: 52.23492
   longitude: -0.04496
   elevation: 55
-  # C for Celcius, F for Fahrenheit
-  temperature_unit: C
+  unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/London
 
@@ -69,6 +68,6 @@ media_player: !include media_players.yaml
 light: !include_dir_merge_list lights
 sensor: !include_dir_merge_list sensors
 switch: !include_dir_merge_list switches
-#thermostat: !include_dir_merge_list thermostats
+climate: !include_dir_merge_list thermostats
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
