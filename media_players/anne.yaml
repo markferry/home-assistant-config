@@ -1,0 +1,5 @@
+- name: Anne's Tablet
+  platform: kodi
+  host: http://anne
+  port: 8080
+
