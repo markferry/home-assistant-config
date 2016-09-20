@@ -8,13 +8,6 @@
   host: http://lounge
   port: 80
 
-- name: Mark's Bedroom
-  username: gnome
-  password: !secret kodi_bedroom_mark
-  platform: kodi
-  host: http://bedroom-mark
-  port: 80
-
 - name: Kitchen
   platform: kodi
   host: http://kitchen
