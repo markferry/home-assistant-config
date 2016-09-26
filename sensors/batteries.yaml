@@ -1,41 +1,106 @@
 - platform: template
   sensors:
     main_heating_thermostat_battery:
-      value_template: '{{ states.sensor.horstmann_scsc17_thermostat_temperature_35.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.horstmann_scsc17_thermostat_temperature_35 %}
+          {{ states.sensor.horstmann_scsc17_thermostat_temperature_35.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     annex_heating_thermostat_battery:
-      value_template: '{{ states.sensor.horstmann_scsc17_thermostat_temperature_50.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.horstmann_scsc17_thermostat_temperature_50 %}
+          {{ states.sensor.horstmann_scsc17_thermostat_temperature_50.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     hall_multisensor_battery:
-      value_template: '{{ states.sensor.aeotec_dsb05_multisensor_temperature_3.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.aeotec_dsb05_multisensor_temperature_3 %}
+          {{ states.sensor.aeotec_dsb05_multisensor_temperature_3.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     hall_east_battery:
-      value_template: '{{ states.sensor.hall_east_temperature_24.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.hall_east_temperature_24 %}
+          {{ states.sensor.hall_east_temperature_24.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     hall_west_battery:
-      value_template: '{{ states.sensor.hall_west_temperature_13.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.hall_west_temperature_13 %}
+          {{ states.sensor.hall_west_temperature_13.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     hall_annex_battery:
-      value_template: '{{ states.sensor.annex_hall_temperature_43.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.annex_hall_temperature_43 %}
+          {{ states.sensor.annex_hall_temperature_43.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     ballroom_east_battery:
-      value_template: '{{ states.sensor.ballroom_east_temperature_33.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.ballroom_east_temperature_33 %}
+          {{ states.sensor.ballroom_east_temperature_33.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     bedroom_mark_battery:
-      value_template: '{{ states.sensor.bedroom_mark_temperature_29.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.bedroom_mark_temperature_29 %}
+          {{ states.sensor.bedroom_mark_temperature_29.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     kitchen_battery:
-      value_template: '{{ states.sensor.kitchen_temperature_34.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.kitchen_temperature_34 %}
+          {{ states.sensor.kitchen_temperature_34.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     library_battery:
-      value_template: '{{ states.sensor.library_temperature_25.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.library_temperature_25 %}
+          {{ states.sensor.library_temperature_25.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     lounge_east_battery:
-      value_template: '{{ states.sensor.lounge_east_temperature_30.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.lounge_east_temperature_30 %}
+          {{ states.sensor.lounge_east_temperature_30.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     study_east_battery:
-      value_template: '{{ states.sensor.study_east_temperature_14.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.study_east_temperature_14 %}
+          {{ states.sensor.study_east_temperature_14.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
       unit_of_measurement: '%'
     study_west_battery:
-      value_template: '{{ states.sensor.study_west_temperature_15.attributes.battery_level }}'
+      value_template: >
+        {% if states.sensor.study_west_temperature_15 %}
+          {{ states.sensor.study_west_temperature_15.attributes.battery_level}}
+        {%  else %}
+          unknown
+        {%  endif %}
       unit_of_measurement: '%'
