@@ -4,7 +4,7 @@ study_select:
     - 'Off'
     - 'Work'
     - 'Relax'
-  initial: None
+  initial: 'Off'
   icon: mdi:printer
 
 kitchen_select:
@@ -13,7 +13,7 @@ kitchen_select:
     - 'Off'
     - 'Cosy'
     - 'Bright'
-  initial: None
+  initial: 'Off'
   icon: mdi:stove
 
 lounge_select:
@@ -23,7 +23,7 @@ lounge_select:
     - 'Cosy'
     - 'Movie'
     - 'Bright'
-  initial: None
+  initial: 'Off'
   icon: mdi:sofa
 
 library_select:
@@ -32,7 +32,7 @@ library_select:
     - 'Off'
     - 'Chat'
     - 'Read'
-  initial: None
+  initial: 'Off'
   icon: mdi:library
 
 ballroom_select:
@@ -42,7 +42,7 @@ ballroom_select:
     - 'Party'
     - 'Movie'
     - 'Bright'
-  initial: None
+  initial: 'Off'
   icon: mdi:projector
 
 marks_bedroom_select:
@@ -51,5 +51,5 @@ marks_bedroom_select:
     - 'Off'
     - 'Sleep'
     - 'Play'
-  initial: None
+  initial: 'Off'
   icon: mdi:hotel
