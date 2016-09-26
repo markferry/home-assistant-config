@@ -56,7 +56,7 @@ kitchen_stream:
 
 lounge_stream:
   name: Lounge
-  initial: off
+  initial: None
   icon: mdi:sofa
   options:
     - None
@@ -66,7 +66,7 @@ lounge_stream:
 
 library_stream:
   name: Library
-  initial: off
+  initial: None
   icon: mdi:library
   options:
     - None
@@ -76,7 +76,7 @@ library_stream:
 
 ballroom_stream:
   name: Ballroom
-  initial: off
+  initial: None
   icon: mdi:projector
   options:
     - None
@@ -86,7 +86,7 @@ ballroom_stream:
 
 marks_bedroom_stream:
   name: Mark's Bedroom
-  initial: off
+  initial: None
   icon: mdi:hotel
   options:
     - None
