@@ -59,6 +59,8 @@ device_tracker: !include device_tracker.yaml
 ifttt:
   key: !secret ifttt_key
 
+notify: !include_dir_merge_list notify
+
 scene: !include scene.yaml
 automation: !include_dir_merge_list automation
 
