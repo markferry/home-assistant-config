@@ -1,0 +1,4 @@
+- name: HTML5
+  platform: html5
+  gcm_sender_id: '591650561003'
+  gcm_api_key: !secret gcm_api_key
