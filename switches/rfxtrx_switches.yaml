@@ -1,8 +1,6 @@
 - platform: rfxtrx
   automatic_add: True
   devices:
-    0a140000f15c7201010080:
-      name: Mark's Bedroom Amp
     0a140003f15c7202010080:
       name: Switch Remote 2
     0a140006f15c7203010080:

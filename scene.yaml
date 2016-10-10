@@ -81,7 +81,7 @@
   entities:
     group.marks_bedroom_lights:
       state: off
-    switch.marks_bedroom_amp:
+    switch.marks_bedroom_appliances:
       state: off
     climate.bedroom_mark_comfort_setpoint_29:
       temperature: 10
