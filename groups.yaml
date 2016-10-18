@@ -23,20 +23,20 @@ study_heating:
   name: Study Heating
   view: false
   entities:
-  - climate.study_east_comfort_setpoint_14
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
-  - sensor.study_east_temperature_14
-  - climate.study_west_comfort_setpoint_15
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
-  - sensor.study_west_temperature_15
+  - climate.study_east_comfort_setpoint_14_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1
+  - sensor.study_east_temperature_14_1
+  - climate.study_west_comfort_setpoint_15_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1
+  - sensor.study_west_temperature_15_1
 study_setpoints:
   name: Study Setpoints
   view: false
   entities:
-  - climate.study_east_comfort_setpoint_14
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14
-  - climate.study_west_comfort_setpoint_15
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15
+  - climate.study_east_comfort_setpoint_14_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1
+  - climate.study_west_comfort_setpoint_15_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1
 study_lights:
   name: Study Lights
   view: false
@@ -64,17 +64,17 @@ kitchen_scenes:
   - input_select.kitchen_select
 kitchen_heating:
   entities:
-  - climate.kitchen_comfort_setpoint_34
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
-  - sensor.kitchen_temperature_34
+  - climate.kitchen_comfort_setpoint_34_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1
+  - sensor.kitchen_temperature_34_1
   name: Kitchen Heating
   view: false
 kitchen_setpoints:
   name: Kitchen Setpoints
   view: false
   entities:
-  - climate.kitchen_comfort_setpoint_34
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34
+  - climate.kitchen_comfort_setpoint_34_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1
 kitchen_lights:
   name: Kitchen Lights
   view: false
@@ -89,36 +89,36 @@ hall:
   - group.hall_scenes
   - group.main_heating
   - group.annex_heating
-  - sensor.aeotec_dsb05_multisensor_luminance_3
-  - sensor.aeotec_dsb05_multisensor_relative_humidity_3
-  - sensor.aeotec_dsb05_multisensor_temperature_3
-  - binary_sensor.aeotec_dsb05_multisensor_sensor_3
+  - sensor.aeotec_dsb05_multisensor_luminance_3_3
+  - sensor.aeotec_dsb05_multisensor_relative_humidity_3_5
+  - sensor.aeotec_dsb05_multisensor_temperature_3_1
+  - binary_sensor.aeotec_dsb05_multisensor_sensor_3_0
 hall_scenes:
   name: Hall Scenes
   view: false
 hall_heating:
   entities:
-  - climate.hall_west_comfort_setpoint_13
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
-  - sensor.hall_west_temperature_13
-  - climate.hall_east_comfort_setpoint_24
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
-  - sensor.hall_east_temperature_24
-  - climate.annex_hall_comfort_setpoint_43
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
-  - sensor.annex_hall_temperature_43
+  - climate.hall_west_comfort_setpoint_13_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13_1
+  - sensor.hall_west_temperature_13_1
+  - climate.hall_east_comfort_setpoint_24_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24_1
+  - sensor.hall_east_temperature_24_1
+  - climate.annex_hall_comfort_setpoint_43_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43_1
+  - sensor.annex_hall_temperature_43_1
   name: Hall Heating
   view: false
 hall_setpoints:
   name: Hall Setpoints
   view: false
   entities:
-  - climate.hall_west_comfort_setpoint_13
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13
-  - climate.hall_east_comfort_setpoint_24
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24
-  - climate.annex_hall_comfort_setpoint_43
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43
+  - climate.hall_west_comfort_setpoint_13_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13_1
+  - climate.hall_east_comfort_setpoint_24_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24_1
+  - climate.annex_hall_comfort_setpoint_43_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43_1
 hall_lights:
   name: Hall Lights
   view: false
@@ -139,17 +139,17 @@ lounge_scenes:
   - input_select.lounge_select
 lounge_heating:
   entities:
-  - climate.lounge_east_comfort_setpoint_30
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
-  - sensor.lounge_east_temperature_30
+  - climate.lounge_east_comfort_setpoint_30_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1
+  - sensor.lounge_east_temperature_30_1
   name: Lounge Heating
   view: false
 lounge_setpoints:
   name: Lounge Setpoints
   view: false
   entities:
-  - climate.lounge_east_comfort_setpoint_30
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30
+  - climate.lounge_east_comfort_setpoint_30_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1
 lounge_lights:
   entities:
   - light.lounge_east
@@ -174,17 +174,17 @@ library_scenes:
   - input_select.library_select
 library_heating:
   entities:
-  - climate.library_comfort_setpoint_25
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
-  - sensor.library_temperature_25
+  - climate.library_comfort_setpoint_25_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1
+  - sensor.library_temperature_25_1
   name: Library Heating
   view: false
 library_setpoints:
   name: Library Setpoints
   view: false
   entities:
-  - climate.library_comfort_setpoint_25
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25
+  - climate.library_comfort_setpoint_25_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1
 library_lights:
   name: Library Lights
   view: false
@@ -206,20 +206,20 @@ ballroom_scenes:
   - input_select.ballroom_select
 ballroom_heating:
   entities:
-  - climate.ballroom_east_comfort_setpoint_33
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
-  - sensor.ballroom_east_temperature_33
+  - climate.ballroom_east_comfort_setpoint_33_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1
+  - sensor.ballroom_east_temperature_33_1
   name: Ballroom Heating
   view: false
 ballroom_setpoints:
   entities:
-  - climate.ballroom_east_comfort_setpoint_33
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33
+  - climate.ballroom_east_comfort_setpoint_33_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1
   name: Ballroom Setpoints
   view: false
 ballroom_lights:
   entities:
-  - light.ballroom_north_level_41
+  - light.ballroom_north_level_41_0
   - light.unused_41_level_41
   name: Ballroom Lights
   view: false
@@ -241,20 +241,20 @@ marks_bedroom_scenes:
   - input_select.marks_bedroom_select
 marks_bedroom_heating:
   entities:
-  - climate.bedroom_mark_comfort_setpoint_29
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
-  - sensor.bedroom_mark_temperature_29
+  - climate.bedroom_mark_comfort_setpoint_29_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1
+  - sensor.bedroom_mark_temperature_29_1
   name: Mark's Bedroom Heating
   view: false
 marks_bedroom_setpoints:
   name: Mark's Bedroom Setpoints
   view: false
   entities:
-  - climate.bedroom_mark_comfort_setpoint_29
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29
+  - climate.bedroom_mark_comfort_setpoint_29_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1
 marks_bedroom_lights:
   entities:
-  - light.fibaro_system_fgd212_dimmer_2_level_39
+  - light.fibaro_system_fgd212_dimmer_2_level_39_0
   - light.bedroom_mark_level_39
   - light.marks_bedroom_lamp
   name: Mark's Bedroom Lights
@@ -310,32 +310,32 @@ main_heating:
   view: false
   entities:
   - sensor.horstmann_scsc17_thermostat_temperature_35
-  - climate.horstmann_scsc17_thermostat_heating_1_35
-  - climate.horstmann_unknown_type0003_id0002_mode_36_2
-  - climate.horstmann_unknown_type0003_id0002_mode_36_3
-  - switch.horstmann_scsc17_thermostat_switch_35
+  - climate.horstmann_scsc17_thermostat_heating_1_35_1
+  - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
+  - climate.horstmann_unknown_type0003_id0002_mode_36_0_3
+  - switch.horstmann_scsc17_thermostat_switch_35_0
 
 main_heating_override:
   name: Main Heating Override
   view: false
   entities:
-  - switch.horstmann_unknown_type0003_id0002_switch_36_2
-  - switch.horstmann_unknown_type0003_id0002_switch_36_3
+  - switch.horstmann_unknown_type0003_id0002_switch_36_0_2
+  - switch.horstmann_unknown_type0003_id0002_switch_36_0_3
 
 annex_heating:
   name: Annex Heating
   view: false
   entities:
   - sensor.horstmann_scsc17_thermostat_temperature_50
-  - climate.horstmann_scsc17_thermostat_heating_1_50
-  - climate.horstmann_unknown_type0003_id0001_mode_51
-  - switch.horstmann_scsc17_thermostat_switch_50
+  - climate.horstmann_scsc17_thermostat_heating_1_50_1
+  - climate.horstmann_unknown_type0003_id0001_mode_51_0
+  - switch.horstmann_scsc17_thermostat_switch_50_0
 
 annex_heating_override:
   name: Annex Heating Override
   view: false
   entities:
-  - switch.horstmann_unknown_type0003_id0001_switch_51
+  - switch.horstmann_unknown_type0003_id0001_switch_51_0
 
 quick_scenes:
   name: Quick Moods
@@ -411,35 +411,35 @@ temperatures:
   entities:
   - sensor.horstmann_scsc17_thermostat_temperature_35
   - sensor.horstmann_scsc17_thermostat_temperature_50
-  - sensor.aeotec_dsb05_multisensor_temperature_3
-  - sensor.ballroom_east_temperature_33
-  - sensor.hall_west_temperature_13
-  - sensor.hall_east_temperature_24
-  - sensor.annex_hall_temperature_43
-  - sensor.kitchen_temperature_34
-  - sensor.library_temperature_25
-  - sensor.lounge_east_temperature_30
-  - sensor.bedroom_mark_temperature_29
-  - sensor.study_east_temperature_14
-  - sensor.study_west_temperature_15
+  - sensor.aeotec_dsb05_multisensor_temperature_3_1
+  - sensor.ballroom_east_temperature_33_1
+  - sensor.hall_west_temperature_13_1
+  - sensor.hall_east_temperature_24_1
+  - sensor.annex_hall_temperature_43_1
+  - sensor.kitchen_temperature_34_1
+  - sensor.library_temperature_25_1
+  - sensor.lounge_east_temperature_30_1
+  - sensor.bedroom_mark_temperature_29_1
+  - sensor.study_east_temperature_14_1
+  - sensor.study_west_temperature_15_1
 
 thermostats:
   entities:
-  - climate.annex_hall_comfort_setpoint_43
-  - climate.ballroom_east_comfort_setpoint_33
-  - climate.bedroom_mark_comfort_setpoint_29
-  - climate.hall_east_comfort_setpoint_24
-  - climate.hall_west_comfort_setpoint_13
-  - climate.horstmann_scsc17_thermostat_heating_1_35
-  - climate.horstmann_scsc17_thermostat_heating_1_50
-  - climate.horstmann_unknown_type0003_id0001_mode_51
-  - climate.horstmann_unknown_type0003_id0002_mode_36
-  - climate.horstmann_unknown_type0003_id0002_mode_36_2
-  - climate.kitchen_comfort_setpoint_34
-  - climate.library_comfort_setpoint_25
-  - climate.lounge_east_comfort_setpoint_30
-  - climate.study_east_comfort_setpoint_14
-  - climate.study_west_comfort_setpoint_15
+  - climate.annex_hall_comfort_setpoint_43_1
+  - climate.ballroom_east_comfort_setpoint_33_1
+  - climate.bedroom_mark_comfort_setpoint_29_1
+  - climate.hall_east_comfort_setpoint_24_1
+  - climate.hall_west_comfort_setpoint_13_1
+  - climate.horstmann_scsc17_thermostat_heating_1_35_1
+  - climate.horstmann_scsc17_thermostat_heating_1_50_1
+  - climate.horstmann_unknown_type0003_id0001_mode_51_0
+  - climate.horstmann_unknown_type0003_id0002_mode_36_0
+  - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
+  - climate.kitchen_comfort_setpoint_34_1
+  - climate.library_comfort_setpoint_25_1
+  - climate.lounge_east_comfort_setpoint_30_1
+  - climate.study_east_comfort_setpoint_14_1
+  - climate.study_west_comfort_setpoint_15_1
   name: Thermostats
   view: false
 
