@@ -1,40 +1,40 @@
-- name: study_west_temperature_15
+- name: study_west_temperature_15_1
   platform: mqtt
   state_topic: ha/mock/study/west/temperature/state
   unit_of_measurement: "\xB0C"
-- name: study_east_temperature_14
+- name: study_east_temperature_14_1
   platform: mqtt
   state_topic: ha/mock/study/east/temperature/state
   unit_of_measurement: "\xB0C"
-- name: lounge_east_temperature_30
+- name: lounge_east_temperature_30_1
   platform: mqtt
   state_topic: ha/mock/lounge/east/temperature/state
   unit_of_measurement: "\xB0C"
-- name: bedroom_mark_temperature_29
+- name: bedroom_mark_temperature_29_1
   platform: mqtt
   state_topic: ha/mock/bedroom_mark/temperature/state
   unit_of_measurement: "\xB0C"
-- name: kitchen_temperature_34
+- name: kitchen_temperature_34_1
   platform: mqtt
   state_topic: ha/mock/kitchen/temperature/state
   unit_of_measurement: "\xB0C"
-- name: ballroom_east_temperature_33
+- name: ballroom_east_temperature_33_1
   platform: mqtt
   state_topic: ha/mock/ballroom/east/temperature/state
   unit_of_measurement: "\xB0C"
-- name: library_temperature_25
+- name: library_temperature_25_1
   platform: mqtt
   state_topic: ha/mock/library/temperature/state
   unit_of_measurement: "\xB0C"
-- name: hall_west_temperature_13
+- name: hall_west_temperature_13_1
   platform: mqtt
   state_topic: ha/mock/hall/west/temperature/state
   unit_of_measurement: "\xB0C"
-- name: hall_east_temperature_24
+- name: hall_east_temperature_24_1
   platform: mqtt
   state_topic: ha/mock/hall/east/temperature/state
   unit_of_measurement: "\xB0C"
-- name: hall_annex_temperature_43
+- name: hall_annex_temperature_43_1
   platform: mqtt
   state_topic: ha/mock/hall/annex/temperature/state
   unit_of_measurement: "\xB0C"

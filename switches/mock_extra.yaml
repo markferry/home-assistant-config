@@ -1,34 +1,34 @@
-- name: horstmann_scsc17_thermostat_switch_35
+- name: horstmann_scsc17_thermostat_switch_35_0
   command_topic: ha/main/holidaymode/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0002_switch_36
+- name: horstmann_unknown_type0003_id0002_switch_36_0
   command_topic: ha/main/heating/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0002_switch_36_2
+- name: horstmann_unknown_type0003_id0002_switch_36_0_2
   command_topic: ha/main/hotwater/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0002_switch_36_3
+- name: horstmann_unknown_type0003_id0002_switch_36_0_3
   command_topic: ha/main/all/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_scsc17_thermostat_switch_50
+- name: horstmann_scsc17_thermostat_switch_50_0
   command_topic: ha/annex/holidaymode/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0001_switch_51
+- name: horstmann_unknown_type0003_id0001_switch_51_0
   command_topic: ha/annex/heating/command
   payload_off: 'OFF'
   payload_on: 'ON'
