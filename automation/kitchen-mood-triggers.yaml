@@ -1,0 +1,9 @@
+- alias: "Kitchen Cosy Time"
+  trigger:
+    - platform: time
+      after: '07:00:00'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.kitchen_select
+        option: "Cosy"

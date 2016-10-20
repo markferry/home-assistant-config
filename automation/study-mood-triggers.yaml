@@ -1,0 +1,17 @@
+- alias: "Study Work Time"
+  trigger:
+    - platform: time
+      after: '07:30:00'
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_select
+        option: "Work"
