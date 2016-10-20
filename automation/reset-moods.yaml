@@ -1,0 +1,44 @@
+#  All Off at 11pm weekdays, 3am weekend
+- alias: "Reset Moods"
+  trigger:
+    - platform: time
+      after: '23:00:00'
+    - platform: time
+      after: '03:00:00'
+  condition:
+    condition: or
+    conditions:
+      - condition: time
+        weekday:
+        - sat
+        - sun
+        after: '03:00:00'
+      - condition: time
+        weekday:
+        - sun
+        - mon
+        - tue
+        - wed
+        - thu
+        after: '23:00:00'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_select
+        option: "Off"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.kitchen_select
+        option: "Off"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Off"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Off"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Off"
