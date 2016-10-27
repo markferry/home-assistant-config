@@ -1,3 +1,10 @@
+group.people:
+  order: 1
+group.barnacles:
+  order: 2
+group.quick_scenes:
+  order: 3
+
 group.study:
   order: 1
 group.kitchen:
