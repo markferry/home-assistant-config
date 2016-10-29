@@ -309,7 +309,7 @@ main_heating:
   name: Main Heating
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_35
+  - sensor.horstmann_scsc17_thermostat_temperature_35_1
   - climate.horstmann_scsc17_thermostat_heating_1_35_1
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_3
@@ -326,7 +326,7 @@ annex_heating:
   name: Annex Heating
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_50
+  - sensor.horstmann_scsc17_thermostat_temperature_50_1
   - climate.horstmann_scsc17_thermostat_heating_1_50_1
   - climate.horstmann_unknown_type0003_id0001_mode_51_0
   - switch.horstmann_scsc17_thermostat_switch_50_0
@@ -409,8 +409,8 @@ temperatures:
   name: Temperatures
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_35
-  - sensor.horstmann_scsc17_thermostat_temperature_50
+  - sensor.horstmann_scsc17_thermostat_temperature_35_1
+  - sensor.horstmann_scsc17_thermostat_temperature_50_1
   - sensor.aeotec_dsb05_multisensor_temperature_3_1
   - sensor.ballroom_east_temperature_33_1
   - sensor.hall_west_temperature_13_1

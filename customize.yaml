@@ -1,3 +1,10 @@
+group.people:
+  order: 1
+group.barnacles:
+  order: 2
+group.quick_scenes:
+  order: 3
+
 group.study:
   order: 1
 group.kitchen:
@@ -164,13 +171,13 @@ light.fibaro_system_fgd212_dimmer_2_level_39_0:
   friendly_name: Mark's Bedroom Overhead
 climate.horstmann_scsc17_thermostat_heating_1_35_1:
   friendly_name: Main Heating Thermostat
-sensor.horstmann_scsc17_thermostat_temperature_35:
+sensor.horstmann_scsc17_thermostat_temperature_35_1:
   friendly_name: Main Heating Temperature
 switch.horstmann_scsc17_thermostat_switch_35_0:
   friendly_name: Main Heating Holiday Mode
 climate.horstmann_scsc17_thermostat_heating_1_50_1:
   friendly_name: Annex Heating Thermostat
-sensor.horstmann_scsc17_thermostat_temperature_50:
+sensor.horstmann_scsc17_thermostat_temperature_50_1:
   friendly_name: Annex Heating Temperature
 switch.horstmann_scsc17_thermostat_switch_50_0:
   friendly_name: Annex Heating Holiday Mode
