@@ -1,0 +1,48 @@
+- command_topic: ha/study/demand/command
+  name: Study Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/lounge/demand/command
+  name: Lounge Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/bedroom-mark/demand/command
+  name: Mark's Bedroom Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/kitchen/demand/command
+  name: Kitchen Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/ballroom/demand/command
+  name: Ballroom Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/library/demand/command
+  name: Library Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/hall/demand/command
+  name: Hall Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- command_topic: ha/hall/annex/demand/command
+  name: Hall Annex Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
