@@ -1,0 +1,61 @@
+# Heating On Demand
+#
+- alias: "Main Boiler Demand On"
+  trigger:
+    platform: state
+    entity_id: group.main_heating_demand
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0
+
+
+- alias: "Main Boiler Demand Off"
+  trigger:
+    platform: state
+    entity_id: group.main_heating_demand
+    to: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0
+
+- alias: "Study Setpoint Tx"
+  trigger:
+    - platform: state
+      entity_id: climate.study_west_thermostat
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.study_west_comfort_setpoint_15_1
+        temperature: trigger.to_state.attributes.temperature
+
+- alias: "Study Setpoint Rx"
+  trigger:
+    - platform: state
+      entity_id: climate.study_west_comfort_setpoint_15_1
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.study_west_thermostat
+        temperature: trigger.to_state.attributes.temperature
+
+- alias: "Bedroom Mark Setpoint Tx"
+  trigger:
+    - platform: state
+      entity_id: climate.bedroom_mark_thermostat
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.bedroom_mark_comfort_setpoint_29_1
+        temperature: trigger.to_state.attributes.temperature
+
+- alias: "Bedroom Mark Setpoint Rx"
+  trigger:
+    - platform: state
+      entity_id: climate.bedroom_mark_comfort_setpoint_29_1
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.bedroom_mark_thermostat
+        temperature: trigger.to_state.attributes.temperature
+
