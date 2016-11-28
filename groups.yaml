@@ -322,6 +322,16 @@ main_heating_override:
   - switch.horstmann_unknown_type0003_id0002_switch_36_0_2
   - switch.horstmann_unknown_type0003_id0002_switch_36_0_3
 
+main_heating_demand:
+  name: Main Heating Demand
+  view: false
+  entities:
+  - switch.kitchen_demand
+  - switch.lounge_demand
+  - switch.library_demand
+  - switch.hall_demand
+  - switch.marks_bedroom_demand
+
 annex_heating:
   name: Annex Heating
   view: false
@@ -336,6 +346,13 @@ annex_heating_override:
   view: false
   entities:
   - switch.horstmann_unknown_type0003_id0001_switch_51_0
+
+annex_heating_demand:
+  name: Annex Heating Demand
+  view: false
+  entities:
+  - switch.study_demand
+  - switch.hall_annex_demand
 
 quick_scenes:
   name: Quick Moods
