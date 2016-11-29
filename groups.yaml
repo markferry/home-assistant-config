@@ -23,10 +23,10 @@ study_heating:
   name: Study Heating
   view: false
   entities:
-  - climate.study_east_comfort_setpoint_14_1
+  - climate.study_east_thermostat_14_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1
   - sensor.study_east_temperature_14_1
-  - climate.study_west_comfort_setpoint_15_1
+  - climate.study_west_thermostat_15_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1
   - sensor.study_west_temperature_15_1
 study_setpoints:
@@ -64,7 +64,7 @@ kitchen_scenes:
   - input_select.kitchen_select
 kitchen_heating:
   entities:
-  - climate.kitchen_comfort_setpoint_34_1
+  - climate.kitchen_thermostat_34_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1
   - sensor.kitchen_temperature_34_1
   name: Kitchen Heating
@@ -98,13 +98,13 @@ hall_scenes:
   view: false
 hall_heating:
   entities:
-  - climate.hall_west_comfort_setpoint_13_1
+  - climate.hall_west_thermostat_13_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13_1
   - sensor.hall_west_temperature_13_1
-  - climate.hall_east_comfort_setpoint_24_1
+  - climate.hall_east_thermostat_24_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24_1
   - sensor.hall_east_temperature_24_1
-  - climate.annex_hall_comfort_setpoint_43_1
+  - climate.annex_hall_thermostat_43_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43_1
   - sensor.annex_hall_temperature_43_1
   name: Hall Heating
@@ -139,7 +139,7 @@ lounge_scenes:
   - input_select.lounge_select
 lounge_heating:
   entities:
-  - climate.lounge_east_comfort_setpoint_30_1
+  - climate.lounge_east_thermostat_30_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1
   - sensor.lounge_east_temperature_30_1
   name: Lounge Heating
@@ -174,7 +174,7 @@ library_scenes:
   - input_select.library_select
 library_heating:
   entities:
-  - climate.library_comfort_setpoint_25_1
+  - climate.library_thermostat_25_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1
   - sensor.library_temperature_25_1
   name: Library Heating
@@ -206,7 +206,7 @@ ballroom_scenes:
   - input_select.ballroom_select
 ballroom_heating:
   entities:
-  - climate.ballroom_east_comfort_setpoint_33_1
+  - climate.ballroom_east_thermostat_33_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1
   - sensor.ballroom_east_temperature_33_1
   name: Ballroom Heating
@@ -241,7 +241,7 @@ marks_bedroom_scenes:
   - input_select.marks_bedroom_select
 marks_bedroom_heating:
   entities:
-  - climate.bedroom_mark_comfort_setpoint_29_1
+  - climate.bedroom_mark_thermostat_29_1
   - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1
   - sensor.bedroom_mark_temperature_29_1
   name: Mark's Bedroom Heating
@@ -296,11 +296,13 @@ settings:
   - group.network
   - group.temperatures
   - group.thermostats
+  - group.generic_thermostats
+  - group.annex_heating_demand
+  - group.main_heating_demand
   - group.batteries
   - group.media_players
   - group.main_heating_override
   - group.annex_heating_override
-  - group.lockouts
 
 #
 # Functional Groups
@@ -322,6 +324,16 @@ main_heating_override:
   - switch.horstmann_unknown_type0003_id0002_switch_36_0_2
   - switch.horstmann_unknown_type0003_id0002_switch_36_0_3
 
+main_heating_demand:
+  name: Main Heating Demand
+  view: false
+  entities:
+  - switch.kitchen_demand
+  - switch.lounge_demand
+  - switch.library_demand
+  - switch.hall_demand
+  - switch.marks_bedroom_demand
+
 annex_heating:
   name: Annex Heating
   view: false
@@ -336,6 +348,13 @@ annex_heating_override:
   view: false
   entities:
   - switch.horstmann_unknown_type0003_id0001_switch_51_0
+
+annex_heating_demand:
+  name: Annex Heating Demand
+  view: false
+  entities:
+  - switch.study_demand
+  - switch.hall_annex_demand
 
 quick_scenes:
   name: Quick Moods
@@ -441,6 +460,21 @@ thermostats:
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
   name: Thermostats
+  view: false
+
+generic_thermostats:
+  entities:
+  - climate.annex_hall_thermostat_43_1
+  - climate.ballroom_east_thermostat_33_1
+  - climate.bedroom_mark_thermostat_29_1
+  - climate.hall_east_thermostat_24_1
+  - climate.hall_west_thermostat_13_1
+  - climate.kitchen_thermostat_34_1
+  - climate.library_thermostat_25_1
+  - climate.lounge_east_thermostat_30_1
+  - climate.study_east_thermostat_14_1
+  - climate.study_west_thermostat_15_1
+  name: Generic Thermostats
   view: false
 
 network: !include network.yaml
