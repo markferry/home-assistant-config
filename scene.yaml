@@ -4,8 +4,6 @@
       state: off
     climate.lounge_east_comfort_setpoint_30_1:
       temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1:
-      temperature: 10
     media_player.lounge:
       state: paused
 - name: Lounge Cosy
@@ -15,16 +13,12 @@
       brightness: 20
     climate.lounge_east_comfort_setpoint_30_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1:
-      temperature: 20
 - name: Lounge Movie
   entities:
     group.lounge_lights:
       state: on
       brightness: 50
     climate.lounge_east_comfort_setpoint_30_1:
-      temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1:
       temperature: 20
 - name: Lounge Bright
   entities:
@@ -33,8 +27,6 @@
       brightness: 100
     climate.lounge_east_comfort_setpoint_30_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1:
-      temperature: 20
 
 - name: Study Off
   entities:
@@ -42,11 +34,7 @@
       state: off
     climate.study_east_comfort_setpoint_14_1:
       temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1:
-      temperature: 10
     climate.study_west_comfort_setpoint_15_1:
-      temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1:
       temperature: 10
     media_player.study:
       state: paused
@@ -57,11 +45,7 @@
       brightness: 100
     climate.study_east_comfort_setpoint_14_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1:
-      temperature: 20
     climate.study_west_comfort_setpoint_15_1:
-      temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1:
       temperature: 20
 - name: Study Relax
   entities:
@@ -70,11 +54,7 @@
       brightness: 50
     climate.study_east_comfort_setpoint_14_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1:
-      temperature: 20
     climate.study_west_comfort_setpoint_15_1:
-      temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1:
       temperature: 20
 
 - name: Mark's Bedroom Off
@@ -85,8 +65,6 @@
       state: off
     climate.bedroom_mark_comfort_setpoint_29_1:
       temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1:
-      temperature: 10
     media_player.marks_bedroom:
       state: paused
 - name: Mark's Bedroom Sleep
@@ -95,15 +73,11 @@
       state: off
     climate.bedroom_mark_comfort_setpoint_29_1:
       temperature: 15
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1:
-      temperature: 15
 - name: Mark's Bedroom Play
   entities:
     group.marks_bedroom_lights:
       state: on
     climate.bedroom_mark_comfort_setpoint_29_1:
-      temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1:
       temperature: 20
 
 - name: Kitchen Off
@@ -111,8 +85,6 @@
     group.kitchen_lights:
       state: off
     climate.kitchen_comfort_setpoint_34_1:
-      temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1:
       temperature: 10
     media_player.kitchen:
       state: paused
@@ -123,8 +95,6 @@
       brightness: 50
     climate.kitchen_comfort_setpoint_34_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1:
-      temperature: 20
 - name: Kitchen Bright
   entities:
     group.kitchen_lights:
@@ -132,16 +102,12 @@
       brightness: 100
     climate.kitchen_comfort_setpoint_34_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1:
-      temperature: 20
 
 - name: Ballroom Off
   entities:
     group.ballroom_lights:
       state: off
     climate.ballroom_east_comfort_setpoint_33_1:
-      temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1:
       temperature: 10
     media_player.ballroom:
       state: paused
@@ -152,15 +118,11 @@
       brightness: 20
     climate.ballroom_east_comfort_setpoint_33_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1:
-      temperature: 20
 - name: Ballroom Movie
   entities:
     group.ballroom_lights:
       state: off
     climate.ballroom_east_comfort_setpoint_33_1:
-      temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1:
       temperature: 20
 - name: Ballroom Bright
   entities:
@@ -169,16 +131,12 @@
       brightness: 100
     climate.ballroom_east_comfort_setpoint_33_1:
       temperature: 20
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1:
-      temperature: 20
 
 - name: Library Off
   entities:
     group.library_lights:
       state: off
     climate.library_comfort_setpoint_25_1:
-      temperature: 10
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1:
       temperature: 10
     media_player.library:
       state: paused
@@ -189,15 +147,11 @@
       brightness: 50
     climate.library_comfort_setpoint_25_1:
       temperature: 22
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1:
-      temperature: 22
 - name: Library Read
   entities:
     group.library_lights:
       state: on
       brightness: 100
     climate.library_comfort_setpoint_25_1:
-      temperature: 22
-    climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1:
       temperature: 22
 
