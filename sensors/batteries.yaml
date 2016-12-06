@@ -40,7 +40,7 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
-    hall_annex_battery:
+    annex_hall_battery:
       value_template: >
         {% if states.sensor.annex_hall_temperature_43_1 %}
           {{ states.sensor.annex_hall_temperature_43_1.attributes.battery_level }}

@@ -333,7 +333,7 @@ annex_heating_demand:
   view: false
   entities:
   - switch.study_demand
-  - switch.hall_annex_demand
+  - switch.annex_hall_demand
 
 quick_scenes:
   name: Quick Moods
