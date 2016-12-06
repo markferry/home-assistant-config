@@ -112,7 +112,7 @@ climate.horstmann_unknown_type0003_id0002_mode_36_0_3:
 switch.horstmann_unknown_type0003_id0002_switch_36_0:
   friendly_name: Main Heating Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_2:
-  friendly_name: Main Heating Switch
+  friendly_name: Main Boiler Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_3:
   friendly_name: Main Hot Water Switch
 climate.horstmann_unknown_type0003_id0001_mode_51_0:

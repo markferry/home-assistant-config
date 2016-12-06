@@ -301,6 +301,7 @@ main_heating_override:
   name: Main Heating Override
   view: false
   entities:
+  - switch.horstmann_unknown_type0003_id0002_switch_36_0
   - switch.horstmann_unknown_type0003_id0002_switch_36_0_2
   - switch.horstmann_unknown_type0003_id0002_switch_36_0_3
 
