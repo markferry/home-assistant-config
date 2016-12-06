@@ -246,7 +246,7 @@ marks_bedroom_appliances:
 
 radio:
   name: Internet Radio
-  view: true
+  view: false
   icon: mdi:radio
   entities:
   - group.radio_streams
