@@ -272,7 +272,6 @@ settings:
   view: true
   icon: mdi:settings
   entities:
-  - group.quick_scenes
   - group.network
   - group.temperatures
   - group.thermostats
@@ -280,7 +279,6 @@ settings:
   - group.annex_heating_demand
   - group.main_heating_demand
   - group.batteries
-  - group.media_players
   - group.main_heating_override
   - group.annex_heating_override
 
