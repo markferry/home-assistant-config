@@ -1,0 +1,10 @@
+- alias: "Guest Room Sleep Time"
+  trigger:
+    - platform: time
+      after: '03:00:00'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.guest_room_select
+        option: "Sleep"
+

@@ -65,8 +65,8 @@
 - heater: switch.hall_demand
   max_temp: 25
   min_temp: 5
-  name: hall_annex_thermostat_43_1
+  name: annex_hall_thermostat_43_1
   platform: generic_thermostat
-  target_sensor: sensor.hall_annex_temperature_43_1
+  target_sensor: sensor.annex_hall_temperature_43_1
   target_temp: 10.0
 

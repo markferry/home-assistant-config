@@ -19,12 +19,14 @@ group.library:
   order: 5
 group.ballroom:
   order: 6
-group.bedroom_mark:
+group.guest_room:
   order: 7
-group.radio:
+group.bedroom_mark:
   order: 8
-group.settings:
+group.radio:
   order: 9
+group.settings:
+  order: 10
 
 group.study_scenes:
   order: 0
@@ -37,6 +39,8 @@ group.lounge_scenes:
 group.library_scenes:
   order: 0
 group.ballroom_scenes:
+  order: 0
+group.guest_room_scenes:
   order: 0
 group.marks_bedroom_scenes:
   order: 0
@@ -112,7 +116,7 @@ climate.horstmann_unknown_type0003_id0002_mode_36_0_3:
 switch.horstmann_unknown_type0003_id0002_switch_36_0:
   friendly_name: Main Heating Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_2:
-  friendly_name: Main Heating Switch
+  friendly_name: Main Boiler Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_3:
   friendly_name: Main Hot Water Switch
 climate.horstmann_unknown_type0003_id0001_mode_51_0:
@@ -141,7 +145,7 @@ light.ballroom_east_level_33:
 light.kitchen_level_34:
   friendly_name: Kitchen Valve
 light.annex_hall_level_43:
-  friendly_name: Hall Annex Valve
+  friendly_name: Annex Hall Valve
 sensor.hall_west_temperature_13_1:
   friendly_name: Hall West Temperature
   polling_intensity: 5
@@ -170,7 +174,7 @@ sensor.kitchen_temperature_34_1:
   friendly_name: Kitchen Temperature
   polling_intensity: 5
 sensor.annex_hall_temperature_43_1:
-  friendly_name: Hall Annex Temperature
+  friendly_name: Annex Hall Temperature
   polling_intensity: 5
 
 sensor.main_heating_thermostat_battery:
@@ -210,7 +214,7 @@ sensor.kitchen_battery:
   friendly_name: Kitchen Battery
   icon: mdi:battery
 sensor.annex_hall_battery:
-  friendly_name: Hall Annex Battery
+  friendly_name: Annex Hall Battery
   icon: mdi:battery
 
 climate.hall_west_thermostat_13_1:
@@ -232,4 +236,6 @@ climate.ballroom_east_thermostat_33_1:
 climate.kitchen_thermostat_34_1:
   friendly_name: Kitchen Thermostat
 climate.annex_hall_thermostat_43_1:
-  friendly_name: Hall Annex Thermostat
+  friendly_name: Annex Hall Thermostat
+climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+  friendly_name: Guest Room Thermostat
