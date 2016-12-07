@@ -38,3 +38,7 @@
   platform: mqtt
   state_topic: ha/mock/hall/annex/temperature/state
   unit_of_measurement: "\xB0C"
+- name: guest_room_temperature_52_1
+  platform: mqtt
+  state_topic: ha/mock/guest-room/temperature/state
+  unit_of_measurement: "\xB0C"
