@@ -1,3 +1,12 @@
+group.people:
+  order: 1
+group.barnacles:
+  order: 2
+group.quick_scenes:
+  order: 3
+
+group.all_automations:
+  hidden: false
 group.study:
   order: 1
 group.kitchen:
@@ -10,12 +19,14 @@ group.library:
   order: 5
 group.ballroom:
   order: 6
-group.bedroom_mark:
+group.guest_room:
   order: 7
-group.radio:
+group.bedroom_mark:
   order: 8
-group.settings:
+group.radio:
   order: 9
+group.settings:
+  order: 10
 
 group.study_scenes:
   order: 0
@@ -28,6 +39,8 @@ group.lounge_scenes:
 group.library_scenes:
   order: 0
 group.ballroom_scenes:
+  order: 0
+group.guest_room_scenes:
   order: 0
 group.marks_bedroom_scenes:
   order: 0
@@ -82,86 +95,6 @@ light.ballroom_north_level_41_0:
 light.unused41_level_41_0:
   friendly_name: Ballroom North_
   polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_13:
-  friendly_name: Hall West Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_14:
-  friendly_name: Study East Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_15:
-  friendly_name: Study West Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_24:
-  friendly_name: Hall East Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_25:
-  friendly_name: Library Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_29:
-  friendly_name: Mark's Bedroom Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_30:
-  friendly_name: Lounge East Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_33:
-  friendly_name: Ballroom East Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_34:
-  friendly_name: Kitchen Valve_
-  polling_intensity: 0
-light.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_level_43:
-  friendly_name: Hall Annex Valve_
-  polling_intensity: 0
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_13_1:
-  friendly_name: Hall West Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_14_1:
-  friendly_name: Study East Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_15_1:
-  friendly_name: Study West Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_24_1:
-  friendly_name: Hall East Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_25_1:
-  friendly_name: Library Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_29_1:
-  friendly_name: Mark's Bedroom Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_30_1:
-  friendly_name: Lounge East Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_33_1:
-  friendly_name: Ballroom East Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_34_1:
-  friendly_name: Kitchen Temperature
-  polling_intensity: 5
-sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_43_1:
-  friendly_name: Hall Annex Temperature
-  polling_intensity: 5
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_13_1:
-  friendly_name: Hall West Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_14_1:
-  friendly_name: Study East Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_15_1:
-  friendly_name: Study West Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_24_1:
-  friendly_name: Hall East Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_25_1:
-  friendly_name: Library Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_29_1:
-  friendly_name: Mark's Bedroom Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_30_1:
-  friendly_name: Lounge East Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_33_1:
-  friendly_name: Ballroom East Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_34_1:
-  friendly_name: Kitchen Thermostat_
-climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_43_1:
-  friendly_name: Hall Annex Thermostat_
 light.fibaro_system_fgd212_dimmer_2_level_39_0:
   friendly_name: Mark's Bedroom Overhead
 climate.horstmann_scsc17_thermostat_heating_1_35_1:
@@ -185,7 +118,7 @@ climate.horstmann_unknown_type0003_id0002_mode_36_0_3:
 switch.horstmann_unknown_type0003_id0002_switch_36_0:
   friendly_name: Main Heating Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_2:
-  friendly_name: Main Heating Switch
+  friendly_name: Main Boiler Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_3:
   friendly_name: Main Hot Water Switch
 climate.horstmann_unknown_type0003_id0001_mode_51_0:
@@ -286,23 +219,25 @@ sensor.annex_hall_battery:
   friendly_name: Hall Annex Battery
   icon: mdi:battery
 
-climate.hall_west_comfort_setpoint_13_1:
+climate.hall_west_thermostat_13_1:
   friendly_name: Hall West Thermostat
-climate.study_east_comfort_setpoint_14_1:
+climate.study_east_thermostat_14_1:
   friendly_name: Study East Thermostat
-climate.study_west_comfort_setpoint_15_1:
+climate.study_west_thermostat_15_1:
   friendly_name: Study West Thermostat
-climate.hall_east_comfort_setpoint_24_1:
+climate.hall_east_thermostat_24_1:
   friendly_name: Hall East Thermostat
-climate.library_comfort_setpoint_25_1:
+climate.library_thermostat_25_1:
   friendly_name: Library Thermostat
-climate.bedroom_mark_comfort_setpoint_29_1:
+climate.bedroom_mark_thermostat_29_1:
   friendly_name: Mark's Bedroom Thermostat
-climate.lounge_east_comfort_setpoint_30_1:
+climate.lounge_east_thermostat_30_1:
   friendly_name: Lounge East Thermostat
-climate.ballroom_east_comfort_setpoint_33_1:
+climate.ballroom_east_thermostat_33_1:
   friendly_name: Ballroom East Thermostat
-climate.kitchen_comfort_setpoint_34_1:
+climate.kitchen_thermostat_34_1:
   friendly_name: Kitchen Thermostat
-climate.annex_hall_comfort_setpoint_43_1:
+climate.annex_hall_thermostat_43_1:
   friendly_name: Hall Annex Thermostat
+climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+  friendly_name: Guest Room Thermostat

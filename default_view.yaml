@@ -1,6 +1,6 @@
 name: WB
 view: true
 entities:
-- updater.updater
 - group.people
 - group.barnacles
+- group.quick_scenes

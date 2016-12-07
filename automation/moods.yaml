@@ -110,3 +110,21 @@
           {% else %}
             None
           {% endif %}
+
+- alias: "Guest Room Mood"
+  trigger:
+    platform: state
+    entity_id: input_select.guest_room_select
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.guest_room_select", "Off") %}
+            scene.guest_room_off
+          {%-elif is_state("input_select.guest_room_select", "Sleep") %}
+            scene.guest_room_sleep
+          {%-elif is_state("input_select.guest_room_select", "Cosy") %}
+            scene.guest_room_cosy
+          {% else %}
+            None
+          {% endif %}
