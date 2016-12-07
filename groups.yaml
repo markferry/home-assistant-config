@@ -211,7 +211,7 @@ guest_room:
   icon: mdi:hotel
   view: true
   entities:
-  - input_select.guest_room_select
+  - group.guest_room_scenes
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
 guest_room_scenes:
   name: Guest Room
@@ -335,6 +335,7 @@ main_heating_demand:
   - switch.lounge_demand
   - switch.library_demand
   - switch.hall_demand
+  - switch.guest_room_demand
   - switch.marks_bedroom_demand
 
 annex_heating:
