@@ -373,6 +373,7 @@ quick_scenes:
   - input_select.lounge_select
   - input_select.library_select
   - input_select.ballroom_select
+  - input_select.guest_room_select
   - input_select.marks_bedroom_select
 
 #
