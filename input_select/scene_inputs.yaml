@@ -52,7 +52,7 @@ marks_bedroom_select:
     - 'Sleep'
     - 'Play'
   initial: 'Off'
-  icon: mdi:hotel
+  icon: mdi:account
 
 guest_room_select:
   name: Guest Room Mood
