@@ -155,3 +155,16 @@
     climate.library_thermostat_25_1:
       temperature: 22
 
+- name: Guest Room Off
+  entities:
+    climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+      temperature: 10
+- name: Guest Room Sleep
+  entities:
+    climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+      temperature: 15
+- name: Guest Room Cosy
+  entities:
+    climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+      temperature: 20
+

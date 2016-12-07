@@ -19,12 +19,14 @@ group.library:
   order: 5
 group.ballroom:
   order: 6
-group.bedroom_mark:
+group.guest_room:
   order: 7
-group.radio:
+group.bedroom_mark:
   order: 8
-group.settings:
+group.radio:
   order: 9
+group.settings:
+  order: 10
 
 group.study_scenes:
   order: 0
@@ -37,6 +39,8 @@ group.lounge_scenes:
 group.library_scenes:
   order: 0
 group.ballroom_scenes:
+  order: 0
+group.guest_room_scenes:
   order: 0
 group.marks_bedroom_scenes:
   order: 0
@@ -233,3 +237,5 @@ climate.kitchen_thermostat_34_1:
   friendly_name: Kitchen Thermostat
 climate.annex_hall_thermostat_43_1:
   friendly_name: Hall Annex Thermostat
+climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+  friendly_name: Guest Room Thermostat
