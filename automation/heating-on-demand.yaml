@@ -24,7 +24,7 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.horstmann_scsc17_thermostat_heating_1_35_1
-        temperature: 15
+        temperature: 10
 
 - alias: "Annex Thermostat Demand On"
   trigger:
@@ -50,7 +50,7 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.horstmann_scsc17_thermostat_heating_1_50_1
-        temperature: 15
+        temperature: 10
 
 # Map virtual setpoint to real setpoint
 - alias: "Set Real Thermostat"
