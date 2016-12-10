@@ -340,6 +340,7 @@ main_heating_demand:
   - switch.lounge_demand
   - switch.library_demand
   - switch.hall_demand
+  - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
 
