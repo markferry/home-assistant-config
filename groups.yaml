@@ -83,6 +83,7 @@ hall:
   - group.hall_scenes
   - group.main_heating
   - group.annex_heating
+  - group.hottub
   - sensor.aeotec_dsb05_multisensor_luminance_3_3
   - sensor.aeotec_dsb05_multisensor_relative_humidity_3_5
   - sensor.aeotec_dsb05_multisensor_temperature_3_1
@@ -295,6 +296,14 @@ radio_stream_map:
   - input_select.library_stream
   - input_select.ballroom_stream
   - input_select.marks_bedroom_stream
+
+hottub:
+  name: Hot Tub
+  icon: mdi:pot
+  entities:
+  - switch.greenwave_powernode_1_port_switch_53_0
+  - sensor.greenwave_powernode_1_port_energy_53_0
+  - sensor.greenwave_powernode_1_port_power_53_8
 
 settings:
   name: Settings

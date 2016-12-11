@@ -239,3 +239,10 @@ climate.annex_hall_thermostat_43_1:
   friendly_name: Annex Hall Thermostat
 climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
   friendly_name: Guest Room Thermostat
+
+switch.greenwave_powernode_1_port_switch_53_0:
+  friendly_name: Hot Tub
+sensor.greenwave_powernode_1_port_energy_53_0:
+  friendly_name: Hot Tub Energy
+sensor.greenwave_powernode_1_port_power_53_8:
+  friendly_name: Hot Tub Power
