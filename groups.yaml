@@ -340,6 +340,7 @@ main_heating_demand:
   - switch.lounge_demand
   - switch.library_demand
   - switch.hall_demand
+  - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
 
@@ -373,6 +374,7 @@ quick_scenes:
   - input_select.lounge_select
   - input_select.library_select
   - input_select.ballroom_select
+  - input_select.guest_room_select
   - input_select.marks_bedroom_select
 
 #
