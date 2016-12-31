@@ -47,13 +47,12 @@ mqtt:
 
 zwave:
   usb_path: /dev/ttyUSB21
-  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.0b9-py3.4-linux-armv7l.egg/config
+  config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
   polling_interval: 60000
 
 rfxtrx:
   device: /dev/ttyUSB22
   debug: False
-
 
 device_tracker: !include device_tracker.yaml
 
@@ -74,4 +73,3 @@ switch: !include_dir_merge_list switches
 climate: !include_dir_merge_list thermostats
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
-
