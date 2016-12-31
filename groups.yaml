@@ -319,6 +319,7 @@ settings:
   - group.batteries
   - group.main_heating_override
   - group.annex_heating_override
+  - group.all_automations
 
 #
 # Functional Groups
