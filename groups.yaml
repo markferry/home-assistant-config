@@ -319,7 +319,7 @@ settings:
   - group.batteries
   - group.main_heating_override
   - group.annex_heating_override
-  - group.all_automations
+  - group.user_automations
 
 #
 # Functional Groups
@@ -386,6 +386,16 @@ quick_scenes:
   - input_select.ballroom_select
   - input_select.guest_room_select
   - input_select.marks_bedroom_select
+
+user_automations:
+  name: Automations
+  entities:
+  - automation.guest_room_sleep_time
+  - automation.kitchen_cosy_time
+  - automation.marks_bedroom_mood
+  - automation.marks_bedroom_sleep_time
+  - automation.reset_moods
+  - automation.study_work_time
 
 #
 # Type Groups
