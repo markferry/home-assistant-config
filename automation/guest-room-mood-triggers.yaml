@@ -8,3 +8,12 @@
         entity_id: input_select.guest_room_select
         option: "Sleep"
 
+- alias: "Guest Room Off Time"
+  trigger:
+    - platform: time
+      after: '09:00:00'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.guest_room_select
+        option: "Off"
