@@ -6,3 +6,39 @@
   platform: mqtt
   state_topic: ha/annex/heating/temperature/state
   unit_of_measurement: "\xB0C"
+
+- name: greenwave_powernode_1_port_energy_53_0
+  platform: mqtt
+  state_topic: ha/hottub/state/energy
+  unit_of_measurement: "kWh"
+- name: greenwave_powernode_1_port_previous_reading_53_1
+  platform: mqtt
+  state_topic: ha/hottub/previous-state/energy
+  unit_of_measurement: "kWh"
+
+- name: greenwave_powernode_1_port_power_53_8
+  platform: mqtt
+  state_topic: ha/hottub/state/power
+  unit_of_measurement: "W"
+- name: greenwave_powernode_1_port_previous_reading_53_9
+  platform: mqtt
+  state_topic: ha/hottub/previous-state/power
+  unit_of_measurement: "W"
+
+- name: greenwave_powernode_1_port_energy_54_0
+  platform: mqtt
+  state_topic: ha/annex/powernode/state/energy
+  unit_of_measurement: "kWh"
+- name: greenwave_powernode_1_port_previous_reading_54_1
+  platform: mqtt
+  state_topic: ha/annex/powernode/previous-state/energy
+  unit_of_measurement: "kWh"
+
+- name: greenwave_powernode_1_port_power_54_8
+  platform: mqtt
+  state_topic: ha/annex/powernode/state/power
+  unit_of_measurement: "W"
+- name: greenwave_powernode_1_port_previous_reading_54_9
+  platform: mqtt
+  state_topic: ha/annex/powernode/previous-state/power
+  unit_of_measurement: "W"
