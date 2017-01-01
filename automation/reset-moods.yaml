@@ -2,7 +2,7 @@
 - alias: "Reset Moods"
   trigger:
     - platform: time
-      after: '23:00:00'
+      after: '00:30:00'
     - platform: time
       after: '03:00:00'
   condition:
@@ -10,17 +10,17 @@
     conditions:
       - condition: time
         weekday:
-        - sat
-        - sun
-        after: '03:00:00'
-      - condition: time
-        weekday:
-        - sun
         - mon
         - tue
         - wed
         - thu
-        after: '23:00:00'
+        - fri
+        after: '00:30:00'
+      - condition: time
+        weekday:
+        - sat
+        - sun
+        after: '03:00:00'
   action:
     - service: input_select.select_option
       data:
