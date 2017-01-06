@@ -1,0 +1,5 @@
+# Group for all automation notifications
+- name: automations
+  platform: group
+  services:
+    - service: pushetta
