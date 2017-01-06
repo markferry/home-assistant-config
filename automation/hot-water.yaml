@@ -74,3 +74,12 @@
   action:
     service: switch.turn_on
     entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+
+- alias: "Hot Water Notify"
+  trigger:
+    - platform: state
+      entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+  action:
+    - service: notify.automations
+      data:
+        message: "Hot Water is now {{ trigger.to_state.state }}"
