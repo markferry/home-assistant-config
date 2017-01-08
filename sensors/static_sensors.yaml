@@ -1,1 +1,14 @@
 # Static
+- platform: nut
+  name: Eaton UPS
+  host: hastur
+  port: 3493
+  alias: eaton
+  username: pixie
+  password: !secret nut_pixie
+  resources:
+    - ups.status
+    - ups.load
+    - battery.charge
+    - battery.runtime
+
