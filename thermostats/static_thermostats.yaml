@@ -74,6 +74,5 @@
   heater: switch.jeromes_bedroom_demand
   max_temp: 25
   min_temp: 5
-  #target_sensor: sensor.bedroom_jerome_temperature_44_1
-  target_sensor: sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
+  target_sensor: sensor.bedroom_jerome_temperature_44_1
   target_temp: 10.0
