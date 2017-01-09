@@ -240,6 +240,20 @@ climate.annex_hall_thermostat_43_1:
 climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
   friendly_name: Guest Room Thermostat
 
+climate.bedroom_jerome_thermostat_44_1:
+  friendly_name: "Jerome's Bedroom Thermostat"
+climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1:
+  friendly_name: "Jerome's Bedroom Thermostat_"
+sensor.bedroom_jerome_temperature_44_1:
+  friendly_name: "Jerome's Bedroom Temperature"
+  polling_intensity: 5
+sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1:
+  friendly_name: "Jerome's Bedroom Temperature_"
+  polling_intensity: 5
+sensor.bedroom_jerome_battery:
+  friendly_name: "Jerome's Bedroom Battery"
+  icon: mdi:battery
+
 switch.greenwave_powernode_1_port_switch_53_0:
   friendly_name: Hot Tub
   icon: mdi:pot

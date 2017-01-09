@@ -1,0 +1,5 @@
+- name: Jerome's Tablet
+  platform: kodi
+  host: http://orange
+  port: 8080
+
