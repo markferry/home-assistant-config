@@ -208,11 +208,12 @@ ballroom_lights:
   view: false
 
 guest_room:
-  name: Guest Room
+  name: Bedrooms
   icon: mdi:hotel
   view: true
   entities:
   - group.guest_room_compact_ui
+  - group.bedroom_jerome_compact_ui
 guest_room_compact_ui:
   name: Guest Room
   view: false
@@ -271,8 +272,42 @@ marks_bedroom_lights:
   view: false
 marks_bedroom_appliances:
   entities:
-  name: Mark's Bedroom Appliances
+  name: "Mark's Bedroom Appliances"
   view: false
+
+bedroom_jerome:
+  name: "Jerome's Bedroom"
+  icon: mdi:hotel
+  #view: true
+  entities:
+  - group.bedroom_jerome_compact_ui
+bedroom_jerome_compact_ui:
+  name: "Jerome's Bedroom"
+  view: false
+  entities:
+  - climate.bedroom_jerome_thermostat_44_1
+  - sensor.bedroom_jerome_temperature_44_1
+  - sensor.bedroom_jerome_battery
+  - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
+bedroom_jerome_scenes:
+  name: "Jerome's Bedroom"
+  view: false
+  entities:
+  - input_select.bedroom_jerome_select
+bedroom_jerome_heating:
+  name: "Jerome's Bedroom Heating"
+  view: false
+  entities:
+  - climate.bedroom_jerome_thermostat_44_1
+  - sensor.bedroom_jerome_temperature_44_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
+  - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
+bedroom_jerome_setpoints:
+  name: "Jerome's Bedroom Setpoints"
+  view: false
+  entities:
+  - climate.bedroom_jerome_thermostat_44_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
 
 radio:
   name: Internet Radio
@@ -305,12 +340,22 @@ hottub:
   - sensor.greenwave_powernode_1_port_energy_53_0
   - sensor.greenwave_powernode_1_port_power_53_8
 
+ups:
+  name: UPS
+  icon: mdi:car-battery
+  entities:
+  - sensor.eaton_ups_status_data
+  - sensor.eaton_ups_load
+  - sensor.eaton_ups_battery_charge
+  - sensor.eaton_ups_battery_runtime
+
 settings:
   name: Settings
   view: true
   icon: mdi:settings
   entities:
   - group.network
+  - group.ups
   - group.temperatures
   - group.thermostats
   - group.generic_thermostats
@@ -354,6 +399,7 @@ main_heating_demand:
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
+  - switch.jeromes_bedroom_demand
 
 annex_heating:
   name: Annex Heating
@@ -419,6 +465,7 @@ batteries:
   - sensor.ballroom_east_battery
   - sensor.kitchen_battery
   - sensor.annex_hall_battery
+  - sensor.bedroom_jerome_battery
 
 heating_valves:
   name: Heating Demand
@@ -474,6 +521,8 @@ temperatures:
   - sensor.bedroom_mark_temperature_29_1
   - sensor.study_east_temperature_14_1
   - sensor.study_west_temperature_15_1
+  - sensor.bedroom_jerome_temperature_44_1
+  - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
 
 thermostats:
   entities:
@@ -492,6 +541,8 @@ thermostats:
   - climate.lounge_east_comfort_setpoint_30_1
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
+  - climate.bedroom_jerome_comfort_setpoint_44_1
+  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
   name: Thermostats
   view: false
 
@@ -507,6 +558,7 @@ generic_thermostats:
   - climate.lounge_east_thermostat_30_1
   - climate.study_east_thermostat_14_1
   - climate.study_west_thermostat_15_1
+  - climate.bedroom_jerome_thermostat_44_1
   name: Generic Thermostats
   view: false
 

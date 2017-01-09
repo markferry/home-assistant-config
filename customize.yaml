@@ -228,7 +228,7 @@ climate.hall_east_thermostat_24_1:
 climate.library_thermostat_25_1:
   friendly_name: Library Thermostat
 climate.bedroom_mark_thermostat_29_1:
-  friendly_name: Mark's Bedroom Thermostat
+  friendly_name: "Mark's Bedroom Thermostat"
 climate.lounge_east_thermostat_30_1:
   friendly_name: Lounge East Thermostat
 climate.ballroom_east_thermostat_33_1:
@@ -240,6 +240,20 @@ climate.annex_hall_thermostat_43_1:
 climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
   friendly_name: Guest Room Thermostat
 
+climate.bedroom_jerome_thermostat_44_1:
+  friendly_name: "Jerome's Bedroom Thermostat"
+climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1:
+  friendly_name: "Jerome's Bedroom Thermostat_"
+sensor.bedroom_jerome_temperature_44_1:
+  friendly_name: "Jerome's Bedroom Temperature"
+  polling_intensity: 5
+sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1:
+  friendly_name: "Jerome's Bedroom Temperature_"
+  polling_intensity: 5
+sensor.bedroom_jerome_battery:
+  friendly_name: "Jerome's Bedroom Battery"
+  icon: mdi:battery
+
 switch.greenwave_powernode_1_port_switch_53_0:
   friendly_name: Hot Tub
   icon: mdi:pot
@@ -247,3 +261,12 @@ sensor.greenwave_powernode_1_port_energy_53_0:
   friendly_name: Hot Tub Energy
 sensor.greenwave_powernode_1_port_power_53_8:
   friendly_name: Hot Tub Power
+
+sensor.eaton_ups_status:
+  friendly_name: UPS Status
+sensor.eaton_ups_load:
+  friendly_name: UPS Load
+sensor.eaton_battery_charge:
+  friendly_name: UPS Charge
+sensor.eaton_ups_battery_runtime:
+  friendly_name: UPS Runtime

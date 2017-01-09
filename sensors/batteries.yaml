@@ -104,3 +104,13 @@
           unknown
         {%  endif %}
       unit_of_measurement: '%'
+    bedroom_jerome_battery:
+      value_template: >
+        {% if states.sensor.bedroom_jerome_temperature_44_1 %}
+          {{ states.sensor.bedroom_jerome_temperature_44_1.attributes.battery_level }}
+        {% elif states.sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1_temperature_44_1 %}
+          {{ states.sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1_temperature_44_1.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'

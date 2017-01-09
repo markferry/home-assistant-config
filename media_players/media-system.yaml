@@ -26,3 +26,16 @@
 - name: Ballroom Amplifier
   platform: onkyo
   host: ballroom-amp
+  sources:
+    #dvd: 'BD/DVD'
+    video2: 'TV'
+    video1: 'Media'
+    #video3: 'Game'
+    video6: 'Aux Cable'
+    #aux1: 'Ext Aux'
+    #cd: 'Analog TV'
+    #phono: 'Phono' # -> needs onkyo fix
+    fm: 'FM' # -> needs onkyo fix
+    am: 'AM' # -> needs onkyo fix
+    network: 'Network'
+    usb: 'USB'
