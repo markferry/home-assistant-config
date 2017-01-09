@@ -127,22 +127,3 @@
         entity_id: '{{trigger.entity_id.replace("comfort_setpoint_","thermostat_")}}'
         temperature: '{{ trigger.to_state.attributes.temperature }}'
 
-- alias: "Set Jerome Real Thermostat"
-  trigger:
-    - platform: state
-      entity_id: climate.bedroom_jerome_thermostat_44_1
-  action:
-    - service: climate.set_temperature
-      data_template:
-        entity_id: climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
-        temperature: '{{ trigger.to_state.attributes.temperature }}'
-
-- alias: "Set Jerome Virtual Thermostat"
-  trigger:
-    - platform: state
-      entity_id: climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
-  action:
-    - service: climate.set_temperature
-      data_template:
-        entity_id: climate.bedroom_jerome_thermostat_44_1
-        temperature: '{{ trigger.to_state.attributes.temperature }}'

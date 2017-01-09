@@ -288,7 +288,6 @@ bedroom_jerome_compact_ui:
   - climate.bedroom_jerome_thermostat_44_1
   - sensor.bedroom_jerome_temperature_44_1
   - sensor.bedroom_jerome_battery
-  - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
 bedroom_jerome_scenes:
   name: "Jerome's Bedroom"
   view: false
@@ -300,14 +299,11 @@ bedroom_jerome_heating:
   entities:
   - climate.bedroom_jerome_thermostat_44_1
   - sensor.bedroom_jerome_temperature_44_1
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
-  - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
   view: false
   entities:
   - climate.bedroom_jerome_thermostat_44_1
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
 
 radio:
   name: Internet Radio
@@ -522,7 +518,6 @@ temperatures:
   - sensor.study_east_temperature_14_1
   - sensor.study_west_temperature_15_1
   - sensor.bedroom_jerome_temperature_44_1
-  - sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
 
 thermostats:
   entities:
@@ -542,7 +537,6 @@ thermostats:
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
   - climate.bedroom_jerome_comfort_setpoint_44_1
-  - climate.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
   name: Thermostats
   view: false
 
