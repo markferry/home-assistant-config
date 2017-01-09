@@ -42,3 +42,11 @@
   platform: mqtt
   state_topic: ha/mock/guest-room/temperature/state
   unit_of_measurement: "\xB0C"
+- name: bedroom_jerome_temperature_44_1
+  platform: mqtt
+  state_topic: ha/mock/bedroom_jerome/temperature/state
+  unit_of_measurement: "\xB0C"
+- name: eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1
+  platform: mqtt
+  state_topic: ha/mock/bedroom_jerome/temperature/state
+  unit_of_measurement: "\xB0C"
