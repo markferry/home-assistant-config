@@ -305,12 +305,22 @@ hottub:
   - sensor.greenwave_powernode_1_port_energy_53_0
   - sensor.greenwave_powernode_1_port_power_53_8
 
+ups:
+  name: UPS
+  icon: mdi:car-battery
+  entities:
+  - sensor.eaton_ups_status_data
+  - sensor.eaton_ups_load
+  - sensor.eaton_ups_battery_charge
+  - sensor.eaton_ups_battery_runtime
+
 settings:
   name: Settings
   view: true
   icon: mdi:settings
   entities:
   - group.network
+  - group.ups
   - group.temperatures
   - group.thermostats
   - group.generic_thermostats
