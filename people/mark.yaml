@@ -3,4 +3,3 @@ entities:
 - device_tracker.mark_phone
 - device_tracker.mark_android
 - device_tracker.omenmotog
-- device_tracker.shochu
