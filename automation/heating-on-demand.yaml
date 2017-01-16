@@ -122,8 +122,11 @@
     - platform: state
       entity_id: climate.bedroom_jerome_comfort_setpoint_44_1
   action:
-    - service: climate.set_temperature
-      data_template:
-        entity_id: '{{trigger.entity_id.replace("comfort_setpoint_","thermostat_")}}'
-        temperature: '{{ trigger.to_state.attributes.temperature }}'
+    #- service: climate.set_temperature
+    #  data_template:
+    #    entity_id: '{{trigger.entity_id.replace("comfort_setpoint_","thermostat_")}}'
+    #    temperature: '{{ trigger.to_state.attributes.temperature }}'
+    - service: notify.automations
+      data:
+        message: "Set Virtual Thermostat disabled"
 
