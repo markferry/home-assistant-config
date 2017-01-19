@@ -22,6 +22,18 @@ conversation:
 
 # Enables support for tracking state changes over time.
 history:
+  exclude:
+    domains:
+      - automation
+      - updater
+      - device_tracker
+    entities:
+      - sun.sun   # Don't record sun data
+
+# Customize database
+recorder:
+  db_url: !secret db_url
+  purge_days: 30
 
 # Checks for available updates
 updater:
