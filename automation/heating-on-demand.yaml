@@ -97,36 +97,36 @@
         temperature: '{{ trigger.to_state.attributes.temperature }}'
 
 # Map real setpoint to virtual setpoint
-- alias: "Set Virtual Thermostat"
-  trigger:
-    - platform: state
-      entity_id: climate.study_west_comfort_setpoint_15_1
-    - platform: state
-      entity_id: climate.study_east_comfort_setpoint_14_1
-    - platform: state
-      entity_id: climate.lounge_east_comfort_setpoint_30_1
-    - platform: state
-      entity_id: climate.bedroom_mark_comfort_setpoint_29_1
-    - platform: state
-      entity_id: climate.kitchen_comfort_setpoint_34_1
-    - platform: state
-      entity_id: climate.ballroom_east_comfort_setpoint_33_1
-    - platform: state
-      entity_id: climate.library_comfort_setpoint_25_1
-    - platform: state
-      entity_id: climate.hall_west_comfort_setpoint_13_1
-    - platform: state
-      entity_id: climate.hall_east_comfort_setpoint_24_1
-    - platform: state
-      entity_id: climate.annex_hall_comfort_setpoint_43_1
-    - platform: state
-      entity_id: climate.bedroom_jerome_comfort_setpoint_44_1
-  action:
-    #- service: climate.set_temperature
-    #  data_template:
-    #    entity_id: '{{trigger.entity_id.replace("comfort_setpoint_","thermostat_")}}'
-    #    temperature: '{{ trigger.to_state.attributes.temperature }}'
-    - service: notify.automations
-      data:
-        message: "Set Virtual Thermostat disabled"
+#- alias: "Set Virtual Thermostat"
+#  trigger:
+#    - platform: state
+#      entity_id: climate.study_west_comfort_setpoint_15_1
+#    - platform: state
+#      entity_id: climate.study_east_comfort_setpoint_14_1
+#    - platform: state
+#      entity_id: climate.lounge_east_comfort_setpoint_30_1
+#    - platform: state
+#      entity_id: climate.bedroom_mark_comfort_setpoint_29_1
+#    - platform: state
+#      entity_id: climate.kitchen_comfort_setpoint_34_1
+#    - platform: state
+#      entity_id: climate.ballroom_east_comfort_setpoint_33_1
+#    - platform: state
+#      entity_id: climate.library_comfort_setpoint_25_1
+#    - platform: state
+#      entity_id: climate.hall_west_comfort_setpoint_13_1
+#    - platform: state
+#      entity_id: climate.hall_east_comfort_setpoint_24_1
+#    - platform: state
+#      entity_id: climate.annex_hall_comfort_setpoint_43_1
+#    - platform: state
+#      entity_id: climate.bedroom_jerome_comfort_setpoint_44_1
+#  action:
+#    #- service: climate.set_temperature
+#    #  data_template:
+#    #    entity_id: '{{trigger.entity_id.replace("comfort_setpoint_","thermostat_")}}'
+#    #    temperature: '{{ trigger.to_state.attributes.temperature }}'
+#    - service: notify.automations
+#      data:
+#        message: "Set Virtual Thermostat disabled"
 
