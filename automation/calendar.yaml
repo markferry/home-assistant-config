@@ -1,0 +1,59 @@
+- alias: "Calendar Service Trigger"
+  trigger:
+    - platform: state
+      entity_id: calendar.service
+  action:
+    - service_template: '{{ trigger.to_state.attributes.message.split()[1] }}'
+      data_template:
+        entity_id: '{{ trigger.to_state.attributes.message.split()[2] }}'
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/service'
+        payload: '{"service":"{{trigger.to_state.attributes.message.split()[1]}}","data":"{{trigger.to_state.attributes.message.split()[2]}}"}'
+
+- alias: "Scene"
+  trigger:
+    - platform: state
+      entity_id: calendar.scene
+  action:
+    - service_template: input_select.select_option
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "mark" in l %}
+          {%   set u = "marks_bedroom" %}
+          {% elif "jerome" in l %}
+          {%   set u = "bedroom_jerome" %}
+          {% endif %}
+          input_select.{{u}}_select
+        option: >
+          {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+          {{ v[0].upper() ~ v[1:].lower() }}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/scene'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Climate"
+  trigger:
+    - platform: state
+      entity_id: calendar.climate
+  action:
+    - service_template: climate.set_temperature
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "mark" in l %}
+          {%   set u = "marks_bedroom" %}
+          {% elif "jerome" in l %}
+          {%   set u = "bedroom_jerome" %}
+          {% endif %}
+          group.{{u}}_thermostats
+        temperature: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {{l|last|float}}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/climate'
+        payload: '{{trigger.to_state.attributes.message}}'
+

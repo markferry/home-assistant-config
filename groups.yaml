@@ -33,6 +33,12 @@ study_setpoints:
   entities:
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
+study_thermostats:
+  name: Study Thermostats
+  view: false
+  entities:
+  - climate.study_east_thermostat_14_1
+  - climate.study_west_thermostat_15_1
 study_lights:
   name: Study Lights
   view: false
@@ -69,6 +75,11 @@ kitchen_setpoints:
   view: false
   entities:
   - climate.kitchen_comfort_setpoint_34_1
+kitchen_thermostats:
+  name: Kitchen Thermostats
+  view: false
+  entities:
+  - climate.kitchen_thermostat_34_1
 kitchen_lights:
   name: Kitchen Lights
   view: false
@@ -108,6 +119,13 @@ hall_setpoints:
   - climate.hall_west_comfort_setpoint_13_1
   - climate.hall_east_comfort_setpoint_24_1
   - climate.annex_hall_comfort_setpoint_43_1
+hall_thermostats:
+  name: Hall Thermostats
+  view: false
+  entities:
+  - climate.hall_west_thermostat_13_1
+  - climate.hall_east_thermostat_24_1
+  - climate.annex_hall_thermostat_43_1
 hall_lights:
   name: Hall Lights
   view: false
@@ -137,6 +155,11 @@ lounge_setpoints:
   view: false
   entities:
   - climate.lounge_east_comfort_setpoint_30_1
+lounge_thermostats:
+  name: Lounge Thermostats
+  view: false
+  entities:
+  - climate.lounge_east_thermostat_30_1
 lounge_lights:
   entities:
   - light.lounge_east
@@ -170,6 +193,11 @@ library_setpoints:
   view: false
   entities:
   - climate.library_comfort_setpoint_25_1
+library_thermostats:
+  name: Library Thermostats
+  view: false
+  entities:
+  - climate.library_thermostat_25_1
 library_lights:
   name: Library Lights
   view: false
@@ -196,10 +224,15 @@ ballroom_heating:
   name: Ballroom Heating
   view: false
 ballroom_setpoints:
-  entities:
-  - climate.ballroom_east_comfort_setpoint_33_1
   name: Ballroom Setpoints
   view: false
+  entities:
+  - climate.ballroom_east_comfort_setpoint_33_1
+ballroom_thermostats:
+  name: Ballroom Thermostats
+  view: false
+  entities:
+  - climate.ballroom_east_thermostat_33_1
 ballroom_lights:
   entities:
   - light.ballroom_north_level_41_0
@@ -238,42 +271,47 @@ guest_room_setpoints:
 
 
 bedroom_mark:
+  name: "Mark's Bedroom"
+  view: true
+  icon: mdi:account
   entities:
   - media_player.marks_bedroom
   - group.marks_bedroom_lights
   - group.marks_bedroom_heating
   - group.marks_bedroom_appliances
   - group.marks_bedroom_scenes
-  icon: mdi:account
-  name: Mark's Bedroom
-  view: true
 marks_bedroom_scenes:
-  name: Mark's Bedroom
+  name: "Mark's Bedroom"
   view: false
   entities:
   - input_select.marks_bedroom_select
 marks_bedroom_heating:
+  name: "Mark's Bedroom Heating"
+  view: false
   entities:
   - climate.bedroom_mark_thermostat_29_1
   - sensor.bedroom_mark_temperature_29_1
-  name: Mark's Bedroom Heating
-  view: false
 marks_bedroom_setpoints:
-  name: Mark's Bedroom Setpoints
+  name: "Mark's Bedroom Setpoints"
   view: false
   entities:
   - climate.bedroom_mark_comfort_setpoint_29_1
+marks_bedroom_thermostats:
+  name: "Mark's Bedroom Thermostats"
+  view: false
+  entities:
+  - climate.bedroom_mark_thermostat_29_1
 marks_bedroom_lights:
+  name: "Mark's Bedroom Lights"
+  view: false
   entities:
   - light.fibaro_system_fgd212_dimmer_2_level_39_0
   - light.bedroom_mark_level_39
   - light.marks_bedroom_lamp
-  name: Mark's Bedroom Lights
-  view: false
 marks_bedroom_appliances:
-  entities:
   name: "Mark's Bedroom Appliances"
   view: false
+  entities:
 
 bedroom_jerome:
   name: "Jerome's Bedroom"
@@ -301,6 +339,11 @@ bedroom_jerome_heating:
   - sensor.bedroom_jerome_temperature_44_1
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
+  view: false
+  entities:
+  - climate.bedroom_jerome_comfort_setpoint_44_1
+bedroom_jerome_thermostats:
+  name: "Jerome's Bedroom Thermostats"
   view: false
   entities:
   - climate.bedroom_jerome_thermostat_44_1
