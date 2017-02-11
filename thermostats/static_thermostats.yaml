@@ -40,7 +40,7 @@
   name: ballroom_east_thermostat_33_1
   platform: generic_thermostat
   target_sensor: sensor.ballroom_east_temperature_33_1
-  target_temp: 10.0
+  target_temp: 5.0
 - heater: switch.library_demand
   max_temp: 25
   min_temp: 5
