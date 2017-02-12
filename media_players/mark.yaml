@@ -1,11 +1,11 @@
-- name: Mark's Bedroom
+- name: "Mark's Bedroom"
   username: gnome
   password: !secret kodi_bedroom_mark
   platform: kodi
-  host: http://bedroom-mark
+  host: bedroom-mark
   port: 80
 
-- name: Mark's Tablet
+- name: "Mark's Tablet"
   platform: kodi
-  host: http://mark
+  host: mark
   port: 8080

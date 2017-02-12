@@ -1,4 +1,4 @@
-- name: Ros's Tablet
+- name: "Ros's Tablet"
   platform: kodi
-  host: http://ros
+  host: ros
   port: 8080
