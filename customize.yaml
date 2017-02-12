@@ -121,9 +121,7 @@ switch.horstmann_unknown_type0003_id0002_switch_36_0_2:
   friendly_name: Main Boiler Switch
 switch.horstmann_unknown_type0003_id0002_switch_36_0_3:
   friendly_name: Main Hot Water Switch
-climate.horstmann_unknown_type0003_id0001_mode_51_0:
-  friendly_name: Annex Heating Mode
-switch.horstmann_unknown_type0003_id0001_switch_51_0:
+switch.horstmann_asrzw_thermostat_receiver_switch_56_0:
   friendly_name: Annex Heating Switch
 
 media_player.txnr636_0009b09961fb:
@@ -139,7 +137,7 @@ light.hall_east_level_24:
 light.library_level_25:
   friendly_name: Library Valve
 light.bedroom_mark_level_29:
-  friendly_name: Mark's Bedroom Valve
+  friendly_name: "Mark's Bedroom Valve"
 light.lounge_east_level_30:
   friendly_name: Lounge East Valve
 light.ballroom_east_level_33:
@@ -219,6 +217,7 @@ sensor.annex_hall_battery:
   friendly_name: Annex Hall Battery
   icon: mdi:battery
 
+# generic thermostats
 climate.hall_west_thermostat_13_1:
   friendly_name: Hall West Thermostat
 climate.study_east_thermostat_14_1:
@@ -239,8 +238,44 @@ climate.kitchen_thermostat_34_1:
   friendly_name: Kitchen Thermostat
 climate.annex_hall_thermostat_43_1:
   friendly_name: Annex Hall Thermostat
+
+# real thermostats
 climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
   friendly_name: Guest Room Thermostat
+  min_temp: 5
+  max_temp: 25
+
+climate.hall_west_setpoint_13_1:
+  min_temp: 5
+  max_temp: 25
+climate.study_east_setpoint_14_1:
+  min_temp: 5
+  max_temp: 25
+climate.study_west_setpoint_15_1:
+  min_temp: 5
+  max_temp: 25
+climate.hall_east_setpoint_24_1:
+  min_temp: 5
+  max_temp: 25
+climate.library_setpoint_25_1:
+  min_temp: 5
+  max_temp: 25
+climate.bedroom_mark_setpoint_29_1:
+  min_temp: 5
+  max_temp: 25
+climate.lounge_east_setpoint_30_1:
+  min_temp: 5
+  max_temp: 25
+climate.ballroom_east_setpoint_33_1:
+  min_temp: 5
+  max_temp: 25
+climate.kitchen_setpoint_34_1:
+  min_temp: 5
+  max_temp: 25
+climate.annex_hall_setpoint_43_1:
+  min_temp: 5
+  max_temp: 25
+
 
 climate.bedroom_jerome_thermostat_44_1:
   friendly_name: "Jerome's Bedroom Thermostat"

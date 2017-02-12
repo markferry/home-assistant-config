@@ -72,6 +72,10 @@ mqtt:
 ifttt:
   key: !secret ifttt_key
 
+google:
+  client_id: !secret gcal_client_id
+  client_secret: !secret gcal_client_secret
+
 notify: !include_dir_merge_list notify
 
 scene: !include scene.yaml

@@ -108,7 +108,7 @@
     group.ballroom_lights:
       state: off
     climate.ballroom_east_thermostat_33_1:
-      temperature: 10
+      temperature: 5
     media_player.ballroom:
       state: paused
 - name: Ballroom Party

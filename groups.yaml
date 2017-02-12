@@ -388,6 +388,30 @@ ups:
   - sensor.eaton_ups_battery_charge
   - sensor.eaton_ups_battery_runtime
 
+rfx_switches:
+  name: RFX Switches
+  entities:
+    - switch.0a140003f15c7202010080
+    - switch.0a140006f15c7203010080
+    - switch.0a140009f3cf3510020080
+    - switch.0a140002f40fa810020050
+    - switch.0a140001f40fa810050040
+    - switch.0a14000cf40fa910020040
+    - switch.0a140083f3cf3510020070
+    - switch.0a140084f3cf3510030070
+    - switch.0a140087f3cf3510040070
+    - switch.0a140086f3cf3510050070
+
+rfx_lights:
+  name: RFX Lights
+  entities:
+    - switch.0a140000f40fa801010050
+    - switch.0a140016f3cf3501010080
+    - switch.0a140022f3cf3502010080
+    - switch.0a140023f3cf3503010080
+    - switch.0a140024f3cf3504010080
+    - switch.0a140000f15c7201010080
+
 settings:
   name: Settings
   view: true
@@ -404,6 +428,8 @@ settings:
   - group.main_heating_override
   - group.annex_heating_override
   - group.user_automations
+  - group.rfx_switches
+  - group.rfx_lights
 
 #
 # Functional Groups
@@ -446,14 +472,13 @@ annex_heating:
   entities:
   - sensor.horstmann_scsc17_thermostat_temperature_50_1
   - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - climate.horstmann_unknown_type0003_id0001_mode_51_0
   - switch.horstmann_scsc17_thermostat_switch_50_0
 
 annex_heating_override:
   name: Annex Heating Override
   view: false
   entities:
-  - switch.horstmann_unknown_type0003_id0001_switch_51_0
+  - switch.horstmann_asrzw_thermostat_receiver_switch_56_0
 
 annex_heating_demand:
   name: Annex Heating Demand
@@ -571,7 +596,6 @@ thermostats:
   - climate.hall_west_comfort_setpoint_13_1
   - climate.horstmann_scsc17_thermostat_heating_1_35_1
   - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - climate.horstmann_unknown_type0003_id0001_mode_51_0
   - climate.horstmann_unknown_type0003_id0002_mode_36_0
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
   - climate.kitchen_comfort_setpoint_34_1
