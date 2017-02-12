@@ -388,6 +388,30 @@ ups:
   - sensor.eaton_ups_battery_charge
   - sensor.eaton_ups_battery_runtime
 
+rfx_switches:
+  name: RFX Switches
+  entities:
+    - switch.0a140003f15c7202010080
+    - switch.0a140006f15c7203010080
+    - switch.0a140009f3cf3510020080
+    - switch.0a140002f40fa810020050
+    - switch.0a140001f40fa810050040
+    - switch.0a14000cf40fa910020040
+    - switch.0a140083f3cf3510020070
+    - switch.0a140084f3cf3510030070
+    - switch.0a140087f3cf3510040070
+    - switch.0a140086f3cf3510050070
+
+rfx_lights:
+  name: RFX Lights
+  entities:
+    - switch.0a140000f40fa801010050
+    - switch.0a140016f3cf3501010080
+    - switch.0a140022f3cf3502010080
+    - switch.0a140023f3cf3503010080
+    - switch.0a140024f3cf3504010080
+    - switch.0a140000f15c7201010080
+
 settings:
   name: Settings
   view: true
@@ -404,6 +428,8 @@ settings:
   - group.main_heating_override
   - group.annex_heating_override
   - group.user_automations
+  - group.rfx_switches
+  - group.rfx_lights
 
 #
 # Functional Groups
