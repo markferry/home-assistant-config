@@ -446,14 +446,13 @@ annex_heating:
   entities:
   - sensor.horstmann_scsc17_thermostat_temperature_50_1
   - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - climate.horstmann_unknown_type0003_id0001_mode_51_0
   - switch.horstmann_scsc17_thermostat_switch_50_0
 
 annex_heating_override:
   name: Annex Heating Override
   view: false
   entities:
-  - switch.horstmann_unknown_type0003_id0001_switch_51_0
+  - switch.horstmann_asrzw_thermostat_receiver_switch_56_0
 
 annex_heating_demand:
   name: Annex Heating Demand
@@ -571,7 +570,6 @@ thermostats:
   - climate.hall_west_comfort_setpoint_13_1
   - climate.horstmann_scsc17_thermostat_heating_1_35_1
   - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - climate.horstmann_unknown_type0003_id0001_mode_51_0
   - climate.horstmann_unknown_type0003_id0002_mode_36_0
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
   - climate.kitchen_comfort_setpoint_34_1
