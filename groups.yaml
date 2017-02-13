@@ -421,7 +421,7 @@ settings:
   - group.ups
   - group.temperatures
   - group.thermostats
-  - group.generic_thermostats
+  - group.thermostat_devices
   - group.annex_heating_demand
   - group.main_heating_demand
   - group.batteries
@@ -587,7 +587,9 @@ temperatures:
   - sensor.study_west_temperature_15_1
   - sensor.bedroom_jerome_temperature_44_1
 
-thermostats:
+thermostat_devices:
+  name: Thermostat Devices
+  view: false
   entities:
   - climate.annex_hall_comfort_setpoint_43_1
   - climate.ballroom_east_comfort_setpoint_33_1
@@ -604,10 +606,12 @@ thermostats:
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
   - climate.bedroom_jerome_comfort_setpoint_44_1
+  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+
+# Front-end thermostats
+thermostats:
   name: Thermostats
   view: false
-
-generic_thermostats:
   entities:
   - climate.annex_hall_thermostat_43_1
   - climate.ballroom_east_thermostat_33_1
@@ -620,8 +624,7 @@ generic_thermostats:
   - climate.study_east_thermostat_14_1
   - climate.study_west_thermostat_15_1
   - climate.bedroom_jerome_thermostat_44_1
-  name: Generic Thermostats
-  view: false
+  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
 
 network: !include network.yaml
 
