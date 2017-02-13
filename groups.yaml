@@ -388,6 +388,30 @@ ups:
   - sensor.eaton_ups_battery_charge
   - sensor.eaton_ups_battery_runtime
 
+rfx_switches:
+  name: RFX Switches
+  entities:
+    - switch.0a140003f15c7202010080
+    - switch.0a140006f15c7203010080
+    - switch.0a140009f3cf3510020080
+    - switch.0a140002f40fa810020050
+    - switch.0a140001f40fa810050040
+    - switch.0a14000cf40fa910020040
+    - switch.0a140083f3cf3510020070
+    - switch.0a140084f3cf3510030070
+    - switch.0a140087f3cf3510040070
+    - switch.0a140086f3cf3510050070
+
+rfx_lights:
+  name: RFX Lights
+  entities:
+    - switch.0a140000f40fa801010050
+    - switch.0a140016f3cf3501010080
+    - switch.0a140022f3cf3502010080
+    - switch.0a140023f3cf3503010080
+    - switch.0a140024f3cf3504010080
+    - switch.0a140000f15c7201010080
+
 settings:
   name: Settings
   view: true
@@ -397,13 +421,15 @@ settings:
   - group.ups
   - group.temperatures
   - group.thermostats
-  - group.generic_thermostats
+  - group.thermostat_devices
   - group.annex_heating_demand
   - group.main_heating_demand
   - group.batteries
   - group.main_heating_override
   - group.annex_heating_override
   - group.user_automations
+  - group.rfx_switches
+  - group.rfx_lights
 
 #
 # Functional Groups
@@ -561,7 +587,9 @@ temperatures:
   - sensor.study_west_temperature_15_1
   - sensor.bedroom_jerome_temperature_44_1
 
-thermostats:
+thermostat_devices:
+  name: Thermostat Devices
+  view: false
   entities:
   - climate.annex_hall_comfort_setpoint_43_1
   - climate.ballroom_east_comfort_setpoint_33_1
@@ -578,10 +606,12 @@ thermostats:
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
   - climate.bedroom_jerome_comfort_setpoint_44_1
+  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+
+# Front-end thermostats
+thermostats:
   name: Thermostats
   view: false
-
-generic_thermostats:
   entities:
   - climate.annex_hall_thermostat_43_1
   - climate.ballroom_east_thermostat_33_1
@@ -594,8 +624,7 @@ generic_thermostats:
   - climate.study_east_thermostat_14_1
   - climate.study_west_thermostat_15_1
   - climate.bedroom_jerome_thermostat_44_1
-  name: Generic Thermostats
-  view: false
+  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
 
 network: !include network.yaml
 

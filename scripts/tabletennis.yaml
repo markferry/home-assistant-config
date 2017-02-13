@@ -1,0 +1,23 @@
+table_tennis:
+  sequence:
+  - service: notify.automations
+    data:
+      message: "IT'S TABLE TENNIS TIME"
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.ballroom
+      media_content_id: "smb://HASTUR/mediasys/music/library/Daft Punk/Discovery/Daft Punk - Veridis Quo.mp3"
+      media_content_type: MUSIC
+  - service: media_player.turn_on
+    data:
+      entity_id: media_player.ballroom_amplifier
+  - delay:
+      seconds: 3
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.ballroom_amplifier
+      source: Media
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.ballroom_amplifier
+      volume_level: 0.4

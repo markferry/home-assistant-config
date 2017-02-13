@@ -45,6 +45,15 @@ group.guest_room_scenes:
 group.marks_bedroom_scenes:
   order: 0
 
+group.all_lights:
+  emulated_hue: true
+group.all_switches:
+  emulated_hue: true
+group.lounge_lights:
+  emulated_hue: true
+group.marks_bedroom_lights:
+  emulated_hue: true
+
 group.mark_present:
   entity_picture: /local/wb-icons/wb_mark.png
 group.anne_present:
@@ -287,6 +296,7 @@ sensor.bedroom_jerome_battery:
 switch.greenwave_powernode_1_port_switch_53_0:
   friendly_name: Hot Tub
   icon: mdi:pot
+  emulated_hue: true
 sensor.greenwave_powernode_1_port_energy_53_0:
   friendly_name: Hot Tub Energy
 sensor.greenwave_powernode_1_port_power_53_8:
@@ -300,3 +310,83 @@ sensor.eaton_battery_charge:
   friendly_name: UPS Charge
 sensor.eaton_ups_battery_runtime:
   friendly_name: UPS Runtime
+
+script.hue_study_thermostat:
+  friendly_name: Study Thermostat
+script.hue_annex_hall_thermostat:
+  friendly_name: Annex Hall Thermostat
+script.hue_kitchen_thermostat:
+  friendly_name: Kitchen Thermostat
+script.hue_hall_thermostat:
+  friendly_name: Hall Thermostat
+script.hue_lounge_thermostat:
+  friendly_name: Lounge Thermostat
+script.hue_library_thermostat:
+  friendly_name: Library Thermostat
+script.hue_ballroom_thermostat:
+  friendly_name: Ballroom Thermostat
+script.hue_bedroom_mark_thermostat:
+  friendly_name: "Mark's Bedroom Thermostat"
+script.hue_bedroom_jerome_thermostat:
+  friendly_name: "Jerome's Bedroom Thermostat"
+script.hue_guest_room_thermostat:
+  friendly_name: "Guest Room Thermostat"
+
+script.table_tennis:
+  friendly_name: "Table Tennis Mode"
+
+script.hue_everything_off:
+  friendly_name: "Everything Off"
+
+script.hue_study_off:
+  friendly_name: "Study"
+script.hue_study_work:
+  friendly_name: "Study Mood Work"
+script.hue_study_relax:
+  friendly_name: "Study Mood Relax"
+
+script.hue_kitchen_off:
+  friendly_name: "Kitchen"
+script.hue_kitchen_cosy:
+  friendly_name: "Kitchen Mood Cosy"
+script.hue_kitchen_bright:
+  friendly_name: "Kitchen Mood Bright"
+
+script.hue_lounge_off:
+  friendly_name: "Lounge"
+script.hue_lounge_cosy:
+  friendly_name: "Lounge Mood Cosy"
+script.hue_lounge_movie:
+  friendly_name: "Lounge Mood Movie"
+script.hue_lounge_bright:
+  friendly_name: "Lounge Mood Bright"
+
+script.hue_library_off:
+  friendly_name: "Library"
+script.hue_library_chat:
+  friendly_name: "Library Mood Chat"
+script.hue_library_read:
+  friendly_name: "Library Mood Read"
+
+script.hue_ballroom_off:
+  friendly_name: "Ballroom"
+script.hue_ballroom_party:
+  friendly_name: "Ballroom Mood Party"
+script.hue_ballroom_movie:
+  friendly_name: "Ballroom Mood Movie"
+script.hue_ballroom_bright:
+  friendly_name: "Ballroom Mood Bright"
+
+script.hue_marks_bedroom_off:
+  friendly_name: "Mark's Bedroom"
+script.hue_marks_bedroom_sleep:
+  friendly_name: "Mark's Bedroom Mood Sleep"
+script.hue_marks_bedroom_play:
+  friendly_name: "Mark's Bedroom Mood Play"
+
+script.hue_guest_room_off:
+  friendly_name: "Guest Room"
+script.hue_guest_room_sleep:
+  friendly_name: "Guest Room Mood Sleep"
+script.hue_guest_room_cosy:
+  friendly_name: "Guest Room Mood Cosy"

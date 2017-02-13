@@ -1,0 +1,159 @@
+#  Script devices allowing Alexa to set input_select scenes
+hue_everything_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id:
+          - input_select.study_select
+          - input_select.kitchen_select
+          - input_select.lounge_select
+          - input_select.library_select
+          - input_select.ballroom_select
+          - input_select.marks_bedroom_select
+          - input_select.guest_room_select
+        option: "Off"
+
+hue_study_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_select
+        option: "Off"
+hue_study_work:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_select
+        option: "Work"
+hue_study_relax:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_select
+        option: "Relax"
+
+hue_kitchen_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.kitchen_select
+        option: "Off"
+hue_kitchen_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.kitchen_select
+        option: "Cosy"
+hue_kitchen_bright:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.kitchen_select
+        option: "Bright"
+
+hue_lounge_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Off"
+hue_lounge_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Cosy"
+hue_lounge_movie:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Movie"
+hue_lounge_bright:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Bright"
+
+hue_library_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Off"
+hue_library_chat:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Chat"
+hue_library_read:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Read"
+
+hue_ballroom_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Off"
+hue_ballroom_party:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Party"
+hue_ballroom_movie:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Movie"
+hue_ballroom_bright:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Bright"
+
+hue_marks_bedroom_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.marks_bedroom_select
+        option: "Off"
+hue_marks_bedroom_sleep:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.marks_bedroom_select
+        option: "Sleep"
+hue_marks_bedroom_play:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.marks_bedroom_select
+        option: "Play"
+
+hue_guest_room_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.guest_room_select
+        option: "Off"
+hue_guest_room_sleep:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.guest_room_select
+        option: "Sleep"
+hue_guest_room_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.guest_room_select
+        option: "Cosy"
