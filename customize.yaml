@@ -334,3 +334,6 @@ script.hue_bedroom_jerome_thermostat:
 script.hue_guest_room_thermostat:
   friendly_name: "Guest Room Thermostat"
 
+script.table_tennis:
+  friendly_name: "Table Tennis Mode"
+
