@@ -1,0 +1,75 @@
+#  Script devices allowing Alexa to set temperatures
+hue_study_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id:
+          - climate.study_west_thermostat_15_1
+          - climate.study_east_thermostat_14_1
+
+hue_annex_hall_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.annex_hall_thermostat_43_1
+
+hue_kitchen_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.kitchen_thermostat_34_1
+
+hue_hall_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id:
+          - climate.hall_east_thermostat_24_1
+          - climate.hall_west_thermostat_13_1
+
+hue_lounge_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.lounge_east_thermostat_30_1
+
+hue_library_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.library_thermostat_25_1
+
+hue_ballroom_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.ballroom_east_thermostat_33_1
+
+hue_bedroom_mark_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.bedroom_mark_thermostat_29_1
+
+hue_bedroom_jerome_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.bedroom_jerome_thermostat_44_1
+
+hue_guest_room_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+
