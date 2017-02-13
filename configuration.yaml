@@ -76,6 +76,8 @@ google:
   client_id: !secret gcal_client_id
   client_secret: !secret gcal_client_secret
 
+emulated_hue: !include emulated_hue.yaml
+
 notify: !include_dir_merge_list notify
 
 scene: !include scene.yaml
@@ -90,3 +92,4 @@ switch: !include_dir_merge_list switches
 climate: !include_dir_merge_list thermostats
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
+script: !include_dir_merge_named scripts
