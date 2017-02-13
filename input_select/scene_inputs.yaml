@@ -46,7 +46,7 @@ ballroom_select:
   icon: mdi:projector
 
 marks_bedroom_select:
-  name: Mark's Bedroom Mood
+  name: "Mark's Bedroom Mood"
   options:
     - 'Off'
     - 'Sleep'
