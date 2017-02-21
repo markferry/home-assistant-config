@@ -85,7 +85,7 @@ ballroom_stream:
     - "Stream 3"
 
 marks_bedroom_stream:
-  name: Mark's Bedroom
+  name: "Mark's Bedroom"
   initial: None
   icon: mdi:hotel
   options:

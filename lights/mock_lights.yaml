@@ -45,7 +45,7 @@
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/bedroom-mark/lamp/light/command
-  name: Mark's Bedroom Lamp
+  name: "Mark's Bedroom Lamp"
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
