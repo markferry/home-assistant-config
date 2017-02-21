@@ -103,7 +103,7 @@ light.unused41_level_41_0:
   friendly_name: Ballroom North_
   polling_intensity: 0
 light.fibaro_system_fgd212_dimmer_2_level_39_0:
-  friendly_name: Mark's Bedroom Overhead
+  friendly_name: "Mark's Bedroom Overhead"
 climate.horstmann_scsc17_thermostat_heating_1_35_1:
   friendly_name: Main Heating Thermostat
 sensor.horstmann_scsc17_thermostat_temperature_35_1:
@@ -169,7 +169,7 @@ sensor.library_temperature_25_1:
   friendly_name: Library Temperature
   polling_intensity: 5
 sensor.bedroom_mark_temperature_29_1:
-  friendly_name: Mark's Bedroom Temperature
+  friendly_name: "Mark's Bedroom Temperature"
   polling_intensity: 5
 sensor.lounge_east_temperature_30_1:
   friendly_name: Lounge East Temperature
@@ -209,7 +209,7 @@ sensor.library_battery:
   friendly_name: Library Battery
   icon: mdi:battery
 sensor.bedroom_mark_battery:
-  friendly_name: Mark's Bedroom Battery
+  friendly_name: "Mark's Bedroom Battery"
   icon: mdi:battery
 sensor.lounge_east_battery:
   friendly_name: Lounge East Battery

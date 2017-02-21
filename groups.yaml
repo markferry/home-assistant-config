@@ -637,7 +637,7 @@ people:
   entities: !include people/whalebarn.yaml
 
 barnacles:
-  name: Who's Visiting?
+  name: "Who's Visiting?"
   view: false
   entities: !include people/barnacles.yaml
 

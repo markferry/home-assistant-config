@@ -57,7 +57,7 @@
     climate.study_west_thermostat_15_1:
       temperature: 20
 
-- name: Mark's Bedroom Off
+- name: "Mark's Bedroom Off"
   entities:
     group.marks_bedroom_lights:
       state: off
@@ -67,13 +67,13 @@
       temperature: 10
     media_player.marks_bedroom:
       state: paused
-- name: Mark's Bedroom Sleep
+- name: "Mark's Bedroom Sleep"
   entities:
     group.marks_bedroom_lights:
       state: off
     climate.bedroom_mark_thermostat_29_1:
       temperature: 15
-- name: Mark's Bedroom Play
+- name: "Mark's Bedroom Play"
   entities:
     group.marks_bedroom_lights:
       state: on
