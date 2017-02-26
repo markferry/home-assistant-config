@@ -7,6 +7,7 @@ group.quick_scenes:
 
 group.all_automations:
   hidden: false
+
 group.study:
   order: 1
 group.kitchen:
@@ -21,7 +22,7 @@ group.ballroom:
   order: 6
 group.guest_room:
   order: 7
-group.bedroom_mark:
+group.bedrooms:
   order: 8
 group.radio:
   order: 9
@@ -392,3 +393,19 @@ script.hue_guest_room_sleep:
   friendly_name: "Guest Room Mood Sleep"
 script.hue_guest_room_cosy:
   friendly_name: "Guest Room Mood Cosy"
+
+group.guest_room_select:
+  order: 1
+  entity_picture: mdi:hotel
+
+group.marks_bedroom_select:
+  order: 1
+  icon: /local/wb-icons/wb_mark.png
+input_select.marks_bedroom_select:
+  entity_picture: /local/wb-icons/wb_mark.png
+
+group.bedroom_jerome_select:
+  order: 1
+  icon: /local/wb-icons/wb_jerome.png
+input_select.bedroom_jerome_select:
+  entity_picture: /local/wb-icons/wb_jerome.png

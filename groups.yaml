@@ -241,15 +241,15 @@ ballroom_lights:
   view: false
 
 guest_room:
-  name: Bedrooms
+  name: Guest Room
   icon: mdi:hotel
-  view: true
+  view: false
   entities:
   - group.guest_room_compact_ui
-  - group.bedroom_jerome_compact_ui
 guest_room_compact_ui:
   name: Guest Room
   view: false
+  icon: mdi:hotel
   entities:
   - input_select.guest_room_select
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
@@ -269,10 +269,18 @@ guest_room_setpoints:
   entities:
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
 
+bedrooms:
+  name: Bedrooms
+  view: true
+  icon: mdi:hotel
+  entities:
+  - group.guest_room_compact_ui
+  - group.bedroom_mark_compact_ui
+  - group.bedroom_jerome_compact_ui
 
 bedroom_mark:
   name: "Mark's Bedroom"
-  view: true
+  view: false
   icon: mdi:account
   entities:
   - media_player.marks_bedroom
@@ -280,6 +288,13 @@ bedroom_mark:
   - group.marks_bedroom_heating
   - group.marks_bedroom_appliances
   - group.marks_bedroom_scenes
+bedroom_mark_compact_ui:
+  name: "Mark's Bedroom"
+  view: false
+  entities:
+  - input_select.marks_bedroom_select
+  - climate.bedroom_mark_thermostat_29_1
+  - group.marks_bedroom_lights
 marks_bedroom_scenes:
   name: "Mark's Bedroom"
   view: false
@@ -323,9 +338,8 @@ bedroom_jerome_compact_ui:
   name: "Jerome's Bedroom"
   view: false
   entities:
+  - input_select.bedroom_jerome_select
   - climate.bedroom_jerome_thermostat_44_1
-  - sensor.bedroom_jerome_temperature_44_1
-  - sensor.bedroom_jerome_battery
 bedroom_jerome_scenes:
   name: "Jerome's Bedroom"
   view: false
@@ -497,6 +511,7 @@ quick_scenes:
   - input_select.ballroom_select
   - input_select.guest_room_select
   - input_select.marks_bedroom_select
+  - input_select.bedroom_jerome_select
 
 user_automations:
   name: Automations

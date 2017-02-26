@@ -1,0 +1,22 @@
+- name: "Jerome's Bedroom Off"
+  entities:
+    group.bedroom_jerome_lights:
+      state: off
+    switch.bedroom_jerome_appliances:
+      state: off
+    climate.bedroom_jerome_thermostat_44_1:
+      temperature: 10
+    media_player.bedroom_jerome:
+      state: paused
+- name: "Jerome's Bedroom Sleep"
+  entities:
+    group.bedroom_jerome_lights:
+      state: off
+    climate.bedroom_jerome_thermostat_44_1:
+      temperature: 15
+- name: "Jerome's Bedroom Play"
+  entities:
+    group.bedroom_jerome_lights:
+      state: on
+    climate.bedroom_jerome_thermostat_44_1:
+      temperature: 20
