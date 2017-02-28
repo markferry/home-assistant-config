@@ -16,7 +16,7 @@
   name: lounge_east_comfort_setpoint_30_1
   platform: generic_thermostat
   target_sensor: sensor.lounge_east_temperature_30_1
-- heater: switch.marks_demand
+- heater: switch.marks_bedroom_demand
   max_temp: 25
   min_temp: 5
   name: bedroom_mark_comfort_setpoint_29_1
@@ -67,13 +67,7 @@
 
 - name: bedroom_jerome_comfort_setpoint_44_1
   platform: generic_thermostat
-  heater: switch.jeromes_demand
+  heater: switch.jeromes_bedroom_demand
   max_temp: 25
   min_temp: 5
   target_sensor: sensor.bedroom_jerome_temperature_44_1
-- name: eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_comfort_setpoint_44_1
-  platform: generic_thermostat
-  heater: switch.jeromes_demand
-  max_temp: 25
-  min_temp: 5
-  target_sensor: sensor.eurotronic_eur_stellaz_wall_radiator_thermostat_valve_control_temperature_44_1

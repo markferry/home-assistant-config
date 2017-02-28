@@ -40,3 +40,21 @@
   payload_on: 'ON'
   platform: mqtt
   retain: true
+- command_topic: ha/annex-hall/demand/command
+  name: Annex Hall Demand
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- name: Guest Room Demand
+  command_topic: ha/guest-room/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- name: "Jerome's Bedroom Demand"
+  command_topic: ha/bedroom-jerome/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
