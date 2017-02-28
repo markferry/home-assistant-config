@@ -68,6 +68,6 @@ bedroom_jerome_select:
   options:
     - 'Off'
     - 'Sleep'
-    - 'Play'
+    - 'Cosy'
   initial: 'Off'
   icon: mdi:account

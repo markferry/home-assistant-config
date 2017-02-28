@@ -385,6 +385,13 @@ script.hue_marks_bedroom_sleep:
 script.hue_marks_bedroom_play:
   friendly_name: "Mark's Bedroom Mood Play"
 
+script.hue_bedroom_jerome_off:
+  friendly_name: "Jerome's Bedroom"
+script.hue_bedroom_jerome_sleep:
+  friendly_name: "Jerome's Bedroom Mood Sleep"
+script.hue_bedroom_jerome_cosy:
+  friendly_name: "Jerome's Bedroom Mood Cosy"
+
 script.hue_guest_room_off:
   friendly_name: "Guest Room"
 script.hue_guest_room_sleep:

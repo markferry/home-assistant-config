@@ -139,6 +139,25 @@ hue_marks_bedroom_play:
         entity_id: input_select.marks_bedroom_select
         option: "Play"
 
+hue_bedroom_jerome_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.bedroom_jerome_select
+        option: "Off"
+hue_bedroom_jerome_sleep:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.bedroom_jerome_select
+        option: "Sleep"
+hue_bedroom_jerome_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.bedroom_jerome_select
+        option: "Cosy"
+
 hue_guest_room_off:
     sequence:
     - service: input_select.select_option
