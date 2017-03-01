@@ -1,0 +1,22 @@
+- name: bedroom_ros_off
+  entities:
+    group.bedroom_ros_lights:
+      state: off
+    switch.bedroom_ros_appliances:
+      state: off
+    climate.bedroom_ros_thermostat_XX_1:
+      temperature: 10
+    media_player.ross_tablet:
+      state: paused
+- name: bedroom_ros_sleep
+  entities:
+    group.bedroom_ros_lights:
+      state: off
+    climate.bedroom_ros_thermostat_XX_1:
+      temperature: 15
+- name: bedroom_ros_cosy
+  entities:
+    group.bedroom_ros_lights:
+      state: on
+    climate.bedroom_ros_thermostat_XX_1:
+      temperature: 23

@@ -277,6 +277,7 @@ bedrooms:
   - group.guest_room_compact_ui
   - group.bedroom_mark_compact_ui
   - group.bedroom_jerome_compact_ui
+  - group.bedroom_ros_compact_ui
 
 bedroom_mark:
   name: "Mark's Bedroom"
@@ -361,6 +362,40 @@ bedroom_jerome_thermostats:
   view: false
   entities:
   - climate.bedroom_jerome_thermostat_44_1
+
+bedroom_ros:
+  name: "Ros's Bedroom"
+  icon: mdi:hotel
+  #view: true
+  entities:
+  - group.bedroom_ros_compact_ui
+bedroom_ros_compact_ui:
+  name: "Ros's Bedroom"
+  view: false
+  entities:
+  - input_select.bedroom_ros_select
+  - climate.bedroom_ros_thermostat_XX_1
+bedroom_ros_scenes:
+  name: "Ros's Bedroom"
+  view: false
+  entities:
+  - input_select.bedroom_ros_select
+bedroom_ros_heating:
+  name: "Ros's Bedroom Heating"
+  view: false
+  entities:
+  - climate.bedroom_ros_thermostat_XX_1
+  - sensor.bedroom_ros_temperature_XX_1
+bedroom_ros_setpoints:
+  name: "Ros's Bedroom Setpoints"
+  view: false
+  entities:
+  - climate.bedroom_ros_comfort_setpoint_XX_1
+bedroom_ros_thermostats:
+  name: "Ros's Bedroom Thermostats"
+  view: false
+  entities:
+  - climate.bedroom_ros_thermostat_XX_1
 
 radio:
   name: Internet Radio
@@ -479,6 +514,7 @@ main_heating_demand:
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
   - switch.jeromes_bedroom_demand
+  - switch.ross_bedroom_demand
 
 annex_heating:
   name: Annex Heating
@@ -512,6 +548,7 @@ quick_scenes:
   - input_select.guest_room_select
   - input_select.marks_bedroom_select
   - input_select.bedroom_jerome_select
+  - input_select.bedroom_ros_select
 
 user_automations:
   name: Automations
@@ -545,6 +582,7 @@ batteries:
   - sensor.kitchen_battery
   - sensor.annex_hall_battery
   - sensor.bedroom_jerome_battery
+  - sensor.bedroom_ros_battery
 
 heating_valves:
   name: Heating Demand
@@ -601,6 +639,7 @@ temperatures:
   - sensor.study_east_temperature_14_1
   - sensor.study_west_temperature_15_1
   - sensor.bedroom_jerome_temperature_44_1
+  - sensor.bedroom_ros_temperature_XX_1
 
 thermostat_devices:
   name: Thermostat Devices
@@ -620,8 +659,9 @@ thermostat_devices:
   - climate.lounge_east_comfort_setpoint_30_1
   - climate.study_east_comfort_setpoint_14_1
   - climate.study_west_comfort_setpoint_15_1
-  - climate.bedroom_jerome_comfort_setpoint_44_1
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+  - climate.bedroom_jerome_comfort_setpoint_44_1
+  - climate.bedroom_ros_comfort_setpoint_XX_1
 
 # Front-end thermostats
 thermostats:
@@ -638,8 +678,9 @@ thermostats:
   - climate.lounge_east_thermostat_30_1
   - climate.study_east_thermostat_14_1
   - climate.study_west_thermostat_15_1
-  - climate.bedroom_jerome_thermostat_44_1
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+  - climate.bedroom_jerome_thermostat_44_1
+  - climate.bedroom_ros_thermostat_XX_1
 
 network: !include network.yaml
 
