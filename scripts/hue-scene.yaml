@@ -176,3 +176,23 @@ hue_guest_room_cosy:
       data:
         entity_id: input_select.guest_room_select
         option: "Cosy"
+
+hue_bedroom_ros_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.bedroom_ros_select
+        option: "Off"
+hue_bedroom_ros_sleep:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.bedroom_ros_select
+        option: "Sleep"
+hue_bedroom_ros_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.bedroom_ros_select
+        option: "Cosy"
+

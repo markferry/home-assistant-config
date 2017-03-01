@@ -294,6 +294,15 @@ sensor.bedroom_jerome_battery:
   friendly_name: "Jerome's Bedroom Battery"
   icon: mdi:battery
 
+climate.bedroom_ros_thermostat_XX_1:
+  friendly_name: "Ros's Bedroom Thermostat"
+sensor.bedroom_ros_temperature_XX_1:
+  friendly_name: "Ros's Bedroom Temperature"
+  polling_intensity: 5
+sensor.bedroom_ros_battery:
+  friendly_name: "Ros's Bedroom Battery"
+  icon: mdi:battery
+
 switch.greenwave_powernode_1_port_switch_53_0:
   friendly_name: Hot Tub
   icon: mdi:pot
@@ -330,6 +339,8 @@ script.hue_bedroom_mark_thermostat:
   friendly_name: "Mark's Bedroom Thermostat"
 script.hue_bedroom_jerome_thermostat:
   friendly_name: "Jerome's Bedroom Thermostat"
+script.hue_bedroom_ros_thermostat:
+  friendly_name: "Ros's Bedroom Thermostat"
 script.hue_guest_room_thermostat:
   friendly_name: "Guest Room Thermostat"
 
@@ -392,6 +403,13 @@ script.hue_bedroom_jerome_sleep:
 script.hue_bedroom_jerome_cosy:
   friendly_name: "Jerome's Bedroom Mood Cosy"
 
+script.hue_bedroom_ros_off:
+  friendly_name: "Ros's Bedroom"
+script.hue_bedroom_ros_sleep:
+  friendly_name: "Ros's Bedroom Mood Sleep"
+script.hue_bedroom_ros_cosy:
+  friendly_name: "Ros's Bedroom Mood Cosy"
+
 script.hue_guest_room_off:
   friendly_name: "Guest Room"
 script.hue_guest_room_sleep:
@@ -414,3 +432,9 @@ group.bedroom_jerome_select:
   icon: /local/wb-icons/wb_jerome.png
 input_select.bedroom_jerome_select:
   entity_picture: /local/wb-icons/wb_jerome.png
+
+group.bedroom_ros_select:
+  order: 1
+  icon: /local/wb-icons/wb_ros.png
+input_select.bedroom_ros_select:
+  entity_picture: /local/wb-icons/wb_ros.png
