@@ -50,3 +50,7 @@
   platform: mqtt
   state_topic: ha/mock/bedroom_jerome/temperature/state
   unit_of_measurement: "\xB0C"
+- name: bedroom_ros_temperature_XX_1
+  platform: mqtt
+  state_topic: ha/mock/bedroom_ros/temperature/state
+  unit_of_measurement: "\xB0C"

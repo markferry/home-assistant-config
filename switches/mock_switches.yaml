@@ -58,3 +58,9 @@
   payload_on: 'ON'
   platform: mqtt
   retain: true
+- name: "Ros's Bedroom Demand"
+  command_topic: ha/bedroom-ros/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
