@@ -298,9 +298,9 @@ sensor.bedroom_jerome_battery:
   friendly_name: "Jerome's Bedroom Battery"
   icon: mdi:battery
 
-climate.bedroom_ros_thermostat_XX_1:
+climate.bedroom_ros_thermostat_55_1:
   friendly_name: "Ros's Bedroom Thermostat"
-sensor.bedroom_ros_temperature_XX_1:
+sensor.bedroom_ros_temperature_55_1:
   friendly_name: "Ros's Bedroom Temperature"
   polling_intensity: 5
 sensor.bedroom_ros_battery:

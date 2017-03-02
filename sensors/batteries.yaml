@@ -114,8 +114,8 @@
       unit_of_measurement: '%'
     bedroom_ros_battery:
       value_template: >
-        {% if states.sensor.bedroom_ros_temperature_XX_1 %}
-          {{ states.sensor.bedroom_ros_temperature_XX_1.attributes.battery_level }}
+        {% if states.sensor.bedroom_ros_temperature_55_1 %}
+          {{ states.sensor.bedroom_ros_temperature_55_1.attributes.battery_level }}
         {% else %}
           unknown
         {% endif %}

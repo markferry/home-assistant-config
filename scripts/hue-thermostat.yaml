@@ -78,4 +78,4 @@ hue_bedroom_ros_thermostat:
     - service: climate.set_temperature
       data_template:
         temperature: "{{ requested_level }}"
-        entity_id: climate.bedroom_ros_thermostat_XX_1
+        entity_id: climate.bedroom_ros_thermostat_55_1
