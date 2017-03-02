@@ -2,8 +2,10 @@ group.people:
   order: 1
 group.barnacles:
   order: 2
-group.quick_scenes:
+group.room_scenes:
   order: 3
+group.bedroom_scenes:
+  order: 4
 
 group.all_automations:
   hidden: false

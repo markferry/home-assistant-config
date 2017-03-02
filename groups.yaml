@@ -537,14 +537,18 @@ annex_heating_demand:
   - switch.study_demand
   - switch.annex_hall_demand
 
-quick_scenes:
-  name: Quick Moods
+room_scenes:
+  name: Rooms
   entities:
   - input_select.study_select
   - input_select.kitchen_select
   - input_select.lounge_select
   - input_select.library_select
   - input_select.ballroom_select
+
+bedroom_scenes:
+  name: Bedrooms
+  entities:
   - input_select.guest_room_select
   - input_select.marks_bedroom_select
   - input_select.bedroom_jerome_select
