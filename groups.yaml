@@ -374,7 +374,7 @@ bedroom_ros_compact_ui:
   view: false
   entities:
   - input_select.bedroom_ros_select
-  - climate.bedroom_ros_thermostat_XX_1
+  - climate.bedroom_ros_thermostat_55_1
 bedroom_ros_scenes:
   name: "Ros's Bedroom"
   view: false
@@ -384,18 +384,18 @@ bedroom_ros_heating:
   name: "Ros's Bedroom Heating"
   view: false
   entities:
-  - climate.bedroom_ros_thermostat_XX_1
-  - sensor.bedroom_ros_temperature_XX_1
+  - climate.bedroom_ros_thermostat_55_1
+  - sensor.bedroom_ros_temperature_55_1
 bedroom_ros_setpoints:
   name: "Ros's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_ros_comfort_setpoint_XX_1
+  - climate.bedroom_ros_comfort_setpoint_55_1
 bedroom_ros_thermostats:
   name: "Ros's Bedroom Thermostats"
   view: false
   entities:
-  - climate.bedroom_ros_thermostat_XX_1
+  - climate.bedroom_ros_thermostat_55_1
 
 radio:
   name: Internet Radio
@@ -643,7 +643,7 @@ temperatures:
   - sensor.study_east_temperature_14_1
   - sensor.study_west_temperature_15_1
   - sensor.bedroom_jerome_temperature_44_1
-  - sensor.bedroom_ros_temperature_XX_1
+  - sensor.bedroom_ros_temperature_55_1
 
 thermostat_devices:
   name: Thermostat Devices
@@ -665,7 +665,7 @@ thermostat_devices:
   - climate.study_west_comfort_setpoint_15_1
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
   - climate.bedroom_jerome_comfort_setpoint_44_1
-  - climate.bedroom_ros_comfort_setpoint_XX_1
+  - climate.bedroom_ros_comfort_setpoint_55_1
 
 # Front-end thermostats
 thermostats:
@@ -684,7 +684,7 @@ thermostats:
   - climate.study_west_thermostat_15_1
   - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
   - climate.bedroom_jerome_thermostat_44_1
-  - climate.bedroom_ros_thermostat_XX_1
+  - climate.bedroom_ros_thermostat_55_1
 
 network: !include network.yaml
 

@@ -78,10 +78,10 @@
   target_sensor: sensor.bedroom_jerome_temperature_44_1
   target_temp: 10.0
 
-- name: bedroom_ros_thermostat_XX_1
+- name: bedroom_ros_thermostat_55_1
   platform: generic_thermostat
   heater: switch.ross_bedroom_demand
   max_temp: 25
   min_temp: 5
-  target_sensor: sensor.bedroom_ros_temperature_XX_1
+  target_sensor: sensor.bedroom_ros_temperature_55_1
   target_temp: 10.0

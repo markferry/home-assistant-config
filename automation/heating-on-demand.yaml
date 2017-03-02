@@ -91,7 +91,7 @@
     - platform: state
       entity_id: climate.bedroom_jerome_thermostat_44_1
     - platform: state
-      entity_id: climate.bedroom_ros_thermostat_XX_1
+      entity_id: climate.bedroom_ros_thermostat_55_1
   action:
     - service: climate.set_temperature
       data_template:
@@ -124,7 +124,7 @@
 #    - platform: state
 #      entity_id: climate.bedroom_jerome_comfort_setpoint_44_1
 #    - platform: state
-#      entity_id: climate.bedroom_ros_comfort_setpoint_XX_1
+#      entity_id: climate.bedroom_ros_comfort_setpoint_55_1
 #  action:
 #    #- service: climate.set_temperature
 #    #  data_template:
