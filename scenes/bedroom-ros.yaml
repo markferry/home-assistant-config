@@ -13,7 +13,7 @@
     group.bedroom_ros_lights:
       state: off
     climate.bedroom_ros_thermostat_55_1:
-      temperature: 15
+      temperature: 12
 - name: bedroom_ros_cosy
   entities:
     group.bedroom_ros_lights:
