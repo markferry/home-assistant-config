@@ -514,7 +514,6 @@ main_heating_demand:
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
   - switch.jeromes_bedroom_demand
-  - switch.ross_bedroom_demand
 
 annex_heating:
   name: Annex Heating
@@ -536,6 +535,7 @@ annex_heating_demand:
   entities:
   - switch.study_demand
   - switch.annex_hall_demand
+  - switch.ross_bedroom_demand
 
 room_scenes:
   name: Rooms
