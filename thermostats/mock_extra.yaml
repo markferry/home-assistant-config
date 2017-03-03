@@ -7,7 +7,7 @@
   target_temp: 10.0
 - name: horstmann_scsc17_thermostat_heating_1_50_1
   platform: generic_thermostat
-  heater: switch.horstmann_unknown_type0003_id0001_switch_51_0
+  heater: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
   target_sensor: sensor.horstmann_scsc17_thermostat_temperature_50_1
   max_temp: 25
   min_temp: 5

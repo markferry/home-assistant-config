@@ -28,7 +28,7 @@
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0001_switch_51_0
+- name: horstmann_asrzw_thermostat_receiver_switch_56_0
   command_topic: ha/annex/heating/command
   payload_off: 'OFF'
   payload_on: 'ON'
