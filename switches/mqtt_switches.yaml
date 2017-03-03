@@ -11,7 +11,7 @@
   platform: mqtt
   retain: true
 - command_topic: ha/bedroom-mark/demand/command
-  name: Mark's Bedroom Demand
+  name: "Mark's Bedroom Demand"
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
@@ -54,6 +54,12 @@
   retain: true
 - command_topic: ha/bedroom-jerome/demand/command
   name: "Jerome's Bedroom Demand"
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  platform: mqtt
+  retain: true
+- name: "Ros's Bedroom Demand"
+  command_topic: ha/bedroom-ros/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt

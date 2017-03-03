@@ -25,6 +25,8 @@
           {%   set u = "marks_bedroom" %}
           {% elif "jerome" in l %}
           {%   set u = "bedroom_jerome" %}
+          {% elif "ros" in l %}
+          {%   set u = "bedroom_ros" %}
           {% endif %}
           input_select.{{u}}_select
         option: >
@@ -49,6 +51,8 @@
           {%   set u = "marks_bedroom" %}
           {% elif "jerome" in l %}
           {%   set u = "bedroom_jerome" %}
+          {% elif "ros" in l %}
+          {%   set u = "bedroom_ros" %}
           {% endif %}
           group.{{u}}_thermostats
         temperature: >

@@ -1,13 +1,17 @@
 table_tennis:
   sequence:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.kitchen
+      message: "It's TABLE-TENNIS time!"
   - service: notify.automations
     data:
       message: "IT'S TABLE TENNIS TIME"
   - service: media_player.play_media
     data:
       entity_id: media_player.ballroom
-      media_content_id: "smb://HASTUR/mediasys/music/library/Daft Punk/Discovery/Daft Punk - Veridis Quo.mp3"
-      media_content_type: MUSIC
+      media_content_id: "smb://HASTUR/mediasys/music/meta/playlists/tabletennis.m3u"
+      media_content_type: PLAYLIST
   - service: media_player.turn_on
     data:
       entity_id: media_player.ballroom_amplifier
@@ -19,5 +23,16 @@ table_tennis:
       source: Media
   - service: media_player.volume_set
     data:
+      entity_id: media_player.ballroom
+      volume_level: 0.9
+  - service: media_player.volume_set
+    data:
       entity_id: media_player.ballroom_amplifier
-      volume_level: 0.4
+      volume_level: 0.5
+  - delay:
+      seconds: 4
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.kitchen
+      media_content_id: "smb://HASTUR/mediasys/music/meta/playlists/tabletennis.m3u"
+      media_content_type: PLAYLIST

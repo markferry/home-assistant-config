@@ -45,6 +45,15 @@ ballroom_select:
   initial: 'Off'
   icon: mdi:projector
 
+guest_room_select:
+  name: Guest Room Mood
+  options:
+    - 'Off'
+    - 'Sleep'
+    - 'Cosy'
+  initial: 'Off'
+  icon: mdi:hotel
+
 marks_bedroom_select:
   name: "Mark's Bedroom Mood"
   options:
@@ -54,11 +63,20 @@ marks_bedroom_select:
   initial: 'Off'
   icon: mdi:account
 
-guest_room_select:
-  name: Guest Room Mood
+bedroom_jerome_select:
+  name: "Jerome's Bedroom Mood"
   options:
     - 'Off'
     - 'Sleep'
     - 'Cosy'
   initial: 'Off'
-  icon: mdi:hotel
+  icon: mdi:account
+
+bedroom_ros_select:
+  name: "Ros's Bedroom Mood"
+  options:
+    - 'Off'
+    - 'Sleep'
+    - 'Cosy'
+  initial: 'Off'
+  icon: mdi:account
