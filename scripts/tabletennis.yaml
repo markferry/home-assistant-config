@@ -7,6 +7,9 @@ table_tennis:
   - service: notify.automations
     data:
       message: "IT'S TABLE TENNIS TIME"
+  - service: scene.turn_on
+    data:
+      entity_id: scene.ballroom_party
   - service: media_player.play_media
     data:
       entity_id: media_player.ballroom
@@ -29,8 +32,6 @@ table_tennis:
     data:
       entity_id: media_player.ballroom_amplifier
       volume_level: 0.5
-  - delay:
-      seconds: 4
   - service: media_player.play_media
     data:
       entity_id: media_player.kitchen
