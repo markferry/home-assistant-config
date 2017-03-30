@@ -29,6 +29,46 @@ history:
       - device_tracker
     entities:
       - sun.sun   # Don't record sun data
+  include:
+    domains:
+      - ups
+      - switch
+    entities:
+      - sensor.horstmann_scsc17_thermostat_temperature_35_1
+      - sensor.horstmann_scsc17_thermostat_temperature_50_1
+      - sensor.aeotec_dsb05_multisensor_temperature_3_1
+      - sensor.ballroom_east_temperature_33_1
+      - sensor.hall_west_temperature_13_1
+      - sensor.hall_east_temperature_24_1
+      - sensor.annex_hall_temperature_43_1
+      - sensor.kitchen_temperature_34_1
+      - sensor.library_temperature_25_1
+      - sensor.lounge_east_temperature_30_1
+      - sensor.bedroom_mark_temperature_29_1
+      - sensor.study_east_temperature_14_1
+      - sensor.study_west_temperature_15_1
+      - sensor.bedroom_jerome_temperature_44_1
+      - sensor.bedroom_ros_temperature_55_1
+      - sensor.main_heating_thermostat_battery
+      - sensor.annex_heating_thermostat_battery
+      - sensor.hall_multisensor_battery
+      - sensor.hall_west_battery
+      - sensor.study_east_battery
+      - sensor.study_west_battery
+      - sensor.hall_east_battery
+      - sensor.library_battery
+      - sensor.bedroom_mark_battery
+      - sensor.lounge_east_battery
+      - sensor.ballroom_east_battery
+      - sensor.kitchen_battery
+      - sensor.annex_hall_battery
+      - sensor.bedroom_jerome_battery
+      - sensor.bedroom_ros_battery
+      - sensor.aeotec_dsb05_multisensor_luminance_3_3
+      - sensor.aeotec_dsb05_multisensor_relative_humidity_3_5
+      - switch.greenwave_powernode_1_port_switch_53_0
+      - sensor.greenwave_powernode_1_port_energy_53_0
+      - sensor.greenwave_powernode_1_port_power_53_8
 
 # Customize database
 recorder:
@@ -49,6 +89,7 @@ sun:
 
 http:
   api_password: !secret api_password
+#  base_url: !secret base_url
 
 mqtt:
   broker: localhost
@@ -68,15 +109,15 @@ rfxtrx:
 
 device_tracker: !include device_tracker.yaml
 
-ifttt:
-  key: !secret ifttt_key
-
+#ifttt:
+#  key: !secret ifttt_key
+#
 google:
   client_id: !secret gcal_client_id
   client_secret: !secret gcal_client_secret
 
-emulated_hue: !include emulated_hue.yaml
-
+#emulated_hue: !include emulated_hue.yaml
+#
 notify: !include_dir_merge_list notify
 tts: !include tts.yaml
 
