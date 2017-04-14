@@ -117,8 +117,8 @@ google:
   client_id: !secret gcal_client_id
   client_secret: !secret gcal_client_secret
 
-#emulated_hue: !include emulated_hue.yaml
-#
+emulated_hue: !include emulated_hue.yaml
+
 notify: !include_dir_merge_list notify
 tts: !include tts.yaml
 
