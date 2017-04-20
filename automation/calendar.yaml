@@ -15,6 +15,12 @@
   trigger:
     - platform: state
       entity_id: calendar.scene
+    - platform: state
+      entity_id: calendar.mark_scene
+    - platform: state
+      entity_id: calendar.jerome_scene
+    - platform: state
+      entity_id: calendar.ros_scene
   action:
     - service_template: input_select.select_option
       data_template:
@@ -40,6 +46,12 @@
   trigger:
     - platform: state
       entity_id: calendar.climate
+    - platform: state
+      entity_id: calendar.mark_climate
+    - platform: state
+      entity_id: calendar.jerome_climate
+    - platform: state
+      entity_id: calendar.ros_climate
   action:
     - service_template: climate.set_temperature
       data_template:
