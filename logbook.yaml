@@ -9,7 +9,7 @@ include:
     - ups
     - light
     - switch
-    - thermostat
+    - climate
     - calendar
   entities:
     - sensor.horstmann_scsc17_thermostat_temperature_35_1
