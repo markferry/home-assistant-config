@@ -1,4 +1,4 @@
-- alias: "Calendar Service Trigger"
+- alias: "Calendar Service"
   trigger:
     - platform: state
       entity_id: calendar.service
@@ -11,16 +11,20 @@
         topic: 'ha/calendar/service'
         payload: '{"service":"{{trigger.to_state.attributes.message.split()[1]}}","data":"{{trigger.to_state.attributes.message.split()[2]}}"}'
 
-- alias: "Scene"
+- alias: "Calendar Scene"
   trigger:
     - platform: state
       entity_id: calendar.scene
+      to: "on"
     - platform: state
       entity_id: calendar.mark_scene
+      to: "on"
     - platform: state
       entity_id: calendar.jerome_scene
+      to: "on"
     - platform: state
       entity_id: calendar.ros_scene
+      to: "on"
   action:
     - service_template: input_select.select_option
       data_template:
@@ -42,16 +46,20 @@
         topic: 'ha/calendar/scene'
         payload: '{{trigger.to_state.attributes.message}}'
 
-- alias: "Climate"
+- alias: "Calendar Climate"
   trigger:
     - platform: state
       entity_id: calendar.climate
+      to: "on"
     - platform: state
       entity_id: calendar.mark_climate
+      to: "on"
     - platform: state
       entity_id: calendar.jerome_climate
+      to: "on"
     - platform: state
       entity_id: calendar.ros_climate
+      to: "on"
   action:
     - service_template: climate.set_temperature
       data_template:
