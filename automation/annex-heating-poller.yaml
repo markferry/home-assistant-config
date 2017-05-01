@@ -1,0 +1,26 @@
+# Repeat the command every 20 minutes to avoid failsafe mode.
+- alias: "Annex Heating Poll On"
+  trigger:
+    - platform: time
+      minutes: '/20'
+      seconds: 12
+  condition:
+    - condition: state
+      entity_id: group.annex_heating_demand
+      state: 'on'
+  action:
+    - service_template: switch.turn_on
+      entity_id: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
+
+- alias: "Annex Heating Poll Off"
+  trigger:
+    - platform: time
+      minutes: '/20'
+      seconds: 14
+  condition:
+    - condition: state
+      entity_id: group.annex_heating_demand
+      state: 'off'
+  action:
+    - service_template: switch.turn_off
+      entity_id: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
