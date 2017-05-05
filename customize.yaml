@@ -442,3 +442,13 @@ group.bedroom_ros_select:
   icon: /local/wb-icons/wb_ros.png
 input_select.bedroom_ros_select:
   entity_picture: /local/wb-icons/wb_ros.png
+
+# Place guest room last
+group.bedroom_mark_compact_ui:
+  order: 1
+group.bedroom_jerome_compact_ui:
+  order: 1
+group.bedroom_ros_compact_ui:
+  order: 1
+group.guest_room_compact_ui:
+  order: 2

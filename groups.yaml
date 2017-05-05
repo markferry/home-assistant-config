@@ -274,10 +274,10 @@ bedrooms:
   view: true
   icon: mdi:hotel
   entities:
-  - group.guest_room_compact_ui
   - group.bedroom_mark_compact_ui
   - group.bedroom_jerome_compact_ui
   - group.bedroom_ros_compact_ui
+  - group.guest_room_compact_ui
 
 bedroom_mark:
   name: "Mark's Bedroom"
