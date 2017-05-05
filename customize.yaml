@@ -96,7 +96,7 @@ sensor.aeotec_dsb05_multisensor_luminance_3_3:
 sensor.aeotec_dsb05_multisensor_relative_humidity_3_5:
   friendly_name: Hall Humidity
 sensor.aeotec_dsb05_multisensor_temperature_3_1:
-  friendly_name: Hall Temperature
+  friendly_name: Hall
 binary_sensor.aeotec_dsb05_multisensor_sensor_3_0:
   friendly_name: Hall Motion
 light.__level_40_0:
@@ -159,34 +159,34 @@ light.kitchen_level_34:
 light.annex_hall_level_43:
   friendly_name: Annex Hall Valve
 sensor.hall_west_temperature_13_1:
-  friendly_name: Hall West Temperature
+  friendly_name: Hall West
   polling_intensity: 5
 sensor.study_east_temperature_14_1:
-  friendly_name: Study East Temperature
+  friendly_name: Study East
   polling_intensity: 5
 sensor.study_west_temperature_15_1:
-  friendly_name: Study West Temperature
+  friendly_name: Study West
   polling_intensity: 5
 sensor.hall_east_temperature_24_1:
-  friendly_name: Hall East Temperature
+  friendly_name: Hall East
   polling_intensity: 5
 sensor.library_temperature_25_1:
-  friendly_name: Library Temperature
+  friendly_name: Library
   polling_intensity: 5
 sensor.bedroom_mark_temperature_29_1:
-  friendly_name: "Mark's Bedroom Temperature"
+  friendly_name: "Mark's Bedroom"
   polling_intensity: 5
 sensor.lounge_east_temperature_30_1:
-  friendly_name: Lounge East Temperature
+  friendly_name: Lounge East
   polling_intensity: 5
 sensor.ballroom_east_temperature_33_1:
-  friendly_name: Ballroom East Temperature
+  friendly_name: Ballroom East
   polling_intensity: 5
 sensor.kitchen_temperature_34_1:
-  friendly_name: Kitchen Temperature
+  friendly_name: Kitchen
   polling_intensity: 5
 sensor.annex_hall_temperature_43_1:
-  friendly_name: Annex Hall Temperature
+  friendly_name: Annex Hall
   polling_intensity: 5
 
 sensor.main_heating_thermostat_battery:
@@ -231,29 +231,29 @@ sensor.annex_hall_battery:
 
 # generic thermostats
 climate.hall_west_thermostat_13_1:
-  friendly_name: Hall West Thermostat
+  friendly_name: Hall West
 climate.study_east_thermostat_14_1:
-  friendly_name: Study East Thermostat
+  friendly_name: Study East
 climate.study_west_thermostat_15_1:
-  friendly_name: Study West Thermostat
+  friendly_name: Study West
 climate.hall_east_thermostat_24_1:
-  friendly_name: Hall East Thermostat
+  friendly_name: Hall East
 climate.library_thermostat_25_1:
-  friendly_name: Library Thermostat
+  friendly_name: Library
 climate.bedroom_mark_thermostat_29_1:
-  friendly_name: "Mark's Bedroom Thermostat"
+  friendly_name: "Mark's Bedroom"
 climate.lounge_east_thermostat_30_1:
-  friendly_name: Lounge East Thermostat
+  friendly_name: Lounge East
 climate.ballroom_east_thermostat_33_1:
-  friendly_name: Ballroom East Thermostat
+  friendly_name: Ballroom East
 climate.kitchen_thermostat_34_1:
-  friendly_name: Kitchen Thermostat
+  friendly_name: Kitchen
 climate.annex_hall_thermostat_43_1:
-  friendly_name: Annex Hall Thermostat
+  friendly_name: Annex Hall
 
 # real thermostats
 climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
-  friendly_name: Guest Room Thermostat
+  friendly_name: Guest Room
   min_temp: 5
   max_temp: 25
 
@@ -290,18 +290,18 @@ climate.annex_hall_setpoint_43_1:
 
 
 climate.bedroom_jerome_thermostat_44_1:
-  friendly_name: "Jerome's Bedroom Thermostat"
+  friendly_name: "Jerome's Bedroom"
 sensor.bedroom_jerome_temperature_44_1:
-  friendly_name: "Jerome's Bedroom Temperature"
+  friendly_name: "Jerome's Bedroom"
   polling_intensity: 5
 sensor.bedroom_jerome_battery:
   friendly_name: "Jerome's Bedroom Battery"
   icon: mdi:battery
 
 climate.bedroom_ros_thermostat_55_1:
-  friendly_name: "Ros's Bedroom Thermostat"
+  friendly_name: "Ros's Bedroom"
 sensor.bedroom_ros_temperature_55_1:
-  friendly_name: "Ros's Bedroom Temperature"
+  friendly_name: "Ros's Bedroom"
   polling_intensity: 5
 sensor.bedroom_ros_battery:
   friendly_name: "Ros's Bedroom Battery"
