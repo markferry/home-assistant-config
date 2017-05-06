@@ -4,6 +4,8 @@
 *.swo
 .HA_VERSION
 secrets.yaml
+google_calendars.yaml
+known_devices.yaml
 pyozw.sqlite
 OZW_Log.txt
 deps
