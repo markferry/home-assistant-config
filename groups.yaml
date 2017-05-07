@@ -9,11 +9,18 @@ study:
   icon: mdi:printer
   view: true
   entities:
-  - group.study_scenes
-  - media_player.study
-  - group.study_lights
-  - group.study_heating
+  - sensor.study_east_temperature_14_1
+  - sensor.study_west_temperature_15_1
+  - group.study_compact_ui
   - group.study_appliances
+  - media_player.study
+study_compact_ui:
+  name: Study
+  view: false
+  entities:
+  - input_select.study_select
+  - climate.study_east_thermostat_14_1
+  - climate.study_west_thermostat_15_1
 study_scenes:
   name: Study
   view: false
@@ -24,9 +31,7 @@ study_heating:
   view: false
   entities:
   - climate.study_east_thermostat_14_1
-  - sensor.study_east_temperature_14_1
   - climate.study_west_thermostat_15_1
-  - sensor.study_west_temperature_15_1
 study_setpoints:
   name: Study Setpoints
   view: false
@@ -55,21 +60,26 @@ kitchen:
   view: true
   icon: mdi:stove
   entities:
+  - sensor.kitchen_temperature_34_1
+  - group.kitchen_compact_ui
   - media_player.kitchen
-  - group.kitchen_lights
-  - group.kitchen_heating
-  - group.kitchen_scenes
+kitchen_compact_ui:
+  name: Kitchen
+  view: false
+  icon: mdi:stove
+  entities:
+  - input_select.kitchen_select
+  - climate.kitchen_thermostat_34_1
 kitchen_scenes:
   name: Kitchen
   view: false
   entities:
   - input_select.kitchen_select
 kitchen_heating:
-  entities:
-  - climate.kitchen_thermostat_34_1
-  - sensor.kitchen_temperature_34_1
   name: Kitchen Heating
   view: false
+  entities:
+  - climate.kitchen_thermostat_34_1
 kitchen_setpoints:
   name: Kitchen Setpoints
   view: false
@@ -89,27 +99,35 @@ hall:
   view: true
   icon: mdi:fullscreen-exit
   entities:
-  - group.hall_lights
-  - group.hall_heating
-  - group.hall_scenes
-  - group.main_heating
-  - group.annex_heating
-  - group.hottub
+  - binary_sensor.aeotec_dsb05_multisensor_sensor_3_0
   - sensor.aeotec_dsb05_multisensor_luminance_3_3
   - sensor.aeotec_dsb05_multisensor_relative_humidity_3_5
   - sensor.aeotec_dsb05_multisensor_temperature_3_1
-  - binary_sensor.aeotec_dsb05_multisensor_sensor_3_0
+  - sensor.hall_west_temperature_13_1
+  - sensor.hall_east_temperature_24_1
+  - sensor.annex_hall_temperature_43_1
+  #
+  - group.hall_compact_ui
+  - group.hall_lights
+  - group.main_heating
+  - group.annex_heating
+  - group.hottub
+hall_compact_ui:
+  name: Hall
+  view: false
+  icon: mdi:fullscreen-exit
+  entities:
+  - climate.hall_west_thermostat_13_1
+  - climate.hall_east_thermostat_24_1
+  - climate.annex_hall_thermostat_43_1
 hall_scenes:
   name: Hall Scenes
   view: false
 hall_heating:
   entities:
   - climate.hall_west_thermostat_13_1
-  - sensor.hall_west_temperature_13_1
   - climate.hall_east_thermostat_24_1
-  - sensor.hall_east_temperature_24_1
   - climate.annex_hall_thermostat_43_1
-  - sensor.annex_hall_temperature_43_1
   name: Hall Heating
   view: false
 hall_setpoints:
@@ -135,21 +153,27 @@ lounge:
   view: true
   icon: mdi:sofa
   entities:
+  - sensor.lounge_east_temperature_30_1
+  - group.lounge_compact_ui
   - media_player.lounge
+lounge_compact_ui:
+  name: Lounge
+  view: false
+  icon: mdi:sofa
+  entities:
+  - input_select.lounge_select
+  - climate.lounge_east_thermostat_30_1
   - group.lounge_lights
-  - group.lounge_heating
-  - group.lounge_scenes
 lounge_scenes:
   name: Lounge
   view: false
   entities:
   - input_select.lounge_select
 lounge_heating:
-  entities:
-  - climate.lounge_east_thermostat_30_1
-  - sensor.lounge_east_temperature_30_1
   name: Lounge Heating
   view: false
+  entities:
+  - climate.lounge_east_thermostat_30_1
 lounge_setpoints:
   name: Lounge Setpoints
   view: false
@@ -173,21 +197,26 @@ library:
   view: true
   icon: mdi:library
   entities:
+  - sensor.library_temperature_25_1
+  - group.library_compact_ui
   - media_player.library
-  - group.library_lights
-  - group.library_heating
-  - group.library_scenes
+library_compact_ui:
+  name: Library
+  view: false
+  icon: mdi:library
+  entities:
+  - input_select.library_select
+  - climate.library_thermostat_25_1
 library_scenes:
   name: Library
   view: false
   entities:
   - input_select.library_select
 library_heating:
-  entities:
-  - climate.library_thermostat_25_1
-  - sensor.library_temperature_25_1
   name: Library Heating
   view: false
+  entities:
+  - climate.library_thermostat_25_1
 library_setpoints:
   name: Library Setpoints
   view: false
@@ -203,26 +232,31 @@ library_lights:
   view: false
 
 ballroom:
-  entities:
-  - media_player.ballroom
-  - media_player.ballroom_amplifier
-  - group.ballroom_lights
-  - group.ballroom_heating
-  - group.ballroom_scenes
-  icon: mdi:projector
   name: Ballroom
   view: true
+  icon: mdi:projector
+  entities:
+  - sensor.ballroom_east_temperature_33_1
+  - group.ballroom_compact_ui
+  - media_player.ballroom
+  - media_player.ballroom_amplifier
+ballroom_compact_ui:
+  name: Ballroom
+  view: false
+  icon: mdi:projector
+  entities:
+  - input_select.ballroom_select
+  - climate.ballroom_east_thermostat_33_1
 ballroom_scenes:
   name: Ballroom
   view: false
   entities:
   - input_select.ballroom_select
 ballroom_heating:
-  entities:
-  - climate.ballroom_east_thermostat_33_1
-  - sensor.ballroom_east_temperature_33_1
   name: Ballroom Heating
   view: false
+  entities:
+  - climate.ballroom_east_thermostat_33_1
 ballroom_setpoints:
   name: Ballroom Setpoints
   view: false
@@ -274,10 +308,13 @@ bedrooms:
   view: true
   icon: mdi:hotel
   entities:
-  - group.guest_room_compact_ui
   - group.bedroom_mark_compact_ui
   - group.bedroom_jerome_compact_ui
   - group.bedroom_ros_compact_ui
+  - group.guest_room_compact_ui
+  - sensor.bedroom_mark_temperature_29_1
+  - sensor.bedroom_jerome_temperature_44_1
+  - sensor.bedroom_ros_temperature_55_1
 
 bedroom_mark:
   name: "Mark's Bedroom"
@@ -306,7 +343,6 @@ marks_bedroom_heating:
   view: false
   entities:
   - climate.bedroom_mark_thermostat_29_1
-  - sensor.bedroom_mark_temperature_29_1
 marks_bedroom_setpoints:
   name: "Mark's Bedroom Setpoints"
   view: false
@@ -351,7 +387,6 @@ bedroom_jerome_heating:
   view: false
   entities:
   - climate.bedroom_jerome_thermostat_44_1
-  - sensor.bedroom_jerome_temperature_44_1
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
   view: false
@@ -385,7 +420,6 @@ bedroom_ros_heating:
   view: false
   entities:
   - climate.bedroom_ros_thermostat_55_1
-  - sensor.bedroom_ros_temperature_55_1
 bedroom_ros_setpoints:
   name: "Ros's Bedroom Setpoints"
   view: false
@@ -549,10 +583,10 @@ room_scenes:
 bedroom_scenes:
   name: Bedrooms
   entities:
-  - input_select.guest_room_select
   - input_select.marks_bedroom_select
   - input_select.bedroom_jerome_select
   - input_select.bedroom_ros_select
+  - input_select.guest_room_select
 
 user_automations:
   name: Automations

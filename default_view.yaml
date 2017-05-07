@@ -4,3 +4,10 @@ entities:
 - group.people
 - group.room_scenes
 - group.bedroom_scenes
+  # badges
+- sensor.study_east_temperature_14_1
+- sensor.study_west_temperature_15_1
+- sensor.kitchen_temperature_34_1
+- sensor.lounge_east_temperature_30_1
+- sensor.library_temperature_25_1
+- sensor.ballroom_east_temperature_33_1
