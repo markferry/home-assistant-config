@@ -2,4 +2,4 @@
   sensors:
     js_bedroom_present:
       value_template: >
-        {{ 'off' if states.climate.js_bedroom.attributes.away_mode else 'on' }}
+        {{ 'not_home' if states.climate.js_bedroom.attributes.away_mode else 'home' }}
