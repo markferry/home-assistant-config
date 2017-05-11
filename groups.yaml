@@ -315,6 +315,8 @@ bedrooms:
   - sensor.bedroom_mark_temperature_29_1
   - sensor.bedroom_jerome_temperature_44_1
   - sensor.bedroom_ros_temperature_55_1
+  - sensor.js_bedroom_temperature
+  - sensor.js_bedroom_humidity
 
 bedroom_mark:
   name: "Mark's Bedroom"
@@ -377,6 +379,7 @@ bedroom_jerome_compact_ui:
   entities:
   - input_select.bedroom_jerome_select
   - climate.bedroom_jerome_thermostat_44_1
+  - climate.js_bedroom
 bedroom_jerome_scenes:
   name: "Jerome's Bedroom"
   view: false
@@ -397,6 +400,7 @@ bedroom_jerome_thermostats:
   view: false
   entities:
   - climate.bedroom_jerome_thermostat_44_1
+  - climate.js_bedroom
 
 bedroom_ros:
   name: "Ros's Bedroom"
@@ -547,7 +551,14 @@ main_heating_demand:
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
+  - group.bedroom_jerome_demand
+
+bedroom_jerome_demand:
+  name: "Jerome's Bedroom Demand"
+  view: false
+  entities:
   - switch.jeromes_bedroom_demand
+  - switch.js_bedroom_demand
 
 annex_heating:
   name: Annex Heating

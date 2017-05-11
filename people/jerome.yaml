@@ -1,4 +1,6 @@
 name: "Jerome"
+control: hidden
 entities:
 - device_tracker.jerome_phone
 - device_tracker.jerome_android
+- sensor.js_bedroom_present
