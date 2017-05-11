@@ -9,7 +9,7 @@
       entity_id: group.annex_heating_demand
       state: 'on'
   action:
-    - service_template: switch.turn_on
+    - service: switch.turn_on
       entity_id: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
 
 - alias: "Annex Heating Poll Off"
@@ -22,5 +22,5 @@
       entity_id: group.annex_heating_demand
       state: 'off'
   action:
-    - service_template: switch.turn_off
+    - service: switch.turn_off
       entity_id: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
