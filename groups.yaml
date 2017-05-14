@@ -517,6 +517,7 @@ settings:
   - group.user_automations
   - group.rfx_switches
   - group.rfx_lights
+  - group.dash_buttons
 
 #
 # Functional Groups
