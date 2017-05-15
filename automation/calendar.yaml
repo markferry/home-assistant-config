@@ -51,15 +51,6 @@
     - platform: state
       entity_id: calendar.climate
       to: "on"
-    - platform: state
-      entity_id: calendar.mark_climate
-      to: "on"
-    - platform: state
-      entity_id: calendar.jerome_climate
-      to: "on"
-    - platform: state
-      entity_id: calendar.ros_climate
-      to: "on"
   action:
     - service_template: climate.set_temperature
       data_template:
@@ -79,5 +70,137 @@
     - service: mqtt.publish
       data_template:
         topic: 'ha/calendar/climate'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Calendar Mark Scene"
+  trigger:
+    - platform: state
+      entity_id: calendar.mark_scene
+      to: "on"
+  action:
+    - service_template: input_select.select_option
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "mark" in l %}
+          {%   set u = "marks_bedroom" %}
+          {% endif %}
+          input_select.{{u}}_select
+        option: >
+          {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+          {{ v[0].upper() ~ v[1:].lower() }}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/mark-scene'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Calendar Mark Climate"
+  trigger:
+    - platform: state
+      entity_id: calendar.mark_climate
+      to: "on"
+  action:
+    - service_template: climate.set_temperature
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "mark" in l %}
+          {%   set u = "marks_bedroom" %}
+          {% endif %}
+          group.{{u}}_thermostats
+        temperature: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {{l|last|float}}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/mark-climate'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Calendar Jerome Scene"
+  trigger:
+    - platform: state
+      entity_id: calendar.jerome_scene
+      to: "on"
+  action:
+    - service_template: input_select.select_option
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "jerome" in l %}
+          {%   set u = "bedroom_jerome" %}
+          {% endif %}
+          input_select.{{u}}_select
+        option: >
+          {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+          {{ v[0].upper() ~ v[1:].lower() }}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/jerome-scene'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Calendar Jerome Climate"
+  trigger:
+    - platform: state
+      entity_id: calendar.jerome_climate
+      to: "on"
+  action:
+    - service_template: climate.set_temperature
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "jerome" in l %}
+          {%   set u = "bedroom_jerome" %}
+          {% endif %}
+          group.{{u}}_thermostats
+        temperature: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {{l|last|float}}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/jerome-climate'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Calendar Ros Scene"
+  trigger:
+    - platform: state
+      entity_id: calendar.ros_scene
+      to: "on"
+  action:
+    - service_template: input_select.select_option
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "ros" in l %}
+          {%   set u = "bedroom_ros" %}
+          {% endif %}
+          input_select.{{u}}_select
+        option: >
+          {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+          {{ v[0].upper() ~ v[1:].lower() }}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/ros-scene'
+        payload: '{{trigger.to_state.attributes.message}}'
+
+- alias: "Calendar Ros Climate"
+  trigger:
+    - platform: state
+      entity_id: calendar.ros_climate
+      to: "on"
+  action:
+    - service_template: climate.set_temperature
+      data_template:
+        entity_id: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {% if "ros" in l %}
+          {%   set u = "bedroom_ros" %}
+          {% endif %}
+          group.{{u}}_thermostats
+        temperature: >
+          {% set l = trigger.to_state.attributes.message.lower().split() %}
+          {{l|last|float}}
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/ros-climate'
         payload: '{{trigger.to_state.attributes.message}}'
 
