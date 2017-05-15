@@ -1,12 +1,16 @@
 table_tennis:
   sequence:
+  - service: mqtt.publish
+    data_template:
+      topic: 'ha/event/table-tennis'
+      payload: "It's TABLE TENNIS time!"
+  - service: notify.automations
+    data:
+      message: "Table Tennis Mode activated"
   - service: tts.google_say
     data:
       entity_id: media_player.kitchen
       message: "It's TABLE-TENNIS time!"
-  - service: notify.automations
-    data:
-      message: "IT'S TABLE TENNIS TIME"
   - service: scene.turn_on
     data:
       entity_id: scene.ballroom_party
