@@ -517,6 +517,7 @@ settings:
   - group.user_automations
   - group.rfx_switches
   - group.rfx_lights
+  - group.dash_buttons
 
 #
 # Functional Groups
@@ -632,6 +633,18 @@ batteries:
   - sensor.annex_hall_battery
   - sensor.bedroom_jerome_battery
   - sensor.bedroom_ros_battery
+
+dash_buttons:
+  name: Amazon Dash Buttons
+  view: false
+  entities:
+  - switch.listerine
+  - switch.ariel
+  - switch.optimum_nutrition
+  - switch.philips_sonicare
+  - switch.huggies
+  - switch.catsan
+  - switch.right_guard
 
 heating_valves:
   name: Heating Demand

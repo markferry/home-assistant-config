@@ -1,0 +1,50 @@
+- name: Huggies
+  platform: mqtt
+  command_topic: ha/dash/huggies
+  state_topic: ha/dash/huggies
+  payload_on: 'active'
+  payload_off: 'inactive'
+
+- name: Catsan
+  platform: mqtt
+  command_topic: ha/dash/catsan
+  state_topic: ha/dash/catsan
+  payload_on: 'active'
+  payload_off: 'inactive'
+
+# Unassigned
+
+- name: Listerine
+  platform: mqtt
+  command_topic: ha/dash/listerine
+  state_topic: ha/dash/listerine
+  payload_on: 'active'
+  payload_off: 'inactive'
+
+- name: Ariel
+  platform: mqtt
+  command_topic: ha/dash/ariel
+  state_topic: ha/dash/ariel
+  payload_on: 'active'
+  payload_off: 'inactive'
+
+- name: Optimum Nutrition
+  platform: mqtt
+  command_topic: ha/dash/on
+  state_topic: ha/dash/on
+  payload_on: 'active'
+  payload_off: 'inactive'
+
+- name: Philips Sonicare
+  platform: mqtt
+  command_topic: ha/dash/philips-sonicare
+  state_topic: ha/dash/philips-sonicare
+  payload_on: 'active'
+  payload_off: 'inactive'
+
+- name: Right Guard
+  platform: mqtt
+  command_topic: ha/dash/right-guard
+  state_topic: ha/dash/right-guard
+  payload_on: 'active'
+  payload_off: 'inactive'
