@@ -27,18 +27,18 @@
 
 - name: greenwave_powernode_1_port_energy_54_0
   platform: mqtt
-  state_topic: ha/annex/powernode/state/energy
+  state_topic: ha/washing-machine/state/energy
   unit_of_measurement: "kWh"
 - name: greenwave_powernode_1_port_previous_reading_54_1
   platform: mqtt
-  state_topic: ha/annex/powernode/previous-state/energy
+  state_topic: ha/washing-machine/previous-state/energy
   unit_of_measurement: "kWh"
 
 - name: greenwave_powernode_1_port_power_54_8
   platform: mqtt
-  state_topic: ha/annex/powernode/state/power
+  state_topic: ha/washing-machine/state/power
   unit_of_measurement: "W"
 - name: greenwave_powernode_1_port_previous_reading_54_9
   platform: mqtt
-  state_topic: ha/annex/powernode/previous-state/power
+  state_topic: ha/washing-machine/previous-state/power
   unit_of_measurement: "W"

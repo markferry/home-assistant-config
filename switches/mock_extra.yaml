@@ -42,7 +42,7 @@
   platform: mqtt
   retain: true
 - name: greenwave_powernode_1_port_switch_54_0
-  command_topic: ha/annex/powernode/command
+  command_topic: ha/washing-machine/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
