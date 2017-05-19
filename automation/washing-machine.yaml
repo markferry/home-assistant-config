@@ -1,0 +1,63 @@
+# Power detection for the washing machine.
+# Debounce numeric_state with an input_boolean.
+#
+# Washing machine spin cycle load is >1000W?
+#
+- alias: 'Washing Machine Hi'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.greenwave_powernode_1_port_power_54_8
+    above: 1000
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.washing_machine
+
+- alias: 'Washer Machine Lo'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.greenwave_powernode_1_port_power_54_8
+    below: 200
+  action:
+    service: input_boolean.turn_off
+    entity_id: input_boolean.washing_machine
+
+- alias: 'Washing Machine Debounce'
+  trigger:
+    platform: state
+    entity_id: input_boolean.washing_machine
+    state: 'on'
+    for:
+      seconds: 10
+      #minutes: 10 off
+  condition:
+    - condition: state
+      entity_id: input_boolean.washing_machine_debounce
+      state: 'off'
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.washing_machine_debounce
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/event/washing-machine'
+        payload: 'on'
+
+
+- alias: 'Washing Machine Done'
+  trigger:
+    platform: state
+    entity_id: input_boolean.washing_machine
+    state: 'off'
+    for:
+      seconds: 10
+      #minutes: 10
+  condition:
+    - condition: state
+      entity_id: input_boolean.washing_machine_debounce
+      state: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.washing_machine_debounce
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/event/washing-machine'
+        payload: 'off'

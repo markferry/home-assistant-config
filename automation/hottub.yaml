@@ -1,0 +1,65 @@
+# Power detection for the hot tub
+# Debounce numeric_state with an input_boolean.
+#
+# Hot tub heater load is ~2000W
+# Filter only load is ~30W
+#
+#
+- alias: 'Hot Tub Hi'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.greenwave_powernode_1_port_power_53_8
+    above: 1500
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.hottub
+
+- alias: 'Washer Machine Lo'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.greenwave_powernode_1_port_power_53_8
+    below: 200
+  action:
+    service: input_boolean.turn_off
+    entity_id: input_boolean.hottub
+
+- alias: 'Hot Tub Debounce'
+  trigger:
+    platform: state
+    entity_id: input_boolean.hottub
+    state: 'on'
+    for:
+      seconds: 10
+      #minutes: 10 off
+  condition:
+    - condition: state
+      entity_id: input_boolean.hottub_debounce
+      state: 'off'
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.hottub_debounce
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/event/hottub'
+        payload: 'on'
+
+
+- alias: 'Hot Tub Done'
+  trigger:
+    platform: state
+    entity_id: input_boolean.hottub
+    state: 'off'
+    for:
+      seconds: 10
+      #minutes: 10
+  condition:
+    - condition: state
+      entity_id: input_boolean.hottub_debounce
+      state: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.hottub_debounce
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/event/hottub'
+        payload: 'off'
