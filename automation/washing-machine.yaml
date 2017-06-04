@@ -7,7 +7,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.greenwave_powernode_1_port_power_54_8
-    above: 1000
+    above: 30
   action:
     service: input_boolean.turn_on
     entity_id: input_boolean.washing_machine
@@ -16,7 +16,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.greenwave_powernode_1_port_power_54_8
-    below: 200
+    below: 20
   action:
     service: input_boolean.turn_off
     entity_id: input_boolean.washing_machine
@@ -27,8 +27,7 @@
     entity_id: input_boolean.washing_machine
     state: 'on'
     for:
-      seconds: 10
-      #minutes: 10 off
+      seconds: 120
   condition:
     - condition: state
       entity_id: input_boolean.washing_machine_debounce
@@ -48,8 +47,7 @@
     entity_id: input_boolean.washing_machine
     state: 'off'
     for:
-      seconds: 10
-      #minutes: 10
+      seconds: 300
   condition:
     - condition: state
       entity_id: input_boolean.washing_machine_debounce
