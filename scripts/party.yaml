@@ -8,9 +8,10 @@ party_mode:
   - service: notify.automations
     data:
       message: "Party Mode activated"
-  - service: scene.turn_on
+  - service: input_select.select_option
     data:
-      entity_id: scene.ballroom_party
+      entity_id: input_select.ballroom_select
+      option: "Party"
   - service: media_player.turn_on
     data:
       entity_id: media_player.ballroom_amplifier

@@ -1,0 +1,15 @@
+washing_machine:
+  name: "Washing Machine"
+  initial: off
+
+washing_machine_debounce:
+  name: "Washing Machine Debounce"
+  initial: off
+
+hottub:
+  name: "Hot Tub"
+  initial: off
+
+hottub_debounce:
+  name: "Hot Tub Debounce"
+  initial: off

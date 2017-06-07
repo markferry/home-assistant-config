@@ -6,6 +6,7 @@ exclude:
     - zwave
 include:
   domains:
+    - automation
     - ups
     - light
     - switch

@@ -11,9 +11,10 @@ table_tennis:
     data:
       entity_id: media_player.kitchen
       message: "It's TABLE-TENNIS time!"
-  - service: scene.turn_on
+  - service: input_select.select_option
     data:
-      entity_id: scene.ballroom_party
+      entity_id: input_select.ballroom_select
+      option: "Party"
   - service: media_player.play_media
     data:
       entity_id: media_player.ballroom
