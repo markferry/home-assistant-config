@@ -4,7 +4,6 @@
 # Hot tub heater load is ~2000W
 # Filter only load is ~30W
 #
-#
 - alias: 'Hot Tub Hi'
   trigger:
     platform: numeric_state
@@ -14,7 +13,7 @@
     service: input_boolean.turn_on
     entity_id: input_boolean.hottub
 
-- alias: 'Washer Machine Lo'
+- alias: 'Hot Tub Lo'
   trigger:
     platform: numeric_state
     entity_id: sensor.greenwave_powernode_1_port_power_53_8
@@ -29,8 +28,7 @@
     entity_id: input_boolean.hottub
     state: 'on'
     for:
-      seconds: 10
-      #minutes: 10 off
+      minutes: 10
   condition:
     - condition: state
       entity_id: input_boolean.hottub_debounce
@@ -42,6 +40,9 @@
       data_template:
         topic: 'ha/event/hottub'
         payload: 'on'
+    - service: notify.automations
+      data_template:
+        message: 'Hot Tub heating started'
 
 
 - alias: 'Hot Tub Done'
@@ -50,8 +51,7 @@
     entity_id: input_boolean.hottub
     state: 'off'
     for:
-      seconds: 10
-      #minutes: 10
+      minutes: 5
   condition:
     - condition: state
       entity_id: input_boolean.hottub_debounce
@@ -63,3 +63,11 @@
       data_template:
         topic: 'ha/event/hottub'
         payload: 'off'
+    - service: notify.automations
+      data_template:
+        message: 'Hot Tub heating stopped'
+    - service: persistent_notification.create
+      data:
+        title: 'Hot Tub'
+        message: 'Heating stopped {{ as_timestamp(now()) | timestamp_custom("at %R on %a %d %b") }}'
+        notification_id: 'hottub'
