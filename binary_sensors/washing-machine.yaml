@@ -1,0 +1,6 @@
+- name: washing_machine
+  platform: mqtt
+  state_topic: ha/event/washing-machine
+  device_class: heat
+  payload_on: 'on'
+  payload_off: 'off'

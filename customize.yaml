@@ -316,6 +316,20 @@ sensor.greenwave_powernode_1_port_energy_53_0:
 sensor.greenwave_powernode_1_port_power_53_8:
   friendly_name: Hot Tub Power
 
+switch.greenwave_powernode_1_port_switch_54_0:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+sensor.greenwave_powernode_1_port_energy_54_0:
+  friendly_name: Washing Machine Energy
+  icon: mdi:washing-machine
+sensor.greenwave_powernode_1_port_power_54_8:
+  friendly_name: Washing Machine Power
+  icon: mdi:washing-machine
+
+binary_sensor.washing_machine:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+
 sensor.eaton_ups_status:
   friendly_name: UPS Status
 sensor.eaton_ups_load:

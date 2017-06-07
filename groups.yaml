@@ -63,6 +63,8 @@ kitchen:
   - sensor.kitchen_temperature_34_1
   - group.kitchen_compact_ui
   - media_player.kitchen
+  - sensor.greenwave_powernode_1_port_energy_54_0
+  - sensor.greenwave_powernode_1_port_power_54_8
 kitchen_compact_ui:
   name: Kitchen
   view: false
@@ -70,6 +72,7 @@ kitchen_compact_ui:
   entities:
   - input_select.kitchen_select
   - climate.kitchen_thermostat_34_1
+  - binary_sensor.washing_machine
 kitchen_scenes:
   name: Kitchen
   view: false
@@ -465,6 +468,15 @@ hottub:
   - switch.greenwave_powernode_1_port_switch_53_0
   - sensor.greenwave_powernode_1_port_energy_53_0
   - sensor.greenwave_powernode_1_port_power_53_8
+
+washing_machine:
+  name: Washing Machine
+  icon: mdi:washing-machine
+  entities:
+  - binary_sensor.washing_machine
+  - switch.greenwave_powernode_1_port_switch_54_0
+  - sensor.greenwave_powernode_1_port_energy_54_0
+  - sensor.greenwave_powernode_1_port_power_54_8
 
 ups:
   name: UPS
