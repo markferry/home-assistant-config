@@ -756,7 +756,7 @@ thermostats:
 network: !include network.yaml
 
 virtual_appliances:
-  name: Thermostats
+  name: Virtual Appliances
   view: false
   entities:
   - input_boolean.washing_machine
