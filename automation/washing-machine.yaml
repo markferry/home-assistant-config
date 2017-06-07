@@ -1,7 +1,7 @@
 # Power detection for the washing machine.
 # Debounce numeric_state with an input_boolean.
 #
-# Washing machine spin cycle load is >1000W?
+# Cycle determined empirically from event data
 #
 - alias: 'Washing Machine Hi'
   trigger:
@@ -12,7 +12,7 @@
     service: input_boolean.turn_on
     entity_id: input_boolean.washing_machine
 
-- alias: 'Washer Machine Lo'
+- alias: 'Washing Machine Lo'
   trigger:
     platform: numeric_state
     entity_id: sensor.greenwave_powernode_1_port_power_54_8
@@ -39,6 +39,9 @@
       data_template:
         topic: 'ha/event/washing-machine'
         payload: 'on'
+    - service: notify.automations
+      data_template:
+        message: 'Washing machine cycle started'
 
 
 - alias: 'Washing Machine Done'
@@ -59,3 +62,11 @@
       data_template:
         topic: 'ha/event/washing-machine'
         payload: 'off'
+    - service: notify.automations
+      data_template:
+        message: 'Washing machine cycle ended'
+    - service: persistent_notification.create
+      data_template:
+        title: 'Washing Machine'
+        message: 'Washing cycle ended {{ as_timestamp(now()) | timestamp_custom("at %R on %a %d %b") }}'
+        notification_id: 'washing-machine'

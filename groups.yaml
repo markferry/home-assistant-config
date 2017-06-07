@@ -518,6 +518,7 @@ settings:
   - group.rfx_switches
   - group.rfx_lights
   - group.dash_buttons
+  - group.virtual_appliances
 
 #
 # Functional Groups
@@ -753,6 +754,15 @@ thermostats:
   - climate.bedroom_ros_thermostat_55_1
 
 network: !include network.yaml
+
+virtual_appliances:
+  name: Thermostats
+  view: false
+  entities:
+  - input_boolean.washing_machine
+  - input_boolean.washing_machine_debounce
+  - input_boolean.hottub
+  - input_boolean.hottub_debounce
 
 #
 # Presence Groups
