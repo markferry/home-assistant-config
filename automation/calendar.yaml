@@ -72,6 +72,31 @@
         topic: 'ha/calendar/climate'
         payload: '{{trigger.to_state.attributes.message}}'
 
+- alias: "Calendar Bin"
+  trigger:
+    - platform: state
+      entity_id: calendar.bin
+      to: "on"
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/bin'
+        payload: >
+          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
+          {{l}}
+    - service: notify.automations
+      data_template:
+        message: >
+          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
+          {{"Bin Day: "+l}}
+    - service: persistent_notification.create
+      data_template:
+        title: 'Bin Day'
+        message: >
+          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
+          {{"Bin Day: "+l}}
+        notification_id: 'bin-day'
+
 - alias: "Calendar Mark Scene"
   trigger:
     - platform: state
