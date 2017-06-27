@@ -26,7 +26,7 @@
   trigger:
     platform: state
     entity_id: input_boolean.hottub
-    state: 'on'
+    to: 'on'
     for:
       minutes: 10
   condition:
@@ -49,7 +49,7 @@
   trigger:
     platform: state
     entity_id: input_boolean.hottub
-    state: 'off'
+    to: 'off'
     for:
       minutes: 5
   condition:

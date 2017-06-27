@@ -25,7 +25,7 @@
   trigger:
     platform: state
     entity_id: input_boolean.washing_machine
-    state: 'on'
+    to: 'on'
     for:
       seconds: 120
   condition:
@@ -48,7 +48,7 @@
   trigger:
     platform: state
     entity_id: input_boolean.washing_machine
-    state: 'off'
+    to: 'off'
     for:
       seconds: 300
   condition:
