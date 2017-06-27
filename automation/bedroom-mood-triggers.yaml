@@ -1,7 +1,7 @@
 - alias: "Mark's Bedroom Sleep Time"
   trigger:
     - platform: time
-      after: '03:00:00'
+      at: '03:00:00'
   action:
     - service: input_select.select_option
       data:
@@ -11,7 +11,7 @@
 - alias: "Mark's Bedroom Off Time"
   trigger:
     - platform: time
-      after: '09:00:00'
+      at: '09:00:00'
   action:
     - service: input_select.select_option
       data:
