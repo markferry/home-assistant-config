@@ -306,7 +306,7 @@ sensor.bedroom_ros_battery:
   icon: mdi:battery
 
 switch.greenwave_powernode_1_port_switch_53_0:
-  friendly_name: Hot Tub
+  friendly_name: Hot Tub Power Supply
   icon: mdi:pot
   emulated_hue: true
 sensor.greenwave_powernode_1_port_energy_53_0:
@@ -327,6 +327,9 @@ sensor.greenwave_powernode_1_port_power_54_8:
 binary_sensor.washing_machine:
   friendly_name: Washing Machine
   icon: mdi:washing-machine
+binary_sensor.hottub:
+  friendly_name: Hot Tub Heating
+  icon: mdi:pot
 
 sensor.eaton_ups_status:
   friendly_name: UPS Status

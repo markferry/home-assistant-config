@@ -10,7 +10,7 @@
     above: 30
   action:
     service: input_boolean.turn_on
-    entity_id: input_boolean.washing_machine
+    entity_id: input_boolean.washing_machine_debouncer
 
 - alias: 'Washing Machine Lo'
   trigger:
@@ -19,22 +19,21 @@
     below: 20
   action:
     service: input_boolean.turn_off
-    entity_id: input_boolean.washing_machine
+    entity_id: input_boolean.washing_machine_debouncer
 
-- alias: 'Washing Machine Debounce'
+- alias: 'Washing Machine Started'
   trigger:
     platform: state
-    entity_id: input_boolean.washing_machine
+    entity_id: input_boolean.washing_machine_debouncer
     to: 'on'
     for:
       seconds: 120
   condition:
     - condition: state
-      entity_id: input_boolean.washing_machine_debounce
+      entity_id: binary_sensor.washing_machine
       state: 'off'
   action:
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.washing_machine_debounce
+    # turn on binary_sensor.washing_machine
     - service: mqtt.publish
       data_template:
         topic: 'ha/event/washing-machine'
@@ -44,20 +43,19 @@
         message: 'Washing machine cycle started'
 
 
-- alias: 'Washing Machine Done'
+- alias: 'Washing Machine Stopped'
   trigger:
     platform: state
-    entity_id: input_boolean.washing_machine
+    entity_id: input_boolean.washing_machine_debouncer
     to: 'off'
     for:
       seconds: 300
   condition:
     - condition: state
-      entity_id: input_boolean.washing_machine_debounce
+      entity_id: binary_sensor.washing_machine
       state: 'on'
   action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.washing_machine_debounce
+    # turn off binary_sensor.washing_machine
     - service: mqtt.publish
       data_template:
         topic: 'ha/event/washing-machine'

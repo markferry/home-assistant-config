@@ -11,7 +11,7 @@
     above: 1500
   action:
     service: input_boolean.turn_on
-    entity_id: input_boolean.hottub
+    entity_id: input_boolean.hottub_debouncer
 
 - alias: 'Hot Tub Lo'
   trigger:
@@ -20,22 +20,21 @@
     below: 200
   action:
     service: input_boolean.turn_off
-    entity_id: input_boolean.hottub
+    entity_id: input_boolean.hottub_debouncer
 
-- alias: 'Hot Tub Debounce'
+- alias: 'Hot Tub Started'
   trigger:
     platform: state
-    entity_id: input_boolean.hottub
+    entity_id: input_boolean.hottub_debouncer
     to: 'on'
     for:
       minutes: 10
   condition:
     - condition: state
-      entity_id: input_boolean.hottub_debounce
+      entity_id: binary_sensor.hottub
       state: 'off'
   action:
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.hottub_debounce
+    # turn on binary_sensor.hottub
     - service: mqtt.publish
       data_template:
         topic: 'ha/event/hottub'
@@ -45,20 +44,19 @@
         message: 'Hot Tub heating started'
 
 
-- alias: 'Hot Tub Done'
+- alias: 'Hot Tub Stopped'
   trigger:
     platform: state
-    entity_id: input_boolean.hottub
+    entity_id: input_boolean.hottub_debouncer
     to: 'off'
     for:
       minutes: 5
   condition:
     - condition: state
-      entity_id: input_boolean.hottub_debounce
+      entity_id: binary_sensor.hottub
       state: 'on'
   action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.hottub_debounce
+    # turn off binary_sensor.hottub
     - service: mqtt.publish
       data_template:
         topic: 'ha/event/hottub'
