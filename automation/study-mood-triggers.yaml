@@ -1,7 +1,7 @@
 - alias: "Study Work Time"
   trigger:
     - platform: time
-      after: '07:30:00'
+      at: '07:30:00'
   condition:
     condition: time
     weekday:
