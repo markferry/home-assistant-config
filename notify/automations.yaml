@@ -3,3 +3,13 @@
   platform: group
   services:
     - service: pushetta
+
+# All Barnmates
+- name: whalebarn
+  platform: group
+  services:
+    - service: pushetta
+    - service: ios_marks_iphone
+    - service: ios_ross_iphone
+    - service: ios_thomass_iphone
+    - service: ios_annies_iphone2

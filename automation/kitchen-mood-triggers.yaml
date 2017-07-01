@@ -1,7 +1,7 @@
 - alias: "Kitchen Cosy Time"
   trigger:
     - platform: time
-      after: '07:00:00'
+      at: '07:00:00'
   action:
     - service: input_select.select_option
       data:
@@ -11,7 +11,7 @@
 - alias: "Kitchen Off Time"
   trigger:
     - platform: time
-      after: '10:00:00'
+      at: '10:00:00'
   condition:
     - condition: time
       weekday:
