@@ -61,9 +61,9 @@
       data_template:
         topic: 'ha/event/hottub'
         payload: 'off'
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
-        message: 'Hot Tub heating stopped'
+        message: 'Hot Tub heating finished'
     - service: persistent_notification.create
       data:
         title: 'Hot Tub'

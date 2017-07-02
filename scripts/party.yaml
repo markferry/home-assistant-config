@@ -5,7 +5,7 @@ party_mode:
     data_template:
       topic: 'ha/event/party'
       payload: "It's PARTY time!"
-  - service: notify.automations
+  - service: notify.whalebarn
     data:
       message: "Party Mode activated"
   - service: input_select.select_option

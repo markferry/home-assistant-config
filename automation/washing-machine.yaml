@@ -38,7 +38,7 @@
       data_template:
         topic: 'ha/event/washing-machine'
         payload: 'on'
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
         message: 'Washing machine cycle started'
 
@@ -60,7 +60,7 @@
       data_template:
         topic: 'ha/event/washing-machine'
         payload: 'off'
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
         message: 'Washing machine cycle ended'
     - service: persistent_notification.create
