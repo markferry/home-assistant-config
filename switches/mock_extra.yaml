@@ -22,7 +22,7 @@
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_scsc17_thermostat_switch_50_0
+- name: annex_heating_thermostat_switch
   command_topic: ha/annex/holidaymode/command
   payload_off: 'OFF'
   payload_on: 'ON'

@@ -2,7 +2,7 @@
   platform: mqtt
   state_topic: ha/main/heating/temperature/state
   unit_of_measurement: "\xB0C"
-- name: horstmann_scsc17_thermostat_temperature_50_1
+- name: annex_heating_thermostat_temperature
   platform: mqtt
   state_topic: ha/annex/heating/temperature/state
   unit_of_measurement: "\xB0C"
