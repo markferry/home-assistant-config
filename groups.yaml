@@ -63,8 +63,8 @@ kitchen:
   - sensor.kitchen_temperature_34_1
   - group.kitchen_compact_ui
   - media_player.kitchen
-  - sensor.greenwave_powernode_1_port_energy_54_0
-  - sensor.greenwave_powernode_1_port_power_54_8
+  - sensor.greenwave_powernode_54_energy
+  - sensor.greenwave_powernode_54_power
 kitchen_compact_ui:
   name: Kitchen
   view: false
@@ -475,9 +475,9 @@ washing_machine:
   icon: mdi:washing-machine
   entities:
   - binary_sensor.washing_machine
-  - switch.greenwave_powernode_1_port_switch_54_0
-  - sensor.greenwave_powernode_1_port_energy_54_0
-  - sensor.greenwave_powernode_1_port_power_54_8
+  - switch.greenwave_powernode_54_switch
+  - sensor.greenwave_powernode_54_energy
+  - sensor.greenwave_powernode_54_power
 
 ups:
   name: UPS

@@ -316,13 +316,13 @@ sensor.greenwave_powernode_53_energy:
 sensor.greenwave_powernode_53_power:
   friendly_name: Hot Tub Power
 
-switch.greenwave_powernode_1_port_switch_54_0:
+switch.greenwave_powernode_54_switch:
   friendly_name: Washing Machine
   icon: mdi:washing-machine
-sensor.greenwave_powernode_1_port_energy_54_0:
+sensor.greenwave_powernode_54_energy:
   friendly_name: Washing Machine Energy
   icon: mdi:washing-machine
-sensor.greenwave_powernode_1_port_power_54_8:
+sensor.greenwave_powernode_54_power:
   friendly_name: Washing Machine Power
   icon: mdi:washing-machine
 
