@@ -362,7 +362,7 @@ marks_bedroom_lights:
   name: "Mark's Bedroom Lights"
   view: false
   entities:
-  - light.fibaro_system_fgd212_dimmer_2_level_39_0
+  - light.bedroom_mark_overhead_level
   - light.bedroom_mark_level_39
   - light.marks_bedroom_lamp
 marks_bedroom_appliances:
