@@ -35,7 +35,7 @@
   platform: mqtt
   retain: true
 
-- name: greenwave_powernode_1_port_switch_53_0
+- name: greenwave_powernode_53_switch
   command_topic: ha/hottub/command
   payload_off: 'OFF'
   payload_on: 'ON'
