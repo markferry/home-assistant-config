@@ -1,15 +1,10 @@
-washing_machine:
-  name: "Washing Machine"
+# Debouncing for hottub and washing-machine power monitors
+# Trigger corresponding binary_sensors via automation+mqtt
+
+washing_machine_debouncer:
+  name: "Washing Machine Debouncer"
   initial: off
 
-washing_machine_debounce:
-  name: "Washing Machine Debounce"
-  initial: off
-
-hottub:
-  name: "Hot Tub"
-  initial: off
-
-hottub_debounce:
-  name: "Hot Tub Debounce"
+hottub_debouncer:
+  name: "Hot Tub Debouncer"
   initial: off
