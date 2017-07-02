@@ -11,7 +11,7 @@
   platform: mqtt
   state_topic: ha/hottub/state/energy
   unit_of_measurement: "kWh"
-- name: greenwave_powernode_53_previous_reading
+- name: greenwave_powernode_53_previous_reading_X
   platform: mqtt
   state_topic: ha/hottub/previous-state/energy
   unit_of_measurement: "kWh"
@@ -20,25 +20,25 @@
   platform: mqtt
   state_topic: ha/hottub/state/power
   unit_of_measurement: "W"
-- name: greenwave_powernode_53_previous_reading
+- name: greenwave_powernode_53_previous_reading_Y
   platform: mqtt
   state_topic: ha/hottub/previous-state/power
   unit_of_measurement: "W"
 
-- name: greenwave_powernode_1_port_energy_54_0
+- name: greenwave_powernode_54_energy
   platform: mqtt
   state_topic: ha/washing-machine/state/energy
   unit_of_measurement: "kWh"
-- name: greenwave_powernode_1_port_previous_reading_54_1
+- name: greenwave_powernode_54_previous_reading_X
   platform: mqtt
   state_topic: ha/washing-machine/previous-state/energy
   unit_of_measurement: "kWh"
 
-- name: greenwave_powernode_1_port_power_54_8
+- name: greenwave_powernode_54_power
   platform: mqtt
   state_topic: ha/washing-machine/state/power
   unit_of_measurement: "W"
-- name: greenwave_powernode_1_port_previous_reading_54_9
+- name: greenwave_powernode_54_previous_reading_Y
   platform: mqtt
   state_topic: ha/washing-machine/previous-state/power
   unit_of_measurement: "W"
