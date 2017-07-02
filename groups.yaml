@@ -466,9 +466,9 @@ hottub:
   icon: mdi:pot
   entities:
   - binary_sensor.hottub
-  - switch.greenwave_powernode_1_port_switch_53_0
-  - sensor.greenwave_powernode_1_port_energy_53_0
-  - sensor.greenwave_powernode_1_port_power_53_8
+  - switch.greenwave_powernode_53_switch
+  - sensor.greenwave_powernode_53_energy
+  - sensor.greenwave_powernode_53_power
 
 washing_machine:
   name: Washing Machine

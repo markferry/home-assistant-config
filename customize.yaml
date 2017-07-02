@@ -307,13 +307,13 @@ sensor.bedroom_ros_battery:
   friendly_name: "Ros's Bedroom Battery"
   icon: mdi:battery
 
-switch.greenwave_powernode_1_port_switch_53_0:
+switch.greenwave_powernode_53_switch:
   friendly_name: Hot Tub Power Supply
   icon: mdi:pot
   emulated_hue: true
-sensor.greenwave_powernode_1_port_energy_53_0:
+sensor.greenwave_powernode_53_energy:
   friendly_name: Hot Tub Energy
-sensor.greenwave_powernode_1_port_power_53_8:
+sensor.greenwave_powernode_53_power:
   friendly_name: Hot Tub Power
 
 switch.greenwave_powernode_1_port_switch_54_0:

@@ -45,6 +45,6 @@ include:
     - sensor.bedroom_ros_battery
     - sensor.aeotec_dsb05_multisensor_luminance_3_3
     - sensor.aeotec_dsb05_multisensor_relative_humidity_3_5
-    - sensor.greenwave_powernode_1_port_energy_53_0
-    - sensor.greenwave_powernode_1_port_power_53_8
+    - sensor.greenwave_powernode_53_energy
+    - sensor.greenwave_powernode_53_power
 
