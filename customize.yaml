@@ -115,11 +115,11 @@ sensor.main_heating_thermostat_temperature:
   friendly_name: Main Heating Temperature
 switch.main_heating_thermostat_switch:
   friendly_name: Main Heating Holiday Mode
-climate.horstmann_scsc17_thermostat_heating_1_50_1:
+climate.annex_heating_thermostat_heating_1:
   friendly_name: Annex Heating Thermostat
-sensor.horstmann_scsc17_thermostat_temperature_50_1:
+sensor.annex_heating_thermostat_temperature:
   friendly_name: Annex Heating Temperature
-switch.horstmann_scsc17_thermostat_switch_50_0:
+switch.annex_heating_thermostat_switch:
   friendly_name: Annex Heating Holiday Mode
 climate.horstmann_unknown_type0003_id0002_mode_36_0:
   friendly_name: Main Heating Default Mode

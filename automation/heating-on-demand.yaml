@@ -43,7 +43,7 @@
       entity_id: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
     - service: climate.set_temperature
       data:
-        entity_id: climate.horstmann_scsc17_thermostat_heating_1_50_1
+        entity_id: climate.annex_heating_thermostat_heating_1
         temperature: 22
     - service: notify.automations
       data:
@@ -59,7 +59,7 @@
       entity_id: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
     - service: climate.set_temperature
       data:
-        entity_id: climate.horstmann_scsc17_thermostat_heating_1_50_1
+        entity_id: climate.annex_heating_thermostat_heating_1
         temperature: 10
     - service: notify.automations
       data:

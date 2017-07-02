@@ -10,8 +10,8 @@
       unit_of_measurement: '%'
     annex_heating_thermostat_battery:
       value_template: >
-        {% if states.zwave.horstmann_scsc17_thermostat_50 %}
-          {{ states.zwave.horstmann_scsc17_thermostat_50.attributes.battery_level }}
+        {% if states.zwave.annex_heating_thermostat %}
+          {{ states.zwave.annex_heating_thermostat.attributes.battery_level }}
         {% else %}
           unknown
         {% endif %}

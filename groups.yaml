@@ -579,9 +579,9 @@ annex_heating:
   name: Annex Heating
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_50_1
-  - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - switch.horstmann_scsc17_thermostat_switch_50_0
+  - sensor.annex_heating_thermostat_temperature
+  - climate.annex_heating_thermostat_heating_1
+  - switch.annex_heating_thermostat_switch
 
 annex_heating_override:
   name: Annex Heating Override
@@ -710,7 +710,7 @@ temperatures:
   view: false
   entities:
   - sensor.main_heating_thermostat_temperature
-  - sensor.horstmann_scsc17_thermostat_temperature_50_1
+  - sensor.annex_heating_thermostat_temperature
   - sensor.aeotec_dsb05_multisensor_temperature_3_1
   - sensor.ballroom_east_temperature_33_1
   - sensor.hall_west_temperature_13_1
@@ -735,7 +735,7 @@ thermostat_devices:
   - climate.hall_east_comfort_setpoint_24_1
   - climate.hall_west_comfort_setpoint_13_1
   - climate.main_heating_thermostat_heating_1
-  - climate.horstmann_scsc17_thermostat_heating_1_50_1
+  - climate.annex_heating_thermostat_heating_1
   - climate.horstmann_unknown_type0003_id0002_mode_36_0
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
   - climate.kitchen_comfort_setpoint_34_1

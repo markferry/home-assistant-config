@@ -14,7 +14,7 @@ include:
     - switch
   entities:
     - sensor.main_heating_thermostat_temperature
-    - sensor.horstmann_scsc17_thermostat_temperature_50_1
+    - sensor.annex_heating_thermostat_temperature
     - sensor.aeotec_dsb05_multisensor_temperature_3_1
     - sensor.ballroom_east_temperature_33_1
     - sensor.hall_west_temperature_13_1
