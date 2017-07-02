@@ -271,9 +271,6 @@ ballroom_thermostats:
   entities:
   - climate.ballroom_east_thermostat_33_1
 ballroom_lights:
-  entities:
-  - light.ballroom_north_level_41_0
-  - light.unused_41_level_41
   name: Ballroom Lights
   view: false
 
