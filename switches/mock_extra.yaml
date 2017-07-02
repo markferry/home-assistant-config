@@ -1,4 +1,4 @@
-- name: horstmann_scsc17_thermostat_switch_35_0
+- name: main_heating_thermostat_switch
   command_topic: ha/main/holidaymode/command
   payload_off: 'OFF'
   payload_on: 'ON'

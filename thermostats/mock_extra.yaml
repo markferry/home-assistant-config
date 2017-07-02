@@ -1,7 +1,7 @@
-- name: horstmann_scsc17_thermostat_heating_1_35_1
+- name: main_heating_thermostat_heating_1
   platform: generic_thermostat
   heater: switch.horstmann_unknown_type0003_id0002_switch_36_0
-  target_sensor: sensor.horstmann_scsc17_thermostat_temperature_35_1
+  target_sensor: sensor.main_heating_thermostat_temperature
   max_temp: 25
   min_temp: 5
   target_temp: 10.0
