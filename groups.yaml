@@ -542,17 +542,15 @@ main_heating:
   entities:
   - sensor.main_heating_thermostat_temperature
   - climate.main_heating_thermostat_heating_1
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0_3
   - switch.main_heating_thermostat_switch
 
 main_heating_override:
   name: Main Heating Override
   view: false
   entities:
-  - switch.horstmann_unknown_type0003_id0002_switch_36_0
-  - switch.horstmann_unknown_type0003_id0002_switch_36_0_2
-  - switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+  - switch.main_heating_relay_switch
+  - switch.main_heating_relay_boiler
+  - switch.main_heating_relay_hot_water
 
 main_heating_demand:
   name: Main Heating Demand
@@ -736,8 +734,6 @@ thermostat_devices:
   - climate.hall_west_comfort_setpoint_13_1
   - climate.main_heating_thermostat_heating_1
   - climate.annex_heating_thermostat_heating_1
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
   - climate.kitchen_comfort_setpoint_34_1
   - climate.library_comfort_setpoint_25_1
   - climate.lounge_east_comfort_setpoint_30_1

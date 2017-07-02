@@ -7,7 +7,7 @@
     to: 'on'
   action:
     - service: switch.turn_on
-      entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0
+      entity_id: switch.main_heating_relay_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.main_heating_thermostat_heating_1
@@ -24,7 +24,7 @@
     to: 'off'
   action:
     - service: switch.turn_off
-      entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0
+      entity_id: switch.main_heating_relay_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.main_heating_thermostat_heating_1

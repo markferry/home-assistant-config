@@ -121,17 +121,11 @@ sensor.annex_heating_thermostat_temperature:
   friendly_name: Annex Heating Temperature
 switch.annex_heating_thermostat_switch:
   friendly_name: Annex Heating Holiday Mode
-climate.horstmann_unknown_type0003_id0002_mode_36_0:
-  friendly_name: Main Heating Default Mode
-climate.horstmann_unknown_type0003_id0002_mode_36_0_2:
-  friendly_name: Main Heating Mode
-climate.horstmann_unknown_type0003_id0002_mode_36_0_3:
-  friendly_name: Main Hot Water Mode
-switch.horstmann_unknown_type0003_id0002_switch_36_0:
+switch.main_heating_relay_switch:
   friendly_name: Main Heating Switch
-switch.horstmann_unknown_type0003_id0002_switch_36_0_2:
+switch.main_heating_relay_boiler:
   friendly_name: Main Boiler Switch
-switch.horstmann_unknown_type0003_id0002_switch_36_0_3:
+switch.main_heating_relay_hot_water:
   friendly_name: Main Hot Water Switch
 switch.horstmann_asrzw_thermostat_receiver_switch_56_0:
   friendly_name: Annex Heating Switch
