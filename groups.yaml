@@ -540,11 +540,11 @@ main_heating:
   name: Main Heating
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_35_1
-  - climate.horstmann_scsc17_thermostat_heating_1_35_1
+  - sensor.main_heating_thermostat_temperature
+  - climate.main_heating_thermostat_heating_1
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_3
-  - switch.horstmann_scsc17_thermostat_switch_35_0
+  - switch.main_heating_thermostat_switch
 
 main_heating_override:
   name: Main Heating Override
@@ -709,7 +709,7 @@ temperatures:
   name: Temperatures
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_35_1
+  - sensor.main_heating_thermostat_temperature
   - sensor.horstmann_scsc17_thermostat_temperature_50_1
   - sensor.aeotec_dsb05_multisensor_temperature_3_1
   - sensor.ballroom_east_temperature_33_1
@@ -734,7 +734,7 @@ thermostat_devices:
   - climate.bedroom_mark_comfort_setpoint_29_1
   - climate.hall_east_comfort_setpoint_24_1
   - climate.hall_west_comfort_setpoint_13_1
-  - climate.horstmann_scsc17_thermostat_heating_1_35_1
+  - climate.main_heating_thermostat_heating_1
   - climate.horstmann_scsc17_thermostat_heating_1_50_1
   - climate.horstmann_unknown_type0003_id0002_mode_36_0
   - climate.horstmann_unknown_type0003_id0002_mode_36_0_2

@@ -16,7 +16,7 @@ include:
     - climate
     - calendar
   entities:
-    - sensor.horstmann_scsc17_thermostat_temperature_35_1
+    - sensor.main_heating_thermostat_temperature
     - sensor.horstmann_scsc17_thermostat_temperature_50_1
     - sensor.aeotec_dsb05_multisensor_temperature_3_1
     - sensor.ballroom_east_temperature_33_1

@@ -109,11 +109,11 @@ light.unused41_level_41_0:
   polling_intensity: 0
 light.fibaro_system_fgd212_dimmer_2_level_39_0:
   friendly_name: "Mark's Bedroom Overhead"
-climate.horstmann_scsc17_thermostat_heating_1_35_1:
+climate.main_heating_thermostat_heating_1:
   friendly_name: Main Heating Thermostat
-sensor.horstmann_scsc17_thermostat_temperature_35_1:
+sensor.main_heating_thermostat_temperature:
   friendly_name: Main Heating Temperature
-switch.horstmann_scsc17_thermostat_switch_35_0:
+switch.main_heating_thermostat_switch:
   friendly_name: Main Heating Holiday Mode
 climate.horstmann_scsc17_thermostat_heating_1_50_1:
   friendly_name: Annex Heating Thermostat
