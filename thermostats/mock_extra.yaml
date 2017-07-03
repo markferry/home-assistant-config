@@ -7,7 +7,7 @@
   target_temp: 10.0
 - name: annex_heating_thermostat_heating_1
   platform: generic_thermostat
-  heater: switch.horstmann_asrzw_thermostat_receiver_switch_56_0
+  heater: switch.horstmann_asrzw_thermostat_receiver_switch
   target_sensor: sensor.annex_heating_thermostat_temperature
   max_temp: 25
   min_temp: 5
