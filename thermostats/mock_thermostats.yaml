@@ -1,80 +1,90 @@
-- heater: switch.study_demand
-  max_temp: 25
-  min_temp: 5
-  name: study_west_comfort_setpoint
+- name: study_west_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.study_demand
   target_sensor: sensor.study_west_temperature
-- heater: switch.study_demand
   max_temp: 25
   min_temp: 5
-  name: study_east_comfort_setpoint
+
+- name: study_east_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.study_demand
   target_sensor: sensor.study_east_temperature
-- heater: switch.lounge_demand
   max_temp: 25
   min_temp: 5
-  name: lounge_east_comfort_setpoint
+
+- name: lounge_east_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.lounge_demand
   target_sensor: sensor.lounge_east_temperature
-- heater: switch.marks_bedroom_demand
   max_temp: 25
   min_temp: 5
-  name: bedroom_mark_comfort_setpoint
+
+- name: bedroom_mark_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.marks_bedroom_demand
   target_sensor: sensor.bedroom_mark_temperature
-- heater: switch.kitchen_demand
   max_temp: 25
   min_temp: 5
-  name: kitchen_comfort_setpoint
+
+- name: kitchen_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.kitchen_demand
   target_sensor: sensor.kitchen_temperature
-- heater: switch.ballroom_demand
   max_temp: 25
   min_temp: 5
-  name: ballroom_east_comfort_setpoint
+
+- name: ballroom_east_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.ballroom_demand
   target_sensor: sensor.ballroom_east_temperature
-- heater: switch.library_demand
   max_temp: 25
   min_temp: 5
-  name: library_comfort_setpoint
+
+- name: library_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.library_demand
   target_sensor: sensor.library_temperature
-- heater: switch.hall_demand
   max_temp: 25
   min_temp: 5
-  name: hall_west_comfort_setpoint
+
+- name: hall_west_comfort_setpoint
   platform: generic_thermostat
-  target_sensor: sensor.hall_west_temperature
-- heater: switch.hall_demand
-  max_temp: 25
-  min_temp: 5
-  name: hall_east_comfort_setpoint
-  platform: generic_thermostat
-  target_sensor: sensor.hall_east_temperature
-- heater: switch.hall_demand
-  max_temp: 25
-  min_temp: 5
-  name: hall_annex_comfort_setpoint
-  platform: generic_thermostat
-  target_sensor: sensor.hall_annex_temperature
-- name: danfoss_z_thermostat_014g0013_heating_1
   heater: switch.hall_demand
+  target_sensor: sensor.hall_west_temperature
   max_temp: 25
   min_temp: 5
+
+- name: hall_east_comfort_setpoint
   platform: generic_thermostat
+  heater: switch.hall_demand
+  target_sensor: sensor.hall_east_temperature
+  max_temp: 25
+  min_temp: 5
+
+- name: hall_annex_comfort_setpoint
+  platform: generic_thermostat
+  heater: switch.hall_demand
+  target_sensor: sensor.hall_annex_temperature
+  max_temp: 25
+  min_temp: 5
+
+- name: danfoss_z_thermostat_014g0013_heating_1
+  platform: generic_thermostat
+  heater: switch.hall_demand
   target_sensor: sensor.guest_room_temperature
+  max_temp: 25
+  min_temp: 5
 
 - name: bedroom_jerome_comfort_setpoint
   platform: generic_thermostat
   heater: switch.jeromes_bedroom_demand
+  target_sensor: sensor.bedroom_jerome_temperature
   max_temp: 25
   min_temp: 5
-  target_sensor: sensor.bedroom_jerome_temperature
 
 - name: bedroom_ros_comfort_setpoint
   platform: generic_thermostat
   heater: switch.ross_bedroom_demand
+  target_sensor: sensor.bedroom_ros_temperature
   max_temp: 25
   min_temp: 5
-  target_sensor: sensor.bedroom_ros_temperature
