@@ -2,7 +2,7 @@
   entities:
     group.lounge_lights:
       state: off
-    climate.lounge_east_thermostat_30_1:
+    climate.lounge_east_thermostat:
       temperature: 10
     media_player.lounge:
       state: paused
@@ -11,30 +11,30 @@
     group.lounge_lights:
       state: on
       brightness: 20
-    climate.lounge_east_thermostat_30_1:
+    climate.lounge_east_thermostat:
       temperature: 20
 - name: Lounge Movie
   entities:
     group.lounge_lights:
       state: on
       brightness: 50
-    climate.lounge_east_thermostat_30_1:
+    climate.lounge_east_thermostat:
       temperature: 20
 - name: Lounge Bright
   entities:
     group.lounge_lights:
       state: on
       brightness: 100
-    climate.lounge_east_thermostat_30_1:
+    climate.lounge_east_thermostat:
       temperature: 20
 
 - name: Study Off
   entities:
     group.study_lights:
       state: off
-    climate.study_east_thermostat_14_1:
+    climate.study_east_thermostat:
       temperature: 10
-    climate.study_west_thermostat_15_1:
+    climate.study_west_thermostat:
       temperature: 10
     media_player.study:
       state: paused
@@ -43,25 +43,25 @@
     group.study_lights:
       state: on
       brightness: 100
-    climate.study_east_thermostat_14_1:
+    climate.study_east_thermostat:
       temperature: 20
-    climate.study_west_thermostat_15_1:
+    climate.study_west_thermostat:
       temperature: 20
 - name: Study Relax
   entities:
     group.study_lights:
       state: on
       brightness: 50
-    climate.study_east_thermostat_14_1:
+    climate.study_east_thermostat:
       temperature: 20
-    climate.study_west_thermostat_15_1:
+    climate.study_west_thermostat:
       temperature: 20
 
 - name: Kitchen Off
   entities:
     group.kitchen_lights:
       state: off
-    climate.kitchen_thermostat_34_1:
+    climate.kitchen_thermostat:
       temperature: 10
     media_player.kitchen:
       state: paused
@@ -70,21 +70,21 @@
     group.kitchen_lights:
       state: on
       brightness: 50
-    climate.kitchen_thermostat_34_1:
+    climate.kitchen_thermostat:
       temperature: 20
 - name: Kitchen Bright
   entities:
     group.kitchen_lights:
       state: on
       brightness: 100
-    climate.kitchen_thermostat_34_1:
+    climate.kitchen_thermostat:
       temperature: 20
 
 - name: Ballroom Off
   entities:
     group.ballroom_lights:
       state: off
-    climate.ballroom_east_thermostat_33_1:
+    climate.ballroom_east_thermostat:
       temperature: 5
     media_player.ballroom:
       state: paused
@@ -93,27 +93,27 @@
     group.ballroom_lights:
       state: on
       brightness: 20
-    climate.ballroom_east_thermostat_33_1:
+    climate.ballroom_east_thermostat:
       temperature: 20
 - name: Ballroom Movie
   entities:
     group.ballroom_lights:
       state: off
-    climate.ballroom_east_thermostat_33_1:
+    climate.ballroom_east_thermostat:
       temperature: 20
 - name: Ballroom Bright
   entities:
     group.ballroom_lights:
       state: on
       brightness: 100
-    climate.ballroom_east_thermostat_33_1:
+    climate.ballroom_east_thermostat:
       temperature: 20
 
 - name: Library Off
   entities:
     group.library_lights:
       state: off
-    climate.library_thermostat_25_1:
+    climate.library_thermostat:
       temperature: 10
     media_player.library:
       state: paused
@@ -122,26 +122,26 @@
     group.library_lights:
       state: off
       brightness: 50
-    climate.library_thermostat_25_1:
+    climate.library_thermostat:
       temperature: 22
 - name: Library Read
   entities:
     group.library_lights:
       state: on
       brightness: 100
-    climate.library_thermostat_25_1:
+    climate.library_thermostat:
       temperature: 22
 
 - name: Guest Room Off
   entities:
-    climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+    climate.danfoss_z_thermostat_014g0013_heating_1:
       temperature: 10
 - name: Guest Room Sleep
   entities:
-    climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+    climate.danfoss_z_thermostat_014g0013_heating_1:
       temperature: 15
 - name: Guest Room Cosy
   entities:
-    climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+    climate.danfoss_z_thermostat_014g0013_heating_1:
       temperature: 20
 
