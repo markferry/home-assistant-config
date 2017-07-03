@@ -1,87 +1,96 @@
 # On Demand virtual thermostats
-- heater: switch.study_demand
-  max_temp: 25
-  min_temp: 5
-  name: study_west_thermostat
+- name: study_west_thermostat
   platform: generic_thermostat
+  heater: switch.study_demand
   target_sensor: sensor.study_west_temperature
-  target_temp: 10.0
-- heater: switch.study_demand
   max_temp: 25
   min_temp: 5
-  name: study_east_thermostat
+  target_temp: 10.0
+
+- name: study_east_thermostat
   platform: generic_thermostat
+  heater: switch.study_demand
   target_sensor: sensor.study_east_temperature
-  target_temp: 10.0
-- heater: switch.lounge_demand
   max_temp: 25
   min_temp: 5
-  name: lounge_east_thermostat
+  target_temp: 10.0
+
+- name: lounge_east_thermostat
   platform: generic_thermostat
+  heater: switch.lounge_demand
   target_sensor: sensor.lounge_east_temperature
-  target_temp: 10.0
-- heater: switch.marks_bedroom_demand
   max_temp: 25
   min_temp: 5
-  name: bedroom_mark_thermostat
+  target_temp: 10.0
+
+- name: bedroom_mark_thermostat
   platform: generic_thermostat
+  heater: switch.marks_bedroom_demand
   target_sensor: sensor.bedroom_mark_temperature
-  target_temp: 10.0
-- heater: switch.kitchen_demand
   max_temp: 25
   min_temp: 5
-  name: kitchen_thermostat
+  target_temp: 10.0
+
+- name: kitchen_thermostat
   platform: generic_thermostat
+  heater: switch.kitchen_demand
   target_sensor: sensor.kitchen_temperature
-  target_temp: 10.0
-- heater: switch.ballroom_demand
   max_temp: 25
   min_temp: 5
-  name: ballroom_east_thermostat
+  target_temp: 10.0
+
+- name: ballroom_east_thermostat
   platform: generic_thermostat
+  heater: switch.ballroom_demand
   target_sensor: sensor.ballroom_east_temperature
+  max_temp: 25
+  min_temp: 5
   target_temp: 5.0
-- heater: switch.library_demand
-  max_temp: 25
-  min_temp: 5
-  name: library_thermostat
+
+- name: library_thermostat
   platform: generic_thermostat
+  heater: switch.library_demand
   target_sensor: sensor.library_temperature
-  target_temp: 10.0
-- heater: switch.hall_demand
   max_temp: 25
   min_temp: 5
-  name: hall_west_thermostat
+  target_temp: 10.0
+
+- name: hall_west_thermostat
   platform: generic_thermostat
+  heater: switch.hall_demand
   target_sensor: sensor.hall_west_temperature
-  target_temp: 10.0
-- heater: switch.hall_demand
   max_temp: 25
   min_temp: 5
-  name: hall_east_thermostat
+  target_temp: 10.0
+
+- name: hall_east_thermostat
   platform: generic_thermostat
+  heater: switch.hall_demand
   target_sensor: sensor.hall_east_temperature
-  target_temp: 10.0
-- heater: switch.annex_hall_demand
   max_temp: 25
   min_temp: 5
-  name: annex_hall_thermostat
+  target_temp: 10.0
+
+- name: annex_hall_thermostat
   platform: generic_thermostat
+  heater: switch.annex_hall_demand
   target_sensor: sensor.annex_hall_temperature
+  max_temp: 25
+  min_temp: 5
   target_temp: 10.0
 
 - name: bedroom_jerome_thermostat
   platform: generic_thermostat
   heater: switch.jeromes_bedroom_demand
+  target_sensor: sensor.bedroom_jerome_temperature
   max_temp: 25
   min_temp: 5
-  target_sensor: sensor.bedroom_jerome_temperature
   target_temp: 10.0
 
 - name: bedroom_ros_thermostat
   platform: generic_thermostat
   heater: switch.ross_bedroom_demand
+  target_sensor: sensor.bedroom_ros_temperature
   max_temp: 25
   min_temp: 5
-  target_sensor: sensor.bedroom_ros_temperature
   target_temp: 10.0
