@@ -4,7 +4,7 @@
       state: off
     switch.marks_bedroom_appliances:
       state: off
-    climate.bedroom_mark_thermostat_29_1:
+    climate.bedroom_mark_thermostat:
       temperature: 10
     media_player.marks_bedroom:
       state: paused
@@ -12,12 +12,12 @@
   entities:
     group.marks_bedroom_lights:
       state: off
-    climate.bedroom_mark_thermostat_29_1:
+    climate.bedroom_mark_thermostat:
       temperature: 15
 - name: "Mark's Bedroom Play"
   entities:
     group.marks_bedroom_lights:
       state: on
-    climate.bedroom_mark_thermostat_29_1:
+    climate.bedroom_mark_thermostat:
       temperature: 20
 

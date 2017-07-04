@@ -1,24 +1,24 @@
-sensor.hall_west_temperature_13_1:
+sensor.hall_west_temperature:
   polling_intensity: 5
-sensor.study_east_temperature_14_1:
+sensor.study_east_temperature:
   polling_intensity: 5
-sensor.study_west_temperature_15_1:
+sensor.study_west_temperature:
   polling_intensity: 5
-sensor.hall_east_temperature_24_1:
+sensor.hall_east_temperature:
   polling_intensity: 5
-sensor.library_temperature_25_1:
+sensor.library_temperature:
   polling_intensity: 5
-sensor.bedroom_mark_temperature_29_1:
+sensor.bedroom_mark_temperature:
   polling_intensity: 5
-sensor.lounge_east_temperature_30_1:
+sensor.lounge_east_temperature:
   polling_intensity: 5
-sensor.ballroom_east_temperature_33_1:
+sensor.ballroom_east_temperature:
   polling_intensity: 5
-sensor.kitchen_temperature_34_1:
+sensor.kitchen_temperature:
   polling_intensity: 5
-sensor.annex_hall_temperature_43_1:
+sensor.annex_hall_temperature:
   polling_intensity: 5
-sensor.bedroom_jerome_temperature_44_1:
+sensor.bedroom_jerome_temperature:
   polling_intensity: 5
-sensor.bedroom_ros_temperature_55_1:
+sensor.bedroom_ros_temperature:
   polling_intensity: 5

@@ -4,7 +4,7 @@
       state: off
     switch.bedroom_ros_appliances:
       state: off
-    climate.bedroom_ros_thermostat_55_1:
+    climate.bedroom_ros_thermostat:
       temperature: 10
     media_player.ross_tablet:
       state: paused
@@ -12,11 +12,11 @@
   entities:
     group.bedroom_ros_lights:
       state: off
-    climate.bedroom_ros_thermostat_55_1:
+    climate.bedroom_ros_thermostat:
       temperature: 12
 - name: bedroom_ros_cosy
   entities:
     group.bedroom_ros_lights:
       state: on
-    climate.bedroom_ros_thermostat_55_1:
+    climate.bedroom_ros_thermostat:
       temperature: 23
