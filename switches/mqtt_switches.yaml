@@ -1,72 +1,83 @@
-- command_topic: ha/study/demand/command
-  name: Study Demand
+- name: Study Demand
+  platform: mqtt
+  command_topic: ha/study/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/lounge/demand/command
-  name: Lounge Demand
+
+- name: Lounge Demand
+  platform: mqtt
+  command_topic: ha/lounge/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/bedroom-mark/demand/command
-  name: "Mark's Bedroom Demand"
+
+- name: "Mark's Bedroom Demand"
+  platform: mqtt
+  command_topic: ha/bedroom-mark/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/kitchen/demand/command
-  name: Kitchen Demand
+
+- name: Kitchen Demand
+  platform: mqtt
+  command_topic: ha/kitchen/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/ballroom/demand/command
-  name: Ballroom Demand
+
+- name: Ballroom Demand
+  platform: mqtt
+  command_topic: ha/ballroom/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/library/demand/command
-  name: Library Demand
+
+- name: Library Demand
+  platform: mqtt
+  command_topic: ha/library/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/hall/demand/command
-  name: Hall Demand
+
+- name: Hall Demand
+  platform: mqtt
+  command_topic: ha/hall/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/annex-hall/demand/command
-  name: Annex Hall Demand
+
+- name: Annex Hall Demand
+  platform: mqtt
+  command_topic: ha/annex-hall/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/guest-room/demand/command
-  name: Guest Room Demand
+
+- name: Guest Room Demand
+  platform: mqtt
+  command_topic: ha/guest-room/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/bedroom-jerome/demand/command
-  name: "Jerome's Bedroom Demand"
+
+- name: "Jerome's Bedroom Demand"
+  platform: mqtt
+  command_topic: ha/bedroom-jerome/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
-- command_topic: ha/js-bedroom/demand/command
-  name: "J's Bedroom Demand"
+
+- name: "J's Bedroom Demand"
+  platform: mqtt
+  command_topic: ha/js-bedroom/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
+
 - name: "Ros's Bedroom Demand"
+  platform: mqtt
   command_topic: ha/bedroom-ros/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
-  platform: mqtt
   retain: true
