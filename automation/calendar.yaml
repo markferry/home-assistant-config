@@ -84,7 +84,7 @@
         payload: >
           {% set l = trigger.to_state.attributes.message.split(": ")|last %}
           {{l}}
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
         message: >
           {% set l = trigger.to_state.attributes.message.split(": ")|last %}

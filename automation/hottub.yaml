@@ -7,7 +7,7 @@
 - alias: 'Hot Tub Hi'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_1_port_power_53_8
+    entity_id: sensor.greenwave_powernode_53_power
     above: 1500
   action:
     service: input_boolean.turn_on
@@ -16,7 +16,7 @@
 - alias: 'Hot Tub Lo'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_1_port_power_53_8
+    entity_id: sensor.greenwave_powernode_53_power
     below: 200
   action:
     service: input_boolean.turn_off
@@ -61,9 +61,9 @@
       data_template:
         topic: 'ha/event/hottub'
         payload: 'off'
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
-        message: 'Hot Tub heating stopped'
+        message: 'Hot Tub heating finished'
     - service: persistent_notification.create
       data:
         title: 'Hot Tub'
