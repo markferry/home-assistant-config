@@ -1,47 +1,47 @@
-- name: horstmann_scsc17_thermostat_switch_35_0
+- name: main_heating_thermostat_switch
   command_topic: ha/main/holidaymode/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0002_switch_36_0
+- name: main_heating_relay_switch
   command_topic: ha/main/heating/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0002_switch_36_0_2
+- name: main_heating_relay_boiler
   command_topic: ha/main/boiler/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_unknown_type0003_id0002_switch_36_0_3
-  command_topic: ha/main/hotwater/command
+- name: main_heating_relay_hot_water
+  command_topic: ha/main/hot-water/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_scsc17_thermostat_switch_50_0
+- name: annex_heating_thermostat_switch
   command_topic: ha/annex/holidaymode/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_asrzw_thermostat_receiver_switch_56_0
+- name: horstmann_asrzw_thermostat_receiver_switch
   command_topic: ha/annex/heating/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
 
-- name: greenwave_powernode_1_port_switch_53_0
+- name: greenwave_powernode_53_switch
   command_topic: ha/hottub/command
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: greenwave_powernode_1_port_switch_54_0
+- name: greenwave_powernode_54_switch
   command_topic: ha/washing-machine/command
   payload_off: 'OFF'
   payload_on: 'ON'

@@ -91,49 +91,40 @@ device_tracker.thomas_phone:
 device_tracker.liane_phone:
   entity_picture: /local/wb-icons/wb_liane.png
   friendly_name: "Liane Owntracks"
-sensor.aeotec_dsb05_multisensor_luminance_3_3:
+sensor.aeotec_dsb05_multisensor_luminance:
   friendly_name: Hall Luminance
-sensor.aeotec_dsb05_multisensor_relative_humidity_3_5:
+sensor.aeotec_dsb05_multisensor_relative_humidity:
   friendly_name: Hall Humidity
-sensor.aeotec_dsb05_multisensor_temperature_3_1:
+sensor.aeotec_dsb05_multisensor_temperature:
   friendly_name: Hall
-binary_sensor.aeotec_dsb05_multisensor_sensor_3_0:
+binary_sensor.aeotec_dsb05_multisensor_sensor:
   friendly_name: Hall Motion
-light.__level_40_0:
-  friendly_name: Unused Dimmer
-light.ballroom_north_level_41_0:
-  friendly_name: Ballroom North
+light.unused_40_level:
+  friendly_name: Unused Dimmer 40
+light.unused_41_level:
+  friendly_name: Unused Dimmer 41
   polling_intensity: 0
-light.unused41_level_41_0:
-  friendly_name: Ballroom North_
-  polling_intensity: 0
-light.fibaro_system_fgd212_dimmer_2_level_39_0:
+light.bedroom_mark_overhead_level:
   friendly_name: "Mark's Bedroom Overhead"
-climate.horstmann_scsc17_thermostat_heating_1_35_1:
+climate.main_heating_thermostat_heating_1:
   friendly_name: Main Heating Thermostat
-sensor.horstmann_scsc17_thermostat_temperature_35_1:
+sensor.main_heating_thermostat_temperature:
   friendly_name: Main Heating Temperature
-switch.horstmann_scsc17_thermostat_switch_35_0:
+switch.main_heating_thermostat_switch:
   friendly_name: Main Heating Holiday Mode
-climate.horstmann_scsc17_thermostat_heating_1_50_1:
+climate.annex_heating_thermostat_heating_1:
   friendly_name: Annex Heating Thermostat
-sensor.horstmann_scsc17_thermostat_temperature_50_1:
+sensor.annex_heating_thermostat_temperature:
   friendly_name: Annex Heating Temperature
-switch.horstmann_scsc17_thermostat_switch_50_0:
+switch.annex_heating_thermostat_switch:
   friendly_name: Annex Heating Holiday Mode
-climate.horstmann_unknown_type0003_id0002_mode_36_0:
-  friendly_name: Main Heating Default Mode
-climate.horstmann_unknown_type0003_id0002_mode_36_0_2:
-  friendly_name: Main Heating Mode
-climate.horstmann_unknown_type0003_id0002_mode_36_0_3:
-  friendly_name: Main Hot Water Mode
-switch.horstmann_unknown_type0003_id0002_switch_36_0:
+switch.main_heating_relay_switch:
   friendly_name: Main Heating Switch
-switch.horstmann_unknown_type0003_id0002_switch_36_0_2:
+switch.main_heating_relay_boiler:
   friendly_name: Main Boiler Switch
-switch.horstmann_unknown_type0003_id0002_switch_36_0_3:
+switch.main_heating_relay_hot_water:
   friendly_name: Main Hot Water Switch
-switch.horstmann_asrzw_thermostat_receiver_switch_56_0:
+switch.horstmann_asrzw_thermostat_receiver_switch:
   friendly_name: Annex Heating Switch
 
 media_player.txnr636_0009b09961fb:
@@ -158,34 +149,34 @@ light.kitchen_level_34:
   friendly_name: Kitchen Valve
 light.annex_hall_level_43:
   friendly_name: Annex Hall Valve
-sensor.hall_west_temperature_13_1:
+sensor.hall_west_temperature:
   friendly_name: Hall West
   polling_intensity: 5
-sensor.study_east_temperature_14_1:
+sensor.study_east_temperature:
   friendly_name: Study East
   polling_intensity: 5
-sensor.study_west_temperature_15_1:
+sensor.study_west_temperature:
   friendly_name: Study West
   polling_intensity: 5
-sensor.hall_east_temperature_24_1:
+sensor.hall_east_temperature:
   friendly_name: Hall East
   polling_intensity: 5
-sensor.library_temperature_25_1:
+sensor.library_temperature:
   friendly_name: Library
   polling_intensity: 5
-sensor.bedroom_mark_temperature_29_1:
+sensor.bedroom_mark_temperature:
   friendly_name: "Mark's Bedroom"
   polling_intensity: 5
-sensor.lounge_east_temperature_30_1:
+sensor.lounge_east_temperature:
   friendly_name: Lounge East
   polling_intensity: 5
-sensor.ballroom_east_temperature_33_1:
+sensor.ballroom_east_temperature:
   friendly_name: Ballroom East
   polling_intensity: 5
-sensor.kitchen_temperature_34_1:
+sensor.kitchen_temperature:
   friendly_name: Kitchen
   polling_intensity: 5
-sensor.annex_hall_temperature_43_1:
+sensor.annex_hall_temperature:
   friendly_name: Annex Hall
   polling_intensity: 5
 
@@ -230,99 +221,99 @@ sensor.annex_hall_battery:
   icon: mdi:battery
 
 # generic thermostats
-climate.hall_west_thermostat_13_1:
+climate.hall_west_thermostat:
   friendly_name: Hall West
-climate.study_east_thermostat_14_1:
+climate.study_east_thermostat:
   friendly_name: Study East
-climate.study_west_thermostat_15_1:
+climate.study_west_thermostat:
   friendly_name: Study West
-climate.hall_east_thermostat_24_1:
+climate.hall_east_thermostat:
   friendly_name: Hall East
-climate.library_thermostat_25_1:
+climate.library_thermostat:
   friendly_name: Library
-climate.bedroom_mark_thermostat_29_1:
+climate.bedroom_mark_thermostat:
   friendly_name: "Mark's Bedroom"
-climate.lounge_east_thermostat_30_1:
+climate.lounge_east_thermostat:
   friendly_name: Lounge East
-climate.ballroom_east_thermostat_33_1:
+climate.ballroom_east_thermostat:
   friendly_name: Ballroom East
-climate.kitchen_thermostat_34_1:
+climate.kitchen_thermostat:
   friendly_name: Kitchen
-climate.annex_hall_thermostat_43_1:
+climate.annex_hall_thermostat:
   friendly_name: Annex Hall
 
 # real thermostats
-climate.danfoss_z_thermostat_014g0013_heating_1_52_1:
+climate.danfoss_z_thermostat_014g0013_heating_1:
   friendly_name: Guest Room
   min_temp: 5
   max_temp: 25
 
-climate.hall_west_setpoint_13_1:
+climate.hall_west_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.study_east_setpoint_14_1:
+climate.study_east_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.study_west_setpoint_15_1:
+climate.study_west_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.hall_east_setpoint_24_1:
+climate.hall_east_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.library_setpoint_25_1:
+climate.library_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.bedroom_mark_setpoint_29_1:
+climate.bedroom_mark_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.lounge_east_setpoint_30_1:
+climate.lounge_east_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.ballroom_east_setpoint_33_1:
+climate.ballroom_east_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.kitchen_setpoint_34_1:
+climate.kitchen_comfort_setpoint:
   min_temp: 5
   max_temp: 25
-climate.annex_hall_setpoint_43_1:
+climate.annex_hall_comfort_setpoint:
   min_temp: 5
   max_temp: 25
 
 
-climate.bedroom_jerome_thermostat_44_1:
+climate.bedroom_jerome_thermostat:
   friendly_name: "Jerome's Bedroom"
-sensor.bedroom_jerome_temperature_44_1:
+sensor.bedroom_jerome_temperature:
   friendly_name: "Jerome's Bedroom"
   polling_intensity: 5
 sensor.bedroom_jerome_battery:
   friendly_name: "Jerome's Bedroom Battery"
   icon: mdi:battery
 
-climate.bedroom_ros_thermostat_55_1:
+climate.bedroom_ros_thermostat:
   friendly_name: "Ros's Bedroom"
-sensor.bedroom_ros_temperature_55_1:
+sensor.bedroom_ros_temperature:
   friendly_name: "Ros's Bedroom"
   polling_intensity: 5
 sensor.bedroom_ros_battery:
   friendly_name: "Ros's Bedroom Battery"
   icon: mdi:battery
 
-switch.greenwave_powernode_1_port_switch_53_0:
+switch.greenwave_powernode_53_switch:
   friendly_name: Hot Tub Power Supply
   icon: mdi:pot
   emulated_hue: true
-sensor.greenwave_powernode_1_port_energy_53_0:
+sensor.greenwave_powernode_53_energy:
   friendly_name: Hot Tub Energy
-sensor.greenwave_powernode_1_port_power_53_8:
+sensor.greenwave_powernode_53_power:
   friendly_name: Hot Tub Power
 
-switch.greenwave_powernode_1_port_switch_54_0:
+switch.greenwave_powernode_54_switch:
   friendly_name: Washing Machine
   icon: mdi:washing-machine
-sensor.greenwave_powernode_1_port_energy_54_0:
+sensor.greenwave_powernode_54_energy:
   friendly_name: Washing Machine Energy
   icon: mdi:washing-machine
-sensor.greenwave_powernode_1_port_power_54_8:
+sensor.greenwave_powernode_54_power:
   friendly_name: Washing Machine Power
   icon: mdi:washing-machine
 

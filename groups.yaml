@@ -9,8 +9,8 @@ study:
   icon: mdi:printer
   view: true
   entities:
-  - sensor.study_east_temperature_14_1
-  - sensor.study_west_temperature_15_1
+  - sensor.study_east_temperature
+  - sensor.study_west_temperature
   - group.study_compact_ui
   - group.study_appliances
   - media_player.study
@@ -19,8 +19,8 @@ study_compact_ui:
   view: false
   entities:
   - input_select.study_select
-  - climate.study_east_thermostat_14_1
-  - climate.study_west_thermostat_15_1
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
 study_scenes:
   name: Study
   view: false
@@ -30,20 +30,20 @@ study_heating:
   name: Study Heating
   view: false
   entities:
-  - climate.study_east_thermostat_14_1
-  - climate.study_west_thermostat_15_1
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
 study_setpoints:
   name: Study Setpoints
   view: false
   entities:
-  - climate.study_east_comfort_setpoint_14_1
-  - climate.study_west_comfort_setpoint_15_1
+  - climate.study_east_comfort_setpoint
+  - climate.study_west_comfort_setpoint
 study_thermostats:
   name: Study Thermostats
   view: false
   entities:
-  - climate.study_east_thermostat_14_1
-  - climate.study_west_thermostat_15_1
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
 study_lights:
   name: Study Lights
   view: false
@@ -60,18 +60,18 @@ kitchen:
   view: true
   icon: mdi:stove
   entities:
-  - sensor.kitchen_temperature_34_1
+  - sensor.kitchen_temperature
   - group.kitchen_compact_ui
   - media_player.kitchen
-  - sensor.greenwave_powernode_1_port_energy_54_0
-  - sensor.greenwave_powernode_1_port_power_54_8
+  - sensor.greenwave_powernode_54_energy
+  - sensor.greenwave_powernode_54_power
 kitchen_compact_ui:
   name: Kitchen
   view: false
   icon: mdi:stove
   entities:
   - input_select.kitchen_select
-  - climate.kitchen_thermostat_34_1
+  - climate.kitchen_thermostat
   - binary_sensor.washing_machine
 kitchen_scenes:
   name: Kitchen
@@ -82,17 +82,17 @@ kitchen_heating:
   name: Kitchen Heating
   view: false
   entities:
-  - climate.kitchen_thermostat_34_1
+  - climate.kitchen_thermostat
 kitchen_setpoints:
   name: Kitchen Setpoints
   view: false
   entities:
-  - climate.kitchen_comfort_setpoint_34_1
+  - climate.kitchen_comfort_setpoint
 kitchen_thermostats:
   name: Kitchen Thermostats
   view: false
   entities:
-  - climate.kitchen_thermostat_34_1
+  - climate.kitchen_thermostat
 kitchen_lights:
   name: Kitchen Lights
   view: false
@@ -102,13 +102,13 @@ hall:
   view: true
   icon: mdi:fullscreen-exit
   entities:
-  - binary_sensor.aeotec_dsb05_multisensor_sensor_3_0
-  - sensor.aeotec_dsb05_multisensor_luminance_3_3
-  - sensor.aeotec_dsb05_multisensor_relative_humidity_3_5
-  - sensor.aeotec_dsb05_multisensor_temperature_3_1
-  - sensor.hall_west_temperature_13_1
-  - sensor.hall_east_temperature_24_1
-  - sensor.annex_hall_temperature_43_1
+  - binary_sensor.aeotec_dsb05_multisensor_sensor
+  - sensor.aeotec_dsb05_multisensor_luminance
+  - sensor.aeotec_dsb05_multisensor_relative_humidity
+  - sensor.aeotec_dsb05_multisensor_temperature
+  - sensor.hall_west_temperature
+  - sensor.hall_east_temperature
+  - sensor.annex_hall_temperature
   #
   - group.hall_compact_ui
   - group.hall_lights
@@ -120,33 +120,33 @@ hall_compact_ui:
   view: false
   icon: mdi:fullscreen-exit
   entities:
-  - climate.hall_west_thermostat_13_1
-  - climate.hall_east_thermostat_24_1
-  - climate.annex_hall_thermostat_43_1
+  - climate.hall_west_thermostat
+  - climate.hall_east_thermostat
+  - climate.annex_hall_thermostat
 hall_scenes:
   name: Hall Scenes
   view: false
 hall_heating:
   entities:
-  - climate.hall_west_thermostat_13_1
-  - climate.hall_east_thermostat_24_1
-  - climate.annex_hall_thermostat_43_1
+  - climate.hall_west_thermostat
+  - climate.hall_east_thermostat
+  - climate.annex_hall_thermostat
   name: Hall Heating
   view: false
 hall_setpoints:
   name: Hall Setpoints
   view: false
   entities:
-  - climate.hall_west_comfort_setpoint_13_1
-  - climate.hall_east_comfort_setpoint_24_1
-  - climate.annex_hall_comfort_setpoint_43_1
+  - climate.hall_west_comfort_setpoint
+  - climate.hall_east_comfort_setpoint
+  - climate.annex_hall_comfort_setpoint
 hall_thermostats:
   name: Hall Thermostats
   view: false
   entities:
-  - climate.hall_west_thermostat_13_1
-  - climate.hall_east_thermostat_24_1
-  - climate.annex_hall_thermostat_43_1
+  - climate.hall_west_thermostat
+  - climate.hall_east_thermostat
+  - climate.annex_hall_thermostat
 hall_lights:
   name: Hall Lights
   view: false
@@ -156,7 +156,7 @@ lounge:
   view: true
   icon: mdi:sofa
   entities:
-  - sensor.lounge_east_temperature_30_1
+  - sensor.lounge_east_temperature
   - group.lounge_compact_ui
   - media_player.lounge
 lounge_compact_ui:
@@ -165,7 +165,7 @@ lounge_compact_ui:
   icon: mdi:sofa
   entities:
   - input_select.lounge_select
-  - climate.lounge_east_thermostat_30_1
+  - climate.lounge_east_thermostat
   - group.lounge_lights
 lounge_scenes:
   name: Lounge
@@ -176,17 +176,17 @@ lounge_heating:
   name: Lounge Heating
   view: false
   entities:
-  - climate.lounge_east_thermostat_30_1
+  - climate.lounge_east_thermostat
 lounge_setpoints:
   name: Lounge Setpoints
   view: false
   entities:
-  - climate.lounge_east_comfort_setpoint_30_1
+  - climate.lounge_east_comfort_setpoint
 lounge_thermostats:
   name: Lounge Thermostats
   view: false
   entities:
-  - climate.lounge_east_thermostat_30_1
+  - climate.lounge_east_thermostat
 lounge_lights:
   entities:
   - light.lounge_east
@@ -200,7 +200,7 @@ library:
   view: true
   icon: mdi:library
   entities:
-  - sensor.library_temperature_25_1
+  - sensor.library_temperature
   - group.library_compact_ui
   - media_player.library
 library_compact_ui:
@@ -209,7 +209,7 @@ library_compact_ui:
   icon: mdi:library
   entities:
   - input_select.library_select
-  - climate.library_thermostat_25_1
+  - climate.library_thermostat
 library_scenes:
   name: Library
   view: false
@@ -219,17 +219,17 @@ library_heating:
   name: Library Heating
   view: false
   entities:
-  - climate.library_thermostat_25_1
+  - climate.library_thermostat
 library_setpoints:
   name: Library Setpoints
   view: false
   entities:
-  - climate.library_comfort_setpoint_25_1
+  - climate.library_comfort_setpoint
 library_thermostats:
   name: Library Thermostats
   view: false
   entities:
-  - climate.library_thermostat_25_1
+  - climate.library_thermostat
 library_lights:
   name: Library Lights
   view: false
@@ -239,7 +239,7 @@ ballroom:
   view: true
   icon: mdi:projector
   entities:
-  - sensor.ballroom_east_temperature_33_1
+  - sensor.ballroom_east_temperature
   - group.ballroom_compact_ui
   - media_player.ballroom
   - media_player.ballroom_amplifier
@@ -249,7 +249,7 @@ ballroom_compact_ui:
   icon: mdi:projector
   entities:
   - input_select.ballroom_select
-  - climate.ballroom_east_thermostat_33_1
+  - climate.ballroom_east_thermostat
 ballroom_scenes:
   name: Ballroom
   view: false
@@ -259,21 +259,18 @@ ballroom_heating:
   name: Ballroom Heating
   view: false
   entities:
-  - climate.ballroom_east_thermostat_33_1
+  - climate.ballroom_east_thermostat
 ballroom_setpoints:
   name: Ballroom Setpoints
   view: false
   entities:
-  - climate.ballroom_east_comfort_setpoint_33_1
+  - climate.ballroom_east_comfort_setpoint
 ballroom_thermostats:
   name: Ballroom Thermostats
   view: false
   entities:
-  - climate.ballroom_east_thermostat_33_1
+  - climate.ballroom_east_thermostat
 ballroom_lights:
-  entities:
-  - light.ballroom_north_level_41_0
-  - light.unused_41_level_41
   name: Ballroom Lights
   view: false
 
@@ -289,7 +286,7 @@ guest_room_compact_ui:
   icon: mdi:hotel
   entities:
   - input_select.guest_room_select
-  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+  - climate.danfoss_z_thermostat_014g0013_heating_1
 guest_room_scenes:
   name: Guest Room
   view: false
@@ -299,12 +296,12 @@ guest_room_heating:
   name: Guest Room Heating
   view: false
   entities:
-  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+  - climate.danfoss_z_thermostat_014g0013_heating_1
 guest_room_setpoints:
   name: Guest Room Setpoints
   view: false
   entities:
-  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
+  - climate.danfoss_z_thermostat_014g0013_heating_1
 
 bedrooms:
   name: Bedrooms
@@ -315,9 +312,9 @@ bedrooms:
   - group.bedroom_jerome_compact_ui
   - group.bedroom_ros_compact_ui
   - group.guest_room_compact_ui
-  - sensor.bedroom_mark_temperature_29_1
-  - sensor.bedroom_jerome_temperature_44_1
-  - sensor.bedroom_ros_temperature_55_1
+  - sensor.bedroom_mark_temperature
+  - sensor.bedroom_jerome_temperature
+  - sensor.bedroom_ros_temperature
   - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
 
@@ -336,7 +333,7 @@ bedroom_mark_compact_ui:
   view: false
   entities:
   - input_select.marks_bedroom_select
-  - climate.bedroom_mark_thermostat_29_1
+  - climate.bedroom_mark_thermostat
   - group.marks_bedroom_lights
 marks_bedroom_scenes:
   name: "Mark's Bedroom"
@@ -347,22 +344,22 @@ marks_bedroom_heating:
   name: "Mark's Bedroom Heating"
   view: false
   entities:
-  - climate.bedroom_mark_thermostat_29_1
+  - climate.bedroom_mark_thermostat
 marks_bedroom_setpoints:
   name: "Mark's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_mark_comfort_setpoint_29_1
+  - climate.bedroom_mark_comfort_setpoint
 marks_bedroom_thermostats:
   name: "Mark's Bedroom Thermostats"
   view: false
   entities:
-  - climate.bedroom_mark_thermostat_29_1
+  - climate.bedroom_mark_thermostat
 marks_bedroom_lights:
   name: "Mark's Bedroom Lights"
   view: false
   entities:
-  - light.fibaro_system_fgd212_dimmer_2_level_39_0
+  - light.bedroom_mark_overhead_level
   - light.bedroom_mark_level_39
   - light.marks_bedroom_lamp
 marks_bedroom_appliances:
@@ -381,7 +378,7 @@ bedroom_jerome_compact_ui:
   view: false
   entities:
   - input_select.bedroom_jerome_select
-  - climate.bedroom_jerome_thermostat_44_1
+  - climate.bedroom_jerome_thermostat
   - climate.js_bedroom
 bedroom_jerome_scenes:
   name: "Jerome's Bedroom"
@@ -392,17 +389,17 @@ bedroom_jerome_heating:
   name: "Jerome's Bedroom Heating"
   view: false
   entities:
-  - climate.bedroom_jerome_thermostat_44_1
+  - climate.bedroom_jerome_thermostat
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_jerome_comfort_setpoint_44_1
+  - climate.bedroom_jerome_comfort_setpoint
 bedroom_jerome_thermostats:
   name: "Jerome's Bedroom Thermostats"
   view: false
   entities:
-  - climate.bedroom_jerome_thermostat_44_1
+  - climate.bedroom_jerome_thermostat
   - climate.js_bedroom
 
 bedroom_ros:
@@ -416,7 +413,7 @@ bedroom_ros_compact_ui:
   view: false
   entities:
   - input_select.bedroom_ros_select
-  - climate.bedroom_ros_thermostat_55_1
+  - climate.bedroom_ros_thermostat
 bedroom_ros_scenes:
   name: "Ros's Bedroom"
   view: false
@@ -426,17 +423,17 @@ bedroom_ros_heating:
   name: "Ros's Bedroom Heating"
   view: false
   entities:
-  - climate.bedroom_ros_thermostat_55_1
+  - climate.bedroom_ros_thermostat
 bedroom_ros_setpoints:
   name: "Ros's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_ros_comfort_setpoint_55_1
+  - climate.bedroom_ros_comfort_setpoint
 bedroom_ros_thermostats:
   name: "Ros's Bedroom Thermostats"
   view: false
   entities:
-  - climate.bedroom_ros_thermostat_55_1
+  - climate.bedroom_ros_thermostat
 
 radio:
   name: Internet Radio
@@ -466,18 +463,18 @@ hottub:
   icon: mdi:pot
   entities:
   - binary_sensor.hottub
-  - switch.greenwave_powernode_1_port_switch_53_0
-  - sensor.greenwave_powernode_1_port_energy_53_0
-  - sensor.greenwave_powernode_1_port_power_53_8
+  - switch.greenwave_powernode_53_switch
+  - sensor.greenwave_powernode_53_energy
+  - sensor.greenwave_powernode_53_power
 
 washing_machine:
   name: Washing Machine
   icon: mdi:washing-machine
   entities:
   - binary_sensor.washing_machine
-  - switch.greenwave_powernode_1_port_switch_54_0
-  - sensor.greenwave_powernode_1_port_energy_54_0
-  - sensor.greenwave_powernode_1_port_power_54_8
+  - switch.greenwave_powernode_54_switch
+  - sensor.greenwave_powernode_54_energy
+  - sensor.greenwave_powernode_54_power
 
 ups:
   name: UPS
@@ -540,19 +537,17 @@ main_heating:
   name: Main Heating
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_35_1
-  - climate.horstmann_scsc17_thermostat_heating_1_35_1
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0_3
-  - switch.horstmann_scsc17_thermostat_switch_35_0
+  - sensor.main_heating_thermostat_temperature
+  - climate.main_heating_thermostat_heating_1
+  - switch.main_heating_thermostat_switch
 
 main_heating_override:
   name: Main Heating Override
   view: false
   entities:
-  - switch.horstmann_unknown_type0003_id0002_switch_36_0
-  - switch.horstmann_unknown_type0003_id0002_switch_36_0_2
-  - switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+  - switch.main_heating_relay_switch
+  - switch.main_heating_relay_boiler
+  - switch.main_heating_relay_hot_water
 
 main_heating_demand:
   name: Main Heating Demand
@@ -562,11 +557,18 @@ main_heating_demand:
   - switch.lounge_demand
   - switch.library_demand
   ## temporarily disable hall demand
-  #- switch.hall_demand
+  #- group.hall_demand
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
   - group.bedroom_jerome_demand
+
+hall_demand:
+  name: "Hall Demand"
+  view: false
+  entities:
+  - switch.hall_west_demand
+  - switch.hall_east_demand
 
 bedroom_jerome_demand:
   name: "Jerome's Bedroom Demand"
@@ -579,23 +581,30 @@ annex_heating:
   name: Annex Heating
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_50_1
-  - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - switch.horstmann_scsc17_thermostat_switch_50_0
+  - sensor.annex_heating_thermostat_temperature
+  - climate.annex_heating_thermostat_heating_1
+  - switch.annex_heating_thermostat_switch
 
 annex_heating_override:
   name: Annex Heating Override
   view: false
   entities:
-  - switch.horstmann_asrzw_thermostat_receiver_switch_56_0
+  - switch.horstmann_asrzw_thermostat_receiver_switch
 
 annex_heating_demand:
   name: Annex Heating Demand
   view: false
   entities:
-  - switch.study_demand
+  - group.study_demand
   - switch.annex_hall_demand
   - switch.ross_bedroom_demand
+
+study_demand:
+  name: "Study Demand"
+  view: false
+  entities:
+  - switch.study_west_demand
+  - switch.study_east_demand
 
 room_scenes:
   name: Rooms
@@ -709,62 +718,60 @@ temperatures:
   name: Temperatures
   view: false
   entities:
-  - sensor.horstmann_scsc17_thermostat_temperature_35_1
-  - sensor.horstmann_scsc17_thermostat_temperature_50_1
-  - sensor.aeotec_dsb05_multisensor_temperature_3_1
-  - sensor.ballroom_east_temperature_33_1
-  - sensor.hall_west_temperature_13_1
-  - sensor.hall_east_temperature_24_1
-  - sensor.annex_hall_temperature_43_1
-  - sensor.kitchen_temperature_34_1
-  - sensor.library_temperature_25_1
-  - sensor.lounge_east_temperature_30_1
-  - sensor.bedroom_mark_temperature_29_1
-  - sensor.study_east_temperature_14_1
-  - sensor.study_west_temperature_15_1
-  - sensor.bedroom_jerome_temperature_44_1
-  - sensor.bedroom_ros_temperature_55_1
+  - sensor.main_heating_thermostat_temperature
+  - sensor.annex_heating_thermostat_temperature
+  - sensor.aeotec_dsb05_multisensor_temperature
+  - sensor.ballroom_east_temperature
+  - sensor.hall_west_temperature
+  - sensor.hall_east_temperature
+  - sensor.annex_hall_temperature
+  - sensor.kitchen_temperature
+  - sensor.library_temperature
+  - sensor.lounge_east_temperature
+  - sensor.bedroom_mark_temperature
+  - sensor.study_east_temperature
+  - sensor.study_west_temperature
+  - sensor.bedroom_jerome_temperature
+  - sensor.bedroom_ros_temperature
 
 thermostat_devices:
   name: Thermostat Devices
   view: false
   entities:
-  - climate.annex_hall_comfort_setpoint_43_1
-  - climate.ballroom_east_comfort_setpoint_33_1
-  - climate.bedroom_mark_comfort_setpoint_29_1
-  - climate.hall_east_comfort_setpoint_24_1
-  - climate.hall_west_comfort_setpoint_13_1
-  - climate.horstmann_scsc17_thermostat_heating_1_35_1
-  - climate.horstmann_scsc17_thermostat_heating_1_50_1
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0
-  - climate.horstmann_unknown_type0003_id0002_mode_36_0_2
-  - climate.kitchen_comfort_setpoint_34_1
-  - climate.library_comfort_setpoint_25_1
-  - climate.lounge_east_comfort_setpoint_30_1
-  - climate.study_east_comfort_setpoint_14_1
-  - climate.study_west_comfort_setpoint_15_1
-  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
-  - climate.bedroom_jerome_comfort_setpoint_44_1
-  - climate.bedroom_ros_comfort_setpoint_55_1
+  - climate.annex_hall_comfort_setpoint
+  - climate.ballroom_east_comfort_setpoint
+  - climate.bedroom_mark_comfort_setpoint
+  - climate.hall_east_comfort_setpoint
+  - climate.hall_west_comfort_setpoint
+  - climate.main_heating_thermostat_heating_1
+  - climate.annex_heating_thermostat_heating_1
+  - climate.kitchen_comfort_setpoint
+  - climate.library_comfort_setpoint
+  - climate.lounge_east_comfort_setpoint
+  - climate.study_east_comfort_setpoint
+  - climate.study_west_comfort_setpoint
+  - climate.danfoss_z_thermostat_014g0013_heating_1
+  - climate.bedroom_jerome_comfort_setpoint
+  - climate.bedroom_ros_comfort_setpoint
 
 # Front-end thermostats
 thermostats:
   name: Thermostats
   view: false
   entities:
-  - climate.annex_hall_thermostat_43_1
-  - climate.ballroom_east_thermostat_33_1
-  - climate.bedroom_mark_thermostat_29_1
-  - climate.hall_east_thermostat_24_1
-  - climate.hall_west_thermostat_13_1
-  - climate.kitchen_thermostat_34_1
-  - climate.library_thermostat_25_1
-  - climate.lounge_east_thermostat_30_1
-  - climate.study_east_thermostat_14_1
-  - climate.study_west_thermostat_15_1
-  - climate.danfoss_z_thermostat_014g0013_heating_1_52_1
-  - climate.bedroom_jerome_thermostat_44_1
-  - climate.bedroom_ros_thermostat_55_1
+  - climate.annex_hall_thermostat
+  - climate.ballroom_east_thermostat
+  - climate.bedroom_mark_thermostat
+  - climate.hall_east_thermostat
+  - climate.hall_west_thermostat
+  - climate.kitchen_thermostat
+  - climate.library_thermostat
+  - climate.lounge_east_thermostat
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
+  - climate.danfoss_z_thermostat_014g0013_heating_1
+  - climate.bedroom_jerome_thermostat
+  - climate.bedroom_ros_thermostat
 
 network: !include network.yaml
 

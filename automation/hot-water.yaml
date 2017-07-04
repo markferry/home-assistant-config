@@ -37,7 +37,7 @@
         before: '05:00:00'
   action:
     service: switch.turn_off
-    entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+    entity_id: switch.main_heating_relay_hot_water
 
 - alias: "Hot Water On"
   trigger:
@@ -73,12 +73,12 @@
         before: '23:00:00'
   action:
     service: switch.turn_on
-    entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+    entity_id: switch.main_heating_relay_hot_water
 
 - alias: "Hot Water Notify"
   trigger:
     - platform: state
-      entity_id: switch.horstmann_unknown_type0003_id0002_switch_36_0_3
+      entity_id: switch.main_heating_relay_hot_water
   action:
     - service: notify.automations
       data_template:

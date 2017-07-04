@@ -1,44 +1,44 @@
-- name: horstmann_scsc17_thermostat_temperature_35_1
+- name: main_heating_thermostat_temperature
   platform: mqtt
   state_topic: ha/main/heating/temperature/state
   unit_of_measurement: "\xB0C"
-- name: horstmann_scsc17_thermostat_temperature_50_1
+- name: annex_heating_thermostat_temperature
   platform: mqtt
   state_topic: ha/annex/heating/temperature/state
   unit_of_measurement: "\xB0C"
 
-- name: greenwave_powernode_1_port_energy_53_0
+- name: greenwave_powernode_53_energy
   platform: mqtt
   state_topic: ha/hottub/state/energy
   unit_of_measurement: "kWh"
-- name: greenwave_powernode_1_port_previous_reading_53_1
+- name: greenwave_powernode_53_previous_reading_X
   platform: mqtt
   state_topic: ha/hottub/previous-state/energy
   unit_of_measurement: "kWh"
 
-- name: greenwave_powernode_1_port_power_53_8
+- name: greenwave_powernode_53_power
   platform: mqtt
   state_topic: ha/hottub/state/power
   unit_of_measurement: "W"
-- name: greenwave_powernode_1_port_previous_reading_53_9
+- name: greenwave_powernode_53_previous_reading_Y
   platform: mqtt
   state_topic: ha/hottub/previous-state/power
   unit_of_measurement: "W"
 
-- name: greenwave_powernode_1_port_energy_54_0
+- name: greenwave_powernode_54_energy
   platform: mqtt
   state_topic: ha/washing-machine/state/energy
   unit_of_measurement: "kWh"
-- name: greenwave_powernode_1_port_previous_reading_54_1
+- name: greenwave_powernode_54_previous_reading_X
   platform: mqtt
   state_topic: ha/washing-machine/previous-state/energy
   unit_of_measurement: "kWh"
 
-- name: greenwave_powernode_1_port_power_54_8
+- name: greenwave_powernode_54_power
   platform: mqtt
   state_topic: ha/washing-machine/state/power
   unit_of_measurement: "W"
-- name: greenwave_powernode_1_port_previous_reading_54_9
+- name: greenwave_powernode_54_previous_reading_Y
   platform: mqtt
   state_topic: ha/washing-machine/previous-state/power
   unit_of_measurement: "W"

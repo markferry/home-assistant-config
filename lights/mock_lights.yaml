@@ -1,17 +1,17 @@
 - command_topic: ha/mock/study/west/level/command
-  name: study_west_level_15_0
+  name: study_west_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/study/east/level/command
-  name: study_east_level_14_0
+  name: study_east_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/lounge/east/level/command
-  name: lounge_east_level_30_0
+  name: lounge_east_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
@@ -39,7 +39,7 @@
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/bedroom_mark/level/command
-  name: bedroom_mark_level_29_0
+  name: bedroom_mark_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
@@ -53,51 +53,59 @@
 - brightness_command_topic: ha/mock/bedroom_mark/overhead/brightness/command
   brightness_scale: 100
   command_topic: ha/mock/bedroom_mark/overhead/dimmer/command
-  name: fibaro_system_fgd212_dimmer_2_level_39_0
+  name: bedroom_mark_overhead_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/kitchen/level/command
-  name: kitchen_level_34_0
+  name: kitchen_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/ballroom/east/level/command
-  name: ballroom_east_level_33_0
+  name: ballroom_east_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
-- brightness_command_topic: ha/mock/ballroom/north/brightness/command
+- name: unused_40_level
+  platform: mqtt
+  command_topic: ha/mock/unused_40/dimmer/command
+  brightness_command_topic: ha/mock/unused_40/brightness/command
   brightness_scale: 100
-  command_topic: ha/mock/ballroom/north/dimmer/command
-  name: ballroom_north_level_41_0
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
+- name: unused_41_level
   platform: mqtt
+  command_topic: ha/mock/unused_41/dimmer/command
+  brightness_command_topic: ha/mock/unused_41/brightness/command
+  brightness_scale: 100
+  optimistic: true
+  payload_off: 'OFF'
+  payload_on: 'ON'
 - command_topic: ha/mock/library/level/command
-  name: library_level_25_0
+  name: library_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/hall/west/level/command
-  name: hall_west_level_13_0
+  name: hall_west_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/hall/east/level/command
-  name: hall_east_level_24_0
+  name: hall_east_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
 - command_topic: ha/mock/hall/annex/level/command
-  name: annex_hall_level_43_0
+  name: annex_hall_level
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
