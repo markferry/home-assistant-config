@@ -1,13 +1,13 @@
 - name: study_west_comfort_setpoint
   platform: generic_thermostat
-  heater: switch.study_demand
+  heater: switch.study_west_demand
   target_sensor: sensor.study_west_temperature
   max_temp: 25
   min_temp: 5
 
 - name: study_east_comfort_setpoint
   platform: generic_thermostat
-  heater: switch.study_demand
+  heater: switch.study_east_demand
   target_sensor: sensor.study_east_temperature
   max_temp: 25
   min_temp: 5
@@ -49,28 +49,28 @@
 
 - name: hall_west_comfort_setpoint
   platform: generic_thermostat
-  heater: switch.hall_demand
+  heater: switch.hall_west_demand
   target_sensor: sensor.hall_west_temperature
   max_temp: 25
   min_temp: 5
 
 - name: hall_east_comfort_setpoint
   platform: generic_thermostat
-  heater: switch.hall_demand
+  heater: switch.hall_east_demand
   target_sensor: sensor.hall_east_temperature
   max_temp: 25
   min_temp: 5
 
 - name: hall_annex_comfort_setpoint
   platform: generic_thermostat
-  heater: switch.hall_demand
-  target_sensor: sensor.hall_annex_temperature
+  heater: switch.annex_hall_demand
+  target_sensor: sensor.annex_hall_temperature
   max_temp: 25
   min_temp: 5
 
 - name: danfoss_z_thermostat_014g0013_heating_1
   platform: generic_thermostat
-  heater: switch.hall_demand
+  heater: switch.guest_room_demand
   target_sensor: sensor.guest_room_temperature
   max_temp: 25
   min_temp: 5

@@ -38,6 +38,8 @@
   platform: mqtt
   state_topic: ha/mock/annex-hall/temperature/state
   unit_of_measurement: "\xB0C"
+
+# guest room temperature doesn't exist as a real device
 - name: guest_room_temperature
   platform: mqtt
   state_topic: ha/mock/guest-room/temperature/state
