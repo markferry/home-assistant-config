@@ -1,13 +1,20 @@
-- name: Study Demand
+- name: Study West Demand
   platform: mqtt
-  command_topic: ha/study/demand/command
+  command_topic: ha/study/west/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   retain: true
 
-- name: Lounge Demand
+- name: Study East Demand
   platform: mqtt
-  command_topic: ha/lounge/demand/command
+  command_topic: ha/study/east/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+
+- name: Lounge East Demand
+  platform: mqtt
+  command_topic: ha/lounge/east/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   retain: true
@@ -40,9 +47,16 @@
   payload_on: 'ON'
   retain: true
 
-- name: Hall Demand
+- name: Hall West Demand
   platform: mqtt
-  command_topic: ha/hall/demand/command
+  command_topic: ha/hall/west/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+
+- name: Hall East Demand
+  platform: mqtt
+  command_topic: ha/hall/east/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   retain: true

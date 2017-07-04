@@ -1,7 +1,7 @@
 # On Demand virtual thermostats
 - name: study_west_thermostat
   platform: generic_thermostat
-  heater: switch.study_demand
+  heater: switch.study_west_demand
   target_sensor: sensor.study_west_temperature
   max_temp: 25
   min_temp: 5
@@ -9,7 +9,7 @@
 
 - name: study_east_thermostat
   platform: generic_thermostat
-  heater: switch.study_demand
+  heater: switch.study_east_demand
   target_sensor: sensor.study_east_temperature
   max_temp: 25
   min_temp: 5
@@ -57,7 +57,7 @@
 
 - name: hall_west_thermostat
   platform: generic_thermostat
-  heater: switch.hall_demand
+  heater: switch.hall_west_demand
   target_sensor: sensor.hall_west_temperature
   max_temp: 25
   min_temp: 5
@@ -65,7 +65,7 @@
 
 - name: hall_east_thermostat
   platform: generic_thermostat
-  heater: switch.hall_demand
+  heater: switch.hall_east_demand
   target_sensor: sensor.hall_east_temperature
   max_temp: 25
   min_temp: 5

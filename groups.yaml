@@ -557,11 +557,18 @@ main_heating_demand:
   - switch.lounge_demand
   - switch.library_demand
   ## temporarily disable hall demand
-  #- switch.hall_demand
+  #- group.hall_demand
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
   - group.bedroom_jerome_demand
+
+hall_demand:
+  name: "Hall Demand"
+  view: false
+  entities:
+  - switch.hall_west_demand
+  - switch.hall_east_demand
 
 bedroom_jerome_demand:
   name: "Jerome's Bedroom Demand"
@@ -588,9 +595,16 @@ annex_heating_demand:
   name: Annex Heating Demand
   view: false
   entities:
-  - switch.study_demand
+  - group.study_demand
   - switch.annex_hall_demand
   - switch.ross_bedroom_demand
+
+study_demand:
+  name: "Study Demand"
+  view: false
+  entities:
+  - switch.study_west_demand
+  - switch.study_east_demand
 
 room_scenes:
   name: Rooms
