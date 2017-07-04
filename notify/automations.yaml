@@ -11,5 +11,5 @@
     - service: pushetta
     - service: ios_marks_iphone
     - service: ios_ross_iphone
-    - service: ios_thomass_iphone
+    - service: ios_thomas_cmtcd
     - service: ios_annies_iphone2

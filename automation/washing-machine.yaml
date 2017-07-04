@@ -6,7 +6,7 @@
 - alias: 'Washing Machine Hi'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_1_port_power_54_8
+    entity_id: sensor.greenwave_powernode_54_power
     above: 30
   action:
     service: input_boolean.turn_on
@@ -15,7 +15,7 @@
 - alias: 'Washing Machine Lo'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_1_port_power_54_8
+    entity_id: sensor.greenwave_powernode_54_power
     below: 20
   action:
     service: input_boolean.turn_off
@@ -38,7 +38,7 @@
       data_template:
         topic: 'ha/event/washing-machine'
         payload: 'on'
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
         message: 'Washing machine cycle started'
 
@@ -60,7 +60,7 @@
       data_template:
         topic: 'ha/event/washing-machine'
         payload: 'off'
-    - service: notify.automations
+    - service: notify.whalebarn
       data_template:
         message: 'Washing machine cycle ended'
     - service: persistent_notification.create

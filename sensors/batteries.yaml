@@ -2,16 +2,16 @@
   sensors:
     main_heating_thermostat_battery:
       value_template: >
-        {% if states.zwave.horstmann_scsc17_thermostat_35 %}
-          {{ states.zwave.horstmann_scsc17_thermostat_35.attributes.battery_level }}
+        {% if states.zwave.main_heating_thermostat %}
+          {{ states.zwave.main_heating_thermostat.attributes.battery_level }}
         {% else %}
           unknown
         {% endif %}
       unit_of_measurement: '%'
     annex_heating_thermostat_battery:
       value_template: >
-        {% if states.zwave.horstmann_scsc17_thermostat_50 %}
-          {{ states.zwave.horstmann_scsc17_thermostat_50.attributes.battery_level }}
+        {% if states.zwave.annex_heating_thermostat %}
+          {{ states.zwave.annex_heating_thermostat.attributes.battery_level }}
         {% else %}
           unknown
         {% endif %}
