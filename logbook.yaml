@@ -1,12 +1,4 @@
 # Used by both history and logbook
-exclude:
-  domains:
-    - updater
-    - device_tracker
-    - zwave
-  entities:
-    - input_boolean.washing_machine_debouncer
-    - input_boolean.hottub_debouncer
 include:
   domains:
     - automation
@@ -48,6 +40,30 @@ include:
     - sensor.bedroom_ros_battery
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
-    - switch.greenwave_powernode_53_switch
     - sensor.greenwave_powernode_53_power
-
+    - sensor.greenwave_powernode_54_power
+exclude:
+  domains:
+    - updater
+    - device_tracker
+    - zwave
+  entities:
+    - automation.annex_heating_poll_off
+    - automation.annex_heating_poll_on
+    - automation.ballroom_mood
+    - automation.guest_room_mood
+    - automation.hot_tub_hi
+    - automation.hot_tub_lo
+    - automation.hot_water_off
+    - automation.hot_water_on
+    - automation.jeromes_bedroom_mood
+    - automation.kitchen_mood
+    - automation.library_mood
+    - automation.lounge_mood
+    - automation.marks_bedroom_mood
+    - automation.ross_bedroom_mood
+    - automation.set_real_thermostat
+    - automation.set_virtual_thermostat
+    - automation.study_mood
+    - automation.washing_machine_hi
+    - automation.washing_machine_lo
