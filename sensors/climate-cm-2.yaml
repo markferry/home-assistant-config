@@ -1,0 +1,38 @@
+#
+# SNMP sensors for CliMate CM-2 monitor
+#
+
+- name: cm2_temp_c
+  platform: snmp
+  host: climate
+  baseoid: 1.3.6.1.4.1.17373.3.2.1.5.1
+  unit_of_measurement: "\xB0C"
+
+- name: cm2_humidity
+  platform: snmp
+  host: climate
+  baseoid: 1.3.6.1.4.1.17373.3.2.1.7.1
+  unit_of_measurement: '%'
+
+- name: cm2_light
+  platform: snmp
+  host: climate
+  baseoid: 1.3.6.1.4.1.17373.3.2.1.8.1
+  unit_of_measurement: lux
+
+- name: cm2_airflow
+  platform: snmp
+  host: climate
+  baseoid: 1.3.6.1.4.1.17373.3.2.1.9.1
+
+- name: cm2_sound
+  platform: snmp
+  host: climate
+  baseoid: 1.3.6.1.4.1.17373.3.2.1.10.1
+
+- name: cm2_dew_point_c
+  platform: snmp
+  host: climate
+  baseoid: 1.3.6.1.4.1.17373.3.2.1.14.1
+  unit_of_measurement: "\xB0C"
+
