@@ -55,6 +55,20 @@ study_appliances:
   - device_tracker.ricoh213w
   - device_tracker.canonmg5550
 
+armoury:
+  name: Armoury
+  view: true
+  icon: mdi:security
+  entities:
+    - sensor.cm2_temp_c
+    - sensor.cm2_humidity
+    - sensor.cm2_light
+    - sensor.cm2_airflow
+    - sensor.cm2_sound
+    - sensor.cm2_dew_point_c
+    - group.network
+    - group.ups
+
 kitchen:
   name: Kitchen
   view: true
@@ -525,8 +539,6 @@ settings:
   view: true
   icon: mdi:settings
   entities:
-  - group.network
-  - group.ups
   - group.temperatures
   - group.thermostats
   - group.thermostat_devices

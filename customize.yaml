@@ -28,6 +28,8 @@ group.bedrooms:
   order: 8
 group.radio:
   order: 9
+group.armoury:
+  order: 9
 group.settings:
   order: 10
 
