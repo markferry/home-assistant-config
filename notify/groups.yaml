@@ -1,0 +1,66 @@
+# Group for all automation notifications
+- name: automations
+  platform: group
+  services:
+    - service: pushetta
+
+- name: admin
+  platform: group
+  services:
+    - service: pushetta
+    - service: ios_marks_iphone
+    - service: html5_markmotog5
+
+# All Barnmates
+- name: whalebarn
+  platform: group
+  services:
+    - service: ios_marks_iphone
+    - service: ios_ross_iphone
+    - service: ios_thomas_cmtcd
+    - service: ios_annies_iphone2
+    - service: html5_markmotog5
+    - service: html5_marktablet
+
+# Barnacles
+- name: barnacles
+  platform: group
+  services:
+
+# All Devices
+- name: all_devices
+  platform: group
+  services:
+    - service: pushetta
+    - service: ios_marks_iphone
+    - service: ios_ross_iphone
+    - service: ios_thomas_cmtcd
+    - service: ios_annies_iphone2
+    - service: html5_markmotog5
+    - service: html5_marktablet
+    - service: html5_rostablet
+
+# All iphones
+- name: all_iphones
+  platform: group
+  services:
+    - service: ios_marks_iphone
+    - service: ios_ross_iphone
+    - service: ios_thomas_cmtcd
+    - service: ios_annies_iphone2
+
+# All androids
+- name: all_androids
+  platform: group
+  services:
+    - service: html5_markmotog5
+
+# All tablets
+- name: all_tablets
+  platform: group
+  services:
+    - service: html5_kitchen
+    - service: html5_library
+    - service: html5_marktablet
+    - service: html5_rostablet
+
