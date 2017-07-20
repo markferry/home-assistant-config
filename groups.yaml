@@ -474,15 +474,6 @@ radio_stream_map:
   - input_select.ballroom_stream
   - input_select.marks_bedroom_stream
 
-washing_machine:
-  name: Washing Machine
-  icon: mdi:washing-machine
-  entities:
-  - binary_sensor.washing_machine
-  - switch.greenwave_powernode_54_switch
-  - sensor.greenwave_powernode_54_energy
-  - sensor.greenwave_powernode_54_power
-
 ups:
   name: UPS
   icon: mdi:car-battery
