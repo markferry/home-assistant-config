@@ -12,6 +12,8 @@ homeassistant:
   customize: !include customize.yaml
   packages:
     package_camera0: !include packages/dahua-cameras.yaml
+    pack_hottub: !include packages/hottub.yaml
+
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
@@ -110,3 +112,4 @@ climate: !include_dir_merge_list thermostats
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
 script: !include_dir_merge_named scripts
+

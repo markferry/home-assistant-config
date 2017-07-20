@@ -1,9 +1,38 @@
+# Hot Tub UI entity (read-only)
+#
+# Triggered by automation.hottub_started
+# and automation.hottub_stopped
+#
+binary_sensor:
+- name: hottub
+  platform: mqtt
+  state_topic: ha/event/hottub
+  payload_on: 'on'
+  payload_off: 'off'
+  initial: off
+
+input_boolean:
+  hottub_debouncer:
+    name: "Hot Tub Debouncer"
+    initial: off
+
+group:
+  g_hottub:
+    name: Hot Tub
+    icon: mdi:pot
+    entities:
+    - binary_sensor.hottub
+    - switch.greenwave_powernode_53_switch
+    - sensor.greenwave_powernode_53_energy
+    - sensor.greenwave_powernode_53_power
+
 # Power detection for the hot tub
 # Debounce numeric_state with an input_boolean.
 #
 # Hot tub heater load is ~2000W
 # Filter only load is ~30W
 #
+automation:
 - alias: 'Hot Tub Hi'
   trigger:
     platform: numeric_state

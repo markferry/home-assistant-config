@@ -5,6 +5,3 @@ washing_machine_debouncer:
   name: "Washing Machine Debouncer"
   initial: off
 
-hottub_debouncer:
-  name: "Hot Tub Debouncer"
-  initial: off

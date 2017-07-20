@@ -128,7 +128,7 @@ hall:
   - group.hall_lights
   - group.main_heating
   - group.annex_heating
-  - group.hottub
+  - group.g_hottub
 hall_compact_ui:
   name: Hall
   view: false
@@ -473,15 +473,6 @@ radio_stream_map:
   - input_select.library_stream
   - input_select.ballroom_stream
   - input_select.marks_bedroom_stream
-
-hottub:
-  name: Hot Tub
-  icon: mdi:pot
-  entities:
-  - binary_sensor.hottub
-  - switch.greenwave_powernode_53_switch
-  - sensor.greenwave_powernode_53_energy
-  - sensor.greenwave_powernode_53_power
 
 washing_machine:
   name: Washing Machine
