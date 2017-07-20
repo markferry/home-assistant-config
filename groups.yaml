@@ -69,48 +69,6 @@ armoury:
     - group.network
     - group.ups
 
-kitchen:
-  name: Kitchen
-  view: true
-  icon: mdi:stove
-  entities:
-  - sensor.kitchen_temperature
-  - group.kitchen_compact_ui
-  - media_player.kitchen
-  - sensor.greenwave_powernode_54_energy
-  - sensor.greenwave_powernode_54_power
-kitchen_compact_ui:
-  name: Kitchen
-  view: false
-  icon: mdi:stove
-  entities:
-  - input_select.kitchen_select
-  - climate.kitchen_thermostat
-  - binary_sensor.washing_machine
-kitchen_scenes:
-  name: Kitchen
-  view: false
-  entities:
-  - input_select.kitchen_select
-kitchen_heating:
-  name: Kitchen Heating
-  view: false
-  entities:
-  - climate.kitchen_thermostat
-kitchen_setpoints:
-  name: Kitchen Setpoints
-  view: false
-  entities:
-  - climate.kitchen_comfort_setpoint
-kitchen_thermostats:
-  name: Kitchen Thermostats
-  view: false
-  entities:
-  - climate.kitchen_thermostat
-kitchen_lights:
-  name: Kitchen Lights
-  view: false
-
 hall:
   name: Hall
   view: true

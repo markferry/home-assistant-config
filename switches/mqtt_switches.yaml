@@ -26,13 +26,6 @@
   payload_on: 'ON'
   retain: true
 
-- name: Kitchen Demand
-  platform: mqtt
-  command_topic: ha/kitchen/demand/command
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  retain: true
-
 - name: Ballroom Demand
   platform: mqtt
   command_topic: ha/ballroom/demand/command

@@ -7,15 +7,6 @@ study_select:
   initial: 'Off'
   icon: mdi:printer
 
-kitchen_select:
-  name: Kitchen Mood
-  options:
-    - 'Off'
-    - 'Cosy'
-    - 'Bright'
-  initial: 'Off'
-  icon: mdi:stove
-
 lounge_select:
   name: Lounge Mood
   options:

@@ -15,13 +15,6 @@ hue_annex_hall_thermostat:
         temperature: "{{ requested_level }}"
         entity_id: climate.annex_hall_thermostat
 
-hue_kitchen_thermostat:
-  sequence:
-    - service: climate.set_temperature
-      data_template:
-        temperature: "{{ requested_level }}"
-        entity_id: climate.kitchen_thermostat
-
 hue_hall_thermostat:
   sequence:
     - service: climate.set_temperature
