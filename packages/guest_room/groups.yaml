@@ -1,0 +1,30 @@
+guest_room:
+  name: Guest Room
+  icon: mdi:hotel
+  view: false
+  entities:
+  - group.guest_room_compact_ui
+guest_room_compact_ui:
+  name: Guest Room
+  view: false
+  icon: mdi:hotel
+  entities:
+  - input_select.guest_room_select
+  - climate.danfoss_z_thermostat_014g0013_heating_1
+guest_room_scenes:
+  name: Guest Room
+  view: false
+  entities:
+  - input_select.guest_room_select
+guest_room_heating:
+  name: Guest Room Heating
+  view: false
+  entities:
+  - climate.danfoss_z_thermostat_014g0013_heating_1
+guest_room_setpoints:
+  name: Guest Room Setpoints
+  view: false
+  entities:
+  - climate.danfoss_z_thermostat_014g0013_heating_1
+
+

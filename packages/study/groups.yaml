@@ -1,0 +1,51 @@
+study:
+  name: Study
+  icon: mdi:printer
+  view: true
+  entities:
+  - sensor.study_east_temperature
+  - sensor.study_west_temperature
+  - group.study_compact_ui
+  - group.study_appliances
+  - media_player.study
+study_compact_ui:
+  name: Study
+  view: false
+  entities:
+  - input_select.study_select
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
+study_scenes:
+  name: Study
+  view: false
+  entities:
+  - input_select.study_select
+study_heating:
+  name: Study Heating
+  view: false
+  entities:
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
+study_setpoints:
+  name: Study Setpoints
+  view: false
+  entities:
+  - climate.study_east_comfort_setpoint
+  - climate.study_west_comfort_setpoint
+study_thermostats:
+  name: Study Thermostats
+  view: false
+  entities:
+  - climate.study_east_thermostat
+  - climate.study_west_thermostat
+study_lights:
+  name: Study Lights
+  view: false
+  entities: {}
+study_appliances:
+  name: Study Appliances
+  view: false
+  entities:
+  - device_tracker.ricoh213w
+  - device_tracker.canonmg5550
+
