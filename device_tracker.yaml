@@ -21,3 +21,9 @@
 #  host: 192.168.7.1
 #  username: root
 #  password: XXXX
+
+- platform: unifi
+  host: hastur
+  username: !secret unifi_username
+  password: !secret unifi_password
+  verify_ssl: False
