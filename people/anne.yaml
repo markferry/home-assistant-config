@@ -1,5 +1,7 @@
 name: "Anne"
 entities:
 - device_tracker.anne_phone
-- device_tracker.anniesiphone2
+- device_tracker.anne_iphone2
+- device_tracker.anne_iphone2_bt
+- device_tracker.anne_ipad
 - device_tracker.anniehp

@@ -1,7 +1,7 @@
 name: "Tom"
 entities:
 - device_tracker.thomas_phone
-- device_tracker.thomascmtcd
-- device_tracker.thomascmtcdhomewhalebarncom
-- device_tracker.thomassiphone
-- device_tracker.thomasmbp
+- device_tracker.thomas_iphone
+- device_tracker.thomas_mbp
+- device_tracker.thomas_mbp_bt
+- device_tracker.thomas_cmtcd
