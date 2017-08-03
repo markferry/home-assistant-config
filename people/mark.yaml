@@ -1,5 +1,5 @@
 name: "Mark"
 entities:
 - device_tracker.mark_phone
-- device_tracker.mark_android
-- device_tracker.omeng5
+- device_tracker.mark_moto_g5
+- device_tracker.mark_moto_g5_bt

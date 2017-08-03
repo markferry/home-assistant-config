@@ -1,6 +1,6 @@
 name: "Ros"
 entities:
 - device_tracker.ros_phone
-- device_tracker.rosiphone
-- device_tracker.rossipad
-- device_tracker.ccc564630
+- device_tracker.ros_iphone
+- device_tracker.ros_ipad
+- device_tracker.ros_ccc564630
