@@ -1,0 +1,187 @@
+homeassistant:
+  customize:
+    script.all_rooms_audio:
+      friendly_name: Music Everywhere
+      icon: mdi:music-box-outline
+      emulated_hue: true
+    media_player.mpd:
+      friendly_name: "Snapcast Source"
+      icon: mdi:speaker-wireless
+    media_player.snapcast_client_00c141020928:
+      friendly_name: "Mark's Bedroom Snapcast"
+    media_player.snapcast_client_4ceb42cb0886:
+      friendly_name: shochu Snapcast
+    media_player.snapcast_client_74c246247a4d:
+      friendly_name: Library Snapcast
+    media_player.snapcast_client_80d21d413dff:
+      friendly_name: Kitchen Snapcast
+    media_player.snapcast_client_b827eb464b04:
+      friendly_name: Study Snapcast
+    media_player.snapcast_client_b827eb7739b3:
+      friendly_name: Lounge Snapcast
+    media_player.snapcast_client_b827eb976047:
+      friendly_name: Ballroom Snapcast
+
+input_slider:
+    snapcast_client_b827eb464b04:
+      name: Study
+      icon: mdi:printer
+      min: 0
+      max: 100
+      initial: 80
+    snapcast_client_80d21d413dff:
+      name: Kitchen Snapcast
+      icon: mdi:stove
+      min: 0
+      max: 100
+      initial: 80
+    snapcast_client_b827eb7739b3:
+      name: Lounge Snapcast
+      icon: mdi:sofa
+      min: 0
+      max: 100
+      initial: 80
+    snapcast_client_74c246247a4d:
+      name: Library
+      icon: mdi:library
+      min: 0
+      max: 100
+      initial: 80
+    snapcast_client_b827eb976047:
+      name: Ballroom Snapcast
+      icon: mdi:projector
+      min: 0
+      max: 100
+      initial: 80
+    snapcast_client_00c141020928:
+      name: "Mark's Bedroom Snapcast"
+      icon: mdi:account
+      min: 0
+      max: 100
+      initial: 80
+    snapcast_client_4ceb42cb0886:
+      name: shochu Snapcast
+      icon: mdi:laptop-chromebook
+      min: 0
+      max: 100
+      initial: 80
+
+automation:
+- alias: "Update media_player volume"
+  trigger:
+    platform: state
+    entity_id:
+      - input_slider.snapcast_client_00c141020928
+      - input_slider.snapcast_client_4ceb42cb0886
+      - input_slider.snapcast_client_74c246247a4d
+      - input_slider.snapcast_client_80d21d413dff
+      - input_slider.snapcast_client_b827eb464b04
+      - input_slider.snapcast_client_b827eb7739b3
+      - input_slider.snapcast_client_b827eb976047
+  action:
+    # unmute
+    - service: media_player.volume_mute
+      data_template:
+        entity_id: '{{trigger.entity_id.replace("input_slider", "media_player")}}'
+        is_volume_muted: false
+    - service: media_player.volume_set
+      data_template:
+        entity_id: '{{trigger.entity_id.replace("input_slider", "media_player")}}'
+        volume_level: '{{ trigger.to_state.state | float / 100 }}'
+
+- alias: "Update input_slider Volume"
+  trigger:
+    platform: state
+    entity_id:
+      - media_player.snapcast_client_00c141020928
+      - media_player.snapcast_client_4ceb42cb0886
+      - media_player.snapcast_client_74c246247a4d
+      - media_player.snapcast_client_80d21d413dff
+      - media_player.snapcast_client_b827eb464b04
+      - media_player.snapcast_client_b827eb7739b3
+      - media_player.snapcast_client_b827eb976047
+  action:
+    - service: input_slider.select_value
+      data_template:
+        entity_id: '{{trigger.entity_id.replace("media_player", "input_slider")}}'
+        value: '{{ trigger.to_state.attributes.volume_level * 100 }}'
+
+
+media_player:
+  - platform: snapcast
+    host: hastur
+
+  - platform: mpd
+    host: hastur
+    location: Multi-Room Controller
+
+group:
+  snapclients:
+    name: Snapcast Clients
+    entities:
+    - script.all_rooms_audio
+    #- media_player.snapcast_client_000000000000
+    - media_player.snapcast_client_00c141020928
+    - media_player.snapcast_client_4ceb42cb0886
+    - media_player.snapcast_client_74c246247a4d
+    - media_player.snapcast_client_80d21d413dff
+    - media_player.snapcast_client_b827eb464b04
+    - media_player.snapcast_client_b827eb7739b3
+    - media_player.snapcast_client_b827eb976047
+  snapclient_sliders:
+    name: Snapcast Volume
+    entities:
+    - input_slider.snapcast_client_00c141020928
+    - input_slider.snapcast_client_4ceb42cb0886
+    - input_slider.snapcast_client_74c246247a4d
+    - input_slider.snapcast_client_80d21d413dff
+    - input_slider.snapcast_client_b827eb464b04
+    - input_slider.snapcast_client_b827eb7739b3
+    - input_slider.snapcast_client_b827eb976047
+
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+
+script:
+  all_rooms_audio:
+    sequence:
+      - service: homeassistant.turn_on
+        data:
+          entity_id: group.media_players
+      - service: media_player.volume_set
+        data:
+          entity_id: group.snapclients
+          volume_level: 1.0
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.ballroom_amplifier
+          source: 'Media'
+
+
+  tts_broadcast:
+    sequence:
+      - service: snapcast.snapcast_snapshot
+        data:
+          entity_id:
+            - group.snapclients
+      - service: media_player.select_source
+        data:
+          entity_id: group.snapclients
+          source: TTS
+      - service: media_player.volume_set
+        data:
+          entity_id: group.snapclients
+          volume_level: 0.5
+      - service_template: "tts.google_say"
+        data_template:
+          entity_id: media_player.tts
+          message: "{{message}}"
+      - wait_template: "{{states.media_player.tts.state == 'idle'}}"
+        timeout: 120
+      - service: snapcast.snapcast_restore
+        data:
+          entity_id:
+            - group.snapclients
