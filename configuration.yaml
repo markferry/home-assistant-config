@@ -17,6 +17,7 @@ homeassistant:
     package_washing_machine: !include packages/washing-machine.yaml
     package_stream_radio: !include packages/stream-radio.yaml
     package_oil_monitor: !include packages/myolive.yaml
+    package_multiroom_audio: !include packages/multiroom_audio.yaml
 
     package_study: !include packages/study/package.yaml
     package_study_heating: !include packages/study/heating-on-demand.yaml
