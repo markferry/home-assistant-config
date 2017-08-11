@@ -31,6 +31,13 @@ recorder:
   db_url: !secret db_url
   purge_days: 30
 
+influxdb:
+  host: !secret influx_host
+  database: !secret influx_database
+  username: !secret influx_user
+  password: !secret influx_password
+
+
 # Checks for available updates
 updater:
 
