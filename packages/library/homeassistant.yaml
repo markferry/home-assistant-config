@@ -1,0 +1,26 @@
+customize:
+  light.library_level_25:
+    friendly_name: Library Valve
+
+  sensor.library_temperature:
+    friendly_name: Library
+    polling_intensity: 5
+  sensor.library_battery:
+    friendly_name: Library Battery
+    icon: mdi:battery
+
+  climate.library_thermostat:
+    friendly_name: Library
+  climate.library_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_library_thermostat:
+    friendly_name: Library Thermostat
+
+  script.hue_library_off:
+    friendly_name: "Library"
+  script.hue_library_chat:
+    friendly_name: "Library Mood Chat"
+  script.hue_library_read:
+    friendly_name: "Library Mood Read"

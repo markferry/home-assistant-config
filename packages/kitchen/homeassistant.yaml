@@ -1,0 +1,26 @@
+customize:
+  light.kitchen_level_34:
+    friendly_name: Kitchen Valve
+
+  climate.kitchen_thermostat:
+    friendly_name: Kitchen
+  climate.kitchen_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  sensor.kitchen_temperature:
+    friendly_name: Kitchen
+    polling_intensity: 5
+  sensor.kitchen_battery:
+    friendly_name: Kitchen Battery
+    icon: mdi:battery
+
+  script.hue_kitchen_thermostat:
+    friendly_name: Kitchen Thermostat
+
+  script.hue_kitchen_off:
+    friendly_name: "Kitchen"
+  script.hue_kitchen_cosy:
+    friendly_name: "Kitchen Mood Cosy"
+  script.hue_kitchen_bright:
+    friendly_name: "Kitchen Mood Bright"

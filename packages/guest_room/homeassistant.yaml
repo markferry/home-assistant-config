@@ -1,0 +1,14 @@
+customize:
+  script.hue_guest_room_thermostat:
+    friendly_name: "Guest Room Thermostat"
+
+  script.hue_guest_room_off:
+    friendly_name: "Guest Room"
+  script.hue_guest_room_sleep:
+    friendly_name: "Guest Room Mood Sleep"
+  script.hue_guest_room_cosy:
+    friendly_name: "Guest Room Mood Cosy"
+
+  group.guest_room_select:
+    order: 1
+    entity_picture: mdi:hotel

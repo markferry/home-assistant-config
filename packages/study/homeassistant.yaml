@@ -1,0 +1,40 @@
+customize:
+  light.study_east_level_14:
+    friendly_name: Study East Valve
+  light.study_west_level_15:
+    friendly_name: Study West Valve
+
+  sensor.study_east_temperature:
+    friendly_name: Study East
+    polling_intensity: 5
+  sensor.study_west_temperature:
+    friendly_name: Study West
+    polling_intensity: 5
+  sensor.study_east_battery:
+    friendly_name: Study East Battery
+    icon: mdi:battery
+  sensor.study_west_battery:
+    friendly_name: Study West Battery
+    icon: mdi:battery
+
+  climate.study_east_thermostat:
+    friendly_name: Study East
+  climate.study_west_thermostat:
+    friendly_name: Study West
+  climate.study_east_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+  climate.study_west_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_study_thermostat:
+    friendly_name: Study Thermostat
+
+  script.hue_study_off:
+    friendly_name: "Study"
+  script.hue_study_work:
+    friendly_name: "Study Mood Work"
+  script.hue_study_relax:
+    friendly_name: "Study Mood Relax"
+
