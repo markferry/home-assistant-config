@@ -27,3 +27,6 @@ customize:
   script.hue_ballroom_bright:
     friendly_name: "Ballroom Mood Bright"
 
+  media_player.txnr636_0009b09961fb:
+    friendly_name: Ballroom Amplifier
+

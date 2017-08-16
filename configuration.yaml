@@ -21,7 +21,7 @@ homeassistant:
     package_lounge: !include packages/lounge/package.yaml
     package_library: !include packages/library/package.yaml
     package_ballroom: !include packages/ballroom/package.yaml
-    #package_armoury: !include packages/armoury/package.yaml
+    package_armoury: !include packages/armoury/package.yaml
     package_guest_room: !include packages/guest_room/package.yaml
     #package_bedroom_mark: !include packages/bedroom_mark/package.yaml
     #package_kitchen: !include packages/kitchen/package.yaml

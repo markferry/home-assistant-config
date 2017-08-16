@@ -1,0 +1,32 @@
+bedroom_ros:
+  name: "Ros's Bedroom"
+  icon: mdi:hotel
+  #view: true
+  entities:
+  - group.bedroom_ros_compact_ui
+bedroom_ros_compact_ui:
+  name: "Ros's Bedroom"
+  view: false
+  entities:
+  - input_select.bedroom_ros_select
+  - climate.bedroom_ros_thermostat
+bedroom_ros_scenes:
+  name: "Ros's Bedroom"
+  view: false
+  entities:
+  - input_select.bedroom_ros_select
+bedroom_ros_heating:
+  name: "Ros's Bedroom Heating"
+  view: false
+  entities:
+  - climate.bedroom_ros_thermostat
+bedroom_ros_setpoints:
+  name: "Ros's Bedroom Setpoints"
+  view: false
+  entities:
+  - climate.bedroom_ros_comfort_setpoint
+bedroom_ros_thermostats:
+  name: "Ros's Bedroom Thermostats"
+  view: false
+  entities:
+  - climate.bedroom_ros_thermostat

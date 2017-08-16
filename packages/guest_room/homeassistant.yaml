@@ -12,3 +12,9 @@ customize:
   group.guest_room_select:
     order: 1
     entity_picture: mdi:hotel
+
+  climate.danfoss_z_thermostat_014g0013_heating_1:
+    friendly_name: Guest Room
+    min_temp: 5
+    max_temp: 25
+

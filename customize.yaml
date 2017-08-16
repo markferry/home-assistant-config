@@ -104,8 +104,6 @@ light.unused_40_level:
 light.unused_41_level:
   friendly_name: Unused Dimmer 41
   polling_intensity: 0
-light.bedroom_mark_overhead_level:
-  friendly_name: "Mark's Bedroom Overhead"
 climate.main_heating_thermostat_heating_1:
   friendly_name: Main Heating Thermostat
 sensor.main_heating_thermostat_temperature:
@@ -127,59 +125,14 @@ switch.main_heating_relay_hot_water:
 switch.horstmann_asrzw_thermostat_receiver_switch:
   friendly_name: Annex Heating Switch
 
-media_player.txnr636_0009b09961fb:
-  friendly_name: Ballroom Amplifier
-media_player.bedroommarkaudio:
-  friendly_name: "Mark's Chromecast"
-
-light.bedroom_mark_level_29:
-  friendly_name: "Mark's Bedroom Valve"
-sensor.bedroom_mark_temperature:
-  friendly_name: "Mark's Bedroom"
-  polling_intensity: 5
-
 sensor.main_heating_thermostat_battery:
   friendly_name: Main Heating Battery
   icon: mdi:battery
 sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
-sensor.bedroom_mark_battery:
-  friendly_name: "Mark's Bedroom Battery"
-  icon: mdi:battery
-
-# generic thermostats
-climate.bedroom_mark_thermostat:
-  friendly_name: "Mark's Bedroom"
 
 # real thermostats
-climate.danfoss_z_thermostat_014g0013_heating_1:
-  friendly_name: Guest Room
-  min_temp: 5
-  max_temp: 25
-
-climate.bedroom_mark_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-
-climate.bedroom_jerome_thermostat:
-  friendly_name: "Jerome's Bedroom"
-sensor.bedroom_jerome_temperature:
-  friendly_name: "Jerome's Bedroom"
-  polling_intensity: 5
-sensor.bedroom_jerome_battery:
-  friendly_name: "Jerome's Bedroom Battery"
-  icon: mdi:battery
-
-climate.bedroom_ros_thermostat:
-  friendly_name: "Ros's Bedroom"
-sensor.bedroom_ros_temperature:
-  friendly_name: "Ros's Bedroom"
-  polling_intensity: 5
-sensor.bedroom_ros_battery:
-  friendly_name: "Ros's Bedroom Battery"
-  icon: mdi:battery
-
 switch.greenwave_powernode_53_switch:
   friendly_name: Hot Tub Power Supply
   icon: mdi:pot
@@ -206,84 +159,11 @@ binary_sensor.hottub:
   friendly_name: Hot Tub Heating
   icon: mdi:pot
 
-sensor.cm2_temp_c:
-  friendly_name: Temperature
-sensor.cm2_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.cm2_light:
-  friendly_name: Luminance
-  icon: mdi:weather-sunny
-sensor.cm2_airflow:
-  friendly_name: Airflow
-  icon: mdi:weather-windy
-sensor.cm2_sound:
-  friendly_name: Sound Level
-  icon: mdi:microphone
-sensor.cm2_dew_point_c:
-  friendly_name: Dew Point
-  icon: mdi:weather-rainy
-
-sensor.eaton_ups_status:
-  friendly_name: UPS Status
-sensor.eaton_ups_load:
-  friendly_name: UPS Load
-sensor.eaton_battery_charge:
-  friendly_name: UPS Charge
-sensor.eaton_ups_battery_runtime:
-  friendly_name: UPS Runtime
-
-script.hue_bedroom_mark_thermostat:
-  friendly_name: "Mark's Bedroom Thermostat"
-script.hue_bedroom_jerome_thermostat:
-  friendly_name: "Jerome's Bedroom Thermostat"
-script.hue_bedroom_ros_thermostat:
-  friendly_name: "Ros's Bedroom Thermostat"
-
 script.table_tennis:
   friendly_name: "Table Tennis Mode"
 
 script.hue_everything_off:
   friendly_name: "Everything Off"
-
-script.hue_marks_bedroom_off:
-  friendly_name: "Mark's Bedroom"
-script.hue_marks_bedroom_sleep:
-  friendly_name: "Mark's Bedroom Mood Sleep"
-script.hue_marks_bedroom_play:
-  friendly_name: "Mark's Bedroom Mood Play"
-
-script.hue_bedroom_jerome_off:
-  friendly_name: "Jerome's Bedroom"
-script.hue_bedroom_jerome_sleep:
-  friendly_name: "Jerome's Bedroom Mood Sleep"
-script.hue_bedroom_jerome_cosy:
-  friendly_name: "Jerome's Bedroom Mood Cosy"
-
-script.hue_bedroom_ros_off:
-  friendly_name: "Ros's Bedroom"
-script.hue_bedroom_ros_sleep:
-  friendly_name: "Ros's Bedroom Mood Sleep"
-script.hue_bedroom_ros_cosy:
-  friendly_name: "Ros's Bedroom Mood Cosy"
-
-group.marks_bedroom_select:
-  order: 1
-  icon: /local/wb-icons/wb_mark.png
-input_select.marks_bedroom_select:
-  entity_picture: /local/wb-icons/wb_mark.png
-
-group.bedroom_jerome_select:
-  order: 1
-  icon: /local/wb-icons/wb_jerome.png
-input_select.bedroom_jerome_select:
-  entity_picture: /local/wb-icons/wb_jerome.png
-
-group.bedroom_ros_select:
-  order: 1
-  icon: /local/wb-icons/wb_ros.png
-input_select.bedroom_ros_select:
-  entity_picture: /local/wb-icons/wb_ros.png
 
 # Place guest room last
 group.bedroom_mark_compact_ui:

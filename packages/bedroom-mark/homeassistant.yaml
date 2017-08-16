@@ -1,0 +1,38 @@
+customize:
+  light.bedroom_mark_overhead_level:
+    friendly_name: "Mark's Bedroom Overhead"
+  light.bedroom_mark_level_29:
+    friendly_name: "Mark's Bedroom Valve"
+
+  sensor.bedroom_mark_temperature:
+    friendly_name: "Mark's Bedroom"
+    polling_intensity: 5
+  sensor.bedroom_mark_battery:
+    friendly_name: "Mark's Bedroom Battery"
+    icon: mdi:battery
+
+  climate.bedroom_mark_thermostat:
+    friendly_name: "Mark's Bedroom"
+  climate.bedroom_mark_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_bedroom_mark_thermostat:
+    friendly_name: "Mark's Bedroom Thermostat"
+
+  script.hue_marks_bedroom_off:
+    friendly_name: "Mark's Bedroom"
+  script.hue_marks_bedroom_sleep:
+    friendly_name: "Mark's Bedroom Mood Sleep"
+  script.hue_marks_bedroom_play:
+    friendly_name: "Mark's Bedroom Mood Play"
+
+  group.marks_bedroom_select:
+    order: 1
+    icon: /local/wb-icons/wb_mark.png
+  input_select.marks_bedroom_select:
+    entity_picture: /local/wb-icons/wb_mark.png
+
+  media_player.bedroommarkaudio:
+    friendly_name: "Mark's Chromecast"
+

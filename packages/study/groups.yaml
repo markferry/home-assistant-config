@@ -49,3 +49,10 @@ study_appliances:
   - device_tracker.ricoh213w
   - device_tracker.canonmg5550
 
+study_demand:
+  name: "Study Demand"
+  view: false
+  entities:
+  - switch.study_west_demand
+  - switch.study_east_demand
+

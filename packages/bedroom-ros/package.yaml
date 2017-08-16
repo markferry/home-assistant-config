@@ -1,0 +1,2 @@
+homeassistant: !include homeassistant.yaml
+group: !include groups.yaml
