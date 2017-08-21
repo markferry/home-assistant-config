@@ -1,0 +1,7 @@
+- name: Guest Room Demand
+  platform: mqtt
+  command_topic: ha/guest-room/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+

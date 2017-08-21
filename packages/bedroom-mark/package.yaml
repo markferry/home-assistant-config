@@ -1,2 +1,4 @@
 homeassistant: !include homeassistant.yaml
 group: !include groups.yaml
+scene: !include scenes.yaml
+switch: !include switches.yaml

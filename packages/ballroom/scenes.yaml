@@ -1,0 +1,28 @@
+- name: Ballroom Off
+  entities:
+    group.ballroom_lights:
+      state: off
+    climate.ballroom_east_thermostat:
+      temperature: 5
+    media_player.ballroom:
+      state: paused
+- name: Ballroom Party
+  entities:
+    group.ballroom_lights:
+      state: on
+      brightness_pct: 20
+    climate.ballroom_east_thermostat:
+      temperature: 20
+- name: Ballroom Movie
+  entities:
+    group.ballroom_lights:
+      state: off
+    climate.ballroom_east_thermostat:
+      temperature: 20
+- name: Ballroom Bright
+  entities:
+    group.ballroom_lights:
+      state: on
+      brightness_pct: 100
+    climate.ballroom_east_thermostat:
+      temperature: 20

@@ -23,8 +23,10 @@ homeassistant:
     package_ballroom: !include packages/ballroom/package.yaml
     package_armoury: !include packages/armoury/package.yaml
     package_guest_room: !include packages/guest_room/package.yaml
-    #package_bedroom_mark: !include packages/bedroom_mark/package.yaml
-    #package_kitchen: !include packages/kitchen/package.yaml
+    package_bedroom_mark: !include packages/bedroom-mark/package.yaml
+    package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
+    package_bedroom_ros: !include packages/bedroom-ros/package.yaml
+    #package_room: !include packages/room/package.yaml
 
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
