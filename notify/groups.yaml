@@ -21,24 +21,22 @@
     - service: ios_annies_iphone2
     - service: html5_markmotog5
     - service: html5_marktablet
+    - service: html5_jeromeandroid
 
 # Barnacles
 - name: barnacles
   platform: group
   services:
+    - service: html5_lianemotog
 
 # All Devices
 - name: all_devices
   platform: group
   services:
     - service: pushetta
-    - service: ios_marks_iphone
-    - service: ios_ross_iphone
-    - service: ios_thomas_cmtcd
-    - service: ios_annies_iphone2
-    - service: html5_markmotog5
-    - service: html5_marktablet
-    - service: html5_rostablet
+    - service: all_androids
+    - service: all_iphones
+    - service: all_tablets
 
 # All iphones
 - name: all_iphones
@@ -54,6 +52,8 @@
   platform: group
   services:
     - service: html5_markmotog5
+    - service: html5_jeromeandroid
+    - service: html5_lianemotog
 
 # All tablets
 - name: all_tablets
