@@ -577,7 +577,7 @@ main_heating_demand:
   view: false
   entities:
   - switch.kitchen_demand
-  - switch.lounge_demand
+  - switch.lounge_east_demand
   - switch.library_demand
   ## temporarily disable hall demand
   #- group.hall_demand
