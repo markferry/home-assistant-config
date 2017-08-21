@@ -16,6 +16,20 @@ input_boolean:
     name: "Hot Tub Debouncer"
     initial: off
 
+homeassistant:
+  customize:
+    binary_sensor.hottub:
+      friendly_name: Hot Tub Heating
+      icon: mdi:pot
+    switch.greenwave_powernode_53_switch:
+      friendly_name: Hot Tub Power Supply
+      icon: mdi:pot
+      emulated_hue: true
+    sensor.greenwave_powernode_53_energy:
+      friendly_name: Hot Tub Energy
+    sensor.greenwave_powernode_53_power:
+      friendly_name: Hot Tub Power
+
 group:
   g_hottub:
     name: Hot Tub

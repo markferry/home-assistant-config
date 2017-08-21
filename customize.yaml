@@ -132,33 +132,6 @@ sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
 
-# real thermostats
-switch.greenwave_powernode_53_switch:
-  friendly_name: Hot Tub Power Supply
-  icon: mdi:pot
-  emulated_hue: true
-sensor.greenwave_powernode_53_energy:
-  friendly_name: Hot Tub Energy
-sensor.greenwave_powernode_53_power:
-  friendly_name: Hot Tub Power
-
-switch.greenwave_powernode_54_switch:
-  friendly_name: Washing Machine
-  icon: mdi:washing-machine
-sensor.greenwave_powernode_54_energy:
-  friendly_name: Washing Machine Energy
-  icon: mdi:washing-machine
-sensor.greenwave_powernode_54_power:
-  friendly_name: Washing Machine Power
-  icon: mdi:washing-machine
-
-binary_sensor.washing_machine:
-  friendly_name: Washing Machine
-  icon: mdi:washing-machine
-binary_sensor.hottub:
-  friendly_name: Hot Tub Heating
-  icon: mdi:pot
-
 script.table_tennis:
   friendly_name: "Table Tennis Mode"
 

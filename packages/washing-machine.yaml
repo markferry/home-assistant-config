@@ -11,12 +11,29 @@ binary_sensor:
   payload_off: 'off'
   initial: off
 
-# Debouncing for hottub and washing-machine power monitors
-# Trigger corresponding binary_sensors via automation+mqtt
+# Debouncing for washing-machine power monitor
+# Trigger corresponding binary_sensor via automation+mqtt
 input_boolean:
   washing_machine_debouncer:
     name: "Washing Machine Debouncer"
     initial: off
+
+homeassistant:
+  customize:
+    switch.greenwave_powernode_54_switch:
+      friendly_name: Washing Machine
+      icon: mdi:washing-machine
+    sensor.greenwave_powernode_54_energy:
+      friendly_name: Washing Machine Energy
+      icon: mdi:washing-machine
+    sensor.greenwave_powernode_54_power:
+      friendly_name: Washing Machine Power
+      icon: mdi:washing-machine
+
+    binary_sensor.washing_machine:
+      friendly_name: Washing Machine
+      icon: mdi:washing-machine
+
 
 group:
   g_washing_machine:
