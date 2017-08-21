@@ -11,6 +11,7 @@ entities:
 - device_tracker.poe_switch
 # media
 - device_tracker.hastur
+- device_tracker.cyclops
 - device_tracker.study
 - device_tracker.kitchen
 - device_tracker.amazon_echo
