@@ -1,0 +1,32 @@
+# Dahua (US Amcrest) cameras
+#
+amcrest:
+  - name: Camera 0
+    host: camera0
+    username: !secret camera0_username
+    password: !secret camera0_password
+    sensors:
+      - motion_detector
+      #- sdcard
+      - ptz_preset
+
+camera:
+  - platform: amcrest
+
+group:
+  g_camera0:
+    name: Camera 0
+    icon: mdi:cctv
+    entities:
+
+homeassistant:
+  customize:
+    camera.camera_0:
+      icon: mdi:cctv
+    sensor.camera_0_motion_detected:
+      friendly_name: Camera 0 Motion
+      icon: mdi:run
+    sensor.camera_0_ptz_preset:
+      friendly_name: Camera 0 Presets
+      icon: mdi:camera-iris
+
