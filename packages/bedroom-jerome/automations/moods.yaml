@@ -1,0 +1,18 @@
+- alias: "Jerome's Bedroom Mood"
+  trigger:
+    platform: state
+    entity_id: input_select.bedroom_jerome_select
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.bedroom_jerome_select", "Off") %}
+            scene.bedroom_jerome_off
+          {%-elif is_state("input_select.bedroom_jerome_select", "Sleep") %}
+            scene.bedroom_jerome_sleep
+          {%-elif is_state("input_select.bedroom_jerome_select", "Cosy") %}
+            scene.bedroom_jerome_cosy
+          {% else %}
+            None
+          {% endif %}
+
