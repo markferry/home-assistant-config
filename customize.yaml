@@ -91,14 +91,6 @@ device_tracker.thomas_phone:
 device_tracker.liane_phone:
   entity_picture: /local/wb-icons/wb_liane.png
   friendly_name: "Liane Owntracks"
-sensor.aeotec_dsb05_multisensor_luminance:
-  friendly_name: Hall Luminance
-sensor.aeotec_dsb05_multisensor_relative_humidity:
-  friendly_name: Hall Humidity
-sensor.aeotec_dsb05_multisensor_temperature:
-  friendly_name: Hall
-binary_sensor.aeotec_dsb05_multisensor_sensor:
-  friendly_name: Hall Motion
 light.unused_40_level:
   friendly_name: Unused Dimmer 40
 light.unused_41_level:

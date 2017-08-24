@@ -16,11 +16,3 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
-    hall_multisensor_battery:
-      value_template: >
-        {% if states.zwave.aeotec_dsb05_multisensor %}
-          {{ states.zwave.aeotec_dsb05_multisensor.attributes.battery_level }}
-        {% else %}
-          unknown
-        {% endif %}
-      unit_of_measurement: '%'
