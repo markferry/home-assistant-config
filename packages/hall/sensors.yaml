@@ -1,0 +1,26 @@
+- platform: template
+  sensors:
+    hall_east_battery:
+      value_template: >
+        {% if states.zwave.hall_east %}
+          {{ states.zwave.hall_east.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'
+    hall_west_battery:
+      value_template: >
+        {% if states.zwave.hall_west %}
+          {{ states.zwave.hall_west.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'
+    annex_hall_battery:
+      value_template: >
+        {% if states.zwave.annex_hall %}
+          {{ states.zwave.annex_hall.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'

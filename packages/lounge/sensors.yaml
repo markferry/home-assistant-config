@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    lounge_east_battery:
+      value_template: >
+        {% if states.zwave.lounge_east %}
+          {{ states.zwave.lounge_east.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'

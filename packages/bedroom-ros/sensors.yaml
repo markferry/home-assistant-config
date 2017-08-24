@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    bedroom_ros_battery:
+      value_template: >
+        {% if states.zwave.bedroom_ros %}
+          {{ states.zwave.bedroom_ros.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'

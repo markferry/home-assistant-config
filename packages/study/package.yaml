@@ -3,6 +3,6 @@ group: !include groups.yaml
 #climate: !include climate.yaml
 #input_select: !include input_select.yaml
 scene: !include scenes.yaml
-#sensor: !include sensors.yaml
+sensor: !include sensors.yaml
 switch: !include switches.yaml
 #automation: !include_dir_merge_list automations

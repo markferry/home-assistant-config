@@ -15,9 +15,6 @@ customize:
   sensor.annex_hall_temperature:
     friendly_name: Annex Hall
     polling_intensity: 5
-  sensor.hall_multisensor_battery:
-    friendly_name: Hall Multisensor Battery
-    icon: mdi:battery
   sensor.hall_west_battery:
     friendly_name: Hall West Battery
     icon: mdi:battery
