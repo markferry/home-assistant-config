@@ -1,7 +1,6 @@
 #
 # SNMP sensors for CliMate CM-2 monitor
 #
-
 - name: cm2_temp_c
   platform: snmp
   host: climate

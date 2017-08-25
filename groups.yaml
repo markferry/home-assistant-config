@@ -26,26 +26,6 @@ radio:
   entities:
   - group.radio_streams
   - group.radio_stream_map
-ups:
-  name: UPS
-  icon: mdi:car-battery
-  entities:
-  - sensor.eaton_ups_status_data
-  - sensor.eaton_ups_load
-  - sensor.eaton_ups_battery_charge
-  - sensor.eaton_ups_battery_runtime
-
-cm2_climate_monitor:
-  name: Server Climate Monitor
-  entities:
-  - sensor.cm2_temp_c
-  - sensor.cm2_humidity
-  - sensor.cm2_light
-  - sensor.cm2_airflow
-  - sensor.cm2_sound
-  - sensor.cm2_dew_point_c
-
-
 rfx_switches:
   name: RFX Switches
   entities:
