@@ -1,16 +1,26 @@
 # Streaming Radio with parallel streams to multiple rooms
 #
 # UI groups:
+#  - radio
 #  - radio_streams: select a radio station for each stream
 #  - radio_stream_map: select a stream for each room
 #
 group:
+  radio:
+    name: Internet Radio
+    view: false
+    icon: mdi:radio
+    entities:
+    - group.radio_streams
+    - group.radio_stream_map
+
   radio_streams:
     name: Radio Channels
     entities:
     - input_select.radio_stream_1
     - input_select.radio_stream_2
     - input_select.radio_stream_3
+
   radio_stream_map:
     name: Player Streams
     entities:

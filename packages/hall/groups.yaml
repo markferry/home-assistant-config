@@ -51,3 +51,11 @@ hall_thermostats:
 hall_lights:
   name: Hall Lights
   view: false
+
+hall_demand:
+  name: "Hall Demand"
+  view: false
+  entities:
+  - switch.hall_west_demand
+  - switch.hall_east_demand
+

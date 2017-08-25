@@ -19,13 +19,6 @@ bedrooms:
   - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
 
-radio:
-  name: Internet Radio
-  view: false
-  icon: mdi:radio
-  entities:
-  - group.radio_streams
-  - group.radio_stream_map
 rfx_switches:
   name: RFX Switches
   entities:
@@ -101,13 +94,6 @@ main_heating_demand:
   - switch.guest_room_demand
   - switch.marks_bedroom_demand
   - group.bedroom_jerome_demand
-
-hall_demand:
-  name: "Hall Demand"
-  view: false
-  entities:
-  - switch.hall_west_demand
-  - switch.hall_east_demand
 
 annex_heating:
   name: Annex Heating
