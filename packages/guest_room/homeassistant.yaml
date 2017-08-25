@@ -1,4 +1,7 @@
 customize:
+  group.guest_room_scenes:
+    order: 0
+
   script.hue_guest_room_thermostat:
     friendly_name: "Guest Room Thermostat"
 

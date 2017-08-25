@@ -1,4 +1,7 @@
 customize:
+  group.lounge_scenes:
+    order: 0
+
   group.lounge_lights:
     icon: mdi:lightbulb-on
     emulated_hue: true

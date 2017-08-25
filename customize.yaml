@@ -33,23 +33,6 @@ group.armoury:
 group.settings:
   order: 10
 
-group.study_scenes:
-  order: 0
-group.kitchen_scenes:
-  order: 0
-group.hall_scenes:
-  order: 0
-group.lounge_scenes:
-  order: 0
-group.library_scenes:
-  order: 0
-group.ballroom_scenes:
-  order: 0
-group.guest_room_scenes:
-  order: 0
-group.marks_bedroom_scenes:
-  order: 0
-
 group.all_lights:
   icon: mdi:lightbulb-on
   emulated_hue: true

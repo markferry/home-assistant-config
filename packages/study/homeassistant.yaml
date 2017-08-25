@@ -1,4 +1,7 @@
 customize:
+  group.study_scenes:
+    order: 0
+
   light.study_east_level_14:
     friendly_name: Study East Valve
   light.study_west_level_15:

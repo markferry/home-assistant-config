@@ -1,4 +1,7 @@
 customize:
+  group.hall_scenes:
+    order: 0
+
   light.hall_west_level_13:
     friendly_name: Hall West Valve
   light.hall_east_level_24:
