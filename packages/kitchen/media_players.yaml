@@ -1,0 +1,5 @@
+- name: Kitchen
+  platform: kodi
+  host: kitchen
+  port: 8080
+

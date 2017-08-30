@@ -1,26 +1,6 @@
-- name: Study
-  platform: kodi
-  host: study
-  port: 80
-
-- name: Lounge
-  platform: kodi
-  host: lounge
-  port: 80
-
-- name: Kitchen
-  platform: kodi
-  host: kitchen
-  port: 8080
-
 - name: Ballroom
   platform: kodi
   host: ballroom
-  port: 80
-
-- name: Library
-  platform: kodi
-  host: library
   port: 80
 
 - name: Ballroom Amplifier
@@ -39,3 +19,4 @@
     am: 'AM' # -> needs onkyo fix
     network: 'Network'
     usb: 'USB'
+
