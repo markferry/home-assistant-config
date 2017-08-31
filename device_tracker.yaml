@@ -7,7 +7,7 @@
 #  consider_home: 180
 
 - platform: owntracks
-  max_gps_accuracy: 500
+  max_gps_accuracy: 3000
 
 - platform: nmap_tracker
   hosts: 192.168.7.1-254
