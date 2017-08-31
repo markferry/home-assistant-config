@@ -14,8 +14,7 @@ homeassistant:
 # Discover some devices automatically
 discovery:
 
-# Show links to resources in log and frontend
-#introduction:
+zone: !include zone.yaml
 
 # Allows you to issue voice commands from the frontend
 conversation:
