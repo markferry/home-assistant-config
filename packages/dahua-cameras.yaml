@@ -5,6 +5,8 @@ amcrest:
     host: camera0
     username: !secret camera0_username
     password: !secret camera0_password
+    resolution: "low"
+    scan_interval: 30
     sensors:
       - motion_detector
       #- sdcard
