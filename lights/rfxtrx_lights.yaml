@@ -2,13 +2,13 @@
   automatic_add: True
   devices:
     0a140000f40fa801010050:
-      name: Lounge East
+      name: Dimmer Group 1
     0a140016f3cf3501010080:
-      name: Dimmer Remote 1
+      name: Lounge East
     0a140022f3cf3502010080:
-      name: Dimmer Remote 2
+      name: Lounge West
     0a140023f3cf3503010080:
-      name: Dimmer Remote 3
+      name: Lounge North
     0a140024f3cf3504010080:
       name: Dimmer Remote 4
     0a140000f15c7201010080:
