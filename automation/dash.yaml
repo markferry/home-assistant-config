@@ -1,15 +1,15 @@
-- alias: "Catsan"
+- alias: "Table Tennis"
   trigger:
     - platform: state
-      entity_id: switch.catsan
+      entity_id: switch.table_tennis
       to: "on"
   action:
     - service: script.table_tennis
 
-- alias: "Huggies"
+- alias: "Party Mode"
   trigger:
     - platform: state
-      entity_id: switch.huggies
+      entity_id: switch.party_mode
       to: "on"
   action:
     - service: script.party_mode

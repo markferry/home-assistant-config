@@ -1,11 +1,11 @@
-- name: Huggies
+- name: Party Mode
   platform: mqtt
   command_topic: ha/dash/huggies
   state_topic: ha/dash/huggies
   payload_on: 'active'
   payload_off: 'inactive'
 
-- name: Catsan
+- name: Table Tennis
   platform: mqtt
   command_topic: ha/dash/catsan
   state_topic: ha/dash/catsan

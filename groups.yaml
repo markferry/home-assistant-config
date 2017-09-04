@@ -692,12 +692,12 @@ dash_buttons:
   name: Amazon Dash Buttons
   view: false
   entities:
+  - switch.table_tennis
+  - switch.party_mode
   - switch.listerine
   - switch.ariel
   - switch.optimum_nutrition
   - switch.philips_sonicare
-  - switch.huggies
-  - switch.catsan
   - switch.right_guard
 
 heating_valves:
