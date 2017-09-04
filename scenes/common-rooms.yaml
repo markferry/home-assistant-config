@@ -10,21 +10,21 @@
   entities:
     group.lounge_lights:
       state: on
-      brightness: 20
+      brightness_pct: 20
     climate.lounge_east_thermostat:
       temperature: 20
 - name: Lounge Movie
   entities:
     group.lounge_lights:
       state: on
-      brightness: 50
+      brightness_pct: 50
     climate.lounge_east_thermostat:
       temperature: 20
 - name: Lounge Bright
   entities:
     group.lounge_lights:
       state: on
-      brightness: 100
+      brightness_pct: 100
     climate.lounge_east_thermostat:
       temperature: 20
 
@@ -42,7 +42,7 @@
   entities:
     group.study_lights:
       state: on
-      brightness: 100
+      brightness_pct: 100
     climate.study_east_thermostat:
       temperature: 20
     climate.study_west_thermostat:
@@ -51,7 +51,7 @@
   entities:
     group.study_lights:
       state: on
-      brightness: 50
+      brightness_pct: 50
     climate.study_east_thermostat:
       temperature: 20
     climate.study_west_thermostat:
@@ -69,14 +69,14 @@
   entities:
     group.kitchen_lights:
       state: on
-      brightness: 50
+      brightness_pct: 50
     climate.kitchen_thermostat:
       temperature: 20
 - name: Kitchen Bright
   entities:
     group.kitchen_lights:
       state: on
-      brightness: 100
+      brightness_pct: 100
     climate.kitchen_thermostat:
       temperature: 20
 
@@ -92,7 +92,7 @@
   entities:
     group.ballroom_lights:
       state: on
-      brightness: 20
+      brightness_pct: 20
     climate.ballroom_east_thermostat:
       temperature: 20
 - name: Ballroom Movie
@@ -105,7 +105,7 @@
   entities:
     group.ballroom_lights:
       state: on
-      brightness: 100
+      brightness_pct: 100
     climate.ballroom_east_thermostat:
       temperature: 20
 
@@ -121,14 +121,14 @@
   entities:
     group.library_lights:
       state: off
-      brightness: 50
+      brightness_pct: 50
     climate.library_thermostat:
       temperature: 22
 - name: Library Read
   entities:
     group.library_lights:
       state: on
-      brightness: 100
+      brightness_pct: 100
     climate.library_thermostat:
       temperature: 22
 
