@@ -1,0 +1,108 @@
+#
+# Dim lights based on media player status
+#
+
+group:
+  g_ballroom_media_dimming:
+    name: Media Auto Dim
+    control: hidden
+    entities:
+      - input_boolean.ballroom_media_dimming_enable
+      - input_slider.ballroom_media_dimmer_level
+
+input_boolean:
+  ballroom_media_dimming_enable:
+    name: Enable
+
+input_slider:
+  ballroom_media_dimmer_level:
+    name: 'Dim Level'
+    min: 0
+    max: 40
+    step: 5
+
+automation:
+- alias: "Dim on Media Playing"
+  trigger:
+    - platform: state
+      entity_id: media_player.ballroom
+      to: 'playing'
+      for:
+        seconds: 2
+
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: state
+        entity_id: input_boolean.ballroom_media_dimming_enable
+        state: 'on'
+      - condition: state
+        entity_id: group.ballroom_lights
+        state: 'on'
+
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: group.ballroom_lights
+      brightness_pct: '{{ states.input_slider.ballroom_media_dimmer_level.state | int }}'
+      transition: '2'
+
+
+- alias: "Dim on Media Paused"
+  trigger:
+    - platform: state
+      entity_id: media_player.ballroom
+      to: 'paused'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: state
+        entity_id: input_boolean.ballroom_media_dimming_enable
+        state: 'on'
+      - condition: state
+        entity_id: group.ballroom_lights
+        state: 'on'
+
+  action:
+    service: light.turn_on
+    data:
+      entity_id: group.ballroom_lights
+      brightness_pct: '50'
+      transition: '3'
+
+- alias: "Dim on Media Stopped"
+  trigger:
+    - platform: state
+      entity_id: media_player.ballroom
+      from: 'playing'
+      to: 'idle'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: state
+        entity_id: input_boolean.ballroom_media_dimming_enable
+        state: 'on'
+      - condition: state
+        entity_id: group.ballroom_lights
+        state: 'on'
+
+  action:
+    service: scene.turn_on
+    entity_id: scene.ballroom_bright
+
+homeassistant:
+  customize:
+    group.g_ballroom_media_dimming:
+      icon: mdi:movie
+    input_boolean.ballroom_media_dimming_enable:
+      icon: none
+    input_slider.ballroom_media_dimmer_level:
+      icon: mdi:brightness-6
