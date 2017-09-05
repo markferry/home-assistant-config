@@ -350,6 +350,7 @@ bedroom_mark_compact_ui:
   - input_select.marks_bedroom_select
   - climate.bedroom_mark_thermostat
   - group.marks_bedroom_lights
+  - group.g_bedroom_mark_media_dimming
 marks_bedroom_scenes:
   name: "Mark's Bedroom"
   view: false
