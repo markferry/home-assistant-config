@@ -181,6 +181,7 @@ lounge_compact_ui:
   - input_select.lounge_select
   - climate.lounge_east_thermostat
   - group.lounge_lights
+  - group.g_lounge_media_dimming
 lounge_scenes:
   name: Lounge
   view: false
