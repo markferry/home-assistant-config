@@ -51,12 +51,15 @@ group.marks_bedroom_scenes:
   order: 0
 
 group.all_lights:
+  icon: mdi:lightbulb-on
   emulated_hue: true
 group.all_switches:
   emulated_hue: true
 group.lounge_lights:
+  icon: mdi:lightbulb-on
   emulated_hue: true
 group.marks_bedroom_lights:
+  icon: mdi:lightbulb-on
   emulated_hue: true
 
 group.mark_present:
