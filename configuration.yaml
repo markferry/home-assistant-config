@@ -14,6 +14,7 @@ homeassistant:
     package_camera0: !include packages/dahua-cameras.yaml
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
+    package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
 
 
 # Discover some devices automatically
