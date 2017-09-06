@@ -28,7 +28,9 @@ automation:
 - alias: "Bedroom Mark Dim on Media Playing"
   trigger:
     - platform: state
-      entity_id: media_player.marks_bedroom
+      entity_id:
+        - media_player.marks_bedroom
+        - media_player.bedroommarkaudio
       to: 'playing'
       for:
         seconds: 2
@@ -72,7 +74,9 @@ automation:
 - alias: "Bedroom Mark Dim on Media Paused"
   trigger:
     - platform: state
-      entity_id: media_player.marks_bedroom
+      entity_id:
+        - media_player.marks_bedroom
+        - media_player.bedroommarkaudio
       to: 'paused'
 
   condition:
@@ -113,7 +117,9 @@ automation:
 - alias: "Bedroom Mark Dim on Media Stopped"
   trigger:
     - platform: state
-      entity_id: media_player.marks_bedroom
+      entity_id:
+        - media_player.marks_bedroom
+        - media_player.bedroommarkaudio
       from: 'playing'
       to: 'idle'
 
