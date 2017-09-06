@@ -132,6 +132,9 @@ switch.horstmann_asrzw_thermostat_receiver_switch:
 
 media_player.txnr636_0009b09961fb:
   friendly_name: Ballroom Amplifier
+media_player.bedroommarkaudio:
+  friendly_name: "Mark's Chromecast"
+
 light.hall_west_level_13:
   friendly_name: Hall West Valve
 light.study_east_level_14:

@@ -8,6 +8,8 @@
       temperature: 10
     media_player.marks_bedroom:
       state: paused
+    media_player.bedroommarkaudio:
+      state: paused
 - name: "Mark's Bedroom Sleep"
   entities:
     group.marks_bedroom_lights:
