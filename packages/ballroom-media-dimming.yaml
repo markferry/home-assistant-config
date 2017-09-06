@@ -7,12 +7,15 @@ group:
     name: Media Auto Dim
     control: hidden
     entities:
-      - input_boolean.ballroom_media_dimming_enable
+      - input_boolean.ballroom_dim_for_movie
+      - input_boolean.ballroom_dim_for_tv
       - input_slider.ballroom_media_dimmer_level
 
 input_boolean:
-  ballroom_media_dimming_enable:
-    name: Enable
+  ballroom_dim_for_tv:
+    name: Dim during TV shows
+  ballroom_dim_for_movie:
+    name: Dim during Movies
 
 input_slider:
   ballroom_media_dimmer_level:
@@ -37,11 +40,26 @@ automation:
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: input_boolean.ballroom_media_dimming_enable
-        state: 'on'
-      - condition: state
         entity_id: group.ballroom_lights
         state: 'on'
+      - condition: or
+        conditions:
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: input_boolean.ballroom_dim_for_movie
+            state: 'on'
+          - condition: template
+            value_template: >
+              {{ states.media_player.ballroom.attributes.media_content_type == "movie" }}
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: input_boolean.ballroom_dim_for_tv
+            state: 'on'
+          - condition: template
+            value_template: >
+              {{ states.media_player.ballroom.attributes.media_content_type == "tvshow" }}
 
   action:
     service: light.turn_on
@@ -64,11 +82,26 @@ automation:
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: input_boolean.ballroom_media_dimming_enable
-        state: 'on'
-      - condition: state
         entity_id: group.ballroom_lights
         state: 'on'
+      - condition: or
+        conditions:
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: input_boolean.ballroom_dim_for_movie
+            state: 'on'
+          - condition: template
+            value_template: >
+              {{ states.media_player.ballroom.attributes.media_content_type == "movie" }}
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: input_boolean.ballroom_dim_for_tv
+            state: 'on'
+          - condition: template
+            value_template: >
+              {{ states.media_player.ballroom.attributes.media_content_type == "tvshow" }}
 
   action:
     service: light.turn_on
@@ -91,11 +124,26 @@ automation:
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: input_boolean.ballroom_media_dimming_enable
-        state: 'on'
-      - condition: state
         entity_id: group.ballroom_lights
         state: 'on'
+      - condition: or
+        conditions:
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: input_boolean.ballroom_dim_for_movie
+            state: 'on'
+          - condition: template
+            value_template: >
+              {{ states.media_player.ballroom.attributes.media_content_type == "movie" }}
+        - condition: and
+          conditions:
+          - condition: state
+            entity_id: input_boolean.ballroom_dim_for_tv
+            state: 'on'
+          - condition: template
+            value_template: >
+              {{ states.media_player.ballroom.attributes.media_content_type == "tvshow" }}
 
   action:
     service: scene.turn_on
@@ -104,8 +152,10 @@ automation:
 homeassistant:
   customize:
     group.g_ballroom_media_dimming:
+      icon: mdi:brightness-auto
+    input_boolean.ballroom_dim_for_movie:
       icon: mdi:movie
-    input_boolean.ballroom_media_dimming_enable:
-      icon: none
+    input_boolean.ballroom_dim_for_tv:
+      icon: mdi:television-classic
     input_slider.ballroom_media_dimmer_level:
       icon: mdi:brightness-6
