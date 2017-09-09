@@ -1,0 +1,10 @@
+ballroom_select:
+  name: Ballroom Mood
+  options:
+    - 'Off'
+    - 'Party'
+    - 'Movie'
+    - 'Bright'
+  initial: 'Off'
+  icon: mdi:projector
+
