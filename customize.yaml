@@ -33,30 +33,10 @@ group.armoury:
 group.settings:
   order: 10
 
-group.study_scenes:
-  order: 0
-group.kitchen_scenes:
-  order: 0
-group.hall_scenes:
-  order: 0
-group.lounge_scenes:
-  order: 0
-group.library_scenes:
-  order: 0
-group.ballroom_scenes:
-  order: 0
-group.guest_room_scenes:
-  order: 0
-group.marks_bedroom_scenes:
-  order: 0
-
 group.all_lights:
   icon: mdi:lightbulb-on
   emulated_hue: true
 group.all_switches:
-  emulated_hue: true
-group.lounge_lights:
-  icon: mdi:lightbulb-on
   emulated_hue: true
 group.marks_bedroom_lights:
   icon: mdi:lightbulb-on
@@ -94,21 +74,11 @@ device_tracker.thomas_phone:
 device_tracker.liane_phone:
   entity_picture: /local/wb-icons/wb_liane.png
   friendly_name: "Liane Owntracks"
-sensor.aeotec_dsb05_multisensor_luminance:
-  friendly_name: Hall Luminance
-sensor.aeotec_dsb05_multisensor_relative_humidity:
-  friendly_name: Hall Humidity
-sensor.aeotec_dsb05_multisensor_temperature:
-  friendly_name: Hall
-binary_sensor.aeotec_dsb05_multisensor_sensor:
-  friendly_name: Hall Motion
 light.unused_40_level:
   friendly_name: Unused Dimmer 40
 light.unused_41_level:
   friendly_name: Unused Dimmer 41
   polling_intensity: 0
-light.bedroom_mark_overhead_level:
-  friendly_name: "Mark's Bedroom Overhead"
 climate.main_heating_thermostat_heating_1:
   friendly_name: Main Heating Thermostat
 sensor.main_heating_thermostat_temperature:
@@ -130,350 +100,18 @@ switch.main_heating_relay_hot_water:
 switch.horstmann_asrzw_thermostat_receiver_switch:
   friendly_name: Annex Heating Switch
 
-media_player.txnr636_0009b09961fb:
-  friendly_name: Ballroom Amplifier
-media_player.bedroommarkaudio:
-  friendly_name: "Mark's Chromecast"
-
-light.hall_west_level_13:
-  friendly_name: Hall West Valve
-light.study_east_level_14:
-  friendly_name: Study East Valve
-light.study_west_level_15:
-  friendly_name: Study West Valve
-light.hall_east_level_24:
-  friendly_name: Hall East Valve
-light.library_level_25:
-  friendly_name: Library Valve
-light.bedroom_mark_level_29:
-  friendly_name: "Mark's Bedroom Valve"
-light.lounge_east_level_30:
-  friendly_name: Lounge East Valve
-light.ballroom_east_level_33:
-  friendly_name: Ballroom East Valve
-light.kitchen_level_34:
-  friendly_name: Kitchen Valve
-light.annex_hall_level_43:
-  friendly_name: Annex Hall Valve
-sensor.hall_west_temperature:
-  friendly_name: Hall West
-  polling_intensity: 5
-sensor.study_east_temperature:
-  friendly_name: Study East
-  polling_intensity: 5
-sensor.study_west_temperature:
-  friendly_name: Study West
-  polling_intensity: 5
-sensor.hall_east_temperature:
-  friendly_name: Hall East
-  polling_intensity: 5
-sensor.library_temperature:
-  friendly_name: Library
-  polling_intensity: 5
-sensor.bedroom_mark_temperature:
-  friendly_name: "Mark's Bedroom"
-  polling_intensity: 5
-sensor.lounge_east_temperature:
-  friendly_name: Lounge East
-  polling_intensity: 5
-sensor.ballroom_east_temperature:
-  friendly_name: Ballroom East
-  polling_intensity: 5
-sensor.kitchen_temperature:
-  friendly_name: Kitchen
-  polling_intensity: 5
-sensor.annex_hall_temperature:
-  friendly_name: Annex Hall
-  polling_intensity: 5
-
 sensor.main_heating_thermostat_battery:
   friendly_name: Main Heating Battery
   icon: mdi:battery
 sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
-sensor.hall_multisensor_battery:
-  friendly_name: Hall Multisensor Battery
-  icon: mdi:battery
-sensor.hall_west_battery:
-  friendly_name: Hall West Battery
-  icon: mdi:battery
-sensor.study_east_battery:
-  friendly_name: Study East Battery
-  icon: mdi:battery
-sensor.study_west_battery:
-  friendly_name: Study West Battery
-  icon: mdi:battery
-sensor.hall_east_battery:
-  friendly_name: Hall East Battery
-  icon: mdi:battery
-sensor.library_battery:
-  friendly_name: Library Battery
-  icon: mdi:battery
-sensor.bedroom_mark_battery:
-  friendly_name: "Mark's Bedroom Battery"
-  icon: mdi:battery
-sensor.lounge_east_battery:
-  friendly_name: Lounge East Battery
-  icon: mdi:battery
-sensor.ballroom_east_battery:
-  friendly_name: Ballroom East Battery
-  icon: mdi:battery
-sensor.kitchen_battery:
-  friendly_name: Kitchen Battery
-  icon: mdi:battery
-sensor.annex_hall_battery:
-  friendly_name: Annex Hall Battery
-  icon: mdi:battery
-
-# generic thermostats
-climate.hall_west_thermostat:
-  friendly_name: Hall West
-climate.study_east_thermostat:
-  friendly_name: Study East
-climate.study_west_thermostat:
-  friendly_name: Study West
-climate.hall_east_thermostat:
-  friendly_name: Hall East
-climate.library_thermostat:
-  friendly_name: Library
-climate.bedroom_mark_thermostat:
-  friendly_name: "Mark's Bedroom"
-climate.lounge_east_thermostat:
-  friendly_name: Lounge East
-climate.ballroom_east_thermostat:
-  friendly_name: Ballroom East
-climate.kitchen_thermostat:
-  friendly_name: Kitchen
-climate.annex_hall_thermostat:
-  friendly_name: Annex Hall
-
-# real thermostats
-climate.danfoss_z_thermostat_014g0013_heating_1:
-  friendly_name: Guest Room
-  min_temp: 5
-  max_temp: 25
-
-climate.hall_west_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.study_east_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.study_west_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.hall_east_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.library_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.bedroom_mark_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.lounge_east_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.ballroom_east_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.kitchen_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-climate.annex_hall_comfort_setpoint:
-  min_temp: 5
-  max_temp: 25
-
-
-climate.bedroom_jerome_thermostat:
-  friendly_name: "Jerome's Bedroom"
-sensor.bedroom_jerome_temperature:
-  friendly_name: "Jerome's Bedroom"
-  polling_intensity: 5
-sensor.bedroom_jerome_battery:
-  friendly_name: "Jerome's Bedroom Battery"
-  icon: mdi:battery
-
-climate.bedroom_ros_thermostat:
-  friendly_name: "Ros's Bedroom"
-sensor.bedroom_ros_temperature:
-  friendly_name: "Ros's Bedroom"
-  polling_intensity: 5
-sensor.bedroom_ros_battery:
-  friendly_name: "Ros's Bedroom Battery"
-  icon: mdi:battery
-
-switch.greenwave_powernode_53_switch:
-  friendly_name: Hot Tub Power Supply
-  icon: mdi:pot
-  emulated_hue: true
-sensor.greenwave_powernode_53_energy:
-  friendly_name: Hot Tub Energy
-sensor.greenwave_powernode_53_power:
-  friendly_name: Hot Tub Power
-
-switch.greenwave_powernode_54_switch:
-  friendly_name: Washing Machine
-  icon: mdi:washing-machine
-sensor.greenwave_powernode_54_energy:
-  friendly_name: Washing Machine Energy
-  icon: mdi:washing-machine
-sensor.greenwave_powernode_54_power:
-  friendly_name: Washing Machine Power
-  icon: mdi:washing-machine
-
-binary_sensor.washing_machine:
-  friendly_name: Washing Machine
-  icon: mdi:washing-machine
-binary_sensor.hottub:
-  friendly_name: Hot Tub Heating
-  icon: mdi:pot
-
-sensor.cm2_temp_c:
-  friendly_name: Temperature
-sensor.cm2_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-sensor.cm2_light:
-  friendly_name: Luminance
-  icon: mdi:weather-sunny
-sensor.cm2_airflow:
-  friendly_name: Airflow
-  icon: mdi:weather-windy
-sensor.cm2_sound:
-  friendly_name: Sound Level
-  icon: mdi:microphone
-sensor.cm2_dew_point_c:
-  friendly_name: Dew Point
-  icon: mdi:weather-rainy
-
-sensor.eaton_ups_status:
-  friendly_name: UPS Status
-sensor.eaton_ups_load:
-  friendly_name: UPS Load
-sensor.eaton_battery_charge:
-  friendly_name: UPS Charge
-sensor.eaton_ups_battery_runtime:
-  friendly_name: UPS Runtime
-
-script.hue_study_thermostat:
-  friendly_name: Study Thermostat
-script.hue_annex_hall_thermostat:
-  friendly_name: Annex Hall Thermostat
-script.hue_kitchen_thermostat:
-  friendly_name: Kitchen Thermostat
-script.hue_hall_thermostat:
-  friendly_name: Hall Thermostat
-script.hue_lounge_thermostat:
-  friendly_name: Lounge Thermostat
-script.hue_library_thermostat:
-  friendly_name: Library Thermostat
-script.hue_ballroom_thermostat:
-  friendly_name: Ballroom Thermostat
-script.hue_bedroom_mark_thermostat:
-  friendly_name: "Mark's Bedroom Thermostat"
-script.hue_bedroom_jerome_thermostat:
-  friendly_name: "Jerome's Bedroom Thermostat"
-script.hue_bedroom_ros_thermostat:
-  friendly_name: "Ros's Bedroom Thermostat"
-script.hue_guest_room_thermostat:
-  friendly_name: "Guest Room Thermostat"
 
 script.table_tennis:
   friendly_name: "Table Tennis Mode"
 
 script.hue_everything_off:
   friendly_name: "Everything Off"
-
-script.hue_study_off:
-  friendly_name: "Study"
-script.hue_study_work:
-  friendly_name: "Study Mood Work"
-script.hue_study_relax:
-  friendly_name: "Study Mood Relax"
-
-script.hue_kitchen_off:
-  friendly_name: "Kitchen"
-script.hue_kitchen_cosy:
-  friendly_name: "Kitchen Mood Cosy"
-script.hue_kitchen_bright:
-  friendly_name: "Kitchen Mood Bright"
-
-script.hue_lounge_off:
-  friendly_name: "Lounge"
-script.hue_lounge_cosy:
-  friendly_name: "Lounge Mood Cosy"
-script.hue_lounge_movie:
-  friendly_name: "Lounge Mood Movie"
-script.hue_lounge_bright:
-  friendly_name: "Lounge Mood Bright"
-
-script.hue_library_off:
-  friendly_name: "Library"
-script.hue_library_chat:
-  friendly_name: "Library Mood Chat"
-script.hue_library_read:
-  friendly_name: "Library Mood Read"
-
-script.hue_ballroom_off:
-  friendly_name: "Ballroom"
-script.hue_ballroom_party:
-  friendly_name: "Ballroom Mood Party"
-script.hue_ballroom_movie:
-  friendly_name: "Ballroom Mood Movie"
-script.hue_ballroom_bright:
-  friendly_name: "Ballroom Mood Bright"
-
-script.hue_marks_bedroom_off:
-  friendly_name: "Mark's Bedroom"
-script.hue_marks_bedroom_sleep:
-  friendly_name: "Mark's Bedroom Mood Sleep"
-script.hue_marks_bedroom_play:
-  friendly_name: "Mark's Bedroom Mood Play"
-
-script.hue_bedroom_jerome_off:
-  friendly_name: "Jerome's Bedroom"
-script.hue_bedroom_jerome_sleep:
-  friendly_name: "Jerome's Bedroom Mood Sleep"
-script.hue_bedroom_jerome_cosy:
-  friendly_name: "Jerome's Bedroom Mood Cosy"
-
-script.hue_bedroom_ros_off:
-  friendly_name: "Ros's Bedroom"
-script.hue_bedroom_ros_sleep:
-  friendly_name: "Ros's Bedroom Mood Sleep"
-script.hue_bedroom_ros_cosy:
-  friendly_name: "Ros's Bedroom Mood Cosy"
-
-script.hue_guest_room_off:
-  friendly_name: "Guest Room"
-script.hue_guest_room_sleep:
-  friendly_name: "Guest Room Mood Sleep"
-script.hue_guest_room_cosy:
-  friendly_name: "Guest Room Mood Cosy"
-
-group.guest_room_select:
-  order: 1
-  entity_picture: mdi:hotel
-
-group.marks_bedroom_select:
-  order: 1
-  icon: /local/wb-icons/wb_mark.png
-input_select.marks_bedroom_select:
-  entity_picture: /local/wb-icons/wb_mark.png
-
-group.bedroom_jerome_select:
-  order: 1
-  icon: /local/wb-icons/wb_jerome.png
-input_select.bedroom_jerome_select:
-  entity_picture: /local/wb-icons/wb_jerome.png
-
-group.bedroom_ros_select:
-  order: 1
-  icon: /local/wb-icons/wb_ros.png
-input_select.bedroom_ros_select:
-  entity_picture: /local/wb-icons/wb_ros.png
 
 # Place guest room last
 group.bedroom_mark_compact_ui:

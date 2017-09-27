@@ -1,0 +1,51 @@
+customize:
+  group.hall_scenes:
+    order: 0
+
+  light.hall_west_level_13:
+    friendly_name: Hall West Valve
+  light.hall_east_level_24:
+    friendly_name: Hall East Valve
+  light.annex_hall_level_43:
+    friendly_name: Annex Hall Valve
+
+  sensor.hall_west_temperature:
+    friendly_name: Hall West
+    polling_intensity: 5
+  sensor.hall_east_temperature:
+    friendly_name: Hall East
+    polling_intensity: 5
+  sensor.annex_hall_temperature:
+    friendly_name: Annex Hall
+    polling_intensity: 5
+  sensor.hall_west_battery:
+    friendly_name: Hall West Battery
+    icon: mdi:battery
+  sensor.hall_east_battery:
+    friendly_name: Hall East Battery
+    icon: mdi:battery
+  sensor.annex_hall_battery:
+    friendly_name: Annex Hall Battery
+    icon: mdi:battery
+
+  climate.hall_west_thermostat:
+    friendly_name: Hall West
+  climate.hall_east_thermostat:
+    friendly_name: Hall East
+  climate.annex_hall_thermostat:
+    friendly_name: Annex Hall
+
+  climate.hall_west_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+  climate.hall_east_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+  climate.annex_hall_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_annex_hall_thermostat:
+    friendly_name: Annex Hall Thermostat
+  script.hue_hall_thermostat:
+    friendly_name: Hall Thermostat

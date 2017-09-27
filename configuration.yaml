@@ -11,13 +11,30 @@ homeassistant:
 
   customize: !include customize.yaml
   packages:
+    package_aeotec_multisensor: !include packages/aeotec_multisensor.yaml
     package_camera0: !include packages/dahua-cameras.yaml
+    package_hottub: !include packages/hottub.yaml
+    package_washing_machine: !include packages/washing-machine.yaml
+    package_stream_radio: !include packages/stream-radio.yaml
+
+    package_study: !include packages/study/package.yaml
+    package_kitchen: !include packages/kitchen/package.yaml
+    package_hall: !include packages/hall/package.yaml
+    package_lounge: !include packages/lounge/package.yaml
+    package_library: !include packages/library/package.yaml
+    package_ballroom: !include packages/ballroom/package.yaml
+    package_armoury: !include packages/armoury/package.yaml
+    package_guest_room: !include packages/guest_room/package.yaml
+    package_bedroom_mark: !include packages/bedroom-mark/package.yaml
+    package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
+    package_bedroom_ros: !include packages/bedroom-ros/package.yaml
+    #package_room: !include packages/room/package.yaml
+
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
 
-
-# Discover some devices automatically
+config:
 discovery:
 
 zone: !include zone.yaml
@@ -110,3 +127,4 @@ climate: !include_dir_merge_list thermostats
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
 script: !include_dir_merge_named scripts
+

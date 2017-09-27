@@ -1,0 +1,45 @@
+lounge:
+  name: Lounge
+  view: true
+  icon: mdi:sofa
+  entities:
+  - sensor.lounge_east_temperature
+  - group.lounge_compact_ui
+  - media_player.lounge
+lounge_compact_ui:
+  name: Lounge
+  view: false
+  icon: mdi:sofa
+  entities:
+  - input_select.lounge_select
+  - climate.lounge_east_thermostat
+  - group.lounge_lights
+  - group.g_lounge_media_dimming
+lounge_scenes:
+  name: Lounge
+  view: false
+  entities:
+  - input_select.lounge_select
+lounge_heating:
+  name: Lounge Heating
+  view: false
+  entities:
+  - climate.lounge_east_thermostat
+lounge_setpoints:
+  name: Lounge Setpoints
+  view: false
+  entities:
+  - climate.lounge_east_comfort_setpoint
+lounge_thermostats:
+  name: Lounge Thermostats
+  view: false
+  entities:
+  - climate.lounge_east_thermostat
+lounge_lights:
+  entities:
+  - light.lounge_east
+  - light.lounge_north
+  - light.lounge_west
+  name: Lounge Lights
+  view: false
+

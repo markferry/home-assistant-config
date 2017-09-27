@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    bedroom_jerome_battery:
+      value_template: >
+        {% if states.zwave.bedroom_jerome %}
+          {{ states.zwave.bedroom_jerome.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'

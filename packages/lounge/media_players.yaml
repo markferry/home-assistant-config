@@ -1,0 +1,5 @@
+- name: Lounge
+  platform: kodi
+  host: lounge
+  port: 80
+

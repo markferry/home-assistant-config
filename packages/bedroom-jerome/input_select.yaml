@@ -1,0 +1,9 @@
+bedroom_jerome_select:
+  name: "Jerome's Bedroom Mood"
+  options:
+    - 'Off'
+    - 'Sleep'
+    - 'Cosy'
+  initial: 'Off'
+  icon: mdi:account
+

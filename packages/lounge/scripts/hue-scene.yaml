@@ -1,0 +1,28 @@
+hue_lounge_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Off"
+
+hue_lounge_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Cosy"
+
+hue_lounge_movie:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Movie"
+
+hue_lounge_bright:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lounge_select
+        option: "Bright"
+

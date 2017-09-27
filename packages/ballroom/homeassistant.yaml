@@ -1,0 +1,35 @@
+customize:
+  group.ballroom_scenes:
+    order: 0
+
+  light.ballroom_east_level_33:
+    friendly_name: Ballroom East Valve
+
+  sensor.ballroom_east_temperature:
+    friendly_name: Ballroom East
+    polling_intensity: 5
+  sensor.ballroom_east_battery:
+    friendly_name: Ballroom East Battery
+    icon: mdi:battery
+
+  climate.ballroom_east_thermostat:
+    friendly_name: Ballroom East
+  climate.ballroom_east_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_ballroom_thermostat:
+    friendly_name: Ballroom Thermostat
+
+  script.hue_ballroom_off:
+    friendly_name: "Ballroom"
+  script.hue_ballroom_party:
+    friendly_name: "Ballroom Mood Party"
+  script.hue_ballroom_movie:
+    friendly_name: "Ballroom Mood Movie"
+  script.hue_ballroom_bright:
+    friendly_name: "Ballroom Mood Bright"
+
+  media_player.txnr636_0009b09961fb:
+    friendly_name: Ballroom Amplifier
+

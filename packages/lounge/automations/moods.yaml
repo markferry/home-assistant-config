@@ -1,0 +1,20 @@
+- alias: "Lounge Mood"
+  trigger:
+    platform: state
+    entity_id: input_select.lounge_select
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.lounge_select", "Off") %}
+            scene.lounge_off
+          {%-elif is_state("input_select.lounge_select", "Cosy") %}
+            scene.lounge_cosy
+          {%-elif is_state("input_select.lounge_select", "Movie") %}
+            scene.lounge_movie
+          {%-elif is_state("input_select.lounge_select", "Bright") %}
+            scene.lounge_bright
+          {% else %}
+            None
+          {% endif %}
+

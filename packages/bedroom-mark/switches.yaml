@@ -1,0 +1,7 @@
+- name: "Mark's Bedroom Demand"
+  platform: mqtt
+  command_topic: ha/bedroom-mark/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+

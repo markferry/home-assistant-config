@@ -1,0 +1,10 @@
+lounge_select:
+  name: Lounge Mood
+  options:
+    - 'Off'
+    - 'Cosy'
+    - 'Movie'
+    - 'Bright'
+  initial: 'Off'
+  icon: mdi:sofa
+

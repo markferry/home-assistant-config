@@ -1,0 +1,7 @@
+- name: "Mark's Bedroom"
+  username: gnome
+  password: !secret kodi_bedroom_mark
+  platform: kodi
+  host: bedroom-mark
+  port: 80
+

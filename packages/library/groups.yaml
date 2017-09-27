@@ -1,0 +1,39 @@
+library:
+  name: Library
+  view: true
+  icon: mdi:library
+  entities:
+  - sensor.library_temperature
+  - group.library_compact_ui
+  - media_player.library
+library_compact_ui:
+  name: Library
+  view: false
+  icon: mdi:library
+  entities:
+  - input_select.library_select
+  - climate.library_thermostat
+library_scenes:
+  name: Library
+  view: false
+  entities:
+  - input_select.library_select
+library_heating:
+  name: Library Heating
+  view: false
+  entities:
+  - climate.library_thermostat
+library_setpoints:
+  name: Library Setpoints
+  view: false
+  entities:
+  - climate.library_comfort_setpoint
+library_thermostats:
+  name: Library Thermostats
+  view: false
+  entities:
+  - climate.library_thermostat
+library_lights:
+  name: Library Lights
+  view: false
+

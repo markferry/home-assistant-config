@@ -1,0 +1,21 @@
+hue_library_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Off"
+
+hue_library_chat:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Chat"
+
+hue_library_read:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.library_select
+        option: "Read"
+
