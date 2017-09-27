@@ -34,8 +34,7 @@ homeassistant:
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
 
-
-# Discover some devices automatically
+config:
 discovery:
 
 zone: !include zone.yaml

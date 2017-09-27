@@ -97,3 +97,28 @@
           {{"Bin Day: "+l}}
         notification_id: 'bin-day'
 
+- alias: "Calendar Oil"
+  trigger:
+    - platform: state
+      entity_id: calendar.oil
+      to: "on"
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/calendar/oil'
+        payload: >
+          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
+          {{l}}
+    - service: notify.whalebarn
+      data_template:
+        message: >
+          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
+          {{"Oil Check: "+l}}
+    - service: persistent_notification.create
+      data_template:
+        title: 'Oil Check'
+        message: >
+          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
+          {{"Oil Day: "+l}}
+        notification_id: 'oil-check'
+
