@@ -25,6 +25,7 @@ class TestMqttConfig(object):
         self.client.connect(self.mqtt_host, 1883, 60)
         self.client.subscribe("ha/#")
         self.client.loop_start()
+        self.set_initial_temperatures(self)
 
     def teardown(self):
         self.flush()
@@ -83,12 +84,12 @@ class TestMqttConfig(object):
         temperature_topic = "ha/mock/%s/temperature/state" % room
         boiler_topic = "ha/annex/heating/command"
 
-        self.set_initial_temperatures()
-
         self.watch_topic(boiler_topic)
         self.flush(timeout=flush_timeout)
         self.client.publish(temperature_topic, 3, qos=1)
         assert self.wait_message(boiler_topic, "ON") is not None
+
+        self.client.publish(temperature_topic, 23, qos=1)
 
     @pytest.mark.parametrize("room", [
         "lounge/east",
@@ -104,12 +105,11 @@ class TestMqttConfig(object):
         temperature_topic = "ha/mock/%s/temperature/state" % room
         boiler_topic = "ha/main/heating/command"
 
-        self.set_initial_temperatures()
-
         self.watch_topic(boiler_topic)
         self.flush(timeout=flush_timeout)
         self.client.publish(temperature_topic, 3, qos=1)
         assert self.wait_message(boiler_topic, "ON") is not None
+
         self.client.publish(temperature_topic, 23, qos=1)
 
 
