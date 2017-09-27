@@ -6,9 +6,9 @@
       state: off
     climate.bedroom_mark_thermostat:
       temperature: 10
-    media_player.marks_bedroom:
+    media_player.bedroom_mark:
       state: paused
-    media_player.bedroommarkaudio:
+    media_player.bedroom_mark_audio:
       state: paused
 - name: "Mark's Bedroom Sleep"
   entities:
