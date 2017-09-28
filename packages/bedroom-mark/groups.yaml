@@ -1,0 +1,50 @@
+bedroom_mark:
+  name: "Mark's Bedroom"
+  view: false
+  icon: mdi:account
+  entities:
+  - media_player.bedroom_mark
+  - media_player.bedroom_mark_audio
+  - group.marks_bedroom_lights
+  - group.marks_bedroom_heating
+  - group.marks_bedroom_appliances
+  - group.marks_bedroom_scenes
+bedroom_mark_compact_ui:
+  name: "Mark's Bedroom"
+  view: false
+  entities:
+  - input_select.marks_bedroom_select
+  - climate.bedroom_mark_thermostat
+  - group.marks_bedroom_lights
+  - group.g_bedroom_mark_media_dimming
+marks_bedroom_scenes:
+  name: "Mark's Bedroom"
+  view: false
+  entities:
+  - input_select.marks_bedroom_select
+marks_bedroom_heating:
+  name: "Mark's Bedroom Heating"
+  view: false
+  entities:
+  - climate.bedroom_mark_thermostat
+marks_bedroom_setpoints:
+  name: "Mark's Bedroom Setpoints"
+  view: false
+  entities:
+  - climate.bedroom_mark_comfort_setpoint
+marks_bedroom_thermostats:
+  name: "Mark's Bedroom Thermostats"
+  view: false
+  entities:
+  - climate.bedroom_mark_thermostat
+marks_bedroom_lights:
+  name: "Mark's Bedroom Lights"
+  view: false
+  entities:
+  - light.bedroom_mark_overhead_level
+  - light.bedroom_mark_level_39
+  - light.marks_bedroom_lamp
+marks_bedroom_appliances:
+  name: "Mark's Bedroom Appliances"
+  view: false
+  entities:

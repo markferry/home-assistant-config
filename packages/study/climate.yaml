@@ -1,0 +1,16 @@
+- name: study_west_thermostat
+  platform: generic_thermostat
+  heater: switch.study_west_demand
+  target_sensor: sensor.study_west_temperature
+  max_temp: 25
+  min_temp: 5
+  target_temp: 10.0
+
+- name: study_east_thermostat
+  platform: generic_thermostat
+  heater: switch.study_east_demand
+  target_sensor: sensor.study_east_temperature
+  max_temp: 25
+  min_temp: 5
+  target_temp: 10.0
+

@@ -1,0 +1,36 @@
+customize:
+  group.lounge_scenes:
+    order: 0
+
+  group.lounge_lights:
+    icon: mdi:lightbulb-on
+    emulated_hue: true
+
+  light.lounge_east_level_30:
+    friendly_name: Lounge East Valve
+
+  sensor.lounge_east_temperature:
+    friendly_name: Lounge East
+    polling_intensity: 5
+  sensor.lounge_east_battery:
+    friendly_name: Lounge East Battery
+    icon: mdi:battery
+
+  climate.lounge_east_thermostat:
+    friendly_name: Lounge East
+  climate.lounge_east_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_lounge_thermostat:
+    friendly_name: Lounge Thermostat
+
+  script.hue_lounge_off:
+    friendly_name: "Lounge"
+  script.hue_lounge_cosy:
+    friendly_name: "Lounge Mood Cosy"
+  script.hue_lounge_movie:
+    friendly_name: "Lounge Mood Movie"
+  script.hue_lounge_bright:
+    friendly_name: "Lounge Mood Bright"
+

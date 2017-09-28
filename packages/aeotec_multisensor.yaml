@@ -1,0 +1,34 @@
+group:
+  g_aeotec_multisensor:
+    name: Aeotec Multisensor
+    entities:
+    - binary_sensor.aeotec_dsb05_multisensor_sensor
+    - sensor.aeotec_dsb05_multisensor_luminance
+    - sensor.aeotec_dsb05_multisensor_relative_humidity
+    - sensor.aeotec_dsb05_multisensor_temperature
+
+sensor:
+  - platform: template
+    sensors:
+      hall_multisensor_battery:
+        value_template: >
+          {% if states.zwave.aeotec_dsb05_multisensor %}
+            {{ states.zwave.aeotec_dsb05_multisensor.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+
+homeassistant:
+  customize:
+    sensor.hall_multisensor_battery:
+      friendly_name: Hall Multisensor Battery
+      icon: mdi:battery
+    sensor.aeotec_dsb05_multisensor_luminance:
+      friendly_name: Hall Luminance
+    sensor.aeotec_dsb05_multisensor_relative_humidity:
+      friendly_name: Hall Humidity
+    sensor.aeotec_dsb05_multisensor_temperature:
+      friendly_name: Hall
+    binary_sensor.aeotec_dsb05_multisensor_sensor:
+      friendly_name: Hall Motion

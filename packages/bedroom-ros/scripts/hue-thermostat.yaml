@@ -1,0 +1,7 @@
+hue_bedroom_ros_thermostat:
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        temperature: "{{ requested_level }}"
+        entity_id: climate.bedroom_ros_thermostat
+

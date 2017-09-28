@@ -1,0 +1,25 @@
+- name: Kitchen Off
+  entities:
+    group.kitchen_lights:
+      state: off
+    climate.kitchen_thermostat:
+      temperature: 10
+    media_player.kitchen:
+      state: paused
+
+- name: Kitchen Cosy
+  entities:
+    group.kitchen_lights:
+      state: on
+      brightness_pct: 50
+    climate.kitchen_thermostat:
+      temperature: 20
+
+- name: Kitchen Bright
+  entities:
+    group.kitchen_lights:
+      state: on
+      brightness_pct: 100
+    climate.kitchen_thermostat:
+      temperature: 20
+

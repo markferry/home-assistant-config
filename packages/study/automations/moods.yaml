@@ -1,0 +1,35 @@
+- alias: "Study Mood"
+  trigger:
+    platform: state
+    entity_id: input_select.study_select
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.study_select", "Off") %}
+            scene.study_off
+          {%-elif is_state("input_select.study_select", "Work") %}
+            scene.study_work
+          {%-elif is_state("input_select.study_select", "Relax") %}
+            scene.study_relax
+          {% else %}
+            None
+          {% endif %}
+
+- alias: "Study Work Time"
+  trigger:
+    - platform: time
+      at: '07:30:00'
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_select
+        option: "Work"

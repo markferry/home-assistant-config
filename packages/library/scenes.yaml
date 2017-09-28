@@ -1,0 +1,22 @@
+- name: Library Off
+  entities:
+    group.library_lights:
+      state: off
+    climate.library_thermostat:
+      temperature: 10
+    media_player.library:
+      state: paused
+- name: Library Chat
+  entities:
+    group.library_lights:
+      state: off
+      brightness_pct: 50
+    climate.library_thermostat:
+      temperature: 22
+- name: Library Read
+  entities:
+    group.library_lights:
+      state: on
+      brightness_pct: 100
+    climate.library_thermostat:
+      temperature: 22

@@ -1,0 +1,9 @@
+marks_bedroom_select:
+  name: "Mark's Bedroom Mood"
+  options:
+    - 'Off'
+    - 'Sleep'
+    - 'Play'
+  initial: 'Off'
+  icon: mdi:account
+

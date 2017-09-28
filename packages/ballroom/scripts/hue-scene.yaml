@@ -1,0 +1,28 @@
+hue_ballroom_off:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Off"
+
+hue_ballroom_party:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Party"
+
+hue_ballroom_movie:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Movie"
+
+hue_ballroom_bright:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Bright"
+

@@ -1,0 +1,21 @@
+- name: Hall West Demand
+  platform: mqtt
+  command_topic: ha/hall/west/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+
+- name: Hall East Demand
+  platform: mqtt
+  command_topic: ha/hall/east/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+
+- name: Annex Hall Demand
+  platform: mqtt
+  command_topic: ha/annex-hall/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+

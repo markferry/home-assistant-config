@@ -1,0 +1,28 @@
+- name: Study Off
+  entities:
+    group.study_lights:
+      state: off
+    climate.study_east_thermostat:
+      temperature: 10
+    climate.study_west_thermostat:
+      temperature: 10
+    media_player.study:
+      state: paused
+- name: Study Work
+  entities:
+    group.study_lights:
+      state: on
+      brightness_pct: 100
+    climate.study_east_thermostat:
+      temperature: 20
+    climate.study_west_thermostat:
+      temperature: 20
+- name: Study Relax
+  entities:
+    group.study_lights:
+      state: on
+      brightness_pct: 50
+    climate.study_east_thermostat:
+      temperature: 20
+    climate.study_west_thermostat:
+      temperature: 20

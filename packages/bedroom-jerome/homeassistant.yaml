@@ -1,0 +1,30 @@
+customize:
+  sensor.bedroom_jerome_temperature:
+    friendly_name: "Jerome's Bedroom"
+    polling_intensity: 5
+  sensor.bedroom_jerome_battery:
+    friendly_name: "Jerome's Bedroom Battery"
+    icon: mdi:battery
+
+  climate.bedroom_jerome_thermostat:
+    friendly_name: "Jerome's Bedroom"
+  climate.bedroom_jerome_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
+  script.hue_bedroom_jerome_thermostat:
+    friendly_name: "Jerome's Bedroom Thermostat"
+
+  script.hue_bedroom_jerome_off:
+    friendly_name: "Jerome's Bedroom"
+  script.hue_bedroom_jerome_sleep:
+    friendly_name: "Jerome's Bedroom Mood Sleep"
+  script.hue_bedroom_jerome_cosy:
+    friendly_name: "Jerome's Bedroom Mood Cosy"
+
+  group.bedroom_jerome_select:
+    order: 1
+    icon: /local/wb-icons/wb_jerome.png
+  input_select.bedroom_jerome_select:
+    entity_picture: /local/wb-icons/wb_jerome.png
+

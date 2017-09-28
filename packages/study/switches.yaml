@@ -1,0 +1,14 @@
+- name: Study West Demand
+  platform: mqtt
+  command_topic: ha/study/west/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+
+- name: Study East Demand
+  platform: mqtt
+  command_topic: ha/study/east/demand/command
+  payload_off: 'OFF'
+  payload_on: 'ON'
+  retain: true
+

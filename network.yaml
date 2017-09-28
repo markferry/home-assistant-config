@@ -2,8 +2,7 @@ name: Network
 view: false
 entities:
 # infrastructure
-- device_tracker.router0
-#- device_tracker.router1
+- device_tracker.router
 - device_tracker.climate
 - device_tracker.ap_west
 - device_tracker.ap_central
@@ -23,6 +22,7 @@ entities:
 - device_tracker.library
 - device_tracker.tado
 - device_tracker.bedroommark
+- device_tracker.bedroommark_chromecast
 # printers
 - device_tracker.ricoh213w
 - device_tracker.canonmg5550
