@@ -36,6 +36,9 @@ customize:
   input_select.marks_bedroom_select:
     entity_picture: /local/wb-icons/wb_mark.png
 
-  media_player.bedroommarkaudio:
+  media_player.bedroom_mark:
+    friendly_name: "Mark's Bedroom"
+
+  media_player.bedroom_mark_audio:
     friendly_name: "Mark's Chromecast"
 

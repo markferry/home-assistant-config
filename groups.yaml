@@ -219,11 +219,12 @@ media_players:
   entities:
     - media_player.study
     - media_player.lounge
-    - media_player.marks_bedroom
     - media_player.kitchen
-    - media_player.ballroom
     - media_player.library
+    - media_player.ballroom
     - media_player.ballroom_amplifier
+    - media_player.bedroom_mark
+    - media_player.bedroom_mark_audio
 
 temperatures:
   name: Temperatures

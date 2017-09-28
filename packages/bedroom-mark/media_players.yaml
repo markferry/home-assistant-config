@@ -1,7 +1,10 @@
-- name: "Mark's Bedroom"
+- name: bedroom_mark
   username: gnome
   password: !secret kodi_bedroom_mark
   platform: kodi
   host: bedroom-mark
   port: 80
 
+- name: bedroom_mark_audio
+  platform: cast
+  host: chromecast-audio

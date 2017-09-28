@@ -3,7 +3,8 @@ bedroom_mark:
   view: false
   icon: mdi:account
   entities:
-  - media_player.marks_bedroom
+  - media_player.bedroom_mark
+  - media_player.bedroom_mark_audio
   - group.marks_bedroom_lights
   - group.marks_bedroom_heating
   - group.marks_bedroom_appliances

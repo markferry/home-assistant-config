@@ -29,8 +29,8 @@ automation:
   trigger:
     - platform: state
       entity_id:
-        - media_player.marks_bedroom
-        - media_player.bedroommarkaudio
+        - media_player.bedroom_mark
+        - media_player.bedroom_mark_audio
       to: 'playing'
       for:
         seconds: 2
@@ -75,8 +75,8 @@ automation:
   trigger:
     - platform: state
       entity_id:
-        - media_player.marks_bedroom
-        - media_player.bedroommarkaudio
+        - media_player.bedroom_mark
+        - media_player.bedroom_mark_audio
       to: 'paused'
 
   condition:
@@ -118,8 +118,8 @@ automation:
   trigger:
     - platform: state
       entity_id:
-        - media_player.marks_bedroom
-        - media_player.bedroommarkaudio
+        - media_player.bedroom_mark
+        - media_player.bedroom_mark_audio
       from: 'playing'
       to: 'idle'
 
