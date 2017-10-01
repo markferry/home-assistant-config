@@ -14,6 +14,7 @@ ballroom_compact_ui:
   entities:
   - input_select.ballroom_select
   - climate.ballroom_east_thermostat
+  - group.ballroom_party_lights
 ballroom_scenes:
   name: Ballroom
   view: false
@@ -36,4 +37,11 @@ ballroom_thermostats:
   - climate.ballroom_east_thermostat
 ballroom_lights:
   name: Ballroom Lights
+  icon: mdi:lightbulb-on
   view: false
+ballroom_party_lights:
+  name: Ballroom Party Lights
+  view: false
+  icon: mdi:lightbulb-on
+  entities:
+  - switch.greenwave_powernode_61_switch
