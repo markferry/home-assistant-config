@@ -4,6 +4,7 @@ customize:
 
   light.bedroom_mark_overhead_level:
     friendly_name: "Mark's Bedroom Overhead"
+    icon: mdi:ceiling-light
   light.bedroom_mark_level_29:
     friendly_name: "Mark's Bedroom Valve"
 
