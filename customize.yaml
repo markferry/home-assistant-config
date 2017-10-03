@@ -38,9 +38,6 @@ group.all_lights:
   emulated_hue: true
 group.all_switches:
   emulated_hue: true
-group.marks_bedroom_lights:
-  icon: mdi:lightbulb-on
-  emulated_hue: true
 
 group.mark_present:
   entity_picture: /local/wb-icons/wb_mark.png
