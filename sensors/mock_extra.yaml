@@ -11,7 +11,7 @@
   platform: mqtt
   state_topic: ha/hottub/state/energy
   unit_of_measurement: "kWh"
-- name: greenwave_powernode_53_previous_reading_X
+- name: greenwave_powernode_53_previous_energy
   platform: mqtt
   state_topic: ha/hottub/previous-state/energy
   unit_of_measurement: "kWh"
@@ -20,7 +20,7 @@
   platform: mqtt
   state_topic: ha/hottub/state/power
   unit_of_measurement: "W"
-- name: greenwave_powernode_53_previous_reading_Y
+- name: greenwave_powernode_53_previous_power
   platform: mqtt
   state_topic: ha/hottub/previous-state/power
   unit_of_measurement: "W"
@@ -29,7 +29,7 @@
   platform: mqtt
   state_topic: ha/washing-machine/state/energy
   unit_of_measurement: "kWh"
-- name: greenwave_powernode_54_previous_reading_X
+- name: greenwave_powernode_54_previous_energy
   platform: mqtt
   state_topic: ha/washing-machine/previous-state/energy
   unit_of_measurement: "kWh"
@@ -38,7 +38,25 @@
   platform: mqtt
   state_topic: ha/washing-machine/state/power
   unit_of_measurement: "W"
-- name: greenwave_powernode_54_previous_reading_Y
+- name: greenwave_powernode_54_previous_power
   platform: mqtt
   state_topic: ha/washing-machine/previous-state/power
+  unit_of_measurement: "W"
+
+- name: greenwave_powernode_61_energy
+  platform: mqtt
+  state_topic: ha/ballroom/disco-light/state/energy
+  unit_of_measurement: "kWh"
+- name: greenwave_powernode_61_previous_energy
+  platform: mqtt
+  state_topic: ha/ballroom/disco-light/previous-state/energy
+  unit_of_measurement: "kWh"
+
+- name: greenwave_powernode_61_power
+  platform: mqtt
+  state_topic: ha/ballroom/disco-light/state/power
+  unit_of_measurement: "W"
+- name: greenwave_powernode_61_previous_power
+  platform: mqtt
+  state_topic: ha/ballroom/disco-light/previous-state/power
   unit_of_measurement: "W"
