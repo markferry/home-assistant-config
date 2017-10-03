@@ -2,6 +2,10 @@ customize:
   group.marks_bedroom_scenes:
     order: 0
 
+  group.marks_bedroom_lights:
+    icon: mdi:lightbulb-on
+    emulated_hue: true
+
   light.bedroom_mark_overhead_level:
     friendly_name: "Mark's Bedroom Overhead"
     icon: mdi:ceiling-light
