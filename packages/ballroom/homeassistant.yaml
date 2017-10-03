@@ -12,6 +12,11 @@ customize:
     friendly_name: Ballroom East Battery
     icon: mdi:battery
 
+  switch.greenwave_powernode_61_switch:
+    friendly_name: Ballroom Disco Light
+    entity_picture: /local/wb-icons/ext_mirrorball.png
+    emulated_hue: true
+
   climate.ballroom_east_thermostat:
     friendly_name: Ballroom East
   climate.ballroom_east_comfort_setpoint:
