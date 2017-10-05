@@ -44,4 +44,4 @@ ballroom_party_lights:
   view: false
   icon: mdi:lightbulb-on
   entities:
-  - switch.greenwave_powernode_61_switch
+  - switch.greenwave_powernode_62_switch
