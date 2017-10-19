@@ -60,7 +60,6 @@ settings:
   - group.rfx_switches
   - group.rfx_lights
   - group.dash_buttons
-  - group.virtual_appliances
 
 #
 # Functional Groups
