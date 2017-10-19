@@ -16,6 +16,8 @@ hall:
   - group.main_heating
   - group.annex_heating
   - group.g_hottub
+  - group.g_oil_tanks
+
 hall_compact_ui:
   name: Hall
   view: false
