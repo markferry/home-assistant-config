@@ -14,7 +14,6 @@ bedrooms:
   - group.bedroom_ros_compact_ui
   - group.guest_room_compact_ui
   - sensor.bedroom_mark_temperature
-  - sensor.bedroom_jerome_temperature
   - sensor.bedroom_ros_temperature
   - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
@@ -91,7 +90,7 @@ main_heating_demand:
   #- group.hall_demand
   - switch.ballroom_demand
   - switch.guest_room_demand
-  - switch.bedroom_mark_demand
+  - group.bedroom_mark_demand
   - group.bedroom_jerome_demand
 
 annex_heating:
@@ -167,12 +166,12 @@ batteries:
   - sensor.study_west_battery
   - sensor.hall_east_battery
   - sensor.library_battery
-  - sensor.bedroom_mark_battery
+  - sensor.bedroom_mark_south_battery
+  - sensor.bedroom_mark_north_battery
   - sensor.lounge_east_battery
   - sensor.ballroom_east_battery
   - sensor.kitchen_battery
   - sensor.annex_hall_battery
-  - sensor.bedroom_jerome_battery
   - sensor.bedroom_ros_battery
 
 dash_buttons:
@@ -242,7 +241,7 @@ temperatures:
   - sensor.bedroom_mark_temperature
   - sensor.study_east_temperature
   - sensor.study_west_temperature
-  - sensor.bedroom_jerome_temperature
+  - sensor.js_bedroom_temperature
   - sensor.bedroom_ros_temperature
 
 thermostat_devices:
@@ -251,7 +250,8 @@ thermostat_devices:
   entities:
   - climate.annex_hall_comfort_setpoint
   - climate.ballroom_east_comfort_setpoint
-  - climate.bedroom_mark_comfort_setpoint
+  - climate.bedroom_mark_south_comfort_setpoint
+  - climate.bedroom_mark_north_comfort_setpoint
   - climate.hall_east_comfort_setpoint
   - climate.hall_west_comfort_setpoint
   - climate.main_heating_thermostat_heating_1
@@ -262,7 +262,6 @@ thermostat_devices:
   - climate.study_east_comfort_setpoint
   - climate.study_west_comfort_setpoint
   - climate.danfoss_z_thermostat_014g0013_heating_1
-  - climate.bedroom_jerome_comfort_setpoint
   - climate.bedroom_ros_comfort_setpoint
 
 # Front-end thermostats
@@ -272,7 +271,8 @@ thermostats:
   entities:
   - climate.annex_hall_thermostat
   - climate.ballroom_east_thermostat
-  - climate.bedroom_mark_thermostat
+  - climate.bedroom_mark_south_thermostat
+  - climate.bedroom_mark_north_thermostat
   - climate.hall_east_thermostat
   - climate.hall_west_thermostat
   - climate.kitchen_thermostat
@@ -281,7 +281,7 @@ thermostats:
   - climate.study_east_thermostat
   - climate.study_west_thermostat
   - climate.danfoss_z_thermostat_014g0013_heating_1
-  - climate.bedroom_jerome_thermostat
+  - climate.js_bedroom
   - climate.bedroom_ros_thermostat
 
 network: !include network.yaml

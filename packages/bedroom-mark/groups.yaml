@@ -15,7 +15,8 @@ bedroom_mark_compact_ui:
   view: false
   entities:
   - input_select.bedroom_mark_select
-  - climate.bedroom_mark_thermostat
+  - climate.bedroom_mark_south_thermostat
+  - climate.bedroom_mark_north_thermostat
   - group.bedroom_mark_lights
   - group.g_bedroom_mark_media_dimming
 
@@ -29,17 +30,20 @@ bedroom_mark_heating:
   name: "Mark's Bedroom Heating"
   view: false
   entities:
-  - climate.bedroom_mark_thermostat
+  - climate.bedroom_mark_south_thermostat
+  - climate.bedroom_mark_north_thermostat
 bedroom_mark_setpoints:
   name: "Mark's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_mark_comfort_setpoint
+  - climate.bedroom_mark_south_comfort_setpoint
+  - climate.bedroom_mark_north_comfort_setpoint
 bedroom_mark_thermostats:
   name: "Mark's Bedroom Thermostats"
   view: false
   entities:
-  - climate.bedroom_mark_thermostat
+  - climate.bedroom_mark_south_thermostat
+  - climate.bedroom_mark_north_thermostat
 
 bedroom_mark_lights:
   name: "Mark's Bedroom Lights"
@@ -52,3 +56,11 @@ bedroom_mark_appliances:
   name: "Mark's Bedroom Appliances"
   view: false
   entities:
+
+bedroom_mark_demand:
+  name: "Mark's Bedroom Demand"
+  view: false
+  entities:
+  - switch.bedroom_mark_south_demand
+  - switch.bedroom_mark_north_demand
+

@@ -1,9 +1,16 @@
-- name: bedroom_mark_thermostat
+- name: bedroom_mark_south_thermostat
   platform: generic_thermostat
-  heater: switch.bedroom_mark_demand
-  target_sensor: sensor.bedroom_mark_temperature
+  heater: switch.bedroom_mark_south_demand
+  target_sensor: sensor.bedroom_mark_south_temperature
   max_temp: 25
   min_temp: 5
   target_temp: 10.0
 
+- name: bedroom_mark_north_thermostat
+  platform: generic_thermostat
+  heater: switch.bedroom_mark_north_demand
+  target_sensor: sensor.bedroom_mark_north_temperature
+  max_temp: 25
+  min_temp: 5
+  target_temp: 10.0
 

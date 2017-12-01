@@ -21,18 +21,29 @@ customize:
   light.bedroom_mark_lamp:
     friendly_name: "Mark's Bedroom Lamp"
 
-  sensor.bedroom_mark_temperature:
-    friendly_name: "Mark's Bedroom"
-    polling_intensity: 5
-  sensor.bedroom_mark_battery:
-    friendly_name: "Mark's Bedroom Battery"
+  sensor.bedroom_mark_south_temperature:
+    friendly_name: "Mark's Bedroom South"
+  sensor.bedroom_mark_north_temperature:
+    friendly_name: "Mark's Bedroom North"
+  sensor.bedroom_mark_south_battery:
+    friendly_name: "Mark's Bedroom South Battery"
+    icon: mdi:battery
+  sensor.bedroom_mark_north_battery:
+    friendly_name: "Mark's Bedroom North Battery"
     icon: mdi:battery
 
-  climate.bedroom_mark_thermostat:
+  climate.bedroom_mark_south_thermostat:
     friendly_name: "Mark's Bedroom"
-  climate.bedroom_mark_comfort_setpoint:
+  climate.bedroom_mark_south_comfort_setpoint:
     min_temp: 5
     max_temp: 25
+
+  climate.bedroom_mark_north_thermostat:
+    friendly_name: "Mark's Bedroom"
+  climate.bedroom_mark_north_comfort_setpoint:
+    min_temp: 5
+    max_temp: 25
+
 
   script.hue_bedroom_mark_thermostat:
     friendly_name: "Mark's Bedroom Thermostat"

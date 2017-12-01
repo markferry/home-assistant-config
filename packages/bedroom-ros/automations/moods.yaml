@@ -1,4 +1,4 @@
-- alias: "Ros's Bedroom Mood"
+- alias: bedroom_ros_mood
   trigger:
     platform: state
     entity_id: input_select.bedroom_ros_select

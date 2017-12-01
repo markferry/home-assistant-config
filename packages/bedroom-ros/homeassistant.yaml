@@ -1,4 +1,7 @@
 customize:
+  automation.bedroom_ros_mood:
+    friendly_name: "Ros's Bedroom Mood"
+
   sensor.bedroom_ros_temperature:
     friendly_name: "Ros's Bedroom"
   sensor.bedroom_ros_battery:
