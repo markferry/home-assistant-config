@@ -11,7 +11,6 @@ customize:
 
   sensor.lounge_east_temperature:
     friendly_name: Lounge East
-    polling_intensity: 5
   sensor.lounge_east_battery:
     friendly_name: Lounge East Battery
     icon: mdi:battery

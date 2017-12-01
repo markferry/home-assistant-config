@@ -13,7 +13,6 @@ customize:
 
   sensor.kitchen_temperature:
     friendly_name: Kitchen
-    polling_intensity: 5
   sensor.kitchen_battery:
     friendly_name: Kitchen Battery
     icon: mdi:battery
