@@ -30,7 +30,7 @@ automation:
     - platform: state
       entity_id:
         - media_player.bedroom_mark
-        - media_player.bedroom_mark_audio
+        - media_player.bedroommarkaudio
       to: 'playing'
       for:
         seconds: 2
@@ -76,7 +76,7 @@ automation:
     - platform: state
       entity_id:
         - media_player.bedroom_mark
-        - media_player.bedroom_mark_audio
+        - media_player.bedroommarkaudio
       to: 'paused'
 
   condition:
@@ -119,7 +119,7 @@ automation:
     - platform: state
       entity_id:
         - media_player.bedroom_mark
-        - media_player.bedroom_mark_audio
+        - media_player.bedroommarkaudio
       from: 'playing'
       to: 'idle'
 

@@ -67,6 +67,6 @@ customize:
   media_player.bedroom_mark:
     friendly_name: "Mark's Bedroom"
 
-  media_player.bedroom_mark_audio:
+  media_player.bedroommarkaudio:
     friendly_name: "Mark's Chromecast"
 

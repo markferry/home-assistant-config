@@ -223,7 +223,7 @@ media_players:
     - media_player.ballroom
     - media_player.ballroom_amplifier
     - media_player.bedroom_mark
-    - media_player.bedroom_mark_audio
+    - media_player.bedroommarkaudio
 
 temperatures:
   name: Temperatures

@@ -4,7 +4,7 @@ bedroom_mark:
   icon: mdi:account
   entities:
   - media_player.bedroom_mark
-  - media_player.bedroom_mark_audio
+  - media_player.bedroommarkaudio
   - group.bedroom_mark_lights
   - group.bedroom_mark_heating
   - group.bedroom_mark_appliances

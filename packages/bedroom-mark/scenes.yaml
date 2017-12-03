@@ -10,8 +10,6 @@
       temperature: 10
     media_player.bedroom_mark:
       state: paused
-    media_player.bedroom_mark_audio:
-      state: paused
     media_player.bedroommarkaudio:
       state: paused
 - name: bedroom_mark_sleep
