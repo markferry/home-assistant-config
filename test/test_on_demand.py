@@ -69,8 +69,8 @@ class TestMqttConfig(object):
             "hall/east",
             "library",
             "ballroom/east",
-            "bedroom-mark",
-            "bedroom-jerome",
+            "bedroom-mark/south",
+            "bedroom-mark/north",
         ]:
             temperature_topic = "ha/mock/%s/temperature/state" % room
             self.client.publish(temperature_topic, 20)
@@ -98,8 +98,8 @@ class TestMqttConfig(object):
         #"hall/east",
         "library",
         "ballroom/east",
-        "bedroom-mark",
-        "bedroom-jerome",
+        "bedroom-mark/south",
+        "bedroom-mark/north",
     ])
     def test_main_boiler_turns_on(self, room):
         temperature_topic = "ha/mock/%s/temperature/state" % room
