@@ -33,13 +33,13 @@ customize:
     icon: mdi:battery
 
   climate.bedroom_mark_south_thermostat:
-    friendly_name: "Mark's Bedroom"
+    friendly_name: "Mark's Bedroom South"
   climate.bedroom_mark_south_comfort_setpoint:
     min_temp: 5
     max_temp: 25
 
   climate.bedroom_mark_north_thermostat:
-    friendly_name: "Mark's Bedroom"
+    friendly_name: "Mark's Bedroom North"
   climate.bedroom_mark_north_comfort_setpoint:
     min_temp: 5
     max_temp: 25

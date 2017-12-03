@@ -18,7 +18,8 @@ include:
     - sensor.kitchen_temperature
     - sensor.library_temperature
     - sensor.lounge_east_temperature
-    - sensor.bedroom_mark_temperature
+    - sensor.bedroom_mark_south_temperature
+    - sensor.bedroom_mark_north_temperature
     - sensor.study_east_temperature
     - sensor.study_west_temperature
     - sensor.js_bedroom_temperature
