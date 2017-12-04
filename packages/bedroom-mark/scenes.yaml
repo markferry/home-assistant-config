@@ -1,8 +1,8 @@
-- name: "Mark's Bedroom Off"
+- name: bedroom_mark_off
   entities:
-    group.marks_bedroom_lights:
+    group.bedroom_mark_lights:
       state: off
-    switch.marks_bedroom_appliances:
+    switch.bedroom_mark_appliances:
       state: off
     climate.bedroom_mark_thermostat:
       temperature: 10
@@ -10,15 +10,17 @@
       state: paused
     media_player.bedroom_mark_audio:
       state: paused
-- name: "Mark's Bedroom Sleep"
+    media_player.bedroommarkaudio:
+      state: paused
+- name: bedroom_mark_sleep
   entities:
-    group.marks_bedroom_lights:
+    group.bedroom_mark_lights:
       state: off
     climate.bedroom_mark_thermostat:
       temperature: 15
-- name: "Mark's Bedroom Play"
+- name: bedroom_mark_play
   entities:
-    group.marks_bedroom_lights:
+    group.bedroom_mark_lights:
       state: on
     climate.bedroom_mark_thermostat:
       temperature: 20

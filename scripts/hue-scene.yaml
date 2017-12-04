@@ -10,7 +10,7 @@ hue_everything_off:
           - input_select.lounge_select
           - input_select.library_select
           - input_select.ballroom_select
-          - input_select.marks_bedroom_select
+          - input_select.bedroom_mark_select
           - input_select.guest_room_select
         option: "Off"
 

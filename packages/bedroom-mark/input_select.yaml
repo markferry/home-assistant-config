@@ -1,4 +1,4 @@
-marks_bedroom_select:
+bedroom_mark_select:
   name: "Mark's Bedroom Mood"
   options:
     - 'Off'

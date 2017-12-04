@@ -91,7 +91,7 @@ main_heating_demand:
   #- group.hall_demand
   - switch.ballroom_demand
   - switch.guest_room_demand
-  - switch.marks_bedroom_demand
+  - switch.bedroom_mark_demand
   - group.bedroom_jerome_demand
 
 annex_heating:
@@ -128,7 +128,7 @@ room_scenes:
 bedroom_scenes:
   name: Bedrooms
   entities:
-  - input_select.marks_bedroom_select
+  - input_select.bedroom_mark_select
   - input_select.bedroom_jerome_select
   - input_select.bedroom_ros_select
   - input_select.guest_room_select
@@ -139,8 +139,8 @@ user_automations:
   - automation.guest_room_sleep_time
   - automation.guest_room_off_time
   - automation.kitchen_cosy_time
-  - automation.marks_bedroom_sleep_time
-  - automation.marks_bedroom_off_time
+  - automation.bedroom_mark_sleep_time
+  - automation.bedroom_mark_off_time
   - automation.reset_moods
   - automation.study_work_time
   - automation.calendar_scene

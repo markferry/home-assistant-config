@@ -1,6 +1,6 @@
 - name: bedroom_mark_thermostat
   platform: generic_thermostat
-  heater: switch.marks_bedroom_demand
+  heater: switch.bedroom_mark_demand
   target_sensor: sensor.bedroom_mark_temperature
   max_temp: 25
   min_temp: 5

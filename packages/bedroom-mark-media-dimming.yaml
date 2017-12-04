@@ -42,7 +42,7 @@ automation:
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: group.marks_bedroom_lights
+        entity_id: group.bedroom_mark_lights
         state: 'on'
       - condition: or
         conditions:
@@ -66,7 +66,7 @@ automation:
   action:
     service: light.turn_on
     data_template:
-      entity_id: group.marks_bedroom_lights
+      entity_id: group.bedroom_mark_lights
       brightness_pct: '{{ states.input_slider.bedroom_mark_media_dimmer_level.state | int }}'
       transition: '2'
 
@@ -86,7 +86,7 @@ automation:
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: group.marks_bedroom_lights
+        entity_id: group.bedroom_mark_lights
         state: 'on'
       - condition: or
         conditions:
@@ -110,7 +110,7 @@ automation:
   action:
     service: light.turn_on
     data:
-      entity_id: group.marks_bedroom_lights
+      entity_id: group.bedroom_mark_lights
       brightness_pct: '50'
       transition: '3'
 
@@ -130,7 +130,7 @@ automation:
         entity_id: sun.sun
         state: 'below_horizon'
       - condition: state
-        entity_id: group.marks_bedroom_lights
+        entity_id: group.bedroom_mark_lights
         state: 'on'
       - condition: or
         conditions:
@@ -153,7 +153,7 @@ automation:
 
   action:
     service: scene.turn_on
-    entity_id: scene.marks_bedroom_play
+    entity_id: scene.bedroom_mark_play
 
 homeassistant:
   customize:
