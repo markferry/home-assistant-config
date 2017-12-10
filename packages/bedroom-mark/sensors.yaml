@@ -1,9 +1,20 @@
 - platform: template
   sensors:
-    bedroom_mark_battery:
+    bedroom_mark_south_battery:
       value_template: >
-        {% if states.zwave.bedroom_mark %}
-          {{ states.zwave.bedroom_mark.attributes.battery_level }}
+        {% if states.zwave.bedroom_mark_south %}
+          {{ states.zwave.bedroom_mark_south.attributes.battery_level }}
+        {% else %}
+          unknown
+        {% endif %}
+      unit_of_measurement: '%'
+
+- platform: template
+  sensors:
+    bedroom_mark_north_battery:
+      value_template: >
+        {% if states.zwave.bedroom_mark_north %}
+          {{ states.zwave.bedroom_mark_north.attributes.battery_level }}
         {% else %}
           unknown
         {% endif %}

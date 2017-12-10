@@ -2,3 +2,4 @@ name: "Aneta"
 entities:
 - device_tracker.aneta_iphone
 - device_tracker.aneta_iphone_bt
+- device_tracker.aneta_camajakielas2

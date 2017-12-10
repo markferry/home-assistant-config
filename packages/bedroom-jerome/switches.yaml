@@ -1,13 +1,6 @@
-- name: "Jerome's Bedroom Demand"
+- name: js_bedroom_demand
   platform: mqtt
-  command_topic: ha/bedroom-jerome/demand/command
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  retain: true
-
-- name: "J's Bedroom Demand"
-  platform: mqtt
-  command_topic: ha/js-bedroom/demand/command
+  command_topic: ha/bedroom-jerome/js_bedroom/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   retain: true

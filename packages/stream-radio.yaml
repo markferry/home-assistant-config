@@ -29,7 +29,7 @@ group:
     - input_select.lounge_stream
     - input_select.library_stream
     - input_select.ballroom_stream
-    - input_select.marks_bedroom_stream
+    - input_select.bedroom_mark_stream
 
 automation:
 - alias: Stream Radio None
@@ -50,7 +50,7 @@ automation:
       entity_id: input_select.ballroom_stream
       to: None
     - platform: state
-      entity_id: input_select.marks_bedroom_stream
+      entity_id: input_select.bedroom_mark_stream
       to: None
   action:
     - service: media_player.stop
@@ -75,7 +75,7 @@ automation:
       entity_id: input_select.ballroom_stream
       to: "Stream 1"
     - platform: state
-      entity_id: input_select.marks_bedroom_stream
+      entity_id: input_select.bedroom_mark_stream
       to: "Stream 1"
   action:
     - service: media_player.play_media
@@ -115,7 +115,7 @@ automation:
       entity_id: input_select.ballroom_stream
       to: "Stream 2"
     - platform: state
-      entity_id: input_select.marks_bedroom_stream
+      entity_id: input_select.bedroom_mark_stream
       to: "Stream 2"
   action:
     - service: media_player.play_media
@@ -155,7 +155,7 @@ automation:
       entity_id: input_select.ballroom_stream
       to: "Stream 3"
     - platform: state
-      entity_id: input_select.marks_bedroom_stream
+      entity_id: input_select.bedroom_mark_stream
       to: "Stream 3"
   action:
     - service: media_player.play_media
@@ -264,7 +264,7 @@ input_select:
       - "Stream 2"
       - "Stream 3"
 
-  marks_bedroom_stream:
+  bedroom_mark_stream:
     name: "Mark's Bedroom"
     initial: None
     icon: mdi:hotel

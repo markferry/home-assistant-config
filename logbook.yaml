@@ -18,10 +18,11 @@ include:
     - sensor.kitchen_temperature
     - sensor.library_temperature
     - sensor.lounge_east_temperature
-    - sensor.bedroom_mark_temperature
+    - sensor.bedroom_mark_south_temperature
+    - sensor.bedroom_mark_north_temperature
     - sensor.study_east_temperature
     - sensor.study_west_temperature
-    - sensor.bedroom_jerome_temperature
+    - sensor.js_bedroom_temperature
     - sensor.bedroom_ros_temperature
     - sensor.main_heating_thermostat_battery
     - sensor.annex_heating_thermostat_battery
@@ -31,12 +32,12 @@ include:
     - sensor.study_west_battery
     - sensor.hall_east_battery
     - sensor.library_battery
-    - sensor.bedroom_mark_battery
+    - sensor.bedroom_mark_south_battery
+    - sensor.bedroom_mark_north_battery
     - sensor.lounge_east_battery
     - sensor.ballroom_east_battery
     - sensor.kitchen_battery
     - sensor.annex_hall_battery
-    - sensor.bedroom_jerome_battery
     - sensor.bedroom_ros_battery
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
@@ -56,20 +57,20 @@ exclude:
   entities:
     - automation.annex_heating_poll_off
     - automation.annex_heating_poll_on
-    - automation.ballroom_mood
-    - automation.guest_room_mood
     - automation.hot_tub_hi
     - automation.hot_tub_lo
     - automation.hot_water_off
     - automation.hot_water_on
-    - automation.jeromes_bedroom_mood
+    - automation.ballroom_mood
+    - automation.bedroom_jerome_mood
+    - automation.bedroom_mark_mood
+    - automation.bedroom_ros_mood
+    - automation.guest_room_mood
     - automation.kitchen_mood
     - automation.library_mood
     - automation.lounge_mood
-    - automation.marks_bedroom_mood
-    - automation.ross_bedroom_mood
+    - automation.study_mood
     - automation.set_real_thermostat
     - automation.set_virtual_thermostat
-    - automation.study_mood
     - automation.washing_machine_hi
     - automation.washing_machine_lo

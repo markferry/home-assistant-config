@@ -31,7 +31,7 @@
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {% if "mark" in l %}
-          {%   set u = "marks_bedroom" %}
+          {%   set u = "bedroom_mark" %}
           {% elif "jerome" in l %}
           {%   set u = "bedroom_jerome" %}
           {% elif "ros" in l %}
@@ -57,7 +57,7 @@
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {% if "mark" in l %}
-          {%   set u = "marks_bedroom" %}
+          {%   set u = "bedroom_mark" %}
           {% elif "jerome" in l %}
           {%   set u = "bedroom_jerome" %}
           {% elif "ros" in l %}

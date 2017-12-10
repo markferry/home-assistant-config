@@ -5,6 +5,7 @@
   host: bedroom-mark
   port: 80
 
-- name: bedroom_mark_audio
+# Autodiscovered
+- name: bedroommarkaudio
   platform: cast
   host: chromecast-audio

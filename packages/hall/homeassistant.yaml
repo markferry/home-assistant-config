@@ -11,13 +11,10 @@ customize:
 
   sensor.hall_west_temperature:
     friendly_name: Hall West
-    polling_intensity: 5
   sensor.hall_east_temperature:
     friendly_name: Hall East
-    polling_intensity: 5
   sensor.annex_hall_temperature:
     friendly_name: Annex Hall
-    polling_intensity: 5
   sensor.hall_west_battery:
     friendly_name: Hall West Battery
     icon: mdi:battery

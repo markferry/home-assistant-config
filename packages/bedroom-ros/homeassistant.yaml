@@ -1,7 +1,9 @@
 customize:
+  automation.bedroom_ros_mood:
+    friendly_name: "Ros's Bedroom Mood"
+
   sensor.bedroom_ros_temperature:
     friendly_name: "Ros's Bedroom"
-    polling_intensity: 5
   sensor.bedroom_ros_battery:
     friendly_name: "Ros's Bedroom Battery"
     icon: mdi:battery

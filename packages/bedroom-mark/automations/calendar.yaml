@@ -9,7 +9,7 @@
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {% if "mark" in l %}
-          {%   set u = "marks_bedroom" %}
+          {%   set u = "bedroom_mark" %}
           {% endif %}
           input_select.{{u}}_select
         option: >
@@ -31,7 +31,7 @@
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {% if "mark" in l %}
-          {%   set u = "marks_bedroom" %}
+          {%   set u = "bedroom_mark" %}
           {% endif %}
           group.{{u}}_thermostats
         temperature: >

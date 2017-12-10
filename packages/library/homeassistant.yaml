@@ -7,7 +7,6 @@ customize:
 
   sensor.library_temperature:
     friendly_name: Library
-    polling_intensity: 5
   sensor.library_battery:
     friendly_name: Library Battery
     icon: mdi:battery

@@ -1,0 +1,67 @@
+group:
+  g_oil_tanks:
+    name: Oil Levels
+    entities:
+    - sensor.oil_main_litres
+    - sensor.oil_main_percentage
+    - sensor.oil_main_days_remaining
+    - sensor.oil_annex_litres
+    - sensor.oil_annex_percentage
+    - sensor.oil_annex_days_remaining
+
+sensor:
+  - name: oil_main_litres
+    platform: mqtt
+    state_topic: ha/myolive/1905
+    value_template: '{{ value_json.Litres }}'
+    unit_of_measurement: 'L'
+
+  - name: oil_main_percentage
+    platform: mqtt
+    state_topic: ha/myolive/1905
+    value_template: '{{ value_json.Percentage }}'
+    unit_of_measurement: '%'
+
+  - name: oil_main_days_remaining
+    platform: mqtt
+    state_topic: ha/myolive/1905
+    value_template: '{{ value_json.DaysRemaining }}'
+
+  - name: oil_annex_litres
+    platform: mqtt
+    state_topic: ha/myolive/1916
+    value_template: '{{ value_json.Litres }}'
+    unit_of_measurement: 'L'
+
+  - name: oil_annex_percentage
+    platform: mqtt
+    state_topic: ha/myolive/1916
+    value_template: '{{ value_json.Percentage }}'
+    unit_of_measurement: '%'
+
+  - name: oil_annex_days_remaining
+    platform: mqtt
+    state_topic: ha/myolive/1916
+    value_template: '{{ value_json.DaysRemaining }}'
+
+
+homeassistant:
+  customize:
+    sensor.oil_main_litres:
+      friendly_name: "Main Oil Level"
+      icon: mdi:oil
+    sensor.oil_main_percentage:
+      friendly_name: "Main Oil Percent"
+      icon: mdi:oil
+    sensor.oil_main_days_remaining:
+      friendly_name: "Main Oil Days Remaining"
+      icon: mdi:oil
+    sensor.oil_annex_litres:
+      friendly_name: "Annex Oil Level"
+      icon: mdi:oil
+    sensor.oil_annex_percentage:
+      friendly_name: "Annex Oil Percent"
+      icon: mdi:oil
+    sensor.oil_annex_days_remaining:
+      friendly_name: "Annex Oil Days Remaining"
+      icon: mdi:oil

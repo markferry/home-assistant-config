@@ -1,16 +1,6 @@
 customize:
-  sensor.bedroom_jerome_temperature:
-    friendly_name: "Jerome's Bedroom"
-    polling_intensity: 5
-  sensor.bedroom_jerome_battery:
-    friendly_name: "Jerome's Bedroom Battery"
-    icon: mdi:battery
-
-  climate.bedroom_jerome_thermostat:
-    friendly_name: "Jerome's Bedroom"
-  climate.bedroom_jerome_comfort_setpoint:
-    min_temp: 5
-    max_temp: 25
+  automation.bedroom_jerome_mood:
+    friendly_name: "Jerome's Bedroom Mood"
 
   script.hue_bedroom_jerome_thermostat:
     friendly_name: "Jerome's Bedroom Thermostat"
@@ -28,3 +18,10 @@ customize:
   input_select.bedroom_jerome_select:
     entity_picture: /local/wb-icons/wb_jerome.png
 
+  # Tado sensors
+  climate.js_bedroom:
+    friendly_name: "Jerome's Bedroom"
+  sensor.js_bedroom_humidity:
+    friendly_name: "Jerome's Bedroom Humidity"
+  sensor.js_bedroom_temperature:
+    friendly_name: "Jerome's Bedroom"

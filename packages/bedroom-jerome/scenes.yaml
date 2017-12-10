@@ -4,19 +4,13 @@
       state: off
     switch.bedroom_jerome_appliances:
       state: off
-    climate.bedroom_jerome_thermostat:
-      temperature: 10
     media_player.jeromes_tablet:
       state: paused
 - name: bedroom_jerome_sleep
   entities:
     group.bedroom_jerome_lights:
       state: off
-    climate.bedroom_jerome_thermostat:
-      temperature: 10
 - name: bedroom_jerome_cosy
   entities:
     group.bedroom_jerome_lights:
       state: on
-    climate.bedroom_jerome_thermostat:
-      temperature: 23

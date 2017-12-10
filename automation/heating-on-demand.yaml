@@ -75,7 +75,9 @@
     - platform: state
       entity_id: climate.lounge_east_thermostat
     - platform: state
-      entity_id: climate.bedroom_mark_thermostat
+      entity_id: climate.bedroom_mark_north_thermostat
+    - platform: state
+      entity_id: climate.bedroom_mark_south_thermostat
     - platform: state
       entity_id: climate.kitchen_thermostat
     - platform: state
@@ -88,8 +90,6 @@
       entity_id: climate.hall_east_thermostat
     - platform: state
       entity_id: climate.annex_hall_thermostat
-    - platform: state
-      entity_id: climate.bedroom_jerome_thermostat
     - platform: state
       entity_id: climate.bedroom_ros_thermostat
   action:
@@ -108,7 +108,9 @@
 #    - platform: state
 #      entity_id: climate.lounge_east_comfort_setpoint
 #    - platform: state
-#      entity_id: climate.bedroom_mark_comfort_setpoint
+#      entity_id: climate.bedroom_mark_north_comfort_setpoint
+#    - platform: state
+#      entity_id: climate.bedroom_mark_south_comfort_setpoint
 #    - platform: state
 #      entity_id: climate.kitchen_comfort_setpoint
 #    - platform: state
@@ -122,8 +124,6 @@
 #    - platform: state
 #      entity_id: climate.annex_hall_comfort_setpoint
 #    - platform: state
-#      entity_id: climate.bedroom_jerome_comfort_setpoint
-#    - platform: state
 #      entity_id: climate.bedroom_ros_comfort_setpoint
 #  action:
 #    #- service: climate.set_temperature
@@ -134,7 +134,7 @@
 #      data:
 #        message: "Set Virtual Thermostat disabled"
 
-# Tado valve position sets demand switch
+# Tado temperature determines demand switch
 - alias: "J's Bedroom Triggers Boiler"
   trigger:
     platform: state

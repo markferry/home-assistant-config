@@ -4,13 +4,14 @@ bedroom_jerome:
   #view: true
   entities:
   - group.bedroom_jerome_compact_ui
+
 bedroom_jerome_compact_ui:
   name: "Jerome's Bedroom"
   view: false
   entities:
   - input_select.bedroom_jerome_select
-  - climate.bedroom_jerome_thermostat
   - climate.js_bedroom
+
 bedroom_jerome_scenes:
   name: "Jerome's Bedroom"
   view: false
@@ -20,7 +21,7 @@ bedroom_jerome_heating:
   name: "Jerome's Bedroom Heating"
   view: false
   entities:
-  - climate.bedroom_jerome_thermostat
+  - climate.js_bedroom
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
   view: false
@@ -30,13 +31,11 @@ bedroom_jerome_thermostats:
   name: "Jerome's Bedroom Thermostats"
   view: false
   entities:
-  - climate.bedroom_jerome_thermostat
   - climate.js_bedroom
 
 bedroom_jerome_demand:
   name: "Jerome's Bedroom Demand"
   view: false
   entities:
-  - switch.jeromes_bedroom_demand
   - switch.js_bedroom_demand
 
