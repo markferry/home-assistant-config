@@ -9,7 +9,7 @@ group:
     entities:
       - input_boolean.lounge_dim_for_movie
       - input_boolean.lounge_dim_for_tv
-      - input_slider.lounge_media_dimmer_level
+      - input_number.lounge_media_dimmer_level
 
 input_boolean:
   lounge_dim_for_tv:
@@ -17,7 +17,7 @@ input_boolean:
   lounge_dim_for_movie:
     name: Dim during Movies
 
-input_slider:
+input_number:
   lounge_media_dimmer_level:
     name: 'Dim Level'
     min: 0
@@ -65,7 +65,7 @@ automation:
     service: light.turn_on
     data_template:
       entity_id: group.lounge_lights
-      brightness_pct: '{{ states.input_slider.lounge_media_dimmer_level.state | int }}'
+      brightness_pct: '{{ states.input_number.lounge_media_dimmer_level.state | int }}'
       transition: '2'
 
 
@@ -157,5 +157,5 @@ homeassistant:
       icon: mdi:movie
     input_boolean.lounge_dim_for_tv:
       icon: mdi:television-classic
-    input_slider.lounge_media_dimmer_level:
+    input_number.lounge_media_dimmer_level:
       icon: mdi:brightness-6
