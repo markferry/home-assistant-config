@@ -71,6 +71,8 @@ updater:
 # Enables the frontend
 frontend:
 
+map:
+
 # Track the sun
 sun:
 
