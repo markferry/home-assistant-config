@@ -2,6 +2,8 @@ homeassistant:
   customize:
     climate.bedroom_mark_thermostat:
       friendly_name: "Mark's Bedroom Heating"
+    sensor.bedroom_mark_temperature_mean
+      friendly_name: "Mark's Bedroom"
 
 group:
   g_debug_bedroom_mark_heating:
