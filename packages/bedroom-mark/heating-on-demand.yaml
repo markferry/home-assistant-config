@@ -2,8 +2,9 @@ homeassistant:
   customize:
     climate.bedroom_mark_thermostat:
       friendly_name: "Mark's Bedroom Heating"
-    sensor.bedroom_mark_temperature_mean
+    sensor.bedroom_mark_temperature:
       friendly_name: "Mark's Bedroom"
+      icon: mdi:thermometer
 
 group:
   g_debug_bedroom_mark_heating:
@@ -11,14 +12,18 @@ group:
       - climate.bedroom_mark_thermostat
       - climate.bedroom_mark_south_comfort_setpoint
       - climate.bedroom_mark_north_comfort_setpoint
-      - input_number.bedroom_mark_temperature
-      - sensor.bedroom_mark_temperature_mean
+      - switch.bedroom_mark_demand
+
+  g_debug_bedroom_mark_temperature:
+    entities:
+      - sensor.bedroom_mark_temperature
+      - sensor.bedroom_mark_south_current_temperature
+      - sensor.bedroom_mark_north_current_temperature
       - sensor.bedroom_mark_south_temperature
       - sensor.bedroom_mark_north_temperature
-      - switch.bedroom_mark_demand
-      - switch.bedroom_mark_south_demand
-      - switch.bedroom_mark_north_demand
 
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_mark_thermostat:
     view: false
     entities:
@@ -29,7 +34,7 @@ climate:
   - name: bedroom_mark_thermostat
     platform: generic_thermostat
     heater: switch.bedroom_mark_demand
-    target_sensor: sensor.bedroom_mark_temperature_mean
+    target_sensor: sensor.bedroom_mark_temperature
     max_temp: 25
     min_temp: 5
     target_temp: 10.0
@@ -43,24 +48,33 @@ switch:
     retain: true
 
 sensor:
-  - name: bedroom_mark_temperature
-    platform: statistics
-    entity_id: input_number.bedroom_mark_temperature
-    sampling_size: 2  # equal to the number of devices updating it
-    #max_age:
-    #  seconds: 20
-
-input_number:
-  bedroom_mark_temperature:
-    mode: box
-    min: -20
-    max: 50
-    step: 0.1
+  - name: bedroom_mark_south_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.bedroom_mark_south_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
-    #initial: 15
+    expire_after: 1800  # 30mins
+    force_update: true
+
+  - name: bedroom_mark_north_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.bedroom_mark_north_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 1800  # 30mins
+    force_update: true
+
+  - name: bedroom_mark_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.bedroom_mark_south_current_temperature
+      - sensor.bedroom_mark_north_current_temperature
 
 automation:
-  # Set last received temperature
+  # Redirect received temperatures over mqtt
   - alias: "bedroom_mark_update_temperature"
     trigger:
       - platform: state
@@ -68,9 +82,8 @@ automation:
       - platform: state
         entity_id: sensor.bedroom_mark_north_temperature
     action:
-      - service: input_number.set_value
+      - service: mqtt.publish
         data_template:
-          entity_id: input_number.bedroom_mark_temperature
-          value: '{{ trigger.to_state.state }}'
-
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
 

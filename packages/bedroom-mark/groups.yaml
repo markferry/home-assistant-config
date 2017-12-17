@@ -5,7 +5,7 @@ bedroom_mark:
   entities:
   - media_player.bedroom_mark
   - media_player.bedroommarkaudio
-  - sensor.bedroom_mark_temperature_mean
+  - sensor.bedroom_mark_temperature
   - climate.bedroom_mark_thermostat
   - group.bedroom_mark_lights
   - group.bedroom_mark_appliances
