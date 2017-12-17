@@ -4,28 +4,24 @@
       state: off
     switch.bedroom_mark_appliances:
       state: off
-    climate.bedroom_mark_south_thermostat:
-      temperature: 10
-    climate.bedroom_mark_north_thermostat:
+    climate.bedroom_mark_thermostat:
       temperature: 10
     media_player.bedroom_mark:
       state: paused
     media_player.bedroommarkaudio:
       state: paused
+
 - name: bedroom_mark_sleep
   entities:
     group.bedroom_mark_lights:
       state: off
-    climate.bedroom_mark_south_thermostat:
+    climate.bedroom_mark_thermostat:
       temperature: 15
-    climate.bedroom_mark_north_thermostat:
-      temperature: 15
+
 - name: bedroom_mark_play
   entities:
     group.bedroom_mark_lights:
       state: on
-    climate.bedroom_mark_south_thermostat:
-      temperature: 20
-    climate.bedroom_mark_north_thermostat:
+    climate.bedroom_mark_thermostat:
       temperature: 20
 

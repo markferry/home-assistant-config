@@ -1,0 +1,76 @@
+homeassistant:
+  customize:
+    climate.bedroom_mark_thermostat:
+      friendly_name: "Mark's Bedroom Heating"
+    sensor.bedroom_mark_temperature_mean
+      friendly_name: "Mark's Bedroom"
+
+group:
+  g_debug_bedroom_mark_heating:
+    entities:
+      - climate.bedroom_mark_thermostat
+      - climate.bedroom_mark_south_comfort_setpoint
+      - climate.bedroom_mark_north_comfort_setpoint
+      - input_number.bedroom_mark_temperature
+      - sensor.bedroom_mark_temperature_mean
+      - sensor.bedroom_mark_south_temperature
+      - sensor.bedroom_mark_north_temperature
+      - switch.bedroom_mark_demand
+      - switch.bedroom_mark_south_demand
+      - switch.bedroom_mark_north_demand
+
+  g_bedroom_mark_thermostat:
+    view: false
+    entities:
+      - climate.bedroom_mark_south_comfort_setpoint
+      - climate.bedroom_mark_north_comfort_setpoint
+
+climate:
+  - name: bedroom_mark_thermostat
+    platform: generic_thermostat
+    heater: switch.bedroom_mark_demand
+    target_sensor: sensor.bedroom_mark_temperature_mean
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: bedroom_mark_demand
+    platform: mqtt
+    command_topic: ha/bedroom-mark/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: bedroom_mark_temperature
+    platform: statistics
+    entity_id: input_number.bedroom_mark_temperature
+    sampling_size: 2  # equal to the number of devices updating it
+    #max_age:
+    #  seconds: 20
+
+input_number:
+  bedroom_mark_temperature:
+    mode: box
+    min: -20
+    max: 50
+    step: 0.1
+    unit_of_measurement: "\xB0C"
+    #initial: 15
+
+automation:
+  # Set last received temperature
+  - alias: "bedroom_mark_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.bedroom_mark_south_temperature
+      - platform: state
+        entity_id: sensor.bedroom_mark_north_temperature
+    action:
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.bedroom_mark_temperature
+          value: '{{ trigger.to_state.state }}'
+
+
