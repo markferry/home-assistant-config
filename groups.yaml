@@ -13,8 +13,7 @@ bedrooms:
   - group.bedroom_jerome_compact_ui
   - group.bedroom_ros_compact_ui
   - group.guest_room_compact_ui
-  - sensor.bedroom_mark_south_temperature
-  - sensor.bedroom_mark_north_temperature
+  - sensor.bedroom_mark_temperature_mean
   - sensor.bedroom_ros_temperature
   - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
@@ -91,7 +90,7 @@ main_heating_demand:
   #- group.hall_demand
   - switch.ballroom_demand
   - switch.guest_room_demand
-  - group.bedroom_mark_demand
+  - switch.bedroom_mark_demand
   - group.bedroom_jerome_demand
 
 annex_heating:
@@ -272,8 +271,7 @@ thermostats:
   entities:
   - climate.annex_hall_thermostat
   - climate.ballroom_east_thermostat
-  - climate.bedroom_mark_south_thermostat
-  - climate.bedroom_mark_north_thermostat
+  - climate.bedroom_mark_thermostat
   - climate.hall_east_thermostat
   - climate.hall_west_thermostat
   - climate.kitchen_thermostat

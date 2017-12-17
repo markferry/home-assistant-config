@@ -26,7 +26,10 @@ homeassistant:
     package_ballroom: !include packages/ballroom/package.yaml
     package_armoury: !include packages/armoury/package.yaml
     package_guest_room: !include packages/guest_room/package.yaml
+
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
+    package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
+
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
     package_bedroom_ros: !include packages/bedroom-ros/package.yaml
     #package_room: !include packages/room/package.yaml
