@@ -19,10 +19,17 @@
   max_temp: 25
   min_temp: 5
 
-- name: bedroom_mark_comfort_setpoint
+- name: bedroom_mark_south_comfort_setpoint
   platform: generic_thermostat
-  heater: switch.marks_bedroom_demand
-  target_sensor: sensor.bedroom_mark_temperature
+  heater: switch.bedroom_mark_south_demand
+  target_sensor: sensor.bedroom_mark_south_temperature
+  max_temp: 25
+  min_temp: 5
+
+- name: bedroom_mark_north_comfort_setpoint
+  platform: generic_thermostat
+  heater: switch.bedroom_mark_north_demand
+  target_sensor: sensor.bedroom_mark_north_temperature
   max_temp: 25
   min_temp: 5
 

@@ -10,9 +10,13 @@
   platform: mqtt
   state_topic: ha/mock/lounge/east/temperature/state
   unit_of_measurement: "\xB0C"
-- name: bedroom_mark_temperature
+- name: bedroom_mark_south_temperature
   platform: mqtt
-  state_topic: ha/mock/bedroom-mark/temperature/state
+  state_topic: ha/mock/bedroom-mark/south/temperature/state
+  unit_of_measurement: "\xB0C"
+- name: bedroom_mark_north_temperature
+  platform: mqtt
+  state_topic: ha/mock/bedroom-mark/north/temperature/state
   unit_of_measurement: "\xB0C"
 - name: kitchen_temperature
   platform: mqtt
