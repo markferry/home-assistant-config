@@ -13,7 +13,7 @@ bedrooms:
   - group.bedroom_jerome_compact_ui
   - group.bedroom_ros_compact_ui
   - group.guest_room_compact_ui
-  - sensor.bedroom_mark_temperature_mean
+  - sensor.bedroom_mark_temperature
   - sensor.bedroom_ros_temperature
   - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
@@ -238,7 +238,8 @@ temperatures:
   - sensor.kitchen_temperature
   - sensor.library_temperature
   - sensor.lounge_east_temperature
-  - sensor.bedroom_mark_temperature
+  - sensor.bedroom_mark_south_current_temperature
+  - sensor.bedroom_mark_north_current_temperature
   - sensor.study_east_temperature
   - sensor.study_west_temperature
   - sensor.js_bedroom_temperature
