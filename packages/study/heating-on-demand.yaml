@@ -1,0 +1,89 @@
+homeassistant:
+  customize:
+    climate.study_thermostat:
+      friendly_name: "Study Heating"
+    sensor.study_temperature:
+      friendly_name: "Study"
+      icon: mdi:thermometer
+
+group:
+  g_debug_study_heating:
+    entities:
+      - climate.study_thermostat
+      - climate.study_east_comfort_setpoint
+      - climate.study_west_comfort_setpoint
+      - switch.study_demand
+
+  g_debug_study_temperature:
+    entities:
+      - sensor.study_temperature
+      - sensor.study_east_current_temperature
+      - sensor.study_west_current_temperature
+      - sensor.study_east_temperature
+      - sensor.study_west_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_study_thermostat:
+    view: false
+    entities:
+      - climate.study_east_comfort_setpoint
+      - climate.study_west_comfort_setpoint
+
+climate:
+  - name: study_thermostat
+    platform: generic_thermostat
+    heater: switch.study_demand
+    target_sensor: sensor.study_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: study_demand
+    platform: mqtt
+    command_topic: ha/study/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: study_east_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.study_east_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: study_west_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.study_west_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: study_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.study_east_current_temperature
+      - sensor.study_west_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "study_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.study_east_temperature
+      - platform: state
+        entity_id: sensor.study_west_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

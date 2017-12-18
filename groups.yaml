@@ -111,7 +111,7 @@ annex_heating_demand:
   name: Annex Heating Demand
   view: false
   entities:
-  - group.study_demand
+  - switch.study_demand
   - switch.annex_hall_demand
   - switch.ross_bedroom_demand
 
@@ -240,8 +240,8 @@ temperatures:
   - sensor.lounge_east_temperature
   - sensor.bedroom_mark_south_current_temperature
   - sensor.bedroom_mark_north_current_temperature
-  - sensor.study_east_temperature
-  - sensor.study_west_temperature
+  - sensor.study_east_current_temperature
+  - sensor.study_west_current_temperature
   - sensor.js_bedroom_temperature
   - sensor.bedroom_ros_temperature
 
@@ -278,8 +278,7 @@ thermostats:
   - climate.kitchen_thermostat
   - climate.library_thermostat
   - climate.lounge_east_thermostat
-  - climate.study_east_thermostat
-  - climate.study_west_thermostat
+  - climate.study_thermostat
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.js_bedroom
   - climate.bedroom_ros_thermostat

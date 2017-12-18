@@ -77,10 +77,6 @@
 - alias: "Set Real Thermostat"
   trigger:
     - platform: state
-      entity_id: climate.study_west_thermostat
-    - platform: state
-      entity_id: climate.study_east_thermostat
-    - platform: state
       entity_id: climate.lounge_east_thermostat
     - platform: state
       entity_id: climate.kitchen_thermostat

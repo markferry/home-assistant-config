@@ -18,10 +18,6 @@ customize:
     friendly_name: Study West Battery
     icon: mdi:battery
 
-  climate.study_east_thermostat:
-    friendly_name: Study East
-  climate.study_west_thermostat:
-    friendly_name: Study West
   climate.study_east_comfort_setpoint:
     min_temp: 5
     max_temp: 25
