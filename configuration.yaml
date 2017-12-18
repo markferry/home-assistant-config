@@ -19,6 +19,8 @@ homeassistant:
     package_oil_monitor: !include packages/myolive.yaml
 
     package_study: !include packages/study/package.yaml
+    package_study_heating: !include packages/study/heating-on-demand.yaml
+
     package_kitchen: !include packages/kitchen/package.yaml
     package_hall: !include packages/hall/package.yaml
     package_lounge: !include packages/lounge/package.yaml

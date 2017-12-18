@@ -4,6 +4,5 @@ hue_study_thermostat:
       data_template:
         temperature: "{{ requested_level }}"
         entity_id:
-          - climate.study_west_thermostat
-          - climate.study_east_thermostat
+          - climate.study_thermostat
 

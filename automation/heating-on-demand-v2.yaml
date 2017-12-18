@@ -2,6 +2,8 @@
 - alias: heating_on_demand_set_real_thermostats
   trigger:
     - platform: state
+      entity_id: climate.study_thermostat
+    - platform: state
       entity_id: climate.bedroom_mark_thermostat
   action:
     - service: climate.set_temperature
