@@ -4,7 +4,7 @@
 	hass -c . --script check_config -i $^
 
 tags:
-	ctags --exclude=tags --language-force=hass --hass-kinds=Dr -R
+	ctags --exclude=tags --language-force=hass --hass-kinds=D -R
 
 all-tags:
 	ctags --exclude=tags --language-force=hass --hass-kinds=Ddr -R

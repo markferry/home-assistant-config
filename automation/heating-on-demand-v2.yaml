@@ -1,0 +1,10 @@
+# Map virtual setpoint climate.foo_thermostat to setpoints group.g_foo_thermostat
+- alias: heating_on_demand_set_real_thermostats
+  trigger:
+    - platform: state
+      entity_id: climate.bedroom_mark_thermostat
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: '{{trigger.entity_id.replace("climate.", "group.g_")}}'
+        temperature: '{{ trigger.to_state.attributes.temperature }}'
