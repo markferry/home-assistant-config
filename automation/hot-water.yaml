@@ -12,28 +12,10 @@
     condition: or
     conditions:
       - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-        after: '12:00:00'
+        after: '09:00:00'
         before: '16:00:00'
       - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-        after: '23:00:00'
-        before: '05:00:00'
-      - condition: time
-        weekday:
-          - sat
-          - sun
-        after: '23:00:00'
+        after: '20:00:00'
         before: '05:00:00'
   action:
     service: switch.turn_off
@@ -48,29 +30,11 @@
     condition: or
     conditions:
       - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
         after: '05:00:00'
-        before: '12:00:00'
+        before: '09:00:00'
       - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
         after: '16:00:00'
-        before: '23:00:00'
-      - condition: time
-        weekday:
-          - sat
-          - sun
-        after: '05:00:00'
-        before: '23:00:00'
+        before: '20:00:00'
   action:
     service: switch.turn_on
     entity_id: switch.main_heating_relay_hot_water
