@@ -40,6 +40,8 @@ homeassistant:
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
 
+    package_modem_scraper: !include packages/modem_scraper.yaml
+
 config:
 discovery:
 

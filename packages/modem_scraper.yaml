@@ -1,0 +1,127 @@
+group:
+  g_modem_0:
+    name: "EE 64GB"
+    entities:
+    - sensor.modem_0_state
+    - sensor.modem_0_monthly_tx
+    - sensor.modem_0_monthly_rx
+
+sensor:
+  #- name: modem_0_rest
+  #  platform: rest
+  #  # resource: http://hastur/zte.json
+  #  # resource: 'http://192.168.0.1/goform/goform_get_cmd_process?multi_data=1&isTest=false&sms_received_flag_flag=0&sts_received_flag_flag=0&cmd=signalbar%2Crealtime_time%2Cdata_volume_alert_percent%2Cbattery_charging%2CEX_wifi_profile%2Cdata_volume_limit_switch%2Crealtime_rx_thrpt%2Ccurrent_upgrade_state%2Csimcard_roam%2Csms_sim_unread_num%2Crealtime_rx_bytes%2Cloginfo%2Csms_dev_unread_num%2Cupg_roam_switch%2Cstation_mac%2CEX_SSID1%2Cbattery_vol_percent%2Cdate_month%2Cmonthly_tx_bytes%2Cm_ssid_enable%2Cmonthly_time%2Csts_received_flag%2Crealtime_tx_thrpt%2Cdata_volume_limit_unit%2Cspn_name_data%2Cbattery_pers%2Clan_ipaddr%2Csms_received_flag%2Cis_mandatory%2Cppp_status%2Csta_ip_status%2Cmonthly_rx_bytes%2CRadioOff%2Cspn_display_flag%2Cdata_volume_limit_size%2Cnetwork_provider%2Cnew_version_state%2Cspn_b1_flag%2Cmodem_main_state%2Csms_unread_num%2Cspn_b2_flag%2Cplmn_display_flag%2Crealtime_tx_bytes%2Croam_setting_option%2Cpin_status%2Cnetwork_type'
+  #  # value_template: '{{ value_json.ppp_status }}'
+  #  json_attributes:
+  #    - modem_main_state
+  #    - pin_status
+  #    - loginfo
+  #    - new_version_state
+  #    - current_upgrade_state
+  #    - is_mandatory
+  #    - signalbar
+  #    - network_type
+  #    - network_provider
+  #    - ppp_status
+  #    - EX_SSID1
+  #    - sta_ip_status
+  #    - EX_wifi_profile
+  #    - m_ssid_enable
+  #    - RadioOff
+  #    - simcard_roam
+  #    - lan_ipaddr
+  #    - station_mac
+  #    - battery_charging
+  #    - battery_vol_percent
+  #    - battery_pers
+  #    - spn_display_flag
+  #    - plmn_display_flag
+  #    - spn_name_data
+  #    - spn_b1_flag
+  #    - spn_b2_flag
+  #    - realtime_tx_bytes
+  #    - realtime_rx_bytes
+  #    - realtime_time
+  #    - realtime_tx_thrpt
+  #    - realtime_rx_thrpt
+  #    - monthly_rx_bytes
+  #    - monthly_tx_bytes
+  #    - monthly_time
+  #    - date_month
+  #    - data_volume_limit_switch
+  #    - data_volume_limit_size
+  #    - data_volume_alert_percent
+  #    - data_volume_limit_unit
+  #    - roam_setting_option
+  #    - upg_roam_switch
+  #    - sms_received_flag
+  #    - sts_received_flag
+  #    - sms_unread_num
+  #    - sms_dev_unread_num
+  #    - sms_sim_unread_num
+
+  - name: modem_0_monthly_rx
+    platform: mqtt
+    state_topic: ha/modem_scraper/zte/state
+    value_template: >
+      {{ (value_json.monthly_rx_bytes | int / (1024 * 1024 * 1024)) | round(2) }}
+    unit_of_measurement: 'GB'
+
+  - name: modem_0_monthly_tx
+    platform: mqtt
+    state_topic: ha/modem_scraper/zte/state
+    value_template: >
+      {{ (value_json.monthly_tx_bytes | int / (1024 * 1024 * 1024)) | round(2) }}
+    unit_of_measurement: 'GB'
+
+  - name: modem_0_network_type
+    platform: mqtt
+    state_topic: ha/modem_scraper/zte/state
+    value_template: >
+      {{ value_json.network_type }}
+
+  - name: modem_0_provider
+    platform: mqtt
+    state_topic: ha/modem_scraper/zte/state
+    value_template: >
+      {{ value_json.network_provider }}
+
+  - platform: template
+    sensors:
+      modem_0_state:
+        value_template: >
+          {{ states.sensor.modem_0_provider.state }}
+        icon_template: >
+          {% set type = states.sensor.modem_0_network_type.state %}
+          {% if type in ["LTE"] %}
+            mdi:signal-4g
+          {% elif type in ["DC-HSPA+", "DC-HSDPA", "HSPA+", "HSDPA"] %}
+            mdi:signal-hspa-plus
+          {% elif type in ["HSPA", "HSDPA", "HSUPA"] %}
+            mdi:signal-hspa
+          {% elif type in ["GPRS"] %}
+            mdi:signal-2g
+          {% else %}
+            mdi:signal
+          {% endif %}
+
+homeassistant:
+  customize:
+    sensor.modem_0_monthly_rx:
+      friendly_name: "EE Down (GB)"
+      icon: mdi:download
+    sensor.modem_0_monthly_tx:
+      friendly_name: "EE Up (GB)"
+      icon: mdi:upload
+    sensor.modem_0_state:
+      friendly_name: "EE 64GB Status"
+
+# These are picked up directly off the mqtt bus by telegraf
+influxdb:
+  exclude:
+    entities:
+      - sensor.modem_0_monthly_tx
+      - sensor.modem_0_monthly_rx
+      - sensor.modem_0_network_type
+      - sensor.modem_0_provider
+      - sensor.modem_0_state

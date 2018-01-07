@@ -11,6 +11,7 @@ armoury:
     - sensor.cm2_dew_point_c
     - group.network
     - group.ups
+    - group.modem_0
 
 ups:
   name: UPS
