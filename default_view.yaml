@@ -7,6 +7,7 @@ entities:
   # badges
 - sensor.study_temperature
 - sensor.kitchen_temperature
+- sensor.hall_temperature
 - sensor.lounge_east_temperature
 - sensor.library_temperature
 - sensor.ballroom_east_temperature
