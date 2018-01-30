@@ -162,9 +162,9 @@ batteries:
   - sensor.annex_heating_thermostat_battery
   - sensor.hall_multisensor_battery
   - sensor.hall_west_battery
+  - sensor.hall_east_battery
   - sensor.study_east_battery
   - sensor.study_west_battery
-  - sensor.hall_east_battery
   - sensor.library_battery
   - sensor.bedroom_mark_south_battery
   - sensor.bedroom_mark_north_battery
