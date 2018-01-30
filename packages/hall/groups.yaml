@@ -7,8 +7,7 @@ hall:
   - sensor.aeotec_dsb05_multisensor_luminance
   - sensor.aeotec_dsb05_multisensor_relative_humidity
   - sensor.aeotec_dsb05_multisensor_temperature
-  - sensor.hall_west_temperature
-  - sensor.hall_east_temperature
+  - sensor.hall_temperature
   - sensor.annex_hall_temperature
   #
   - group.hall_compact_ui
@@ -23,19 +22,13 @@ hall_compact_ui:
   view: false
   icon: mdi:fullscreen-exit
   entities:
-  - climate.hall_west_thermostat
-  - climate.hall_east_thermostat
+  - climate.hall_thermostat
   - climate.annex_hall_thermostat
+
 hall_scenes:
   name: Hall Scenes
   view: false
-hall_heating:
-  entities:
-  - climate.hall_west_thermostat
-  - climate.hall_east_thermostat
-  - climate.annex_hall_thermostat
-  name: Hall Heating
-  view: false
+
 hall_setpoints:
   name: Hall Setpoints
   view: false
@@ -43,21 +36,8 @@ hall_setpoints:
   - climate.hall_west_comfort_setpoint
   - climate.hall_east_comfort_setpoint
   - climate.annex_hall_comfort_setpoint
-hall_thermostats:
-  name: Hall Thermostats
-  view: false
-  entities:
-  - climate.hall_west_thermostat
-  - climate.hall_east_thermostat
-  - climate.annex_hall_thermostat
+
 hall_lights:
   name: Hall Lights
   view: false
-
-hall_demand:
-  name: "Hall Demand"
-  view: false
-  entities:
-  - switch.hall_west_demand
-  - switch.hall_east_demand
 

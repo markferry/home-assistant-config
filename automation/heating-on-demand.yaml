@@ -85,10 +85,6 @@
     - platform: state
       entity_id: climate.library_thermostat
     - platform: state
-      entity_id: climate.hall_west_thermostat
-    - platform: state
-      entity_id: climate.hall_east_thermostat
-    - platform: state
       entity_id: climate.annex_hall_thermostat
     - platform: state
       entity_id: climate.bedroom_ros_thermostat
