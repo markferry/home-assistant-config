@@ -5,8 +5,7 @@ entities:
 - group.room_scenes
 - group.bedroom_scenes
   # badges
-- sensor.study_east_temperature
-- sensor.study_west_temperature
+- sensor.study_temperature
 - sensor.kitchen_temperature
 - sensor.lounge_east_temperature
 - sensor.library_temperature
