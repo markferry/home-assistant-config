@@ -59,6 +59,7 @@ sensor:
   #    - sms_unread_num
   #    - sms_dev_unread_num
   #    - sms_sim_unread_num
+  #    - lte_rsrp
 
   - name: modem_0_monthly_rx
     platform: mqtt
