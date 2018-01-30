@@ -77,8 +77,6 @@
 - alias: "Set Real Thermostat"
   trigger:
     - platform: state
-      entity_id: climate.lounge_east_thermostat
-    - platform: state
       entity_id: climate.kitchen_thermostat
     - platform: state
       entity_id: climate.ballroom_east_thermostat
