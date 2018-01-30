@@ -5,6 +5,7 @@ homeassistant:
     sensor.study_temperature:
       friendly_name: "Study"
       icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
 
 group:
   g_debug_study_heating:

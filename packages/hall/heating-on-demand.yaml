@@ -5,6 +5,7 @@ homeassistant:
     sensor.hall_temperature:
       friendly_name: "Hall"
       icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
 
 group:
   g_debug_hall_heating:
