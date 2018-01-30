@@ -6,6 +6,8 @@
     - platform: state
       entity_id: climate.hall_thermostat
     - platform: state
+      entity_id: climate.lounge_thermostat
+    - platform: state
       entity_id: climate.bedroom_mark_thermostat
   action:
     - service: climate.set_temperature

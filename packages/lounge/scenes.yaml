@@ -2,28 +2,31 @@
   entities:
     group.lounge_lights:
       state: off
-    climate.lounge_east_thermostat:
+    climate.lounge_thermostat:
       temperature: 10
     media_player.lounge:
       state: paused
+
 - name: Lounge Cosy
   entities:
     group.lounge_lights:
       state: on
       brightness_pct: 20
-    climate.lounge_east_thermostat:
+    climate.lounge_thermostat:
       temperature: 20
+
 - name: Lounge Movie
   entities:
     group.lounge_lights:
       state: on
       brightness_pct: 50
-    climate.lounge_east_thermostat:
+    climate.lounge_thermostat:
       temperature: 20
+
 - name: Lounge Bright
   entities:
     group.lounge_lights:
       state: on
       brightness_pct: 100
-    climate.lounge_east_thermostat:
+    climate.lounge_thermostat:
       temperature: 20
