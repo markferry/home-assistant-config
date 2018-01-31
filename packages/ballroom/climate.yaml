@@ -1,8 +1,0 @@
-- name: ballroom_east_thermostat
-  platform: generic_thermostat
-  heater: switch.ballroom_demand
-  target_sensor: sensor.ballroom_east_temperature
-  max_temp: 25
-  min_temp: 5
-  target_temp: 5.0
-
