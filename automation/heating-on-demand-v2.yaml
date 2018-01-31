@@ -4,6 +4,8 @@
     - platform: state
       entity_id: climate.study_thermostat
     - platform: state
+      entity_id: climate.kitchen_thermostat
+    - platform: state
       entity_id: climate.hall_thermostat
     - platform: state
       entity_id: climate.lounge_thermostat

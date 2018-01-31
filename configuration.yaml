@@ -22,6 +22,7 @@ homeassistant:
     package_study_heating: !include packages/study/heating-on-demand.yaml
 
     package_kitchen: !include packages/kitchen/package.yaml
+    package_kitchen_heating: !include packages/kitchen/heating-on-demand.yaml
 
     package_hall: !include packages/hall/package.yaml
     package_hall_heating: !include packages/hall/heating-on-demand.yaml
