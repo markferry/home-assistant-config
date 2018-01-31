@@ -10,4 +10,4 @@ entities:
 - sensor.hall_temperature
 - sensor.lounge_temperature
 - sensor.library_temperature
-- sensor.ballroom_east_temperature
+- sensor.ballroom_temperature

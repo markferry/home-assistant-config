@@ -1,0 +1,74 @@
+homeassistant:
+  customize:
+    climate.ballroom_thermostat:
+      friendly_name: "Ballroom Heating"
+    sensor.ballroom_temperature:
+      friendly_name: "Ballroom"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_ballroom_heating:
+    entities:
+      - climate.ballroom_thermostat
+      - climate.ballroom_east_comfort_setpoint
+      - switch.ballroom_demand
+
+  g_debug_ballroom_temperature:
+    entities:
+      - sensor.ballroom_temperature
+      - sensor.ballroom_east_current_temperature
+      - sensor.ballroom_east_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_ballroom_thermostat:
+    view: false
+    entities:
+      - climate.ballroom_east_comfort_setpoint
+
+climate:
+  - name: ballroom_thermostat
+    platform: generic_thermostat
+    heater: switch.ballroom_demand
+    target_sensor: sensor.ballroom_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: ballroom_demand
+    platform: mqtt
+    command_topic: ha/ballroom/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: ballroom_east_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.ballroom_east_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: ballroom_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.ballroom_east_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "ballroom_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.ballroom_east_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

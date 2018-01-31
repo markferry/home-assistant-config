@@ -30,7 +30,10 @@ homeassistant:
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
 
     package_library: !include packages/library/package.yaml
+
     package_ballroom: !include packages/ballroom/package.yaml
+    package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
+
     package_armoury: !include packages/armoury/package.yaml
     package_guest_room: !include packages/guest_room/package.yaml
 
