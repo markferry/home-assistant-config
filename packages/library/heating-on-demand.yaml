@@ -1,0 +1,74 @@
+homeassistant:
+  customize:
+    climate.library_thermostat:
+      friendly_name: "Library Heating"
+    sensor.library_mean_temperature:
+      friendly_name: "Library"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_library_heating:
+    entities:
+      - climate.library_thermostat
+      - climate.library_comfort_setpoint
+      - switch.library_demand
+
+  g_debug_library_temperature:
+    entities:
+      - sensor.library_mean_temperature
+      - sensor.library_current_temperature
+      - sensor.library_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_library_thermostat:
+    view: false
+    entities:
+      - climate.library_comfort_setpoint
+
+climate:
+  - name: library_thermostat
+    platform: generic_thermostat
+    heater: switch.library_demand
+    target_sensor: sensor.library_mean_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: library_demand
+    platform: mqtt
+    command_topic: ha/library/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: library_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.library_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: library_mean_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.library_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "library_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.library_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

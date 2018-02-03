@@ -1,8 +1,0 @@
-- name: library_thermostat
-  platform: generic_thermostat
-  heater: switch.library_demand
-  target_sensor: sensor.library_temperature
-  max_temp: 25
-  min_temp: 5
-  target_temp: 10.0
-
