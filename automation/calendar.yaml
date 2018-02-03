@@ -63,7 +63,7 @@
           {% elif "ros" in l %}
           {%   set u = "bedroom_ros" %}
           {% endif %}
-          group.{{u}}_thermostats
+          climate.{{u}}_thermostat
         temperature: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {{l|last|float}}
