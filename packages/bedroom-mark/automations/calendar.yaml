@@ -33,7 +33,7 @@
           {% if "mark" in l %}
           {%   set u = "bedroom_mark" %}
           {% endif %}
-          group.{{u}}_thermostats
+          climate.{{u}}_thermostat
         temperature: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {{l|last|float}}
