@@ -1,0 +1,74 @@
+homeassistant:
+  customize:
+    climate.bedroom_ros_thermostat:
+      friendly_name: "Ros's Bedroom Heating"
+    sensor.bedroom_ros_mean_temperature:
+      friendly_name: "Ros's Bedroom"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_bedroom_ros_heating:
+    entities:
+      - climate.bedroom_ros_thermostat
+      - climate.bedroom_ros_comfort_setpoint
+      - switch.bedroom_ros_demand
+
+  g_debug_bedroom_ros_temperature:
+    entities:
+      - sensor.bedroom_ros_mean_temperature
+      - sensor.bedroom_ros_current_temperature
+      - sensor.bedroom_ros_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_bedroom_ros_thermostat:
+    view: false
+    entities:
+      - climate.bedroom_ros_comfort_setpoint
+
+climate:
+  - name: bedroom_ros_thermostat
+    platform: generic_thermostat
+    heater: switch.bedroom_ros_demand
+    target_sensor: sensor.bedroom_ros_mean_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: bedroom_ros_demand
+    platform: mqtt
+    command_topic: ha/bedroom-ros/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: bedroom_ros_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.bedroom_ros_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: bedroom_ros_mean_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.bedroom_ros_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "bedroom_ros_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.bedroom_ros_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+
