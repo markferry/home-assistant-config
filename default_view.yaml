@@ -9,5 +9,5 @@ entities:
 - sensor.kitchen_mean_temperature
 - sensor.hall_temperature
 - sensor.lounge_temperature
-- sensor.library_temperature
+- sensor.library_mean_temperature
 - sensor.ballroom_temperature
