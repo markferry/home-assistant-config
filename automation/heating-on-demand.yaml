@@ -120,20 +120,3 @@
 #      data:
 #        message: "Set Virtual Thermostat disabled"
 
-# Tado temperature determines demand switch
-- alias: "J's Bedroom Triggers Boiler"
-  trigger:
-    platform: state
-    entity_id: climate.js_bedroom
-  #condition:
-  #  condition: state
-  #  entity_id: sensor.js_bedroom_power
-  #  state: 'ON'
-  action:
-    - service_template: >
-        {% if trigger.to_state.attributes.current_temperature > (trigger.to_state.attributes.temperature + 1.0) %}
-        switch.turn_off
-        {% elif trigger.to_state.attributes.current_temperature < (trigger.to_state.attributes.temperature - 1.0) %}
-        switch.turn_on
-        {% endif %}
-      entity_id: switch.js_bedroom_demand
