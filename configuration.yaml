@@ -44,6 +44,7 @@ homeassistant:
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
+    package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
 
     package_bedroom_ros: !include packages/bedroom-ros/package.yaml
     package_bedroom_ros_heating: !include packages/bedroom-ros/heating-on-demand.yaml

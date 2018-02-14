@@ -15,6 +15,7 @@ bedrooms:
   - group.guest_room_compact_ui
   - sensor.bedroom_mark_temperature
   - sensor.bedroom_ros_mean_temperature
+  - sensor.bedroom_jerome_mean_temperature
   - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
 
@@ -91,7 +92,7 @@ main_heating_demand:
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.bedroom_mark_demand
-  - group.bedroom_jerome_demand
+  - switch.bedroom_jerome_demand
 
 annex_heating:
   name: Annex Heating
@@ -264,6 +265,7 @@ thermostat_devices:
   - climate.study_west_comfort_setpoint
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_ros_comfort_setpoint
+  - climate.js_bedroom
 
 # Front-end thermostats
 thermostats:
@@ -280,7 +282,7 @@ thermostats:
   - climate.lounge_east_thermostat
   - climate.study_thermostat
   - climate.danfoss_z_thermostat_014g0013_heating_1
-  - climate.js_bedroom
+  - climate.bedroom_jerome_thermostat
   - climate.bedroom_ros_thermostat
 
 network: !include network.yaml
