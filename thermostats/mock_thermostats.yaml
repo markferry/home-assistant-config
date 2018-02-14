@@ -82,10 +82,10 @@
   max_temp: 25
   min_temp: 5
 
-- name: bedroom_jerome_comfort_setpoint
+- name: js_bedroom
   platform: generic_thermostat
-  heater: switch.jeromes_bedroom_demand
-  target_sensor: sensor.bedroom_jerome_temperature
+  heater: switch.jerome_bedroom_demand
+  target_sensor: sensor.js_bedroom_temperature
   max_temp: 25
   min_temp: 5
 
@@ -95,3 +95,4 @@
   target_sensor: sensor.bedroom_ros_temperature
   max_temp: 25
   min_temp: 5
+
