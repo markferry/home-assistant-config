@@ -1,4 +1,3 @@
-type: alexa
 listen_port: 8300
 off_maps_to_on_domains:
   - script
