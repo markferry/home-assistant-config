@@ -52,7 +52,7 @@ sensor:
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
-    expire_after: 10  # 1800  # 30mins
+    expire_after: 1800  # 30mins
     force_update: true
 
   - name: bedroom_jerome_mean_temperature
