@@ -87,7 +87,7 @@ main_heating_demand:
   - switch.lounge_demand
   - switch.library_demand
   ## temporarily disable hall demand
-  #- group.hall_demand
+  #- switch.hall_demand
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.bedroom_mark_demand

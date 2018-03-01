@@ -8,7 +8,7 @@ hall:
   - sensor.aeotec_dsb05_multisensor_relative_humidity
   - sensor.aeotec_dsb05_multisensor_temperature
   - sensor.hall_temperature
-  - sensor.annex_hall_temperature
+  - sensor.annex_hall_mean_temperature
   #
   - group.hall_compact_ui
   - group.hall_lights

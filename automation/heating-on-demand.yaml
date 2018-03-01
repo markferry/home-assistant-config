@@ -76,8 +76,8 @@
 # Map virtual setpoint to real setpoint
 - alias: "Set Real Thermostat"
   trigger:
-    - platform: state
-      entity_id: climate.annex_hall_thermostat
+    # - platform: state
+    #  entity_id: climate.xxx_thermostat
   action:
     - service: climate.set_temperature
       data_template:
