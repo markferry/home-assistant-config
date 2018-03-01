@@ -8,6 +8,7 @@ entities:
 - sensor.study_temperature
 - sensor.kitchen_mean_temperature
 - sensor.hall_temperature
+- sensor.annex_hall_mean_temperature
 - sensor.lounge_temperature
 - sensor.library_mean_temperature
 - sensor.ballroom_temperature
