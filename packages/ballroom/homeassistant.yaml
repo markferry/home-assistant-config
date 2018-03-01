@@ -16,8 +16,6 @@ customize:
     entity_picture: /local/wb-icons/ext_mirrorball.png
     emulated_hue: true
 
-  climate.ballroom_east_thermostat:
-    friendly_name: Ballroom East
   climate.ballroom_east_comfort_setpoint:
     min_temp: 5
     max_temp: 25

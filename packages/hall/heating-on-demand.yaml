@@ -1,0 +1,90 @@
+homeassistant:
+  customize:
+    climate.hall_thermostat:
+      friendly_name: "Hall Heating"
+    sensor.hall_temperature:
+      friendly_name: "Hall"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_hall_heating:
+    entities:
+      - climate.hall_thermostat
+      - climate.hall_east_comfort_setpoint
+      - climate.hall_west_comfort_setpoint
+      - switch.hall_demand
+
+  g_debug_hall_temperature:
+    entities:
+      - sensor.hall_temperature
+      - sensor.hall_east_current_temperature
+      - sensor.hall_west_current_temperature
+      - sensor.hall_east_temperature
+      - sensor.hall_west_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_hall_thermostat:
+    view: false
+    entities:
+      - climate.hall_east_comfort_setpoint
+      - climate.hall_west_comfort_setpoint
+
+climate:
+  - name: hall_thermostat
+    platform: generic_thermostat
+    heater: switch.hall_demand
+    target_sensor: sensor.hall_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: hall_demand
+    platform: mqtt
+    command_topic: ha/hall/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: hall_east_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.hall_east_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: hall_west_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.hall_west_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: hall_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.hall_east_current_temperature
+      - sensor.hall_west_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "hall_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.hall_east_temperature
+      - platform: state
+        entity_id: sensor.hall_west_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

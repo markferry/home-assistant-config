@@ -17,25 +17,10 @@ bedroom_jerome_scenes:
   view: false
   entities:
   - input_select.bedroom_jerome_select
-bedroom_jerome_heating:
-  name: "Jerome's Bedroom Heating"
-  view: false
-  entities:
-  - climate.js_bedroom
+
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_jerome_comfort_setpoint
-bedroom_jerome_thermostats:
-  name: "Jerome's Bedroom Thermostats"
-  view: false
-  entities:
   - climate.js_bedroom
-
-bedroom_jerome_demand:
-  name: "Jerome's Bedroom Demand"
-  view: false
-  entities:
-  - switch.js_bedroom_demand
 

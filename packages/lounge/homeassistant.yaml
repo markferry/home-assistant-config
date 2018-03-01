@@ -15,8 +15,6 @@ customize:
     friendly_name: Lounge East Battery
     icon: mdi:battery
 
-  climate.lounge_east_thermostat:
-    friendly_name: Lounge East
   climate.lounge_east_comfort_setpoint:
     min_temp: 5
     max_temp: 25

@@ -1,0 +1,74 @@
+homeassistant:
+  customize:
+    climate.kitchen_thermostat:
+      friendly_name: "Kitchen Heating"
+    sensor.kitchen_mean_temperature:
+      friendly_name: "Kitchen"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_kitchen_heating:
+    entities:
+      - climate.kitchen_thermostat
+      - climate.kitchen_comfort_setpoint
+      - switch.kitchen_demand
+
+  g_debug_kitchen_temperature:
+    entities:
+      - sensor.kitchen_mean_temperature
+      - sensor.kitchen_current_temperature
+      - sensor.kitchen_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_kitchen_thermostat:
+    view: false
+    entities:
+      - climate.kitchen_comfort_setpoint
+
+climate:
+  - name: kitchen_thermostat
+    platform: generic_thermostat
+    heater: switch.kitchen_demand
+    target_sensor: sensor.kitchen_mean_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: kitchen_demand
+    platform: mqtt
+    command_topic: ha/kitchen/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: kitchen_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.kitchen_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: kitchen_mean_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.kitchen_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "kitchen_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.kitchen_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

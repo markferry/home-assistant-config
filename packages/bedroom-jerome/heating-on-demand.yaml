@@ -1,0 +1,86 @@
+homeassistant:
+  customize:
+    #climate.bedroom_jerome_thermostat:
+    #  friendly_name: "Jerome's Bedroom Heating"
+    sensor.bedroom_jerome_mean_temperature:
+      friendly_name: "Jerome's Bedroom"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_bedroom_jerome_heating:
+    entities:
+      - climate.bedroom_jerome_thermostat
+      - climate.js_bedroom
+      - switch.bedroom_jerome_demand
+
+  g_debug_bedroom_jerome_temperature:
+    entities:
+      - sensor.bedroom_jerome_mean_temperature
+      - sensor.bedroom_jerome_current_temperature
+      - sensor.js_bedroom_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_bedroom_jerome_thermostat:
+    view: false
+    entities:
+      - climate.js_bedroom
+
+climate:
+  # Not in the UI but still used for boiler control
+  - name: bedroom_jerome_thermostat
+    platform: generic_thermostat
+    heater: switch.bedroom_jerome_demand
+    target_sensor: sensor.bedroom_jerome_mean_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: bedroom_jerome_demand
+    platform: mqtt
+    command_topic: ha/bedroom-jerome/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: bedroom_jerome_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.js_bedroom_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: bedroom_jerome_mean_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.bedroom_jerome_current_temperature
+
+automation:
+  # Tado app control of thermostat means we need two-way updates.
+  - alias: js_bedroom_updates_virtual_setpoint
+    trigger:
+      - platform: state
+        entity_id: climate.js_bedroom
+    action:
+      - service: climate.set_temperature
+        data_template:
+          entity_id: climate.bedroom_jerome_thermostat
+          temperature: '{{ trigger.to_state.attributes.temperature }}'
+
+  # Redirect received temperatures over mqtt
+  - alias: "bedroom_jerome_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.js_bedroom_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

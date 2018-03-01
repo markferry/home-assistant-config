@@ -22,10 +22,21 @@ homeassistant:
     package_study_heating: !include packages/study/heating-on-demand.yaml
 
     package_kitchen: !include packages/kitchen/package.yaml
+    package_kitchen_heating: !include packages/kitchen/heating-on-demand.yaml
+
     package_hall: !include packages/hall/package.yaml
+    package_hall_heating: !include packages/hall/heating-on-demand.yaml
+    package_annex_hall_heating: !include packages/hall/annex-hall-heating-on-demand.yaml
+
     package_lounge: !include packages/lounge/package.yaml
+    package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
+
     package_library: !include packages/library/package.yaml
+    package_library_heating: !include packages/library/heating-on-demand.yaml
+
     package_ballroom: !include packages/ballroom/package.yaml
+    package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
+
     package_armoury: !include packages/armoury/package.yaml
     package_guest_room: !include packages/guest_room/package.yaml
 
@@ -33,7 +44,11 @@ homeassistant:
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
+    package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
+
     package_bedroom_ros: !include packages/bedroom-ros/package.yaml
+    package_bedroom_ros_heating: !include packages/bedroom-ros/heating-on-demand.yaml
+
     #package_room: !include packages/room/package.yaml
 
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml

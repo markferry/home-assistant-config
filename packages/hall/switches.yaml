@@ -1,20 +1,15 @@
-- name: Hall West Demand
+# Now for supporting mock thermostats only.
+#  Remove when mock thermostats move to mqtt hvac
+- name: hall_west_demand
   platform: mqtt
   command_topic: ha/hall/west/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   retain: true
 
-- name: Hall East Demand
+- name: hall_east_demand
   platform: mqtt
   command_topic: ha/hall/east/demand/command
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  retain: true
-
-- name: Annex Hall Demand
-  platform: mqtt
-  command_topic: ha/annex-hall/demand/command
   payload_off: 'OFF'
   payload_on: 'ON'
   retain: true

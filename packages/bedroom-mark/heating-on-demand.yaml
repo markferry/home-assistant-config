@@ -5,6 +5,7 @@ homeassistant:
     sensor.bedroom_mark_temperature:
       friendly_name: "Mark's Bedroom"
       icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
 
 group:
   g_debug_bedroom_mark_heating:
