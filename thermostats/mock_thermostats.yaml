@@ -68,7 +68,7 @@
   max_temp: 25
   min_temp: 5
 
-- name: hall_annex_comfort_setpoint
+- name: annex_hall_comfort_setpoint
   platform: generic_thermostat
   heater: switch.annex_hall_demand
   target_sensor: sensor.annex_hall_temperature
