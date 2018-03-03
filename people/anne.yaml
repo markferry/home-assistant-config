@@ -4,5 +4,6 @@ entities:
 - device_tracker.anne_iphone2
 - device_tracker.anne_iphone2_bt
 - device_tracker.anne_laptop
+- device_tracker.anne_laptop_bt
 #- device_tracker.anniehp
 #- device_tracker.anne_ipad
