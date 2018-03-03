@@ -80,11 +80,7 @@ recorder:
   purge_interval: 1
   purge_keep_days: 30
 
-influxdb:
-  host: !secret influx_host
-  database: !secret influx_database
-  username: !secret influx_user
-  password: !secret influx_password
+influxdb: !include influxdb.yaml
 
 
 # Checks for available updates

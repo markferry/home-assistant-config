@@ -1,0 +1,5 @@
+host: !secret influx_host
+database: !secret influx_database
+username: !secret influx_user
+password: !secret influx_password
+exclude: !include_dir_merge_named influxdb/exclude.d

@@ -1,0 +1,7 @@
+# These are picked up directly off the mqtt bus by telegraf
+entities:
+  - sensor.modem_0_monthly_tx
+  - sensor.modem_0_monthly_rx
+  - sensor.modem_0_network_type
+  - sensor.modem_0_provider
+  - sensor.modem_0_state
