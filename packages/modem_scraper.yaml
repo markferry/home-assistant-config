@@ -117,12 +117,3 @@ homeassistant:
     sensor.modem_0_state:
       friendly_name: "EE 64GB Status"
 
-  # These are picked up directly off the mqtt bus by telegraf
-  influxdb:
-    exclude:
-      entities:
-        - sensor.modem_0_monthly_tx
-        - sensor.modem_0_monthly_rx
-        - sensor.modem_0_network_type
-        - sensor.modem_0_provider
-        - sensor.modem_0_state
