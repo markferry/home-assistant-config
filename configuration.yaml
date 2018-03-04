@@ -30,18 +30,21 @@ homeassistant:
 
     package_lounge: !include packages/lounge/package.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
+    package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
 
     package_library: !include packages/library/package.yaml
     package_library_heating: !include packages/library/heating-on-demand.yaml
 
     package_ballroom: !include packages/ballroom/package.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
+    package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
 
     package_armoury: !include packages/armoury/package.yaml
     package_guest_room: !include packages/guest_room/package.yaml
 
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
+    package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
     package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
@@ -51,9 +54,6 @@ homeassistant:
 
     #package_room: !include packages/room/package.yaml
 
-    package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
-    package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
-    package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
 
     package_modem_scraper: !include packages/modem_scraper.yaml
     package_dinner_time: !include packages/dinner-time.yaml
