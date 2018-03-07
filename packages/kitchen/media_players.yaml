@@ -3,3 +3,6 @@
   host: kitchen
   port: 8080
 
+- name: kitchen_speaker
+  platform: cast
+
