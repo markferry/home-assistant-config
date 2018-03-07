@@ -8,6 +8,8 @@
       temperature: 5
     media_player.ballroom:
       state: paused
+    media_player.ballroom_amplifier:
+      state: off
 
 - name: Ballroom Party
   entities:
