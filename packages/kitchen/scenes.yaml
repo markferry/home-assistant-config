@@ -6,6 +6,8 @@
       temperature: 10
     media_player.kitchen:
       state: paused
+    media_player.kitchen_speaker:
+      state: stop
 
 - name: Kitchen Cosy
   entities:
