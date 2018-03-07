@@ -1,0 +1,61 @@
+#
+# Announce dinner time
+#
+
+homeassistant:
+  customize:
+    script.dinner_time:
+      friendly_name: "Dinner Time"
+
+script:
+  # Alexa trigger is "turn on dinner time"
+  dinner_time:
+    sequence:
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/event/dinner'
+        payload: "Dinner will be ready in ten minutes."
+    - service: notify.whalebarn
+      data:
+        message: "Dinner will be ready in ten minutes."
+    - service: media_player.play_media
+      data:
+        entity_id: group.dinner_announcers
+        media_content_id: !secret dinner_time_audio
+        media_content_type: music
+    - delay:
+        seconds: 3
+    - service: tts.google_say
+      data:
+        entity_id: group.dinner_announcers
+        message: "Dinner will be ready in ten minutes."
+
+switch:
+  - name: dinner_time
+    platform: mqtt
+    command_topic: 'ha/dash/dinner'
+    state_topic: 'ha/dash/dinner'
+    payload_on: 'active'
+    payload_off: 'inactive'
+
+automation:
+  - alias: "Dinner Time"
+    trigger:
+      - platform: state
+        entity_id: switch.dinner_time
+        to: "on"
+    action:
+      - service: script.dinner_time
+
+group:
+  dinner_announcers:
+    name: Dinner Announcers
+    view: false
+    entities:
+      - media_player.study
+      - media_player.lounge
+      - media_player.library
+      - media_player.ballroom
+      - media_player.bedroom_mark
+      - media_player.jeromes_tablet
+
