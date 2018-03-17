@@ -181,7 +181,7 @@ dash_buttons:
   entities:
   - switch.table_tennis
   - switch.party_mode
-  - switch.listerine
+  - switch.dinner_time
   - switch.ariel
   - switch.optimum_nutrition
   - switch.philips_sonicare

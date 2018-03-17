@@ -56,7 +56,11 @@ homeassistant:
 
 
     package_modem_scraper: !include packages/modem_scraper.yaml
+
+    # dash button automations
     package_dinner_time: !include packages/dinner-time.yaml
+    package_party_mode: !include packages/party-mode.yaml
+    package_table_tennis: !include packages/table-tennis.yaml
 
 config:
 discovery:
