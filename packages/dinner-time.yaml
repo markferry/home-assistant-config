@@ -1,6 +1,8 @@
 #
 # Announce dinner time
 #
+#   Alexa trigger is "turn on dinner time"
+#
 
 homeassistant:
   customize:
@@ -8,7 +10,6 @@ homeassistant:
       friendly_name: "Dinner Time"
 
 script:
-  # Alexa trigger is "turn on dinner time"
   dinner_time:
     sequence:
     - service: mqtt.publish

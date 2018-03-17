@@ -104,9 +104,6 @@ sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
 
-script.table_tennis:
-  friendly_name: "Table Tennis Mode"
-
 script.hue_everything_off:
   friendly_name: "Everything Off"
 

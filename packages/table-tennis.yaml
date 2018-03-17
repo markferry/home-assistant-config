@@ -1,0 +1,75 @@
+#
+# Table Tennis Mode
+#
+#   Alexa trigger is "turn on table tennis mode"
+#
+
+homeassistant:
+  customize:
+    script.table_tennis:
+      friendly_name: "Table Tennis Mode"
+
+
+switch:
+  - name: table_tennis
+    platform: mqtt
+    command_topic: ha/dash/catsan
+    state_topic: ha/dash/catsan
+    payload_on: 'active'
+    payload_off: 'inactive'
+
+script:
+  table_tennis:
+    sequence:
+    - service: mqtt.publish
+      data_template:
+        topic: 'ha/event/table-tennis'
+        payload: "It's TABLE TENNIS time!"
+    - service: notify.whalebarn
+      data:
+        message: "Table Tennis Mode activated"
+    - service: tts.google_say
+      data:
+        entity_id: media_player.kitchen
+        message: "It's TABLE-TENNIS time!"
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ballroom_select
+        option: "Party"
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.ballroom
+        media_content_id: "smb://MEDIA/mediasys/music/meta/playlists/tabletennis.m3u"
+        media_content_type: PLAYLIST
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.ballroom_amplifier
+    - delay:
+        seconds: 3
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.ballroom_amplifier
+        source: Media
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.ballroom
+        volume_level: 0.9
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.ballroom_amplifier
+        volume_level: 0.5
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.kitchen
+        media_content_id: "smb://MEDIA/mediasys/music/meta/playlists/tabletennis.m3u"
+        media_content_type: PLAYLIST
+
+automation:
+  - alias: "Table Tennis"
+    trigger:
+      - platform: state
+        entity_id: switch.table_tennis
+        to: "on"
+    action:
+      - service: script.table_tennis
+
