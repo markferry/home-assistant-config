@@ -3,7 +3,7 @@ control: hidden
 entities:
 - device_tracker.jerome_phone
 - device_tracker.jerome_android
-- device_tracker.jerome_android_bt
+#- device_tracker.jerome_android_bt
 #- device_tracker.jdilley_macbookpro
 - device_tracker.jerome_asus
 - device_tracker.jerome_asus_bt
