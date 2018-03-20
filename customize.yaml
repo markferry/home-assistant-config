@@ -10,6 +10,8 @@ group.bedroom_scenes:
 group.all_automations:
   hidden: false
 
+group.bedrooms:
+  order: 0
 group.study:
   order: 1
 group.kitchen:
@@ -24,8 +26,6 @@ group.ballroom:
   order: 6
 group.guest_room:
   order: 7
-group.bedrooms:
-  order: 8
 group.radio:
   order: 9
 group.armoury:

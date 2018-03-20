@@ -108,8 +108,9 @@ mqtt:
 
 #zwave:
 #  usb_path: /dev/ttyUSB21
-#  config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.2-py3.4-linux-armv7l.egg/config
+#  #config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/python_openzwave/ozw_config
 #  polling_interval: 60000
+#  new_entity_ids: true
 #  device_config: !include zwave_device_config.yaml
 
 #rfxtrx:
