@@ -1,0 +1,74 @@
+homeassistant:
+  customize:
+    climate.guest_room_thermostat:
+      friendly_name: "Guest Room Heating"
+    sensor.guest_room_mean_temperature:
+      friendly_name: "Guest Room"
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_guest_room_heating:
+    entities:
+      - climate.guest_room_thermostat
+      - climate.guest_room_heat
+      - switch.guest_room_demand
+
+  g_debug_guest_room_temperature:
+    entities:
+      - sensor.guest_room_mean_temperature
+      - sensor.guest_room_current_temperature
+      - sensor.guest_room_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_guest_room_thermostat:
+    view: false
+    entities:
+      - climate.guest_room_heat
+
+climate:
+  - name: guest_room_thermostat
+    platform: generic_thermostat
+    heater: switch.guest_room_demand
+    target_sensor: sensor.guest_room_mean_temperature
+    max_temp: 25
+    min_temp: 5
+    target_temp: 10.0
+
+switch:
+  - name: guest_room_demand
+    platform: mqtt
+    command_topic: ha/guest-room/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: guest_room_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.guest_room_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 10  # 1800  # 30mins
+    force_update: true
+
+  - name: guest_room_mean_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.guest_room_current_temperature
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "guest_room_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.guest_room_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+

@@ -40,7 +40,9 @@ homeassistant:
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
 
     package_armoury: !include packages/armoury/package.yaml
+
     package_guest_room: !include packages/guest_room/package.yaml
+    package_guest_room_heating: !include packages/guest_room/heating-on-demand.yaml
 
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml

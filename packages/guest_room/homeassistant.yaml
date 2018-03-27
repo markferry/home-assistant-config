@@ -1,6 +1,17 @@
 customize:
+  automation.guest_room_mood:
+    friendly_name: "Guest Room Mood"
+  automation.guest_room_sleep_time:
+    friendly_name: "Guest Room Sleep Time"
+  automation.guest_room_off_time:
+    friendly_name: "Guest Room Off Time"
+
   group.guest_room_scenes:
     order: 0
+
+  sensor.guest_room_battery:
+    friendly_name: "Guest Room Battery"
+    icon: mdi:battery
 
   script.hue_guest_room_thermostat:
     friendly_name: "Guest Room Thermostat"
@@ -16,7 +27,7 @@ customize:
     order: 1
     entity_picture: mdi:hotel
 
-  climate.danfoss_z_thermostat_014g0013_heating_1:
+  climate.guest_room_heat:
     friendly_name: Guest Room
     min_temp: 5
     max_temp: 25
