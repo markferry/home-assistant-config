@@ -9,11 +9,12 @@ homeassistant:
     script.party_mode:
       friendly_name: "Party Mode"
 
+# huggies
 switch:
   - name: party_mode
     platform: mqtt
-    command_topic: ha/dash/huggies
-    state_topic: ha/dash/huggies
+    command_topic: ha/dash/party
+    state_topic: ha/dash/party
     payload_on: 'active'
     payload_off: 'inactive'
 

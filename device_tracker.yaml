@@ -11,7 +11,7 @@
 
 - platform: nmap_tracker
   hosts: 192.168.7.1-254
-  interval_seconds: 30
+  interval_seconds: 60
   home_interval: 20
   track_new_devices: yes
   consider_home: 1800
@@ -30,3 +30,9 @@
 #  username: !secret unifi_username
 #  password: !secret unifi_password
 #  verify_ssl: False
+
+- platform: tado
+  username: !secret tado_username
+  password: !secret tado_password
+  home_id: !secret tado_home_id
+
