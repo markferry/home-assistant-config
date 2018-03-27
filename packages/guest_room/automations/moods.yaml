@@ -1,4 +1,4 @@
-- alias: "Guest Room Mood"
+- alias: guest_room_mood
   trigger:
     platform: state
     entity_id: input_select.guest_room_select
@@ -16,7 +16,7 @@
             None
           {% endif %}
 
-- alias: "Guest Room Sleep Time"
+- alias: guest_room_sleep_time
   trigger:
     - platform: time
       at: '03:00:00'
@@ -26,7 +26,7 @@
         entity_id: input_select.guest_room_select
         option: "Sleep"
 
-- alias: "Guest Room Off Time"
+- alias: guest_room_off_time
   trigger:
     - platform: time
       at: '09:00:00'

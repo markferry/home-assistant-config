@@ -16,8 +16,8 @@ bedrooms:
   - sensor.bedroom_mark_temperature
   - sensor.bedroom_ros_mean_temperature
   - sensor.bedroom_jerome_mean_temperature
-  - sensor.js_bedroom_temperature
   - sensor.js_bedroom_humidity
+  - sensor.guest_room_mean_temperature
 
 rfx_switches:
   name: RFX Switches
