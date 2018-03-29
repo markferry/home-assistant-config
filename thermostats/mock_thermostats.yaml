@@ -75,6 +75,13 @@
   max_temp: 25
   min_temp: 5
 
+- name: guest_room_heat
+  platform: generic_thermostat
+  heater: switch.guest_room_demand
+  target_sensor: sensor.guest_room_temperature
+  max_temp: 25
+  min_temp: 5
+
 - name: danfoss_z_thermostat_014g0013_heating_1
   platform: generic_thermostat
   heater: switch.guest_room_demand

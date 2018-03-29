@@ -111,6 +111,8 @@
 #      entity_id: climate.annex_hall_comfort_setpoint
 #    - platform: state
 #      entity_id: climate.bedroom_ros_comfort_setpoint
+#    - platform: state
+#      entity_id: climate.guest_room_heat
 #  action:
 #    #- service: climate.set_temperature
 #    #  data_template:

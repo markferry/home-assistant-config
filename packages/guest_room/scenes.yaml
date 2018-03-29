@@ -1,12 +1,12 @@
 - name: Guest Room Off
   entities:
-    climate.danfoss_z_thermostat_014g0013_heating_1:
+    climate.guest_room_thermostat:
       temperature: 10
 - name: Guest Room Sleep
   entities:
-    climate.danfoss_z_thermostat_014g0013_heating_1:
+    climate.guest_room_thermostat:
       temperature: 15
 - name: Guest Room Cosy
   entities:
-    climate.danfoss_z_thermostat_014g0013_heating_1:
+    climate.guest_room_thermostat:
       temperature: 20

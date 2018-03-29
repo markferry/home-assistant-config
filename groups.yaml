@@ -263,6 +263,7 @@ thermostat_devices:
   - climate.lounge_east_comfort_setpoint
   - climate.study_east_comfort_setpoint
   - climate.study_west_comfort_setpoint
+  - climate.guest_room_heat
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_ros_comfort_setpoint
   - climate.js_bedroom
@@ -281,7 +282,7 @@ thermostats:
   - climate.library_thermostat
   - climate.lounge_east_thermostat
   - climate.study_thermostat
-  - climate.danfoss_z_thermostat_014g0013_heating_1
+  - climate.guest_room_thermostat
   - climate.bedroom_jerome_thermostat
   - climate.bedroom_ros_thermostat
 
