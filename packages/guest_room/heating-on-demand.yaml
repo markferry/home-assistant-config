@@ -72,3 +72,14 @@ automation:
           topic: 'ha/raw/{{trigger.entity_id}}/state'
           payload: '{{ trigger.to_state.state }}'
 
+  # Sync all thermostats (real and virtual)
+  - alias: "guest_room_update_setpoint"
+    trigger:
+      - platform: state
+        entity_id: climate.guest_room_heat
+    action:
+      - service: climate.set_temperature
+        data_template:
+          entity_id: climate.guest_room_thermostat
+          temperature: '{{ trigger.to_state.attributes.temperature }}'
+
