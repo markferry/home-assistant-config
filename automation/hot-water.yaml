@@ -3,7 +3,7 @@
 #   Weekend: On at 5am, (on at 4pm,) off at 11pm
 #
 # Repeat the command every 20 minutes to avoid failsafe mode.
-- alias: "Hot Water Off"
+- alias: hot_water_off
   trigger:
     - platform: time
       minutes: '/20'
@@ -21,7 +21,7 @@
     service: switch.turn_off
     entity_id: switch.main_heating_relay_hot_water
 
-- alias: "Hot Water On"
+- alias: hot_water_on
   trigger:
     - platform: time
       minutes: '/20'
@@ -39,7 +39,7 @@
     service: switch.turn_on
     entity_id: switch.main_heating_relay_hot_water
 
-- alias: "Hot Water Notify"
+- alias: hot_water_notify
   trigger:
     - platform: state
       entity_id: switch.main_heating_relay_hot_water
