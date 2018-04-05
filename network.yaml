@@ -13,6 +13,8 @@ entities:
 - device_tracker.cyclops
 - device_tracker.study
 - device_tracker.kitchen
+- device_tracker.google_home
+- device_tracker.google_home_bt
 - device_tracker.amazon_echo
 - device_tracker.amazon_echo_bt
 - device_tracker.lounge
