@@ -1,0 +1,585 @@
+sensor.whale_barn_tado_bridge_status:
+  platform: tado
+  unique_id: tado bridge status 95206
+sensor.js_bedroom_tado_mode:
+  platform: tado
+  unique_id: tado mode 1
+sensor.js_bedroom_overlay:
+  platform: tado
+  unique_id: overlay 1
+sensor.js_bedroom_power:
+  platform: tado
+  unique_id: power 1
+sensor.js_bedroom_heating:
+  platform: tado
+  unique_id: heating 1
+sensor.js_bedroom_temperature:
+  platform: tado
+  unique_id: temperature 1
+sensor.js_bedroom_link:
+  platform: tado
+  unique_id: link 1
+sensor.js_bedroom_humidity:
+  platform: tado
+  unique_id: humidity 1
+sensor.ross_iphone_battery_state:
+  platform: ios
+  unique_id: state_ross_iphone
+sensor.iphone_battery_state:
+  platform: ios
+  unique_id: state_iphone
+sensor.iphone_battery_level:
+  platform: ios
+  unique_id: level_iphone
+sensor.ross_iphone_battery_level:
+  platform: ios
+  unique_id: level_ross_iphone
+sensor.thomas_cmtcd_battery_level:
+  platform: ios
+  unique_id: level_thomas_cmtcd
+sensor.marks_iphone_battery_level:
+  platform: ios
+  unique_id: level_marks_iphone
+sensor.thomas_cmtcd_battery_state:
+  platform: ios
+  unique_id: state_thomas_cmtcd
+sensor.marks_iphone_battery_state:
+  platform: ios
+  unique_id: state_marks_iphone
+sensor.hall_west_temperature:
+  platform: zwave
+  unique_id: 13-72057594261028882
+climate.hall_west_comfort_setpoint:
+  platform: zwave
+  unique_id: 13-72057594261323794
+climate.hall_west_furnace:
+  platform: zwave
+  unique_id: 13-72057594261323890
+climate.hall_west_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 13-72057594261323954
+sensor.study_east_temperature:
+  platform: zwave
+  unique_id: 14-72057594277806098
+climate.study_east_comfort_setpoint:
+  platform: zwave
+  unique_id: 14-72057594278101010
+climate.study_east_furnace:
+  platform: zwave
+  unique_id: 14-72057594278101106
+climate.study_east_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 14-72057594278101170
+sensor.study_west_temperature:
+  platform: zwave
+  unique_id: 15-72057594294583314
+sensor.study_west_relative_humidity:
+  platform: zwave
+  unique_id: 15-72057594294583378
+climate.study_west_comfort_setpoint:
+  platform: zwave
+  unique_id: 15-72057594294878226
+climate.study_west_furnace:
+  platform: zwave
+  unique_id: 15-72057594294878322
+climate.study_west_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 15-72057594294878386
+sensor.hall_east_temperature:
+  platform: zwave
+  unique_id: 24-72057594445578258
+climate.hall_east_comfort_setpoint:
+  platform: zwave
+  unique_id: 24-72057594445873170
+climate.hall_east_furnace:
+  platform: zwave
+  unique_id: 24-72057594445873266
+climate.hall_east_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 24-72057594445873330
+sensor.library_temperature:
+  platform: zwave
+  unique_id: 25-72057594462355474
+sensor.library_luminance:
+  platform: zwave
+  unique_id: 25-72057594462355506
+climate.library_comfort_setpoint:
+  platform: zwave
+  unique_id: 25-72057594462650386
+climate.library_furnace:
+  platform: zwave
+  unique_id: 25-72057594462650482
+climate.library_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 25-72057594462650546
+sensor.bedroom_mark_south_temperature:
+  platform: zwave
+  unique_id: 29-72057594529464338
+climate.bedroom_mark_south_comfort_setpoint:
+  platform: zwave
+  unique_id: 29-72057594529759250
+climate.bedroom_mark_south_furnace:
+  platform: zwave
+  unique_id: 29-72057594529759346
+climate.bedroom_mark_south_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 29-72057594529759410
+sensor.lounge_east_temperature:
+  platform: zwave
+  unique_id: 30-72057594546241554
+climate.lounge_east_comfort_setpoint:
+  platform: zwave
+  unique_id: 30-72057594546536466
+climate.lounge_east_furnace:
+  platform: zwave
+  unique_id: 30-72057594546536562
+climate.lounge_east_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 30-72057594546536626
+sensor.ballroom_east_temperature:
+  platform: zwave
+  unique_id: 33-72057594596573202
+climate.ballroom_east_comfort_setpoint:
+  platform: zwave
+  unique_id: 33-72057594596868114
+climate.ballroom_east_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 33-72057594596868274
+sensor.kitchen_temperature:
+  platform: zwave
+  unique_id: 34-72057594613350418
+climate.kitchen_comfort_setpoint:
+  platform: zwave
+  unique_id: 34-72057594613645330
+climate.kitchen_furnace:
+  platform: zwave
+  unique_id: 34-72057594613645426
+climate.kitchen_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 34-72057594613645490
+switch.main_heating_thermostat_switch:
+  platform: zwave
+  unique_id: 35-72057594629931008
+sensor.main_heating_thermostat_temperature:
+  platform: zwave
+  unique_id: 35-72057594630127634
+climate.main_heating_thermostat_heating_1:
+  platform: zwave
+  unique_id: 35-72057594630422546
+climate.main_heating_thermostat_moist_air:
+  platform: zwave
+  unique_id: 35-72057594630422674
+switch.main_heating_relay_switch:
+  platform: zwave
+  unique_id: 36-72057594646708224
+switch.main_heating_relay_boiler:
+  platform: zwave
+  unique_id: 36-144115188684636160
+switch.main_heating_relay_hot_water:
+  platform: zwave
+  unique_id: 36-216172782722564096
+switch.main_heating_relay_switch_2:
+  platform: zwave
+  unique_id: 36-288230376760492032
+switch.main_heating_relay_switch_3:
+  platform: zwave
+  unique_id: 36-360287970798419968
+switch.main_heating_relay_switch_4:
+  platform: zwave
+  unique_id: 36-432345564836347904
+switch.main_heating_relay_switch_5:
+  platform: zwave
+  unique_id: 36-504403158874275840
+switch.main_heating_relay_switch_6:
+  platform: zwave
+  unique_id: 36-576460752912203776
+switch.main_heating_relay_switch_7:
+  platform: zwave
+  unique_id: 36-648518346950131712
+switch.main_heating_relay_switch_8:
+  platform: zwave
+  unique_id: 36-720575940988059648
+switch.main_heating_relay_switch_9:
+  platform: zwave
+  unique_id: 36-792633535025987584
+switch.main_heating_relay_switch_10:
+  platform: zwave
+  unique_id: 36-864691129063915520
+switch.main_heating_relay_switch_11:
+  platform: zwave
+  unique_id: 36-936748723101843456
+switch.main_heating_relay_switch_12:
+  platform: zwave
+  unique_id: 36-1008806317139771392
+switch.main_heating_relay_switch_13:
+  platform: zwave
+  unique_id: 36-1080863911177699328
+switch.main_heating_relay_switch_14:
+  platform: zwave
+  unique_id: 36-1152921505215627264
+switch.main_heating_relay_switch_15:
+  platform: zwave
+  unique_id: 36-1224979099253555200
+switch.main_heating_relay_switch_16:
+  platform: zwave
+  unique_id: 36-1297036693291483136
+switch.main_heating_relay_switch_17:
+  platform: zwave
+  unique_id: 36-1369094287329411072
+switch.main_heating_relay_switch_18:
+  platform: zwave
+  unique_id: 36-1441151881367339008
+switch.main_heating_relay_switch_19:
+  platform: zwave
+  unique_id: 36-1513209475405266944
+switch.main_heating_relay_switch_20:
+  platform: zwave
+  unique_id: 36-1585267069443194880
+light.bedroom_mark_overhead_level:
+  platform: zwave
+  unique_id: 39-72057594697056257
+light.bedroom_mark_overhead_slave_level:
+  platform: zwave
+  unique_id: 39-144115188734984193
+sensor.bedroom_mark_overhead_power:
+  platform: zwave
+  unique_id: 39-72057594697236546
+sensor.bedroom_mark_overhead_energy:
+  platform: zwave
+  unique_id: 39-72057594697252866
+sensor.bedroom_mark_overhead_power_2:
+  platform: zwave
+  unique_id: 39-72057594697252994
+sensor.bedroom_mark_overhead_exporting:
+  platform: zwave
+  unique_id: 39-72057594697253376
+sensor.bedroom_mark_overhead_alarm_type:
+  platform: zwave
+  unique_id: 39-72057594698285057
+sensor.bedroom_mark_overhead_alarm_level:
+  platform: zwave
+  unique_id: 39-72057594698285073
+sensor.bedroom_mark_overhead_sourcenodeid:
+  platform: zwave
+  unique_id: 39-72057594698285089
+sensor.bedroom_mark_overhead_heat:
+  platform: zwave
+  unique_id: 39-72057594698285169
+sensor.bedroom_mark_overhead_power_management:
+  platform: zwave
+  unique_id: 39-72057594698285233
+sensor.bedroom_mark_overhead_system:
+  platform: zwave
+  unique_id: 39-72057594698285249
+light.unused_40_level:
+  platform: zwave
+  unique_id: 40-72057594713833473
+light.unused_41_level:
+  platform: zwave
+  unique_id: 41-72057594730610689
+sensor.annex_hall_temperature:
+  platform: zwave
+  unique_id: 43-72057594764345362
+climate.annex_hall_comfort_setpoint:
+  platform: zwave
+  unique_id: 43-72057594764640274
+climate.annex_hall_furnace:
+  platform: zwave
+  unique_id: 43-72057594764640370
+climate.annex_hall_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 43-72057594764640434
+sensor.bedroom_mark_north_temperature:
+  platform: zwave
+  unique_id: 44-72057594781122578
+climate.bedroom_mark_north_comfort_setpoint:
+  platform: zwave
+  unique_id: 44-72057594781417490
+climate.bedroom_mark_north_furnace:
+  platform: zwave
+  unique_id: 44-72057594781417586
+climate.bedroom_mark_north_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 44-72057594781417650
+switch.annex_heating_thermostat_switch:
+  platform: zwave
+  unique_id: 50-72057594881589248
+sensor.annex_heating_thermostat_temperature:
+  platform: zwave
+  unique_id: 50-72057594881785874
+climate.annex_heating_thermostat_heating_1:
+  platform: zwave
+  unique_id: 50-72057594882080786
+climate.annex_heating_thermostat_moist_air:
+  platform: zwave
+  unique_id: 50-72057594882080914
+climate.danfoss_z_thermostat_014g0013_heating_1:
+  platform: zwave
+  unique_id: 52-72057594915635218
+switch.greenwave_powernode_53_switch:
+  platform: zwave
+  unique_id: 53-72057594931920896
+sensor.greenwave_powernode_53_energy:
+  platform: zwave
+  unique_id: 53-72057594932133890
+sensor.greenwave_powernode_53_previous_energy:
+  platform: zwave
+  unique_id: 53-72057594932133906
+sensor.greenwave_powernode_53_interval:
+  platform: zwave
+  unique_id: 53-72057594932133923
+sensor.greenwave_powernode_53_power:
+  platform: zwave
+  unique_id: 53-72057594932134018
+sensor.greenwave_powernode_53_previous_power:
+  platform: zwave
+  unique_id: 53-72057594932134034
+sensor.greenwave_powernode_53_interval_2:
+  platform: zwave
+  unique_id: 53-72057594932134051
+sensor.greenwave_powernode_53_exporting:
+  platform: zwave
+  unique_id: 53-72057594932134400
+sensor.greenwave_powernode_53_alarm_type:
+  platform: zwave
+  unique_id: 53-72057594933166081
+sensor.greenwave_powernode_53_alarm_level:
+  platform: zwave
+  unique_id: 53-72057594933166097
+switch.greenwave_powernode_54_switch:
+  platform: zwave
+  unique_id: 54-72057594948698112
+sensor.greenwave_powernode_54_energy:
+  platform: zwave
+  unique_id: 54-72057594948911106
+sensor.greenwave_powernode_54_previous_energy:
+  platform: zwave
+  unique_id: 54-72057594948911122
+sensor.greenwave_powernode_54_power:
+  platform: zwave
+  unique_id: 54-72057594948911234
+sensor.greenwave_powernode_54_previous_power:
+  platform: zwave
+  unique_id: 54-72057594948911250
+sensor.bedroom_ros_temperature:
+  platform: zwave
+  unique_id: 55-72057594965671954
+sensor.bedroom_ros_co2_level:
+  platform: zwave
+  unique_id: 55-72057594965672210
+climate.bedroom_ros_comfort_setpoint:
+  platform: zwave
+  unique_id: 55-72057594965966866
+climate.bedroom_ros_furnace:
+  platform: zwave
+  unique_id: 55-72057594965966962
+climate.bedroom_ros_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 55-72057594965967026
+switch.annex_heating_relay_switch:
+  platform: zwave
+  unique_id: 56-72057594982252544
+sensor.bedroom_anne_temperature:
+  platform: zwave
+  unique_id: 59-72057595032780818
+climate.bedroom_anne_comfort_setpoint:
+  platform: zwave
+  unique_id: 59-72057595033075730
+climate.bedroom_anne_furnace:
+  platform: zwave
+  unique_id: 59-72057595033075826
+climate.bedroom_anne_energy_saving_setpoint:
+  platform: zwave
+  unique_id: 59-72057595033075890
+switch.greenwave_powernode_62_switch:
+  platform: zwave
+  unique_id: 62-72057595082915840
+sensor.greenwave_powernode_62_energy:
+  platform: zwave
+  unique_id: 62-72057595083128834
+sensor.greenwave_powernode_62_previous_energy:
+  platform: zwave
+  unique_id: 62-72057595083128850
+sensor.greenwave_powernode_62_interval:
+  platform: zwave
+  unique_id: 62-72057595083128867
+sensor.greenwave_powernode_62_power:
+  platform: zwave
+  unique_id: 62-72057595083128962
+sensor.greenwave_powernode_62_previous_power:
+  platform: zwave
+  unique_id: 62-72057595083128978
+sensor.greenwave_powernode_62_interval_2:
+  platform: zwave
+  unique_id: 62-72057595083128995
+sensor.greenwave_powernode_62_exporting:
+  platform: zwave
+  unique_id: 62-72057595083129344
+sensor.greenwave_powernode_62_alarm_type:
+  platform: zwave
+  unique_id: 62-72057595084161025
+sensor.greenwave_powernode_62_alarm_level:
+  platform: zwave
+  unique_id: 62-72057595084161041
+binary_sensor.heiman_contact_63_sensor:
+  platform: zwave
+  unique_id: 63-72057595099873280
+sensor.heiman_contact_63_alarm_type:
+  platform: zwave
+  unique_id: 63-72057595100938241
+sensor.heiman_contact_63_alarm_level:
+  platform: zwave
+  unique_id: 63-72057595100938257
+sensor.heiman_contact_63_sourcenodeid:
+  platform: zwave
+  unique_id: 63-72057595100938273
+sensor.heiman_contact_63_access_control:
+  platform: zwave
+  unique_id: 63-72057595100938385
+sensor.heiman_contact_63_burglar:
+  platform: zwave
+  unique_id: 63-72057595100938401
+switch.greenwave_powernode_64_switch:
+  platform: zwave
+  unique_id: 64-72057595116470272
+sensor.greenwave_powernode_64_energy:
+  platform: zwave
+  unique_id: 64-72057595116683266
+sensor.greenwave_powernode_64_previous_energy:
+  platform: zwave
+  unique_id: 64-72057595116683282
+sensor.greenwave_powernode_64_power:
+  platform: zwave
+  unique_id: 64-72057595116683394
+sensor.greenwave_powernode_64_previous_power:
+  platform: zwave
+  unique_id: 64-72057595116683410
+binary_sensor.heiman_contact_65_sensor:
+  platform: zwave
+  unique_id: 65-72057595133427712
+sensor.heiman_contact_65_alarm_type:
+  platform: zwave
+  unique_id: 65-72057595134492673
+sensor.heiman_contact_65_alarm_level:
+  platform: zwave
+  unique_id: 65-72057595134492689
+sensor.heiman_contact_65_sourcenodeid:
+  platform: zwave
+  unique_id: 65-72057595134492705
+sensor.heiman_contact_65_access_control:
+  platform: zwave
+  unique_id: 65-72057595134492817
+sensor.heiman_contact_65_burglar:
+  platform: zwave
+  unique_id: 65-72057595134492833
+binary_sensor.heiman_contact_66_sensor:
+  platform: zwave
+  unique_id: 66-72057595150204928
+sensor.heiman_contact_66_alarm_type:
+  platform: zwave
+  unique_id: 66-72057595151269889
+sensor.heiman_contact_66_alarm_level:
+  platform: zwave
+  unique_id: 66-72057595151269905
+sensor.heiman_contact_66_sourcenodeid:
+  platform: zwave
+  unique_id: 66-72057595151269921
+sensor.heiman_contact_66_access_control:
+  platform: zwave
+  unique_id: 66-72057595151270033
+sensor.heiman_contact_66_burglar:
+  platform: zwave
+  unique_id: 66-72057595151270049
+binary_sensor.heiman_contact_67_sensor:
+  platform: zwave
+  unique_id: 67-72057595166982144
+sensor.heiman_contact_67_alarm_type:
+  platform: zwave
+  unique_id: 67-72057595168047105
+sensor.heiman_contact_67_alarm_level:
+  platform: zwave
+  unique_id: 67-72057595168047121
+sensor.heiman_contact_67_sourcenodeid:
+  platform: zwave
+  unique_id: 67-72057595168047137
+sensor.heiman_contact_67_access_control:
+  platform: zwave
+  unique_id: 67-72057595168047249
+sensor.heiman_contact_67_burglar:
+  platform: zwave
+  unique_id: 67-72057595168047265
+binary_sensor.heiman_contact_68_sensor:
+  platform: zwave
+  unique_id: 68-72057595183759360
+sensor.heiman_contact_68_alarm_type:
+  platform: zwave
+  unique_id: 68-72057595184824321
+sensor.heiman_contact_68_alarm_level:
+  platform: zwave
+  unique_id: 68-72057595184824337
+sensor.heiman_contact_68_sourcenodeid:
+  platform: zwave
+  unique_id: 68-72057595184824353
+sensor.heiman_contact_68_access_control:
+  platform: zwave
+  unique_id: 68-72057595184824465
+sensor.heiman_contact_68_burglar:
+  platform: zwave
+  unique_id: 68-72057595184824481
+sensor.guest_room_temperature:
+  platform: zwave
+  unique_id: 69-72057595200552978
+climate.guest_room_heat:
+  platform: zwave
+  unique_id: 69-72057595200847890
+climate.guest_room_furnace:
+  platform: zwave
+  unique_id: 69-72057595200847986
+climate.guest_room_heat_eco:
+  platform: zwave
+  unique_id: 69-72057595200848050
+sensor.guest_room_alarm_type:
+  platform: zwave
+  unique_id: 69-72057595201601537
+sensor.guest_room_alarm_level:
+  platform: zwave
+  unique_id: 69-72057595201601553
+sensor.guest_room_sourcenodeid:
+  platform: zwave
+  unique_id: 69-72057595201601569
+sensor.guest_room_power_management:
+  platform: zwave
+  unique_id: 69-72057595201601713
+sensor.guest_room_system:
+  platform: zwave
+  unique_id: 69-72057595201601729
+sensor.spiritz_70_temperature:
+  platform: zwave
+  unique_id: 70-72057595217330194
+climate.spiritz_70_heat:
+  platform: zwave
+  unique_id: 70-72057595217625106
+climate.spiritz_70_furnace:
+  platform: zwave
+  unique_id: 70-72057595217625202
+climate.spiritz_70_heat_eco:
+  platform: zwave
+  unique_id: 70-72057595217625266
+sensor.spiritz_70_alarm_type:
+  platform: zwave
+  unique_id: 70-72057595218378753
+sensor.spiritz_70_alarm_level:
+  platform: zwave
+  unique_id: 70-72057595218378769
+sensor.spiritz_70_sourcenodeid:
+  platform: zwave
+  unique_id: 70-72057595218378785
+sensor.spiritz_70_power_management:
+  platform: zwave
+  unique_id: 70-72057595218378929
+sensor.spiritz_70_system:
+  platform: zwave
+  unique_id: 70-72057595218378945
+binary_sensor.sensor_228:
+  platform: zwave
+  unique_id: 228-72057597868113920
