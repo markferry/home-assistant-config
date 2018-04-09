@@ -34,3 +34,9 @@ sensor.annex_hall_temperature:
 sensor.bedroom_ros_temperature:
   polling_intensity: 5
   ignored: false
+sensor.guest_room_temperature:
+  ignored: false
+  polling_intensity: 5
+sensor.spiritz_70_temperature:
+  ignored: false
+  polling_intensity: 5
