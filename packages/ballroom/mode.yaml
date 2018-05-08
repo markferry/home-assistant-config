@@ -19,51 +19,72 @@ input_select:
 
 input_number:
   ballroom_temperature_off:
-    name: 'Off Temperature'
+    name: 'Off Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
     min: 5
     max: 25
     initial: 5
     step: 1
-    unit_of_measurement: "\xB0C"
 
   ballroom_temperature_party:
-    name: 'Party Temperature'
+    name: 'Party Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
     min: 5
     max: 25
     initial: 20
     step: 1
-    unit_of_measurement: "\xB0C"
 
   ballroom_temperature_movie:
-    name: 'Movie Temperature'
+    name: 'Movie Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
     min: 5
     max: 25
     initial: 20
     step: 1
-    unit_of_measurement: "\xB0C"
 
   ballroom_temperature_bright:
-    name: 'Bright Temperature'
+    name: 'Bright Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
     min: 5
     max: 25
     initial: 20
     step: 1
-    unit_of_measurement: "\xB0C"
 
-## automation:
-##   - alias: ballroom_revert_to_manual
-##     trigger:
-##       - platform: state
-##         entity_id:
-##           - group.ballroom_lights
-##           - group.ballroom_party_lights
-##           - climate.ballroom_thermostat
-##     action:
-##         - service: input_select.select_option
-##           data:
-##             entity_id: input_select.ballroom_mode
-##             option: "Manual"
-## 
+script:
+  set_mode:
+    sequence:
+      - service: automation.turn_off
+        data_template:
+          entity_id: 'automation.{{room}}_revert_to_manual'
+      - service: scene.turn_on
+        data_template:
+          entity_id: 'scene.{{room}}_{{mode}}'
+      - service: climate.set_temperature
+        data_template:
+          entity_id: 'climate.{{room}}_thermostat'
+          temperature: "{{ states('input_number.'+room+'_temperature_'+mode) }}"
+      - service: automation.turn_on
+        data_template:
+          entity_id: 'automation.{{room}}_revert_to_manual'
+
+automation:
+  - alias: ballroom_revert_to_manual
+    trigger:
+      - platform: state
+        entity_id:
+          - group.ballroom_lights
+          - group.ballroom_party_lights
+          - climate.ballroom_thermostat
+    action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.ballroom_mode
+            option: 'Manual'
+
 ##   - alias: ballroom_sun_lights
 ##     trigger:
 ##       - platform: state
@@ -98,32 +119,36 @@ input_number:
 ##       - platform: state
 ##         entity_id: input_select.ballroom_mode
 ##         to: 'Party'
-##       - platform: state
-##         entity_id: sun.sun
-##     condition:
-##       - platform: state
-##         entity_id: sun.sun
-##         to: 'below_horizon'
-##         for: 30 * 60
 ##     action:
+##       - service: automation.turn_off
+##         entity_id: automation.ballroom_revert_to_manual
 ##       - service: scene.turn_on
 ##         entity_id: scene.ballroom_party
+##       - service: climate.set_temperature
+##         data_template:
+##           entity_id: climate.ballroom_thermostat
+##           temperature: '{{ states.input_number.ballroom_temperature_party.state }}'
+##       - service: automation.turn_on
+##         entity_id: automation.ballroom_revert_to_manual
 ## 
 ##   - alias: ballroom_mode_movie
 ##     trigger:
-##       platform: state
-##       entity_id: input_select.ballroom_mode
-##       to: 'Movie'
-##     action: # always execute
-##     - service: scene.turn_on
-##       entity_id: scene.ballroom_movie
-## 
-##   - alias: ballroom_mode_bright
-##     trigger:
-##       platform: state
-##       entity_id: input_select.ballroom_mode
-##       to: 'Bright'
+##       - platform: state
+##         entity_id: input_select.ballroom_mode
+##         to: 'Movie'
 ##     action:
-##     - service: scene.turn_on
-##       entity_id: scene.ballroom_movie
-## 
+##       - service: script.set_mode
+##         data:
+##           room: 'ballroom'
+##           mode: 'movie'
+
+  - alias: ballroom_mode
+    trigger:
+      - platform: state
+        entity_id: input_select.ballroom_mode
+    action:
+      - service: script.set_mode
+        data_template:
+          room: 'ballroom'
+          mode: '{{ trigger.to_state.state | lower }}'
+
