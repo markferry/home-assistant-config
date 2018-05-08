@@ -5,7 +5,6 @@ ballroom:
   entities:
   - sensor.ballroom_temperature
   - group.ballroom_compact_ui
-  - group.ballroom_settings_ui
   - media_player.ballroom
   - media_player.ballroom_amplifier
 
@@ -18,15 +17,7 @@ ballroom_compact_ui:
   - climate.ballroom_thermostat
   - group.ballroom_party_lights
   - group.g_ballroom_media_dimming
-
-ballroom_settings_ui:
-  name: Settings
-  icon: mdi:settings
-  entities:
-    - input_number.ballroom_temperature_off
-    - input_number.ballroom_temperature_party
-    - input_number.ballroom_temperature_movie
-    - input_number.ballroom_temperature_bright
+  - group.g_ballroom_settings_ui
 
 ballroom_scenes:
   name: Ballroom
