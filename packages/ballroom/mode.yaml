@@ -1,0 +1,129 @@
+#
+# Mode selection
+#
+# Stores last user intent.
+# Reverts to manual when user adjustments are made.
+#
+
+input_select:
+  ballroom_mode:
+    name: Mode
+    options:
+      - 'Off'
+      - 'Party'
+      - 'Movie'
+      - 'Bright'
+      - 'Manual'
+    initial: 'Off'
+    icon: mdi:projector
+
+input_number:
+  ballroom_temperature_off:
+    name: 'Off Temperature'
+    min: 5
+    max: 25
+    initial: 5
+    step: 1
+    unit_of_measurement: "\xB0C"
+
+  ballroom_temperature_party:
+    name: 'Party Temperature'
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+    unit_of_measurement: "\xB0C"
+
+  ballroom_temperature_movie:
+    name: 'Movie Temperature'
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+    unit_of_measurement: "\xB0C"
+
+  ballroom_temperature_bright:
+    name: 'Bright Temperature'
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+    unit_of_measurement: "\xB0C"
+
+## automation:
+##   - alias: ballroom_revert_to_manual
+##     trigger:
+##       - platform: state
+##         entity_id:
+##           - group.ballroom_lights
+##           - group.ballroom_party_lights
+##           - climate.ballroom_thermostat
+##     action:
+##         - service: input_select.select_option
+##           data:
+##             entity_id: input_select.ballroom_mode
+##             option: "Manual"
+## 
+##   - alias: ballroom_sun_lights
+##     trigger:
+##       - platform: state
+##         entity_id: sun.sun
+##     action:
+##       - service: scene.turn_on  # FIXME
+##         data_template:
+##           entity_id: >
+##             {% if is_state(trigger.entity_id, "Off") %}
+##               scene.ballroom_off
+##             {%-elif is_state(trigger.entity_id, "Party") %}
+##               automation.ballroom_party
+##             {%-elif is_state(trigger.entity_id, "Movie") %}
+##               automation.ballroom_movie
+##             {%-elif is_state(trigger.entity_id, "Bright") %}
+##               automation.ballroom_bright
+##             {% else %}
+##               None
+##             {% endif %}
+## 
+##   - alias: ballroom_mode_off
+##     trigger:
+##       platform: state
+##       entity_id: input_select.ballroom_mode
+##       to: 'Off'
+##     action:
+##     - service: scene.turn_on
+##       entity_id: scene.ballroom_off
+## 
+##   - alias: ballroom_mode_party
+##     trigger:
+##       - platform: state
+##         entity_id: input_select.ballroom_mode
+##         to: 'Party'
+##       - platform: state
+##         entity_id: sun.sun
+##     condition:
+##       - platform: state
+##         entity_id: sun.sun
+##         to: 'below_horizon'
+##         for: 30 * 60
+##     action:
+##       - service: scene.turn_on
+##         entity_id: scene.ballroom_party
+## 
+##   - alias: ballroom_mode_movie
+##     trigger:
+##       platform: state
+##       entity_id: input_select.ballroom_mode
+##       to: 'Movie'
+##     action: # always execute
+##     - service: scene.turn_on
+##       entity_id: scene.ballroom_movie
+## 
+##   - alias: ballroom_mode_bright
+##     trigger:
+##       platform: state
+##       entity_id: input_select.ballroom_mode
+##       to: 'Bright'
+##     action:
+##     - service: scene.turn_on
+##       entity_id: scene.ballroom_movie
+## 
