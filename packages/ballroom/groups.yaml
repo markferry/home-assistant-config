@@ -12,6 +12,7 @@ ballroom_compact_ui:
   name: Ballroom
   view: false
   icon: mdi:projector
+  control: hidden
   entities:
   - input_select.ballroom_mode
   - climate.ballroom_thermostat
