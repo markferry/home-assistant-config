@@ -6,6 +6,7 @@ entities:
 - device_tracker.jeromes_phone
 #- device_tracker.jerome_android_bt
 #- device_tracker.jdilley_macbookpro
+#- device_tracker.jdilley_macbookpro_wired
 - device_tracker.jerome_asus
 - device_tracker.jerome_asus_bt
 #- sensor.js_bedroom_present
