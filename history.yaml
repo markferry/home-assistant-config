@@ -44,6 +44,7 @@ include:
     - sensor.kitchen_battery
     - sensor.annex_hall_battery
     - sensor.bedroom_ros_battery
+    - sensor.guest_room_battery
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
     - sensor.greenwave_powernode_53_energy
