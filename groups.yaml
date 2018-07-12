@@ -180,6 +180,7 @@ batteries:
   - sensor.kitchen_battery
   - sensor.annex_hall_battery
   - sensor.bedroom_ros_battery
+  - sensor.guest_room_battery
 
 dash_buttons:
   name: Amazon Dash Buttons
