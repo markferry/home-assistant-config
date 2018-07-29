@@ -1,6 +1,6 @@
 # Heating On Demand
 #
-- alias: "Main Boiler Demand On"
+- alias: main_boiler_demand_on
   trigger:
     platform: state
     entity_id: group.main_heating_demand
@@ -19,7 +19,7 @@
         message: "Main Heating Demand on"
 
 
-- alias: "Main Boiler Demand Off"
+- alias: main_boiler_demand_off
   trigger:
     platform: state
     entity_id: group.main_heating_demand
@@ -37,7 +37,7 @@
       data:
         message: "Main Heating Demand off"
 
-- alias: "Annex Thermostat Demand On"
+- alias: annex_thermostat_demand_on
   trigger:
     - platform: state
       entity_id: group.annex_heating_demand
@@ -55,7 +55,7 @@
       data:
         message: "Annex Heating Demand on"
 
-- alias: "Annex Thermostat Demand Off"
+- alias: annex_thermostat_demand_off
   trigger:
     - platform: state
       entity_id: group.annex_heating_demand

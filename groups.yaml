@@ -79,6 +79,10 @@ main_heating_override:
   - switch.main_heating_relay_switch
   - switch.main_heating_relay_boiler
   - switch.main_heating_relay_hot_water
+  - automation.main_boiler_demand_on
+  - automation.main_boiler_demand_off
+  - automation.hot_water_on
+  - automation.hot_water_off
 
 main_heating_demand:
   name: Main Heating Demand
@@ -107,6 +111,8 @@ annex_heating_override:
   view: false
   entities:
   - switch.horstmann_asrzw_thermostat_receiver_switch
+  - automation.annex_thermostat_demand_on
+  - automation.annex_thermostat_demand_off
 
 annex_heating_demand:
   name: Annex Heating Demand
