@@ -75,6 +75,9 @@ ffmpeg:
 # Allows you to issue voice commands from the frontend
 conversation:
 
+logger:
+  default: error
+
 # Enables support for tracking state changes over time.
 history: !include history.yaml
 
