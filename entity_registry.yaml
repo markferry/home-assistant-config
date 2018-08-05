@@ -25,12 +25,6 @@ sensor.js_bedroom_humidity:
 sensor.ross_iphone_battery_state:
   platform: ios
   unique_id: state_ross_iphone
-sensor.iphone_battery_state:
-  platform: ios
-  unique_id: state_iphone
-sensor.iphone_battery_level:
-  platform: ios
-  unique_id: level_iphone
 sensor.ross_iphone_battery_level:
   platform: ios
   unique_id: level_ross_iphone
@@ -583,3 +577,45 @@ sensor.spiritz_70_system:
 binary_sensor.sensor_228:
   platform: zwave
   unique_id: 228-72057597868113920
+binary_sensor.aeotec_dsb05_multisensor_sensor:
+  platform: zwave
+  unique_id: 3-72057594093240320
+sensor.aeotec_dsb05_multisensor_temperature:
+  platform: zwave
+  unique_id: 3-72057594093256722
+sensor.aeotec_dsb05_multisensor_luminance:
+  platform: zwave
+  unique_id: 3-72057594093256754
+sensor.aeotec_dsb05_multisensor_power:
+  platform: zwave
+  unique_id: 3-72057594093256770
+sensor.aeotec_dsb05_multisensor_relative_humidity:
+  platform: zwave
+  unique_id: 3-72057594093256786
+media_player.bedroom_speaker:
+  platform: cast
+  unique_id: ab9792ee-8843-0ee7-4717-2a1926534f2b
+media_player.kitchen_speaker:
+  platform: cast
+  unique_id: 709ab858-308c-a622-048d-399f89716829
+media_player.library_2:
+  platform: plex
+  unique_id: b5c15074263aeab9-com-plexapp-android
+media_player.kitchen_2:
+  platform: plex
+  unique_id: 14014a0d719e4a0-com-plexapp-android
+media_player.fire:
+  platform: plex
+  unique_id: 8dbd6759ee9e9f81-com-plexapp-android
+media_player.moto_g_5th_gen:
+  platform: plex
+  unique_id: 9b983d4f562d5f3-com-plexapp-android
+media_player.fire_2:
+  platform: plex
+  unique_id: c0ac5d3ab1950998-com-plexapp-android
+sensor.bedroom_mark_overhead_previous_reading:
+  platform: zwave
+  unique_id: 39-72057594697252882
+sensor.bedroom_mark_overhead_interval:
+  platform: zwave
+  unique_id: 39-72057594697252899
