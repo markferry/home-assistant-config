@@ -619,3 +619,12 @@ sensor.bedroom_mark_overhead_previous_reading:
 sensor.bedroom_mark_overhead_interval:
   platform: zwave
   unique_id: 39-72057594697252899
+sensor.iphone_battery_level:
+  platform: ios
+  unique_id: level_iphone
+sensor.iphone_battery_state:
+  platform: ios
+  unique_id: state_iphone
+media_player.bedroom:
+  platform: cast
+  unique_id: e2e41d01-fac6-6f9b-10fc-cf935455f9c9
