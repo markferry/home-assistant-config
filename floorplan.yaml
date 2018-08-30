@@ -16,10 +16,14 @@ groups:
 
   - name: Sensors
     entities:
-        -  sensor.lounge_temperature
-    #text_template: '${entity.state ? entity.state : "unknown"}'
-    # An example of rounding up a number, i.e. a temperature of 90.1 becomes 91
-    text_template: '${entity.state ? Math.ceil(entity.state) : "undefined"}'  
+        - sensor.study_temperature
+        - sensor.kitchen_mean_temperature
+        - sensor.hall_temperature
+        - sensor.annex_hall_mean_temperature
+        - sensor.lounge_temperature
+        - sensor.library_mean_temperature
+        - sensor.ballroom_temperature
+    text_template: '${entity.state ? entity.state + "°C" : "?? °C"}'
     class_template: '
       var temp = parseFloat(entity.state.replace("°", ""));
       if (temp < 10)
