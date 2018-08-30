@@ -1,6 +1,7 @@
 name: Demo Floorplan
 image: /local/custom_ui/floorplan/floorplan.svg
 stylesheet: /local/custom_ui/floorplan/floorplan.css
+warnings:
 
 # These options are optional
 # warnings:                  # enable warnings (to find out why things might ot be working correctly)
@@ -8,14 +9,14 @@ stylesheet: /local/custom_ui/floorplan/floorplan.css
 # hide_app_toolbar:          # hide the application toolbar (when used as a custom panel)
 # date_format: DD-MMM-YYYY   # Date format to use in hover-over text
 
-last_motion_entity: sensor.template_last_motion
-last_motion_class: last-motion
+#last_motion_entity: sensor.template_last_motion
+#last_motion_class: last-motion
 
 groups:
 
   - name: Sensors
     entities:
-        -  sensor.dark_sky_temperature
+        -  sensor.lounge_temperature
     #text_template: '${entity.state ? entity.state : "unknown"}'
     # An example of rounding up a number, i.e. a temperature of 90.1 becomes 91
     text_template: '${entity.state ? Math.ceil(entity.state) : "undefined"}'  
@@ -31,11 +32,7 @@ groups:
 
   - name: Lights
     entities:
-        - light.hallway
-        - light.living_room
-        - light.patio
-        - group.kitchen_lights
-        - group.living_room_lights
+        - group.lounge_lights
     states:
       - state: 'on'
         class: 'light-on'
@@ -47,40 +44,16 @@ groups:
 
   - name: Switches
     entities:
-        - switch.doorbell
+        - switch.greenwave_powernode_53_switch
     states:
       - state: 'on'
         class: 'doorbell-on'
       - state: 'off'
         class: 'doorbell-off'
 
-  - name: NVR
-    entities:
-        - binary_sensor.blue_iris_nvr
-    text_template: '${(entity.state === "on") ? "online" : "offline"}'
-    states:
-      - state: 'off'
-        class: 'danger-text'
-      - state: 'on'
-        class: 'success-text'
-
-  - name: Alarm Panel
-    entities:
-        - alarm_control_panel.alarm
-    states:
-      - state: 'armed_away'
-        class: 'alarm-armed'
-      - state: 'armed_home'
-        class: 'alarm-armed'
-      - state: 'disarmed'
-        class: 'alarm-disarmed'
-
   - name: Binary sensors
     entities:
-      - binary_sensor.front_hallway
-      - binary_sensor.kitchen
-      - binary_sensor.master_bedroom
-      - binary_sensor.theatre_room
+      - binary_sensor.washing_machine
     states:
       - state: 'off'
         class: 'info-background'
@@ -92,16 +65,6 @@ groups:
         to_state: 'off'
         duration: 10
 
-  - name: Cameras
-    entities:
-      - camera.hallway
-      - camera.driveway
-      - camera.front_door
-      - camera.backyard
-    states:
-      - state: 'idle'
-        class: 'camera-idle'
-        
 #        - name: thermostat_temp
 #          entities:
 #            - climate.downstairs
