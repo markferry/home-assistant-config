@@ -31,6 +31,18 @@
   </metadata>
   <defs
      id="defs4489">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4719">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4715" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4717" />
+    </linearGradient>
     <symbol
        viewBox="0 0 24 24"
        id="ic_hot_tub_24px">
@@ -103,6 +115,15 @@
          d="M224 96c0-53.019-42.981-96-96-96S32 42.981 32 96v203.347C12.225 321.756.166 351.136.002 383.333c-.359 70.303 56.787 128.176 127.089 128.664.299.002.61.003.909.003 70.698 0 128-57.304 128-128 0-32.459-12.088-62.09-32-84.653V96zm-96 368l-.576-.002c-43.86-.304-79.647-36.544-79.423-80.42.173-33.98 19.266-51.652 31.999-66.08V96c0-26.467 21.533-48 48-48s48 21.533 48 48v221.498c12.63 14.312 32 32.164 32 66.502 0 44.112-35.888 80-80 80zm64-80c0 35.346-28.654 64-64 64s-64-28.654-64-64c0-23.685 12.876-44.349 32-55.417V96c0-17.673 14.327-32 32-32s32 14.327 32 32v232.583c19.124 11.068 32 31.732 32 55.417z"
          id="path14053" />
     </symbol>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4719"
+       id="linearGradient4721"
+       x1="497.00781"
+       y1="122.17578"
+       x2="549.96094"
+       y2="122.17578"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -114,16 +135,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1026"
+     inkscape:window-height="921"
      id="namedview4487"
      showgrid="true"
      inkscape:zoom="1.3105882"
-     inkscape:cx="613.93373"
-     inkscape:cy="493.52065"
+     inkscape:cx="466.2534"
+     inkscape:cy="438.29651"
      inkscape:window-x="0"
      inkscape:window-y="49"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="g4759-9"
      inkscape:snap-nodes="true"
      inkscape:snap-grids="true"
      inkscape:snap-object-midpoints="true"
@@ -312,22 +333,22 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="608"
+       x="576"
        y="192"
        id="text1579"><tspan
          sodipodi:role="line"
          id="tspan1577"
-         x="608"
+         x="576"
          y="192">Lounge</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="480"
+       x="464"
        y="192"
        id="text1583"><tspan
          sodipodi:role="line"
          id="tspan1581"
-         x="480"
+         x="464"
          y="192">Kitchen</tspan></text>
     <text
        xml:space="preserve"
@@ -352,23 +373,23 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="800"
-       y="512"
+       x="784"
+       y="528"
        id="text1595"><tspan
          sodipodi:role="line"
          id="tspan1593"
-         x="800"
-         y="512">Ballroom</tspan></text>
+         x="784"
+         y="528">Ballroom</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="128"
-       y="512"
+       x="112"
+       y="528"
        id="text1599"><tspan
          sodipodi:role="line"
          id="tspan1597"
-         x="128"
-         y="512">Anne</tspan></text>
+         x="112"
+         y="528">Anne</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -392,13 +413,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="144"
-       y="176"
+       x="112"
+       y="192"
        id="text1611"><tspan
          sodipodi:role="line"
          id="tspan1609"
-         x="144"
-         y="176">Study</tspan></text>
+         x="112"
+         y="192">Study</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -469,19 +490,6 @@
          id="title38910">Lounge Media Player</title>
     </use>
     <use
-       id="device_tracker.ap_central"
-       style="fill:#000000;stroke:none"
-       xlink:href="#ic_wifi_tethering_24px"
-       x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       transform="matrix(0.0375,0,0,0.0375,494.76641,218.01372)"
-       inkscape:label="#use39868">
-      <title
-         id="title44786">AP Central</title>
-    </use>
-    <use
        id="switch.greenwave_powernode_53_switch"
        style="display:inline;fill:#000000;stroke:none"
        xlink:href="#ic_hot_tub_24px"
@@ -490,7 +498,7 @@
        width="100%"
        height="100%"
        transform="matrix(0.0375,0,0,0.03947368,703.175,271.36842)"
-       inkscape:label="#use47524">
+       inkscape:label="switch.greenwave_powernode_53_switch">
       <title
          id="title35607">Hot Tub</title>
     </use>
@@ -515,61 +523,11 @@
        y="0"
        width="100%"
        height="100%"
-       transform="matrix(0.0375,0,0,0.0375,511.55,143.17519)"
+       transform="matrix(0.0375,0,0,0.0375,479.2875,143.55)"
        inkscape:label="#use40157-3">
       <title
          id="title44782">Kitchen Media Player</title>
     </use>
-    <use
-       id="binary_sensor.washing_machine"
-       style="fill:#000000;stroke:none"
-       xlink:href="#ic_local_laundry_service_24px"
-       x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       transform="matrix(0.0375,0,0,0.0375,367.25,111.55)"
-       inkscape:label="#use44768">
-      <title
-         id="title44780">Washing Machine</title>
-    </use>
-    <use
-       id="group.lounge_lights"
-       style="fill:#000000;stroke:none"
-       xlink:href="#lightbulb"
-       x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
-       inkscape:label="#use49127">
-      <title
-         id="title49141">Lounge Lights</title>
-    </use>
-    <use
-       id="random03509"
-       style="fill:#000000;stroke:none"
-       xlink:href="#thermometer-full"
-       x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       transform="matrix(0.03125,0,0,0.03125,681,93)"
-       inkscape:label="#use50559">
-      <title
-         id="title50573">Lounge Temperature</title>
-    </use>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="640"
-       y="112"
-       id="sensor.lounge_temperature"
-       inkscape:label="sensor.lounge_temperature"><tspan
-         sodipodi:role="line"
-         id="tspan1040"
-         x="640"
-         y="112">20°C</tspan></text>
     <use
        id="random03509-3"
        style="display:inline;fill:#000000;stroke:none"
@@ -586,38 +544,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="832"
-       y="384"
+       x="870"
+       y="404"
        id="sensor.ballroom_temperature"
        inkscape:label="sensor.ballroom_temperature"><tspan
          sodipodi:role="line"
          id="tspan1040-5"
-         x="832"
-         y="384">20°C</tspan></text>
-    <use
-       id="random03509-2"
-       style="display:inline;fill:#000000;stroke:none"
-       xlink:href="#thermometer-full"
-       x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       transform="matrix(0.03125,0,0,0.03125,521,109)"
-       inkscape:label="#use50559">
-      <title
-         id="title50573-7">Lounge Temperature</title>
-    </use>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="480"
-       y="128"
-       id="sensor.kitchen_mean_temperature"
-       inkscape:label="sensor.kitchen_mean_temperature"><tspan
-         sodipodi:role="line"
-         id="tspan1040-9"
-         x="480"
-         y="128">20°C</tspan></text>
+         x="870"
+         y="404">20°C</tspan></text>
     <use
        id="random03509-6"
        style="display:inline;fill:#000000;stroke:none"
@@ -626,7 +560,7 @@
        y="0"
        width="100%"
        height="100%"
-       transform="matrix(0.03125,0,0,0.03125,249,118.64541)"
+       transform="matrix(0.03125,0,0,0.03125,122,132)"
        inkscape:label="#use50559">
       <title
          id="title50573-1">Lounge Temperature</title>
@@ -634,38 +568,41 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="208"
-       y="137.6454"
+       x="146.17235"
+       y="149.27109"
        id="sensor.study_temperature"
        inkscape:label="sensor.study_temperature"><tspan
          sodipodi:role="line"
-         id="tspan1040-7"
-         x="208"
-         y="137.6454">20°C</tspan></text>
-    <use
-       id="random03509-3-3"
-       style="display:inline;fill:#000000;stroke:none"
-       xlink:href="#thermometer-full"
-       x="0"
-       y="0"
-       width="100%"
-       height="100%"
-       transform="matrix(0.03125,0,0,0.03125,776.99999,93.000001)"
-       inkscape:label="#use50559">
-      <title
-         id="title50573-6-7">Lounge Temperature</title>
-    </use>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="736"
-       y="112"
-       id="sensor.library_mean_temperature"
-       inkscape:label="sensor.library_mean_temperature"><tspan
-         sodipodi:role="line"
-         id="tspan1040-5-9"
-         x="736"
-         y="112">20°C</tspan></text>
+         x="146.17235"
+         y="149.27109"
+         id="tspan937">99.9°C</tspan></text>
+    <g
+       id="g4707">
+      <use
+         inkscape:label="#use50559"
+         transform="matrix(0.03125,0,0,0.03125,726,94)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#thermometer-full"
+         style="display:inline;fill:#000000;stroke:none"
+         id="random03509-3-3">
+        <title
+           id="title50573-6-7">Lounge Temperature</title>
+      </use>
+      <text
+         inkscape:label="sensor.library_mean_temperature"
+         id="sensor.library_mean_temperature"
+         y="112"
+         x="752"
+         style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="112"
+           x="752"
+           id="tspan1040-5-9"
+           sodipodi:role="line">99.9°C</tspan></text>
+    </g>
     <use
        id="random03509-6-2"
        style="display:inline;fill:#000000;stroke:none"
@@ -682,13 +619,233 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="240"
-       y="320"
+       x="274"
+       y="342"
        id="sensor.annex_hall_mean_temperature"
        inkscape:label="sensor.annex_hall_mean_temperature"><tspan
          sodipodi:role="line"
          id="tspan1040-7-9"
-         x="240"
-         y="320">20°C</tspan></text>
+         x="274"
+         y="342">20°C</tspan></text>
+    <g
+       id="g5956"
+       transform="translate(-2,4)">
+      <use
+         inkscape:label="#use49127"
+         transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#lightbulb"
+         style="fill:#000000;fill-rule:nonzero;stroke:none"
+         id="group.lounge_lights2">
+        <title
+           id="title49141">Lounge Lights</title>
+      </use>
+      <circle
+         inkscape:label="#group.lounge_lights"
+         r="16"
+         cy="140"
+         cx="642"
+         id="group.lounge_lights"
+         style="opacity:0.6;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4701">
+      <text
+         inkscape:label="#sensor.lounge_temperature"
+         id="sensor.lounge_temperature"
+         y="112"
+         x="656"
+         style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan933"
+           y="112"
+           x="656"
+           sodipodi:role="line">99.9°C</tspan></text>
+      <use
+         inkscape:label="#use50559"
+         transform="matrix(0.03125,0,0,0.03125,631,95)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#thermometer-full"
+         style="fill:#000000;stroke:none"
+         id="random50559" />
+    </g>
+    <g
+       id="g6012">
+      <use
+         inkscape:label="#use44768"
+         transform="matrix(0.0375,0,0,0.0375,371.25,111.55)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#ic_local_laundry_service_24px"
+         style="fill:#000000;stroke:none"
+         id="use44768">
+        <title
+           id="title44780">Washing Machine</title>
+      </use>
+      <circle
+         inkscape:label="#binary_sensor.washing_machine"
+         r="16"
+         cy="126"
+         cx="390"
+         id="binary_sensor.washing_machine"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <circle
+       style="display:inline;opacity:0.6;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="group.lounge_lights-6"
+       cx="506"
+       cy="346"
+       inkscape:label="#group.lounge_lights"
+       r="16" />
+    <use
+       id="random03509-2-7"
+       style="display:inline;fill:#000000;stroke:none"
+       xlink:href="#thermometer-full"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(0.03125,0,0,0.03125,489,333)"
+       inkscape:label="#use50559">
+      <title
+         id="title50573-7-5">Lounge Temperature</title>
+    </use>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+       x="480"
+       y="384"
+       id="sensor.kitchen_mean_temperature-3"
+       inkscape:label="sensor.kitchen_mean_temperature"><tspan
+         sodipodi:role="line"
+         id="tspan1040-9-5"
+         x="480"
+         y="384">20°C</tspan></text>
+    <g
+       id="g4713"
+       transform="translate(-16)">
+      <use
+         inkscape:label="#use50559"
+         transform="matrix(0.03125,0,0,0.03125,470,110)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#thermometer-full"
+         style="display:inline;fill:#000000;stroke:none"
+         id="random03509-2">
+        <title
+           id="title50573-7">Lounge Temperature</title>
+      </use>
+      <text
+         inkscape:label="#sensor.kitchen_mean_temperature"
+         id="sensor.kitchen_mean_temperature"
+         y="128"
+         x="496"
+         style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan933-6"
+           y="128"
+           x="496"
+           sodipodi:role="line"
+           style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
+    </g>
+    <circle
+       style="display:inline;opacity:1;fill:#6699ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="sensor.lounge_temperature.icon-6"
+       cx="544"
+       cy="464"
+       r="16"
+       inkscape:label="#group.lounge_lights" />
+    <g
+       id="g4759"
+       transform="translate(-79.581252,-86.86496)">
+      <use
+         inkscape:label="#use39868"
+         transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#ic_wifi_tethering_24px"
+         style="display:inline;fill:#000000;stroke:none"
+         id="rand-use-39868">
+        <title
+           id="title44786-9">AP Central</title>
+      </use>
+      <circle
+         inkscape:label=""
+         r="16"
+         cy="320"
+         cx="592"
+         id="device_tracker.ap_central"
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       style="display:inline"
+       id="g4759-1"
+       transform="translate(0.41875,-6.86496)">
+      <g
+         id="g4788"
+         transform="translate(207.72056,-80)">
+        <use
+           id="rand-use-39868-2"
+           style="display:inline;fill:#000000;stroke:none"
+           xlink:href="#ic_wifi_tethering_24px"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
+           inkscape:label="#use39868">
+          <title
+             id="title44786-9-7">AP Central</title>
+        </use>
+        <circle
+           style="display:inline;opacity:1;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="device_tracker.ap_east"
+           cx="592"
+           cy="320"
+           r="16"
+           inkscape:label="" />
+      </g>
+    </g>
+    <g
+       style="display:inline"
+       id="g4759-9"
+       transform="translate(-352,-16)">
+      <g
+         id="g4833"
+         transform="translate(-32,16)">
+        <use
+           id="rand-use-39868-3"
+           style="display:inline;fill:#000000;stroke:none"
+           xlink:href="#ic_wifi_tethering_24px"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
+           inkscape:label="#use39868">
+          <title
+             id="title44786-9-6">AP Central</title>
+        </use>
+        <circle
+           style="display:inline;opacity:1;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="device_tracker.ap_west"
+           cx="592"
+           cy="320"
+           r="16"
+           inkscape:label="" />
+      </g>
+    </g>
   </g>
 </svg>
