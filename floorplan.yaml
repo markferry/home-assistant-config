@@ -23,15 +23,19 @@ groups:
         - sensor.lounge_temperature
         - sensor.library_mean_temperature
         - sensor.ballroom_temperature
-    text_template: '${entity.state ? entity.state + "°C" : "?? °C"}'
+    text_template: '${entity.state != "unknown" ? entity.state + "°C" : "?? °C"}'
     class_template: '
-      var temp = parseFloat(entity.state.replace("°", ""));
-      if (temp < 10)
-        return "temp-low";
-      else if (temp < 30)
-        return "temp-medium";
+      var temp = parseFloat(entity.state.replace("°C", ""));
+      if (temp < 5)
+        return "temp-very-low-background";
+      else if (temp < 10)
+        return "temp-low-background";
+      else if (temp < 25)
+        return "temp-average-background";
+      else if (temp >= 25)
+        return "temp-high-background";
       else
-        return "temp-high";
+        return "warning-background";
       '
 
   - name: Lights
