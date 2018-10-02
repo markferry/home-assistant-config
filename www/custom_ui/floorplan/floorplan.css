@@ -93,11 +93,13 @@ svg, svg * {
 /* Light */
 
 .light-off {
-  fill: #C3B7F4 !important;
+  stroke: #bfbfbf !important;
+  fill: #bfbfbf !important;
 }
 
 .light-on {
-  fill: #F8D2B9 !important;
+  stroke: #ffcc00 !important;
+  fill: #ffcc00 !important;
 }
 
 /* Doorbell */
@@ -139,10 +141,12 @@ svg, svg * {
 
 /* Media player */
 
-.squeezebox-off {
-  fill: #8AA8A7 !important;
+.device-off {
+  fill: #ff9900 !important;
+  fill-opacity: 1 !important;
 }
 
-.squeezebox-on {
-  fill: #2baaa6 !important;
+.device-on {
+  fill: #99cc33 !important;
+  fill-opacity: 1 !important;
 }
