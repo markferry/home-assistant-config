@@ -1,5 +1,7 @@
 .PHONY: tags *.yaml
 
+HOST ?= ballroom-amp
+
 %.test: %.yaml
 	hass -c . --script check_config -i $^
 
@@ -20,6 +22,10 @@ install-dasher: mqtt-dasher/config.yml
 
 onkyo-version:
 	onkyo --host ballroom-amp firmware-version=query
+
+onkyo-power:
+	onkyo --host "${HOST}" main.power=query
+	onkyo --host "${HOST}" zone2.power=query
 
 .PHONY: ha-floorplan
 ha-floorplan:
