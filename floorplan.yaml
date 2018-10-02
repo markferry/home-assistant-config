@@ -23,6 +23,10 @@ groups:
         - sensor.lounge_temperature
         - sensor.library_mean_temperature
         - sensor.ballroom_temperature
+        - sensor.bedroom_mark_temperature
+        - sensor.bedroom_ros_mean_temperature
+        - sensor.bedroom_jerome_mean_temperature
+        - sensor.guest_room_mean_temperature
     text_template: '${entity.state != "unknown" ? entity.state + "°C" : "?? °C"}'
     class_template: '
       var temp = parseFloat(entity.state.replace("°C", ""));
@@ -34,6 +38,8 @@ groups:
         return "temp-average-background";
       else if (temp >= 25)
         return "temp-high-background";
+      else if (temp >= 30)
+        return "temp-very-high-background";
       else
         return "warning-background";
       '
@@ -41,6 +47,11 @@ groups:
   - name: Lights
     entities:
         - group.lounge_lights
+        - light.lounge_west
+        - light.lounge_north
+        - light.lounge_east
+        - group.bedroom_mark_lights
+        - group.ballroom_lights
     states:
       - state: 'on'
         class: 'light-on'
@@ -72,6 +83,17 @@ groups:
         from_state: 'on'
         to_state: 'off'
         duration: 10
+
+  - name: Devices
+    entities:
+      - device_tracker.ap_west
+      - device_tracker.ap_central
+      - device_tracker.ap_east
+    states:
+      - state: 'not_home'
+        class: 'device-off'
+      - state: 'home'
+        class: 'device-on'
 
 #        - name: thermostat_temp
 #          entities:
