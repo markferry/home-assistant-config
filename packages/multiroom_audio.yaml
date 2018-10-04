@@ -5,7 +5,7 @@ homeassistant:
       icon: mdi:music-box-outline
       emulated_hue: true
     media_player.mpd:
-      friendly_name: "Snapcast Source"
+      friendly_name: "Iris Media Player"
       icon: mdi:speaker-wireless
     media_player.snapcast_client_study:
       friendly_name: Study Snapcast
@@ -23,6 +23,9 @@ homeassistant:
       friendly_name: "Mark's Bedroom Snapcast"
     media_player.snapcast_client_9cb6d08b2a6f:
       friendly_name: Canard Snapcast
+
+    input_number.snapcast_client_bedroommark:
+      entity_picture: /local/wb-icons/wb_mark.png
 
 input_number:
     snapcast_client_study:
@@ -48,6 +51,11 @@ input_number:
     snapcast_client_ballroom:
       name: Ballroom Volume
       icon: mdi:projector
+      min: 0
+      max: 100
+    snapcast_client_outside:
+      name: Outside Volume
+      icon: mdi:pine-tree
       min: 0
       max: 100
     snapcast_client_bedroommark:
@@ -111,6 +119,15 @@ media_player:
     location: Multi-Room Controller
 
 group:
+  g_multiroom_audio_ui:
+    name: Multiroom Audio
+    view: true
+    icon: mdi:music
+    entities:
+      - media_player.mpd
+      - group.snapclient_volumes
+      - group.snapclients
+
   snapclients:
     name: Snapcast Clients
     entities:
@@ -123,7 +140,7 @@ group:
     - media_player.snapcast_client_bedroommark
     - media_player.snapcast_client_outside
 
-  snapclient_sliders:
+  snapclient_volumes:
     name: Snapcast Volume
     entities:
     - input_number.snapcast_client_study
@@ -153,6 +170,10 @@ script:
       - service: media_player.select_source
         data:
           entity_id: media_player.ballroom_amplifier
+          source: 'Media'
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.outside_amplifier
           source: 'Media'
 
 
