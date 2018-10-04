@@ -1,11 +1,8 @@
-- name: bedroom_mark
-  username: gnome
-  password: !secret kodi_bedroom_mark
-  platform: kodi
-  host: bedroom-mark
-  port: 80
-
-# Autodiscovered
-- name: bedroommarkaudio
-  platform: cast
-  host: chromecast-audio
+## Replaced with snapcast
+#- name: bedroom_mark Kodi
+#  username: gnome
+#  password: !secret kodi_bedroom_mark
+#  platform: kodi
+#  host: bedroom-mark
+#  port: 80
+#
