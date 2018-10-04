@@ -16,6 +16,7 @@ hall:
   - group.annex_heating
   - group.g_hottub
   - group.g_oil_tanks
+  - media_player.outside_amplifier
 
 hall_compact_ui:
   name: Hall
