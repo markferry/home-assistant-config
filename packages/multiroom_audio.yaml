@@ -131,7 +131,6 @@ group:
   snapclients:
     name: Snapcast Clients
     entities:
-    - script.all_rooms_audio
     - media_player.snapcast_client_study
     - media_player.snapcast_client_kitchen2
     - media_player.snapcast_client_lounge
