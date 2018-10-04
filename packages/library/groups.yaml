@@ -5,7 +5,6 @@ library:
   entities:
   - sensor.library_mean_temperature
   - group.library_compact_ui
-  - media_player.library
 
 library_compact_ui:
   name: Library
