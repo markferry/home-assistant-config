@@ -38,26 +38,23 @@
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
-- command_topic: ha/mock/bedroom_mark/level/command
-  name: bedroom_mark_level
+
+- name: bedroom_mark_lamp
+  command_topic: ha/mock/bedroom-mark/lamp/light/command
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
-- command_topic: ha/mock/bedroom-mark/lamp/light/command
-  name: "Mark's Bedroom Lamp"
-  optimistic: true
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  platform: mqtt
-- brightness_command_topic: ha/mock/bedroom_mark/overhead/brightness/command
+
+- name: bedroom_mark_overhead_level
+  brightness_command_topic: ha/mock/bedroom-mark/overhead/brightness/command
   brightness_scale: 100
-  command_topic: ha/mock/bedroom_mark/overhead/dimmer/command
-  name: bedroom_mark_overhead_level
+  command_topic: ha/mock/bedroom-mark/overhead/dimmer/command
   optimistic: true
   payload_off: 'OFF'
   payload_on: 'ON'
   platform: mqtt
+
 - command_topic: ha/mock/kitchen/level/command
   name: kitchen_level
   optimistic: true
