@@ -12,11 +12,9 @@ entities:
 - device_tracker.hastur
 - device_tracker.cyclops
 - device_tracker.study
-- device_tracker.kitchen
-- device_tracker.google_home
-- device_tracker.google_home_bt
-- device_tracker.amazon_echo
-- device_tracker.amazon_echo_bt
+- device_tracker.kitchen_tablet
+- device_tracker.kitchen_speaker
+- device_tracker.utilityamp
 - device_tracker.lounge
 - device_tracker.loungetv
 - device_tracker.ballroom
@@ -24,7 +22,6 @@ entities:
 - device_tracker.library
 - device_tracker.tado
 - device_tracker.bedroommark
-- device_tracker.bedroommark_chromecast
 # printers
 - device_tracker.ricoh213w
 - device_tracker.canonmg5550
