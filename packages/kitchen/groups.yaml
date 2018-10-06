@@ -5,7 +5,6 @@ kitchen:
   entities:
   - sensor.kitchen_mean_temperature
   - group.kitchen_compact_ui
-  - media_player.kitchen
   - media_player.kitchen_speaker
   - sensor.greenwave_powernode_54_energy
   - sensor.greenwave_powernode_54_power

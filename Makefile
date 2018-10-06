@@ -17,3 +17,6 @@ subscribe:
 
 install-dasher: mqtt-dasher/config.yml
 	scp mqtt-dasher/config.yml pi@pixie3:/etc/mqtt-dasher/config.yml
+
+onkyo-version:
+	onkyo --host ballroom-amp firmware-version=query

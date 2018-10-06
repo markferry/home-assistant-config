@@ -10,7 +10,7 @@
   max_gps_accuracy: 3000
 
 - platform: nmap_tracker
-  hosts: 192.168.7.1-254
+  hosts: 192.168.6.1-254 192.168.7.1-254
   interval_seconds: 60
   home_interval: 20
   track_new_devices: yes
@@ -25,11 +25,11 @@
 #  username: root
 #  password: XXXX
 
-#- platform: unifi
-#  host: hastur
-#  username: !secret unifi_username
-#  password: !secret unifi_password
-#  verify_ssl: False
+- platform: unifi
+  host: cyclops
+  username: viewer
+  password: !secret unifi_password
+  verify_ssl: false
 
 - platform: tado
   username: !secret tado_username

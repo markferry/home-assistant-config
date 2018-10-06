@@ -30,8 +30,10 @@ group.radio:
   order: 9
 group.armoury:
   order: 9
-group.settings:
+group.g_multiroom_audio_ui:
   order: 10
+group.settings:
+  order: 20
 
 group.all_lights:
   icon: mdi:lightbulb-on

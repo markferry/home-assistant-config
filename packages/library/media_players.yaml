@@ -1,5 +1,6 @@
-- name: Library
-  platform: kodi
-  host: library
-  port: 80
-
+## Replaced with snapcast
+#- name: Library Kodi
+#  platform: kodi
+#  host: library
+#  port: 80
+#

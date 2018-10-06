@@ -3,8 +3,6 @@ bedroom_mark:
   view: false
   icon: mdi:account
   entities:
-  - media_player.bedroom_mark
-  - media_player.bedroommarkaudio
   - sensor.bedroom_mark_temperature
   - climate.bedroom_mark_thermostat
   - group.bedroom_mark_lights
@@ -38,7 +36,6 @@ bedroom_mark_lights:
   view: false
   entities:
   - light.bedroom_mark_overhead_level
-  - light.bedroom_mark_level_39
   - light.bedroom_mark_lamp
 
 bedroom_mark_appliances:
