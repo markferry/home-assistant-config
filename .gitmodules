@@ -4,3 +4,6 @@
 [submodule "private"]
 	path = private
 	url = ./private
+[submodule "ha-floorplan"]
+	path = ha-floorplan
+	url = https://github.com/pkozul/ha-floorplan.git
