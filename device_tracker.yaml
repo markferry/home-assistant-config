@@ -25,11 +25,11 @@
 #  username: root
 #  password: XXXX
 
-#- platform: unifi
-#  host: hastur
-#  username: !secret unifi_username
-#  password: !secret unifi_password
-#  verify_ssl: False
+- platform: unifi
+  host: cyclops
+  username: viewer
+  password: !secret unifi_password
+  verify_ssl: false
 
 - platform: tado
   username: !secret tado_username
