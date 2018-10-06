@@ -47,11 +47,11 @@ groups:
   - name: Lights
     entities:
         - group.lounge_lights
-        - light.lounge_west
-        - light.lounge_north
-        - light.lounge_east
         - group.bedroom_mark_lights
         - group.ballroom_lights
+        #- light.lounge_west
+        #- light.lounge_north
+        #- light.lounge_east
     states:
       - state: 'on'
         class: 'light-on'
@@ -61,14 +61,14 @@ groups:
       domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
       service: toggle
 
-  - name: Switches
-    entities:
-        - switch.greenwave_powernode_53_switch
-    states:
-      - state: 'on'
-        class: 'doorbell-on'
-      - state: 'off'
-        class: 'doorbell-off'
+#  - name: Switches
+#    entities:
+#        - switch.greenwave_powernode_53_switch
+#    states:
+#      - state: 'on'
+#        class: 'doorbell-on'
+#      - state: 'off'
+#        class: 'doorbell-off'
 
   - name: Binary sensors
     entities:
