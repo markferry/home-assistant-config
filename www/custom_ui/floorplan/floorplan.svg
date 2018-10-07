@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -218,17 +218,17 @@
      guidetolerance="10000"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1080"
+     inkscape:window-width="1531"
+     inkscape:window-height="1026"
      id="namedview4487"
      showgrid="true"
-     inkscape:zoom="0.9267258"
-     inkscape:cx="397.53044"
-     inkscape:cy="388.48664"
+     inkscape:zoom="0.6552941"
+     inkscape:cx="341.58375"
+     inkscape:cy="284.28263"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="49"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer8"
      inkscape:snap-nodes="true"
      inkscape:snap-grids="true"
      inkscape:snap-object-midpoints="true"
@@ -618,7 +618,7 @@
       <g
          id="g4713"
          transform="matrix(1.2,0,0,1.2,-102.4,-72.8)"
-         inkscape:label="#g_kitchen_temperature"
+         inkscape:label="#g_kitchen_thermostat"
          style="fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -639,8 +639,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2" />
         <text
-           inkscape:label="#sensor.kitchen_mean_temperature"
-           id="sensor.kitchen_mean_temperature"
+           inkscape:label="#climate.kitchen_thermostat"
+           id="climate.kitchen_thermostat"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -750,7 +750,7 @@
       <g
          id="g4713-9"
          transform="matrix(1.2,0,0,1.2,-102.40001,241.6)"
-         inkscape:label="#g_lounge_temperature"
+         inkscape:label="#g_lounge_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -771,8 +771,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-6" />
         <text
-           inkscape:label="#sensor.lounge_temperature"
-           id="sensor.lounge_temperature"
+           inkscape:label="#climate.lounge_thermostat"
+           id="climate.lounge_thermostat"
            y="-150"
            x="656"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -786,7 +786,7 @@
       <g
          id="g4713-9-6"
          transform="matrix(1.2,0,0,1.2,12.8,241.6)"
-         inkscape:label="#g_library_temperature"
+         inkscape:label="#g_library_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -807,8 +807,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-6-8" />
         <text
-           inkscape:label="#sensor.library_mean_temperature"
-           id="sensor.library_mean_temperature"
+           inkscape:label="#climate.library_thermostat"
+           id="climate.library_thermostat"
            y="-150"
            x="656"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -822,7 +822,7 @@
       <g
          id="g4713-9-6-0"
          transform="matrix(1.2,0,0,1.2,147.2,570.4)"
-         inkscape:label="#g_ballroom_temperature"
+         inkscape:label="#g_ballroom_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -843,8 +843,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-6-8-3" />
         <text
-           inkscape:label="#sensor.ballroom_temperature"
-           id="sensor.ballroom_temperature"
+           inkscape:label="#climate.ballroom_thermostat"
+           id="climate.ballroom_thermostat"
            y="-150"
            x="656"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -858,7 +858,7 @@
       <g
          id="g4713-92"
          transform="matrix(1.2,0,0,1.2,-428.8,-51.2)"
-         inkscape:label="#g_study_temperature"
+         inkscape:label="#g_study_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -879,8 +879,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-8" />
         <text
-           inkscape:label="#sensor.study_temperature"
-           id="sensor.study_temperature"
+           inkscape:label="#climate.study_thermostat"
+           id="climate.study_thermostat"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -905,8 +905,8 @@
            y="106"
            ry="11.445243" />
         <text
-           inkscape:label="#sensor.annex_hall_mean_temperature"
-           id="sensor.annex_hall_mean_temperature"
+           inkscape:label="#climate.annex_hall_thermostat"
+           id="climate.annex_hall_thermostat"
            y="128"
            x="500"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -930,7 +930,7 @@
       <g
          id="g4713-92-0"
          transform="matrix(1.2,0,0,1.2,339.2,-70.4)"
-         inkscape:label="#g_jerome_temperature"
+         inkscape:label="#g_jerome_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -951,8 +951,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-8-1" />
         <text
-           inkscape:label="#sensor.bedroom_jerome_mean_temperature"
-           id="sensor.bedroom_jerome_mean_temperature"
+           inkscape:label="#climate.bedroom_jerome_thermostat"
+           id="climate.bedroom_jerome_thermostat"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -966,7 +966,7 @@
       <g
          id="g4713-92-3"
          transform="matrix(1.2,0,0,1.2,-553.6,222.4)"
-         inkscape:label="#g_bedroom_ros_temperature"
+         inkscape:label="#g_bedroom_ros_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -987,8 +987,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-8-0" />
         <text
-           inkscape:label="#sensor.study_temperature"
-           id="sensor.bedroom_ros_mean_temperature"
+           inkscape:label="#climate.study_thermostat"
+           id="climate.bedroom_ros_thermostat"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -1025,7 +1025,7 @@
       <g
          id="g4713-92-47"
          transform="matrix(1.2,0,0,1.2,104,66.4)"
-         inkscape:label="#g_hall_temperature"
+         inkscape:label="#g_hall_thermostat"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -1046,8 +1046,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-8-4" />
         <text
-           inkscape:label="#sensor.hall_temperature"
-           id="sensor.hall_temperature"
+           inkscape:label="#climate.hall_thermostat"
+           id="climate.hall_thermostat"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -1259,7 +1259,7 @@
       <g
          id="g4713-9-8"
          transform="matrix(1.2,0,0,1.2,-316,570.4)"
-         inkscape:label="#g_mark_temperature"
+         inkscape:label="#g_mark_thermostat"
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -1280,8 +1280,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-6-3" />
         <text
-           inkscape:label="#sensor.bedroom_mark_temperature"
-           id="sensor.bedroom_mark_temperature"
+           inkscape:label="#climate.bedroom_mark_thermostat"
+           id="climate.bedroom_mark_thermostat"
            y="-150"
            x="656"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -1295,7 +1295,7 @@
       <g
          id="g4713-9-8-9"
          transform="matrix(1.2,0,0,1.2,-155.2,568)"
-         inkscape:label="#g_guest_temperature"
+         inkscape:label="#g_guest_thermostat"
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86602539;stroke-opacity:1"
@@ -1316,8 +1316,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-6-3-0" />
         <text
-           inkscape:label="#sensor.guest_room_mean_temperature"
-           id="sensor.guest_room_mean_temperature"
+           inkscape:label="#climate.guest_room_thermostat"
+           id="climate.guest_room_thermostat"
            y="-150"
            x="656"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -1375,9 +1375,14 @@
            id="media_player.snapcast_client_bedroommark"
            style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </g>
+      <g
+         style="display:inline;opacity:1"
+         id="g5956-6-1-3-92-7"
+         transform="matrix(1.2,0,0,1.2,-346.80005,216.42542)"
+         inkscape:label="#g_bedroom_mark_thermostat" />
     </g>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3164"
        width="57.599998"
        height="96"
