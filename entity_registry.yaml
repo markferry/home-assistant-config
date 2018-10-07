@@ -628,3 +628,6 @@ sensor.iphone_battery_state:
 media_player.bedroom:
   platform: cast
   unique_id: e2e41d01-fac6-6f9b-10fc-cf935455f9c9
+sensor.spiritz_70_relative_humidity:
+  platform: zwave
+  unique_id: 70-72057595217330258
