@@ -76,14 +76,14 @@ groups:
       domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
       service: toggle
 
-#  - name: Switches
-#    entities:
-#        - switch.greenwave_powernode_53_switch
-#    states:
-#      - state: 'on'
-#        class: 'doorbell-on'
-#      - state: 'off'
-#        class: 'doorbell-off'
+  - name: Appliances
+    entities:
+      - group.g_hottub
+    states:
+      - state: 'on'
+        class: 'device-on'
+      - state: 'off'
+        class: 'device-off'
 
   - name: Binary sensors
     entities:
