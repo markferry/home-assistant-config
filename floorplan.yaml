@@ -14,22 +14,37 @@ warnings:
 
 groups:
 
-  - name: Sensors
+  - name: Compact UI Groups
     entities:
-        - sensor.study_temperature
-        - sensor.kitchen_mean_temperature
-        - sensor.hall_temperature
-        - sensor.annex_hall_mean_temperature
-        - sensor.lounge_temperature
-        - sensor.library_mean_temperature
-        - sensor.ballroom_temperature
-        - sensor.bedroom_mark_temperature
-        - sensor.bedroom_ros_mean_temperature
-        - sensor.bedroom_jerome_mean_temperature
-        - sensor.guest_room_mean_temperature
-    text_template: '${entity.state != "unknown" ? entity.state + "°C" : "?? °C"}'
+      - group.study_compact_ui
+      - group.kitchen_compact_ui
+      - group.hall_compact_ui
+      - group.lounge_compact_ui
+      - group.library_compact_ui
+      - group.ballroom_compact_ui
+      - group.bedroom_mark_compact_ui
+      - group.bedroom_jerome_compact_ui
+      - group.bedroom_ros_compact_ui
+      - group.guest_room_compact_ui
+    # Just the first word of the name
+    text_template: '${entity.attributes.friendly_name.replace(/[^\w].*/,"")}'
+
+  - name: Thermostats
+    entities:
+      - climate.annex_hall_thermostat
+      - climate.ballroom_thermostat
+      - climate.bedroom_mark_thermostat
+      - climate.hall_thermostat
+      - climate.kitchen_thermostat
+      - climate.library_thermostat
+      - climate.lounge_thermostat
+      - climate.study_thermostat
+      - climate.guest_room_thermostat
+      - climate.bedroom_jerome_thermostat
+      - climate.bedroom_ros_thermostat
+    text_template: '${entity.attributes.current_temperature != "unknown" ? entity.attributes.current_temperature + "°C" : "?? °C"}'
     class_template: '
-      var temp = parseFloat(entity.state.replace("°C", ""));
+      var temp = parseFloat(entity.attributes.current_temperature);
       if (temp < 5)
         return "temp-very-low-background";
       else if (temp < 10)
@@ -61,14 +76,14 @@ groups:
       domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
       service: toggle
 
-#  - name: Switches
-#    entities:
-#        - switch.greenwave_powernode_53_switch
-#    states:
-#      - state: 'on'
-#        class: 'doorbell-on'
-#      - state: 'off'
-#        class: 'doorbell-off'
+  - name: Appliances
+    entities:
+      - group.g_hottub
+    states:
+      - state: 'on'
+        class: 'device-on'
+      - state: 'off'
+        class: 'device-off'
 
   - name: Binary sensors
     entities:
@@ -104,19 +119,8 @@ groups:
       - media_player.snapcast_client_ballroom
       - media_player.snapcast_client_bedroommark
       - media_player.snapcast_client_outside
-    class_template: '
-      if (entity.attributes.is_volume_muted == false)
-        return "device-on";
-      else
-        return "device-off";
-      '
+    class_template: '${entity.attributes.is_volume_muted == false ? "device-on" : "device-off"}'
 
-#        - name: thermostat_temp
-#          entities:
-#            - climate.downstairs
-#            - climate.upstairs
-#          text_template: '${entity.attributes.current_temperature ? entity.attributes.current_temperature : "undefined"}'
-#
 # The above text_template uses extended attributes from the climate.* objects to get current temperature.
 
 #        - name: text_states
