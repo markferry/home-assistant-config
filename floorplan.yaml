@@ -1,4 +1,4 @@
-name: Demo Floorplan
+name: Whale Barn Floorplan
 image: /local/custom_ui/floorplan/floorplan.svg
 stylesheet: /local/custom_ui/floorplan/floorplan.css
 warnings:
@@ -29,6 +29,37 @@ groups:
     # Just the first word of the name
     text_template: '${entity.attributes.friendly_name.replace(/[^\w].*/,"")}'
 
+  # Sensor temperature readings expire unlike the Climate temperature readings...
+  - name: Sensors
+    entities:
+        - sensor.study_temperature
+        - sensor.kitchen_mean_temperature
+        - sensor.hall_temperature
+        - sensor.annex_hall_mean_temperature
+        - sensor.lounge_temperature
+        - sensor.library_mean_temperature
+        - sensor.ballroom_temperature
+        - sensor.bedroom_mark_temperature
+        - sensor.bedroom_ros_mean_temperature
+        - sensor.bedroom_jerome_mean_temperature
+        - sensor.guest_room_mean_temperature
+    text_template: '${entity.state != "unknown" ? entity.state + "°C" : "?? °C"}'
+    class_template: '
+      var temp = parseFloat(entity.state.replace("°C", ""));
+      if (temp < 5)
+        return "temp-very-low-background";
+      else if (temp < 10)
+        return "temp-low-background";
+      else if (temp < 25)
+        return "temp-average-background";
+      else if (temp >= 25)
+        return "temp-high-background";
+      else if (temp >= 30)
+        return "temp-very-high-background";
+      else
+        return "warning-background";
+      '
+
   - name: Thermostats
     entities:
       - climate.annex_hall_thermostat
@@ -42,9 +73,9 @@ groups:
       - climate.guest_room_thermostat
       - climate.bedroom_jerome_thermostat
       - climate.bedroom_ros_thermostat
-    text_template: '${entity.attributes.current_temperature != "unknown" ? entity.attributes.current_temperature + "°C" : "?? °C"}'
+    text_template: '${entity.attributes.temperature != "unknown" ? entity.attributes.temperature + "°C" : "?? °C"}'
     class_template: '
-      var temp = parseFloat(entity.attributes.current_temperature);
+      var temp = parseFloat(entity.attributes.temperature);
       if (temp < 5)
         return "temp-very-low-background";
       else if (temp < 10)
