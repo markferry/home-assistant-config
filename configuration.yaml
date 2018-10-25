@@ -39,6 +39,8 @@ homeassistant:
     package_ballroom: !include packages/ballroom/package.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
+    package_ballroom_mode: !include packages/ballroom/mode.yaml
+    package_ballroom_settings: !include packages/ballroom/settings.yaml
 
     package_armoury: !include packages/armoury/package.yaml
 
