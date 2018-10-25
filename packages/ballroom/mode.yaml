@@ -78,69 +78,16 @@ automation:
         entity_id:
           - group.ballroom_lights
           - group.ballroom_party_lights
-          - climate.ballroom_thermostat
+          - sensor.ballroom_setpoint
+    #condition:
+    #  condition: template  # otherwise we reset on all state updates
+    #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
     action:
         - service: input_select.select_option
           data:
             entity_id: input_select.ballroom_mode
             option: 'Manual'
 
-##   - alias: ballroom_sun_lights
-##     trigger:
-##       - platform: state
-##         entity_id: sun.sun
-##     action:
-##       - service: scene.turn_on  # FIXME
-##         data_template:
-##           entity_id: >
-##             {% if is_state(trigger.entity_id, "Off") %}
-##               scene.ballroom_off
-##             {%-elif is_state(trigger.entity_id, "Party") %}
-##               automation.ballroom_party
-##             {%-elif is_state(trigger.entity_id, "Movie") %}
-##               automation.ballroom_movie
-##             {%-elif is_state(trigger.entity_id, "Bright") %}
-##               automation.ballroom_bright
-##             {% else %}
-##               None
-##             {% endif %}
-## 
-##   - alias: ballroom_mode_off
-##     trigger:
-##       platform: state
-##       entity_id: input_select.ballroom_mode
-##       to: 'Off'
-##     action:
-##     - service: scene.turn_on
-##       entity_id: scene.ballroom_off
-## 
-##   - alias: ballroom_mode_party
-##     trigger:
-##       - platform: state
-##         entity_id: input_select.ballroom_mode
-##         to: 'Party'
-##     action:
-##       - service: automation.turn_off
-##         entity_id: automation.ballroom_revert_to_manual
-##       - service: scene.turn_on
-##         entity_id: scene.ballroom_party
-##       - service: climate.set_temperature
-##         data_template:
-##           entity_id: climate.ballroom_thermostat
-##           temperature: '{{ states.input_number.ballroom_temperature_party.state }}'
-##       - service: automation.turn_on
-##         entity_id: automation.ballroom_revert_to_manual
-## 
-##   - alias: ballroom_mode_movie
-##     trigger:
-##       - platform: state
-##         entity_id: input_select.ballroom_mode
-##         to: 'Movie'
-##     action:
-##       - service: script.set_mode
-##         data:
-##           room: 'ballroom'
-##           mode: 'movie'
 
   - alias: ballroom_mode
     trigger:
@@ -151,4 +98,3 @@ automation:
         data_template:
           room: 'ballroom'
           mode: '{{ trigger.to_state.state | lower }}'
-
