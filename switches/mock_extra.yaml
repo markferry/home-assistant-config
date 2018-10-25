@@ -47,7 +47,7 @@
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: greenwave_powernode_61_switch
+- name: greenwave_powernode_62_switch
   command_topic: ha/ballroom/disco-light/command
   payload_off: 'OFF'
   payload_on: 'ON'
