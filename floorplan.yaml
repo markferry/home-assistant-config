@@ -1,7 +1,6 @@
 name: Whale Barn Floorplan
 image: /local/custom_ui/floorplan/floorplan.svg
 stylesheet: /local/custom_ui/floorplan/floorplan.css
-warnings:
 
 # These options are optional
 # warnings:                  # enable warnings (to find out why things might ot be working correctly)
