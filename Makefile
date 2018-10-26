@@ -1,6 +1,7 @@
 .PHONY: tags *.yaml
 
 HOST ?= ballroom-amp
+MQTT_HOST ?= whalebarn.com
 
 %.test: %.yaml
 	hass -c . --script check_config -i $^
@@ -16,6 +17,9 @@ check:
 
 subscribe:
 	mosquitto_sub -h localhost -v -t '#'
+
+owntracks:
+	mosquitto_sub -u pixie -P ${PASS} -h ${MQTT_HOST} -p 8883 -i dev --cafile /etc/ssl/certs/ca-certificates.crt -t '#' -v
 
 install-dasher: mqtt-dasher/config.yml
 	scp mqtt-dasher/config.yml pi@pixie3:/etc/mqtt-dasher/config.yml
