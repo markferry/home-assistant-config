@@ -28,8 +28,13 @@ onkyo-version:
 	onkyo --host ballroom-amp firmware-version=query
 
 onkyo-power:
-	onkyo --host "${HOST}" main.power=query
-	onkyo --host "${HOST}" zone2.power=query
+	onkyo --host "${HOST}" main.power=query zone2.power=query
+
+onkyo-volume:
+	onkyo --host "${HOST}" main.master-volume=query zone2.volume=query
+
+onkyo-selector:
+	onkyo --host "${HOST}" main.input-selector=query zone2.selector=query
 
 .PHONY: ha-floorplan
 ha-floorplan:
