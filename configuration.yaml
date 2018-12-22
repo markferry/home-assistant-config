@@ -147,7 +147,7 @@ notify: !include_dir_merge_list notify
 ios:
 tts: !include tts.yaml
 
-scene: !include_dir_merge_list scenes
+#scene: !include_dir_merge_list scenes
 automation: !include_dir_merge_list automation
 
 group: !include groups.yaml
@@ -155,9 +155,9 @@ group: !include groups.yaml
 media_player: !include_dir_merge_list media_players
 light: !include_dir_merge_list lights
 sensor: !include_dir_merge_list sensors
-binary_sensor: !include_dir_merge_list binary_sensors
+#binary_sensor: !include_dir_merge_list binary_sensors
 switch: !include_dir_merge_list switches
-climate: !include_dir_merge_list thermostats
+#climate: !include_dir_merge_list thermostats
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
 script: !include_dir_merge_named scripts
