@@ -54,23 +54,6 @@ input_number:
     initial: 20
     step: 1
 
-script:
-  set_mode:
-    sequence:
-      - service: automation.turn_off
-        data_template:
-          entity_id: 'automation.{{room}}_revert_to_manual'
-      - service: scene.turn_on
-        data_template:
-          entity_id: 'scene.{{room}}_{{mode}}'
-      - service: climate.set_temperature
-        data_template:
-          entity_id: 'climate.{{room}}_thermostat'
-          temperature: "{{ states('input_number.'+room+'_temperature_'+mode) }}"
-      - service: automation.turn_on
-        data_template:
-          entity_id: 'automation.{{room}}_revert_to_manual'
-
 automation:
   - alias: ballroom_revert_to_manual
     trigger:
