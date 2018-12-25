@@ -51,6 +51,8 @@ homeassistant:
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
+    package_bedroom_mark_mode: !include packages/bedroom-mark/mode.yaml
+    package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
     package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml

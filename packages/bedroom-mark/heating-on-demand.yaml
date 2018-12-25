@@ -74,6 +74,13 @@ sensor:
       - sensor.bedroom_mark_south_current_temperature
       - sensor.bedroom_mark_north_current_temperature
 
+  - platform: template
+    sensors:
+      bedroom_mark_setpoint:
+        value_template: "{{ states.climate.bedroom_mark_thermostat.attributes.temperature }}"
+        unit_of_measurement: "\xB0C"
+
+
 automation:
   # Redirect received temperatures over mqtt
   - alias: "bedroom_mark_update_temperature"
