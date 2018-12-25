@@ -1,0 +1,76 @@
+#
+# Mode selection
+#
+# Stores last user intent.
+# Reverts to manual when user adjustments are made.
+#
+
+homeassistant:
+  customize:
+    input_select.bedroom_mark_mode:
+      entity_picture: /local/wb-icons/wb_mark.png
+
+input_select:
+  bedroom_mark_mode:
+    name: Mode
+    options:
+      - 'Off'
+      - 'Sleep'
+      - 'Play'
+      - 'Manual'
+    initial: 'Off'
+
+input_number:
+  bedroom_mark_temperature_off:
+    name: 'Off Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 10
+    step: 1
+
+  bedroom_mark_temperature_sleep:
+    name: 'Sleep Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 15
+    step: 1
+
+  bedroom_mark_temperature_play:
+    name: 'Play Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+
+automation:
+  - alias: bedroom_mark_revert_to_manual
+    trigger:
+      - platform: state
+        entity_id:
+          - group.bedroom_mark_lights
+          - sensor.bedroom_mark_setpoint
+    #condition:
+    #  condition: template  # otherwise we reset on all state updates
+    #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
+    action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.bedroom_mark_mode
+            option: 'Manual'
+
+
+  - alias: bedroom_mark_mode
+    trigger:
+      - platform: state
+        entity_id: input_select.bedroom_mark_mode
+    action:
+      - service: script.set_mode
+        data_template:
+          room: 'bedroom_mark'
+          mode: '{{ trigger.to_state.state | lower }}'
