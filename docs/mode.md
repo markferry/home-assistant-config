@@ -47,4 +47,7 @@ Typically at least
  1. `input_select.room_manual` triggers the `room_mode` automation which triggers the `set_mode` script
  1. The `set_mode` script behaves as above setting room scenes and temperatures to manual if those settings exist.
 
+### Limitations
+
+ 1. If individual lights within a group of turned on and off the mode doesn't change. Only when the entire group changes state will the mode revert to Manual
 
