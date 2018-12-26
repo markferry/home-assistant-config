@@ -74,6 +74,12 @@ sensor:
       - sensor.study_east_current_temperature
       - sensor.study_west_current_temperature
 
+  - platform: template
+    sensors:
+      study_setpoint:
+        value_template: "{{ states.climate.study_thermostat.attributes.temperature }}"
+        unit_of_measurement: "\xB0C"
+
 automation:
   # Redirect received temperatures over mqtt
   - alias: "study_update_temperature"
