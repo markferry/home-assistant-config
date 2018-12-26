@@ -14,9 +14,10 @@ kitchen_compact_ui:
   view: false
   icon: mdi:stove
   entities:
-  - input_select.kitchen_select
+  - input_select.kitchen_mode
   - climate.kitchen_thermostat
   - binary_sensor.washing_machine
+  - group.g_kitchen_settings_ui
 
 kitchen_scenes:
   name: Kitchen

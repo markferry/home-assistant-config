@@ -22,9 +22,13 @@ homeassistant:
 
     package_study: !include packages/study/package.yaml
     package_study_heating: !include packages/study/heating-on-demand.yaml
+    package_study_mode: !include packages/study/mode.yaml
+    package_study_settings: !include packages/study/settings.yaml
 
     package_kitchen: !include packages/kitchen/package.yaml
     package_kitchen_heating: !include packages/kitchen/heating-on-demand.yaml
+    package_kitchen_mode: !include packages/kitchen/mode.yaml
+    package_kitchen_settings: !include packages/kitchen/settings.yaml
 
     package_hall: !include packages/hall/package.yaml
     package_hall_heating: !include packages/hall/heating-on-demand.yaml
@@ -33,9 +37,13 @@ homeassistant:
     package_lounge: !include packages/lounge/package.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
+    package_lounge_mode: !include packages/lounge/mode.yaml
+    package_lounge_settings: !include packages/lounge/settings.yaml
 
     package_library: !include packages/library/package.yaml
     package_library_heating: !include packages/library/heating-on-demand.yaml
+    package_library_mode: !include packages/library/mode.yaml
+    package_library_settings: !include packages/library/settings.yaml
 
     package_ballroom: !include packages/ballroom/package.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml

@@ -1,0 +1,82 @@
+#
+# Mode selection
+#
+# Stores last user intent.
+# Reverts to manual when user adjustments are made.
+#
+
+input_select:
+  lounge_mode:
+    name: Mode
+    options:
+      - 'Off'
+      - 'Cosy'
+      - 'Bright'
+      - 'Movie'
+      - 'Manual'
+    initial: 'Off'
+    icon: mdi:sofa
+
+input_number:
+  lounge_temperature_off:
+    name: 'Off Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 10
+    step: 1
+
+  lounge_temperature_cosy:
+    name: 'Cosy Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 22
+    step: 1
+
+  lounge_temperature_bright:
+    name: 'Bright Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+
+  lounge_temperature_movie:
+    name: 'Movie Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+
+automation:
+  - alias: lounge_revert_to_manual
+    trigger:
+      - platform: state
+        entity_id:
+          - group.lounge_lights
+          - sensor.lounge_setpoint
+    #condition:
+    #  condition: template  # otherwise we reset on all state updates
+    #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
+    action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.lounge_mode
+            option: 'Manual'
+
+
+  - alias: lounge_mode
+    trigger:
+      - platform: state
+        entity_id: input_select.lounge_mode
+    action:
+      - service: script.set_mode
+        data_template:
+          room: 'lounge'
+          mode: '{{ trigger.to_state.state | lower }}'

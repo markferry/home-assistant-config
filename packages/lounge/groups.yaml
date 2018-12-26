@@ -12,10 +12,11 @@ lounge_compact_ui:
   view: false
   icon: mdi:sofa
   entities:
-  - input_select.lounge_select
+  - input_select.lounge_mode
   - climate.lounge_thermostat
   - group.lounge_lights
   - group.g_lounge_media_dimming
+  - group.g_lounge_settings_ui
 
 lounge_scenes:
   name: Lounge

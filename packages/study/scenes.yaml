@@ -1,24 +1,24 @@
-- name: Study Off
+- name: study_off
   entities:
     group.study_lights:
       state: off
-    climate.study_thermostat:
-      temperature: 10
     media_player.study:
       state: paused
 
-- name: Study Work
+- name: study_cosy
+  entities:
+    group.study_lights:
+      state: on
+      brightness_pct: 20
+
+- name: study_bright
   entities:
     group.study_lights:
       state: on
       brightness_pct: 100
-    climate.study_thermostat:
-      temperature: 20
 
-- name: Study Relax
+- name: study_work
   entities:
     group.study_lights:
       state: on
-      brightness_pct: 50
-    climate.study_thermostat:
-      temperature: 20
+      brightness_pct: 100

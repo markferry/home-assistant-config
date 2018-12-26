@@ -1,0 +1,72 @@
+#
+# Mode selection
+#
+# Stores last user intent.
+# Reverts to manual when user adjustments are made.
+#
+
+input_select:
+  kitchen_mode:
+    name: Mode
+    options:
+      - 'Off'
+      - 'Cosy'
+      - 'Bright'
+      - 'Manual'
+    initial: 'Off'
+    icon: mdi:stove
+
+input_number:
+  kitchen_temperature_off:
+    name: 'Off Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 10
+    step: 1
+
+  kitchen_temperature_cosy:
+    name: 'Cosy Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 22
+    step: 1
+
+  kitchen_temperature_bright:
+    name: 'Bright Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 5
+    max: 25
+    initial: 20
+    step: 1
+
+automation:
+  - alias: kitchen_revert_to_manual
+    trigger:
+      - platform: state
+        entity_id:
+          - group.kitchen_lights
+          - sensor.kitchen_setpoint
+    #condition:
+    #  condition: template  # otherwise we reset on all state updates
+    #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
+    action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.kitchen_mode
+            option: 'Manual'
+
+
+  - alias: kitchen_mode
+    trigger:
+      - platform: state
+        entity_id: input_select.kitchen_mode
+    action:
+      - service: script.set_mode
+        data_template:
+          room: 'kitchen'
+          mode: '{{ trigger.to_state.state | lower }}'
