@@ -33,7 +33,7 @@ climate:
     heater: switch.guest_room_demand
     target_sensor: sensor.guest_room_mean_temperature
     max_temp: 25
-    min_temp: 5
+    min_temp: 8  # spirit-Z minimum
     target_temp: 10.0
 
 switch:

@@ -29,6 +29,6 @@ customize:
 
   climate.guest_room_heat:
     friendly_name: Guest Room
-    min_temp: 5
+    min_temp: 8
     max_temp: 25
 
