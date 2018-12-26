@@ -1,7 +1,7 @@
 - name: Guest Room Off
   entities:
     climate.guest_room_thermostat:
-      temperature: 10
+      temperature: 8
 - name: Guest Room Sleep
   entities:
     climate.guest_room_thermostat:
