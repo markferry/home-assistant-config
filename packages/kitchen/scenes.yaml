@@ -4,8 +4,6 @@
       state: off
     media_player.kitchen:
       state: paused
-    media_player.kitchen_speaker:
-      state: stop
 
 - name: kitchen_cosy
   entities:
