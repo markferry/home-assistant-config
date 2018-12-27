@@ -9,8 +9,9 @@ bedroom_jerome_compact_ui:
   name: "Jerome's Bedroom"
   view: false
   entities:
-  - input_select.bedroom_jerome_select
+  - input_select.bedroom_jerome_mode
   - climate.js_bedroom
+  - group.g_bedroom_jerome_settings_ui
 
 bedroom_jerome_scenes:
   name: "Jerome's Bedroom"

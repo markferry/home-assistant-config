@@ -60,6 +60,13 @@ sensor:
     entity_ids:
       - sensor.guest_room_current_temperature
 
+  - platform: template
+    sensors:
+      guest_room_setpoint:
+        value_template: "{{ states.climate.guest_room_thermostat.attributes.temperature }}"
+        unit_of_measurement: "\xB0C"
+
+
 automation:
   # Redirect received temperatures over mqtt
   - alias: "guest_room_update_temperature"

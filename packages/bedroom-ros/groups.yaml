@@ -9,8 +9,9 @@ bedroom_ros_compact_ui:
   name: "Ros's Bedroom"
   view: false
   entities:
-  - input_select.bedroom_ros_select
+  - input_select.bedroom_ros_mode
   - climate.bedroom_ros_thermostat
+  - group.g_bedroom_ros_settings_ui
 
 bedroom_ros_scenes:
   name: "Ros's Bedroom"
