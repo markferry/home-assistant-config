@@ -1,0 +1,72 @@
+#
+# Mode selection
+#
+# Stores last user intent.
+# Reverts to manual when user adjustments are made.
+#
+
+input_select:
+  guest_room_mode:
+    name: Mode
+    options:
+      - 'Off'
+      - 'Sleep'
+      - 'Cosy'
+      - 'Manual'
+    initial: 'Off'
+    icon: mdi:hotel
+
+input_number:
+  guest_room_temperature_off:
+    name: 'Off Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 8
+    max: 25
+    initial: 8
+    step: 1
+
+  guest_room_temperature_sleep:
+    name: 'Sleep Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 8
+    max: 25
+    initial: 15
+    step: 1
+
+  guest_room_temperature_cosy:
+    name: 'Cosy Temp'
+    icon: mdi:thermostat
+    unit_of_measurement: "\xB0C"
+    min: 8
+    max: 25
+    initial: 20
+    step: 1
+
+automation:
+  - alias: guest_room_revert_to_manual
+    trigger:
+      - platform: state
+        entity_id:
+          - group.guest_room_lights
+          - sensor.guest_room_setpoint
+    #condition:
+    #  condition: template  # otherwise we reset on all state updates
+    #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
+    action:
+        - service: input_select.select_option
+          data:
+            entity_id: input_select.guest_room_mode
+            option: 'Manual'
+
+
+  - alias: guest_room_mode
+    trigger:
+      - platform: state
+        entity_id: input_select.guest_room_mode
+    action:
+      - service: script.set_mode
+        data_template:
+          room: 'guest_room'
+          mode: '{{ trigger.to_state.state | lower }}'

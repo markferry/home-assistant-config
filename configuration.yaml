@@ -55,6 +55,8 @@ homeassistant:
 
     package_guest_room: !include packages/guest_room/package.yaml
     package_guest_room_heating: !include packages/guest_room/heating-on-demand.yaml
+    package_guest_room_mode: !include packages/guest_room/mode.yaml
+    package_guest_room_settings: !include packages/guest_room/settings.yaml
 
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
@@ -64,9 +66,13 @@ homeassistant:
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
     package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
+    package_bedroom_jerome_mode: !include packages/bedroom-jerome/mode.yaml
+    package_bedroom_jerome_settings: !include packages/bedroom-jerome/settings.yaml
 
     package_bedroom_ros: !include packages/bedroom-ros/package.yaml
     package_bedroom_ros_heating: !include packages/bedroom-ros/heating-on-demand.yaml
+    package_bedroom_ros_mode: !include packages/bedroom-ros/mode.yaml
+    package_bedroom_ros_settings: !include packages/bedroom-ros/settings.yaml
 
     #package_room: !include packages/room/package.yaml
 
