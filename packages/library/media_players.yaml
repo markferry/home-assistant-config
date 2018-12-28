@@ -1,6 +1,4 @@
-## Replaced with snapcast
-#- name: Library Kodi
-#  platform: kodi
-#  host: library
-#  port: 80
-#
+- name: library
+  platform: volumio
+  host: library
+  port: 3000
