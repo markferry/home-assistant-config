@@ -17,6 +17,7 @@ bedroom_mark_compact_ui:
   - group.bedroom_mark_lights
   - group.g_bedroom_mark_media_dimming
   - group.g_bedroom_mark_settings_ui
+  - media_player.bedroom_mark
 
 bedroom_mark_setpoints:
   name: "Mark's Bedroom Setpoints"
@@ -36,4 +37,9 @@ bedroom_mark_appliances:
   name: "Mark's Bedroom Appliances"
   view: false
   entities:
+
+bedroom_mark_media_players:
+  view: false
+  entities:
+  - media_player.bedroom_mark
 
