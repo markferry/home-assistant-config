@@ -1,4 +1,4 @@
-- name: Ballroom Off
+- name: ballroom_off
   entities:
     group.ballroom_lights:
       state: off
@@ -9,7 +9,7 @@
     media_player.ballroom_amplifier:
       state: off
 
-- name: Ballroom Party
+- name: ballroom_party
   entities:
     group.ballroom_lights:
       state: on
@@ -17,14 +17,14 @@
     group.ballroom_party_lights:
       state: on
 
-- name: Ballroom Movie
+- name: ballroom_movie
   entities:
     group.ballroom_lights:
       state: off
     group.ballroom_party_lights:
       state: off
 
-- name: Ballroom Bright
+- name: ballroom_bright
   entities:
     group.ballroom_lights:
       state: on
