@@ -7,7 +7,7 @@
 
 input_select:
   lounge_mode:
-    name: Mode
+    name: Lounge Mode
     options:
       - 'Off'
       - 'Cosy'

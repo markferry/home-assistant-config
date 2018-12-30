@@ -12,7 +12,7 @@ homeassistant:
 
 input_select:
   bedroom_jerome_mode:
-    name: Mode
+    name: "Jerome's Bedroom Mode"
     options:
       - 'Off'
       - 'Sleep'
