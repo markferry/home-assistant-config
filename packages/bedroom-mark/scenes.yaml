@@ -6,6 +6,8 @@
       state: off
     media_player.bedroom_mark:
       state: paused
+    media_player.snapcast_client_bedroommark:
+      is_volume_muted: true
 
 - name: bedroom_mark_sleep
   entities:

@@ -4,6 +4,8 @@
       state: off
     media_player.library:
       state: paused
+    media_player.snapcast_client_library:
+      is_volume_muted: true
 
 - name: library_cosy
   entities:

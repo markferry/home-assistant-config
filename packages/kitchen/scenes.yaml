@@ -4,6 +4,8 @@
       state: off
     media_player.kitchen:
       state: paused
+    media_player.snapcast_client_kitchen2:
+      is_volume_muted: true
 
 - name: kitchen_cosy
   entities:
