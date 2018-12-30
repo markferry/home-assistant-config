@@ -7,7 +7,7 @@
 
 input_select:
   study_mode:
-    name: Mode
+    name: Study Mode
     options:
       - 'Off'
       - 'Cosy'

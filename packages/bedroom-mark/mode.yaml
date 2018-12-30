@@ -12,7 +12,7 @@ homeassistant:
 
 input_select:
   bedroom_mark_mode:
-    name: Mode
+    name: "Mark's Bedroom Mode"
     options:
       - 'Off'
       - 'Sleep'

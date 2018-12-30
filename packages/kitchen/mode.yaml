@@ -7,7 +7,7 @@
 
 input_select:
   kitchen_mode:
-    name: Mode
+    name: Kitchen Mode
     options:
       - 'Off'
       - 'Cosy'

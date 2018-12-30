@@ -7,7 +7,7 @@
 
 input_select:
   guest_room_mode:
-    name: Mode
+    name: Guest Room Mode
     options:
       - 'Off'
       - 'Sleep'
