@@ -1,9 +1,0 @@
-study_select:
-  name: Study Mood
-  options:
-    - 'Off'
-    - 'Work'
-    - 'Relax'
-  initial: 'Off'
-  icon: mdi:printer
-

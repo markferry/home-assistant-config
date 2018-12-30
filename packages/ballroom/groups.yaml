@@ -20,12 +20,6 @@ ballroom_compact_ui:
   - group.g_ballroom_media_dimming
   - group.g_ballroom_settings_ui
 
-ballroom_scenes:
-  name: Ballroom
-  view: false
-  entities:
-  - input_select.ballroom_select
-
 ballroom_setpoints:
   name: Ballroom Setpoints
   view: false

@@ -1,7 +1,4 @@
 customize:
-  group.library_scenes:
-    order: 0
-
   light.library_level_25:
     friendly_name: Library Valve
 

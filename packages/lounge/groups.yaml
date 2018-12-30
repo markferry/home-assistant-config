@@ -18,12 +18,6 @@ lounge_compact_ui:
   - group.g_lounge_media_dimming
   - group.g_lounge_settings_ui
 
-lounge_scenes:
-  name: Lounge
-  view: false
-  entities:
-  - input_select.lounge_select
-
 lounge_setpoints:
   name: Lounge Setpoints
   view: false

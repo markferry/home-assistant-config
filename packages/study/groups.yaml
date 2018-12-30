@@ -16,12 +16,6 @@ study_compact_ui:
   - climate.study_thermostat
   - group.g_study_settings_ui
 
-study_scenes:
-  name: Study
-  view: false
-  entities:
-  - input_select.study_select
-
 study_setpoints:
   name: Study Setpoints
   view: false

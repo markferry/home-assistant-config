@@ -1,9 +1,0 @@
-library_select:
-  name: Library Mood
-  options:
-    - 'Off'
-    - 'Chat'
-    - 'Read'
-  initial: 'Off'
-  icon: mdi:library
-
