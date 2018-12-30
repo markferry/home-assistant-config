@@ -1,5 +1,5 @@
 #  All Off at 11pm weekdays, 3am weekend
-- alias: "Reset Moods"
+- alias: reset_modes
   trigger:
     - platform: time
       at: '00:30:00'
@@ -24,21 +24,21 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.study_select
+        entity_id: input_select.study_mode
         option: "Off"
     - service: input_select.select_option
       data:
-        entity_id: input_select.kitchen_select
+        entity_id: input_select.kitchen_mode
         option: "Off"
     - service: input_select.select_option
       data:
-        entity_id: input_select.lounge_select
+        entity_id: input_select.lounge_mode
         option: "Off"
     - service: input_select.select_option
       data:
-        entity_id: input_select.library_select
+        entity_id: input_select.library_mode
         option: "Off"
     - service: input_select.select_option
       data:
-        entity_id: input_select.ballroom_select
+        entity_id: input_select.ballroom_mode
         option: "Off"

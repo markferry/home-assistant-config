@@ -147,7 +147,7 @@ user_automations:
   - automation.kitchen_cosy_time
   - automation.bedroom_mark_sleep_time
   - automation.bedroom_mark_off_time
-  - automation.reset_moods
+  - automation.reset_modes
   - automation.study_work_time
   - automation.calendar_scene
   - automation.calendar_climate
