@@ -1,7 +1,4 @@
 customize:
-  group.kitchen_scenes:
-    order: 0
-
   light.kitchen_level_34:
     friendly_name: Kitchen Valve
 

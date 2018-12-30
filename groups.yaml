@@ -122,22 +122,22 @@ annex_heating_demand:
   - switch.annex_hall_demand
   - switch.bedroom_ros_demand
 
-room_scenes:
+room_modes:
   name: Rooms
   entities:
-  - input_select.study_select
-  - input_select.kitchen_select
-  - input_select.lounge_select
-  - input_select.library_select
-  - input_select.ballroom_select
+  - input_select.study_mode
+  - input_select.kitchen_mode
+  - input_select.lounge_mode
+  - input_select.library_mode
+  - input_select.ballroom_mode
 
-bedroom_scenes:
+bedroom_modes:
   name: Bedrooms
   entities:
-  - input_select.bedroom_mark_select
-  - input_select.bedroom_jerome_select
-  - input_select.bedroom_ros_select
-  - input_select.guest_room_select
+  - input_select.bedroom_mark_mode
+  - input_select.bedroom_jerome_mode
+  - input_select.bedroom_ros_mode
+  - input_select.guest_room_mode
 
 user_automations:
   name: Automations

@@ -2,8 +2,8 @@ name: WB
 view: true
 entities:
 - group.people
-- group.room_scenes
-- group.bedroom_scenes
+- group.room_modes
+- group.bedroom_modes
   # badges
 - sensor.study_temperature
 - sensor.kitchen_mean_temperature

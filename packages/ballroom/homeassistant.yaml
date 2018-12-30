@@ -1,7 +1,4 @@
 customize:
-  group.ballroom_scenes:
-    order: 0
-
   light.ballroom_east_level_33:
     friendly_name: Ballroom East Valve
 

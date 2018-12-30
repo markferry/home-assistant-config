@@ -1,7 +1,4 @@
 customize:
-  automation.bedroom_ros_mood:
-    friendly_name: "Ros's Bedroom Mood"
-
   sensor.bedroom_ros_temperature:
     friendly_name: "Ros's Bedroom"
   sensor.bedroom_ros_battery:
@@ -23,11 +20,4 @@ customize:
     friendly_name: "Ros's Bedroom Mood Sleep"
   script.hue_bedroom_ros_cosy:
     friendly_name: "Ros's Bedroom Mood Cosy"
-
-  group.bedroom_ros_select:
-    order: 1
-    icon: /local/wb-icons/wb_ros.png
-  input_select.bedroom_ros_select:
-    entity_picture: /local/wb-icons/wb_ros.png
-
 

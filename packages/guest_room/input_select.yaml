@@ -1,9 +1,0 @@
-guest_room_select:
-  name: Guest Room Mood
-  options:
-    - 'Off'
-    - 'Sleep'
-    - 'Cosy'
-  initial: 'Off'
-  icon: mdi:hotel
-

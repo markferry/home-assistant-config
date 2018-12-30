@@ -18,12 +18,6 @@ bedroom_mark_compact_ui:
   - group.g_bedroom_mark_media_dimming
   - group.g_bedroom_mark_settings_ui
 
-bedroom_mark_scenes:
-  name: "Mark's Bedroom"
-  view: false
-  entities:
-  - input_select.bedroom_mark_select
-
 bedroom_mark_setpoints:
   name: "Mark's Bedroom Setpoints"
   view: false

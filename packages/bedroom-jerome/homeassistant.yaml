@@ -1,7 +1,4 @@
 customize:
-  automation.bedroom_jerome_mood:
-    friendly_name: "Jerome's Bedroom Mood"
-
   script.hue_bedroom_jerome_thermostat:
     friendly_name: "Jerome's Bedroom Thermostat"
 
@@ -11,12 +8,6 @@ customize:
     friendly_name: "Jerome's Bedroom Mood Sleep"
   script.hue_bedroom_jerome_cosy:
     friendly_name: "Jerome's Bedroom Mood Cosy"
-
-  group.bedroom_jerome_select:
-    order: 1
-    icon: /local/wb-icons/wb_jerome.png
-  input_select.bedroom_jerome_select:
-    entity_picture: /local/wb-icons/wb_jerome.png
 
   # Tado sensors
   climate.js_bedroom:

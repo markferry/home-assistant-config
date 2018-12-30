@@ -16,12 +16,6 @@ library_compact_ui:
   - climate.library_thermostat
   - group.g_library_settings_ui
 
-library_scenes:
-  name: Library
-  view: false
-  entities:
-  - input_select.library_select
-
 library_setpoints:
   name: Library Setpoints
   view: false

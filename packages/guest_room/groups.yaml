@@ -15,12 +15,6 @@ guest_room_compact_ui:
   - climate.guest_room_thermostat
   - group.g_guest_room_settings_ui
 
-guest_room_scenes:
-  name: Guest Room
-  view: false
-  entities:
-  - input_select.guest_room_select
-
 guest_room_setpoints:
   name: Guest Room Setpoints
   view: false

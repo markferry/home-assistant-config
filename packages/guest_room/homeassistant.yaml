@@ -1,13 +1,8 @@
 customize:
-  automation.guest_room_mood:
-    friendly_name: "Guest Room Mood"
   automation.guest_room_sleep_time:
     friendly_name: "Guest Room Sleep Time"
   automation.guest_room_off_time:
     friendly_name: "Guest Room Off Time"
-
-  group.guest_room_scenes:
-    order: 0
 
   sensor.guest_room_battery:
     friendly_name: "Guest Room Battery"
@@ -22,10 +17,6 @@ customize:
     friendly_name: "Guest Room Mood Sleep"
   script.hue_guest_room_cosy:
     friendly_name: "Guest Room Mood Cosy"
-
-  group.guest_room_select:
-    order: 1
-    entity_picture: mdi:hotel
 
   climate.guest_room_heat:
     friendly_name: Guest Room
