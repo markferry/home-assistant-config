@@ -7,10 +7,7 @@ MQTT_HOST ?= whalebarn.com
 	hass -c . --script check_config -i $^
 
 tags:
-	ctags --exclude=tags --language-force=hass --hass-kinds=D -R
-
-all-tags:
-	ctags --exclude=tags --language-force=hass --hass-kinds=Ddr -R
+	ctags --exclude=tags --language-force=hass -R
 
 check:
 	hass -c . --script=check_config
