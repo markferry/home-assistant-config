@@ -4,6 +4,8 @@
       state: off
     media_player.lounge:
       state: paused
+    media_player.snapcast_client_lounge:
+      is_volume_muted: true
 
 - name: lounge_cosy
   entities:

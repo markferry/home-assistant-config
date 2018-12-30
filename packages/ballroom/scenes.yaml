@@ -8,6 +8,8 @@
       state: paused
     media_player.ballroom_amplifier:
       state: off
+    media_player.snapcast_client_ballroom:
+      is_volume_muted: true
 
 - name: ballroom_party
   entities:
