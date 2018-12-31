@@ -1,7 +1,4 @@
 customize:
-  group.lounge_scenes:
-    order: 0
-
   group.lounge_lights:
     icon: mdi:lightbulb-on
     emulated_hue: true
@@ -25,9 +22,9 @@ customize:
   script.hue_lounge_off:
     friendly_name: "Lounge"
   script.hue_lounge_cosy:
-    friendly_name: "Lounge Mood Cosy"
-  script.hue_lounge_movie:
-    friendly_name: "Lounge Mood Movie"
+    friendly_name: "Lounge Mode Cosy"
   script.hue_lounge_bright:
-    friendly_name: "Lounge Mood Bright"
+    friendly_name: "Lounge Mode Bright"
+  script.hue_lounge_movie:
+    friendly_name: "Lounge Mode Movie"
 

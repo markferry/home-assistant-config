@@ -61,6 +61,13 @@ sensor:
     entity_ids:
       - sensor.bedroom_jerome_current_temperature
 
+  - platform: template
+    sensors:
+      bedroom_jerome_setpoint:
+        value_template: "{{ states.climate.bedroom_jerome_thermostat.attributes.temperature }}"
+        unit_of_measurement: "\xB0C"
+
+
 automation:
   # Tado app control of thermostat means we need two-way updates.
   - alias: js_bedroom_updates_virtual_setpoint

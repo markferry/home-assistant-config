@@ -1,0 +1,10 @@
+group:
+  g_study_settings_ui:
+    name: Settings
+    icon: mdi:settings
+    control: hidden
+    entities:
+      - input_number.study_temperature_off
+      - input_number.study_temperature_cosy
+      - input_number.study_temperature_bright
+      - input_number.study_temperature_work

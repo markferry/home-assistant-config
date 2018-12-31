@@ -2,20 +2,20 @@ hue_bedroom_jerome_off:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_jerome_select
+        entity_id: input_select.bedroom_jerome_mode
         option: "Off"
 
 hue_bedroom_jerome_sleep:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_jerome_select
+        entity_id: input_select.bedroom_jerome_mode
         option: "Sleep"
 
 hue_bedroom_jerome_cosy:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_jerome_select
+        entity_id: input_select.bedroom_jerome_mode
         option: "Cosy"
 

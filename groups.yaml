@@ -122,22 +122,22 @@ annex_heating_demand:
   - switch.annex_hall_demand
   - switch.bedroom_ros_demand
 
-room_scenes:
+room_modes:
   name: Rooms
   entities:
-  - input_select.study_select
-  - input_select.kitchen_select
-  - input_select.lounge_select
-  - input_select.library_select
-  - input_select.ballroom_select
+  - input_select.study_mode
+  - input_select.kitchen_mode
+  - input_select.lounge_mode
+  - input_select.library_mode
+  - input_select.ballroom_mode
 
-bedroom_scenes:
+bedroom_modes:
   name: Bedrooms
   entities:
-  - input_select.bedroom_mark_select
-  - input_select.bedroom_jerome_select
-  - input_select.bedroom_ros_select
-  - input_select.guest_room_select
+  - input_select.bedroom_mark_mode
+  - input_select.bedroom_jerome_mode
+  - input_select.bedroom_ros_mode
+  - input_select.guest_room_mode
 
 user_automations:
   name: Automations
@@ -147,7 +147,7 @@ user_automations:
   - automation.kitchen_cosy_time
   - automation.bedroom_mark_sleep_time
   - automation.bedroom_mark_off_time
-  - automation.reset_moods
+  - automation.reset_modes
   - automation.study_work_time
   - automation.calendar_scene
   - automation.calendar_climate
@@ -230,7 +230,6 @@ media_players:
     - media_player.ballroom
     - media_player.ballroom_amplifier
     - media_player.bedroom_mark
-    - media_player.bedroommarkaudio
 
 temperatures:
   name: Temperatures

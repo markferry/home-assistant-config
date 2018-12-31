@@ -1,9 +1,0 @@
-bedroom_ros_select:
-  name: "Ros's Bedroom Mood"
-  options:
-    - 'Off'
-    - 'Sleep'
-    - 'Cosy'
-  initial: 'Off'
-  icon: mdi:account
-

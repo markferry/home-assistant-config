@@ -60,6 +60,13 @@ sensor:
     entity_ids:
       - sensor.ballroom_east_current_temperature
 
+  - platform: template
+    sensors:
+      ballroom_setpoint:
+        value_template: "{{ states.climate.ballroom_thermostat.attributes.temperature }}"
+        unit_of_measurement: "\xB0C"
+
+
 automation:
   # Redirect received temperatures over mqtt
   - alias: "ballroom_update_temperature"

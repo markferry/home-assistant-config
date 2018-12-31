@@ -1,13 +1,8 @@
 customize:
-  automation.bedroom_mark_mood:
-    friendly_name: "Mark's Bedroom Mood"
   automation.bedroom_mark_sleep_time:
     friendly_name: "Mark's Bedroom Sleep Time"
   automation.bedroom_mark_off_time:
     friendly_name: "Mark's Bedroom Off Time"
-
-  group.bedroom_mark_scenes:
-    order: 0
 
   group.bedroom_mark_lights:
     icon: mdi:lightbulb-on
@@ -46,18 +41,12 @@ customize:
   script.hue_bedroom_mark_off:
     friendly_name: "Mark's Bedroom"
   script.hue_bedroom_mark_sleep:
-    friendly_name: "Mark's Bedroom Mood Sleep"
+    friendly_name: "Mark's Bedroom Mode Sleep"
   script.hue_bedroom_mark_play:
-    friendly_name: "Mark's Bedroom Mood Play"
+    friendly_name: "Mark's Bedroom Mode Play"
 
   switch.bedroom_mark_demand:
     friendly_name: "Mark's Bedroom Demand"
-
-  group.bedroom_mark_select:
-    order: 1
-    icon: /local/wb-icons/wb_mark.png
-  input_select.bedroom_mark_select:
-    entity_picture: /local/wb-icons/wb_mark.png
 
   media_player.bedroom_mark:
     friendly_name: "Mark's Bedroom"

@@ -1,8 +1,4 @@
-## Replaced with snapcast
-#- name: bedroom_mark Kodi
-#  username: gnome
-#  password: !secret kodi_bedroom_mark
-#  platform: kodi
-#  host: bedroom-mark
-#  port: 80
-#
+- name: bedroom_mark
+  platform: volumio
+  host: "bedroom-mark"
+  port: 3000

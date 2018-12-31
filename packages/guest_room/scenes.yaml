@@ -1,12 +1,14 @@
-- name: Guest Room Off
+- name: guest_room_off
   entities:
-    climate.guest_room_thermostat:
-      temperature: 10
-- name: Guest Room Sleep
+    group.guest_room_lights:
+      state: off
+
+- name: guest_room_sleep
   entities:
-    climate.guest_room_thermostat:
-      temperature: 15
-- name: Guest Room Cosy
+    group.guest_room_lights:
+      state: off
+
+- name: guest_room_cosy
   entities:
-    climate.guest_room_thermostat:
-      temperature: 20
+    group.guest_room_lights:
+      state: on

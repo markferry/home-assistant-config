@@ -1,0 +1,8 @@
+# Google Home Max
+- name: jeromes_bedroom
+  platform: cast
+
+# Chromecast?
+- name: bedroom_speaker
+  platform: cast
+

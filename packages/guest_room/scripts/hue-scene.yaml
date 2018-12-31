@@ -2,20 +2,20 @@ hue_guest_room_off:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.guest_room_select
+        entity_id: input_select.guest_room_mode
         option: "Off"
 
 hue_guest_room_sleep:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.guest_room_select
+        entity_id: input_select.guest_room_mode
         option: "Sleep"
 
 hue_guest_room_cosy:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.guest_room_select
+        entity_id: input_select.guest_room_mode
         option: "Cosy"
 

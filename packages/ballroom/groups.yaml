@@ -12,17 +12,13 @@ ballroom_compact_ui:
   name: Ballroom
   view: false
   icon: mdi:projector
+  control: hidden
   entities:
-  - input_select.ballroom_select
+  - input_select.ballroom_mode
   - climate.ballroom_thermostat
   - group.ballroom_party_lights
   - group.g_ballroom_media_dimming
-
-ballroom_scenes:
-  name: Ballroom
-  view: false
-  entities:
-  - input_select.ballroom_select
+  - group.g_ballroom_settings_ui
 
 ballroom_setpoints:
   name: Ballroom Setpoints
