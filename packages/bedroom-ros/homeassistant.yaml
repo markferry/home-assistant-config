@@ -17,7 +17,7 @@ customize:
   script.hue_bedroom_ros_off:
     friendly_name: "Ros's Bedroom"
   script.hue_bedroom_ros_sleep:
-    friendly_name: "Ros's Bedroom Mood Sleep"
+    friendly_name: "Ros's Bedroom Mode Sleep"
   script.hue_bedroom_ros_cosy:
-    friendly_name: "Ros's Bedroom Mood Cosy"
+    friendly_name: "Ros's Bedroom Mode Cosy"
 

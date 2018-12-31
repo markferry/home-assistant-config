@@ -20,6 +20,6 @@ customize:
   script.hue_kitchen_off:
     friendly_name: "Kitchen"
   script.hue_kitchen_cosy:
-    friendly_name: "Kitchen Mood Cosy"
+    friendly_name: "Kitchen Mode Cosy"
   script.hue_kitchen_bright:
-    friendly_name: "Kitchen Mood Bright"
+    friendly_name: "Kitchen Mode Bright"

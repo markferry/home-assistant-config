@@ -5,9 +5,9 @@ customize:
   script.hue_bedroom_jerome_off:
     friendly_name: "Jerome's Bedroom"
   script.hue_bedroom_jerome_sleep:
-    friendly_name: "Jerome's Bedroom Mood Sleep"
+    friendly_name: "Jerome's Bedroom Mode Sleep"
   script.hue_bedroom_jerome_cosy:
-    friendly_name: "Jerome's Bedroom Mood Cosy"
+    friendly_name: "Jerome's Bedroom Mode Cosy"
 
   # Tado sensors
   climate.js_bedroom:
