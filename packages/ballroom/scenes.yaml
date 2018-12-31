@@ -1,41 +1,35 @@
-- name: Ballroom Off
+- name: ballroom_off
   entities:
     group.ballroom_lights:
       state: off
     group.ballroom_party_lights:
       state: off
-    climate.ballroom_thermostat:
-      temperature: 5
     media_player.ballroom:
       state: paused
     media_player.ballroom_amplifier:
       state: off
+    media_player.snapcast_client_ballroom:
+      is_volume_muted: true
 
-- name: Ballroom Party
+- name: ballroom_party
   entities:
     group.ballroom_lights:
       state: on
       brightness_pct: 20
     group.ballroom_party_lights:
       state: on
-    climate.ballroom_thermostat:
-      temperature: 20
 
-- name: Ballroom Movie
+- name: ballroom_movie
   entities:
     group.ballroom_lights:
       state: off
     group.ballroom_party_lights:
       state: off
-    climate.ballroom_thermostat:
-      temperature: 20
 
-- name: Ballroom Bright
+- name: ballroom_bright
   entities:
     group.ballroom_lights:
       state: on
       brightness_pct: 100
     group.ballroom_party_lights:
       state: off
-    climate.ballroom_thermostat:
-      temperature: 20

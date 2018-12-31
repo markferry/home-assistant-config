@@ -62,15 +62,15 @@ exclude:
     - automation.hot_tub_lo
     - automation.hot_water_off
     - automation.hot_water_on
-    - automation.ballroom_mood
-    - automation.bedroom_jerome_mood
-    - automation.bedroom_mark_mood
-    - automation.bedroom_ros_mood
-    - automation.guest_room_mood
-    - automation.kitchen_mood
-    - automation.library_mood
-    - automation.lounge_mood
-    - automation.study_mood
+    - automation.ballroom_mode
+    - automation.bedroom_jerome_mode
+    - automation.bedroom_mark_mode
+    - automation.bedroom_ros_mode
+    - automation.guest_room_mode
+    - automation.kitchen_mode
+    - automation.library_mode
+    - automation.lounge_mode
+    - automation.study_mode
     - automation.set_real_thermostat
     - automation.set_virtual_thermostat
     - automation.washing_machine_hi

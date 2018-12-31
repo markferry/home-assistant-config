@@ -7,22 +7,17 @@ bedroom_mark:
   - climate.bedroom_mark_thermostat
   - group.bedroom_mark_lights
   - group.bedroom_mark_appliances
-  - group.bedroom_mark_scenes
 
 bedroom_mark_compact_ui:
   name: "Mark's Bedroom"
   view: false
   entities:
-  - input_select.bedroom_mark_select
+  - input_select.bedroom_mark_mode
   - climate.bedroom_mark_thermostat
   - group.bedroom_mark_lights
   - group.g_bedroom_mark_media_dimming
-
-bedroom_mark_scenes:
-  name: "Mark's Bedroom"
-  view: false
-  entities:
-  - input_select.bedroom_mark_select
+  - group.g_bedroom_mark_settings_ui
+  - media_player.bedroom_mark
 
 bedroom_mark_setpoints:
   name: "Mark's Bedroom Setpoints"
@@ -42,4 +37,9 @@ bedroom_mark_appliances:
   name: "Mark's Bedroom Appliances"
   view: false
   entities:
+
+bedroom_mark_media_players:
+  view: false
+  entities:
+  - media_player.bedroom_mark
 

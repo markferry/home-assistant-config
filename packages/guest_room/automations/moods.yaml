@@ -1,21 +1,3 @@
-- alias: guest_room_mood
-  trigger:
-    platform: state
-    entity_id: input_select.guest_room_select
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state("input_select.guest_room_select", "Off") %}
-            scene.guest_room_off
-          {%-elif is_state("input_select.guest_room_select", "Sleep") %}
-            scene.guest_room_sleep
-          {%-elif is_state("input_select.guest_room_select", "Cosy") %}
-            scene.guest_room_cosy
-          {% else %}
-            None
-          {% endif %}
-
 - alias: guest_room_sleep_time
   trigger:
     - platform: time
@@ -23,7 +5,7 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.guest_room_select
+        entity_id: input_select.guest_room_mode
         option: "Sleep"
 
 - alias: guest_room_off_time
@@ -33,5 +15,5 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.guest_room_select
+        entity_id: input_select.guest_room_mode
         option: "Off"

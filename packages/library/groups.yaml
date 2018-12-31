@@ -5,20 +5,16 @@ library:
   entities:
   - sensor.library_mean_temperature
   - group.library_compact_ui
+  - media_player.library
 
 library_compact_ui:
   name: Library
   view: false
   icon: mdi:library
   entities:
-  - input_select.library_select
+  - input_select.library_mode
   - climate.library_thermostat
-
-library_scenes:
-  name: Library
-  view: false
-  entities:
-  - input_select.library_select
+  - group.g_library_settings_ui
 
 library_setpoints:
   name: Library Setpoints

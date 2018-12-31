@@ -2,9 +2,9 @@ group.people:
   order: 1
 group.barnacles:
   order: 2
-group.room_scenes:
+group.room_modes:
   order: 3
-group.bedroom_scenes:
+group.bedroom_modes:
   order: 4
 
 group.all_automations:

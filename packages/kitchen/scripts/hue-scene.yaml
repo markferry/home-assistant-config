@@ -2,21 +2,21 @@ hue_kitchen_off:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.kitchen_select
+        entity_id: input_select.kitchen_mode
         option: "Off"
 
 hue_kitchen_cosy:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.kitchen_select
+        entity_id: input_select.kitchen_mode
         option: "Cosy"
 
 hue_kitchen_bright:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.kitchen_select
+        entity_id: input_select.kitchen_mode
         option: "Bright"
 
 

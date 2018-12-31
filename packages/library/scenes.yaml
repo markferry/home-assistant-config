@@ -1,22 +1,26 @@
-- name: Library Off
+- name: library_off
   entities:
     group.library_lights:
       state: off
-    climate.library_thermostat:
-      temperature: 10
     media_player.library:
       state: paused
-- name: Library Chat
+    media_player.snapcast_client_library:
+      is_volume_muted: true
+
+- name: library_cosy
   entities:
     group.library_lights:
-      state: off
+      state: on
       brightness_pct: 50
-    climate.library_thermostat:
-      temperature: 22
-- name: Library Read
+
+- name: library_bright
   entities:
     group.library_lights:
       state: on
       brightness_pct: 100
-    climate.library_thermostat:
-      temperature: 22
+
+- name: library_read
+  entities:
+    group.library_lights:
+      state: on
+      brightness_pct: 100

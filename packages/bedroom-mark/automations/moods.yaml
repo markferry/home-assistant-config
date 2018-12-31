@@ -1,21 +1,3 @@
-- alias: bedroom_mark_mood
-  trigger:
-    platform: state
-    entity_id: input_select.bedroom_mark_select
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state("input_select.bedroom_mark_select", "Off") %}
-            scene.bedroom_mark_off
-          {%-elif is_state("input_select.bedroom_mark_select", "Sleep") %}
-            scene.bedroom_mark_sleep
-          {%-elif is_state("input_select.bedroom_mark_select", "Play") %}
-            scene.bedroom_mark_play
-          {% else %}
-            None
-          {% endif %}
-
 - alias: bedroom_mark_sleep_time
   trigger:
     - platform: time
@@ -23,7 +5,7 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_mark_select
+        entity_id: input_select.bedroom_mark_mode
         option: "Sleep"
 
 - alias: bedroom_mark_off_time
@@ -33,5 +15,5 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_mark_select
+        entity_id: input_select.bedroom_mark_mode
         option: "Off"

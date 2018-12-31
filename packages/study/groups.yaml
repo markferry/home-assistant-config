@@ -12,14 +12,9 @@ study_compact_ui:
   name: Study
   view: false
   entities:
-  - input_select.study_select
+  - input_select.study_mode
   - climate.study_thermostat
-
-study_scenes:
-  name: Study
-  view: false
-  entities:
-  - input_select.study_select
+  - group.g_study_settings_ui
 
 study_setpoints:
   name: Study Setpoints

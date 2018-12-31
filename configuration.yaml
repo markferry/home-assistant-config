@@ -18,12 +18,17 @@ homeassistant:
     package_stream_radio: !include packages/stream-radio.yaml
     package_oil_monitor: !include packages/myolive.yaml
     package_multiroom_audio: !include packages/multiroom_audio.yaml
+    package_mode: !include packages/mode.yaml
 
     package_study: !include packages/study/package.yaml
     package_study_heating: !include packages/study/heating-on-demand.yaml
+    package_study_mode: !include packages/study/mode.yaml
+    package_study_settings: !include packages/study/settings.yaml
 
     package_kitchen: !include packages/kitchen/package.yaml
     package_kitchen_heating: !include packages/kitchen/heating-on-demand.yaml
+    package_kitchen_mode: !include packages/kitchen/mode.yaml
+    package_kitchen_settings: !include packages/kitchen/settings.yaml
 
     package_hall: !include packages/hall/package.yaml
     package_hall_heating: !include packages/hall/heating-on-demand.yaml
@@ -32,28 +37,42 @@ homeassistant:
     package_lounge: !include packages/lounge/package.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
+    package_lounge_mode: !include packages/lounge/mode.yaml
+    package_lounge_settings: !include packages/lounge/settings.yaml
 
     package_library: !include packages/library/package.yaml
     package_library_heating: !include packages/library/heating-on-demand.yaml
+    package_library_mode: !include packages/library/mode.yaml
+    package_library_settings: !include packages/library/settings.yaml
 
     package_ballroom: !include packages/ballroom/package.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
+    package_ballroom_mode: !include packages/ballroom/mode.yaml
+    package_ballroom_settings: !include packages/ballroom/settings.yaml
 
     package_armoury: !include packages/armoury/package.yaml
 
     package_guest_room: !include packages/guest_room/package.yaml
     package_guest_room_heating: !include packages/guest_room/heating-on-demand.yaml
+    package_guest_room_mode: !include packages/guest_room/mode.yaml
+    package_guest_room_settings: !include packages/guest_room/settings.yaml
 
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
+    package_bedroom_mark_mode: !include packages/bedroom-mark/mode.yaml
+    package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
     package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
+    package_bedroom_jerome_mode: !include packages/bedroom-jerome/mode.yaml
+    package_bedroom_jerome_settings: !include packages/bedroom-jerome/settings.yaml
 
     package_bedroom_ros: !include packages/bedroom-ros/package.yaml
     package_bedroom_ros_heating: !include packages/bedroom-ros/heating-on-demand.yaml
+    package_bedroom_ros_mode: !include packages/bedroom-ros/mode.yaml
+    package_bedroom_ros_settings: !include packages/bedroom-ros/settings.yaml
 
     #package_room: !include packages/room/package.yaml
 

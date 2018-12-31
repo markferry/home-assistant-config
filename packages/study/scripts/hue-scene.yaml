@@ -2,20 +2,27 @@ hue_study_off:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.study_select
+        entity_id: input_select.study_mode
         option: "Off"
+
+hue_study_cosy:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_mode
+        option: "Cosy"
+
+hue_study_bright:
+    sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.study_mode
+        option: "Bright"
 
 hue_study_work:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.study_select
+        entity_id: input_select.study_mode
         option: "Work"
-
-hue_study_relax:
-    sequence:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.study_select
-        option: "Relax"
 

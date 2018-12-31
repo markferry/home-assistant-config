@@ -1,7 +1,4 @@
 customize:
-  group.study_scenes:
-    order: 0
-
   light.study_east_level_14:
     friendly_name: Study East Valve
   light.study_west_level_15:
@@ -30,8 +27,10 @@ customize:
 
   script.hue_study_off:
     friendly_name: "Study"
+  script.hue_study_cosy:
+    friendly_name: "Study Mode Cosy"
+  script.hue_study_bright:
+    friendly_name: "Study Mode Bright"
   script.hue_study_work:
-    friendly_name: "Study Mood Work"
-  script.hue_study_relax:
-    friendly_name: "Study Mood Relax"
+    friendly_name: "Study Mode Work"
 

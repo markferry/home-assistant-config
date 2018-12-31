@@ -1,0 +1,10 @@
+group:
+  g_bedroom_mark_settings_ui:
+    name: Settings
+    icon: mdi:settings
+    control: hidden
+    entities:
+      - input_number.bedroom_mark_temperature_off
+      - input_number.bedroom_mark_temperature_sleep
+      - input_number.bedroom_mark_temperature_play
+

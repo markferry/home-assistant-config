@@ -1,9 +1,0 @@
-kitchen_select:
-  name: Kitchen Mood
-  options:
-    - 'Off'
-    - 'Cosy'
-    - 'Bright'
-  initial: 'Off'
-  icon: mdi:stove
-

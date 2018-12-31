@@ -26,10 +26,6 @@ hall_compact_ui:
   - climate.hall_thermostat
   - climate.annex_hall_thermostat
 
-hall_scenes:
-  name: Hall Scenes
-  view: false
-
 hall_setpoints:
   name: Hall Setpoints
   view: false

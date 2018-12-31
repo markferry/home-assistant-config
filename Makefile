@@ -1,21 +1,22 @@
 .PHONY: tags *.yaml
 
 HOST ?= ballroom-amp
+MQTT_HOST ?= whalebarn.com
 
 %.test: %.yaml
 	hass -c . --script check_config -i $^
 
 tags:
-	ctags --exclude=tags --language-force=hass --hass-kinds=D -R
-
-all-tags:
-	ctags --exclude=tags --language-force=hass --hass-kinds=Ddr -R
+	ctags --exclude=tags --language-force=hass -R
 
 check:
 	hass -c . --script=check_config
 
 subscribe:
 	mosquitto_sub -h localhost -v -t '#'
+
+owntracks:
+	mosquitto_sub -u pixie -P ${PASS} -h ${MQTT_HOST} -p 8883 -i dev --cafile /etc/ssl/certs/ca-certificates.crt -t '#' -v
 
 install-dasher: mqtt-dasher/config.yml
 	scp mqtt-dasher/config.yml pi@pixie3:/etc/mqtt-dasher/config.yml
@@ -24,8 +25,13 @@ onkyo-version:
 	onkyo --host ballroom-amp firmware-version=query
 
 onkyo-power:
-	onkyo --host "${HOST}" main.power=query
-	onkyo --host "${HOST}" zone2.power=query
+	onkyo --host "${HOST}" main.power=query zone2.power=query
+
+onkyo-volume:
+	onkyo --host "${HOST}" main.master-volume=query zone2.volume=query
+
+onkyo-selector:
+	onkyo --host "${HOST}" main.input-selector=query zone2.selector=query
 
 .PHONY: ha-floorplan
 ha-floorplan:
