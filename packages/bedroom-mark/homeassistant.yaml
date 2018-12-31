@@ -41,9 +41,9 @@ customize:
   script.hue_bedroom_mark_off:
     friendly_name: "Mark's Bedroom"
   script.hue_bedroom_mark_sleep:
-    friendly_name: "Mark's Bedroom Mood Sleep"
+    friendly_name: "Mark's Bedroom Mode Sleep"
   script.hue_bedroom_mark_play:
-    friendly_name: "Mark's Bedroom Mood Play"
+    friendly_name: "Mark's Bedroom Mode Play"
 
   switch.bedroom_mark_demand:
     friendly_name: "Mark's Bedroom Demand"

@@ -14,9 +14,9 @@ customize:
   script.hue_guest_room_off:
     friendly_name: "Guest Room"
   script.hue_guest_room_sleep:
-    friendly_name: "Guest Room Mood Sleep"
+    friendly_name: "Guest Room Mode Sleep"
   script.hue_guest_room_cosy:
-    friendly_name: "Guest Room Mood Cosy"
+    friendly_name: "Guest Room Mode Cosy"
 
   climate.guest_room_heat:
     friendly_name: Guest Room

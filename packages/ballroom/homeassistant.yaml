@@ -23,11 +23,11 @@ customize:
   script.hue_ballroom_off:
     friendly_name: "Ballroom"
   script.hue_ballroom_party:
-    friendly_name: "Ballroom Mood Party"
+    friendly_name: "Ballroom Mode Party"
   script.hue_ballroom_movie:
-    friendly_name: "Ballroom Mood Movie"
+    friendly_name: "Ballroom Mode Movie"
   script.hue_ballroom_bright:
-    friendly_name: "Ballroom Mood Bright"
+    friendly_name: "Ballroom Mode Bright"
 
   media_player.txnr636_0009b09961fb:
     friendly_name: Ballroom Amplifier
