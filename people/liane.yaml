@@ -1,4 +1,7 @@
 name: "Liane"
 entities:
+- device_tracker.liane_moto_g5
 - device_tracker.liane_moto_g
 - device_tracker.liane_work_pc
+- device_tracker.liane_work_macbook
+- device_tracker.liane_work_galaxys6
