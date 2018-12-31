@@ -51,7 +51,7 @@ sensor:
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
-    expire_after: 1800  # 30mins
+    expire_after: 10  # 1800  # 30mins
     force_update: true
 
   - name: lounge_temperature

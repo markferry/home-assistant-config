@@ -2,7 +2,7 @@
 # Views
 #
 
-default_view: !include default_view.yaml
+#default_view: !include default_view.yaml
 
 bedrooms:
   name: Bedrooms
