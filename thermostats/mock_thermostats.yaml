@@ -96,10 +96,10 @@
   max_temp: 25
   min_temp: 5
 
-- name: bedroom_ros_comfort_setpoint
+- name: bedroom_annex2_comfort_setpoint
   platform: generic_thermostat
   heater: switch.ross_bedroom_demand
-  target_sensor: sensor.bedroom_ros_temperature
+  target_sensor: sensor.bedroom_annex2_temperature
   max_temp: 25
   min_temp: 5
 

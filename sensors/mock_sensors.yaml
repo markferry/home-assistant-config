@@ -58,7 +58,7 @@
   state_topic: ha/mock/bedroom-jerome/humidity/state
   unit_of_measurement: "\xB0C"
 
-- name: bedroom_ros_temperature
+- name: bedroom_annex2_temperature
   platform: mqtt
   state_topic: ha/mock/bedroom-ros/temperature/state
   unit_of_measurement: "\xB0C"
