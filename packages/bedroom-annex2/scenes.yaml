@@ -1,18 +1,18 @@
-- name: bedroom_ros_off
+- name: bedroom_annex2_off
   entities:
-    group.bedroom_ros_lights:
+    group.bedroom_annex2_lights:
       state: off
-    switch.bedroom_ros_appliances:
+    switch.bedroom_annex2_appliances:
       state: off
     media_player.ross_tablet:
       state: paused
 
-- name: bedroom_ros_sleep
+- name: bedroom_annex2_sleep
   entities:
-    group.bedroom_ros_lights:
+    group.bedroom_annex2_lights:
       state: off
 
-- name: bedroom_ros_cosy
+- name: bedroom_annex2_cosy
   entities:
-    group.bedroom_ros_lights:
+    group.bedroom_annex2_lights:
       state: on
