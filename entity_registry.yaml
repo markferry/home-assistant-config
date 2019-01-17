@@ -593,27 +593,27 @@ sensor.greenwave_powernode_54_previous_power:
   name:
   platform: zwave
   unique_id: 54-72057594948911250
-sensor.bedroom_ros_temperature:
+sensor.bedroom_annex2_temperature:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965671954
-sensor.bedroom_ros_co2_level:
+sensor.bedroom_annex2_co2_level:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965672210
-climate.bedroom_ros_comfort_setpoint:
+climate.bedroom_annex2_comfort_setpoint:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965966866
-climate.bedroom_ros_furnace:
+climate.bedroom_annex2_furnace:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965966962
-climate.bedroom_ros_energy_saving_setpoint:
+climate.bedroom_annex2_energy_saving_setpoint:
   config_entry_id:
   name:
   platform: zwave

@@ -9,7 +9,7 @@
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {% if "ros" in l %}
-          {%   set u = "bedroom_ros" %}
+          {%   set u = "bedroom_annex2" %}
           {% endif %}
           input_select.{{u}}_mode
         option: >
@@ -31,7 +31,7 @@
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
           {% if "ros" in l %}
-          {%   set u = "bedroom_ros" %}
+          {%   set u = "bedroom_annex2" %}
           {% endif %}
           climate.{{u}}_thermostat
         temperature: >

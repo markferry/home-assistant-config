@@ -1,21 +1,21 @@
-hue_bedroom_ros_off:
+hue_bedroom_annex2_off:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_ros_mode
+        entity_id: input_select.bedroom_annex2_mode
         option: "Off"
 
-hue_bedroom_ros_sleep:
+hue_bedroom_annex2_sleep:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_ros_mode
+        entity_id: input_select.bedroom_annex2_mode
         option: "Sleep"
 
-hue_bedroom_ros_cosy:
+hue_bedroom_annex2_cosy:
     sequence:
     - service: input_select.select_option
       data:
-        entity_id: input_select.bedroom_ros_mode
+        entity_id: input_select.bedroom_annex2_mode
         option: "Cosy"
 

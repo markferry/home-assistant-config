@@ -1,21 +1,21 @@
-bedroom_ros:
+bedroom_annex2:
   name: "Ros's Bedroom"
   icon: mdi:hotel
   #view: true
   entities:
-  - group.bedroom_ros_compact_ui
+  - group.bedroom_annex2_compact_ui
 
-bedroom_ros_compact_ui:
+bedroom_annex2_compact_ui:
   name: "Ros's Bedroom"
   view: false
   entities:
-  - input_select.bedroom_ros_mode
-  - climate.bedroom_ros_thermostat
-  - group.g_bedroom_ros_settings_ui
+  - input_select.bedroom_annex2_mode
+  - climate.bedroom_annex2_thermostat
+  - group.g_bedroom_annex2_settings_ui
 
-bedroom_ros_setpoints:
+bedroom_annex2_setpoints:
   name: "Ros's Bedroom Setpoints"
   view: false
   entities:
-  - climate.bedroom_ros_comfort_setpoint
+  - climate.bedroom_annex2_comfort_setpoint
 
