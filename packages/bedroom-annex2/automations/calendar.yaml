@@ -1,14 +1,14 @@
-- alias: "Calendar Ros Scene"
+- alias: "Calendar Annex Bedroom 2 Scene"
   trigger:
     - platform: state
-      entity_id: calendar.ros_scene
+      entity_id: calendar.annex2_scene
       to: "on"
   action:
     - service_template: input_select.select_option
       data_template:
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
-          {% if "ros" in l %}
+          {% if "bedroom_annex2" in l or "annex2" in l or ("annex" in l and "bedroom2" in l) %}
           {%   set u = "bedroom_annex2" %}
           {% endif %}
           input_select.{{u}}_mode
@@ -17,20 +17,20 @@
           {{ v[0].upper() ~ v[1:].lower() }}
     - service: mqtt.publish
       data_template:
-        topic: 'ha/calendar/ros-scene'
+        topic: 'ha/calendar/annex2-scene'
         payload: '{{trigger.to_state.attributes.message}}'
 
-- alias: "Calendar Ros Climate"
+- alias: "Calendar Annex Bedroom 2 Climate"
   trigger:
     - platform: state
-      entity_id: calendar.ros_climate
+      entity_id: calendar.annex2_climate
       to: "on"
   action:
     - service_template: climate.set_temperature
       data_template:
         entity_id: >
           {% set l = trigger.to_state.attributes.message.lower().split() %}
-          {% if "ros" in l %}
+          {% if "bedroom_annex2" in l or "annex2" in l or ("annex" in l and "bedroom2" in l) %}
           {%   set u = "bedroom_annex2" %}
           {% endif %}
           climate.{{u}}_thermostat
@@ -39,6 +39,6 @@
           {{l|last|float}}
     - service: mqtt.publish
       data_template:
-        topic: 'ha/calendar/ros-climate'
+        topic: 'ha/calendar/annex2-climate'
         payload: '{{trigger.to_state.attributes.message}}'
 
