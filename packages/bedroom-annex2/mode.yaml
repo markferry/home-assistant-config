@@ -8,11 +8,11 @@
 homeassistant:
   customize:
     input_select.bedroom_annex2_mode:
-      entity_picture: /local/wb-icons/wb_ros.png
+      icon: mdi:bed-empty
 
 input_select:
   bedroom_annex2_mode:
-    name: "Ros's Bedroom Mode"
+    name: "Annex Bedroom 2 Mode"
     options:
       - 'Off'
       - 'Sleep'

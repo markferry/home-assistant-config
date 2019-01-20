@@ -1,12 +1,12 @@
 bedroom_annex2:
-  name: "Ros's Bedroom"
+  name: "Annex Bedroom 2"
   icon: mdi:hotel
   #view: true
   entities:
   - group.bedroom_annex2_compact_ui
 
 bedroom_annex2_compact_ui:
-  name: "Ros's Bedroom"
+  name: "Annex Bedroom 2"
   view: false
   entities:
   - input_select.bedroom_annex2_mode
@@ -14,7 +14,7 @@ bedroom_annex2_compact_ui:
   - group.g_bedroom_annex2_settings_ui
 
 bedroom_annex2_setpoints:
-  name: "Ros's Bedroom Setpoints"
+  name: "Annex Bedroom 2 Setpoints"
   view: false
   entities:
   - climate.bedroom_annex2_comfort_setpoint
