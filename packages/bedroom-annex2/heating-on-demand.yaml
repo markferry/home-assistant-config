@@ -1,9 +1,9 @@
 homeassistant:
   customize:
     climate.bedroom_annex2_thermostat:
-      friendly_name: "Ros's Bedroom Heating"
+      friendly_name: "Annex Bedroom 2 Heating"
     sensor.bedroom_annex2_mean_temperature:
-      friendly_name: "Ros's Bedroom"
+      friendly_name: "Annex Bedroom 2"
       icon: mdi:thermometer
       unit_of_measurement: "\xB0C"
 
