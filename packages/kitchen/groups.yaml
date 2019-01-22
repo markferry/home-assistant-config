@@ -8,6 +8,7 @@ kitchen:
   - media_player.kitchen_speaker
   - sensor.greenwave_powernode_54_energy
   - sensor.greenwave_powernode_54_power
+  - media_player.outside_amplifier_zone_2
 
 kitchen_compact_ui:
   name: Kitchen
@@ -28,4 +29,10 @@ kitchen_setpoints:
 kitchen_lights:
   name: Kitchen Lights
   view: false
+
+kitchen_media_players:
+  view: false
+  entities:
+  - media_player.kitchen_speaker
+  - media_player.outside_amplifier_zone_2
 
