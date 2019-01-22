@@ -3,9 +3,6 @@ customize:
     icon: mdi:lightbulb-on
     emulated_hue: true
 
-  light.lounge_east_level_30:
-    friendly_name: Lounge East Valve
-
   sensor.lounge_east_temperature:
     friendly_name: Lounge East
   sensor.lounge_east_battery:

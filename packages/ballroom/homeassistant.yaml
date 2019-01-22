@@ -1,7 +1,4 @@
 customize:
-  light.ballroom_east_level_33:
-    friendly_name: Ballroom East Valve
-
   sensor.ballroom_east_temperature:
     friendly_name: Ballroom East
   sensor.ballroom_east_battery:
