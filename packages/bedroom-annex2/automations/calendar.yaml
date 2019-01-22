@@ -11,7 +11,7 @@
           {% if "bedroom_annex2" in l or "annex2" in l or ("annex" in l and "bedroom2" in l) %}
           {%   set u = "bedroom_annex2" %}
           {% endif %}
-          input_select.{{u}}_select
+          input_select.{{u}}_mode
         option: >
           {% set v = trigger.to_state.attributes.message.lower().split()|last %}
           {{ v[0].upper() ~ v[1:].lower() }}
