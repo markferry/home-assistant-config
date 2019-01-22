@@ -23,7 +23,7 @@ include:
     - sensor.study_east_temperature
     - sensor.study_west_temperature
     - sensor.js_bedroom_temperature
-    - sensor.bedroom_ros_temperature
+    - sensor.bedroom_annex2_temperature
     - sensor.main_heating_thermostat_battery
     - sensor.annex_heating_thermostat_battery
     - sensor.hall_multisensor_battery
@@ -38,7 +38,7 @@ include:
     - sensor.ballroom_east_battery
     - sensor.kitchen_battery
     - sensor.annex_hall_battery
-    - sensor.bedroom_ros_battery
+    - sensor.bedroom_annex2_battery
     - sensor.guest_room_battery
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
@@ -65,7 +65,7 @@ exclude:
     - automation.ballroom_mode
     - automation.bedroom_jerome_mode
     - automation.bedroom_mark_mode
-    - automation.bedroom_ros_mode
+    - automation.bedroom_annex2_mode
     - automation.guest_room_mode
     - automation.kitchen_mode
     - automation.library_mode

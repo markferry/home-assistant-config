@@ -114,7 +114,7 @@ group.bedroom_mark_compact_ui:
   order: 1
 group.bedroom_jerome_compact_ui:
   order: 1
-group.bedroom_ros_compact_ui:
+group.bedroom_annex2_compact_ui:
   order: 1
 group.guest_room_compact_ui:
   order: 2

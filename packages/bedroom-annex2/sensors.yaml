@@ -1,9 +1,9 @@
 - platform: template
   sensors:
-    bedroom_ros_battery:
+    bedroom_annex2_battery:
       value_template: >
-        {% if states.zwave.bedroom_ros %}
-          {{ states.zwave.bedroom_ros.attributes.battery_level }}
+        {% if states.zwave.bedroom_annex2 %}
+          {{ states.zwave.bedroom_annex2.attributes.battery_level }}
         {% else %}
           unknown
         {% endif %}

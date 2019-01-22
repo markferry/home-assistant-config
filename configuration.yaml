@@ -69,10 +69,10 @@ homeassistant:
     package_bedroom_jerome_mode: !include packages/bedroom-jerome/mode.yaml
     package_bedroom_jerome_settings: !include packages/bedroom-jerome/settings.yaml
 
-    package_bedroom_ros: !include packages/bedroom-ros/package.yaml
-    package_bedroom_ros_heating: !include packages/bedroom-ros/heating-on-demand.yaml
-    package_bedroom_ros_mode: !include packages/bedroom-ros/mode.yaml
-    package_bedroom_ros_settings: !include packages/bedroom-ros/settings.yaml
+    package_bedroom_annex2: !include packages/bedroom-annex2/package.yaml
+    package_bedroom_annex2_heating: !include packages/bedroom-annex2/heating-on-demand.yaml
+    package_bedroom_annex2_mode: !include packages/bedroom-annex2/mode.yaml
+    package_bedroom_annex2_settings: !include packages/bedroom-annex2/settings.yaml
 
     #package_room: !include packages/room/package.yaml
 

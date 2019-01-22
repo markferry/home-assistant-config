@@ -1,0 +1,21 @@
+bedroom_annex2:
+  name: "Annex Bedroom 2"
+  icon: mdi:hotel
+  #view: true
+  entities:
+  - group.bedroom_annex2_compact_ui
+
+bedroom_annex2_compact_ui:
+  name: "Annex Bedroom 2"
+  view: false
+  entities:
+  - input_select.bedroom_annex2_mode
+  - climate.bedroom_annex2_thermostat
+  - group.g_bedroom_annex2_settings_ui
+
+bedroom_annex2_setpoints:
+  name: "Annex Bedroom 2 Setpoints"
+  view: false
+  entities:
+  - climate.bedroom_annex2_comfort_setpoint
+

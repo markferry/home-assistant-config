@@ -1,0 +1,11 @@
+group:
+  g_bedroom_annex2_settings_ui:
+    name: Settings
+    icon: mdi:settings
+    control: hidden
+    entities:
+      - input_number.bedroom_annex2_temperature_off
+      - input_number.bedroom_annex2_temperature_sleep
+      - input_number.bedroom_annex2_temperature_cosy
+
+

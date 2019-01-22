@@ -18,7 +18,7 @@
     - platform: state
       entity_id: climate.bedroom_mark_thermostat
     - platform: state
-      entity_id: climate.bedroom_ros_thermostat
+      entity_id: climate.bedroom_annex2_thermostat
     - platform: state
       entity_id: climate.guest_room_thermostat
     ## bedroom_jerome ui uses js_bedroom thermostat directly

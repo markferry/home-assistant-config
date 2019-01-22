@@ -516,13 +516,13 @@
          style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
          x="32"
          y="433.60001"
-         id="group.bedroom_ros_compact_ui"
-         inkscape:label="#ros-text"><tspan
+         id="group.bedroom_annex2_compact_ui"
+         inkscape:label="#annex2-text"><tspan
            sodipodi:role="line"
            id="tspan1601"
            x="32"
            y="433.60001"
-           style="stroke-width:1.20000005">Ros</tspan></text>
+           style="stroke-width:1.20000005">Annex 2</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
@@ -711,7 +711,7 @@
       <g
          id="g4713-92-36-0"
          transform="matrix(1.2,0,0,1.2,-553.6,246.4)"
-         inkscape:label="#g_bedroom_ros_thermostat"
+         inkscape:label="#g_bedroom_annex2_thermostat"
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
@@ -722,8 +722,8 @@
            y="108.00002"
            ry="9.5377026" />
         <text
-           inkscape:label="#climate.bedroom_ros_thermostat"
-           id="climate.bedroom_ros_thermostat"
+           inkscape:label="#climate.bedroom_annex2_thermostat"
+           id="climate.bedroom_annex2_thermostat"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -745,7 +745,7 @@
       <g
          id="g4713-92-3"
          transform="matrix(1.2,0,0,1.2,-553.6,212.4)"
-         inkscape:label="#g_bedroom_ros_temperature"
+         inkscape:label="#g_bedroom_annex2_temperature"
          style="display:inline;fill:#000000;fill-opacity:1">
         <rect
            style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
@@ -766,8 +766,8 @@
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
            id="random03509-2-8-0" />
         <text
-           inkscape:label="#sensor.bedroom_ros_mean_temperature"
-           id="sensor.bedroom_ros_mean_temperature"
+           inkscape:label="#sensor.bedroom_annex2_mean_temperature"
+           id="sensor.bedroom_annex2_mean_temperature"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"

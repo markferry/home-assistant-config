@@ -23,7 +23,7 @@ groups:
       - group.ballroom_compact_ui
       - group.bedroom_mark_compact_ui
       - group.bedroom_jerome_compact_ui
-      - group.bedroom_ros_compact_ui
+      - group.bedroom_annex2_compact_ui
       - group.guest_room_compact_ui
     # Just the first word of the name
     text_template: '${entity.attributes.friendly_name.replace(/[^\w].*/,"")}'
@@ -39,7 +39,7 @@ groups:
         - sensor.library_mean_temperature
         - sensor.ballroom_temperature
         - sensor.bedroom_mark_temperature
-        - sensor.bedroom_ros_mean_temperature
+        - sensor.bedroom_annex2_mean_temperature
         - sensor.bedroom_jerome_mean_temperature
         - sensor.guest_room_mean_temperature
     text_template: '${entity.state != "unknown" ? entity.state + "°C" : "?? °C"}'
@@ -71,7 +71,7 @@ groups:
       - climate.study_thermostat
       - climate.guest_room_thermostat
       - climate.bedroom_jerome_thermostat
-      - climate.bedroom_ros_thermostat
+      - climate.bedroom_annex2_thermostat
     text_template: '${entity.attributes.temperature != "unknown" ? entity.attributes.temperature + "°C" : "?? °C"}'
     class_template: '
       var temp = parseFloat(entity.attributes.temperature);
