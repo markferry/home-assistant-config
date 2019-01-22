@@ -30,7 +30,7 @@ script:
         message: "Party Mode activated"
     - service: input_select.select_option
       data:
-        entity_id: input_select.ballroom_select
+        entity_id: input_select.ballroom_mode
         option: "Party"
     - service: media_player.turn_on
       data:

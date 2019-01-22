@@ -31,11 +31,11 @@ script:
         message: "Table Tennis Mode activated"
     - service: tts.google_say
       data:
-        entity_id: media_player.kitchen
+        entity_id: media_player.kitchen_speaker
         message: "It's TABLE-TENNIS time!"
     - service: input_select.select_option
       data:
-        entity_id: input_select.ballroom_select
+        entity_id: input_select.ballroom_mode
         option: "Party"
     - service: media_player.play_media
       data:
@@ -59,11 +59,6 @@ script:
       data:
         entity_id: media_player.ballroom_amplifier
         volume_level: 0.5
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.kitchen
-        media_content_id: "smb://MEDIA/mediasys/music/meta/playlists/tabletennis.m3u"
-        media_content_type: PLAYLIST
 
 automation:
   - alias: "Table Tennis"
