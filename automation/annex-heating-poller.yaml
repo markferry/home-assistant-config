@@ -10,7 +10,7 @@
       state: 'on'
   action:
     - service: switch.turn_on
-      entity_id: switch.horstmann_asrzw_thermostat_receiver_switch
+      entity_id: switch.annex_heating_relay_switch
 
 - alias: "Annex Heating Poll Off"
   trigger:
@@ -23,4 +23,4 @@
       state: 'off'
   action:
     - service: switch.turn_off
-      entity_id: switch.horstmann_asrzw_thermostat_receiver_switch
+      entity_id: switch.annex_heating_relay_switch
