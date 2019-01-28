@@ -28,7 +28,7 @@
   payload_on: 'ON'
   platform: mqtt
   retain: true
-- name: horstmann_asrzw_thermostat_receiver_switch
+- name: annex_heating_relay_switch
   command_topic: ha/annex/heating/command
   payload_off: 'OFF'
   payload_on: 'ON'
