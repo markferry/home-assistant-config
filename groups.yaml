@@ -110,7 +110,7 @@ annex_heating_override:
   name: Annex Heating Override
   view: false
   entities:
-  - switch.horstmann_asrzw_thermostat_receiver_switch
+  - switch.annex_heating_relay_switch
   - automation.annex_thermostat_demand_on
   - automation.annex_thermostat_demand_off
 
