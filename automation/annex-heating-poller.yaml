@@ -1,7 +1,7 @@
 # Repeat the command every 20 minutes to avoid failsafe mode.
 - alias: "Annex Heating Poll On"
   trigger:
-    - platform: time
+    - platform: time_pattern
       minutes: '/20'
       seconds: 12
   condition:
@@ -14,7 +14,7 @@
 
 - alias: "Annex Heating Poll Off"
   trigger:
-    - platform: time
+    - platform: time_pattern
       minutes: '/20'
       seconds: 14
   condition:
