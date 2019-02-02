@@ -1,0 +1,531 @@
+name: WB
+views:
+  - name: WB
+    tab_icon: mdi:home
+    cards:
+      - type: entities
+        title: Where is Everyone?
+        entities: []
+      - - type: entities
+          title: Mark
+          entities:
+            - device_tracker.mark_phone
+            - device_tracker.mark_moto_g5
+            - device_tracker.mark_moto_g5_bt
+        - []
+      - - type: entities
+          title: Anne
+          entities:
+            - device_tracker.anne_phone
+            - device_tracker.anne_iphone3
+            - device_tracker.anne_iphone2
+            - device_tracker.anne_iphone2_bt
+            - device_tracker.anne_laptop
+            - device_tracker.anne_laptop_bt
+        - []
+      - - type: entities
+          title: Jerome
+          entities:
+            - device_tracker.jerome_phone
+            - device_tracker.jerome_android
+            - device_tracker.jeromes_phone
+            - device_tracker.jerome_asus
+            - device_tracker.jerome_asus_bt
+        - []
+      - - type: entities
+          title: Tom
+          entities:
+            - device_tracker.thomas_phone
+            - device_tracker.thomas_iphone
+            - device_tracker.thomas_mbp
+            - device_tracker.thomas_mbp_bt
+            - device_tracker.thomas_cmtcd
+        - []
+      - type: entities
+        title: Rooms
+        entities:
+          - input_select.study_mode
+          - input_select.kitchen_mode
+          - input_select.lounge_mode
+          - input_select.library_mode
+          - input_select.ballroom_mode
+      - type: entities
+        title: Bedrooms
+        entities:
+          - input_select.bedroom_mark_mode
+          - input_select.bedroom_jerome_mode
+          - input_select.bedroom_annex2_mode
+          - input_select.guest_room_mode
+  - name: Ballroom
+    tab_icon: mdi:projector
+    cards:
+      - type: entities
+        title: Ballroom
+        entities:
+          - input_select.ballroom_mode
+          - climate.ballroom_thermostat
+      - - type: entities
+          title: Ballroom Party Lights
+          entities:
+            - switch.greenwave_powernode_62_switch
+        - []
+      - - type: entities
+          title: Media Auto Dim
+          entities:
+            - input_boolean.ballroom_dim_for_movie
+            - input_boolean.ballroom_dim_for_tv
+            - input_number.ballroom_media_dimmer_level
+        - []
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.ballroom_temperature_off
+            - input_number.ballroom_temperature_party
+            - input_number.ballroom_temperature_movie
+            - input_number.ballroom_temperature_bright
+        - []
+      - type: media-control
+        entity: media_player.ballroom
+      - type: media-control
+        entity: media_player.ballroom_amplifier
+  - name: Bedrooms
+    tab_icon: mdi:hotel
+    cards:
+      - type: entities
+        title: Mark's Bedroom
+        entities:
+          - input_select.bedroom_mark_mode
+          - climate.bedroom_mark_thermostat
+      - - type: entities
+          title: Mark's Bedroom Lights
+          entities:
+            - light.bedroom_mark_overhead_level
+            - light.bedroom_mark_lamp
+        - []
+      - - type: entities
+          title: Media Auto Dim
+          entities:
+            - input_boolean.bedroom_mark_dim_for_movie
+            - input_boolean.bedroom_mark_dim_for_tv
+            - input_number.bedroom_mark_media_dimmer_level
+        - []
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.bedroom_mark_temperature_off
+            - input_number.bedroom_mark_temperature_sleep
+            - input_number.bedroom_mark_temperature_play
+        - []
+      - type: media-control
+        entity: media_player.bedroom_mark
+      - type: entities
+        title: Jerome's Bedroom
+        entities:
+          - input_select.bedroom_jerome_mode
+          - climate.js_bedroom
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.bedroom_jerome_temperature_off
+            - input_number.bedroom_jerome_temperature_sleep
+            - input_number.bedroom_jerome_temperature_cosy
+        - []
+      - type: media-control
+        entity: media_player.jeromes_bedroom
+      - type: entities
+        title: Annex Bedroom 2
+        entities:
+          - input_select.bedroom_annex2_mode
+          - climate.bedroom_annex2_thermostat
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.bedroom_annex2_temperature_off
+            - input_number.bedroom_annex2_temperature_sleep
+            - input_number.bedroom_annex2_temperature_cosy
+        - []
+      - type: entities
+        title: Guest Room
+        entities:
+          - input_select.guest_room_mode
+          - climate.guest_room_thermostat
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.guest_room_temperature_off
+            - input_number.guest_room_temperature_sleep
+            - input_number.guest_room_temperature_cosy
+        - []
+  - name: Settings
+    tab_icon: mdi:settings
+    cards:
+      - type: entities
+        title: Temperatures
+        entities:
+          - sensor.main_heating_thermostat_temperature
+          - sensor.annex_heating_thermostat_temperature
+          - sensor.aeotec_dsb05_multisensor_temperature
+          - sensor.ballroom_east_temperature
+          - sensor.hall_west_temperature
+          - sensor.hall_east_temperature
+          - sensor.annex_hall_temperature
+          - sensor.kitchen_temperature
+          - sensor.library_temperature
+          - sensor.lounge_east_temperature
+          - sensor.bedroom_mark_south_current_temperature
+          - sensor.bedroom_mark_north_current_temperature
+          - sensor.study_east_current_temperature
+          - sensor.study_west_current_temperature
+          - sensor.js_bedroom_temperature
+          - sensor.bedroom_annex2_current_temperature
+      - type: entities
+        title: Thermostats
+        entities:
+          - climate.annex_hall_thermostat
+          - climate.ballroom_east_thermostat
+          - climate.bedroom_mark_thermostat
+          - climate.hall_east_thermostat
+          - climate.hall_west_thermostat
+          - climate.kitchen_thermostat
+          - climate.library_thermostat
+          - climate.lounge_east_thermostat
+          - climate.study_thermostat
+          - climate.guest_room_thermostat
+          - climate.bedroom_jerome_thermostat
+          - climate.bedroom_annex2_thermostat
+      - type: entities
+        title: Thermostat Devices
+        entities:
+          - climate.annex_hall_comfort_setpoint
+          - climate.ballroom_east_comfort_setpoint
+          - climate.bedroom_mark_south_comfort_setpoint
+          - climate.bedroom_mark_north_comfort_setpoint
+          - climate.hall_east_comfort_setpoint
+          - climate.hall_west_comfort_setpoint
+          - climate.main_heating_thermostat_heating_1
+          - climate.annex_heating_thermostat_heating_1
+          - climate.kitchen_comfort_setpoint
+          - climate.library_comfort_setpoint
+          - climate.lounge_east_comfort_setpoint
+          - climate.study_east_comfort_setpoint
+          - climate.study_west_comfort_setpoint
+          - climate.guest_room_heat
+          - climate.danfoss_z_thermostat_014g0013_heating_1
+          - climate.bedroom_annex2_comfort_setpoint
+          - climate.js_bedroom
+      - type: entities
+        title: Annex Heating Demand
+        entities:
+          - switch.study_demand
+          - switch.annex_hall_demand
+          - switch.bedroom_annex2_demand
+      - type: entities
+        title: Main Heating Demand
+        entities:
+          - switch.kitchen_demand
+          - switch.lounge_demand
+          - switch.library_demand
+          - switch.ballroom_demand
+          - switch.guest_room_demand
+          - switch.bedroom_mark_demand
+          - switch.bedroom_jerome_demand
+      - type: entities
+        title: Battery Levels
+        entities:
+          - sensor.main_heating_thermostat_battery
+          - sensor.annex_heating_thermostat_battery
+          - sensor.hall_multisensor_battery
+          - sensor.hall_west_battery
+          - sensor.hall_east_battery
+          - sensor.study_east_battery
+          - sensor.study_west_battery
+          - sensor.library_battery
+          - sensor.bedroom_mark_south_battery
+          - sensor.bedroom_mark_north_battery
+          - sensor.lounge_east_battery
+          - sensor.ballroom_east_battery
+          - sensor.kitchen_battery
+          - sensor.annex_hall_battery
+          - sensor.bedroom_annex2_battery
+          - sensor.guest_room_battery
+      - type: entities
+        title: Main Heating Override
+        entities:
+          - switch.main_heating_relay_switch
+          - switch.main_heating_relay_boiler
+          - switch.main_heating_relay_hot_water
+          - automation.main_boiler_demand_on
+          - automation.main_boiler_demand_off
+          - automation.hot_water_on
+          - automation.hot_water_off
+      - type: entities
+        title: Annex Heating Override
+        entities:
+          - switch.horstmann_asrzw_thermostat_receiver_switch
+          - automation.annex_thermostat_demand_on
+          - automation.annex_thermostat_demand_off
+      - type: entities
+        title: Automations
+        entities:
+          - automation.guest_room_sleep_time
+          - automation.guest_room_off_time
+          - automation.kitchen_cosy_time
+          - automation.bedroom_mark_sleep_time
+          - automation.bedroom_mark_off_time
+          - automation.reset_modes
+          - automation.study_work_time
+          - automation.calendar_scene
+          - automation.calendar_climate
+          - automation.calendar_mark_scene
+          - automation.calendar_mark_climate
+          - automation.calendar_jerome_scene
+          - automation.calendar_jerome_climate
+          - automation.calendar_ros_scene
+          - automation.calendar_ros_climate
+      - type: entities
+        title: RFX Switches
+        entities:
+          - switch.0a140003f15c7202010080
+          - switch.0a140006f15c7203010080
+          - switch.0a140009f3cf3510020080
+          - switch.0a140002f40fa810020050
+          - switch.0a140001f40fa810050040
+          - switch.0a14000cf40fa910020040
+          - switch.0a140083f3cf3510020070
+          - switch.0a140084f3cf3510030070
+          - switch.0a140087f3cf3510040070
+          - switch.0a140086f3cf3510050070
+      - type: entities
+        title: RFX Lights
+        entities:
+          - switch.0a140000f40fa801010050
+          - switch.0a140016f3cf3501010080
+          - switch.0a140022f3cf3502010080
+          - switch.0a140023f3cf3503010080
+          - switch.0a140024f3cf3504010080
+          - switch.0a140000f15c7201010080
+      - type: entities
+        title: Amazon Dash Buttons
+        entities:
+          - switch.table_tennis
+          - switch.party_mode
+          - switch.dinner_time
+          - switch.ariel
+          - switch.optimum_nutrition
+          - switch.philips_sonicare
+          - switch.right_guard
+  - name: Library
+    tab_icon: mdi:library
+    cards:
+      - type: entities
+        title: Library
+        entities:
+          - input_select.library_mode
+          - climate.library_thermostat
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.library_temperature_off
+            - input_number.library_temperature_cosy
+            - input_number.library_temperature_bright
+            - input_number.library_temperature_read
+        - []
+      - type: media-control
+        entity: media_player.library
+  - name: Kitchen
+    tab_icon: mdi:stove
+    cards:
+      - type: entities
+        title: Kitchen
+        entities:
+          - input_select.kitchen_mode
+          - climate.kitchen_thermostat
+          - binary_sensor.washing_machine
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.kitchen_temperature_off
+            - input_number.kitchen_temperature_cosy
+            - input_number.kitchen_temperature_bright
+        - []
+      - type: media-control
+        entity: media_player.kitchen_speaker
+  - name: Hall
+    tab_icon: mdi:fullscreen-exit
+    cards:
+      - type: entities
+        title: Hall
+        entities:
+          - climate.hall_thermostat
+          - climate.annex_hall_thermostat
+      - type: entities
+        title: Hall Lights
+        entities: []
+      - type: entities
+        title: Main Heating
+        entities:
+          - sensor.main_heating_thermostat_temperature
+          - climate.main_heating_thermostat_heating_1
+          - switch.main_heating_thermostat_switch
+      - type: entities
+        title: Annex Heating
+        entities:
+          - sensor.annex_heating_thermostat_temperature
+          - climate.annex_heating_thermostat_heating_1
+          - switch.annex_heating_thermostat_switch
+      - type: entities
+        title: Hot Tub
+        entities:
+          - binary_sensor.hottub
+          - switch.greenwave_powernode_53_switch
+          - sensor.greenwave_powernode_53_energy
+          - sensor.greenwave_powernode_53_power
+      - type: entities
+        title: Oil Levels
+        entities:
+          - sensor.oil_main_litres
+          - sensor.oil_main_percentage
+          - sensor.oil_main_days_remaining
+          - sensor.oil_annex_litres
+          - sensor.oil_annex_percentage
+          - sensor.oil_annex_days_remaining
+      - type: media-control
+        entity: media_player.outside_amplifier
+  - name: Lounge
+    tab_icon: mdi:sofa
+    cards:
+      - type: entities
+        title: Lounge
+        entities:
+          - input_select.lounge_mode
+          - climate.lounge_thermostat
+      - - type: entities
+          title: Lounge Lights
+          entities:
+            - light.lounge_east
+            - light.lounge_north
+            - light.lounge_west
+        - []
+      - - type: entities
+          title: Media Auto Dim
+          entities:
+            - input_boolean.lounge_dim_for_movie
+            - input_boolean.lounge_dim_for_tv
+            - input_number.lounge_media_dimmer_level
+        - []
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.lounge_temperature_off
+            - input_number.lounge_temperature_cosy
+            - input_number.lounge_temperature_bright
+            - input_number.lounge_temperature_movie
+        - []
+      - type: media-control
+        entity: media_player.lounge
+  - name: Multiroom Audio
+    tab_icon: mdi:music
+    cards:
+      - type: media-control
+        entity: media_player.mpd
+      - type: entities
+        title: Snapcast Volume
+        entities:
+          - input_number.snapcast_client_study
+          - input_number.snapcast_client_kitchen2
+          - input_number.snapcast_client_lounge
+          - input_number.snapcast_client_library
+          - input_number.snapcast_client_ballroom
+          - input_number.snapcast_client_bedroommark
+          - input_number.snapcast_client_outside
+      - type: entities
+        title: Snapcast Clients
+        entities: []
+      - type: media-control
+        entity: media_player.snapcast_client_study
+      - type: media-control
+        entity: media_player.snapcast_client_kitchen2
+      - type: media-control
+        entity: media_player.snapcast_client_lounge
+      - type: media-control
+        entity: media_player.snapcast_client_library
+      - type: media-control
+        entity: media_player.snapcast_client_ballroom
+      - type: media-control
+        entity: media_player.snapcast_client_bedroommark
+      - type: media-control
+        entity: media_player.snapcast_client_outside
+  - name: Armoury
+    tab_icon: mdi:security
+    cards:
+      - type: entities
+        title: Network
+        entities:
+          - device_tracker.router
+          - device_tracker.climate
+          - device_tracker.ap_west
+          - device_tracker.ap_central
+          - device_tracker.ap_east
+          - device_tracker.poe_switch
+          - device_tracker.hastur
+          - device_tracker.cyclops
+          - device_tracker.study
+          - device_tracker.kitchen
+          - device_tracker.google_home
+          - device_tracker.google_home_bt
+          - device_tracker.amazon_echo
+          - device_tracker.amazon_echo_bt
+          - device_tracker.lounge
+          - device_tracker.loungetv
+          - device_tracker.ballroom
+          - device_tracker.ballroomamp
+          - device_tracker.library
+          - device_tracker.tado
+          - device_tracker.bedroommark
+          - device_tracker.bedroommark_chromecast
+          - device_tracker.ricoh213w
+          - device_tracker.canonmg5550
+      - type: entities
+        title: UPS
+        entities:
+          - sensor.eaton_ups_status_data
+          - sensor.eaton_ups_load
+          - sensor.eaton_ups_battery_charge
+          - sensor.eaton_ups_battery_runtime
+      - type: entities
+        title: EE 64GB
+        entities:
+          - sensor.modem_0_state
+          - sensor.modem_0_monthly_tx
+          - sensor.modem_0_monthly_rx
+  - name: Study
+    tab_icon: mdi:printer
+    cards:
+      - type: entities
+        title: Study
+        entities:
+          - input_select.study_mode
+          - climate.study_thermostat
+      - - type: entities
+          title: Settings
+          entities:
+            - input_number.study_temperature_off
+            - input_number.study_temperature_cosy
+            - input_number.study_temperature_bright
+            - input_number.study_temperature_work
+        - []
+      - type: entities
+        title: Study Appliances
+        entities:
+          - device_tracker.ricoh213w
+          - device_tracker.canonmg5550
+      - type: media-control
+        entity: media_player.study
+  - name: All Entities
+    tab_icon: mdi:settings
+    cards:
+      - type: entity-filter
+        card_config:
+          title: All Entities
+        filter:
+          - {}
