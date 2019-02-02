@@ -13,6 +13,7 @@ views:
     cards:
       - type: entities
         title: Where is Everyone?
+        show_header_toggle: false
         entities:
           - group.mark_present
           - group.anne_present
@@ -20,6 +21,7 @@ views:
           - group.thomas_present
       - type: entities
         title: Rooms
+        show_header_toggle: false
         entities:
           - input_select.study_mode
           - input_select.kitchen_mode
@@ -28,6 +30,7 @@ views:
           - input_select.ballroom_mode
       - type: entities
         title: Bedrooms
+        show_header_toggle: false
         entities:
           - input_select.bedroom_mark_mode
           - input_select.bedroom_jerome_mode
@@ -45,6 +48,7 @@ views:
     cards:
       - type: entities
         title: Mark's Bedroom
+        show_header_toggle: false
         entities:
           - input_select.bedroom_mark_mode
           - climate.bedroom_mark_thermostat
@@ -56,6 +60,7 @@ views:
 
       - type: entities
         title: Jerome's Bedroom
+        show_header_toggle: false
         entities:
           - input_select.bedroom_jerome_mode
           - climate.js_bedroom
@@ -65,6 +70,7 @@ views:
 
       - type: entities
         title: Annex Bedroom 2
+        show_header_toggle: false
         entities:
           - input_select.bedroom_annex2_mode
           - climate.bedroom_annex2_thermostat
@@ -72,6 +78,7 @@ views:
 
       - type: entities
         title: Guest Room
+        show_header_toggle: false
         entities:
           - input_select.guest_room_mode
           - climate.guest_room_thermostat
@@ -84,12 +91,14 @@ views:
     cards:
       - type: entities
         title: Study
+        show_header_toggle: false
         entities:
           - input_select.study_mode
           - climate.study_thermostat
           - group.g_study_settings_ui
       - type: entities
         title: Study Appliances
+        show_header_toggle: false
         entities:
           - device_tracker.ricoh213w
           - device_tracker.canonmg5550
@@ -105,6 +114,7 @@ views:
     cards:
       - type: entities
         title: Kitchen
+        show_header_toggle: false
         entities:
           - input_select.kitchen_mode
           - climate.kitchen_thermostat
@@ -125,6 +135,7 @@ views:
     cards:
       - type: entities
         title: Hall
+        show_header_toggle: false
         entities:
           - climate.hall_thermostat
           - climate.annex_hall_thermostat
@@ -136,12 +147,14 @@ views:
           - switch.main_heating_thermostat_switch
       - type: entities
         title: Annex Heating
+        show_header_toggle: false
         entities:
           - sensor.annex_heating_thermostat_temperature
           - climate.annex_heating_thermostat_heating_1
           - switch.annex_heating_thermostat_switch
       - type: entities
         title: Hot Tub
+        show_header_toggle: false
         entities:
           - binary_sensor.hottub
           - switch.greenwave_powernode_53_switch
@@ -149,6 +162,7 @@ views:
           - sensor.greenwave_powernode_53_power
       - type: entities
         title: Oil Levels
+        show_header_toggle: false
         entities:
           - sensor.oil_main_litres
           - sensor.oil_main_percentage
@@ -166,6 +180,7 @@ views:
     cards:
       - type: entities
         title: Lounge
+        show_header_toggle: false
         entities:
           - input_select.lounge_mode
           - climate.lounge_thermostat
@@ -182,6 +197,7 @@ views:
     cards:
       - type: entities
         title: Library
+        show_header_toggle: false
         entities:
           - input_select.library_mode
           - climate.library_thermostat
@@ -196,6 +212,7 @@ views:
     cards:
       - type: entities
         title: Ballroom
+        show_header_toggle: false
         entities:
           - input_select.ballroom_mode
           - climate.ballroom_thermostat
@@ -219,6 +236,7 @@ views:
     cards:
       - type: entities
         title: Network
+        show_header_toggle: false
         entities:
           - device_tracker.router
           - device_tracker.climate
@@ -246,6 +264,7 @@ views:
           - device_tracker.canonmg5550
       - type: entities
         title: UPS
+        show_header_toggle: false
         entities:
           - sensor.eaton_ups_status_data
           - sensor.eaton_ups_load
@@ -253,6 +272,7 @@ views:
           - sensor.eaton_ups_battery_runtime
       - type: entities
         title: EE 64GB
+        show_header_toggle: false
         entities:
           - sensor.modem_0_state
           - sensor.modem_0_monthly_tx
@@ -265,6 +285,7 @@ views:
         entity: media_player.mpd
       - type: entities
         title: Snapcast Volume
+        show_header_toggle: false
         entities:
           - input_number.snapcast_client_study
           - input_number.snapcast_client_kitchen2
@@ -293,6 +314,7 @@ views:
     cards:
       - type: entities
         title: Temperatures
+        show_header_toggle: false
         entities:
           - sensor.main_heating_thermostat_temperature
           - sensor.annex_heating_thermostat_temperature
@@ -312,6 +334,7 @@ views:
           - sensor.bedroom_annex2_current_temperature
       - type: entities
         title: Thermostats
+        show_header_toggle: false
         entities:
           - climate.annex_hall_thermostat
           - climate.ballroom_east_thermostat
@@ -327,6 +350,7 @@ views:
           - climate.bedroom_annex2_thermostat
       - type: entities
         title: Thermostat Devices
+        show_header_toggle: false
         entities:
           - climate.annex_hall_comfort_setpoint
           - climate.ballroom_east_comfort_setpoint
@@ -347,12 +371,14 @@ views:
           - climate.js_bedroom
       - type: entities
         title: Annex Heating Demand
+        show_header_toggle: true
         entities:
           - switch.study_demand
           - switch.annex_hall_demand
           - switch.bedroom_annex2_demand
       - type: entities
         title: Main Heating Demand
+        show_header_toggle: true
         entities:
           - switch.kitchen_demand
           - switch.lounge_demand
@@ -363,6 +389,7 @@ views:
           - switch.bedroom_jerome_demand
       - type: entities
         title: Battery Levels
+        show_header_toggle: false
         entities:
           - sensor.main_heating_thermostat_battery
           - sensor.annex_heating_thermostat_battery
@@ -382,6 +409,7 @@ views:
           - sensor.guest_room_battery
       - type: entities
         title: Main Heating Override
+        show_header_toggle: false
         entities:
           - switch.main_heating_relay_switch
           - switch.main_heating_relay_boiler
@@ -392,12 +420,14 @@ views:
           - automation.hot_water_off
       - type: entities
         title: Annex Heating Override
+        show_header_toggle: false
         entities:
           - switch.horstmann_asrzw_thermostat_receiver_switch
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
-      - type: entities
+      - type: entity-filter
         title: Automations
+        show_header_toggle: false
         entities:
           - automation.guest_room_sleep_time
           - automation.guest_room_off_time
@@ -416,6 +446,7 @@ views:
           - automation.calendar_ros_climate
       - type: entities
         title: RFX Switches
+        show_header_toggle: true
         entities:
           - switch.0a140003f15c7202010080
           - switch.0a140006f15c7203010080
@@ -429,6 +460,7 @@ views:
           - switch.0a140086f3cf3510050070
       - type: entities
         title: RFX Lights
+        show_header_toggle: true
         entities:
           - switch.0a140000f40fa801010050
           - switch.0a140016f3cf3501010080
@@ -438,6 +470,7 @@ views:
           - switch.0a140000f15c7201010080
       - type: entities
         title: Amazon Dash Buttons
+        show_header_toggle: false
         entities:
           - switch.table_tennis
           - switch.party_mode
