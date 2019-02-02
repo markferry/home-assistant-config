@@ -186,3 +186,6 @@ panel_custom:
     sidebar_icon: mdi:home
     url_path: floorplan
     config: !include floorplan.yaml
+
+lovelace:
+  mode: yaml
