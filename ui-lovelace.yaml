@@ -46,43 +46,51 @@ views:
       - sensor.js_bedroom_humidity
       - sensor.guest_room_mean_temperature
     cards:
-      - type: entities
-        title: Mark's Bedroom
-        show_header_toggle: false
-        entities:
-          - input_select.bedroom_mark_mode
-          - climate.bedroom_mark_thermostat
-          - group.bedroom_mark_lights
-          - group.g_bedroom_mark_media_dimming
-          - group.g_bedroom_mark_settings_ui
-      - type: media-control
-        entity: media_player.bedroom_mark
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Mark's Bedroom
+            show_header_toggle: false
+            entities:
+              - input_select.bedroom_mark_mode
+              - climate.bedroom_mark_thermostat
+              - group.bedroom_mark_lights
+              - group.g_bedroom_mark_media_dimming
+              - group.g_bedroom_mark_settings_ui
+          - type: media-control
+            entity: media_player.bedroom_mark
 
-      - type: entities
-        title: Jerome's Bedroom
-        show_header_toggle: false
-        entities:
-          - input_select.bedroom_jerome_mode
-          - climate.js_bedroom
-          - group.g_bedroom_jerome_settings_ui
-      - type: media-control
-        entity: media_player.jeromes_bedroom
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Jerome's Bedroom
+            show_header_toggle: false
+            entities:
+              - input_select.bedroom_jerome_mode
+              - climate.js_bedroom
+              - group.g_bedroom_jerome_settings_ui
+          - type: media-control
+            entity: media_player.jeromes_bedroom
 
-      - type: entities
-        title: Annex Bedroom 2
-        show_header_toggle: false
-        entities:
-          - input_select.bedroom_annex2_mode
-          - climate.bedroom_annex2_thermostat
-          - group.g_bedroom_annex2_settings_ui
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Annex Bedroom 2
+            show_header_toggle: false
+            entities:
+              - input_select.bedroom_annex2_mode
+              - climate.bedroom_annex2_thermostat
+              - group.g_bedroom_annex2_settings_ui
 
-      - type: entities
-        title: Guest Room
-        show_header_toggle: false
-        entities:
-          - input_select.guest_room_mode
-          - climate.guest_room_thermostat
-          - group.g_guest_room_settings_ui
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Guest Room
+            show_header_toggle: false
+            entities:
+              - input_select.guest_room_mode
+              - climate.guest_room_thermostat
+              - group.g_guest_room_settings_ui
 
   - title: Study
     icon: mdi:printer
