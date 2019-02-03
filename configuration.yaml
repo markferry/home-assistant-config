@@ -189,3 +189,7 @@ panel_custom:
 
 lovelace:
   mode: yaml
+
+owntracks:
+  max_gps_accuracy: 3000
+
