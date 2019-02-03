@@ -18,6 +18,7 @@ sensor:
             unknown
           {% endif %}
         unit_of_measurement: '%'
+        entity_id: zwave.aeotec_dsb05_multisensor
 
 homeassistant:
   customize:

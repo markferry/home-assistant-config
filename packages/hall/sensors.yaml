@@ -8,6 +8,8 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.hall_east
+
     hall_west_battery:
       value_template: >
         {% if states.zwave.hall_west %}
@@ -16,6 +18,8 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.hall_west
+
     annex_hall_battery:
       value_template: >
         {% if states.zwave.annex_hall %}
@@ -24,3 +28,4 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.annex_hall
