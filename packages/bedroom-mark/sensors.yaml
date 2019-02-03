@@ -8,6 +8,7 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.bedroom_mark_south
 
 - platform: template
   sensors:
@@ -19,3 +20,4 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.bedroom_mark_north
