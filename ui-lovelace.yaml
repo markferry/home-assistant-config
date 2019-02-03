@@ -247,9 +247,9 @@ views:
           - device_tracker.hastur
           - device_tracker.cyclops
           - device_tracker.study
-          - device_tracker.kitchen
-          - device_tracker.google_home
-          - device_tracker.google_home_bt
+          - device_tracker.kitchen_tablet
+          - device_tracker.utilityamp
+          - device_tracker.kitchen_speaker
           - device_tracker.amazon_echo
           - device_tracker.amazon_echo_bt
           - device_tracker.lounge
