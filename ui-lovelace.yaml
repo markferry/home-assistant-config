@@ -1,6 +1,6 @@
-name: WB
+name: Whale Barn
 views:
-  - title: WB
+  - title: Home
     icon: mdi:home
     badges:
       - sensor.study_temperature
@@ -425,25 +425,25 @@ views:
           - switch.horstmann_asrzw_thermostat_receiver_switch
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
-      - type: entity-filter
+      - type: entities
         title: Automations
         show_header_toggle: false
         entities:
-          - automation.guest_room_sleep_time
-          - automation.guest_room_off_time
-          - automation.kitchen_cosy_time
+          #- automation.guest_room_sleep_time
+          #- automation.guest_room_off_time
+          #- automation.kitchen_cosy_time
           - automation.bedroom_mark_sleep_time
           - automation.bedroom_mark_off_time
           - automation.reset_modes
-          - automation.study_work_time
+          #- automation.study_work_time
           - automation.calendar_scene
           - automation.calendar_climate
           - automation.calendar_mark_scene
           - automation.calendar_mark_climate
           - automation.calendar_jerome_scene
           - automation.calendar_jerome_climate
-          - automation.calendar_ros_scene
-          - automation.calendar_ros_climate
+          #- automation.calendar_ros_scene
+          #- automation.calendar_ros_climate
       - type: entities
         title: RFX Switches
         show_header_toggle: true
