@@ -4,7 +4,7 @@ group: !include groups.yaml
 #input_select: !include input_select.yaml
 #scene: !include scenes.yaml
 script: !include_dir_merge_named scripts
-#sensor: !include sensors.yaml
+sensor: !include sensors.yaml
 switch: !include switches.yaml
 #automation: !include_dir_merge_list automations
 media_player: !include media_players.yaml
