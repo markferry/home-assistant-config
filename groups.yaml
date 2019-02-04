@@ -110,7 +110,7 @@ annex_heating_override:
   name: Annex Heating Override
   view: false
   entities:
-  - switch.horstmann_asrzw_thermostat_receiver_switch
+  - switch.annex_heating_relay_switch
   - automation.annex_thermostat_demand_on
   - automation.annex_thermostat_demand_off
 
@@ -194,42 +194,19 @@ dash_buttons:
   - switch.philips_sonicare
   - switch.right_guard
 
-heating_valves:
-  name: Heating Demand
-  view: false
-  entities:
-  - light.hall_west_level_13
-  - light.study_east_level_14
-  - light.study_west_level_15
-  - light.hall_east_level_24
-  - light.library_level_25
-  - light.bedroom_mark_level_29
-  - light.lounge_east_level_30
-  - light.ballroom_east_level_33
-  - light.kitchen_level_34
-  - light.annex_hall_level_43
-  - light._level_13
-  - light._level_14
-  - light._level_15
-  - light._level_24
-  - light._level_25
-  - light._level_29
-  - light._level_30
-  - light._level_33
-  - light._level_34
-  - light._level_43
-
 media_players:
   name: Media Players
   view: false
   entities:
     - media_player.study
     - media_player.lounge
-    - media_player.kitchen
+    # kitchen
+    - media_player.outside_amplifier_zone_2
     - media_player.library
     - media_player.ballroom
     - media_player.ballroom_amplifier
     - media_player.bedroom_mark
+    - media_player.outside_amplifier
 
 temperatures:
   name: Temperatures

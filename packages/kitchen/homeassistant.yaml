@@ -1,7 +1,4 @@
 customize:
-  light.kitchen_level_34:
-    friendly_name: Kitchen Valve
-
   climate.kitchen_thermostat:
     friendly_name: Kitchen
   climate.kitchen_comfort_setpoint:
@@ -23,3 +20,6 @@ customize:
     friendly_name: "Kitchen Mode Cosy"
   script.hue_kitchen_bright:
     friendly_name: "Kitchen Mode Bright"
+
+  media_player.outside_amplifier_zone_2:
+    friendly_name: Kitchen Amplifier

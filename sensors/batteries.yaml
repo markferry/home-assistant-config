@@ -8,6 +8,8 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.main_heating_thermostat
+
     annex_heating_thermostat_battery:
       value_template: >
         {% if states.zwave.annex_heating_thermostat %}
@@ -16,3 +18,4 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.annex_heating_thermostat

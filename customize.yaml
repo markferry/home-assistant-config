@@ -96,7 +96,7 @@ switch.main_heating_relay_boiler:
   friendly_name: Main Boiler Switch
 switch.main_heating_relay_hot_water:
   friendly_name: Main Hot Water Switch
-switch.horstmann_asrzw_thermostat_receiver_switch:
+switch.annex_heating_relay_switch:
   friendly_name: Annex Heating Switch
 
 sensor.main_heating_thermostat_battery:

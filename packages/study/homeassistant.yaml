@@ -1,9 +1,4 @@
 customize:
-  light.study_east_level_14:
-    friendly_name: Study East Valve
-  light.study_west_level_15:
-    friendly_name: Study West Valve
-
   sensor.study_east_temperature:
     friendly_name: Study East
   sensor.study_west_temperature:
