@@ -1,9 +1,12 @@
 [submodule "www/wb-icons"]
 	path = www/wb-icons
-	url = hastur:/home/gnome/repos/wb-icons.git
+	url = cyclops:/home/gnome/repos/wb-icons.git
 [submodule "private"]
 	path = private
 	url = ./private
 [submodule "ha-floorplan"]
 	path = ha-floorplan
 	url = https://github.com/pkozul/ha-floorplan.git
+[submodule "storage"]
+	path = .storage
+	url = cyclops:repos/home-assistant-storage.git
