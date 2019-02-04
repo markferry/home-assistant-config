@@ -9,7 +9,7 @@ homeassistant:
       icon: mdi:speaker-wireless
     media_player.snapcast_client_study:
       friendly_name: Study Snapcast
-    media_player.snapcast_client_kitchen2:
+    media_player.snapcast_client_kitchen_2:
       friendly_name: Kitchen Snapcast
     media_player.snapcast_client_lounge:
       friendly_name: Lounge Snapcast
@@ -19,12 +19,12 @@ homeassistant:
       friendly_name: Ballroom Snapcast
     media_player.snapcast_client_outside:
       friendly_name: Outside Snapcast
-    media_player.snapcast_client_bedroommark:
+    media_player.snapcast_client_bedroom_mark:
       friendly_name: "Mark's Bedroom Snapcast"
     media_player.snapcast_client_9cb6d08b2a6f:
       friendly_name: Canard Snapcast
 
-    input_number.snapcast_client_bedroommark:
+    input_number.snapcast_client_bedroom_mark:
       entity_picture: /local/wb-icons/wb_mark.png
 
 input_number:
@@ -33,7 +33,7 @@ input_number:
       icon: mdi:printer
       min: 0
       max: 100
-    snapcast_client_kitchen2:
+    snapcast_client_kitchen_2:
       name: Kitchen Volume
       icon: mdi:stove
       min: 0
@@ -58,7 +58,7 @@ input_number:
       icon: mdi:pine-tree
       min: 0
       max: 100
-    snapcast_client_bedroommark:
+    snapcast_client_bedroom_mark:
       name: "Mark's Bedroom Volume"
       icon: mdi:account
       min: 0
@@ -75,11 +75,11 @@ automation:
     platform: state
     entity_id:
       - input_number.snapcast_client_study
-      - input_number.snapcast_client_kitchen2
+      - input_number.snapcast_client_kitchen_2
       - input_number.snapcast_client_lounge
       - input_number.snapcast_client_library
       - input_number.snapcast_client_ballroom
-      - input_number.snapcast_client_bedroommark
+      - input_number.snapcast_client_bedroom_mark
       - input_number.snapcast_client_outside
   action:
     # don't unmute by default
@@ -97,11 +97,11 @@ automation:
     platform: state
     entity_id:
       - media_player.snapcast_client_study
-      - media_player.snapcast_client_kitchen2
+      - media_player.snapcast_client_kitchen_2
       - media_player.snapcast_client_lounge
       - media_player.snapcast_client_library
       - media_player.snapcast_client_ballroom
-      - media_player.snapcast_client_bedroommark
+      - media_player.snapcast_client_bedroom_mark
       - media_player.snapcast_client_outside
   action:
     - service: input_number.set_value
@@ -132,22 +132,22 @@ group:
     name: Snapcast Clients
     entities:
     - media_player.snapcast_client_study
-    - media_player.snapcast_client_kitchen2
+    - media_player.snapcast_client_kitchen_2
     - media_player.snapcast_client_lounge
     - media_player.snapcast_client_library
     - media_player.snapcast_client_ballroom
-    - media_player.snapcast_client_bedroommark
+    - media_player.snapcast_client_bedroom_mark
     - media_player.snapcast_client_outside
 
   snapclient_volumes:
     name: Snapcast Volume
     entities:
     - input_number.snapcast_client_study
-    - input_number.snapcast_client_kitchen2
+    - input_number.snapcast_client_kitchen_2
     - input_number.snapcast_client_lounge
     - input_number.snapcast_client_library
     - input_number.snapcast_client_ballroom
-    - input_number.snapcast_client_bedroommark
+    - input_number.snapcast_client_bedroom_mark
     - input_number.snapcast_client_outside
 
 #tts:

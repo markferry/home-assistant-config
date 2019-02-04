@@ -19,6 +19,7 @@ views:
           - group.anne_present
           - group.jerome_present
           - group.thomas_present
+          - group.aneta_present
       - type: entities
         title: Rooms
         show_header_toggle: false
@@ -103,6 +104,8 @@ views:
         entities:
           - input_select.study_mode
           - climate.study_thermostat
+          - entity: binary_sensor.heiman_contact_65_sensor
+            name: "Study Door Open"
           - group.g_study_settings_ui
       - type: entities
         title: Study Appliances
@@ -127,6 +130,8 @@ views:
           - input_select.kitchen_mode
           - climate.kitchen_thermostat
           - binary_sensor.washing_machine
+          - entity: binary_sensor.heiman_contact_66_sensor
+            name: "Gin Freezer Open"
           - group.g_kitchen_settings_ui
       - type: media-control
         entity: media_player.kitchen_speaker
@@ -149,6 +154,8 @@ views:
         entities:
           - climate.hall_thermostat
           - climate.annex_hall_thermostat
+          - entity: binary_sensor.heiman_contact_63_sensor
+            name: "Front Door Open"
       - type: entities
         title: Main Heating
         entities:
@@ -298,16 +305,16 @@ views:
         show_header_toggle: false
         entities:
           - input_number.snapcast_client_study
-          - input_number.snapcast_client_kitchen2
+          - input_number.snapcast_client_kitchen_2
           - input_number.snapcast_client_lounge
           - input_number.snapcast_client_library
           - input_number.snapcast_client_ballroom
-          - input_number.snapcast_client_bedroommark
+          - input_number.snapcast_client_bedroom_mark
           - input_number.snapcast_client_outside
       - type: media-control
         entity: media_player.snapcast_client_study
       - type: media-control
-        entity: media_player.snapcast_client_kitchen2
+        entity: media_player.snapcast_client_kitchen_2
       - type: media-control
         entity: media_player.snapcast_client_lounge
       - type: media-control
@@ -315,7 +322,7 @@ views:
       - type: media-control
         entity: media_player.snapcast_client_ballroom
       - type: media-control
-        entity: media_player.snapcast_client_bedroommark
+        entity: media_player.snapcast_client_bedroom_mark
       - type: media-control
         entity: media_player.snapcast_client_outside
 
@@ -347,13 +354,12 @@ views:
         show_header_toggle: false
         entities:
           - climate.annex_hall_thermostat
-          - climate.ballroom_east_thermostat
+          - climate.ballroom_thermostat
           - climate.bedroom_mark_thermostat
-          - climate.hall_east_thermostat
-          - climate.hall_west_thermostat
+          - climate.hall_thermostat
           - climate.kitchen_thermostat
           - climate.library_thermostat
-          - climate.lounge_east_thermostat
+          - climate.lounge_thermostat
           - climate.study_thermostat
           - climate.guest_room_thermostat
           - climate.bedroom_jerome_thermostat
