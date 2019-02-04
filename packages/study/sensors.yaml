@@ -8,6 +8,8 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.study_east
+
     study_west_battery:
       value_template: >
         {% if states.zwave.study_west %}
@@ -16,4 +18,5 @@
           unknown
         {%  endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.study_west
 

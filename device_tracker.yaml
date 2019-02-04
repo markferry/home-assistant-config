@@ -6,9 +6,6 @@
 #  interval_seconds: 30
 #  consider_home: 180
 
-- platform: owntracks
-  max_gps_accuracy: 3000
-
 - platform: nmap_tracker
   hosts: 192.168.6.1-254 192.168.7.1-254
   interval_seconds: 60

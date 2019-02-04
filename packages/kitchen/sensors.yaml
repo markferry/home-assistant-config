@@ -8,3 +8,4 @@
           unknown
         {% endif %}
       unit_of_measurement: '%'
+      entity_id: zwave.kitchen

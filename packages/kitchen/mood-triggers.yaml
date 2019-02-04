@@ -5,7 +5,7 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.kitchen_select
+        entity_id: input_select.kitchen_mode
         option: "Cosy"
 
 - alias: "Kitchen Off Time"
@@ -23,5 +23,5 @@
   action:
     - service: input_select.select_option
       data:
-        entity_id: input_select.kitchen_select
+        entity_id: input_select.kitchen_mode
         option: "Off"

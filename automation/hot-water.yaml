@@ -5,7 +5,7 @@
 # Repeat the command every 20 minutes to avoid failsafe mode.
 - alias: hot_water_off
   trigger:
-    - platform: time
+    - platform: time_pattern
       minutes: '/20'
       seconds: 10
   condition:
@@ -23,7 +23,7 @@
 
 - alias: hot_water_on
   trigger:
-    - platform: time
+    - platform: time_pattern
       minutes: '/20'
       seconds: 5
   condition:

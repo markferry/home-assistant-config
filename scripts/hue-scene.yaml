@@ -5,12 +5,12 @@ hue_everything_off:
     - service: input_select.select_option
       data:
         entity_id:
-          - input_select.study_select
-          - input_select.kitchen_select
-          - input_select.lounge_select
-          - input_select.library_select
-          - input_select.ballroom_select
-          - input_select.bedroom_mark_select
-          - input_select.guest_room_select
+          - input_select.study_mode
+          - input_select.kitchen_mode
+          - input_select.lounge_mode
+          - input_select.library_mode
+          - input_select.ballroom_mode
+          - input_select.bedroom_mark_mode
+          - input_select.guest_room_mode
         option: "Off"
 
