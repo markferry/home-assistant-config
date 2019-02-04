@@ -130,6 +130,8 @@ views:
           - group.g_kitchen_settings_ui
       - type: media-control
         entity: media_player.kitchen_speaker
+      - type: media-control
+        entity: media_player.outside_amplifier_zone_2
 
   - title: Hall
     icon: mdi:fullscreen-exit
@@ -430,7 +432,7 @@ views:
         title: Annex Heating Override
         show_header_toggle: false
         entities:
-          - switch.horstmann_asrzw_thermostat_receiver_switch
+          - switch.annex_heating_relay_switch
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
       - type: entities
