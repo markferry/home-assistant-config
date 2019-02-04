@@ -298,16 +298,16 @@ views:
         show_header_toggle: false
         entities:
           - input_number.snapcast_client_study
-          - input_number.snapcast_client_kitchen2
+          - input_number.snapcast_client_kitchen_2
           - input_number.snapcast_client_lounge
           - input_number.snapcast_client_library
           - input_number.snapcast_client_ballroom
-          - input_number.snapcast_client_bedroommark
+          - input_number.snapcast_client_bedroom_mark
           - input_number.snapcast_client_outside
       - type: media-control
         entity: media_player.snapcast_client_study
       - type: media-control
-        entity: media_player.snapcast_client_kitchen2
+        entity: media_player.snapcast_client_kitchen_2
       - type: media-control
         entity: media_player.snapcast_client_lounge
       - type: media-control
@@ -315,7 +315,7 @@ views:
       - type: media-control
         entity: media_player.snapcast_client_ballroom
       - type: media-control
-        entity: media_player.snapcast_client_bedroommark
+        entity: media_player.snapcast_client_bedroom_mark
       - type: media-control
         entity: media_player.snapcast_client_outside
 
