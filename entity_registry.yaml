@@ -198,26 +198,6 @@ climate.bedroom_mark_south_energy_saving_setpoint:
   name:
   platform: zwave
   unique_id: 29-72057594529759410
-sensor.lounge_east_temperature:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 30-72057594546241554
-climate.lounge_east_comfort_setpoint:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 30-72057594546536466
-climate.lounge_east_furnace:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 30-72057594546536562
-climate.lounge_east_energy_saving_setpoint:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 30-72057594546536626
 sensor.ballroom_east_temperature:
   config_entry_id:
   name:
@@ -593,27 +573,27 @@ sensor.greenwave_powernode_54_previous_power:
   name:
   platform: zwave
   unique_id: 54-72057594948911250
-sensor.bedroom_annex2_temperature:
+sensor.lounge_east_temperature:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965671954
-sensor.bedroom_annex2_co2_level:
+sensor.lounge_east_co2_level:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965672210
-climate.bedroom_annex2_comfort_setpoint:
+climate.lounge_east_comfort_setpoint:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965966866
-climate.bedroom_annex2_furnace:
+climate.lounge_east_furnace:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 55-72057594965966962
-climate.bedroom_annex2_energy_saving_setpoint:
+climate.lounge_east_energy_saving_setpoint:
   config_entry_id:
   name:
   platform: zwave
@@ -1183,11 +1163,6 @@ zwave.bedroom_mark_south:
   name:
   platform: zwave
   unique_id: node-29
-zwave.lounge_east:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: node-30
 zwave.ballroom_east:
   config_entry_id:
   name:
@@ -1258,7 +1233,7 @@ zwave.greenwave_powernode_54:
   name:
   platform: zwave
   unique_id: node-54
-zwave.bedroom_ros:
+zwave.lounge_east:
   config_entry_id:
   name:
   platform: zwave
