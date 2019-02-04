@@ -19,6 +19,7 @@ views:
           - group.anne_present
           - group.jerome_present
           - group.thomas_present
+          - group.aneta_present
       - type: entities
         title: Rooms
         show_header_toggle: false
