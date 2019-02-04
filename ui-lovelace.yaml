@@ -104,6 +104,8 @@ views:
         entities:
           - input_select.study_mode
           - climate.study_thermostat
+          - entity: binary_sensor.heiman_contact_65_sensor
+            name: "Study Door Open"
           - group.g_study_settings_ui
       - type: entities
         title: Study Appliances
@@ -128,6 +130,8 @@ views:
           - input_select.kitchen_mode
           - climate.kitchen_thermostat
           - binary_sensor.washing_machine
+          - entity: binary_sensor.heiman_contact_66_sensor
+            name: "Gin Freezer Open"
           - group.g_kitchen_settings_ui
       - type: media-control
         entity: media_player.kitchen_speaker
@@ -150,6 +154,8 @@ views:
         entities:
           - climate.hall_thermostat
           - climate.annex_hall_thermostat
+          - entity: binary_sensor.heiman_contact_63_sensor
+            name: "Front Door Open"
       - type: entities
         title: Main Heating
         entities:
