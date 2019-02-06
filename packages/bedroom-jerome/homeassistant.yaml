@@ -10,7 +10,7 @@ customize:
     friendly_name: "Jerome's Bedroom Mode Cosy"
 
   # Tado sensors
-  climate.js_bedroom:
+  climate.j_s_bedroom:
     friendly_name: "Jerome's Bedroom"
   sensor.js_bedroom_humidity:
     friendly_name: "Jerome's Bedroom Humidity"
