@@ -1,0 +1,150 @@
+google_assistant:
+  entity_config:
+
+  #  climate.xxx_thermostat:
+  #    name: "Xxx Thermostat"
+  #    expose: true
+  #    room: "Xxx"
+  #  group.xxx_lights:
+  #    name: "Xxx Lights"
+  #    expose: true
+  #    room: "Xxx"
+  #  script.hue_xxx_off:
+  #    name: "Xxx Mode Off"
+  #    expose: true
+  #    room: "Xxx"
+  #  script.hue_xxx_cosy:
+  #    name: "Xxx Mode Cosy"
+  #    expose: true
+  #    room: "Xxx"
+  #  script.hue_xxx_bright:
+  #    name: "Xxx Mode Bright"
+  #    expose: true
+  #    room: "Xxx"
+  #
+    climate.study_thermostat:
+      name: "Study Thermostat"
+      expose: true
+      room: "Study"
+    group.study_lights:
+      name: "Study Lights"
+      expose: true
+      room: "Study"
+    script.hue_study_off:
+      name: "Study Mode Off"
+      expose: true
+      room: "Study"
+    script.hue_study_cosy:
+      name: "Study Mode Cosy"
+      expose: true
+      room: "Study"
+    script.hue_study_bright:
+      name: "Study Mode Bright"
+      expose: true
+      room: "Study"
+
+    climate.kitchen_thermostat:
+      name: "Kitchen Thermostat"
+      expose: true
+      room: "Kitchen"
+    group.kitchen_lights:
+      name: "Kitchen Lights"
+      expose: true
+      room: "Kitchen"
+    script.hue_kitchen_off:
+      name: "Kitchen Mode Off"
+      expose: true
+      room: "Kitchen"
+    script.hue_kitchen_cosy:
+      name: "Kitchen Mode Cosy"
+      expose: true
+      room: "Kitchen"
+    script.hue_kitchen_bright:
+      name: "Kitchen Mode Bright"
+      expose: true
+      room: "Kitchen"
+
+    climate.lounge_thermostat:
+      name: "Lounge Thermostat"
+      expose: true
+      room: "Lounge"
+    group.lounge_lights:
+      name: "Lounge Lights"
+      expose: true
+      room: "Lounge"
+    script.hue_lounge_off:
+      name: "Lounge Mode Off"
+      expose: true
+      room: "Lounge"
+    script.hue_lounge_cosy:
+      name: "Lounge Mode Cosy"
+      expose: true
+      room: "Lounge"
+    script.hue_lounge_bright:
+      name: "Lounge Mode Bright"
+      expose: true
+      room: "Lounge"
+
+    climate.library_thermostat:
+      name: "Library Thermostat"
+      expose: true
+      room: "Library"
+    group.library_lights:
+      name: "Library Lights"
+      expose: true
+      room: "Library"
+    script.hue_library_off:
+      name: "Library Mode Off"
+      expose: true
+      room: "Library"
+    script.hue_library_cosy:
+      name: "Library Mode Cosy"
+      expose: true
+      room: "Library"
+    script.hue_library_bright:
+      name: "Library Mode Bright"
+      expose: true
+      room: "Library"
+
+    climate.ballroom_thermostat:
+      name: "Ballroom Thermostat"
+      expose: true
+      room: "Ballroom"
+    group.ballroom_lights:
+      name: "Ballroom Lights"
+      expose: true
+      room: "Ballroom"
+    script.hue_ballroom_off:
+      name: "Ballroom Mode Off"
+      expose: true
+      room: "Ballroom"
+    script.hue_ballroom_cosy:
+      name: "Ballroom Mode Cosy"
+      expose: true
+      room: "Ballroom"
+    script.hue_ballroom_bright:
+      name: "Ballroom Mode Bright"
+      expose: true
+      room: "Ballroom"
+
+    climate.guest_room_thermostat:
+      name: "Guest Room Thermostat"
+      expose: true
+      room: "Guest Room"
+    group.guest_room_lights:
+      name: "Guest Room Lights"
+      expose: true
+      room: "Guest Room"
+    script.hue_guest_room_off:
+      name: "Guest Room Mode Off"
+      expose: true
+      room: "Guest Room"
+    script.hue_guest_room_cosy:
+      name: "Guest Room Mode Cosy"
+      expose: true
+      room: "Guest Room"
+    script.hue_guest_room_sleep:
+      name: "Guest Room Mode Sleep"
+      expose: true
+      room: "Guest Room"
+
