@@ -11,7 +11,7 @@ group:
   g_debug_bedroom_jerome_heating:
     entities:
       - climate.bedroom_jerome_thermostat
-      - climate.js_bedroom
+      - climate.j_s_bedroom
       - switch.bedroom_jerome_demand
 
   g_debug_bedroom_jerome_temperature:
@@ -25,7 +25,7 @@ group:
   g_bedroom_jerome_thermostat:
     view: false
     entities:
-      - climate.js_bedroom
+      - climate.j_s_bedroom
 
 climate:
   # Not in the UI but still used for boiler control
@@ -73,7 +73,7 @@ automation:
   - alias: js_bedroom_updates_virtual_setpoint
     trigger:
       - platform: state
-        entity_id: climate.js_bedroom
+        entity_id: climate.j_s_bedroom
     action:
       - service: climate.set_temperature
         data_template:

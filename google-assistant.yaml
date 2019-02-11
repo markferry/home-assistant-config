@@ -1,0 +1,5 @@
+project_id: whalebarn-home-assistant
+api_key: !secret gcm_api_key
+allow_unlock: false
+expose_by_default: false
+

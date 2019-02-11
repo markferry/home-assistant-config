@@ -68,7 +68,7 @@ views:
             show_header_toggle: false
             entities:
               - input_select.bedroom_jerome_mode
-              - climate.js_bedroom
+              - climate.j_s_bedroom
               - group.g_bedroom_jerome_settings_ui
           - type: media-control
             entity: media_player.jeromes_bedroom
@@ -384,7 +384,7 @@ views:
           - climate.guest_room_heat
           - climate.danfoss_z_thermostat_014g0013_heating_1
           - climate.bedroom_annex2_comfort_setpoint
-          - climate.js_bedroom
+          - climate.j_s_bedroom
       - type: entities
         title: Annex Heating Demand
         show_header_toggle: true

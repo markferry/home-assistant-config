@@ -249,7 +249,7 @@ thermostat_devices:
   - climate.guest_room_heat
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_annex2_comfort_setpoint
-  - climate.js_bedroom
+  - climate.j_s_bedroom
 
 # Front-end thermostats
 thermostats:
