@@ -74,6 +74,8 @@ homeassistant:
     package_bedroom_annex2_mode: !include packages/bedroom-annex2/mode.yaml
     package_bedroom_annex2_settings: !include packages/bedroom-annex2/settings.yaml
 
+    package_google_assistant_demo: !include packages/google-assistant-demo.yaml
+
     #package_room: !include packages/room/package.yaml
 
 
@@ -192,3 +194,4 @@ lovelace:
 owntracks:
   max_gps_accuracy: 3000
 
+google_assistant: !include google-assistant.yaml
