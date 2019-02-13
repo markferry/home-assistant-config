@@ -5,6 +5,6 @@ group:
     control: hidden
     entities:
       - input_number.bedroom_mark_temperature_off
-      - input_number.bedroom_mark_temperature_sleep
       - input_number.bedroom_mark_temperature_play
+      - input_number.bedroom_mark_temperature_sleep
 
