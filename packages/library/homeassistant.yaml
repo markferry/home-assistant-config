@@ -11,14 +11,3 @@ customize:
     min_temp: 5
     max_temp: 25
 
-  script.hue_library_thermostat:
-    friendly_name: Library Thermostat
-
-  script.hue_library_off:
-    friendly_name: "Library"
-  script.hue_library_cosy:
-    friendly_name: "Library Mode Cosy"
-  script.hue_library_bright:
-    friendly_name: "Library Mode Bright"
-  script.hue_library_read:
-    friendly_name: "Library Mode Read"

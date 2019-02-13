@@ -20,36 +20,45 @@ homeassistant:
     package_multiroom_audio: !include packages/multiroom_audio.yaml
     package_mode: !include packages/mode.yaml
 
+    package_everwhere: !include packages/everywhere.yaml
+
     package_study: !include packages/study/package.yaml
     package_study_heating: !include packages/study/heating-on-demand.yaml
     package_study_mode: !include packages/study/mode.yaml
     package_study_settings: !include packages/study/settings.yaml
+    package_study_voice_control: !include packages/study/voice-control.yaml
 
     package_kitchen: !include packages/kitchen/package.yaml
     package_kitchen_heating: !include packages/kitchen/heating-on-demand.yaml
     package_kitchen_mode: !include packages/kitchen/mode.yaml
     package_kitchen_settings: !include packages/kitchen/settings.yaml
+    package_kitchen_voice_control: !include packages/kitchen/voice-control.yaml
 
     package_hall: !include packages/hall/package.yaml
     package_hall_heating: !include packages/hall/heating-on-demand.yaml
+    package_hall_voice_control: !include packages/hall/voice-control.yaml
     package_annex_hall_heating: !include packages/hall/annex-hall-heating-on-demand.yaml
+    package_annex_hall_voice_control: !include packages/hall/annex-hall-voice-control.yaml
 
     package_lounge: !include packages/lounge/package.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
     package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
     package_lounge_mode: !include packages/lounge/mode.yaml
     package_lounge_settings: !include packages/lounge/settings.yaml
+    package_lounge_voice_control: !include packages/lounge/voice-control.yaml
 
     package_library: !include packages/library/package.yaml
     package_library_heating: !include packages/library/heating-on-demand.yaml
     package_library_mode: !include packages/library/mode.yaml
     package_library_settings: !include packages/library/settings.yaml
+    package_library_voice_control: !include packages/library/voice-control.yaml
 
     package_ballroom: !include packages/ballroom/package.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
     package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
     package_ballroom_mode: !include packages/ballroom/mode.yaml
     package_ballroom_settings: !include packages/ballroom/settings.yaml
+    package_ballroom_voice_control: !include packages/ballroom/voice-control.yaml
 
     package_armoury: !include packages/armoury/package.yaml
 
@@ -57,24 +66,26 @@ homeassistant:
     package_guest_room_heating: !include packages/guest_room/heating-on-demand.yaml
     package_guest_room_mode: !include packages/guest_room/mode.yaml
     package_guest_room_settings: !include packages/guest_room/settings.yaml
+    package_guest_room_voice_control: !include packages/guest_room/voice-control.yaml
 
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
     package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
     package_bedroom_mark_mode: !include packages/bedroom-mark/mode.yaml
     package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
+    package_bedroom_mark_voice_control: !include packages/bedroom-mark/voice-control.yaml
 
     package_bedroom_jerome: !include packages/bedroom-jerome/package.yaml
     package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
     package_bedroom_jerome_mode: !include packages/bedroom-jerome/mode.yaml
     package_bedroom_jerome_settings: !include packages/bedroom-jerome/settings.yaml
+    package_bedroom_jerome_voice_control: !include packages/bedroom-jerome/voice-control.yaml
 
     package_bedroom_annex2: !include packages/bedroom-annex2/package.yaml
     package_bedroom_annex2_heating: !include packages/bedroom-annex2/heating-on-demand.yaml
     package_bedroom_annex2_mode: !include packages/bedroom-annex2/mode.yaml
     package_bedroom_annex2_settings: !include packages/bedroom-annex2/settings.yaml
-
-    package_google_assistant_demo: !include packages/google-assistant-demo.yaml
+    package_bedroom_annex2_voice_control: !include packages/bedroom-annex2/voice-control.yaml
 
     #package_room: !include packages/room/package.yaml
 
@@ -160,13 +171,10 @@ tado:
   username: !secret tado_username
   password: !secret tado_password
 
-emulated_hue: !include emulated_hue.yaml
-
 notify: !include_dir_merge_list notify
 ios:
 tts: !include tts.yaml
 
-#scene: !include_dir_merge_list scenes
 automation: !include_dir_merge_list automation
 
 group: !include groups.yaml

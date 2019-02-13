@@ -37,9 +37,6 @@ group.settings:
 
 group.all_lights:
   icon: mdi:lightbulb-on
-  emulated_hue: true
-group.all_switches:
-  emulated_hue: true
 
 group.mark_present:
   entity_picture: /local/wb-icons/wb_mark.png
@@ -105,9 +102,6 @@ sensor.main_heating_thermostat_battery:
 sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
-
-script.hue_everything_off:
-  friendly_name: "Everything Off"
 
 # Place guest room last
 group.bedroom_mark_compact_ui:

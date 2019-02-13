@@ -1,0 +1,57 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.study_thermostat:
+      name: "Study Thermostat"
+      <<: &ga_study_expose
+        expose: true
+        room: "Study"
+
+    group.study_lights:
+      name: "Study Lights"
+      <<: *ga_study_expose
+
+    script.voice_study_off:
+      name: "Study Shutdown"
+      <<: *ga_study_expose
+    script.voice_study_cosy:
+      name: "Study Mode Cosy"
+      <<: *ga_study_expose
+    script.voice_study_bright:
+      name: "Study Mode Bright"
+      <<: *ga_study_expose
+    script.voice_study_work:
+      name: "Study Mode Work"
+      <<: *ga_study_expose
+
+script:
+  voice_study_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.study_mode
+          option: "Off"
+
+  voice_study_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.study_mode
+          option: "Cosy"
+
+  voice_study_bright:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.study_mode
+          option: "Bright"
+
+  voice_study_work:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.study_mode
+          option: "Work"
+

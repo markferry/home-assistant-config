@@ -32,7 +32,3 @@ customize:
     min_temp: 5
     max_temp: 25
 
-  script.hue_annex_hall_thermostat:
-    friendly_name: Annex Hall Thermostat
-  script.hue_hall_thermostat:
-    friendly_name: Hall Thermostat
