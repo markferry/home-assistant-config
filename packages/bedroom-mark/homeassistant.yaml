@@ -6,7 +6,6 @@ customize:
 
   group.bedroom_mark_lights:
     icon: mdi:lightbulb-on
-    emulated_hue: true
 
   light.bedroom_mark_overhead_level:
     friendly_name: "Mark's Bedroom Overhead"
@@ -32,16 +31,6 @@ customize:
     min_temp: 5
     max_temp: 25
 
-
-  script.hue_bedroom_mark_thermostat:
-    friendly_name: "Mark's Bedroom Thermostat"
-
-  script.hue_bedroom_mark_off:
-    friendly_name: "Mark's Bedroom"
-  script.hue_bedroom_mark_sleep:
-    friendly_name: "Mark's Bedroom Mode Sleep"
-  script.hue_bedroom_mark_play:
-    friendly_name: "Mark's Bedroom Mode Play"
 
   switch.bedroom_mark_demand:
     friendly_name: "Mark's Bedroom Demand"

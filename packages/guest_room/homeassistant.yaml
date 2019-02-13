@@ -8,16 +8,6 @@ customize:
     friendly_name: "Guest Room Battery"
     icon: mdi:battery
 
-  script.hue_guest_room_thermostat:
-    friendly_name: "Guest Room Thermostat"
-
-  script.hue_guest_room_off:
-    friendly_name: "Guest Room"
-  script.hue_guest_room_sleep:
-    friendly_name: "Guest Room Mode Sleep"
-  script.hue_guest_room_cosy:
-    friendly_name: "Guest Room Mode Cosy"
-
   climate.guest_room_heat:
     friendly_name: Guest Room
     min_temp: 8

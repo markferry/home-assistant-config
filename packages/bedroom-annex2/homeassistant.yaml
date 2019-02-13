@@ -11,13 +11,3 @@ customize:
     min_temp: 5
     max_temp: 25
 
-  script.hue_bedroom_annex2_thermostat:
-    friendly_name: "Annex Bedroom 2 Thermostat"
-
-  script.hue_bedroom_annex2_off:
-    friendly_name: "Annex Bedroom 2"
-  script.hue_bedroom_annex2_sleep:
-    friendly_name: "Annex Bedroom 2 Mode Sleep"
-  script.hue_bedroom_annex2_cosy:
-    friendly_name: "Annex Bedroom 2 Mode Cosy"
-

@@ -1,0 +1,57 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.ballroom_thermostat:
+      name: "Ballroom Thermostat"
+      <<: &ga_ballroom_expose
+        expose: true
+        room: "Ballroom"
+
+    group.ballroom_lights:
+      name: "Ballroom Lights"
+      <<: *ga_ballroom_expose
+
+    script.voice_ballroom_off:
+      name: "Ballroom Shutdown"
+      <<: *ga_ballroom_expose
+    script.voice_ballroom_party:
+      name: "Ballroom Party Mode"
+      <<: *ga_ballroom_expose
+    script.voice_ballroom_bright:
+      name: "Ballroom Bright Mode"
+      <<: *ga_ballroom_expose
+    script.voice_ballroom_movie:
+      name: "Ballroom Movie Mode"
+      <<: *ga_ballroom_expose
+
+script:
+  voice_ballroom_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.ballroom_mode
+          option: "Off"
+
+  voice_ballroom_party:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.ballroom_mode
+          option: "Party"
+
+  voice_ballroom_bright:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.ballroom_mode
+          option: "Bright"
+
+  voice_ballroom_movie:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.ballroom_mode
+          option: "Movie"
+

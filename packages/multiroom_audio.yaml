@@ -3,7 +3,6 @@ homeassistant:
     script.all_rooms_audio:
       friendly_name: Music Everywhere
       icon: mdi:music-box-outline
-      emulated_hue: true
     media_player.mpd:
       friendly_name: "Iris Media Player"
       icon: mdi:speaker-wireless

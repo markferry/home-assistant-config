@@ -1,14 +1,4 @@
 customize:
-  script.hue_bedroom_jerome_thermostat:
-    friendly_name: "Jerome's Bedroom Thermostat"
-
-  script.hue_bedroom_jerome_off:
-    friendly_name: "Jerome's Bedroom"
-  script.hue_bedroom_jerome_sleep:
-    friendly_name: "Jerome's Bedroom Mode Sleep"
-  script.hue_bedroom_jerome_cosy:
-    friendly_name: "Jerome's Bedroom Mode Cosy"
-
   # Tado sensors
   climate.j_s_bedroom:
     friendly_name: "Jerome's Bedroom"

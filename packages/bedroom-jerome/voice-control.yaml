@@ -1,0 +1,47 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.bedroom_jerome_thermostat:
+      name: "Jerome's Bedroom Thermostat"
+      <<: &ga_bedroom_jerome_expose
+        expose: true
+        room: "Jerome's Bedroom"
+
+    group.bedroom_jerome_lights:
+      name: "Jerome's Bedroom Lights"
+      <<: *ga_bedroom_jerome_expose
+
+    script.voice_bedroom_jerome_off:
+      name: "Jerome's Bedroom Shutdown"
+      <<: *ga_bedroom_jerome_expose
+    script.voice_bedroom_jerome_cosy:
+      name: "Jerome's Bedroom Cosy Mode"
+      <<: *ga_bedroom_jerome_expose
+    script.voice_bedroom_jerome_sleep:
+      name: "Jerome's Bedroom Sleep Mode"
+      <<: *ga_bedroom_jerome_expose
+
+script:
+  voice_bedroom_jerome_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_jerome_mode
+          option: "Off"
+
+  voice_bedroom_jerome_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_jerome_mode
+          option: "Cosy"
+
+  voice_bedroom_jerome_sleep:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_jerome_mode
+          option: "Sleep"
+
