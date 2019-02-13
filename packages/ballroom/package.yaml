@@ -1,10 +1,147 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-scene: !include scenes.yaml
-script: !include_dir_merge_named scripts
-sensor: !include sensors.yaml
-switch: !include switches.yaml
+#
+# Ballroom
+#
+
+homeassistant:
+  customize:
+    sensor.ballroom_east_temperature:
+      friendly_name: Ballroom East
+    sensor.ballroom_east_battery:
+      friendly_name: Ballroom East Battery
+      icon: mdi:battery
+
+    switch.greenwave_powernode_62_switch:
+      friendly_name: Ballroom Disco Light
+      entity_picture: /local/wb-icons/ext_mirrorball.png
+
+    climate.ballroom_east_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+    media_player.txnr636_0009b09961fb:
+      friendly_name: Ballroom Amplifier
+
+group:
+  ballroom:
+    name: Ballroom
+    view: true
+    icon: mdi:projector
+    entities:
+    - sensor.ballroom_temperature
+    - group.ballroom_compact_ui
+    - media_player.ballroom
+    - media_player.ballroom_amplifier
+
+  ballroom_compact_ui:
+    name: Ballroom
+    view: false
+    icon: mdi:projector
+    control: hidden
+    entities:
+    - input_select.ballroom_mode
+    - climate.ballroom_thermostat
+    - group.ballroom_party_lights
+    - group.g_ballroom_media_dimming
+    - group.g_ballroom_settings_ui
+
+  ballroom_setpoints:
+    name: Ballroom Setpoints
+    view: false
+    entities:
+    - climate.ballroom_east_comfort_setpoint
+
+  ballroom_lights:
+    name: Ballroom Lights
+    icon: mdi:lightbulb-on
+    view: false
+
+  ballroom_party_lights:
+    name: Ballroom Party Lights
+    view: false
+    icon: mdi:lightbulb-on
+    entities:
+    - switch.greenwave_powernode_62_switch
+
+scene:
+  - name: ballroom_off
+    entities:
+      group.ballroom_lights:
+        state: off
+      group.ballroom_party_lights:
+        state: off
+      media_player.ballroom:
+        state: paused
+      media_player.ballroom_amplifier:
+        state: off
+      media_player.snapcast_client_ballroom:
+        is_volume_muted: true
+
+  - name: ballroom_party
+    entities:
+      group.ballroom_lights:
+        state: on
+        brightness_pct: 20
+      group.ballroom_party_lights:
+        state: on
+
+  - name: ballroom_movie
+    entities:
+      group.ballroom_lights:
+        state: off
+      group.ballroom_party_lights:
+        state: off
+
+  - name: ballroom_bright
+    entities:
+      group.ballroom_lights:
+        state: on
+        brightness_pct: 100
+      group.ballroom_party_lights:
+        state: off
+
+sensor:
+  - platform: template
+    sensors:
+      ballroom_east_battery:
+        value_template: >
+          {% if states.zwave.ballroom_east %}
+            {{ states.zwave.ballroom_east.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.ballroom_east
+
+switch:
+  - name: Ballroom Demand
+    platform: mqtt
+    command_topic: ha/ballroom/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+media_player:
+  - name: Ballroom
+    platform: kodi
+    host: ballroom
+    port: 80
+
+  - name: Ballroom Amplifier
+    platform: onkyo
+    host: ballroom-amp
+    sources:
+      #dvd: 'BD/DVD'
+      video2: 'TV'
+      video1: 'Media'
+      #video3: 'Game'
+      video6: 'Aux Cable'
+      #aux1: 'Ext Aux'
+      #cd: 'Analog TV'
+      #phono: 'Phono' # -> needs onkyo fix
+      fm: 'FM' # -> needs onkyo fix
+      am: 'AM' # -> needs onkyo fix
+      network: 'Network'
+      usb: 'USB'
+
 #automation: !include_dir_merge_list automations
-media_player: !include media_players.yaml
+#script: !include_dir_merge_named scripts

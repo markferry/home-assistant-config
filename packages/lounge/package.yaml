@@ -1,10 +1,111 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-scene: !include scenes.yaml
-script: !include_dir_merge_named scripts
-sensor: !include sensors.yaml
-switch: !include switches.yaml
+#
+# Lounge
+#
+
+homeassistant:
+  customize:
+    group.lounge_lights:
+      icon: mdi:lightbulb-on
+
+    sensor.lounge_east_temperature:
+      friendly_name: Lounge East
+    sensor.lounge_east_battery:
+      friendly_name: Lounge East Battery
+      icon: mdi:battery
+
+    climate.lounge_east_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+group:
+  lounge:
+    name: Lounge
+    view: true
+    icon: mdi:sofa
+    entities:
+    - sensor.lounge_temperature
+    - group.lounge_compact_ui
+    - media_player.lounge
+
+  lounge_compact_ui:
+    name: Lounge
+    view: false
+    icon: mdi:sofa
+    entities:
+    - input_select.lounge_mode
+    - climate.lounge_thermostat
+    - group.lounge_lights
+    - group.g_lounge_media_dimming
+    - group.g_lounge_settings_ui
+
+  lounge_setpoints:
+    name: Lounge Setpoints
+    view: false
+    entities:
+    - climate.lounge_east_comfort_setpoint
+
+  lounge_lights:
+    entities:
+    - light.lounge_east
+    - light.lounge_north
+    - light.lounge_west
+    name: Lounge Lights
+    view: false
+
+scene:
+  - name: lounge_off
+    entities:
+      group.lounge_lights:
+        state: off
+      media_player.lounge:
+        state: paused
+      media_player.snapcast_client_lounge:
+        is_volume_muted: true
+
+  - name: lounge_cosy
+    entities:
+      group.lounge_lights:
+        state: on
+        brightness_pct: 20
+
+  - name: lounge_bright
+    entities:
+      group.lounge_lights:
+        state: on
+        brightness_pct: 100
+
+  - name: lounge_movie
+    entities:
+      group.lounge_lights:
+        state: on
+        brightness_pct: 50
+
+sensor:
+  - platform: template
+    sensors:
+      lounge_east_battery:
+        value_template: >
+          {% if states.zwave.lounge_east %}
+            {{ states.zwave.lounge_east.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.lounge_east
+
+switch:
+  - name: Lounge East Demand
+    platform: mqtt
+    command_topic: ha/lounge/east/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+media_player:
+  - name: Lounge
+    platform: kodi
+    host: lounge
+    port: 80
+
+#script: !include_dir_merge_named scripts
 #automation: !include_dir_merge_list automations
-media_player: !include media_players.yaml

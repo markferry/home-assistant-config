@@ -1,10 +1,96 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-scene: !include scenes.yaml
-script: !include_dir_merge_named scripts
-sensor: !include sensors.yaml
-#switch: !include switches.yaml
+#
+# Library
+#
+
+homeassistant:
+  customize:
+    sensor.library_temperature:
+      friendly_name: Library
+    sensor.library_battery:
+      friendly_name: Library Battery
+      icon: mdi:battery
+
+    climate.library_thermostat:
+      friendly_name: Library
+    climate.library_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+group:
+  library:
+    name: Library
+    view: true
+    icon: mdi:library
+    entities:
+    - sensor.library_mean_temperature
+    - group.library_compact_ui
+    - media_player.library
+
+  library_compact_ui:
+    name: Library
+    view: false
+    icon: mdi:library
+    entities:
+    - input_select.library_mode
+    - climate.library_thermostat
+    - group.g_library_settings_ui
+
+  library_setpoints:
+    name: Library Setpoints
+    view: false
+    entities:
+    - climate.library_comfort_setpoint
+
+  library_lights:
+    name: Library Lights
+    view: false
+
+scene:
+  - name: library_off
+    entities:
+      group.library_lights:
+        state: off
+      media_player.library:
+        state: paused
+      media_player.snapcast_client_library:
+        is_volume_muted: true
+
+  - name: library_cosy
+    entities:
+      group.library_lights:
+        state: on
+        brightness_pct: 50
+
+  - name: library_bright
+    entities:
+      group.library_lights:
+        state: on
+        brightness_pct: 100
+
+  - name: library_read
+    entities:
+      group.library_lights:
+        state: on
+        brightness_pct: 100
+
+sensor:
+  - platform: template
+    sensors:
+      library_battery:
+        value_template: >
+          {% if states.zwave.library %}
+            {{ states.zwave.library.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.library
+
+media_player:
+  - name: library
+    platform: volumio
+    host: library
+    port: 3000
+
 #automation: !include_dir_merge_list automations
-media_player: !include media_players.yaml
+#script: !include_dir_merge_named scripts
