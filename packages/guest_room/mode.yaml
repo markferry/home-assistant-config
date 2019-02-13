@@ -10,8 +10,8 @@ input_select:
     name: Guest Room Mode
     options:
       - 'Off'
-      - 'Sleep'
       - 'Cosy'
+      - 'Sleep'
       - 'Manual'
     initial: 'Off'
     icon: mdi:hotel
@@ -19,30 +19,23 @@ input_select:
 input_number:
   guest_room_temperature_off:
     name: 'Off Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 8
-    max: 25
     initial: 8
-    step: 1
-
-  guest_room_temperature_sleep:
-    name: 'Sleep Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 8
-    max: 25
-    initial: 15
-    step: 1
+    <<: &guest_room_temp_defaults
+      icon: mdi:thermostat
+      unit_of_measurement: "\xB0C"
+      min: 8
+      max: 25
+      step: 1
 
   guest_room_temperature_cosy:
     name: 'Cosy Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 8
-    max: 25
     initial: 20
-    step: 1
+    <<: *guest_room_temp_defaults
+
+  guest_room_temperature_sleep:
+    name: 'Sleep Temp'
+    initial: 15
+    <<: *guest_room_temp_defaults
 
 automation:
   - alias: guest_room_revert_to_manual

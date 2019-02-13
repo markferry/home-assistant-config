@@ -20,39 +20,28 @@ input_select:
 input_number:
   library_temperature_off:
     name: 'Off Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 10
-    step: 1
+    <<: &library_temp_defaults
+      icon: mdi:thermostat
+      unit_of_measurement: "\xB0C"
+      min: 5
+      max: 25
+      step: 1
 
   library_temperature_cosy:
     name: 'Cosy Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 22
-    step: 1
+    <<: *library_temp_defaults
 
   library_temperature_bright:
     name: 'Bright Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *library_temp_defaults
 
   library_temperature_read:
     name: 'Read Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 22
-    step: 1
+    <<: *library_temp_defaults
 
 automation:
   - alias: library_revert_to_manual

@@ -20,39 +20,28 @@ input_select:
 input_number:
   study_temperature_off:
     name: 'Off Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 10
-    step: 1
+    <<: &study_temp_defaults
+      icon: mdi:thermostat
+      unit_of_measurement: "\xB0C"
+      min: 5
+      max: 25
+      step: 1
 
   study_temperature_cosy:
     name: 'Cosy Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 22
-    step: 1
+    <<: *study_temp_defaults
 
   study_temperature_bright:
     name: 'Bright Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *study_temp_defaults
 
   study_temperature_work:
     name: 'Work Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *study_temp_defaults
 
 automation:
   - alias: study_revert_to_manual
