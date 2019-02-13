@@ -1,4 +1,0 @@
-- name: library
-  platform: volumio
-  host: library
-  port: 3000

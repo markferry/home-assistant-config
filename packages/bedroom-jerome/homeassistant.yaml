@@ -1,8 +1,0 @@
-customize:
-  # Tado sensors
-  climate.j_s_bedroom:
-    friendly_name: "Jerome's Bedroom"
-  sensor.js_bedroom_humidity:
-    friendly_name: "Jerome's Bedroom Humidity"
-  sensor.js_bedroom_temperature:
-    friendly_name: "Jerome's Bedroom"

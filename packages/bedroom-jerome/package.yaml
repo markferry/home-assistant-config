@@ -1,10 +1,95 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-scene: !include scenes.yaml
-script: !include_dir_merge_named scripts
-sensor: !include sensors.yaml
-switch: !include switches.yaml
+#
+# Bedroom Jerome
+#
+
+homeassistant:
+  customize:
+    # Tado sensors
+    climate.j_s_bedroom:
+      friendly_name: "Jerome's Bedroom"
+    sensor.js_bedroom_humidity:
+      friendly_name: "Jerome's Bedroom Humidity"
+    sensor.js_bedroom_temperature:
+      friendly_name: "Jerome's Bedroom"
+
+group:
+  bedroom_jerome:
+    name: "Jerome's Bedroom"
+    icon: mdi:hotel
+    #view: true
+    entities:
+    - group.bedroom_jerome_compact_ui
+
+  bedroom_jerome_compact_ui:
+    name: "Jerome's Bedroom"
+    view: false
+    entities:
+    - input_select.bedroom_jerome_mode
+    - climate.j_s_bedroom
+    - group.g_bedroom_jerome_settings_ui
+    - media_player.jeromes_bedroom
+
+  bedroom_jerome_setpoints:
+    name: "Jerome's Bedroom Setpoints"
+    view: false
+    entities:
+    - climate.j_s_bedroom
+
+  bedroom_jerome_media_players:
+    view: false
+    entities:
+    - media_player.jeromes_bedroom
+    - media_player.bedroom_speaker
+
+scene:
+  - name: bedroom_jerome_off
+    entities:
+      group.bedroom_jerome_lights:
+        state: off
+      switch.bedroom_jerome_appliances:
+        state: off
+      media_player.jeromes_tablet:
+        state: paused
+
+  - name: bedroom_jerome_sleep
+    entities:
+      group.bedroom_jerome_lights:
+        state: off
+
+  - name: bedroom_jerome_cosy
+    entities:
+      group.bedroom_jerome_lights:
+        state: on
+
+sensor:
+  - platform: template
+    sensors:
+      bedroom_jerome_battery:
+        value_template: >
+          {% if states.zwave.bedroom_jerome %}
+            {{ states.zwave.bedroom_jerome.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.bedroom_jerome
+
+switch:
+  - name: js_bedroom_demand
+    platform: mqtt
+    command_topic: ha/bedroom-jerome/js_bedroom/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+media_player:
+  # Google Home Max
+  - name: jeromes_bedroom
+    platform: cast
+
+  # Chromecast?
+  - name: bedroom_speaker
+    platform: cast
+
 automation: !include_dir_merge_list automations
-media_player: !include media_players.yaml
+#script: !include_dir_merge_named scripts

@@ -42,7 +42,7 @@ homeassistant:
 
     package_lounge: !include packages/lounge/package.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
-    package_lounge_media_dimming: !include packages/lounge-media-dimming.yaml
+    package_lounge_media_dimming: !include packages/lounge/media-dimming.yaml
     package_lounge_mode: !include packages/lounge/mode.yaml
     package_lounge_settings: !include packages/lounge/settings.yaml
     package_lounge_voice_control: !include packages/lounge/voice-control.yaml
@@ -55,7 +55,7 @@ homeassistant:
 
     package_ballroom: !include packages/ballroom/package.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
-    package_ballroom_media_dimming: !include packages/ballroom-media-dimming.yaml
+    package_ballroom_media_dimming: !include packages/ballroom/media-dimming.yaml
     package_ballroom_mode: !include packages/ballroom/mode.yaml
     package_ballroom_settings: !include packages/ballroom/settings.yaml
     package_ballroom_voice_control: !include packages/ballroom/voice-control.yaml
@@ -70,7 +70,7 @@ homeassistant:
 
     package_bedroom_mark: !include packages/bedroom-mark/package.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
-    package_bedroom_mark_media_dimming: !include packages/bedroom-mark-media-dimming.yaml
+    package_bedroom_mark_media_dimming: !include packages/bedroom-mark/media-dimming.yaml
     package_bedroom_mark_mode: !include packages/bedroom-mark/mode.yaml
     package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
     package_bedroom_mark_voice_control: !include packages/bedroom-mark/voice-control.yaml

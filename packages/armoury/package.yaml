@@ -1,8 +1,111 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-#scene: !include scenes.yaml
-sensor: !include sensors.yaml
-#switch: !include switches.yaml
+#
+# Armoury
+#
+
+homeassistant:
+  customize:
+    sensor.cm2_temp_c:
+      friendly_name: Temperature
+    sensor.cm2_humidity:
+      friendly_name: Humidity
+      icon: mdi:water-percent
+    sensor.cm2_light:
+      friendly_name: Luminance
+      icon: mdi:weather-sunny
+    sensor.cm2_airflow:
+      friendly_name: Airflow
+      icon: mdi:weather-windy
+    sensor.cm2_sound:
+      friendly_name: Sound Level
+      icon: mdi:microphone
+    sensor.cm2_dew_point_c:
+      friendly_name: Dew Point
+      icon: mdi:weather-rainy
+
+    sensor.eaton_ups_status:
+      friendly_name: UPS Status
+    sensor.eaton_ups_load:
+      friendly_name: UPS Load
+    sensor.eaton_battery_charge:
+      friendly_name: UPS Charge
+    sensor.eaton_ups_battery_runtime:
+      friendly_name: UPS Runtime
+
+group:
+  armoury:
+    name: Armoury
+    view: true
+    icon: mdi:security
+    entities:
+      - sensor.cm2_temp_c
+      - sensor.cm2_humidity
+      - sensor.cm2_light
+      - sensor.cm2_airflow
+      - sensor.cm2_sound
+      - sensor.cm2_dew_point_c
+      - group.network
+      - group.ups
+      - group.g_modem_0
+
+  ups:
+    name: UPS
+    icon: mdi:car-battery
+    entities:
+    - sensor.eaton_ups_status_data
+    - sensor.eaton_ups_load
+    - sensor.eaton_ups_battery_charge
+    - sensor.eaton_ups_battery_runtime
+
+  cm2_climate_monitor:
+    name: Server Climate Monitor
+    entities:
+    - sensor.cm2_temp_c
+    - sensor.cm2_humidity
+    - sensor.cm2_light
+    - sensor.cm2_airflow
+    - sensor.cm2_sound
+    - sensor.cm2_dew_point_c
+
+sensor:
+  #
+  # SNMP sensors for CliMate CM-2 monitor
+  #
+  - name: cm2_temp_c
+    platform: snmp
+    host: climate
+    baseoid: 1.3.6.1.4.1.17373.3.2.1.5.1
+    unit_of_measurement: "\xB0C"
+
+  - name: cm2_humidity
+    platform: snmp
+    host: climate
+    baseoid: 1.3.6.1.4.1.17373.3.2.1.7.1
+    unit_of_measurement: '%'
+
+  - name: cm2_light
+    platform: snmp
+    host: climate
+    baseoid: 1.3.6.1.4.1.17373.3.2.1.8.1
+    unit_of_measurement: '%'
+
+  - name: cm2_airflow
+    platform: snmp
+    host: climate
+    baseoid: 1.3.6.1.4.1.17373.3.2.1.9.1
+    unit_of_measurement: '%'
+
+  - name: cm2_sound
+    platform: snmp
+    host: climate
+    baseoid: 1.3.6.1.4.1.17373.3.2.1.10.1
+    unit_of_measurement: '%'
+
+  - name: cm2_dew_point_c
+    platform: snmp
+    host: climate
+    baseoid: 1.3.6.1.4.1.17373.3.2.1.14.1
+    unit_of_measurement: "\xB0C"
+
 automation: !include_dir_merge_list automations
+#script: !include_dir_merge_named scripts
+

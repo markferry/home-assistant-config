@@ -1,9 +1,75 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-scene: !include scenes.yaml
-script: !include_dir_merge_named scripts
-sensor: !include sensors.yaml
-#switch: !include switches.yaml
+#
+# Guest Room
+#
+
+homeassistant:
+  customize:
+    automation.guest_room_sleep_time:
+      friendly_name: "Guest Room Sleep Time"
+    automation.guest_room_off_time:
+      friendly_name: "Guest Room Off Time"
+
+    sensor.guest_room_battery:
+      friendly_name: "Guest Room Battery"
+      icon: mdi:battery
+
+    climate.guest_room_heat:
+      friendly_name: Guest Room
+      min_temp: 8
+      max_temp: 25
+
+group:
+  guest_room:
+    name: Guest Room
+    icon: mdi:hotel
+    view: false
+    entities:
+    - sensor.guest_room_mean_temperature
+    - group.guest_room_compact_ui
+
+  guest_room_compact_ui:
+    name: Guest Room
+    view: false
+    icon: mdi:hotel
+    entities:
+    - input_select.guest_room_mode
+    - climate.guest_room_thermostat
+    - group.g_guest_room_settings_ui
+
+  guest_room_setpoints:
+    name: Guest Room Setpoints
+    view: false
+    entities:
+    - climate.guest_room_heat
+
+scene:
+  - name: guest_room_off
+    entities:
+      group.guest_room_lights:
+        state: off
+
+  - name: guest_room_sleep
+    entities:
+      group.guest_room_lights:
+        state: off
+
+  - name: guest_room_cosy
+    entities:
+      group.guest_room_lights:
+        state: on
+
+sensor:
+  - platform: template
+    sensors:
+      guest_room_battery:
+        value_template: >
+          {% if states.zwave.guest_room %}
+            {{ states.zwave.guest_room.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.guest_room
+
 #automation: !include_dir_merge_list automations
+#script: !include_dir_merge_named scripts

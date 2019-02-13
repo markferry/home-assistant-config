@@ -1,10 +1,153 @@
-homeassistant: !include homeassistant.yaml
-group: !include groups.yaml
-#climate: !include climate.yaml
-#input_select: !include input_select.yaml
-#scene: !include scenes.yaml
-script: !include_dir_merge_named scripts
-sensor: !include sensors.yaml
-switch: !include switches.yaml
+#
+# Hall
+#
+
+homeassistant:
+  customize:
+    sensor.hall_west_temperature:
+      friendly_name: Hall West
+    sensor.hall_east_temperature:
+      friendly_name: Hall East
+    sensor.annex_hall_temperature:
+      friendly_name: Annex Hall
+    sensor.hall_west_battery:
+      friendly_name: Hall West Battery
+      icon: mdi:battery
+    sensor.hall_east_battery:
+      friendly_name: Hall East Battery
+      icon: mdi:battery
+    sensor.annex_hall_battery:
+      friendly_name: Annex Hall Battery
+      icon: mdi:battery
+
+    climate.hall_west_thermostat:
+      friendly_name: Hall West
+    climate.hall_east_thermostat:
+      friendly_name: Hall East
+    climate.annex_hall_thermostat:
+      friendly_name: Annex Hall
+
+    climate.hall_west_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+    climate.hall_east_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+    climate.annex_hall_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+group:
+  hall:
+    name: Hall
+    view: true
+    icon: mdi:fullscreen-exit
+    entities:
+    - binary_sensor.aeotec_dsb05_multisensor_sensor
+    - sensor.aeotec_dsb05_multisensor_luminance
+    - sensor.aeotec_dsb05_multisensor_relative_humidity
+    - sensor.aeotec_dsb05_multisensor_temperature
+    - sensor.hall_temperature
+    - sensor.annex_hall_mean_temperature
+    #
+    - group.hall_compact_ui
+    - group.hall_lights
+    - group.main_heating
+    - group.annex_heating
+    - group.g_hottub
+    - group.g_oil_tanks
+    - media_player.outside_amplifier
+
+  hall_compact_ui:
+    name: Hall
+    view: false
+    icon: mdi:fullscreen-exit
+    entities:
+    - climate.hall_thermostat
+    - climate.annex_hall_thermostat
+
+  hall_setpoints:
+    name: Hall Setpoints
+    view: false
+    entities:
+    - climate.hall_west_comfort_setpoint
+    - climate.hall_east_comfort_setpoint
+    - climate.annex_hall_comfort_setpoint
+
+  hall_lights:
+    name: Hall Lights
+    view: false
+
+#scene:
+
+sensor:
+  - platform: template
+    sensors:
+      hall_east_battery:
+        value_template: >
+          {% if states.zwave.hall_east %}
+            {{ states.zwave.hall_east.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.hall_east
+
+      hall_west_battery:
+        value_template: >
+          {% if states.zwave.hall_west %}
+            {{ states.zwave.hall_west.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.hall_west
+
+      annex_hall_battery:
+        value_template: >
+          {% if states.zwave.annex_hall %}
+            {{ states.zwave.annex_hall.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.annex_hall
+
+switch:
+  # Now for supporting mock thermostats only.
+  #  Remove when mock thermostats move to mqtt hvac
+  - name: hall_west_demand
+    platform: mqtt
+    command_topic: ha/hall/west/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+  - name: hall_east_demand
+    platform: mqtt
+    command_topic: ha/hall/east/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+media_player:
+  - name: Outside Amplifier
+    platform: onkyo
+    host: utility-amp
+    sources:
+      #dvd: 'BD/DVD'
+      video1: 'Media' # STB/DVR
+      #video2: 'CBL/SAT' # Cable/SAT
+      #video3: 'Game'
+      #video6: 'PC' # PC
+      #aux1: 'Ext Aux'
+      cd: 'Kitchen Media'
+      phono: 'Aux'
+      fm: 'FM' # -> needs onkyo fix
+      am: 'AM' # -> needs onkyo fix
+      network: 'Network'
+      usb: 'USB'
+    zone2: true  # kitchen amp from v0.68 onwards
+
 #automation: !include_dir_merge_list automations
-media_player: !include media_players.yaml
+#script: !include_dir_merge_named scripts
