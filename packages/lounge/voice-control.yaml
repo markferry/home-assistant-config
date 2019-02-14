@@ -26,6 +26,10 @@ google_assistant:
       name: "Lounge Mode Movie"
       <<: *ga_lounge_expose
 
+    media_player.snapcast_client_lounge:
+      name: "Lounge Snapcast"
+      <<: *ga_lounge_expose
+
 script:
   voice_lounge_off:
       sequence:
