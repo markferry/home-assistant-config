@@ -26,6 +26,10 @@ google_assistant:
       name: "Study Mode Work"
       <<: *ga_study_expose
 
+    media_player.snapcast_client_study:
+      name: "Study Snapcast"
+      <<: *ga_study_expose
+
 script:
   voice_study_off:
       sequence:

@@ -23,6 +23,15 @@ google_assistant:
       name: "Kitchen Bright Mode"
       <<: *ga_kitchen_expose
 
+    media_player.snapcast_client_kitchen_2:
+      name: "Kitchen Snapcast"
+      <<: *ga_kitchen_expose
+
+    media_player.snapcast_client_outside:
+      name: "Outside Snapcast"
+      expose: true
+      room: "Outside"
+
 script:
   voice_kitchen_off:
       sequence:

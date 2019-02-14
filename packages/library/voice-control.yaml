@@ -26,6 +26,10 @@ google_assistant:
       name: "Library Mode Read"
       <<: *ga_library_expose
 
+    media_player.snapcast_client_library:
+      name: "Library Snapcast"
+      <<: *ga_library_expose
+
 script:
   voice_library_off:
       sequence:
