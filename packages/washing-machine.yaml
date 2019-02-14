@@ -9,7 +9,6 @@ binary_sensor:
   state_topic: ha/event/washing-machine
   payload_on: 'on'
   payload_off: 'off'
-  initial: off
 
 # Debouncing for washing-machine power monitor
 # Trigger corresponding binary_sensor via automation+mqtt
@@ -33,6 +32,7 @@ homeassistant:
     binary_sensor.washing_machine:
       friendly_name: Washing Machine
       icon: mdi:washing-machine
+      initial_state: off
 
 
 group:
