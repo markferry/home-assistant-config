@@ -1,5 +1,58 @@
-name: "Mark"
-entities:
-- device_tracker.mark_phone
-- device_tracker.mark_moto_g5
-- device_tracker.mark_moto_g5_bt
+homeassistant:
+  customize:
+    group.mark_present:
+      entity_picture: &ep /local/wb-icons/wb_mark.png
+    binary_sensor.mark_present:
+      entity_picture: *ep
+    device_tracker.mark_phone:
+      entity_picture: *ep
+      friendly_name: "Mark Owntracks"
+
+group:
+  mark_present:
+    name: "Mark"
+    entities: &presence_entities
+      - device_tracker.mark_phone
+      - device_tracker.mark_moto_g5
+      - device_tracker.mark_moto_g5_bt
+
+binary_sensor:
+  - name: mark_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      # OwnTracks
+      - entity_id: device_tracker.mark_phone
+        prob_given_true: 0.5
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.mark_moto_g5
+        prob_given_true: 0.8
+        # Never leave the house without my phone
+        prob_given_false: 0.05
+        <<: *tracker_default
+
+      - entity_id: device_tracker.mark_moto_g5_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.05
+        <<: *tracker_default
+
+      - entity_id: device_tracker.canard
+        prob_given_true: 0.5
+        prob_given_false: 0.3
+        <<: *tracker_default
+
+      - entity_id: device_tracker.canard_wired
+        prob_given_true: 0.2
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: group.bedroom_mark_lights
+        prob_given_true: 0.4
+        prob_given_false: 0.1
+        <<: *tracker_default

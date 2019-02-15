@@ -1,7 +1,54 @@
-name: "Tom"
-entities:
-- device_tracker.thomas_phone
-- device_tracker.thomas_iphone
-- device_tracker.thomas_mbp
-- device_tracker.thomas_mbp_bt
-- device_tracker.thomas_cmtcd
+homeassistant:
+  customize:
+    group.thomas_present:
+      entity_picture: &ep /local/wb-icons/wb_tom.png
+    binary_sensor.thomas_present:
+      entity_picture: *ep
+    device_tracker.thomas_phone:
+      entity_picture: *ep
+      friendly_name: "Tom Owntracks"
+
+group:
+  thomas_present:
+    name: "Tom"
+    entities: &presence_entities
+      - device_tracker.thomas_phone
+      - device_tracker.thomas_iphone
+      - device_tracker.thomas_mbp
+      - device_tracker.thomas_mbp_bt
+      - device_tracker.thomas_cmtcd
+
+binary_sensor:
+  - name: thomas_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      # Owntracks
+      - entity_id: device_tracker.thomas_phone
+        prob_given_true: 0.4
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.thomas_iphone
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.thomas_mbp
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.thomas_mbp_bt
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.thomas_cmtcd
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default

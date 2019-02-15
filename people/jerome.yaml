@@ -1,12 +1,66 @@
-name: "Jerome"
-control: hidden
-entities:
-- device_tracker.jerome_phone
-- device_tracker.jerome_android
-- device_tracker.jeromes_phone
-#- device_tracker.jerome_android_bt
-#- device_tracker.jdilley_macbookpro
-#- device_tracker.jdilley_macbookpro_wired
-- device_tracker.jerome_asus
-- device_tracker.jerome_asus_bt
-#- sensor.js_bedroom_present
+homeassistant:
+  customize:
+    group.jerome_present:
+      entity_picture: &ep /local/wb-icons/wb_jerome.png
+    binary_sensor.jerome_present:
+      entity_picture: *ep
+    device_tracker.jerome_phone:
+      entity_picture: *ep
+      friendly_name: "Jerome Owntracks"
+
+group:
+  jerome_present:
+    name: "Jerome"
+    entities: &presence_entities
+      - device_tracker.jerome_phone
+      - device_tracker.jerome_android
+      - device_tracker.jeromes_phone
+        #- device_tracker.jerome_android_bt
+        #- device_tracker.jdilley_macbookpro
+        #- device_tracker.jdilley_macbookpro_wired
+      - device_tracker.jerome_asus
+      - device_tracker.jerome_asus_bt
+      - sensor.js_bedroom_present
+
+binary_sensor:
+  - name: jerome_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      # Owntracks
+      - entity_id: device_tracker.jerome_phone
+        prob_given_true: 0.4
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.jerome_android
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.jeromes_phone
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+        #- entity_id: device_tracker.jerome_android_bt
+        #- entity_id: device_tracker.jdilley_macbookpro
+        #- entity_id: device_tracker.jdilley_macbookpro_wired
+
+      - entity_id: device_tracker.jerome_asus
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.jerome_asus_bt
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: sensor.js_bedroom_present
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default

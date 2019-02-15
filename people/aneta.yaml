@@ -1,5 +1,44 @@
-name: "Aneta"
-entities:
-- device_tracker.aneta_iphone
-- device_tracker.aneta_iphone_bt
-- device_tracker.aneta_camajakielas2
+homeassistant:
+  customize:
+    group.aneta_present:
+      entity_picture: &ep /local/wb-icons/wb_aneta.png
+    binary_sensor.aneta_present:
+      entity_picture: *ep
+
+group:
+  aneta_present:
+    name: "Aneta"
+    entities: &presence_entities
+      - device_tracker.aneta_iphone
+      - device_tracker.aneta_iphone_bt
+      - device_tracker.aneta_camajakielas2
+      - device_tracker.aneta_dell_xps
+
+binary_sensor:
+  - name: aneta_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      - entity_id: device_tracker.aneta_iphone
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.aneta_iphone_bt
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.aneta_camajakielas2
+        prob_given_true: 0.5
+        prob_given_false: 0.2
+        <<: *tracker_default
+
+      - entity_id: device_tracker.aneta_dell_xps
+        prob_given_true: 0.5
+        prob_given_false: 0.2
+        <<: *tracker_default
