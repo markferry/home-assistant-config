@@ -1,3 +1,2 @@
-- group.ros_present
-- group.liane_present
-- group.aneta_present
+- binary_sensor.ros_present
+- binary_sensor.liane_present

@@ -38,38 +38,6 @@ group.settings:
 group.all_lights:
   icon: mdi:lightbulb-on
 
-group.mark_present:
-  entity_picture: /local/wb-icons/wb_mark.png
-group.anne_present:
-  entity_picture: /local/wb-icons/wb_anne.png
-group.jerome_present:
-  entity_picture: /local/wb-icons/wb_jerome.png
-group.ros_present:
-  entity_picture: /local/wb-icons/wb_ros.png
-group.thomas_present:
-  entity_picture: /local/wb-icons/wb_tom.png
-group.liane_present:
-  entity_picture: /local/wb-icons/wb_liane.png
-group.aneta_present:
-  entity_picture: /local/wb-icons/wb_aneta.png
-device_tracker.mark_phone:
-  entity_picture: /local/wb-icons/wb_mark.png
-  friendly_name: "Mark Owntracks"
-device_tracker.anne_phone:
-  entity_picture: /local/wb-icons/wb_anne.png
-  friendly_name: "Anne Owntracks"
-device_tracker.jerome_phone:
-  entity_picture: /local/wb-icons/wb_jerome.png
-  friendly_name: "Jerome Owntracks"
-device_tracker.ros_phone:
-  entity_picture: /local/wb-icons/wb_ros.png
-  friendly_name: "Ros Owntracks"
-device_tracker.thomas_phone:
-  entity_picture: /local/wb-icons/wb_tom.png
-  friendly_name: "Tom Owntracks"
-device_tracker.liane_phone:
-  entity_picture: /local/wb-icons/wb_liane.png
-  friendly_name: "Liane Owntracks"
 light.unused_40_level:
   friendly_name: Unused Dimmer 40
 light.unused_41_level:
@@ -102,6 +70,9 @@ sensor.main_heating_thermostat_battery:
 sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
+
+sensor.js_bedroom_present:
+  device_class: 'presence'
 
 # Place guest room last
 group.bedroom_mark_compact_ui:

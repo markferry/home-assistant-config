@@ -1,7 +1,50 @@
-name: "Liane"
-entities:
-- device_tracker.liane_moto_g5
-- device_tracker.liane_moto_g
-- device_tracker.liane_work_pc
-- device_tracker.liane_work_macbook
-- device_tracker.liane_work_galaxys6
+homeassistant:
+  customize:
+    group.liane_present:
+      entity_picture: &ep /local/wb-icons/wb_liane.png
+    binary_sensor.liane_present:
+      entity_picture: *ep
+
+group:
+  liane_present:
+    name: "Liane"
+    entities: &presence_entities
+    - device_tracker.liane_moto_g5
+    - device_tracker.liane_moto_g
+    - device_tracker.liane_work_pc
+    #- device_tracker.liane_work_macbook
+    #- device_tracker.liane_work_galaxys6
+
+binary_sensor:
+  - name: liane_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.20
+    probability_threshold: 0.90
+    observations:
+      - entity_id: device_tracker.liane_moto_g5
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.liane_moto_g
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.liane_work_pc
+        prob_given_true: 0.5
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      #- entity_id: device_tracker.liane_work_macbook
+      #  prob_given_true: 0.5
+      #  prob_given_false: 0.1
+      #  <<: *tracker_default
+      #- entity_id: device_tracker.liane_work_galaxys6
+      #  prob_given_true: 0.5
+      #  prob_given_false: 0.1
+      #  <<: *tracker_default
+

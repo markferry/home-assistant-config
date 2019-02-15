@@ -293,11 +293,3 @@ barnacles:
   view: false
   entities: !include people/barnacles.yaml
 
-mark_present: !include people/mark.yaml
-anne_present: !include people/anne.yaml
-jerome_present: !include people/jerome.yaml
-ros_present: !include people/ros.yaml
-thomas_present: !include people/thomas.yaml
-liane_present: !include people/liane.yaml
-aneta_present: !include people/aneta.yaml
-
