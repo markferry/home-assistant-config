@@ -71,7 +71,7 @@ views:
               - climate.j_s_bedroom
               - group.g_bedroom_jerome_settings_ui
           - type: media-control
-            entity: media_player.jeromes_bedroom
+            entity: media_player.jerome_s_bedroom
 
       - type: vertical-stack
         cards:

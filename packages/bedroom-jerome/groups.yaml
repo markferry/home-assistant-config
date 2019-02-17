@@ -12,7 +12,7 @@ bedroom_jerome_compact_ui:
   - input_select.bedroom_jerome_mode
   - climate.j_s_bedroom
   - group.g_bedroom_jerome_settings_ui
-  - media_player.jeromes_bedroom
+  - media_player.jerome_s_bedroom
 
 bedroom_jerome_setpoints:
   name: "Jerome's Bedroom Setpoints"
@@ -23,6 +23,6 @@ bedroom_jerome_setpoints:
 bedroom_jerome_media_players:
   view: false
   entities:
-  - media_player.jeromes_bedroom
+  - media_player.jerome_s_bedroom
   - media_player.bedroom_speaker
 
