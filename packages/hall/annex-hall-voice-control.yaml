@@ -1,0 +1,10 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.annex_hall_thermostat:
+      name: "Hall Thermostat"
+      expose: true
+      room: "Hall"
+

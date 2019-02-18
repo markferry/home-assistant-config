@@ -1,7 +1,0 @@
-hue_library_thermostat:
-  sequence:
-    - service: climate.set_temperature
-      data_template:
-        temperature: "{{ requested_level }}"
-        entity_id: climate.library_thermostat
-

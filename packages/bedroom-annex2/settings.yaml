@@ -5,7 +5,7 @@ group:
     control: hidden
     entities:
       - input_number.bedroom_annex2_temperature_off
-      - input_number.bedroom_annex2_temperature_sleep
       - input_number.bedroom_annex2_temperature_cosy
+      - input_number.bedroom_annex2_temperature_sleep
 
 

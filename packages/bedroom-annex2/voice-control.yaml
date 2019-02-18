@@ -1,0 +1,47 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.bedroom_annex2_thermostat:
+      name: "Annex Bedroom Thermostat"
+      <<: &ga_bedroom_annex2_expose
+        expose: true
+        room: "Annex Bedroom 2"
+
+    group.bedroom_annex2_lights:
+      name: "Annex Bedroom Lights"
+      <<: *ga_bedroom_annex2_expose
+
+    script.voice_bedroom_annex2_off:
+      name: "Annex Bedroom Shutdown"
+      <<: *ga_bedroom_annex2_expose
+    script.voice_bedroom_annex2_sleep:
+      name: "Annex Bedroom Mode Sleep"
+      <<: *ga_bedroom_annex2_expose
+    script.voice_bedroom_annex2_cosy:
+      name: "Annex Bedroom Mode Cosy"
+      <<: *ga_bedroom_annex2_expose
+
+script:
+  voice_bedroom_annex2_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_annex2_mode
+          option: "Off"
+
+  voice_bedroom_annex2_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_annex2_mode
+          option: "Cosy"
+
+  voice_bedroom_annex2_sleep:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_annex2_mode
+          option: "Sleep"
+

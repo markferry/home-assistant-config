@@ -1,4 +1,0 @@
-- name: bedroom_mark
-  platform: volumio
-  host: "bedroom-mark"
-  port: 3000

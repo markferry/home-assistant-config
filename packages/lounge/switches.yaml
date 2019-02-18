@@ -1,7 +1,0 @@
-- name: Lounge East Demand
-  platform: mqtt
-  command_topic: ha/lounge/east/demand/command
-  payload_off: 'OFF'
-  payload_on: 'ON'
-  retain: true
-

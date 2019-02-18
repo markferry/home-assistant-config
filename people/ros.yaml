@@ -1,6 +1,48 @@
-name: "Ros"
-entities:
-- device_tracker.ros_phone
-- device_tracker.ros_iphone
-- device_tracker.ros_ipad
-- device_tracker.ros_work_laptop
+homeassistant:
+  customize:
+    group.ros_present:
+      entity_picture: &ep /local/wb-icons/wb_ros.png
+    binary_sensor.ros_present:
+      entity_picture: *ep
+    device_tracker.ros_phone:
+      entity_picture: *ep
+      friendly_name: "Ros Owntracks"
+
+group:
+  ros_present:
+    name: "Ros"
+    entities: &presence_entities
+    - device_tracker.ros_phone
+    - device_tracker.ros_iphone
+    - device_tracker.ros_ipad
+    - device_tracker.ros_work_laptop
+
+
+binary_sensor:
+  - name: ros_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.20
+    probability_threshold: 0.90
+    observations:
+      ## Owntracks
+      #- entity_id: device_tracker.ros_phone
+      #  prob_given_true: 0.4
+      #  prob_given_false: 0.2
+      #  platform: 'state'
+      #  to_state: 'home'
+
+      - entity_id: device_tracker.ros_iphone
+        prob_given_true: 0.90
+        prob_given_false: 0.1
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+      - entity_id: device_tracker.ros_ipad
+        prob_given_true: 0.4
+        prob_given_false: 0.0
+        <<: *tracker_default
+      - entity_id: device_tracker.ros_work_laptop
+        prob_given_true: 0.4
+        prob_given_false: 0.0
+        <<: *tracker_default

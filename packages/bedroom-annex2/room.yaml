@@ -1,0 +1,77 @@
+#
+# Bedroom Annex 2
+#
+
+homeassistant:
+  customize:
+    sensor.bedroom_annex2_temperature:
+      friendly_name: "Annex Bedroom 2"
+    sensor.bedroom_annex2_battery:
+      friendly_name: "Annex Bedroom 2 Battery"
+      icon: mdi:battery
+
+    climate.bedroom_annex2_thermostat:
+      friendly_name: "Annex Bedroom 2"
+    climate.bedroom_annex2_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+group:
+  bedroom_annex2:
+    name: "Annex Bedroom 2"
+    icon: mdi:hotel
+    #view: true
+    entities:
+    - group.bedroom_annex2_compact_ui
+
+  bedroom_annex2_compact_ui:
+    name: "Annex Bedroom 2"
+    view: false
+    entities:
+    - input_select.bedroom_annex2_mode
+    - climate.bedroom_annex2_thermostat
+    - group.g_bedroom_annex2_settings_ui
+
+  bedroom_annex2_setpoints:
+    name: "Annex Bedroom 2 Setpoints"
+    view: false
+    entities:
+    - climate.bedroom_annex2_comfort_setpoint
+
+scene:
+  - name: bedroom_annex2_off
+    entities:
+      group.bedroom_annex2_lights:
+        state: off
+      switch.bedroom_annex2_appliances:
+        state: off
+      media_player.ross_tablet:
+        state: paused
+
+  - name: bedroom_annex2_sleep
+    entities:
+      group.bedroom_annex2_lights:
+        state: off
+
+  - name: bedroom_annex2_cosy
+    entities:
+      group.bedroom_annex2_lights:
+        state: on
+
+sensor:
+  - platform: template
+    sensors:
+      bedroom_annex2_battery:
+        value_template: >
+          {% if states.zwave.bedroom_annex2 %}
+            {{ states.zwave.bedroom_annex2.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.bedroom_annex2
+
+## Disabled - calendar handled in main automation
+#automation: !include_dir_merge_list automations
+#script: !include_dir_merge_named scripts
+
