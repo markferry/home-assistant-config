@@ -1,105 +1,79 @@
+#
+# Mock thermostats using mqtt hvac
+#
+
 - name: study_west_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.study_west_demand
-  target_sensor: sensor.study_west_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/study/west/temperature/state
+  <<: &mock_mqtt_hvac_defaults
+    platform: mqtt
+    max_temp: 25
+    min_temp: 5
 
 - name: study_east_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.study_east_demand
-  target_sensor: sensor.study_east_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/study/east/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: lounge_east_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.lounge_demand
-  target_sensor: sensor.lounge_east_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/lounge/east/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: bedroom_mark_south_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.bedroom_mark_south_demand
-  target_sensor: sensor.bedroom_mark_south_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/bedroom-mark/south/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: bedroom_mark_north_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.bedroom_mark_north_demand
-  target_sensor: sensor.bedroom_mark_north_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/bedroom-mark/north/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: kitchen_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.kitchen_demand
-  target_sensor: sensor.kitchen_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/kitchen/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: ballroom_east_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.ballroom_demand
-  target_sensor: sensor.ballroom_east_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/ballroom/east/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: library_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.library_demand
-  target_sensor: sensor.library_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/library/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: hall_west_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.hall_west_demand
-  target_sensor: sensor.hall_west_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/hall/west/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: hall_east_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.hall_east_demand
-  target_sensor: sensor.hall_east_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/hall/east/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: annex_hall_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.annex_hall_demand
-  target_sensor: sensor.annex_hall_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/annex-hall/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: guest_room_heat
-  platform: generic_thermostat
   heater: switch.guest_room_demand
-  target_sensor: sensor.guest_room_temperature
+  current_temperature_topic: ha/mock/guest-room/temperature/state
+  platform: mqtt
   max_temp: 25
-  min_temp: 5
-
-- name: danfoss_z_thermostat_014g0013_heating_1
-  platform: generic_thermostat
-  heater: switch.guest_room_demand
-  target_sensor: sensor.guest_room_temperature
-  max_temp: 25
-  min_temp: 5
+  min_temp: 8
 
 - name: js_bedroom
-  platform: generic_thermostat
   heater: switch.jerome_bedroom_demand
-  target_sensor: sensor.js_bedroom_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/bedroom-jerome/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
 - name: bedroom_annex2_comfort_setpoint
-  platform: generic_thermostat
   heater: switch.ross_bedroom_demand
-  target_sensor: sensor.bedroom_annex2_temperature
-  max_temp: 25
-  min_temp: 5
+  current_temperature_topic: ha/mock/bedroom-annex2/temperature/state
+  <<: *mock_mqtt_hvac_defaults
 
