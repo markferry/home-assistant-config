@@ -60,6 +60,6 @@
 
 - name: bedroom_annex2_temperature
   platform: mqtt
-  state_topic: ha/mock/bedroom-ros/temperature/state
+  state_topic: ha/mock/bedroom-annex2/temperature/state
   unit_of_measurement: "\xB0C"
 
