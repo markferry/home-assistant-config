@@ -428,7 +428,6 @@ views:
         show_header_toggle: false
         entities:
           - switch.main_heating_relay_switch
-          - switch.main_heating_relay_boiler
           - switch.main_heating_relay_hot_water
           - automation.main_boiler_demand_on
           - automation.main_boiler_demand_off
