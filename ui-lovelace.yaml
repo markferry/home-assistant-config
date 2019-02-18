@@ -330,6 +330,24 @@ views:
     icon: mdi:settings
     cards:
       - type: entities
+        title: Main Heating Demand
+        show_header_toggle: true
+        entities:
+          - switch.kitchen_demand
+          - switch.lounge_demand
+          - switch.library_demand
+          - switch.ballroom_demand
+          - switch.guest_room_demand
+          - switch.bedroom_mark_demand
+          - switch.bedroom_jerome_demand
+      - type: entities
+        title: Annex Heating Demand
+        show_header_toggle: true
+        entities:
+          - switch.study_demand
+          - switch.annex_hall_demand
+          - switch.bedroom_annex2_demand
+      - type: entities
         title: Temperatures
         show_header_toggle: false
         entities:
@@ -385,24 +403,6 @@ views:
           - climate.danfoss_z_thermostat_014g0013_heating_1
           - climate.bedroom_annex2_comfort_setpoint
           - climate.j_s_bedroom
-      - type: entities
-        title: Annex Heating Demand
-        show_header_toggle: true
-        entities:
-          - switch.study_demand
-          - switch.annex_hall_demand
-          - switch.bedroom_annex2_demand
-      - type: entities
-        title: Main Heating Demand
-        show_header_toggle: true
-        entities:
-          - switch.kitchen_demand
-          - switch.lounge_demand
-          - switch.library_demand
-          - switch.ballroom_demand
-          - switch.guest_room_demand
-          - switch.bedroom_mark_demand
-          - switch.bedroom_jerome_demand
       - type: entities
         title: Battery Levels
         show_header_toggle: false
