@@ -1,5 +1,5 @@
 # Google Home Max
-- name: jeromes_bedroom
+- name: jerome_s_bedroom
   platform: cast
 
 # Chromecast?
