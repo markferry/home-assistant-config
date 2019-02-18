@@ -26,6 +26,10 @@ google_assistant:
       name: "Ballroom Movie Mode"
       <<: *ga_ballroom_expose
 
+    media_player.ballroom_amplifier:
+      name: "Ballroom Amplifier"
+      <<: *ga_ballroom_expose
+
     media_player.snapcast_client_ballroom:
       name: "Ballroom Snapcast"
       <<: *ga_ballroom_expose
