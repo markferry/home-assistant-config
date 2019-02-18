@@ -1,4 +1,5 @@
-- group.mark_present
-- group.anne_present
-- group.jerome_present
-- group.thomas_present
+- binary_sensor.mark_present
+- binary_sensor.anne_present
+- binary_sensor.jerome_present
+- binary_sensor.thomas_present
+- binary_sensor.aneta_present

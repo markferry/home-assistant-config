@@ -15,11 +15,11 @@ views:
         title: Where is Everyone?
         show_header_toggle: false
         entities:
-          - group.mark_present
-          - group.anne_present
-          - group.jerome_present
-          - group.thomas_present
-          - group.aneta_present
+          - binary_sensor.mark_present
+          - binary_sensor.anne_present
+          - binary_sensor.jerome_present
+          - binary_sensor.thomas_present
+          - binary_sensor.aneta_present
       - type: entities
         title: Rooms
         show_header_toggle: false
@@ -71,7 +71,7 @@ views:
               - climate.j_s_bedroom
               - group.g_bedroom_jerome_settings_ui
           - type: media-control
-            entity: media_player.jeromes_bedroom
+            entity: media_player.jerome_s_bedroom
 
       - type: vertical-stack
         cards:
@@ -330,6 +330,24 @@ views:
     icon: mdi:settings
     cards:
       - type: entities
+        title: Main Heating Demand
+        show_header_toggle: true
+        entities:
+          - switch.kitchen_demand
+          - switch.lounge_demand
+          - switch.library_demand
+          - switch.ballroom_demand
+          - switch.guest_room_demand
+          - switch.bedroom_mark_demand
+          - switch.bedroom_jerome_demand
+      - type: entities
+        title: Annex Heating Demand
+        show_header_toggle: true
+        entities:
+          - switch.study_demand
+          - switch.annex_hall_demand
+          - switch.bedroom_annex2_demand
+      - type: entities
         title: Temperatures
         show_header_toggle: false
         entities:
@@ -385,24 +403,6 @@ views:
           - climate.danfoss_z_thermostat_014g0013_heating_1
           - climate.bedroom_annex2_comfort_setpoint
           - climate.j_s_bedroom
-      - type: entities
-        title: Annex Heating Demand
-        show_header_toggle: true
-        entities:
-          - switch.study_demand
-          - switch.annex_hall_demand
-          - switch.bedroom_annex2_demand
-      - type: entities
-        title: Main Heating Demand
-        show_header_toggle: true
-        entities:
-          - switch.kitchen_demand
-          - switch.lounge_demand
-          - switch.library_demand
-          - switch.ballroom_demand
-          - switch.guest_room_demand
-          - switch.bedroom_mark_demand
-          - switch.bedroom_jerome_demand
       - type: entities
         title: Battery Levels
         show_header_toggle: false

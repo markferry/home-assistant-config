@@ -1,0 +1,51 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.bedroom_mark_thermostat:
+      name: "Mark's Bedroom Thermostat"
+      <<: &ga_bedroom_mark_expose
+        expose: true
+        room: "Mark's Bedroom"
+
+    group.bedroom_mark_lights:
+      name: "Mark's Bedroom Lights"
+      <<: *ga_bedroom_mark_expose
+
+    script.voice_bedroom_mark_off:
+      name: "Mark's Bedroom Shutdown"
+      <<: *ga_bedroom_mark_expose
+    script.voice_bedroom_mark_play:
+      name: "Mark's Bedroom Play Mode"
+      <<: *ga_bedroom_mark_expose
+    script.voice_bedroom_mark_sleep:
+      name: "Mark's Bedroom Sleep Mode"
+      <<: *ga_bedroom_mark_expose
+
+    media_player.snapcast_client_bedroom_mark:
+      name: "Mark's Bedroom Snapcast"
+      <<: *ga_bedroom_mark_expose
+
+script:
+  voice_bedroom_mark_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_mark_mode
+          option: "Off"
+
+  voice_bedroom_mark_play:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_mark_mode
+          option: "Play"
+
+  voice_bedroom_mark_sleep:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_mark_mode
+          option: "Sleep"
+

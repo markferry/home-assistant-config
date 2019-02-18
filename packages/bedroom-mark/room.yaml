@@ -1,0 +1,166 @@
+#
+# Bedroom Mark
+#
+
+homeassistant:
+  customize:
+    automation.bedroom_mark_sleep_time:
+      friendly_name: "Mark's Bedroom Sleep Time"
+    automation.bedroom_mark_off_time:
+      friendly_name: "Mark's Bedroom Off Time"
+
+    group.bedroom_mark_lights:
+      icon: mdi:lightbulb-on
+
+    light.bedroom_mark_overhead_level:
+      friendly_name: "Mark's Bedroom Overhead"
+      icon: mdi:ceiling-light
+    light.bedroom_mark_lamp:
+      friendly_name: "Mark's Bedroom Lamp"
+
+    sensor.bedroom_mark_south_temperature:
+      friendly_name: "Mark's Bedroom South"
+    sensor.bedroom_mark_north_temperature:
+      friendly_name: "Mark's Bedroom North"
+    sensor.bedroom_mark_south_battery:
+      friendly_name: "Mark's Bedroom South Battery"
+      icon: mdi:battery
+    sensor.bedroom_mark_north_battery:
+      friendly_name: "Mark's Bedroom North Battery"
+      icon: mdi:battery
+
+    climate.bedroom_mark_south_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+    climate.bedroom_mark_north_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+
+    switch.bedroom_mark_demand:
+      friendly_name: "Mark's Bedroom Demand"
+
+    media_player.bedroom_mark:
+      friendly_name: "Mark's Bedroom"
+
+    media_player.bedroommarkaudio:
+      friendly_name: "Mark's Chromecast"
+
+group:
+  bedroom_mark:
+    name: "Mark's Bedroom"
+    view: false
+    icon: mdi:account
+    entities:
+    - sensor.bedroom_mark_temperature
+    - climate.bedroom_mark_thermostat
+    - group.bedroom_mark_lights
+    - group.bedroom_mark_appliances
+
+  bedroom_mark_compact_ui:
+    name: "Mark's Bedroom"
+    view: false
+    entities:
+    - input_select.bedroom_mark_mode
+    - climate.bedroom_mark_thermostat
+    - group.bedroom_mark_lights
+    - group.g_bedroom_mark_media_dimming
+    - group.g_bedroom_mark_settings_ui
+    - media_player.bedroom_mark
+
+  bedroom_mark_setpoints:
+    name: "Mark's Bedroom Setpoints"
+    view: false
+    entities:
+    - climate.bedroom_mark_south_comfort_setpoint
+    - climate.bedroom_mark_north_comfort_setpoint
+
+  bedroom_mark_lights:
+    name: "Mark's Bedroom Lights"
+    view: false
+    entities:
+    - light.bedroom_mark_overhead_level
+    - light.bedroom_mark_lamp
+
+  bedroom_mark_appliances:
+    name: "Mark's Bedroom Appliances"
+    view: false
+    entities:
+
+  bedroom_mark_media_players:
+    view: false
+    entities:
+    - media_player.bedroom_mark
+
+scene:
+  - name: bedroom_mark_off
+    entities:
+      group.bedroom_mark_lights:
+        state: off
+      switch.bedroom_mark_appliances:
+        state: off
+      media_player.bedroom_mark:
+        state: paused
+      media_player.snapcast_client_bedroommark:
+        is_volume_muted: true
+
+  - name: bedroom_mark_sleep
+    entities:
+      group.bedroom_mark_lights:
+        state: off
+
+  - name: bedroom_mark_play
+    entities:
+      group.bedroom_mark_lights:
+        state: on
+
+sensor:
+  - platform: template
+    sensors:
+      bedroom_mark_south_battery:
+        value_template: >
+          {% if states.zwave.bedroom_mark_south %}
+            {{ states.zwave.bedroom_mark_south.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.bedroom_mark_south
+
+  - platform: template
+    sensors:
+      bedroom_mark_north_battery:
+        value_template: >
+          {% if states.zwave.bedroom_mark_north %}
+            {{ states.zwave.bedroom_mark_north.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.bedroom_mark_north
+
+switch:
+  # Now for supporting mock thermostats only.
+  #  Remove when mock thermostats move to mqtt hvac
+  - name: bedroom_mark_south_demand
+    platform: mqtt
+    command_topic: ha/bedroom-mark/south/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+  - name: bedroom_mark_north_demand
+    platform: mqtt
+    command_topic: ha/bedroom-mark/north/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+media_player:
+  - name: bedroom_mark
+    platform: volumio
+    host: "bedroom-mark"
+    port: 3000
+
+automation: !include_dir_merge_list automations
+#script: !include_dir_merge_named scripts

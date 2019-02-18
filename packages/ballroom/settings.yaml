@@ -6,6 +6,6 @@ group:
     entities:
       - input_number.ballroom_temperature_off
       - input_number.ballroom_temperature_party
-      - input_number.ballroom_temperature_movie
       - input_number.ballroom_temperature_bright
+      - input_number.ballroom_temperature_movie
 

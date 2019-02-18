@@ -1,0 +1,61 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.library_thermostat:
+      name: "Library Thermostat"
+      <<: &ga_library_expose
+        expose: true
+        room: "Library"
+
+    group.library_lights:
+      name: "Library Lights"
+      <<: *ga_library_expose
+
+    script.voice_library_off:
+      name: "Library Shutdown"
+      <<: *ga_library_expose
+    script.voice_library_cosy:
+      name: "Library Mode Cosy"
+      <<: *ga_library_expose
+    script.voice_library_bright:
+      name: "Library Mode Bright"
+      <<: *ga_library_expose
+    script.voice_library_read:
+      name: "Library Mode Read"
+      <<: *ga_library_expose
+
+    media_player.snapcast_client_library:
+      name: "Library Snapcast"
+      <<: *ga_library_expose
+
+script:
+  voice_library_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.library_mode
+          option: "Off"
+
+  voice_library_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.library_mode
+          option: "Cosy"
+
+  voice_library_bright:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.library_mode
+          option: "Bright"
+
+  voice_library_read:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.library_mode
+          option: "Read"
+

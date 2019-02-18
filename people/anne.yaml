@@ -1,10 +1,74 @@
-name: "Anne"
-entities:
-- device_tracker.anne_phone
-- device_tracker.anne_iphone3
-- device_tracker.anne_iphone2
-- device_tracker.anne_iphone2_bt
-- device_tracker.anne_laptop
-- device_tracker.anne_laptop_bt
-#- device_tracker.anniehp
-#- device_tracker.anne_ipad
+homeassistant:
+  customize:
+    group.anne_present:
+      entity_picture: &ep /local/wb-icons/wb_anne.png
+    binary_sensor.anne_present:
+      entity_picture: *ep
+    device_tracker.anne_phone:
+      entity_picture: *ep
+      friendly_name: "Anne Owntracks"
+
+group:
+  anne_present:
+    name: "Anne"
+    entities: &presence_entities
+      - device_tracker.anne_phone
+      - device_tracker.anne_iphone4
+      - device_tracker.anne_iphone4_bt
+      - device_tracker.anne_iphone3
+      - device_tracker.anne_iphone2
+      - device_tracker.anne_iphone2_bt
+      - device_tracker.anne_laptop
+      - device_tracker.anne_laptop_bt
+        #- device_tracker.anniehp
+        #- device_tracker.anne_ipad
+
+binary_sensor:
+  - name: anne_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      # Owntracks
+      - entity_id: device_tracker.anne_phone
+        prob_given_true: 0.4
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.anne_iphone4
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.anne_iphone4_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.05
+        <<: *tracker_default
+
+      - entity_id: device_tracker.anne_iphone3
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.anne_iphone2
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.anne_iphone2_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.05
+        <<: *tracker_default
+
+      - entity_id: device_tracker.anne_laptop
+        prob_given_true: 0.6
+        prob_given_false: 0.2
+        <<: *tracker_default
+
+      - entity_id: device_tracker.anne_laptop_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.2
+        <<: *tracker_default

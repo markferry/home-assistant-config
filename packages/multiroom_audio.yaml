@@ -3,7 +3,6 @@ homeassistant:
     script.all_rooms_audio:
       friendly_name: Music Everywhere
       icon: mdi:music-box-outline
-      emulated_hue: true
     media_player.mpd:
       friendly_name: "Iris Media Player"
       icon: mdi:speaker-wireless
@@ -31,43 +30,37 @@ input_number:
     snapcast_client_study:
       name: Study Volume
       icon: mdi:printer
-      min: 0
-      max: 100
+      <<: &snapclient_defaults
+        min: 0
+        max: 100
     snapcast_client_kitchen_2:
       name: Kitchen Volume
       icon: mdi:stove
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
     snapcast_client_lounge:
       name: Lounge Volume
       icon: mdi:sofa
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
     snapcast_client_library:
       name: Library Volume
       icon: mdi:library
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
     snapcast_client_ballroom:
       name: Ballroom Volume
       icon: mdi:projector
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
     snapcast_client_outside:
       name: Outside Volume
       icon: mdi:pine-tree
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
     snapcast_client_bedroom_mark:
       name: "Mark's Bedroom Volume"
       icon: mdi:account
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
     snapcast_client_9cb6d08b2a6f:
       name: Canard Volume
       icon: mdi:laptop-chromebook
-      min: 0
-      max: 100
+      <<: *snapclient_defaults
 
 automation:
 - alias: update_media_player_volume

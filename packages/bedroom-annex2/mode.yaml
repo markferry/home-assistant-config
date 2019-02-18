@@ -15,38 +15,32 @@ input_select:
     name: "Annex Bedroom 2 Mode"
     options:
       - 'Off'
-      - 'Sleep'
       - 'Cosy'
+      - 'Sleep'
       - 'Manual'
     initial: 'Off'
 
 input_number:
   bedroom_annex2_temperature_off:
     name: 'Off Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 10
-    step: 1
-
-  bedroom_annex2_temperature_sleep:
-    name: 'Sleep Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
-    initial: 15
-    step: 1
+    <<: &bedroom_annex2_temp_defaults
+      icon: mdi:thermostat
+      unit_of_measurement: "\xB0C"
+      min: 5
+      max: 25
+      step: 1
 
   bedroom_annex2_temperature_cosy:
     name: 'Cosy Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *bedroom_annex2_temp_defaults
+
+  bedroom_annex2_temperature_sleep:
+    name: 'Sleep Temp'
+    initial: 15
+    <<: *bedroom_annex2_temp_defaults
+
 
 automation:
   - alias: bedroom_annex2_revert_to_manual

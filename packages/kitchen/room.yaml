@@ -1,0 +1,114 @@
+#
+# Kitchen
+#
+
+homeassistant:
+  customize:
+    climate.kitchen_thermostat:
+      friendly_name: Kitchen
+    climate.kitchen_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+    sensor.kitchen_temperature:
+      friendly_name: Kitchen
+    sensor.kitchen_battery:
+      friendly_name: Kitchen Battery
+      icon: mdi:battery
+
+    media_player.outside_amplifier_zone_2:
+      friendly_name: Kitchen Amplifier
+
+group:
+  kitchen:
+    name: Kitchen
+    view: true
+    icon: mdi:stove
+    entities:
+    - sensor.kitchen_mean_temperature
+    - group.kitchen_compact_ui
+    - media_player.kitchen_speaker
+    - sensor.greenwave_powernode_54_energy
+    - sensor.greenwave_powernode_54_power
+    - media_player.outside_amplifier_zone_2
+
+  kitchen_compact_ui:
+    name: Kitchen
+    view: false
+    icon: mdi:stove
+    entities:
+    - input_select.kitchen_mode
+    - climate.kitchen_thermostat
+    - binary_sensor.washing_machine
+    - group.g_kitchen_settings_ui
+
+  kitchen_setpoints:
+    name: Kitchen Setpoints
+    view: false
+    entities:
+    - climate.kitchen_comfort_setpoint
+
+  kitchen_lights:
+    name: Kitchen Lights
+    view: false
+
+  kitchen_media_players:
+    view: false
+    entities:
+    - media_player.kitchen_speaker
+    - media_player.outside_amplifier_zone_2
+
+scene:
+  - name: kitchen_off
+    entities:
+      group.kitchen_lights:
+        state: off
+      media_player.kitchen_speaker:
+        state: paused
+      ## Leave it on for now
+      #media_player.kitchen_amplifier:
+      #  state: off
+      media_player.snapcast_client_kitchen_2:
+        is_volume_muted: true
+
+  - name: kitchen_cosy
+    entities:
+      group.kitchen_lights:
+        state: on
+        brightness_pct: 50
+      media_player.outside_amplifier_zone_2:
+        state: on
+
+  - name: kitchen_bright
+    entities:
+      group.kitchen_lights:
+        state: on
+        brightness_pct: 100
+      media_player.outside_amplifier_zone_2:
+        state: on
+
+sensor:
+  - platform: template
+    sensors:
+      kitchen_battery:
+        value_template: >
+          {% if states.zwave.kitchen %}
+            {{ states.zwave.kitchen.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.kitchen
+
+media_player:
+  ## Replaced with snapcast
+  #- name: Kitchen Kodi
+  #  platform: kodi
+  #  host: kitchen
+  #  port: 8080
+  #
+  - name: kitchen_speaker
+    platform: cast
+
+#automation: !include_dir_merge_list automations
+#script: !include_dir_merge_named scripts

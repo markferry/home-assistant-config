@@ -1,9 +1,0 @@
-## Replaced with snapcast
-#- name: Kitchen Kodi
-#  platform: kodi
-#  host: kitchen
-#  port: 8080
-#
-- name: kitchen_speaker
-  platform: cast
-

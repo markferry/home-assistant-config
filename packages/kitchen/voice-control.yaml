@@ -1,0 +1,55 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.kitchen_thermostat:
+      name: "Kitchen Thermostat"
+      <<: &ga_kitchen_expose
+        expose: true
+        room: "Kitchen"
+
+    group.kitchen_lights:
+      name: "Kitchen Lights"
+      <<: *ga_kitchen_expose
+
+    script.voice_kitchen_off:
+      name: "Kitchen Shutdown"
+      <<: *ga_kitchen_expose
+    script.voice_kitchen_cosy:
+      name: "Kitchen Cosy Mode"
+      <<: *ga_kitchen_expose
+    script.voice_kitchen_bright:
+      name: "Kitchen Bright Mode"
+      <<: *ga_kitchen_expose
+
+    media_player.outside_amplifier_zone_2:
+      name: "Kitchen Amplifier"
+      <<: *ga_kitchen_expose
+
+    media_player.snapcast_client_kitchen_2:
+      name: "Kitchen Snapcast"
+      <<: *ga_kitchen_expose
+
+script:
+  voice_kitchen_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.kitchen_mode
+          option: "Off"
+
+  voice_kitchen_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.kitchen_mode
+          option: "Cosy"
+
+  voice_kitchen_bright:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.kitchen_mode
+          option: "Bright"
+

@@ -9,7 +9,6 @@ binary_sensor:
   state_topic: ha/event/hottub
   payload_on: 'on'
   payload_off: 'off'
-  initial: off
 
 input_boolean:
   hottub_debouncer:
@@ -24,11 +23,17 @@ homeassistant:
     switch.greenwave_powernode_53_switch:
       friendly_name: Hot Tub Power Supply
       icon: mdi:pot
-      emulated_hue: true
     sensor.greenwave_powernode_53_energy:
       friendly_name: Hot Tub Energy
     sensor.greenwave_powernode_53_power:
       friendly_name: Hot Tub Power
+
+google_assistant:
+  entity_config:
+    switch.greenwave_powernode_53_switch:
+      name: "Hot Tub Power"
+      expose: true
+      room: "Outside"
 
 group:
   g_hottub:

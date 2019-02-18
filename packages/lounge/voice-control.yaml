@@ -1,0 +1,61 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.lounge_thermostat:
+      name: "Lounge Thermostat"
+      <<: &ga_lounge_expose
+        expose: true
+        room: "Lounge"
+
+    group.lounge_lights:
+      name: "Lounge Lights"
+      <<: *ga_lounge_expose
+
+    script.voice_lounge_off:
+      name: "Lounge Shutdown"
+      <<: *ga_lounge_expose
+    script.voice_lounge_cosy:
+      name: "Lounge Mode Cosy"
+      <<: *ga_lounge_expose
+    script.voice_lounge_bright:
+      name: "Lounge Mode Bright"
+      <<: *ga_lounge_expose
+    script.voice_lounge_movie:
+      name: "Lounge Mode Movie"
+      <<: *ga_lounge_expose
+
+    media_player.snapcast_client_lounge:
+      name: "Lounge Snapcast"
+      <<: *ga_lounge_expose
+
+script:
+  voice_lounge_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.lounge_mode
+          option: "Off"
+
+  voice_lounge_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.lounge_mode
+          option: "Cosy"
+
+  voice_lounge_bright:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.lounge_mode
+          option: "Bright"
+
+  voice_lounge_movie:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.lounge_mode
+          option: "Movie"
+

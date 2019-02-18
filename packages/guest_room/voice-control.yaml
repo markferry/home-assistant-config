@@ -1,0 +1,47 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.guest_room_thermostat:
+      name: "Guest Room Thermostat"
+      <<: &ga_guest_room_expose
+        expose: true
+        room: "Guest Room"
+
+    group.guest_room_lights:
+      name: "Guest Room Lights"
+      <<: *ga_guest_room_expose
+
+    script.voice_guest_room_off:
+      name: "Guest Room Shutdown"
+      <<: *ga_guest_room_expose
+    script.voice_guest_room_cosy:
+      name: "Guest Room Cosy Mode"
+      <<: *ga_guest_room_expose
+    script.voice_guest_room_sleep:
+      name: "Guest Room Sleep Mode"
+      <<: *ga_guest_room_expose
+
+script:
+  voice_guest_room_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.guest_room_mode
+          option: "Off"
+
+  voice_guest_room_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.guest_room_mode
+          option: "Cosy"
+
+  voice_guest_room_sleep:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.guest_room_mode
+          option: "Sleep"
+

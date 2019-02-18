@@ -19,30 +19,23 @@ input_select:
 input_number:
   kitchen_temperature_off:
     name: 'Off Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 10
-    step: 1
+    <<: &kitchen_temp_defaults
+      icon: mdi:thermostat
+      unit_of_measurement: "\xB0C"
+      min: 5
+      max: 25
+      step: 1
 
   kitchen_temperature_cosy:
     name: 'Cosy Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 22
-    step: 1
+    <<: *kitchen_temp_defaults
 
   kitchen_temperature_bright:
     name: 'Bright Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *kitchen_temp_defaults
 
 automation:
   - alias: kitchen_revert_to_manual

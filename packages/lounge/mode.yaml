@@ -20,39 +20,28 @@ input_select:
 input_number:
   lounge_temperature_off:
     name: 'Off Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 10
-    step: 1
+    <<: &lounge_temp_defaults
+      icon: mdi:thermostat
+      unit_of_measurement: "\xB0C"
+      min: 5
+      max: 25
+      step: 1
 
   lounge_temperature_cosy:
     name: 'Cosy Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 22
-    step: 1
+    <<: *lounge_temp_defaults
 
   lounge_temperature_bright:
     name: 'Bright Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *lounge_temp_defaults
 
   lounge_temperature_movie:
     name: 'Movie Temp'
-    icon: mdi:thermostat
-    unit_of_measurement: "\xB0C"
-    min: 5
-    max: 25
     initial: 20
-    step: 1
+    <<: *lounge_temp_defaults
 
 automation:
   - alias: lounge_revert_to_manual
