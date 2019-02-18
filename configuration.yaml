@@ -157,6 +157,10 @@ mqtt:
   keepalive: 60
   protocol: 3.1
 
+mqtt_eventstream:
+  publish_topic: ha/state
+  subscribe_topic: ha/command
+
 zwave:
   usb_path: /dev/ttyUSB21
   #config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/python_openzwave/ozw_config
