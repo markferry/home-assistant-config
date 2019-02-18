@@ -13,3 +13,13 @@ google_assistant:
       name: "Hall Lights"
       <<: *ga_hall_expose
 
+    media_player.outside_amplifier:
+      name: "Outside Amplifier"
+      expose: true
+      room: "Outside"
+
+    media_player.snapcast_client_outside:
+      name: "Outside Snapcast"
+      expose: true
+      room: "Outside"
+

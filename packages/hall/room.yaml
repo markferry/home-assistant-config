@@ -37,6 +37,9 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
+    media_player.outside_amplifier:
+      friendly_name: Outside Amplifier
+
 group:
   hall:
     name: Hall
