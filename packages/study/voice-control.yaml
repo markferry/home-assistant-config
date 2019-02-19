@@ -17,13 +17,13 @@ google_assistant:
       name: "Study Shutdown"
       <<: *ga_study_expose
     script.voice_study_cosy:
-      name: "Study Mode Cosy"
+      name: "Study Cosy Mode"
       <<: *ga_study_expose
     script.voice_study_bright:
-      name: "Study Mode Bright"
+      name: "Study Bright Mode"
       <<: *ga_study_expose
     script.voice_study_work:
-      name: "Study Mode Work"
+      name: "Study Work Mode"
       <<: *ga_study_expose
 
     media_player.snapcast_client_study:

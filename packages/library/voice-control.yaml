@@ -17,13 +17,13 @@ google_assistant:
       name: "Library Shutdown"
       <<: *ga_library_expose
     script.voice_library_cosy:
-      name: "Library Mode Cosy"
+      name: "Library Cosy Mode"
       <<: *ga_library_expose
     script.voice_library_bright:
-      name: "Library Mode Bright"
+      name: "Library Bright Mode"
       <<: *ga_library_expose
     script.voice_library_read:
-      name: "Library Mode Read"
+      name: "Library Read Mode"
       <<: *ga_library_expose
 
     media_player.snapcast_client_library:
