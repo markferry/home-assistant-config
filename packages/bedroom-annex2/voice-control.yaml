@@ -17,10 +17,10 @@ google_assistant:
       name: "Annex Bedroom Shutdown"
       <<: *ga_bedroom_annex2_expose
     script.voice_bedroom_annex2_sleep:
-      name: "Annex Bedroom Mode Sleep"
+      name: "Annex Bedroom Sleep Mode"
       <<: *ga_bedroom_annex2_expose
     script.voice_bedroom_annex2_cosy:
-      name: "Annex Bedroom Mode Cosy"
+      name: "Annex Bedroom Cosy Mode"
       <<: *ga_bedroom_annex2_expose
 
 script:
