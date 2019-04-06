@@ -68,8 +68,8 @@ scene:
       ## Leave it on for now
       #media_player.kitchen_amplifier:
       #  state: off
-      media_player.snapcast_client_kitchen_2:
-        is_volume_muted: true
+      #media_player.snapcast_client_kitchen_2:
+      #  is_volume_muted: true
 
   - name: kitchen_cosy
     entities:
