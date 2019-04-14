@@ -150,7 +150,6 @@ media_player:
       am: 'AM' # -> needs onkyo fix
       network: 'Network'
       usb: 'USB'
-    zone2: true  # kitchen amp from v0.68 onwards
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
