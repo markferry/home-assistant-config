@@ -109,7 +109,6 @@ media_player:
 
   - platform: mpd
     host: media
-    location: Multi-Room Controller
 
 group:
   g_multiroom_audio_ui:
