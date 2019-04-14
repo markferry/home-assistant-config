@@ -23,6 +23,7 @@ script:
         data_template:
           entity_id: 'climate.{{room}}_thermostat'
           temperature: "{{ states('input_number.'+room+'_temperature_'+mode) }}"
+          operation_mode: "heat"
       - service: automation.turn_on
         data_template:
           entity_id: 'automation.{{room}}_revert_to_manual'
