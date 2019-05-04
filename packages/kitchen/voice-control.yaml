@@ -27,7 +27,7 @@ google_assistant:
       name: "Kitchen Amplifier"
       <<: *ga_kitchen_expose
 
-    media_player.snapcast_client_kitchen_2:
+    media_player.snapcast_client_kitchen2:
       name: "Kitchen Snapcast"
       <<: *ga_kitchen_expose
 
