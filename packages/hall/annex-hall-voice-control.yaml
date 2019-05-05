@@ -4,7 +4,7 @@
 google_assistant:
   entity_config:
     climate.annex_hall_thermostat:
-      name: "Hall Thermostat"
+      name: "Annex Hall Thermostat"
       expose: true
       room: "Hall"
 

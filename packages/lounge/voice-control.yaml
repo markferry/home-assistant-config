@@ -5,29 +5,43 @@ google_assistant:
   entity_config:
     climate.lounge_thermostat:
       name: "Lounge Thermostat"
+      aliases:
+        - "Sitting Room Thermostat"
       <<: &ga_lounge_expose
         expose: true
         room: "Lounge"
 
     group.lounge_lights:
       name: "Lounge Lights"
+      aliases:
+        - "Sitting Room Lights"
       <<: *ga_lounge_expose
 
     script.voice_lounge_off:
       name: "Lounge Shutdown"
+      aliases:
+        - "Sitting Room Shutdown"
       <<: *ga_lounge_expose
     script.voice_lounge_cosy:
-      name: "Lounge Mode Cosy"
+      name: "Lounge Cosy Mode"
+      aliases:
+        - "Sitting Room Cosy Mode"
       <<: *ga_lounge_expose
     script.voice_lounge_bright:
-      name: "Lounge Mode Bright"
+      name: "Lounge Bright Mode"
+      aliases:
+        - "Sitting Room Bright Mode"
       <<: *ga_lounge_expose
     script.voice_lounge_movie:
-      name: "Lounge Mode Movie"
+      name: "Lounge Movie Mode"
+      aliases:
+        - "Sitting Room Movie Mode"
       <<: *ga_lounge_expose
 
     media_player.snapcast_client_lounge:
       name: "Lounge Snapcast"
+      aliases:
+        - "Sitting Room Snapcast"
       <<: *ga_lounge_expose
 
 script:
