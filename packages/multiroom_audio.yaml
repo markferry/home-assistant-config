@@ -8,7 +8,7 @@ homeassistant:
       icon: mdi:speaker-wireless
     media_player.snapcast_client_study:
       friendly_name: Study Snapcast
-    media_player.snapcast_client_kitchen_2:
+    media_player.snapcast_client_kitchen2:
       friendly_name: Kitchen Snapcast
     media_player.snapcast_client_lounge:
       friendly_name: Lounge Snapcast
@@ -33,7 +33,7 @@ input_number:
       <<: &snapclient_defaults
         min: 0
         max: 100
-    snapcast_client_kitchen_2:
+    snapcast_client_kitchen2:
       name: Kitchen Volume
       icon: mdi:stove
       <<: *snapclient_defaults
@@ -68,7 +68,7 @@ automation:
     platform: state
     entity_id:
       - input_number.snapcast_client_study
-      - input_number.snapcast_client_kitchen_2
+      - input_number.snapcast_client_kitchen2
       - input_number.snapcast_client_lounge
       - input_number.snapcast_client_library
       - input_number.snapcast_client_ballroom
@@ -90,7 +90,7 @@ automation:
     platform: state
     entity_id:
       - media_player.snapcast_client_study
-      - media_player.snapcast_client_kitchen_2
+      - media_player.snapcast_client_kitchen2
       - media_player.snapcast_client_lounge
       - media_player.snapcast_client_library
       - media_player.snapcast_client_ballroom
@@ -109,7 +109,6 @@ media_player:
 
   - platform: mpd
     host: media
-    location: Multi-Room Controller
 
 group:
   g_multiroom_audio_ui:
@@ -125,7 +124,7 @@ group:
     name: Snapcast Clients
     entities:
     - media_player.snapcast_client_study
-    - media_player.snapcast_client_kitchen_2
+    - media_player.snapcast_client_kitchen2
     - media_player.snapcast_client_lounge
     - media_player.snapcast_client_library
     - media_player.snapcast_client_ballroom
@@ -136,7 +135,7 @@ group:
     name: Snapcast Volume
     entities:
     - input_number.snapcast_client_study
-    - input_number.snapcast_client_kitchen_2
+    - input_number.snapcast_client_kitchen2
     - input_number.snapcast_client_lounge
     - input_number.snapcast_client_library
     - input_number.snapcast_client_ballroom

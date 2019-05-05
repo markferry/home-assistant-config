@@ -143,7 +143,7 @@ groups:
   - name: Media Players
     entities:
       - media_player.snapcast_client_study
-      - media_player.snapcast_client_kitchen_2
+      - media_player.snapcast_client_kitchen2
       - media_player.snapcast_client_lounge
       - media_player.snapcast_client_library
       - media_player.snapcast_client_ballroom

@@ -8,15 +8,31 @@
     for:
       seconds: 10
   action:
+    - service: automation.trigger
+      data:
+        entity_id: automation.main_heating_poll_on
+    - service: notify.automations
+      data:
+        message: "Main Heating Demand on"
+
+- alias: main_heating_poll_on
+  trigger:
+    - platform: time_pattern
+      minutes: '/20'
+      seconds: 12
+  condition:
+    - condition: state
+      entity_id: group.main_heating_demand
+      state: 'on'
+  action:
     - service: switch.turn_on
-      entity_id: switch.main_heating_relay_switch
+      data:
+        entity_id: switch.main_heating_relay_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.main_heating_thermostat_heating_1
         temperature: 22
-    - service: notify.automations
-      data:
-        message: "Main Heating Demand on"
+        operation_mode: 'heat'
 
 
 - alias: main_boiler_demand_off
@@ -27,15 +43,30 @@
     for:
       seconds: 10
   action:
+    - service: automation.trigger
+      data:
+        entity_id: automation.main_heating_poll_off
+    - service: notify.automations
+      data:
+        message: "Main Heating Demand off"
+
+- alias: main_heating_poll_off
+  trigger:
+    - platform: time_pattern
+      minutes: '/20'
+      seconds: 12
+  condition:
+    - condition: state
+      entity_id: group.main_heating_demand
+      state: 'off'
+  action:
     - service: switch.turn_off
-      entity_id: switch.main_heating_relay_switch
+      data:
+        entity_id: switch.main_heating_relay_switch
     - service: climate.set_temperature
       data:
         entity_id: climate.main_heating_thermostat_heating_1
         temperature: 10
-    - service: notify.automations
-      data:
-        message: "Main Heating Demand off"
 
 - alias: annex_thermostat_demand_on
   trigger:
@@ -51,6 +82,7 @@
       data:
         entity_id: climate.annex_heating_thermostat_heating_1
         temperature: 22
+        operation_mode: 'heat'
     - service: notify.automations
       data:
         message: "Annex Heating Demand on"
