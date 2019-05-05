@@ -15,11 +15,16 @@ views:
         title: Where is Everyone?
         show_header_toggle: false
         entities:
-          - binary_sensor.mark_present
-          - binary_sensor.anne_present
-          - binary_sensor.jerome_present
-          - binary_sensor.thomas_present
-          - binary_sensor.aneta_present
+          - entity: binary_sensor.mark_present
+            name: Mark
+          - entity: binary_sensor.anne_present
+            name: Anne
+          - entity: binary_sensor.jerome_present
+            name: Jerome
+          - entity: binary_sensor.thomas_present
+            name: Thomas
+          - entity: binary_sensor.aneta_present
+            name: Aneta
       - type: entities
         title: Rooms
         show_header_toggle: false
@@ -428,7 +433,6 @@ views:
         show_header_toggle: false
         entities:
           - switch.main_heating_relay_switch
-          - switch.main_heating_relay_boiler
           - switch.main_heating_relay_hot_water
           - automation.main_boiler_demand_on
           - automation.main_boiler_demand_off

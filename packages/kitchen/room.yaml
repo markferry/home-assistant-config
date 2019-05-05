@@ -68,8 +68,8 @@ scene:
       ## Leave it on for now
       #media_player.kitchen_amplifier:
       #  state: off
-      media_player.snapcast_client_kitchen2:
-        is_volume_muted: true
+      #media_player.snapcast_client_kitchen2:
+      #  is_volume_muted: true
 
   - name: kitchen_cosy
     entities:
@@ -107,7 +107,8 @@ media_player:
   #  host: kitchen
   #  port: 8080
   #
-  - name: kitchen_speaker
+  - host: kitchen-google-home
+    # name: kitchen_speaker
     platform: cast
 
 #automation: !include_dir_merge_list automations
