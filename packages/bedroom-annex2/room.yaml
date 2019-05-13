@@ -25,7 +25,7 @@ group:
     - group.bedroom_annex2_compact_ui
 
   bedroom_annex2_compact_ui:
-    name: "Annex Bedroom 2"
+    name: "Monica's Bedroom"
     view: false
     entities:
     - input_select.bedroom_annex2_mode
@@ -45,8 +45,6 @@ scene:
         state: off
       switch.bedroom_annex2_appliances:
         state: off
-      media_player.ross_tablet:
-        state: paused
 
   - name: bedroom_annex2_sleep
     entities:
@@ -71,7 +69,5 @@ sensor:
         unit_of_measurement: '%'
         entity_id: zwave.bedroom_annex2
 
-## Disabled - calendar handled in main automation
-#automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
 

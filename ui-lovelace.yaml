@@ -11,20 +11,33 @@ views:
       - sensor.library_mean_temperature
       - sensor.ballroom_temperature
     cards:
-      - type: entities
-        title: Where is Everyone?
-        show_header_toggle: false
-        entities:
-          - entity: binary_sensor.mark_present
-            name: Mark
-          - entity: binary_sensor.anne_present
-            name: Anne
-          - entity: binary_sensor.jerome_present
-            name: Jerome
-          - entity: binary_sensor.thomas_present
-            name: Thomas
-          - entity: binary_sensor.aneta_present
-            name: Aneta
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Where is Everyone?
+          show_header_toggle: false
+          entities:
+            - entity: binary_sensor.mark_present
+              name: Mark
+            - entity: binary_sensor.anne_present
+              name: Anne
+            - entity: binary_sensor.jerome_present
+              name: Jerome
+            - entity: binary_sensor.thomas_present
+              name: Thomas
+            - entity: binary_sensor.monica_present
+              name: Monica
+        - type: entity-filter
+          entities:
+            - entity: binary_sensor.ros_present
+              name: Ros
+            - entity: binary_sensor.liane_present
+              name: Liane
+            - entity: binary_sensor.aneta_present
+              name: Aneta
+          state_filter:
+            - "on"
+          show_empty: false
       - type: entities
         title: Rooms
         show_header_toggle: false
@@ -38,10 +51,14 @@ views:
         title: Bedrooms
         show_header_toggle: false
         entities:
-          - input_select.bedroom_mark_mode
-          - input_select.bedroom_jerome_mode
-          - input_select.bedroom_annex2_mode
-          - input_select.guest_room_mode
+          - entity: input_select.bedroom_mark_mode
+            name: "Mark's Bedroom Mode"
+          - entity: input_select.bedroom_jerome_mode
+            name: "Jerome's Bedroom Mode"
+          - entity: input_select.bedroom_annex2_mode
+            name: "Monica's Bedroom Mode"
+          - entity: input_select.guest_room_mode
+            name: "Guest Room Mode"
 
   - title: Bedrooms
     icon: mdi:hotel
@@ -81,11 +98,13 @@ views:
       - type: vertical-stack
         cards:
           - type: entities
-            title: Annex Bedroom 2
+            title: "Monica's Bedroom"
             show_header_toggle: false
             entities:
-              - input_select.bedroom_annex2_mode
-              - climate.bedroom_annex2_thermostat
+              - entity: input_select.bedroom_annex2_mode
+                name: "Monica's Bedroom Mode"
+              - entity: climate.bedroom_annex2_thermostat
+                name: "Monica's Bedroom"
               - group.g_bedroom_annex2_settings_ui
 
       - type: vertical-stack
