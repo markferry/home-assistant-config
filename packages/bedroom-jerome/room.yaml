@@ -82,14 +82,12 @@ switch:
     payload_on: 'ON'
     retain: true
 
-media_player:
-  - host: google-home-max
-    # name: jerome_s_bedroom
-    platform: cast
-
-  #- host: ?  # Chromecast?
-  #  name: bedroom_speaker
-  #  platform: cast
+cast:
+  media_player:
+    - host: google-home-max
+      # name: jerome_s_bedroom
+    #- host: ?  # Chromecast?
+    #  name: bedroom_speaker
 
 automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

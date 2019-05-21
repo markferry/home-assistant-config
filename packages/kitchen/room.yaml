@@ -100,16 +100,10 @@ sensor:
         unit_of_measurement: '%'
         entity_id: zwave.kitchen
 
-media_player:
-  ## Replaced with snapcast
-  #- name: Kitchen Kodi
-  #  platform: kodi
-  #  host: kitchen
-  #  port: 8080
-  #
-  - host: kitchen-google-home
-    # name: kitchen_speaker
-    platform: cast
+cast:
+  media_player:
+    - host: kitchen-google-home
+      # name: kitchen_speaker
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
