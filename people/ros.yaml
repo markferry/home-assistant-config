@@ -14,6 +14,7 @@ group:
     entities: &presence_entities
     - device_tracker.ros_phone
     - device_tracker.ros_iphone
+    - device_tracker.ros_iphone_bt
     - device_tracker.ros_ipad
     - device_tracker.ros_work_laptop
 
@@ -38,6 +39,10 @@ binary_sensor:
         <<: &tracker_default
           platform: 'state'
           to_state: 'home'
+      - entity_id: device_tracker.ros_iphone_bt
+        prob_given_true: 0.4
+        prob_given_false: 0.0
+        <<: *tracker_default
       - entity_id: device_tracker.ros_ipad
         prob_given_true: 0.4
         prob_given_false: 0.0
