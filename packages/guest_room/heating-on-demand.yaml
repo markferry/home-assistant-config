@@ -35,6 +35,8 @@ climate:
     max_temp: 25
     min_temp: 8  # spirit-Z minimum
     target_temp: 10.0
+    cold_tolerance: 0.5
+    hot_tolerance: 0.0
 
 switch:
   - name: guest_room_demand
