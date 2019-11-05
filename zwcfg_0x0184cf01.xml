@@ -30,10 +30,10 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="5" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="17.4" />
-				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="lux" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="234" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="13.9" />
+				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="lux" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="26" />
 				<Value type="decimal" genre="user" instance="1" index="4" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="63" />
-				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="62" />
+				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="71" />
 			</CommandClass>
 			<CommandClass id="112" name="COMMAND_CLASS_CONFIGURATION" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -88,7 +88,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="60" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="64" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -125,7 +125,7 @@
 			</CommandClass>
 			<CommandClass id="38" name="COMMAND_CLASS_SWITCH_MULTILEVEL" version="3" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="14" />
 				<Value type="button" genre="user" instance="1" index="1" label="Open" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
 				<Value type="button" genre="user" instance="1" index="2" label="Close" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
 				<Value type="bool" genre="system" instance="1" index="3" label="Ignore Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
@@ -137,7 +137,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="20.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="17.0" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -168,7 +168,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="1" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -365,7 +365,7 @@
 			</CommandClass>
 			<CommandClass id="38" name="COMMAND_CLASS_SWITCH_MULTILEVEL" version="3" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="11" />
 				<Value type="button" genre="user" instance="1" index="1" label="Open" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
 				<Value type="button" genre="user" instance="1" index="2" label="Close" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
 				<Value type="bool" genre="system" instance="1" index="3" label="Ignore Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
@@ -377,7 +377,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="20.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="17.0" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -408,7 +408,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="37" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="12" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -426,7 +426,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="25" name="library" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Dynamic">
+	<Node id="25" name="library" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -448,7 +448,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="18.5" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="16.5" />
 				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
@@ -520,7 +520,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="19.5" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="20.0" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -539,7 +539,7 @@
 			</CommandClass>
 			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT" version="1" request_flags="4" innif="true" base="0">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Comfort setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="10.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Comfort setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="15.0" />
 				<Value type="decimal" genre="user" instance="1" index="7" label="Furnace" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 				<Value type="decimal" genre="user" instance="1" index="11" label="Energy saving setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="18.0" />
 			</CommandClass>
@@ -662,7 +662,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="20.5" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="13.0" />
 				<Value type="decimal" genre="user" instance="1" index="3" label="Luminance" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="12.8" />
 				<Value type="decimal" genre="user" instance="1" index="5" label="Relative Humidity" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="9.5" />
 			</CommandClass>
@@ -694,7 +694,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="144" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -734,7 +734,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="20.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="18.5" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -765,7 +765,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="47" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="53" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -798,7 +798,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="2" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="21.1" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="18.1" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1">
 				<Instance index="1" />
@@ -842,7 +842,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="55" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="34" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -909,7 +909,7 @@
 				<Instance index="30" endpoint="1" />
 				<Value type="byte" genre="basic" instance="1" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="basic" instance="2" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
-				<Value type="byte" genre="basic" instance="3" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+				<Value type="byte" genre="basic" instance="3" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="1" />
 				<Value type="byte" genre="basic" instance="4" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="basic" instance="5" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="basic" instance="6" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
@@ -951,7 +951,7 @@
 				<Instance index="22" endpoint="1" />
 				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="bool" genre="user" instance="2" index="0" label="Boiler" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
-				<Value type="bool" genre="user" instance="3" index="0" label="Hot Water" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
+				<Value type="bool" genre="user" instance="3" index="0" label="Hot Water" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="bool" genre="user" instance="4" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="bool" genre="user" instance="5" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="bool" genre="user" instance="6" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
@@ -1011,7 +1011,7 @@
 					<Item label="Off" value="0" />
 					<Item label="Heat" value="1" />
 				</Value>
-				<Value type="list" genre="user" instance="3" index="0" label="Mode" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
+				<Value type="list" genre="user" instance="3" index="0" label="Mode" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="1" size="1">
 					<Item label="Off" value="0" />
 					<Item label="Heat" value="1" />
 				</Value>
@@ -1194,7 +1194,7 @@
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="3" request_flags="3" innif="true">
 				<Instance index="1" endpoint="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="42.15" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.09" />
 				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Reading" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="1191182336" />
 				<Value type="int" genre="user" instance="1" index="2" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="64" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
@@ -1222,10 +1222,10 @@
 			</CommandClass>
 			<CommandClass id="112" name="COMMAND_CLASS_CONFIGURATION" version="1" request_flags="5" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="config" instance="1" index="1" label="Minimum brightness level" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="1" max="98" value="9">
+				<Value type="byte" genre="config" instance="1" index="1" label="Minimum brightness level" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="1" max="98" value="1">
 					<Help>Parameter is set automatically during the calibration process. Options for changing parameter 1-98. Default 1.</Help>
 				</Value>
-				<Value type="byte" genre="config" instance="1" index="2" label="Maximum brightness level" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="2" max="99" value="70">
+				<Value type="byte" genre="config" instance="1" index="2" label="Maximum brightness level" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="2" max="99" value="43">
 					<Help>Parameter is set automatically during the calibration process. Options for changing parameter 2-99. Default 99.</Help>
 				</Value>
 				<Value type="byte" genre="config" instance="1" index="3" label="Incandescence level of dimmable compact fluorescent lamps" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="1" max="99" value="1">
@@ -1457,7 +1457,7 @@
 				<Value type="byte" genre="user" instance="1" index="1" label="Alarm Level" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="user" instance="1" index="2" label="SourceNodeId" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="user" instance="1" index="7" label="Heat" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="254" />
-				<Value type="byte" genre="user" instance="1" index="11" label="Power Management" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="254" />
+				<Value type="byte" genre="user" instance="1" index="11" label="Power Management" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="6" />
 				<Value type="byte" genre="user" instance="1" index="12" label="System" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="1" />
 			</CommandClass>
 			<CommandClass id="114" name="COMMAND_CLASS_MANUFACTURER_SPECIFIC" version="1" request_flags="5" innif="true">
@@ -1548,7 +1548,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="40" name="unused_40" location="" basic="4" generic="17" specific="1" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
+	<Node id="40" name="unused_40" location="" basic="4" generic="17" specific="1" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Configuration">
 		<Manufacturer id="0" name="">
 			<Product type="0" id="0" name="" />
 		</Manufacturer>
@@ -1602,7 +1602,78 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="43" name="annex_hall" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Dynamic">
+	<Node id="43" name="annex_hall" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+		<Manufacturer id="148" name="EUROtronic">
+			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
+		</Manufacturer>
+		<CommandClasses>
+			<CommandClass id="32" name="COMMAND_CLASS_BASIC" version="1" request_flags="4" innif="true" mapping="64">
+				<Instance index="1" />
+			</CommandClass>
+			<CommandClass id="38" name="COMMAND_CLASS_SWITCH_MULTILEVEL" version="3" innif="true">
+				<Instance index="1" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="12" />
+				<Value type="button" genre="user" instance="1" index="1" label="Open" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
+				<Value type="button" genre="user" instance="1" index="2" label="Close" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
+				<Value type="bool" genre="system" instance="1" index="3" label="Ignore Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
+				<Value type="byte" genre="system" instance="1" index="4" label="Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+				<Value type="byte" genre="system" instance="1" index="5" label="Dimming Duration" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="255" />
+				<Value type="byte" genre="user" instance="1" index="6" label="Step Size" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+				<Value type="button" genre="user" instance="1" index="7" label="Inc" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
+				<Value type="button" genre="user" instance="1" index="8" label="Dec" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
+			</CommandClass>
+			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
+				<Instance index="1" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="17.0" />
+			</CommandClass>
+			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
+				<Instance index="1" />
+				<Value type="list" genre="user" instance="1" index="0" label="Mode" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="1" size="0">
+					<Item label="Frost Protection" value="0" />
+					<Item label="Comfort" value="1" />
+					<Item label="Energy Saving" value="11" />
+					<Item label="Direct Valve Control" value="31" />
+				</Value>
+				<SupportedModes>
+					<Mode index="0" label="Off" />
+					<Mode index="1" label="Heat" />
+					<Mode index="11" label="Heat Econ" />
+					<Mode index="14" label="Unknown" />
+				</SupportedModes>
+			</CommandClass>
+			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT" version="1" request_flags="4" innif="true" base="0">
+				<Instance index="1" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Comfort setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="11.0" />
+				<Value type="decimal" genre="user" instance="1" index="7" label="Furnace" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
+				<Value type="decimal" genre="user" instance="1" index="11" label="Energy saving setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="15.0" />
+			</CommandClass>
+			<CommandClass id="114" name="COMMAND_CLASS_MANUFACTURER_SPECIFIC" version="1" request_flags="4" innif="true">
+				<Instance index="1" />
+			</CommandClass>
+			<CommandClass id="119" name="COMMAND_CLASS_NODE_NAMING" version="1" request_flags="4" innif="true">
+				<Instance index="1" />
+			</CommandClass>
+			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
+				<Instance index="1" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
+			</CommandClass>
+			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
+				<Instance index="1" />
+				<Value type="int" genre="system" instance="1" index="0" label="Wake-up Interval" units="Seconds" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="300" />
+				<Value type="int" genre="system" instance="1" index="1" label="Minimum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="240" />
+				<Value type="int" genre="system" instance="1" index="2" label="Maximum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="15728400" />
+				<Value type="int" genre="system" instance="1" index="3" label="Default Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="604672" />
+				<Value type="int" genre="system" instance="1" index="4" label="Wake-up Interval Step" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="240" />
+			</CommandClass>
+			<CommandClass id="134" name="COMMAND_CLASS_VERSION" version="1" request_flags="4" innif="true">
+				<Instance index="1" />
+				<Value type="string" genre="system" instance="1" index="0" label="Library Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="3" />
+				<Value type="string" genre="system" instance="1" index="1" label="Protocol Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="3.42" />
+				<Value type="string" genre="system" instance="1" index="2" label="Application Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.04" />
+			</CommandClass>
+		</CommandClasses>
+	</Node>
+	<Node id="44" name="bedroom_mark_north" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1643,78 +1714,7 @@
 			</CommandClass>
 			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT" version="1" request_flags="4" innif="true" base="0">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Comfort setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="10.0" />
-				<Value type="decimal" genre="user" instance="1" index="7" label="Furnace" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
-				<Value type="decimal" genre="user" instance="1" index="11" label="Energy saving setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="15.0" />
-			</CommandClass>
-			<CommandClass id="114" name="COMMAND_CLASS_MANUFACTURER_SPECIFIC" version="1" request_flags="4" innif="true">
-				<Instance index="1" />
-			</CommandClass>
-			<CommandClass id="119" name="COMMAND_CLASS_NODE_NAMING" version="1" request_flags="4" innif="true">
-				<Instance index="1" />
-			</CommandClass>
-			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
-				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="89" />
-			</CommandClass>
-			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
-				<Instance index="1" />
-				<Value type="int" genre="system" instance="1" index="0" label="Wake-up Interval" units="Seconds" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="300" />
-				<Value type="int" genre="system" instance="1" index="1" label="Minimum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="240" />
-				<Value type="int" genre="system" instance="1" index="2" label="Maximum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="15728400" />
-				<Value type="int" genre="system" instance="1" index="3" label="Default Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="604672" />
-				<Value type="int" genre="system" instance="1" index="4" label="Wake-up Interval Step" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="240" />
-			</CommandClass>
-			<CommandClass id="134" name="COMMAND_CLASS_VERSION" version="1" request_flags="4" innif="true">
-				<Instance index="1" />
-				<Value type="string" genre="system" instance="1" index="0" label="Library Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="3" />
-				<Value type="string" genre="system" instance="1" index="1" label="Protocol Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="3.42" />
-				<Value type="string" genre="system" instance="1" index="2" label="Application Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.04" />
-			</CommandClass>
-		</CommandClasses>
-	</Node>
-	<Node id="44" name="bedroom_mark_north" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
-		<Manufacturer id="148" name="EUROtronic">
-			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
-		</Manufacturer>
-		<CommandClasses>
-			<CommandClass id="32" name="COMMAND_CLASS_BASIC" version="1" request_flags="4" innif="true" mapping="64">
-				<Instance index="1" />
-			</CommandClass>
-			<CommandClass id="38" name="COMMAND_CLASS_SWITCH_MULTILEVEL" version="3" innif="true">
-				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="59" />
-				<Value type="button" genre="user" instance="1" index="1" label="Open" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
-				<Value type="button" genre="user" instance="1" index="2" label="Close" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
-				<Value type="bool" genre="system" instance="1" index="3" label="Ignore Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
-				<Value type="byte" genre="system" instance="1" index="4" label="Start Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
-				<Value type="byte" genre="system" instance="1" index="5" label="Dimming Duration" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="255" />
-				<Value type="byte" genre="user" instance="1" index="6" label="Step Size" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
-				<Value type="button" genre="user" instance="1" index="7" label="Inc" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
-				<Value type="button" genre="user" instance="1" index="8" label="Dec" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
-			</CommandClass>
-			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
-				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="13.5" />
-			</CommandClass>
-			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
-				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="0" label="Mode" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="1" size="0">
-					<Item label="Frost Protection" value="0" />
-					<Item label="Comfort" value="1" />
-					<Item label="Energy Saving" value="11" />
-					<Item label="Direct Valve Control" value="31" />
-				</Value>
-				<SupportedModes>
-					<Mode index="0" label="Off" />
-					<Mode index="1" label="Heat" />
-					<Mode index="11" label="Heat Econ" />
-					<Mode index="14" label="Unknown" />
-				</SupportedModes>
-			</CommandClass>
-			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT" version="1" request_flags="4" innif="true" base="0">
-				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Comfort setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="15.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Comfort setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="20.0" />
 				<Value type="decimal" genre="user" instance="1" index="7" label="Furnace" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 				<Value type="decimal" genre="user" instance="1" index="11" label="Energy saving setpoint" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="18.0" />
 			</CommandClass>
@@ -1789,7 +1789,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="2" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="19.1" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="19.0" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1">
 				<Instance index="1" />
@@ -1808,7 +1808,7 @@
 			</CommandClass>
 			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT" version="1" request_flags="4" innif="true" base="0">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="15.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="10.0" />
 				<Value type="decimal" genre="user" instance="1" index="9" label="Moist Air" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 			</CommandClass>
 			<CommandClass id="112" name="COMMAND_CLASS_CONFIGURATION" version="1" request_flags="4" innif="true">
@@ -1833,7 +1833,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="50" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="47" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -1958,11 +1958,11 @@
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0000" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0000" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="77.6490" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="77.6489" />
 				<Value type="int" genre="user" instance="1" index="2" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1" />
-				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
-				<Value type="decimal" genre="user" instance="1" index="9" label="Previous Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
+				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.7" />
+				<Value type="decimal" genre="user" instance="1" index="9" label="Previous Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.8" />
 				<Value type="int" genre="user" instance="1" index="10" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -2067,11 +2067,11 @@
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0010" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0010" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="24.8841" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="24.8841" />
 				<Value type="int" genre="user" instance="1" index="2" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.2" />
-				<Value type="decimal" genre="user" instance="1" index="9" label="Previous Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.3" />
+				<Value type="decimal" genre="user" instance="1" index="9" label="Previous Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 				<Value type="int" genre="user" instance="1" index="10" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -2166,7 +2166,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="4" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="18.5" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="19.0" />
 				<Value type="decimal" genre="user" instance="1" index="17" label="CO2 Level" units="ppm" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="14.0" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
@@ -2198,7 +2198,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="35" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="20" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -2216,7 +2216,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="56" name="annex_heating_relay" location="" basic="4" generic="8" specific="0" type="Thermostat" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Complete">
+	<Node id="56" name="annex_heating_relay" location="" basic="4" generic="8" specific="0" type="Thermostat" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="CacheLoad">
 		<Manufacturer id="59" name="Horstmann">
 			<Product type="3" id="1" name="ASR-ZW Thermostat Receiver" />
 		</Manufacturer>
@@ -2434,7 +2434,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="63" name="heiman_contact_63" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
+	<Node id="63" name="heiman_contact_63" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Probe">
 		<Manufacturer id="260" name="Domux">
 			<Product type="168" id="168" name="Unknown: type=0168, id=0168" />
 		</Manufacturer>
@@ -2550,7 +2550,7 @@
 			</CommandClass>
 			<CommandClass id="37" name="COMMAND_CLASS_SWITCH_BINARY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True" />
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 			</CommandClass>
 			<CommandClass id="39" name="COMMAND_CLASS_SWITCH_ALL" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -2563,11 +2563,11 @@
 			</CommandClass>
 			<CommandClass id="50" name="COMMAND_CLASS_METER" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0000" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0000" />
+				<Value type="decimal" genre="user" instance="1" index="0" label="Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0009" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Previous Energy" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0009" />
 				<Value type="int" genre="user" instance="1" index="2" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1" />
 				<Value type="decimal" genre="user" instance="1" index="8" label="Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
-				<Value type="decimal" genre="user" instance="1" index="9" label="Previous Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="4.1" />
+				<Value type="decimal" genre="user" instance="1" index="9" label="Previous Power" units="W" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.5" />
 				<Value type="int" genre="user" instance="1" index="10" label="Interval" units="seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1" />
 				<Value type="bool" genre="user" instance="1" index="32" label="Exporting" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False" />
 				<Value type="button" genre="system" instance="1" index="33" label="Reset" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0" />
@@ -2822,7 +2822,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="25" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="70" />
 			</CommandClass>
 			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP" version="2" request_flags="2" innif="true">
 				<Instance index="1" />
@@ -3081,7 +3081,7 @@
 			</CommandClass>
 			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL" version="5" innif="true">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="18.40" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="5" min="0" max="0" value="13.11" />
 			</CommandClass>
 			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -3103,7 +3103,7 @@
 			</CommandClass>
 			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT" version="1" request_flags="4" innif="true" base="0">
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Heat" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="8" max="28" value="8.0" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Heat" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="8" max="28" value="10.0" />
 				<Value type="decimal" genre="user" instance="1" index="7" label="Furnace" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.0" />
 				<Value type="decimal" genre="user" instance="1" index="11" label="Heat Eco" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="8" max="28" value="18.0" />
 			</CommandClass>
@@ -3158,7 +3158,7 @@
 				<Value type="byte" genre="user" instance="1" index="0" label="Alarm Type" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="user" instance="1" index="1" label="Alarm Level" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="user" instance="1" index="2" label="SourceNodeId" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
-				<Value type="byte" genre="user" instance="1" index="11" label="Power Management" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="254" />
+				<Value type="byte" genre="user" instance="1" index="11" label="Power Management" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0" />
 				<Value type="byte" genre="user" instance="1" index="12" label="System" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="254" />
 			</CommandClass>
 			<CommandClass id="114" name="COMMAND_CLASS_MANUFACTURER_SPECIFIC" version="1" request_flags="4" innif="true">
@@ -3213,7 +3213,7 @@
 			</CommandClass>
 			<CommandClass id="128" name="COMMAND_CLASS_BATTERY" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="50" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="35" />
 			</CommandClass>
 			<CommandClass id="133" name="COMMAND_CLASS_ASSOCIATION" version="1" request_flags="4" innif="true">
 				<Instance index="1" />
@@ -3231,7 +3231,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="70" name="spiritz_70" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Dynamic">
+	<Node id="70" name="spiritz_70" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Configuration">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="3" id="1" name="EUR_SPIRITZ Wall Radiator Thermostat" />
 		</Manufacturer>
