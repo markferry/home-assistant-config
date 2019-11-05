@@ -12,6 +12,7 @@ group:
   monica_present:
     name: "Monica"
     entities: &presence_entities
+    - device_tracker.moncoms_iphone
     - device_tracker.monica_phone
     - device_tracker.monica_iphone
     - device_tracker.monica_macbook_pro
@@ -31,12 +32,18 @@ binary_sensor:
       #  platform: 'state'
       #  to_state: 'home'
 
-      - entity_id: device_tracker.monica_iphone
-        prob_given_true: 0.8
-        prob_given_false: 0.1
+      # ios platform - loc doesn't update very often
+      - entity_id: device_tracker.moncoms_iphone
+        prob_given_true: 0.4
+        prob_given_false: 0.2
         <<: &tracker_default
           platform: 'state'
           to_state: 'home'
+
+      - entity_id: device_tracker.monica_iphone
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
 
       - entity_id: device_tracker.monica_macbook_pro
         prob_given_true: 0.5
