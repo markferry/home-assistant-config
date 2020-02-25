@@ -285,6 +285,7 @@ views:
           - device_tracker.ap_central
           - device_tracker.ap_east
           - device_tracker.poe_switch
+          - device_tracker.olive_hub
           - device_tracker.hastur
           - device_tracker.cyclops
           - device_tracker.study
