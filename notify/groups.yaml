@@ -16,18 +16,18 @@
   platform: group
   services:
     - service: ios_marks_iphone
-    - service: ios_ross_iphone
     - service: ios_thomas_cmtcd
     - service: ios_annies_iphone2
     - service: html5_markmotog5
     - service: html5_marktablet
-    - service: html5_jeromeandroid
 
 # Barnacles
 - name: barnacles
   platform: group
   services:
     - service: html5_lianemotog
+    - service: html5_jeromeandroid
+    - service: ios_ross_iphone
 
 # All Devices
 - name: all_devices
@@ -43,7 +43,6 @@
   platform: group
   services:
     - service: ios_marks_iphone
-    - service: ios_ross_iphone
     - service: ios_thomas_cmtcd
     - service: ios_annies_iphone2
 
@@ -52,7 +51,6 @@
   platform: group
   services:
     - service: html5_markmotog5
-    - service: html5_jeromeandroid
     - service: html5_lianemotog
 
 # All tablets
@@ -62,5 +60,4 @@
     - service: html5_kitchen
     - service: html5_library
     - service: html5_marktablet
-    - service: html5_rostablet
 

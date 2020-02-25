@@ -1,2 +1,3 @@
+- binary_sensor.jerome_present
 - binary_sensor.ros_present
 - binary_sensor.liane_present
