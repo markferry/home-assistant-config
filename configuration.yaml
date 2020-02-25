@@ -99,7 +99,7 @@ homeassistant:
 
     #package_room: !include packages/room/room.yaml
 
-
+    # usb0 decomissioned
     package_modem_scraper: !include packages/modem_scraper.yaml
 
     # dash button automations

@@ -312,13 +312,6 @@ views:
           - sensor.eaton_ups_load
           - sensor.eaton_ups_battery_charge
           - sensor.eaton_ups_battery_runtime
-      - type: entities
-        title: EE 64GB
-        show_header_toggle: false
-        entities:
-          - sensor.modem_0_state
-          - sensor.modem_0_monthly_tx
-          - sensor.modem_0_monthly_rx
 
   - title: Multiroom Audio
     icon: mdi:music
