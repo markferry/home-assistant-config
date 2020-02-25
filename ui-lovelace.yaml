@@ -169,6 +169,7 @@ views:
       - sensor.aeotec_dsb05_multisensor_temperature
       - sensor.hall_temperature
       - sensor.annex_hall_mean_temperature
+      - sensor.camera_0_motion_detected
     cards:
       - type: entities
         title: Hall
@@ -357,12 +358,72 @@ views:
           - switch.bedroom_mark_demand
           - switch.bedroom_jerome_demand
       - type: entities
+        title: Main Heating Override
+        show_header_toggle: false
+        entities:
+          - switch.main_heating_relay_switch
+          - switch.main_heating_relay_hot_water
+          - automation.main_boiler_demand_on
+          - automation.main_boiler_demand_off
+          - automation.hot_water_on
+          - automation.hot_water_off
+      - type: entities
         title: Annex Heating Demand
         show_header_toggle: true
         entities:
           - switch.study_demand
           - switch.annex_hall_demand
           - switch.bedroom_annex2_demand
+      - type: entities
+        title: Annex Heating Override
+        show_header_toggle: false
+        entities:
+          - switch.annex_heating_relay_switch
+          - automation.annex_thermostat_demand_on
+          - automation.annex_thermostat_demand_off
+
+      - type: entities
+        title: ZWave
+        show_header_toggle: false
+        entities:
+          # live
+          - zwave.study_east
+          - zwave.aeotec_dsb05_multisensor
+          - entity: zwave.heiman_contact_66
+            name: Gin Freezer
+          - entity: zwave.greenwave_powernode_54
+            name: Washing Machine
+          - zwave.kitchen
+          - zwave.main_heating_thermostat
+          - zwave.hall_west
+          - zwave.hall_east
+          - entity: zwave.stellaz_55
+            name: Lounge East
+          - zwave.library
+          - zwave.ballroom_east
+          - zwave.guest_room
+          - zwave.bedroom_mark_south
+          - zwave.bedroom_mark_north
+
+          # repeaters
+          - zwave.greenwave_powernode_62
+          - zwave.greenwave_powernode_64
+          - zwave.main_heating_relay
+          - entity: zwave.greenwave_powernode_53
+            name: Hot Tub
+          - zwave.bedroom_mark_overhead
+
+          # inactive
+          - zwave.annex_hall
+          - zwave.bedroom_anne
+          - entity: zwave.heiman_contact_63
+            name: Front Door
+          - entity: zwave.heiman_contact_65
+            name: Study Door
+          - zwave.study_west
+          - zwave.heiman_contact_67
+          - zwave.heiman_contact_68
+
       - type: entities
         title: Temperatures
         show_header_toggle: false
@@ -439,23 +500,6 @@ views:
           - sensor.annex_hall_battery
           - sensor.bedroom_annex2_battery
           - sensor.guest_room_battery
-      - type: entities
-        title: Main Heating Override
-        show_header_toggle: false
-        entities:
-          - switch.main_heating_relay_switch
-          - switch.main_heating_relay_hot_water
-          - automation.main_boiler_demand_on
-          - automation.main_boiler_demand_off
-          - automation.hot_water_on
-          - automation.hot_water_off
-      - type: entities
-        title: Annex Heating Override
-        show_header_toggle: false
-        entities:
-          - switch.annex_heating_relay_switch
-          - automation.annex_thermostat_demand_on
-          - automation.annex_thermostat_demand_off
       - type: entities
         title: Automations
         show_header_toggle: false
