@@ -21,14 +21,14 @@ views:
               name: Mark
             - entity: binary_sensor.anne_present
               name: Anne
-            - entity: binary_sensor.jerome_present
-              name: Jerome
             - entity: binary_sensor.thomas_present
               name: Thomas
             - entity: binary_sensor.monica_present
               name: Monica
         - type: entity-filter
           entities:
+            - entity: binary_sensor.jerome_present
+              name: Jerome
             - entity: binary_sensor.ros_present
               name: Ros
             - entity: binary_sensor.liane_present
