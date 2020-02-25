@@ -43,7 +43,6 @@ group:
       - sensor.cm2_airflow
       - sensor.cm2_sound
       - sensor.cm2_dew_point_c
-      - group.network
       - group.ups
       - group.g_modem_0
 

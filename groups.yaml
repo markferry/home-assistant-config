@@ -269,8 +269,6 @@ thermostats:
   - climate.bedroom_jerome_thermostat
   - climate.bedroom_annex2_thermostat
 
-network: !include network.yaml
-
 virtual_appliances:
   name: Virtual Appliances
   view: false
