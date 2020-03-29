@@ -53,6 +53,7 @@ scene:
       media_player.library:
         state: paused
       media_player.snapcast_client_library:
+        state: on
         is_volume_muted: true
 
   - name: library_cosy

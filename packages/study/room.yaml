@@ -68,6 +68,7 @@ scene:
       media_player.study:
         state: paused
       media_player.snapcast_client_study:
+        state: on
         is_volume_muted: true
 
   - name: study_cosy

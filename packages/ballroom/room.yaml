@@ -74,6 +74,7 @@ scene:
       media_player.ballroom_amplifier:
         state: off
       media_player.snapcast_client_ballroom:
+        state: on
         is_volume_muted: true
 
   - name: ballroom_party
