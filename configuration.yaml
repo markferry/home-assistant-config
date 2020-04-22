@@ -216,3 +216,4 @@ owntracks:
   max_gps_accuracy: 3000
 
 google_assistant: !include google-assistant.yaml
+mobile_app:
