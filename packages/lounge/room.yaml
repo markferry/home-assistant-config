@@ -60,6 +60,7 @@ scene:
       media_player.lounge:
         state: paused
       media_player.snapcast_client_lounge:
+        state: on
         is_volume_muted: true
 
   - name: lounge_cosy
