@@ -69,6 +69,7 @@ scene:
       #media_player.kitchen_amplifier:
       #  state: off
       #media_player.snapcast_client_kitchen_2:
+      #  state: on
       #  is_volume_muted: true
 
   - name: kitchen_cosy

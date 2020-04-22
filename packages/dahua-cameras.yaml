@@ -7,8 +7,9 @@ amcrest:
     password: !secret camera0_password
     resolution: "low"
     scan_interval: 30
+    binary_sensors:
+      - motion_detected
     sensors:
-      - motion_detector
       #- sdcard
       - ptz_preset
 
