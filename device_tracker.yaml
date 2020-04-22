@@ -1,4 +1,5 @@
 #- platform: snmp
+
 #  host: 192.168.7.1
 #  community: public
 #  baseoid: 1.3.6.1.2.1.4.22.1.2
@@ -25,14 +26,16 @@
 ## Needs either a valid cert or set
 ##  PYTHONWARNINGS="ignore:Unverified HTTPS request"
 ##
-- platform: unifi
-  host: cyclops
-  username: viewer
-  password: !secret unifi_password
-  verify_ssl: false
 
-- platform: tado
-  username: !secret tado_username
-  password: !secret tado_password
-  home_id: !secret tado_home_id
+## FIXME: disable until after 0.97
+# - platform: unifi
+#   host: cyclops
+#   username: viewer
+#   password: !secret unifi_password
+#   verify_ssl: false
+
+#- platform: tado
+#  username: !secret tado_username
+#  password: !secret tado_password
+#  home_id: !secret tado_home_id
 
