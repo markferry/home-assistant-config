@@ -165,7 +165,8 @@ mqtt:
   port: 1883
   client_id: home-assistant
   keepalive: 60
-  protocol: 3.1
+  discovery: true
+  discovery_prefix: ha
 
 rfxtrx:
   device: /dev/ttyUSB22
