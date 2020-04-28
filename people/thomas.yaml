@@ -17,6 +17,7 @@ group:
       - device_tracker.thomas_mbp
       - device_tracker.thomas_mbp_bt
       - device_tracker.thomas_cmtcd
+      - device_tracker.thomas_cmtcd_2
 
 binary_sensor:
   - name: thomas_present
@@ -34,6 +35,12 @@ binary_sensor:
           to_state: 'home'
 
       - entity_id: device_tracker.thomas_cmtcd
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      # mobile app
+      - entity_id: device_tracker.thomas_cmtcd_2
         prob_given_true: 0.8
         prob_given_false: 0.1
         <<: *tracker_default

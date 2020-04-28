@@ -10,6 +10,7 @@
     - service: pushetta
     - service: ios_marks_iphone
     - service: html5_markmotog5
+    - service: mobile_app_moto_g_5
 
 # All Barnmates
 - name: whalebarn
@@ -20,6 +21,7 @@
     - service: ios_annies_iphone2
     - service: html5_markmotog5
     - service: html5_marktablet
+    - service: mobile_app_moto_g_5
 
 # Barnacles
 - name: barnacles
@@ -52,6 +54,7 @@
   services:
     - service: html5_markmotog5
     - service: html5_lianemotog
+    - service: mobile_app_moto_g_5
 
 # All tablets
 - name: all_tablets
