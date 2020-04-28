@@ -7,46 +7,44 @@
 - name: admin
   platform: group
   services:
-    - service: pushetta
-    - service: ios_marks_iphone
-    - service: html5_markmotog5
+    - service: mobile_app_mark_s_iphone
     - service: mobile_app_moto_g_5
+    - service: pushetta
 
 # All Barnmates
 - name: whalebarn
   platform: group
   services:
-    - service: ios_marks_iphone
-    - service: ios_thomas_cmtcd
-    - service: ios_annies_iphone2
-    - service: html5_markmotog5
     - service: html5_marktablet
+    - service: mobile_app_mark_s_iphone
     - service: mobile_app_moto_g_5
+    - service: mobile_app_thomas_cmtcd
+    - service: mobile_app_annies_iphone_4
+    - service: mobile_app_moncoms_iphone
 
 # Barnacles
 - name: barnacles
   platform: group
   services:
-    - service: html5_lianemotog
-    - service: html5_jeromeandroid
-    - service: ios_ross_iphone
+    - service: mobile_app_liane_moto_g5
 
 # All Devices
 - name: all_devices
   platform: group
   services:
-    - service: pushetta
     - service: all_androids
     - service: all_iphones
     - service: all_tablets
+    - service: pushetta
 
 # All iphones
 - name: all_iphones
   platform: group
   services:
-    - service: ios_marks_iphone
-    - service: ios_thomas_cmtcd
-    - service: ios_annies_iphone2
+    - service: mobile_app_mark_s_iphone
+    - service: mobile_app_thomas_cmtcd
+    - service: mobile_app_annies_iphone_4
+    - service: mobile_app_moncoms_iphone
 
 # All androids
 - name: all_androids
