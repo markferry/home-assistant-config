@@ -1,4 +1,0 @@
-- name: pushetta
-  platform: pushetta
-  api_key: !secret pushetta_api_key
-  channel_name: whalebarn

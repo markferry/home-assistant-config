@@ -2,12 +2,11 @@
 - name: automations
   platform: group
   services:
-    - service: pushetta
+    - service: mobile_app_moto_g_5
 
 - name: admin
   platform: group
   services:
-    - service: pushetta
     - service: ios_marks_iphone
     - service: html5_markmotog5
     - service: mobile_app_moto_g_5
@@ -35,7 +34,6 @@
 - name: all_devices
   platform: group
   services:
-    - service: pushetta
     - service: all_androids
     - service: all_iphones
     - service: all_tablets
