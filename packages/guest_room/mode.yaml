@@ -7,7 +7,6 @@
 
 input_select:
   guest_room_mode:
-    name: Guest Room Mode
     options:
       - 'Off'
       - 'Cosy'

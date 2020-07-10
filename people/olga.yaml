@@ -1,0 +1,88 @@
+homeassistant:
+  customize:
+    group.olga_present:
+      entity_picture: &ep /local/wb-icons/wb_olga.png
+    binary_sensor.olga_present:
+      entity_picture: *ep
+    device_tracker.olga_phone:
+      entity_picture: *ep
+      friendly_name: "Olga Owntracks"
+
+group:
+  olga_present:
+    name: "Olga"
+    entities: &presence_entities
+    - device_tracker.olga_huawei
+    - device_tracker.olga_huawei_bt
+
+binary_sensor:
+  - name: olga_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      ## Owntracks
+      #- entity_id: device_tracker.olga_phone
+      #  prob_given_true: 0.4
+      #  prob_given_false: 0.2
+      #  platform: 'state'
+      #  to_state: 'home'
+
+      - entity_id: device_tracker.olga_huawei
+        prob_given_true: 0.8
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.olga_huawei_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+automation:
+  - alias: "Calendar Olga Scene"
+    trigger:
+      - platform: state
+        entity_id: calendar.olga_scene
+        to: "on"
+    action:
+      - service_template: input_select.select_option
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "olga" in l %}
+            {%   set u = "bedroom_main2" %}
+            {% endif %}
+            input_select.{{u}}_mode
+          option: >
+            {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+            {{ v[0].upper() ~ v[1:].lower() }}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/olga-scene'
+          payload: '{{trigger.to_state.attributes.message}}'
+
+  - alias: "Calendar Olga Climate"
+    trigger:
+      - platform: state
+        entity_id: calendar.olga_climate
+        to: "on"
+    action:
+      - service_template: climate.set_temperature
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "olga" in l %}
+            {%   set u = "bedroom_main2" %}
+            {% endif %}
+            climate.{{u}}_thermostat
+          temperature: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {{l|last|float}}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/olga-climate'
+          payload: '{{trigger.to_state.attributes.message}}'
+

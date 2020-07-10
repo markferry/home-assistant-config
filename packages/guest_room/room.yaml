@@ -19,14 +19,7 @@ homeassistant:
       max_temp: 25
 
 group:
-  guest_room:
-    name: Guest Room
-    icon: mdi:hotel
-    view: false
-    entities:
-    - sensor.guest_room_mean_temperature
-    - group.guest_room_compact_ui
-
+  # floorplan
   guest_room_compact_ui:
     name: Guest Room
     view: false
@@ -34,13 +27,17 @@ group:
     entities:
     - input_select.guest_room_mode
     - climate.guest_room_thermostat
-    - group.g_guest_room_settings_ui
+    - group.guest_room_lights
 
   guest_room_setpoints:
     name: Guest Room Setpoints
     view: false
     entities:
     - climate.guest_room_heat
+
+  guest_room_lights:
+    name: Guest Room Lights
+    view: false
 
 scene:
   - name: guest_room_off

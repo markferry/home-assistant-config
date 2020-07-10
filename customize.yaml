@@ -1,48 +1,9 @@
-group.people:
-  order: 1
-group.barnacles:
-  order: 2
-group.room_modes:
-  order: 3
-group.bedroom_modes:
-  order: 4
-
 group.all_automations:
   hidden: false
-
-group.bedrooms:
-  order: 0
-group.study:
-  order: 1
-group.kitchen:
-  order: 2
-group.hall:
-  order: 3
-group.lounge:
-  order: 4
-group.library:
-  order: 5
-group.ballroom:
-  order: 6
-group.guest_room:
-  order: 7
-group.radio:
-  order: 9
-group.armoury:
-  order: 9
-group.g_multiroom_audio_ui:
-  order: 10
-group.settings:
-  order: 20
 
 group.all_lights:
   icon: mdi:lightbulb-on
 
-light.unused_40_level:
-  friendly_name: Unused Dimmer 40
-light.unused_41_level:
-  friendly_name: Unused Dimmer 41
-  polling_intensity: 0
 climate.main_heating_thermostat_heating_1:
   friendly_name: Main Heating Thermostat
 sensor.main_heating_thermostat_temperature:
@@ -70,16 +31,3 @@ sensor.main_heating_thermostat_battery:
 sensor.annex_heating_thermostat_battery:
   friendly_name: Annex Heating Battery
   icon: mdi:battery
-
-sensor.js_bedroom_present:
-  device_class: 'presence'
-
-# Place guest room last
-group.bedroom_mark_compact_ui:
-  order: 1
-group.bedroom_jerome_compact_ui:
-  order: 1
-group.bedroom_annex2_compact_ui:
-  order: 1
-group.guest_room_compact_ui:
-  order: 2

@@ -4,8 +4,6 @@
 
 homeassistant:
   customize:
-    climate.kitchen_thermostat:
-      friendly_name: Kitchen
     climate.kitchen_comfort_setpoint:
       min_temp: 5
       max_temp: 25
@@ -16,22 +14,8 @@ homeassistant:
       friendly_name: Kitchen Battery
       icon: mdi:battery
 
-    media_player.outside_amplifier_zone_2:
-      friendly_name: Kitchen Amplifier
-
 group:
-  kitchen:
-    name: Kitchen
-    view: true
-    icon: mdi:stove
-    entities:
-    - sensor.kitchen_mean_temperature
-    - group.kitchen_compact_ui
-    - media_player.kitchen_speaker
-    - sensor.greenwave_powernode_54_energy
-    - sensor.greenwave_powernode_54_power
-    - media_player.outside_amplifier_zone_2
-
+  # floorplan
   kitchen_compact_ui:
     name: Kitchen
     view: false
@@ -40,7 +24,7 @@ group:
     - input_select.kitchen_mode
     - climate.kitchen_thermostat
     - binary_sensor.washing_machine
-    - group.g_kitchen_settings_ui
+    - group.kitchen_lights
 
   kitchen_setpoints:
     name: Kitchen Setpoints

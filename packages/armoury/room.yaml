@@ -32,20 +32,6 @@ homeassistant:
       friendly_name: UPS Runtime
 
 group:
-  armoury:
-    name: Armoury
-    view: true
-    icon: mdi:security
-    entities:
-      - sensor.cm2_temp_c
-      - sensor.cm2_humidity
-      - sensor.cm2_light
-      - sensor.cm2_airflow
-      - sensor.cm2_sound
-      - sensor.cm2_dew_point_c
-      - group.ups
-      - group.g_modem_0
-
   ups:
     name: UPS
     icon: mdi:car-battery

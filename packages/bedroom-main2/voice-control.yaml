@@ -1,0 +1,47 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    climate.bedroom_main2_thermostat:
+      name: "Olga's Bedroom Thermostat"
+      <<: &ga_bedroom_main2_expose
+        expose: true
+        room: "Olga's Bedroom"
+
+    group.bedroom_main2_lights:
+      name: "Olga's Bedroom Lights"
+      <<: *ga_bedroom_main2_expose
+
+    script.voice_bedroom_main2_off:
+      name: "Olga's Bedroom Shutdown"
+      <<: *ga_bedroom_main2_expose
+    script.voice_bedroom_main2_cosy:
+      name: "Olga's Bedroom Cosy Mode"
+      <<: *ga_bedroom_main2_expose
+    script.voice_bedroom_main2_sleep:
+      name: "Olga's Bedroom Sleep Mode"
+      <<: *ga_bedroom_main2_expose
+
+script:
+  voice_bedroom_main2_off:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_main2_mode
+          option: "Off"
+
+  voice_bedroom_main2_cosy:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_main2_mode
+          option: "Cosy"
+
+  voice_bedroom_main2_sleep:
+      sequence:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_main2_mode
+          option: "Sleep"
+

@@ -1,0 +1,64 @@
+#
+# Jerome's Room
+#
+
+homeassistant:
+  customize:
+    sensor.bedroom_main2_battery:
+      icon: mdi:battery
+    climate.bedroom_main2_heat:
+      min_temp: 8
+      max_temp: 25
+
+group:
+  # floorplan
+  bedroom_main2_compact_ui:
+    name: "Olga's Bedroom"
+    view: false
+    entities:
+    - input_select.bedroom_main2_mode
+    - climate.bedroom_main2_thermostat
+    - group.bedroom_main2_lights
+
+  bedroom_main2_setpoints:
+    view: false
+    entities:
+    - climate.bedroom_main2_heat
+
+  bedroom_main2_lights:
+    view: false
+
+
+scene:
+  - name: bedroom_main2_off
+    entities:
+      group.bedroom_main2_lights:
+        state: off
+      switch.bedroom_main2_appliances:
+        state: off
+
+  - name: bedroom_main2_sleep
+    entities:
+      group.bedroom_main2_lights:
+        state: off
+
+  - name: bedroom_main2_cosy
+    entities:
+      group.bedroom_main2_lights:
+        state: on
+
+sensor:
+  - platform: template
+    sensors:
+      bedroom_main2_battery:
+        value_template: >
+          {% if states.zwave.bedroom_main2 %}
+            {{ states.zwave.bedroom_main2.attributes.battery_level }}
+          {% else %}
+            unknown
+          {% endif %}
+        unit_of_measurement: '%'
+        entity_id: zwave.bedroom_main2
+
+#automation: !include_dir_merge_list automations
+#script: !include_dir_merge_named scripts

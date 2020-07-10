@@ -39,7 +39,7 @@ climate:
 switch:
   - name: bedroom_annex2_demand
     platform: mqtt
-    command_topic: ha/bedroom-ros/demand/command
+    command_topic: ha/bedroom-annex2/demand/command
     payload_off: 'OFF'
     payload_on: 'ON'
     retain: true

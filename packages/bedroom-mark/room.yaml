@@ -4,59 +4,22 @@
 
 homeassistant:
   customize:
-    automation.bedroom_mark_sleep_time:
-      friendly_name: "Mark's Bedroom Sleep Time"
-    automation.bedroom_mark_off_time:
-      friendly_name: "Mark's Bedroom Off Time"
-
     group.bedroom_mark_lights:
       icon: mdi:lightbulb-on
 
     light.bedroom_mark_overhead_level:
-      friendly_name: "Mark's Bedroom Overhead"
+      friendly_name: "Overhead"
       icon: mdi:ceiling-light
     light.bedroom_mark_lamp:
-      friendly_name: "Mark's Bedroom Lamp"
+      friendly_name: "Dressing Table"
 
-    sensor.bedroom_mark_south_temperature:
-      friendly_name: "Mark's Bedroom South"
-    sensor.bedroom_mark_north_temperature:
-      friendly_name: "Mark's Bedroom North"
     sensor.bedroom_mark_south_battery:
-      friendly_name: "Mark's Bedroom South Battery"
       icon: mdi:battery
     sensor.bedroom_mark_north_battery:
-      friendly_name: "Mark's Bedroom North Battery"
       icon: mdi:battery
 
-    climate.bedroom_mark_south_comfort_setpoint:
-      min_temp: 5
-      max_temp: 25
-    climate.bedroom_mark_north_comfort_setpoint:
-      min_temp: 5
-      max_temp: 25
-
-
-    switch.bedroom_mark_demand:
-      friendly_name: "Mark's Bedroom Demand"
-
-    media_player.bedroom_mark:
-      friendly_name: "Mark's Bedroom"
-
-    media_player.bedroommarkaudio:
-      friendly_name: "Mark's Chromecast"
-
 group:
-  bedroom_mark:
-    name: "Mark's Bedroom"
-    view: false
-    icon: mdi:account
-    entities:
-    - sensor.bedroom_mark_temperature
-    - climate.bedroom_mark_thermostat
-    - group.bedroom_mark_lights
-    - group.bedroom_mark_appliances
-
+  # floorplan
   bedroom_mark_compact_ui:
     name: "Mark's Bedroom"
     view: false
@@ -64,8 +27,6 @@ group:
     - input_select.bedroom_mark_mode
     - climate.bedroom_mark_thermostat
     - group.bedroom_mark_lights
-    - group.g_bedroom_mark_media_dimming
-    - group.g_bedroom_mark_settings_ui
     - media_player.bedroom_mark
 
   bedroom_mark_setpoints:

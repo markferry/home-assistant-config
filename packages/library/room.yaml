@@ -10,22 +10,12 @@ homeassistant:
       friendly_name: Library Battery
       icon: mdi:battery
 
-    climate.library_thermostat:
-      friendly_name: Library
     climate.library_comfort_setpoint:
       min_temp: 5
       max_temp: 25
 
 group:
-  library:
-    name: Library
-    view: true
-    icon: mdi:library
-    entities:
-    - sensor.library_mean_temperature
-    - group.library_compact_ui
-    - media_player.library
-
+  # floorplan
   library_compact_ui:
     name: Library
     view: false
@@ -33,7 +23,7 @@ group:
     entities:
     - input_select.library_mode
     - climate.library_thermostat
-    - group.g_library_settings_ui
+    - group.library_lights
 
   library_setpoints:
     name: Library Setpoints

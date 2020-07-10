@@ -12,7 +12,6 @@ homeassistant:
 
 input_select:
   bedroom_mark_mode:
-    name: "Mark's Bedroom Mode"
     options:
       - 'Off'
       - 'Play'

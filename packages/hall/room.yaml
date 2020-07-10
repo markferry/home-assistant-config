@@ -41,26 +41,6 @@ homeassistant:
       friendly_name: Outside Amplifier
 
 group:
-  hall:
-    name: Hall
-    view: true
-    icon: mdi:fullscreen-exit
-    entities:
-    - binary_sensor.aeotec_dsb05_multisensor_sensor
-    - sensor.aeotec_dsb05_multisensor_luminance
-    - sensor.aeotec_dsb05_multisensor_relative_humidity
-    - sensor.aeotec_dsb05_multisensor_temperature
-    - sensor.hall_temperature
-    - sensor.annex_hall_mean_temperature
-    #
-    - group.hall_compact_ui
-    - group.hall_lights
-    - group.main_heating
-    - group.annex_heating
-    - group.g_hottub
-    - group.g_oil_tanks
-    - media_player.outside_amplifier
-
   hall_compact_ui:
     name: Hall
     view: false
@@ -68,6 +48,7 @@ group:
     entities:
     - climate.hall_thermostat
     - climate.annex_hall_thermostat
+    - group.hall_lights
 
   hall_setpoints:
     name: Hall Setpoints

@@ -18,15 +18,7 @@ homeassistant:
       max_temp: 25
 
 group:
-  lounge:
-    name: Lounge
-    view: true
-    icon: mdi:sofa
-    entities:
-    - sensor.lounge_temperature
-    - group.lounge_compact_ui
-    - media_player.lounge
-
+  # floorplan
   lounge_compact_ui:
     name: Lounge
     view: false
@@ -35,8 +27,6 @@ group:
     - input_select.lounge_mode
     - climate.lounge_thermostat
     - group.lounge_lights
-    - group.g_lounge_media_dimming
-    - group.g_lounge_settings_ui
 
   lounge_setpoints:
     name: Lounge Setpoints

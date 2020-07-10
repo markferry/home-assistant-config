@@ -64,3 +64,50 @@ binary_sensor:
         prob_given_true: 0.4
         prob_given_false: 0.1
         <<: *tracker_default
+
+
+automation:
+  - alias: "Calendar Mark Scene"
+    trigger:
+      - platform: state
+        entity_id: calendar.mark_scene
+        to: "on"
+    action:
+      - service_template: input_select.select_option
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "mark" in l %}
+            {%   set u = "bedroom_mark" %}
+            {% endif %}
+            input_select.{{u}}_mode
+          option: >
+            {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+            {{ v[0].upper() ~ v[1:].lower() }}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/mark-scene'
+          payload: '{{trigger.to_state.attributes.message}}'
+
+  - alias: "Calendar Mark Climate"
+    trigger:
+      - platform: state
+        entity_id: calendar.mark_climate
+        to: "on"
+    action:
+      - service_template: climate.set_temperature
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "mark" in l %}
+            {%   set u = "bedroom_mark" %}
+            {% endif %}
+            climate.{{u}}_thermostat
+          temperature: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {{l|last|float}}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/mark-climate'
+          payload: '{{trigger.to_state.attributes.message}}'
+

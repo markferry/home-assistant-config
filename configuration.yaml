@@ -85,12 +85,14 @@ homeassistant:
     package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
     package_bedroom_mark_voice_control: !include packages/bedroom-mark/voice-control.yaml
 
-    package_bedroom_jerome: !include packages/bedroom-jerome/room.yaml
-    package_bedroom_jerome_heating: !include packages/bedroom-jerome/heating-on-demand.yaml
-    package_bedroom_jerome_mode: !include packages/bedroom-jerome/mode.yaml
-    package_bedroom_jerome_settings: !include packages/bedroom-jerome/settings.yaml
-    package_bedroom_jerome_voice_control: !include packages/bedroom-jerome/voice-control.yaml
+    # Jerome's room
+    package_bedroom_main2: !include packages/bedroom-main2/room.yaml
+    package_bedroom_main2_heating: !include packages/bedroom-main2/heating-on-demand.yaml
+    package_bedroom_main2_mode: !include packages/bedroom-main2/mode.yaml
+    package_bedroom_main2_settings: !include packages/bedroom-main2/settings.yaml
+    package_bedroom_main2_voice_control: !include packages/bedroom-main2/voice-control.yaml
 
+    # Ros's room
     package_bedroom_annex2: !include packages/bedroom-annex2/room.yaml
     package_bedroom_annex2_heating: !include packages/bedroom-annex2/heating-on-demand.yaml
     package_bedroom_annex2_mode: !include packages/bedroom-annex2/mode.yaml

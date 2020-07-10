@@ -7,6 +7,14 @@ homeassistant:
       icon: mdi:thermometer
       unit_of_measurement: "\xB0C"
 
+    climate.bedroom_mark_south_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+    climate.bedroom_mark_north_comfort_setpoint:
+      min_temp: 5
+      max_temp: 25
+
+
 group:
   g_debug_bedroom_mark_heating:
     entities:

@@ -2,23 +2,6 @@
 # Views
 #
 
-default_view: !include default_view.yaml
-
-bedrooms:
-  name: Bedrooms
-  view: true
-  icon: mdi:hotel
-  entities:
-  - group.bedroom_mark_compact_ui
-  - group.bedroom_jerome_compact_ui
-  - group.bedroom_annex2_compact_ui
-  - group.guest_room_compact_ui
-  - sensor.bedroom_mark_temperature
-  - sensor.bedroom_annex2_mean_temperature
-  - sensor.bedroom_jerome_mean_temperature
-  - sensor.js_bedroom_humidity
-  - sensor.guest_room_mean_temperature
-
 rfx_switches:
   name: RFX Switches
   entities:
@@ -96,7 +79,7 @@ main_heating_demand:
   - switch.ballroom_demand
   - switch.guest_room_demand
   - switch.bedroom_mark_demand
-  - switch.bedroom_jerome_demand
+  - switch.bedroom_main2_demand
 
 annex_heating:
   name: Annex Heating
@@ -121,23 +104,6 @@ annex_heating_demand:
   - switch.study_demand
   - switch.annex_hall_demand
   - switch.bedroom_annex2_demand
-
-room_modes:
-  name: Rooms
-  entities:
-  - input_select.study_mode
-  - input_select.kitchen_mode
-  - input_select.lounge_mode
-  - input_select.library_mode
-  - input_select.ballroom_mode
-
-bedroom_modes:
-  name: Bedrooms
-  entities:
-  - input_select.bedroom_mark_mode
-  - input_select.bedroom_jerome_mode
-  - input_select.bedroom_annex2_mode
-  - input_select.guest_room_mode
 
 user_automations:
   name: Automations
@@ -219,9 +185,9 @@ temperatures:
   - sensor.hall_west_temperature
   - sensor.hall_east_temperature
   - sensor.annex_hall_temperature
-  - sensor.kitchen_temperature
+  - sensor.kitchen_current_temperature
   - sensor.library_temperature
-  - sensor.lounge_east_temperature
+  - sensor.lounge_east_current_temperature
   - sensor.bedroom_mark_south_current_temperature
   - sensor.bedroom_mark_north_current_temperature
   - sensor.study_east_current_temperature
@@ -249,7 +215,7 @@ thermostat_devices:
   - climate.guest_room_heat
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_annex2_comfort_setpoint
-  - climate.j_s_bedroom
+  - climate.bedroom_main2_heat
 
 # Front-end thermostats
 thermostats:

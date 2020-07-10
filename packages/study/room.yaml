@@ -4,15 +4,9 @@
 
 homeassistant:
   customize:
-    sensor.study_east_temperature:
-      friendly_name: Study East
-    sensor.study_west_temperature:
-      friendly_name: Study West
     sensor.study_east_battery:
-      friendly_name: Study East Battery
       icon: mdi:battery
     sensor.study_west_battery:
-      friendly_name: Study West Battery
       icon: mdi:battery
 
     climate.study_east_comfort_setpoint:
@@ -23,23 +17,14 @@ homeassistant:
       max_temp: 25
 
 group:
-  study:
-    name: Study
-    icon: mdi:printer
-    view: true
-    entities:
-    - sensor.study_temperature
-    - group.study_compact_ui
-    - group.study_appliances
-    - media_player.study
-
+  # floorplan
   study_compact_ui:
     name: Study
     view: false
     entities:
     - input_select.study_mode
     - climate.study_thermostat
-    - group.g_study_settings_ui
+    - group.study_lights
 
   study_setpoints:
     name: Study Setpoints

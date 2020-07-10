@@ -22,16 +22,7 @@ homeassistant:
       friendly_name: Ballroom Amplifier
 
 group:
-  ballroom:
-    name: Ballroom
-    view: true
-    icon: mdi:projector
-    entities:
-    - sensor.ballroom_temperature
-    - group.ballroom_compact_ui
-    - media_player.ballroom
-    - media_player.ballroom_amplifier
-
+  # floorplan
   ballroom_compact_ui:
     name: Ballroom
     view: false
@@ -41,8 +32,6 @@ group:
     - input_select.ballroom_mode
     - climate.ballroom_thermostat
     - group.ballroom_party_lights
-    - group.g_ballroom_media_dimming
-    - group.g_ballroom_settings_ui
 
   ballroom_setpoints:
     name: Ballroom Setpoints

@@ -51,47 +51,70 @@ views:
         title: Bedrooms
         show_header_toggle: false
         entities:
-          - entity: input_select.bedroom_mark_mode
-            name: "Mark's Bedroom Mode"
-          - entity: input_select.bedroom_jerome_mode
-            name: "Jerome's Bedroom Mode"
-          - entity: input_select.bedroom_annex2_mode
-            name: "Monica's Bedroom Mode"
-          - entity: input_select.guest_room_mode
-            name: "Guest Room Mode"
+          - name: "Mark's Bedroom Mode"
+            entity: input_select.bedroom_mark_mode
+            image: /local/wb-icons/wb_mark.png
+          - name: "Olga's Bedroom Mode"
+            entity: input_select.bedroom_main2_mode
+            image: /local/wb-icons/wb_olga.png
+          - name: "Monica's Bedroom Mode"
+            entity: input_select.bedroom_annex2_mode
+            image: /local/wb-icons/wb_monica.png
+          - name: "Guest Room Mode"
+            entity: input_select.guest_room_mode
 
   - title: Bedrooms
     icon: mdi:hotel
-    badges:
-      - sensor.bedroom_mark_temperature
-      - sensor.bedroom_annex2_mean_temperature
-      - sensor.bedroom_jerome_mean_temperature
-      - sensor.js_bedroom_humidity
-      - sensor.guest_room_mean_temperature
     cards:
       - type: vertical-stack
         cards:
           - type: entities
-            title: Mark's Bedroom
+            title: Guest Room
             show_header_toggle: false
             entities:
-              - input_select.bedroom_mark_mode
-              - climate.bedroom_mark_thermostat
-              - group.bedroom_mark_lights
-              - group.g_bedroom_mark_media_dimming
-              - group.g_bedroom_mark_settings_ui
-          - type: media-control
+              - name: Mode
+                entity: input_select.guest_room_mode
+              - name: Settings
+                entity: group.g_guest_room_settings_ui
+          - name: Guest Room
+            type: thermostat
+            entity: climate.guest_room_thermostat
+
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: "Mark's Bedroom"
+            show_header_toggle: false
+            entities:
+              - name: Mode
+                entity: input_select.bedroom_mark_mode
+              - name: Lights
+                entity: group.bedroom_mark_lights
+              - name: Media Auto Dim
+                entity: group.g_bedroom_mark_media_dimming
+              - name: Settings
+                entity: group.g_bedroom_mark_settings_ui
+
+          - name: "Mark's Bedroom"
+            type: thermostat
+            entity: climate.bedroom_mark_thermostat
+          - name: "Mark's Bedroom"
+            type: media-control
             entity: media_player.bedroom_mark
 
       - type: vertical-stack
         cards:
           - type: entities
-            title: Jerome's Bedroom
+            title: "Olga's Bedroom"
             show_header_toggle: false
             entities:
-              - input_select.bedroom_jerome_mode
-              - climate.j_s_bedroom
-              - group.g_bedroom_jerome_settings_ui
+              - name: Mode
+                entity: input_select.bedroom_main2_mode
+              - name: Settings
+                entity: group.g_bedroom_main2_settings_ui
+          - name: "Olga's Bedroom"
+            type: thermostat
+            entity: climate.bedroom_main2_thermostat
 
       - type: vertical-stack
         cards:
@@ -99,49 +122,38 @@ views:
             title: "Monica's Bedroom"
             show_header_toggle: false
             entities:
-              - entity: input_select.bedroom_annex2_mode
-                name: "Monica's Bedroom Mode"
-              - entity: climate.bedroom_annex2_thermostat
-                name: "Monica's Bedroom"
-              - group.g_bedroom_annex2_settings_ui
-
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: Guest Room
-            show_header_toggle: false
-            entities:
-              - input_select.guest_room_mode
-              - climate.guest_room_thermostat
-              - group.g_guest_room_settings_ui
+              - name: Mode
+                entity: input_select.bedroom_annex2_mode
+              - name: Settings
+                entity: group.g_bedroom_annex2_settings_ui
+          - name: "Monica's Bedroom"
+            type: thermostat
+            entity: climate.bedroom_annex2_thermostat
 
   - title: Study
     icon: mdi:printer
     badges:
-      - sensor.study_temperature
+      - device_tracker.ricoh213w
+      - device_tracker.canonmg5550
     cards:
       - type: entities
         title: Study
         show_header_toggle: false
         entities:
           - input_select.study_mode
-          - climate.study_thermostat
           - entity: binary_sensor.heiman_contact_65_sensor
             name: "Study Door Open"
           - group.g_study_settings_ui
-      - type: entities
-        title: Study Appliances
-        show_header_toggle: false
-        entities:
-          - device_tracker.ricoh213w
-          - device_tracker.canonmg5550
+
+      - name: "Study Heat"
+        type: thermostat
+        entity: climate.study_thermostat
       - type: media-control
         entity: media_player.study
 
   - title: Kitchen
     icon: mdi:stove
     badges:
-      - sensor.kitchen_mean_temperature
       - sensor.greenwave_powernode_54_energy
       - sensor.greenwave_powernode_54_power
     cards:
@@ -150,14 +162,16 @@ views:
         show_header_toggle: false
         entities:
           - input_select.kitchen_mode
-          - climate.kitchen_thermostat
           - binary_sensor.washing_machine
           - entity: binary_sensor.heiman_contact_66_sensor
             name: "Gin Freezer Open"
           - group.g_kitchen_settings_ui
-      - type: media-control
-        entity: media_player.kitchen_speaker
-      - type: media-control
+
+      - name: "Kitchen Heat"
+        type: thermostat
+        entity: climate.kitchen_thermostat
+      - name: "Kitchen Amplifier"
+        type: media-control
         entity: media_player.outside_amplifier_zone_2
 
   - title: Hall
@@ -223,42 +237,47 @@ views:
         show_header_toggle: false
         entities:
           - input_select.lounge_mode
-          - climate.lounge_thermostat
           - group.lounge_lights
           - group.g_lounge_media_dimming
           - group.g_lounge_settings_ui
+
+      - name: "Lounge Heat"
+        type: thermostat
+        entity: climate.lounge_thermostat
       - type: media-control
         entity: media_player.lounge
 
   - title: Library
     icon: mdi:library
-    badges:
-      - sensor.library_mean_temperature
     cards:
       - type: entities
         title: Library
         show_header_toggle: false
         entities:
           - input_select.library_mode
-          - climate.library_thermostat
           - group.g_library_settings_ui
+
+      - name: "Library Heat"
+        type: thermostat
+        entity: climate.library_thermostat
       - type: media-control
         entity: media_player.library
 
   - title: Ballroom
     icon: mdi:projector
-    badges:
-      - sensor.ballroom_temperature
     cards:
       - type: entities
         title: Ballroom
         show_header_toggle: false
         entities:
           - input_select.ballroom_mode
-          - climate.ballroom_thermostat
           - group.ballroom_party_lights
           - group.g_ballroom_media_dimming
           - group.g_ballroom_settings_ui
+
+      - name: "Ballroom Heat"
+        type: thermostat
+        entity: climate.library_thermostat
       - type: media-control
         entity: media_player.ballroom
       - type: media-control
@@ -328,20 +347,6 @@ views:
           - input_number.snapcast_client_ballroom
           - input_number.snapcast_client_bedroom_mark
           - input_number.snapcast_client_outside
-      - type: media-control
-        entity: media_player.snapcast_client_study
-      - type: media-control
-        entity: media_player.snapcast_client_kitchen2
-      - type: media-control
-        entity: media_player.snapcast_client_lounge
-      - type: media-control
-        entity: media_player.snapcast_client_library
-      - type: media-control
-        entity: media_player.snapcast_client_ballroom
-      - type: media-control
-        entity: media_player.snapcast_client_bedroom_mark
-      - type: media-control
-        entity: media_player.snapcast_client_outside
 
   - title: Settings
     icon: mdi:settings
@@ -356,7 +361,7 @@ views:
           - switch.ballroom_demand
           - switch.guest_room_demand
           - switch.bedroom_mark_demand
-          - switch.bedroom_jerome_demand
+          - switch.bedroom_main2_demand
       - type: entities
         title: Main Heating Override
         show_header_toggle: false
@@ -431,18 +436,17 @@ views:
           - sensor.main_heating_thermostat_temperature
           - sensor.annex_heating_thermostat_temperature
           - sensor.aeotec_dsb05_multisensor_temperature
-          - sensor.ballroom_east_temperature
+          - sensor.ballroom_east_current_temperature
           - sensor.hall_west_temperature
           - sensor.hall_east_temperature
           - sensor.annex_hall_temperature
-          - sensor.kitchen_temperature
-          - sensor.library_temperature
-          - sensor.lounge_east_temperature
+          - sensor.kitchen_current_temperature
+          - sensor.library_current_temperature
+          - sensor.lounge_east_current_temperature
           - sensor.bedroom_mark_south_current_temperature
           - sensor.bedroom_mark_north_current_temperature
           - sensor.study_east_current_temperature
           - sensor.study_west_current_temperature
-          - sensor.js_bedroom_temperature
           - sensor.bedroom_annex2_current_temperature
       - type: entities
         title: Thermostats
@@ -457,7 +461,7 @@ views:
           - climate.lounge_thermostat
           - climate.study_thermostat
           - climate.guest_room_thermostat
-          - climate.bedroom_jerome_thermostat
+          - climate.bedroom_main2_thermostat
           - climate.bedroom_annex2_thermostat
       - type: entities
         title: Thermostat Devices
@@ -479,7 +483,6 @@ views:
           - climate.guest_room_heat
           - climate.danfoss_z_thermostat_014g0013_heating_1
           - climate.bedroom_annex2_comfort_setpoint
-          - climate.j_s_bedroom
       - type: entities
         title: Battery Levels
         show_header_toggle: false
