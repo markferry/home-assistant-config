@@ -150,7 +150,8 @@ views:
       - name: "Study Heat"
         type: thermostat
         entity: climate.study_thermostat
-      - type: media-control
+      - name: Study Media
+        type: media-control
         entity: media_player.study
 
   - title: Kitchen
@@ -226,7 +227,8 @@ views:
           - sensor.oil_annex_litres
           - sensor.oil_annex_percentage
           - sensor.oil_annex_days_remaining
-      - type: media-control
+      - name: Outside Amplifier
+        type: media-control
         entity: media_player.outside_amplifier
 
   - title: Lounge
@@ -246,7 +248,8 @@ views:
       - name: "Lounge Heat"
         type: thermostat
         entity: climate.lounge_thermostat
-      - type: media-control
+      - name: Lounge Media
+        type: media-control
         entity: media_player.lounge
 
   - title: Library
@@ -262,7 +265,8 @@ views:
       - name: "Library Heat"
         type: thermostat
         entity: climate.library_thermostat
-      - type: media-control
+      - name: Library Media
+        type: media-control
         entity: media_player.library
 
   - title: Ballroom
@@ -280,9 +284,11 @@ views:
       - name: "Ballroom Heat"
         type: thermostat
         entity: climate.library_thermostat
-      - type: media-control
+      - name: Ballroom Media
+        type: media-control
         entity: media_player.ballroom
-      - type: media-control
+      - name: Ballroom Amplifier
+        type: media-control
         entity: media_player.ballroom_amplifier
 
   - title: Armoury

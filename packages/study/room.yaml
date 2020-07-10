@@ -115,7 +115,7 @@ switch:
     retain: true
 
 media_player:
-  - name: Study
+  - name: study
     platform: kodi
     host: study
     port: 80

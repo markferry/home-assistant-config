@@ -93,7 +93,7 @@ switch:
     retain: true
 
 media_player:
-  - name: Lounge
+  - name: lounge
     platform: kodi
     host: lounge
     port: 80

@@ -18,7 +18,8 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
-    media_player.txnr636_0009b09961fb:
+    # FIXME: media-control card ignores 'name' settings
+    media_player.ballroom_amplifier:
       friendly_name: Ballroom Amplifier
 
 group:
@@ -111,7 +112,7 @@ switch:
     retain: true
 
 media_player:
-  - name: Ballroom
+  - name: ballroom
     platform: kodi
     host: ballroom
     port: 80

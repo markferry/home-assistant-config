@@ -37,6 +37,7 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
+    # FIXME: media-control card ignores 'name' settings
     media_player.outside_amplifier:
       friendly_name: Outside Amplifier
 
