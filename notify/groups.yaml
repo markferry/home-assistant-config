@@ -22,6 +22,7 @@
     - service: ios_moncoms_iphone
     - service: mobile_app_annies_iphone_4
     - service: mobile_app_moncoms_iphone
+    - service: mobile_app_olga_huawei
 
 # Barnacles
 - name: barnacles
