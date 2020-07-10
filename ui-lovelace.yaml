@@ -25,6 +25,8 @@ views:
               name: Thomas
             - entity: binary_sensor.monica_present
               name: Monica
+            - entity: binary_sensor.olga_present
+              name: Olga
         - type: entity-filter
           entities:
             - entity: binary_sensor.jerome_present
@@ -51,6 +53,8 @@ views:
         title: Bedrooms
         show_header_toggle: false
         entities:
+          - name: "Guest Room Mode"
+            entity: input_select.guest_room_mode
           - name: "Mark's Bedroom Mode"
             entity: input_select.bedroom_mark_mode
             image: /local/wb-icons/wb_mark.png
@@ -60,8 +64,6 @@ views:
           - name: "Monica's Bedroom Mode"
             entity: input_select.bedroom_annex2_mode
             image: /local/wb-icons/wb_monica.png
-          - name: "Guest Room Mode"
-            entity: input_select.guest_room_mode
 
   - title: Bedrooms
     icon: mdi:hotel
