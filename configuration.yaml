@@ -19,6 +19,7 @@ homeassistant:
     package_liane: !include people/liane.yaml
     package_aneta: !include people/aneta.yaml
     package_monica: !include people/monica.yaml
+    package_olga: !include people/olga.yaml
 
 
     package_aeotec_multisensor: !include packages/aeotec_multisensor.yaml
