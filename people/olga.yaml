@@ -14,6 +14,7 @@ group:
     entities: &presence_entities
     - device_tracker.olga_huawei
     - device_tracker.olga_huawei_bt
+    - device_tracker.olga_laptop
 
 binary_sensor:
   - name: olga_present
@@ -39,6 +40,11 @@ binary_sensor:
       - entity_id: device_tracker.olga_huawei_bt
         prob_given_true: 0.3
         prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.olga_laptop
+        prob_given_true: 0.6
+        prob_given_false: 0.2
         <<: *tracker_default
 
 automation:

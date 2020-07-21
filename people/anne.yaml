@@ -13,11 +13,9 @@ group:
     name: "Anne"
     entities: &presence_entities
       - device_tracker.anne_phone
+      - device_tracker.anne_iphone5
       - device_tracker.anne_iphone4
       - device_tracker.anne_iphone4_bt
-      - device_tracker.anne_iphone3
-      - device_tracker.anne_iphone2
-      - device_tracker.anne_iphone2_bt
       - device_tracker.anne_laptop
       - device_tracker.anne_laptop_bt
         #- device_tracker.anniehp
@@ -38,27 +36,17 @@ binary_sensor:
           platform: 'state'
           to_state: 'home'
 
+      - entity_id: device_tracker.anne_iphone5
+        prob_given_true: 0.8
+        prob_given_false: 0.1
+        <<: *tracker_default
+
       - entity_id: device_tracker.anne_iphone4
         prob_given_true: 0.8
         prob_given_false: 0.1
         <<: *tracker_default
 
       - entity_id: device_tracker.anne_iphone4_bt
-        prob_given_true: 0.3
-        prob_given_false: 0.05
-        <<: *tracker_default
-
-      - entity_id: device_tracker.anne_iphone3
-        prob_given_true: 0.8
-        prob_given_false: 0.1
-        <<: *tracker_default
-
-      - entity_id: device_tracker.anne_iphone2
-        prob_given_true: 0.8
-        prob_given_false: 0.1
-        <<: *tracker_default
-
-      - entity_id: device_tracker.anne_iphone2_bt
         prob_given_true: 0.3
         prob_given_false: 0.05
         <<: *tracker_default
