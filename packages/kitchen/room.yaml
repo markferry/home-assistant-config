@@ -14,6 +14,10 @@ homeassistant:
       friendly_name: Kitchen Battery
       icon: mdi:battery
 
+    # FIXME: media-control card ignores 'name' settings
+    media_player.outside_amplifier_zone_2:
+      friendly_name: Kitchen Amplifier
+
 group:
   # floorplan
   kitchen_compact_ui:
