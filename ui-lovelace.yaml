@@ -506,6 +506,15 @@ views:
           - sensor.bedroom_annex2_battery
           - sensor.guest_room_battery
       - type: entities
+        title: People
+        show_header_toggle: false
+        entities:
+          - group.mark_present
+          - group.anne_present
+          - group.thomas_present
+          - group.monica_present
+          - group.olga_present
+      - type: entities
         title: Automations
         show_header_toggle: false
         entities:

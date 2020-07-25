@@ -16,6 +16,8 @@ group:
       - device_tracker.mark_moto_g5
       - device_tracker.mark_moto_g5_bt
       - device_tracker.moto_g_5
+      - device_tracker.canard
+      - device_tracker.canard_wired
 
 binary_sensor:
   - name: mark_present
