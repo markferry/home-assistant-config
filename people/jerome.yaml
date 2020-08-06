@@ -26,7 +26,7 @@ binary_sensor:
   - name: jerome_present
     device_class: 'presence'
     platform: 'bayesian'
-    prior: 0.66
+    prior: 0.20
     probability_threshold: 0.90
     observations:
       # Owntracks

@@ -247,7 +247,7 @@ virtual_appliances:
   - binary_sensor.hottub
 
 #
-# Presence Groups
+# Presence Groups - still useful for automations
 #
 people:
   name: Where is Everyone?

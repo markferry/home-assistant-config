@@ -1,5 +1,4 @@
 - binary_sensor.mark_present
 - binary_sensor.anne_present
-- binary_sensor.jerome_present
-- binary_sensor.thomas_present
-- binary_sensor.aneta_present
+- binary_sensor.monica_present
+- binary_sensor.olga_present

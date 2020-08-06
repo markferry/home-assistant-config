@@ -21,8 +21,6 @@ views:
               name: Mark
             - entity: binary_sensor.anne_present
               name: Anne
-            - entity: binary_sensor.thomas_present
-              name: Thomas
             - entity: binary_sensor.monica_present
               name: Monica
             - entity: binary_sensor.olga_present
@@ -37,6 +35,8 @@ views:
               name: Liane
             - entity: binary_sensor.aneta_present
               name: Aneta
+            - entity: binary_sensor.thomas_present
+              name: Thomas
           state_filter:
             - "on"
           show_empty: false
@@ -530,9 +530,12 @@ views:
         entities:
           - group.mark_present
           - group.anne_present
-          - group.thomas_present
           - group.monica_present
           - group.olga_present
+          - group.ros_present
+          - group.aneta_present
+          - group.jerome_present
+          - group.thomas_present
       - type: entities
         title: Automations
         show_header_toggle: false

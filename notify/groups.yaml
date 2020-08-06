@@ -15,7 +15,6 @@
   platform: group
   services:
     - service: mobile_app_mark_s_iphone
-    - service: mobile_app_thomas_cmtcd
     - service: ios_annies_iphone2
     - service: html5_marktablet
     - service: mobile_app_mark_moto_g5
@@ -29,6 +28,7 @@
   platform: group
   services:
     - service: mobile_app_liane_moto_g5
+    - service: mobile_app_thomas_cmtcd
 
 # All Devices
 - name: all_devices
@@ -43,7 +43,6 @@
   platform: group
   services:
     - service: mobile_app_mark_s_iphone
-    - service: mobile_app_thomas_cmtcd
     - service: ios_annies_iphone2
     - service: mobile_app_annies_iphone_4
     - service: mobile_app_moncoms_iphone
