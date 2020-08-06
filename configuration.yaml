@@ -93,6 +93,13 @@ homeassistant:
     package_bedroom_main2_settings: !include packages/bedroom-main2/settings.yaml
     package_bedroom_main2_voice_control: !include packages/bedroom-main2/voice-control.yaml
 
+    # Tom's room
+    package_bedroom_main3: !include packages/bedroom-main3/room.yaml
+    package_bedroom_main3_heating: !include packages/bedroom-main3/heating-on-demand.yaml
+    package_bedroom_main3_mode: !include packages/bedroom-main3/mode.yaml
+    package_bedroom_main3_settings: !include packages/bedroom-main3/settings.yaml
+    package_bedroom_main3_voice_control: !include packages/bedroom-main3/voice-control.yaml
+
     # Ros's room
     package_bedroom_annex2: !include packages/bedroom-annex2/room.yaml
     package_bedroom_annex2_heating: !include packages/bedroom-annex2/heating-on-demand.yaml

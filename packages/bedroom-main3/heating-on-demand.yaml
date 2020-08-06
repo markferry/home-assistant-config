@@ -1,0 +1,93 @@
+homeassistant:
+  customize:
+    climate.bedroom_main3_thermostat:
+      friendly_name: "Main Bedroom 3 Heating"
+    sensor.bedroom_main3_mean_temperature:
+      icon: mdi:thermometer
+      unit_of_measurement: "\xB0C"
+
+group:
+  g_debug_bedroom_main3_heating:
+    entities:
+      - climate.bedroom_main3_thermostat
+      - climate.bedroom_main3_heat
+      - switch.bedroom_main3_demand
+
+  g_debug_bedroom_main3_temperature:
+    entities:
+      - sensor.bedroom_main3_mean_temperature
+      - sensor.bedroom_main3_current_temperature
+      - sensor.bedroom_main3_temperature
+
+  # Non-UI group which forwards setpoint updates
+  #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
+  g_bedroom_main3_thermostat:
+    view: false
+    entities:
+      - climate.bedroom_main3_heat
+
+climate:
+  - name: bedroom_main3_thermostat
+    platform: generic_thermostat
+    heater: switch.bedroom_main3_demand
+    target_sensor: sensor.bedroom_main3_mean_temperature
+    max_temp: 25
+    min_temp: 8  # spirit-Z minimum
+    target_temp: 10.0
+    cold_tolerance: 0.5
+    hot_tolerance: 0.0
+
+switch:
+  - name: bedroom_main3_demand
+    platform: mqtt
+    command_topic: ha/bedroom-main3/demand/command
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    retain: true
+
+sensor:
+  - name: bedroom_main3_current_temperature
+    platform: mqtt
+    state_topic: 'ha/raw/sensor.bedroom_main3_temperature/state'
+    ## dev: for mock mqtt devices
+    #value_template: '{{ value_json.temperature }}'
+    unit_of_measurement: "\xB0C"
+    expire_after: 1800  # 30mins
+    force_update: true
+
+  - name: bedroom_main3_mean_temperature
+    platform: min_max
+    type: max  # minimize occasional 0 readings. Replace with median?
+    entity_ids:
+      - sensor.bedroom_main3_current_temperature
+
+  - platform: template
+    sensors:
+      bedroom_main3_setpoint:
+        value_template: "{{ states.climate.bedroom_main3_thermostat.attributes.temperature }}"
+        unit_of_measurement: "\xB0C"
+
+
+automation:
+  # Redirect received temperatures over mqtt
+  - alias: "bedroom_main3_update_temperature"
+    trigger:
+      - platform: state
+        entity_id: sensor.bedroom_main3_temperature
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/raw/{{trigger.entity_id}}/state'
+          payload: '{{ trigger.to_state.state }}'
+
+  # Sync all thermostats (real and virtual)
+  - alias: "bedroom_main3_update_setpoint"
+    trigger:
+      - platform: state
+        entity_id: climate.bedroom_main3_heat
+    action:
+      - service: climate.set_temperature
+        data_template:
+          entity_id: climate.bedroom_main3_thermostat
+          temperature: '{{ trigger.to_state.attributes.temperature }}'
+

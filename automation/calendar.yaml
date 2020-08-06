@@ -78,6 +78,8 @@
           {%   set u = "guest_room" %}
           {% elif "bedroom_main2" in l or "main2" in l or ("main" in l and "bedroom2" in l) %}
           {%   set u = "bedroom_main2" %}
+          {% elif "bedroom_main3" in l or "main3" in l or ("main" in l and "bedroom3" in l) %}
+          {%   set u = "bedroom_main3" %}
           {% elif "bedroom_annex2" in l or "annex2" in l or ("annex" in l and "bedroom2" in l) %}
           {%   set u = "bedroom_annex2" %}
           {% endif %}

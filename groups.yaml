@@ -80,6 +80,7 @@ main_heating_demand:
   - switch.guest_room_demand
   - switch.bedroom_mark_demand
   - switch.bedroom_main2_demand
+  - switch.bedroom_main3_demand
 
 annex_heating:
   name: Annex Heating
@@ -216,6 +217,7 @@ thermostat_devices:
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_annex2_comfort_setpoint
   - climate.bedroom_main2_heat
+  - climate.bedroom_main3_heat
 
 # Front-end thermostats
 thermostats:

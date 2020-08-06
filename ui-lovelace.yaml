@@ -381,6 +381,7 @@ views:
           - switch.guest_room_demand
           - switch.bedroom_mark_demand
           - switch.bedroom_main2_demand
+          - switch.bedroom_main3_demand
       - type: entities
         title: Main Heating Override
         show_header_toggle: false
@@ -481,6 +482,7 @@ views:
           - climate.study_thermostat
           - climate.guest_room_thermostat
           - climate.bedroom_main2_thermostat
+          - climate.bedroom_main3_thermostat
           - climate.bedroom_annex2_thermostat
       - type: entities
         title: Thermostat Devices

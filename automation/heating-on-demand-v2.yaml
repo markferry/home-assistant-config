@@ -22,6 +22,8 @@
     - platform: state
       entity_id: climate.bedroom_main2_thermostat
     - platform: state
+      entity_id: climate.bedroom_main3_thermostat
+    - platform: state
       entity_id: climate.bedroom_annex2_thermostat
   action:
     - service: climate.set_temperature
