@@ -1,26 +1,27 @@
 #
 # Devices exposed to voice control platforms
 #
+
 google_assistant:
   entity_config:
     climate.bedroom_main3_thermostat:
-      name: "Main Bedroom 3 Thermostat"
+      name: "Elle's Bedroom Thermostat"
       <<: &ga_bedroom_main3_expose
         expose: true
-        room: "Main Bedroom 3"
+        room: "Elle's Bedroom"
 
     group.bedroom_main3_lights:
-      name: "Main Bedroom 3 Lights"
+      name: "Elle's Bedroom Lights"
       <<: *ga_bedroom_main3_expose
 
     script.voice_bedroom_main3_off:
-      name: "Main Bedroom 3 Shutdown"
+      name: "Elle's Bedroom Shutdown"
       <<: *ga_bedroom_main3_expose
     script.voice_bedroom_main3_cosy:
-      name: "Main Bedroom 3 Cosy Mode"
+      name: "Elle's Bedroom Cosy Mode"
       <<: *ga_bedroom_main3_expose
     script.voice_bedroom_main3_sleep:
-      name: "Main Bedroom 3 Sleep Mode"
+      name: "Elle's Bedroom Sleep Mode"
       <<: *ga_bedroom_main3_expose
 
 script:
