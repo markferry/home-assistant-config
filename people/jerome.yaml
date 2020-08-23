@@ -67,6 +67,7 @@ binary_sensor:
 
 automation:
   - alias: "Calendar Jerome Scene"
+    initial_state: off
     trigger:
       - platform: state
         entity_id: calendar.jerome_scene
@@ -89,6 +90,7 @@ automation:
           payload: '{{trigger.to_state.attributes.message}}'
 
   - alias: "Calendar Jerome Climate"
+    initial_state: off
     trigger:
       - platform: state
         entity_id: calendar.jerome_climate
