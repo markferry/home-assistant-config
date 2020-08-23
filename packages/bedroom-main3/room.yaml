@@ -14,19 +14,16 @@ group:
   # floorplan
   bedroom_main3_compact_ui:
     name: "Elle's Bedroom"
-    view: false
     entities:
     - input_select.bedroom_main3_mode
     - climate.bedroom_main3_thermostat
     - group.bedroom_main3_lights
 
   bedroom_main3_setpoints:
-    view: false
     entities:
     - climate.bedroom_main3_heat
 
   bedroom_main3_lights:
-    view: false
 
 
 scene:

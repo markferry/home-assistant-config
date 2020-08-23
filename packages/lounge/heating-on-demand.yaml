@@ -23,7 +23,6 @@ group:
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_lounge_thermostat:
-    view: false
     entities:
       - climate.lounge_east_comfort_setpoint
 

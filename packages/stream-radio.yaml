@@ -8,7 +8,6 @@
 group:
   radio:
     name: Internet Radio
-    view: false
     icon: mdi:radio
     entities:
     - group.radio_streams

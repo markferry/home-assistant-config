@@ -52,7 +52,6 @@ automation:
 group:
   dinner_announcers:
     name: Dinner Announcers
-    view: false
     entities:
       - media_player.study
       - media_player.lounge

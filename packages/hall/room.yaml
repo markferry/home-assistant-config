@@ -44,7 +44,6 @@ homeassistant:
 group:
   hall_compact_ui:
     name: Hall
-    view: false
     icon: mdi:fullscreen-exit
     entities:
     - climate.hall_thermostat
@@ -53,7 +52,6 @@ group:
 
   hall_setpoints:
     name: Hall Setpoints
-    view: false
     entities:
     - climate.hall_west_comfort_setpoint
     - climate.hall_east_comfort_setpoint
@@ -61,7 +59,6 @@ group:
 
   hall_lights:
     name: Hall Lights
-    view: false
 
 #scene:
 

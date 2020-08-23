@@ -21,7 +21,6 @@ group:
   # floorplan
   lounge_compact_ui:
     name: Lounge
-    view: false
     icon: mdi:sofa
     entities:
     - input_select.lounge_mode
@@ -30,7 +29,6 @@ group:
 
   lounge_setpoints:
     name: Lounge Setpoints
-    view: false
     entities:
     - climate.lounge_east_comfort_setpoint
 
@@ -40,7 +38,6 @@ group:
     - light.lounge_north
     - light.lounge_west
     name: Lounge Lights
-    view: false
 
 scene:
   - name: lounge_off

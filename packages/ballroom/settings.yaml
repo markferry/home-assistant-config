@@ -2,7 +2,6 @@ group:
   g_ballroom_settings_ui:
     name: Settings
     icon: mdi:settings
-    control: hidden
     entities:
       - input_number.ballroom_temperature_off
       - input_number.ballroom_temperature_party

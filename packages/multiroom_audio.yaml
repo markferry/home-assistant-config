@@ -113,7 +113,6 @@ media_player:
 group:
   g_multiroom_audio_ui:
     name: Multiroom Audio
-    view: true
     icon: mdi:music
     entities:
       - media_player.mpd

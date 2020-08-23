@@ -26,9 +26,7 @@ group:
   # floorplan
   ballroom_compact_ui:
     name: Ballroom
-    view: false
     icon: mdi:projector
-    control: hidden
     entities:
     - input_select.ballroom_mode
     - climate.ballroom_thermostat
@@ -36,18 +34,15 @@ group:
 
   ballroom_setpoints:
     name: Ballroom Setpoints
-    view: false
     entities:
     - climate.ballroom_east_comfort_setpoint
 
   ballroom_lights:
     name: Ballroom Lights
     icon: mdi:lightbulb-on
-    view: false
 
   ballroom_party_lights:
     name: Ballroom Party Lights
-    view: false
     icon: mdi:lightbulb-on
     entities:
     - switch.greenwave_powernode_62_switch

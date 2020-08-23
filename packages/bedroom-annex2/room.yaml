@@ -14,19 +14,16 @@ group:
   # floorplan
   bedroom_annex2_compact_ui:
     name: "Monica's Bedroom"
-    view: false
     entities:
     - input_select.bedroom_annex2_mode
     - climate.bedroom_annex2_thermostat
     - group.bedroom_annex2_lights
 
   bedroom_annex2_setpoints:
-    view: false
     entities:
     - climate.bedroom_annex2_comfort_setpoint
 
   bedroom_annex2_lights:
-    view: false
 
 
 scene:

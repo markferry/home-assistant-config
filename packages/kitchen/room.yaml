@@ -22,7 +22,6 @@ group:
   # floorplan
   kitchen_compact_ui:
     name: Kitchen
-    view: false
     icon: mdi:stove
     entities:
     - input_select.kitchen_mode
@@ -32,16 +31,13 @@ group:
 
   kitchen_setpoints:
     name: Kitchen Setpoints
-    view: false
     entities:
     - climate.kitchen_comfort_setpoint
 
   kitchen_lights:
     name: Kitchen Lights
-    view: false
 
   kitchen_media_players:
-    view: false
     entities:
     - media_player.kitchen_speaker
     - media_player.outside_amplifier_zone_2
