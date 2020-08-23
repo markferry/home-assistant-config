@@ -22,6 +22,7 @@
     - service: mobile_app_annies_iphone_4
     - service: mobile_app_moncoms_iphone
     - service: mobile_app_olga_huawei
+    - service: mobile_app_elles_iphone
 
 # Barnacles
 - name: barnacles
@@ -46,6 +47,7 @@
     - service: ios_annies_iphone2
     - service: mobile_app_annies_iphone_4
     - service: mobile_app_moncoms_iphone
+    - service: mobile_app_elles_iphone
 
 # All androids
 - name: all_androids
