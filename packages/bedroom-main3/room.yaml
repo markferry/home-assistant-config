@@ -1,5 +1,5 @@
 #
-# Jerome's Room
+# Tom's Room
 #
 
 homeassistant:
@@ -13,7 +13,7 @@ homeassistant:
 group:
   # floorplan
   bedroom_main3_compact_ui:
-    name: "Main Bedroom 3"
+    name: "Elle's Bedroom"
     view: false
     entities:
     - input_select.bedroom_main3_mode

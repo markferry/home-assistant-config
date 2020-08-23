@@ -1,0 +1,94 @@
+homeassistant:
+  customize:
+    group.elle_present:
+      entity_picture: &ep /local/wb-icons/wb_elle.png
+    binary_sensor.elle_present:
+      entity_picture: *ep
+    device_tracker.elle_phone:
+      entity_picture: *ep
+      friendly_name: "Elle Owntracks"
+
+group:
+  elle_present:
+    name: "Elle"
+    entities: &presence_entities
+    - device_tracker.elles_iphone
+    - device_tracker.elle_iphone
+    - device_tracker.elle_iphone_bt
+    - device_tracker.elle_laptop
+
+binary_sensor:
+  - name: elle_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      - entity_id: device_tracker.elle_iphone
+        prob_given_true: 0.8
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.elle_iphone_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      # mobile app
+      - entity_id: device_tracker.elles_iphone
+        prob_given_true: 0.4
+        prob_given_false: 0.2
+        <<: *tracker_default
+
+      - entity_id: device_tracker.elle_laptop
+        prob_given_true: 0.6
+        prob_given_false: 0.2
+        <<: *tracker_default
+
+automation:
+  - alias: "Calendar Elle Scene"
+    trigger:
+      - platform: state
+        entity_id: calendar.elle_scene
+        to: "on"
+    action:
+      - service_template: input_select.select_option
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "elle" in l %}
+            {%   set u = "bedroom_main3" %}
+            {% endif %}
+            input_select.{{u}}_mode
+          option: >
+            {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+            {{ v[0].upper() ~ v[1:].lower() }}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/elle-scene'
+          payload: '{{trigger.to_state.attributes.message}}'
+
+  - alias: "Calendar Elle Climate"
+    trigger:
+      - platform: state
+        entity_id: calendar.elle_climate
+        to: "on"
+    action:
+      - service_template: climate.set_temperature
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "elle" in l %}
+            {%   set u = "bedroom_main3" %}
+            {% endif %}
+            climate.{{u}}_thermostat
+          temperature: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {{l|last|float}}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/elle-climate'
+          payload: '{{trigger.to_state.attributes.message}}'
+

@@ -25,6 +25,8 @@ views:
               name: Monica
             - entity: binary_sensor.olga_present
               name: Olga
+            - entity: binary_sensor.elle_present
+              name: Elle
         - type: entity-filter
           entities:
             - entity: binary_sensor.jerome_present
@@ -61,6 +63,9 @@ views:
           - name: "Olga's Bedroom Mode"
             entity: input_select.bedroom_main2_mode
             image: /local/wb-icons/wb_olga.png
+          - name: "Elle's Bedroom Mode"
+            entity: input_select.bedroom_main3_mode
+            image: /local/wb-icons/wb_elle.png
           - name: "Monica's Bedroom Mode"
             entity: input_select.bedroom_annex2_mode
             image: /local/wb-icons/wb_monica.png
@@ -117,6 +122,20 @@ views:
           - name: "Olga's Bedroom"
             type: thermostat
             entity: climate.bedroom_main2_thermostat
+
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: "Elle's Bedroom"
+            show_header_toggle: false
+            entities:
+              - name: Mode
+                entity: input_select.bedroom_main3_mode
+              - name: Settings
+                entity: group.g_bedroom_main3_settings_ui
+          - name: "Elle's Bedroom"
+            type: thermostat
+            entity: climate.bedroom_main3_thermostat
 
       - type: vertical-stack
         cards:
@@ -532,6 +551,7 @@ views:
           - group.anne_present
           - group.monica_present
           - group.olga_present
+          - group.elle_present
           - group.ros_present
           - group.aneta_present
           - group.jerome_present

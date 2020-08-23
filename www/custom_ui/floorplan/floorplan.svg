@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -10,13 +8,13 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="svg4485"
-   width="1024"
-   height="640"
-   viewBox="0 0 1024 640"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="floorplan.svg"
-   inkscape:version="0.92.2 2405546, 2018-03-11">
+   viewBox="0 0 1024 640"
+   height="640"
+   width="1024"
+   id="svg4485"
+   version="1.1">
   <metadata
      id="metadata141">
     <rdf:RDF>
@@ -25,627 +23,1766 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs4489">
     <marker
-       inkscape:stockid="Arrow1Send"
-       orient="auto"
-       refY="0"
-       refX="0"
+       inkscape:isstock="true"
+       style="overflow:visible"
        id="Arrow1Send"
-       style="overflow:visible"
-       inkscape:isstock="true">
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send">
       <path
-         id="path2173"
-         d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         inkscape:connector-curvature="0"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
-         inkscape:connector-curvature="0" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2173" />
     </marker>
     <marker
-       inkscape:stockid="Arrow1Sstart"
-       orient="auto"
-       refY="0"
-       refX="0"
+       inkscape:isstock="true"
+       style="overflow:visible"
        id="Arrow1Sstart"
-       style="overflow:visible"
-       inkscape:isstock="true">
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Sstart">
       <path
-         id="path2170"
-         d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         inkscape:connector-curvature="0"
          transform="matrix(0.2,0,0,0.2,1.2,0)"
-         inkscape:connector-curvature="0" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2170" />
     </marker>
     <marker
-       inkscape:stockid="Arrow1Mend"
-       orient="auto"
-       refY="0"
-       refX="0"
+       inkscape:isstock="true"
+       style="overflow:visible"
        id="Arrow1Mend"
-       style="overflow:visible"
-       inkscape:isstock="true">
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
       <path
-         id="path2167"
-         d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         inkscape:connector-curvature="0"
          transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         inkscape:connector-curvature="0" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2167" />
     </marker>
     <marker
-       inkscape:stockid="Arrow1Mstart"
-       orient="auto"
-       refY="0"
-       refX="0"
+       inkscape:isstock="true"
+       style="overflow:visible"
        id="Arrow1Mstart"
-       style="overflow:visible"
-       inkscape:isstock="true">
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart">
       <path
-         id="path2164"
-         d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         inkscape:connector-curvature="0"
          transform="matrix(0.4,0,0,0.4,4,0)"
-         inkscape:connector-curvature="0" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2164" />
     </marker>
     <marker
-       inkscape:stockid="Arrow1Lend"
-       orient="auto"
-       refY="0"
-       refX="0"
+       inkscape:isstock="true"
+       style="overflow:visible"
        id="Arrow1Lend"
-       style="overflow:visible"
-       inkscape:isstock="true">
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
       <path
-         id="path2161"
-         d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         inkscape:connector-curvature="0"
          transform="matrix(-0.8,0,0,-0.8,-10,0)"
-         inkscape:connector-curvature="0" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2161" />
     </marker>
     <marker
-       inkscape:stockid="Arrow1Lstart"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="Arrow1Lstart"
+       inkscape:isstock="true"
        style="overflow:visible"
-       inkscape:isstock="true">
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart">
       <path
-         id="path2158"
-         d="M 0,0 5,-5 -12.5,0 5,5 Z"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         inkscape:connector-curvature="0"
          transform="matrix(0.8,0,0,0.8,10,0)"
-         inkscape:connector-curvature="0" />
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2158" />
     </marker>
     <linearGradient
-       inkscape:collect="always"
-       id="linearGradient4719">
+       id="linearGradient4719"
+       inkscape:collect="always">
       <stop
-         style="stop-color:#000000;stop-opacity:1;"
+         id="stop4715"
          offset="0"
-         id="stop4715" />
+         style="stop-color:#000000;stop-opacity:1;" />
       <stop
-         style="stop-color:#000000;stop-opacity:0;"
+         id="stop4717"
          offset="1"
-         id="stop4717" />
+         style="stop-color:#000000;stop-opacity:0;" />
     </linearGradient>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_hot_tub_24px">
+       id="ic_hot_tub_24px"
+       viewBox="0 0 24 24">
       <circle
-         cx="7"
-         cy="6"
+         id="circle33887"
          r="2"
-         id="circle33887" />
+         cy="6"
+         cx="7" />
       <path
-         d="M 11.15,12 C 10.84,11.78 10.56,11.54 10.33,11.28 L 8.93,9.73 C 8.74,9.52 8.5,9.35 8.24,9.23 7.95,9.09 7.62,9 7.28,9 H 7.25 C 6.01,9 5,10.01 5,11.25 V 12 H 2 v 8 c 0,1.1 0.9,2 2,2 h 16 c 1.1,0 2,-0.9 2,-2 V 12 Z M 7,20 H 5 v -6 h 2 z m 4,0 H 9 v -6 h 2 z m 4,0 h -2 v -6 h 2 z m 4,0 h -2 v -6 h 2 z M 18.65,5.86 18.58,5.79 C 18.01,5.17 17.76,4.38 17.91,3.59 L 18,3 h -1.89 l -0.06,0.43 c -0.2,1.36 0.27,2.71 1.3,3.72 l 0.07,0.06 c 0.57,0.62 0.82,1.41 0.67,2.2 L 17.98,10 h 1.91 L 19.95,9.57 C 20.16,8.21 19.68,6.86 18.65,5.86 Z m -4,0 -0.07,-0.07 C 14.01,5.17 13.76,4.38 13.91,3.59 L 14,3 h -1.89 l -0.06,0.43 c -0.2,1.36 0.27,2.71 1.3,3.72 l 0.07,0.06 c 0.57,0.62 0.82,1.41 0.67,2.2 L 13.98,10 h 1.91 L 15.95,9.57 C 16.16,8.21 15.68,6.86 14.65,5.86 Z"
+         inkscape:connector-curvature="0"
          id="path33889"
-         inkscape:connector-curvature="0" />
+         d="M 11.15,12 C 10.84,11.78 10.56,11.54 10.33,11.28 L 8.93,9.73 C 8.74,9.52 8.5,9.35 8.24,9.23 7.95,9.09 7.62,9 7.28,9 H 7.25 C 6.01,9 5,10.01 5,11.25 V 12 H 2 v 8 c 0,1.1 0.9,2 2,2 h 16 c 1.1,0 2,-0.9 2,-2 V 12 Z M 7,20 H 5 v -6 h 2 z m 4,0 H 9 v -6 h 2 z m 4,0 h -2 v -6 h 2 z m 4,0 h -2 v -6 h 2 z M 18.65,5.86 18.58,5.79 C 18.01,5.17 17.76,4.38 17.91,3.59 L 18,3 h -1.89 l -0.06,0.43 c -0.2,1.36 0.27,2.71 1.3,3.72 l 0.07,0.06 c 0.57,0.62 0.82,1.41 0.67,2.2 L 17.98,10 h 1.91 L 19.95,9.57 C 20.16,8.21 19.68,6.86 18.65,5.86 Z m -4,0 -0.07,-0.07 C 14.01,5.17 13.76,4.38 13.91,3.59 L 14,3 h -1.89 l -0.06,0.43 c -0.2,1.36 0.27,2.71 1.3,3.72 l 0.07,0.06 c 0.57,0.62 0.82,1.41 0.67,2.2 L 13.98,10 h 1.91 L 15.95,9.57 C 16.16,8.21 15.68,6.86 14.65,5.86 Z" />
     </symbol>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_wb_incandescent_24px">
+       id="ic_wb_incandescent_24px"
+       viewBox="0 0 24 24">
       <path
-         d="m 3.55,18.54 1.41,1.41 1.79,-1.8 -1.41,-1.41 z M 11,22.45 h 2 V 19.5 H 11 Z M 4,10.5 H 1 v 2 H 4 Z M 15,6.31 V 1.5 H 9 V 6.31 C 7.21,7.35 6,9.28 6,11.5 c 0,3.31 2.69,6 6,6 3.31,0 6,-2.69 6,-6 0,-2.22 -1.21,-4.15 -3,-5.19 z m 5,4.19 v 2 h 3 v -2 z m -2.76,7.66 1.79,1.8 1.41,-1.41 -1.8,-1.79 z"
+         inkscape:connector-curvature="0"
          id="path33336"
-         inkscape:connector-curvature="0" />
+         d="m 3.55,18.54 1.41,1.41 1.79,-1.8 -1.41,-1.41 z M 11,22.45 h 2 V 19.5 H 11 Z M 4,10.5 H 1 v 2 H 4 Z M 15,6.31 V 1.5 H 9 V 6.31 C 7.21,7.35 6,9.28 6,11.5 c 0,3.31 2.69,6 6,6 3.31,0 6,-2.69 6,-6 0,-2.22 -1.21,-4.15 -3,-5.19 z m 5,4.19 v 2 h 3 v -2 z m -2.76,7.66 1.79,1.8 1.41,-1.41 -1.8,-1.79 z" />
     </symbol>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_music_video_24px">
+       id="ic_music_video_24px"
+       viewBox="0 0 24 24">
       <path
-         d="M 21,3 H 3 C 1.9,3 1,3.9 1,5 v 14 c 0,1.1 0.9,2 2,2 h 18 c 1.1,0 2,-0.9 2,-2 V 5 C 23,3.9 22.1,3 21,3 Z m 0,16 H 3 V 5 H 21 Z M 8,15 c 0,-1.66 1.34,-3 3,-3 0.35,0 0.69,0.07 1,0.18 V 6 h 5 v 2 h -3 v 7.03 A 3.003,3.003 0 0 1 11,18 C 9.34,18 8,16.66 8,15 Z"
+         inkscape:connector-curvature="0"
          id="path4745"
-         inkscape:connector-curvature="0" />
+         d="M 21,3 H 3 C 1.9,3 1,3.9 1,5 v 14 c 0,1.1 0.9,2 2,2 h 18 c 1.1,0 2,-0.9 2,-2 V 5 C 23,3.9 22.1,3 21,3 Z m 0,16 H 3 V 5 H 21 Z M 8,15 c 0,-1.66 1.34,-3 3,-3 0.35,0 0.69,0.07 1,0.18 V 6 h 5 v 2 h -3 v 7.03 A 3.003,3.003 0 0 1 11,18 C 9.34,18 8,16.66 8,15 Z" />
     </symbol>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_storage_24px">
+       id="ic_storage_24px"
+       viewBox="0 0 24 24">
       <path
-         d="M 2,20 H 22 V 16 H 2 Z m 2,-3 h 2 v 2 H 4 Z M 2,4 V 8 H 22 V 4 Z M 6,7 H 4 V 5 H 6 Z M 2,14 H 22 V 10 H 2 Z m 2,-3 h 2 v 2 H 4 Z"
+         inkscape:connector-curvature="0"
          id="path5468"
-         inkscape:connector-curvature="0" />
+         d="M 2,20 H 22 V 16 H 2 Z m 2,-3 h 2 v 2 H 4 Z M 2,4 V 8 H 22 V 4 Z M 6,7 H 4 V 5 H 6 Z M 2,14 H 22 V 10 H 2 Z m 2,-3 h 2 v 2 H 4 Z" />
     </symbol>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_wifi_tethering_24px">
+       id="ic_wifi_tethering_24px"
+       viewBox="0 0 24 24">
       <path
-         d="m 12,11 c -1.1,0 -2,0.9 -2,2 0,1.1 0.9,2 2,2 1.1,0 2,-0.9 2,-2 0,-1.1 -0.9,-2 -2,-2 z m 6,2 C 18,9.69 15.31,7 12,7 8.69,7 6,9.69 6,13 c 0,2.22 1.21,4.15 3,5.19 l 1,-1.74 C 8.81,15.75 8,14.48 8,13 8,10.79 9.79,9 12,9 c 2.21,0 4,1.79 4,4 0,1.48 -0.81,2.75 -2,3.45 l 1,1.74 C 16.79,17.15 18,15.22 18,13 Z M 12,3 C 6.48,3 2,7.48 2,13 c 0,3.7 2.01,6.92 4.99,8.65 l 1,-1.73 C 5.61,18.53 4,15.96 4,13 4,8.58 7.58,5 12,5 c 4.42,0 8,3.58 8,8 0,2.96 -1.61,5.53 -4,6.92 l 1,1.73 C 19.99,19.92 22,16.7 22,13 22,7.48 17.52,3 12,3 Z"
+         inkscape:connector-curvature="0"
          id="path5483"
-         inkscape:connector-curvature="0" />
+         d="m 12,11 c -1.1,0 -2,0.9 -2,2 0,1.1 0.9,2 2,2 1.1,0 2,-0.9 2,-2 0,-1.1 -0.9,-2 -2,-2 z m 6,2 C 18,9.69 15.31,7 12,7 8.69,7 6,9.69 6,13 c 0,2.22 1.21,4.15 3,5.19 l 1,-1.74 C 8.81,15.75 8,14.48 8,13 8,10.79 9.79,9 12,9 c 2.21,0 4,1.79 4,4 0,1.48 -0.81,2.75 -2,3.45 l 1,1.74 C 16.79,17.15 18,15.22 18,13 Z M 12,3 C 6.48,3 2,7.48 2,13 c 0,3.7 2.01,6.92 4.99,8.65 l 1,-1.73 C 5.61,18.53 4,15.96 4,13 4,8.58 7.58,5 12,5 c 4.42,0 8,3.58 8,8 0,2.96 -1.61,5.53 -4,6.92 l 1,1.73 C 19.99,19.92 22,16.7 22,13 22,7.48 17.52,3 12,3 Z" />
     </symbol>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_speaker_24px">
+       id="ic_speaker_24px"
+       viewBox="0 0 24 24">
       <path
-         d="M 17,2 H 7 C 5.9,2 5,2.9 5,4 v 16 c 0,1.1 0.9,1.99 2,1.99 L 17,22 c 1.1,0 2,-0.9 2,-2 V 4 C 19,2.9 18.1,2 17,2 Z m -5,2 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 a 2,2 0 0 1 0,-4 z m 0,16 c -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 z m 0,-8 c -1.66,0 -3,1.34 -3,3 0,1.66 1.34,3 3,3 1.66,0 3,-1.34 3,-3 0,-1.66 -1.34,-3 -3,-3 z"
+         inkscape:connector-curvature="0"
          id="path5892"
-         inkscape:connector-curvature="0" />
+         d="M 17,2 H 7 C 5.9,2 5,2.9 5,4 v 16 c 0,1.1 0.9,1.99 2,1.99 L 17,22 c 1.1,0 2,-0.9 2,-2 V 4 C 19,2.9 18.1,2 17,2 Z m -5,2 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 a 2,2 0 0 1 0,-4 z m 0,16 c -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 z m 0,-8 c -1.66,0 -3,1.34 -3,3 0,1.66 1.34,3 3,3 1.66,0 3,-1.34 3,-3 0,-1.66 -1.34,-3 -3,-3 z" />
     </symbol>
     <symbol
-       viewBox="0 0 24 24"
-       id="ic_local_laundry_service_24px">
+       id="ic_local_laundry_service_24px"
+       viewBox="0 0 24 24">
       <path
-         d="m 9.17,16.83 a 4.008,4.008 0 0 0 5.66,0 4.008,4.008 0 0 0 0,-5.66 z M 18,2.01 6,2 C 4.89,2 4,2.89 4,4 v 16 c 0,1.11 0.89,2 2,2 h 12 c 1.11,0 2,-0.89 2,-2 V 4 C 20,2.89 19.11,2.01 18,2.01 Z M 10,4 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 C 9.45,6 9,5.55 9,5 9,4.45 9.45,4 10,4 Z M 7,4 C 7.55,4 8,4.45 8,5 8,5.55 7.55,6 7,6 6.45,6 6,5.55 6,5 6,4.45 6.45,4 7,4 Z m 5,16 C 8.69,20 6,17.31 6,14 6,10.69 8.69,8 12,8 c 3.31,0 6,2.69 6,6 0,3.31 -2.69,6 -6,6 z"
+         inkscape:connector-curvature="0"
          id="path6514"
-         inkscape:connector-curvature="0" />
+         d="m 9.17,16.83 a 4.008,4.008 0 0 0 5.66,0 4.008,4.008 0 0 0 0,-5.66 z M 18,2.01 6,2 C 4.89,2 4,2.89 4,4 v 16 c 0,1.11 0.89,2 2,2 h 12 c 1.11,0 2,-0.89 2,-2 V 4 C 20,2.89 19.11,2.01 18,2.01 Z M 10,4 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 C 9.45,6 9,5.55 9,5 9,4.45 9.45,4 10,4 Z M 7,4 C 7.55,4 8,4.45 8,5 8,5.55 7.55,6 7,6 6.45,6 6,5.55 6,5 6,4.45 6.45,4 7,4 Z m 5,16 C 8.69,20 6,17.31 6,14 6,10.69 8.69,8 12,8 c 3.31,0 6,2.69 6,6 0,3.31 -2.69,6 -6,6 z" />
     </symbol>
     <symbol
-       id="lightbulb"
-       viewBox="0 0 384 512">
+       viewBox="0 0 384 512"
+       id="lightbulb">
       <title
          id="lightbulb-title">Lightbulb</title>
       <path
-         d="m 272,428 v 28 c 0,10.449 -6.68,19.334 -16,22.629 V 488 c 0,13.255 -10.745,24 -24,24 h -80 c -13.255,0 -24,-10.745 -24,-24 v -9.371 C 118.68,475.334 112,466.449 112,456 v -28 c 0,-6.627 5.373,-12 12,-12 h 136 c 6.627,0 12,5.373 12,12 z M 128,176 c 0,-35.29 28.71,-64 64,-64 8.837,0 16,-7.164 16,-16 0,-8.836 -7.163,-16 -16,-16 -52.935,0 -96,43.065 -96,96 0,8.836 7.164,16 16,16 8.836,0 16,-7.164 16,-16 z M 192,48 c 70.734,0 128,57.254 128,128 0,77.602 -37.383,60.477 -80.98,160 H 144.98 C 101.318,236.33 64,253.869 64,176 64,105.265 121.254,48 192,48 M 192,0 C 94.805,0 16,78.803 16,176 c 0,101.731 51.697,91.541 90.516,192.674 3.55,9.249 12.47,15.326 22.376,15.326 h 126.215 c 9.906,0 18.826,-6.078 22.376,-15.326 C 316.303,267.541 368,277.731 368,176 368,78.803 289.195,0 192,0 Z"
+         inkscape:connector-curvature="0"
          id="path12282"
-         inkscape:connector-curvature="0" />
+         d="m 272,428 v 28 c 0,10.449 -6.68,19.334 -16,22.629 V 488 c 0,13.255 -10.745,24 -24,24 h -80 c -13.255,0 -24,-10.745 -24,-24 v -9.371 C 118.68,475.334 112,466.449 112,456 v -28 c 0,-6.627 5.373,-12 12,-12 h 136 c 6.627,0 12,5.373 12,12 z M 128,176 c 0,-35.29 28.71,-64 64,-64 8.837,0 16,-7.164 16,-16 0,-8.836 -7.163,-16 -16,-16 -52.935,0 -96,43.065 -96,96 0,8.836 7.164,16 16,16 8.836,0 16,-7.164 16,-16 z M 192,48 c 70.734,0 128,57.254 128,128 0,77.602 -37.383,60.477 -80.98,160 H 144.98 C 101.318,236.33 64,253.869 64,176 64,105.265 121.254,48 192,48 M 192,0 C 94.805,0 16,78.803 16,176 c 0,101.731 51.697,91.541 90.516,192.674 3.55,9.249 12.47,15.326 22.376,15.326 h 126.215 c 9.906,0 18.826,-6.078 22.376,-15.326 C 316.303,267.541 368,277.731 368,176 368,78.803 289.195,0 192,0 Z" />
     </symbol>
     <symbol
-       id="thermometer-full"
-       viewBox="0 0 256 512">
+       viewBox="0 0 256 512"
+       id="thermometer-full">
       <title
          id="thermometer-full-title">Thermometer Full</title>
       <path
-         d="M 224,96 C 224,42.981 181.019,0 128,0 74.981,0 32,42.981 32,96 v 203.347 c -19.775,22.409 -31.834,51.789 -31.998,83.986 -0.359,70.303 56.787,128.176 127.089,128.664 0.299,0.002 0.61,0.003 0.909,0.003 70.698,0 128,-57.304 128,-128 0,-32.459 -12.088,-62.09 -32,-84.653 z m -96,368 -0.576,-0.002 C 83.564,463.694 47.777,427.454 48.001,383.578 48.174,349.598 67.267,331.926 80,317.498 V 96 c 0,-26.467 21.533,-48 48,-48 26.467,0 48,21.533 48,48 v 221.498 c 12.63,14.312 32,32.164 32,66.502 0,44.112 -35.888,80 -80,80 z m 64,-80 c 0,35.346 -28.654,64 -64,64 -35.346,0 -64,-28.654 -64,-64 0,-23.685 12.876,-44.349 32,-55.417 V 96 c 0,-17.673 14.327,-32 32,-32 17.673,0 32,14.327 32,32 v 232.583 c 19.124,11.068 32,31.732 32,55.417 z"
+         inkscape:connector-curvature="0"
          id="path14053"
-         inkscape:connector-curvature="0" />
+         d="M 224,96 C 224,42.981 181.019,0 128,0 74.981,0 32,42.981 32,96 v 203.347 c -19.775,22.409 -31.834,51.789 -31.998,83.986 -0.359,70.303 56.787,128.176 127.089,128.664 0.299,0.002 0.61,0.003 0.909,0.003 70.698,0 128,-57.304 128,-128 0,-32.459 -12.088,-62.09 -32,-84.653 z m -96,368 -0.576,-0.002 C 83.564,463.694 47.777,427.454 48.001,383.578 48.174,349.598 67.267,331.926 80,317.498 V 96 c 0,-26.467 21.533,-48 48,-48 26.467,0 48,21.533 48,48 v 221.498 c 12.63,14.312 32,32.164 32,66.502 0,44.112 -35.888,80 -80,80 z m 64,-80 c 0,35.346 -28.654,64 -64,64 -35.346,0 -64,-28.654 -64,-64 0,-23.685 12.876,-44.349 32,-55.417 V 96 c 0,-17.673 14.327,-32 32,-32 17.673,0 32,14.327 32,32 v 232.583 c 19.124,11.068 32,31.732 32,55.417 z" />
     </symbol>
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4719"
-       id="linearGradient4721"
-       x1="497.00781"
-       y1="122.17578"
-       x2="549.96094"
+       gradientUnits="userSpaceOnUse"
        y2="122.17578"
-       gradientUnits="userSpaceOnUse" />
+       x2="549.96094"
+       y1="122.17578"
+       x1="497.00781"
+       id="linearGradient4721"
+       xlink:href="#linearGradient4719"
+       inkscape:collect="always" />
     <symbol
-       id="dashboard"
-       viewBox="0 0 20 20">
+       viewBox="0 0 20 20"
+       id="dashboard">
       <title
          id="title17681">dashboard</title>
       <path
-         d="M 3.76,16 H 16.24 A 7.998,7.998 0 0 0 10,3 7.998,7.998 0 0 0 3.76,16 Z M 10,4 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 C 9.45,6 9,5.55 9,5 9,4.45 9.45,4 10,4 Z M 6,6 C 6.55,6 7,6.45 7,7 7,7.55 6.55,8 6,8 5.45,8 5,7.55 5,7 5,6.45 5.45,6 6,6 Z m 8,0 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 C 13.45,8 13,7.55 13,7 13,6.45 13.45,6 14,6 Z M 8.63,11.55 12,7 v 6 c 0,1.1 -0.9,2 -2,2 C 8.9,15 8,14.1 8,13 8,12.43 8.24,11.92 8.63,11.55 Z M 4,10 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 -0.55,0 -1,-0.45 -1,-1 0,-0.55 0.45,-1 1,-1 z m 12,0 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 -0.55,0 -1,-0.45 -1,-1 0,-0.55 0.45,-1 1,-1 z m -5,3 c 0,-0.55 -0.45,-1 -1,-1 -0.55,0 -1,0.45 -1,1 0,0.55 0.45,1 1,1 0.55,0 1,-0.45 1,-1 z"
+         inkscape:connector-curvature="0"
          id="path17683"
-         inkscape:connector-curvature="0" />
+         d="M 3.76,16 H 16.24 A 7.998,7.998 0 0 0 10,3 7.998,7.998 0 0 0 3.76,16 Z M 10,4 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 C 9.45,6 9,5.55 9,5 9,4.45 9.45,4 10,4 Z M 6,6 C 6.55,6 7,6.45 7,7 7,7.55 6.55,8 6,8 5.45,8 5,7.55 5,7 5,6.45 5.45,6 6,6 Z m 8,0 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 C 13.45,8 13,7.55 13,7 13,6.45 13.45,6 14,6 Z M 8.63,11.55 12,7 v 6 c 0,1.1 -0.9,2 -2,2 C 8.9,15 8,14.1 8,13 8,12.43 8.24,11.92 8.63,11.55 Z M 4,10 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 -0.55,0 -1,-0.45 -1,-1 0,-0.55 0.45,-1 1,-1 z m 12,0 c 0.55,0 1,0.45 1,1 0,0.55 -0.45,1 -1,1 -0.55,0 -1,-0.45 -1,-1 0,-0.55 0.45,-1 1,-1 z m -5,3 c 0,-0.55 -0.45,-1 -1,-1 -0.55,0 -1,0.45 -1,1 0,0.55 0.45,1 1,1 0.55,0 1,-0.45 1,-1 z" />
     </symbol>
     <symbol
        id="symbol73567">
       <path
-         d="M 16.95,16.95 14.83,14.83 C 15.55,14.1 16,13.1 16,12 16,11.26 15.79,10.57 15.43,10 L 17.6,7.81 C 18.5,9 19,10.43 19,12 c 0,1.93 -0.78,3.68 -2.05,4.95 M 12,5 c 1.57,0 3,0.5 4.19,1.4 L 14,8.56 C 13.43,8.21 12.74,8 12,8 9.79,8 8,9.79 8,12 c 0,1.1 0.45,2.1 1.17,2.83 L 7.05,16.95 C 5.78,15.68 5,13.93 5,12 5,8.13 8.13,5 12,5 M 12,2 C 6.48,2 2,6.48 2,12 2,17.52 6.48,22 12,22 17.52,22 22,17.52 22,12 22,6.47 17.5,2 12,2 Z"
+         inkscape:connector-curvature="0"
          id="path37486"
-         inkscape:connector-curvature="0" />
+         d="M 16.95,16.95 14.83,14.83 C 15.55,14.1 16,13.1 16,12 16,11.26 15.79,10.57 15.43,10 L 17.6,7.81 C 18.5,9 19,10.43 19,12 c 0,1.93 -0.78,3.68 -2.05,4.95 M 12,5 c 1.57,0 3,0.5 4.19,1.4 L 14,8.56 C 13.43,8.21 12.74,8 12,8 9.79,8 8,9.79 8,12 c 0,1.1 0.45,2.1 1.17,2.83 L 7.05,16.95 C 5.78,15.68 5,13.93 5,12 5,8.13 8.13,5 12,5 M 12,2 C 6.48,2 2,6.48 2,12 2,17.52 6.48,22 12,22 17.52,22 22,17.52 22,12 22,6.47 17.5,2 12,2 Z" />
     </symbol>
   </defs>
   <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10000"
-     gridtolerance="10000"
-     guidetolerance="10000"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1026"
-     id="namedview4487"
-     showgrid="true"
-     inkscape:zoom="0.8991228"
-     inkscape:cx="432.75496"
-     inkscape:cy="261.56058"
-     inkscape:window-x="0"
-     inkscape:window-y="49"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer10"
-     inkscape:snap-nodes="true"
-     inkscape:snap-grids="true"
-     inkscape:snap-object-midpoints="true"
-     inkscape:snap-global="true"
-     inkscape:snap-bbox="false"
-     inkscape:object-paths="true"
-     inkscape:snap-others="true"
-     inkscape:snap-smooth-nodes="false"
-     inkscape:snap-midpoints="true"
-     inkscape:snap-center="false"
-     inkscape:snap-text-baseline="true"
-     inkscape:object-nodes="true"
-     inkscape:snap-intersection-paths="true"
-     units="px"
-     scale-x="1"
-     inkscape:document-units="px"
-     fit-margin-top="32"
-     fit-margin-left="10.4"
+     inkscape:document-rotation="0"
+     fit-margin-bottom="8"
      fit-margin-right="10.4"
-     fit-margin-bottom="8">
+     fit-margin-left="10.4"
+     fit-margin-top="32"
+     inkscape:document-units="px"
+     scale-x="1"
+     units="px"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-center="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-others="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox="false"
+     inkscape:snap-global="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-nodes="true"
+     inkscape:current-layer="layer3"
+     inkscape:window-maximized="0"
+     inkscape:window-y="49"
+     inkscape:window-x="0"
+     inkscape:cy="325.40878"
+     inkscape:cx="711.5495"
+     inkscape:zoom="0.8991228"
+     showgrid="true"
+     id="namedview4487"
+     inkscape:window-height="709"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10000"
+     gridtolerance="10000"
+     objecttolerance="10000"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff">
     <inkscape:grid
-       empspacing="1"
-       type="xygrid"
-       id="grid4496"
-       spacingx="8"
-       spacingy="8"
+       originy="-412.00022"
        originx="-12.8"
-       originy="-412.00022" />
+       spacingy="8"
+       spacingx="8"
+       id="grid4496"
+       type="xygrid"
+       empspacing="1" />
   </sodipodi:namedview>
   <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Background"
+     transform="translate(9.5367432e-8,599.99996)"
      style="display:inline;opacity:0.2"
-     transform="translate(9.5367432e-8,599.99996)" />
+     inkscape:label="Background"
+     id="layer2"
+     inkscape:groupmode="layer" />
   <g
-     inkscape:groupmode="layer"
-     id="layer7"
-     inkscape:label="Floor-0"
+     transform="translate(9.5367432e-8,4.0000005)"
      style="display:inline;opacity:1"
-     transform="translate(9.5367432e-8,4.0000005)">
+     inkscape:label="Floor-0"
+     id="layer7"
+     inkscape:groupmode="layer">
     <g
-       inkscape:groupmode="layer"
-       id="layer6"
+       style="display:inline;opacity:1"
        inkscape:label="Walls-0"
-       style="display:inline;opacity:1">
+       id="layer6"
+       inkscape:groupmode="layer">
       <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5224"
+         y="68.800003"
+         x="12.8"
+         height="115.2"
          width="230.39999"
-         height="115.2"
-         x="12.8"
-         y="68.800003" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5226"
-         width="192"
-         height="153.60001"
-         x="569.59998"
-         y="30.4" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5228"
-         width="115.2"
-         height="153.60001"
-         x="761.59998"
-         y="30.4" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5230"
-         width="134.39999"
-         height="134.39999"
-         x="876.79999"
-         y="49.599998" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5232"
-         width="134.39999"
-         height="134.39999"
-         x="435.20001"
-         y="49.599998" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.38178062;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5238"
-         width="96"
-         height="134.39999"
-         x="339.20001"
-         y="49.599998" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.36656332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5240"
-         width="96"
-         height="115.2"
-         x="243.2"
-         y="68.800003" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5244"
-         width="96"
-         height="57.599998"
-         x="915.20001"
-         y="184" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5246"
-         width="134.39999"
-         height="115.2"
-         x="876.79999"
-         y="241.60001" />
-      <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5248"
-         width="192"
-         height="268.79999"
-         x="819.20001"
-         y="356.79999" />
-      <rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5250"
-         width="0"
-         height="0"
-         x="0"
-         y="0" />
-      <rect
-         id="rect513"
-         width="76.800003"
-         height="57.599998"
-         x="12.8"
-         y="184"
+         id="rect5224"
          style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1322"
-         width="57.599998"
-         height="32"
-         x="70.400002"
-         y="241.60001" />
+         y="30.4"
+         x="569.59998"
+         height="153.60001"
+         width="192"
+         id="rect5226"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1324"
-         width="57.599998"
-         height="57.599998"
-         x="70.400002"
-         y="280" />
+         y="30.4"
+         x="761.59998"
+         height="153.60001"
+         width="115.2"
+         id="rect5228"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <rect
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1330"
-         width="153.60001"
+         y="49.599998"
+         x="876.79999"
          height="134.39999"
-         x="12.8"
-         y="452.79999" />
-      <path
-         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.72194624;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 339.2,184 v 57.6 h 441.6 l 38.4,19.2 v 96 h 58.83871 V 241.6 H 915.2 V 184 Z"
-         id="path1338"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccccccc" />
-      <path
-         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.0911684;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 339.2,241.6 H 296 v 19.2 H 166.4 V 184 h 172.8 z"
-         id="path1517"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 166.4,452.8 V 184 H 89.6 v 57.6 H 128 v 211.2 z"
-         id="path1520"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 12.8,241.6 V 452.8 H 128 V 337.6 H 70.4 v -96 z"
-         id="path1522"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer3"
-       inkscape:label="Text-0"
-       style="display:inline">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="588.79999"
-         y="172.8"
-         id="group.lounge_compact_ui"
-         inkscape:label="#lounge-text"><tspan
-           sodipodi:role="line"
-           id="tspan1577"
-           x="588.79999"
-           y="172.8"
-           style="stroke-width:1.20000005">Lounge</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="446.39999"
-         y="172.8"
-         id="group.kitchen_compact_ui"
-         inkscape:label="#kitchen-text"><tspan
-           sodipodi:role="line"
-           id="tspan1581"
-           x="446.39999"
-           y="172.8"
-           style="stroke-width:1.20000005">Kitchen</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="896"
-         y="172.8"
-         id="group.bedroom_main2_compact_ui"
-         inkscape:label="#main2-text"><tspan
-           sodipodi:role="line"
-           id="tspan1585"
-           x="896"
-           y="172.8"
-           style="stroke-width:1.20000005">Olga</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="896"
-         y="337.60001"
-         id="group.bedroom_main3_compact_ui"
-         inkscape:label="#thomas-text"><tspan
-           sodipodi:role="line"
-           id="tspan1589"
-           x="896"
-           y="337.60001"
-           style="stroke-width:1.20000005">Main 3</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="838.40002"
-         y="568"
-         id="group.ballroom_compact_ui"
-         inkscape:label="#ballroom-text"><tspan
-           sodipodi:role="line"
-           id="tspan1593"
-           x="838.40002"
-           y="568"
-           style="stroke-width:1.20000005">Ballroom</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="32"
-         y="568"
-         id="group.anne_compact_ui"
-         inkscape:label="#anne-text"><tspan
-           sodipodi:role="line"
-           id="tspan1597"
-           x="32"
-           y="568"
-           style="stroke-width:1.20000005">Anne</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="32"
-         y="433.60001"
-         id="group.bedroom_annex2_compact_ui"
-         inkscape:label="#annex2-text"><tspan
-           sodipodi:role="line"
-           id="tspan1601"
-           x="32"
-           y="433.60001"
-           style="stroke-width:1.20000005">Monica</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="32"
-         y="172.8"
-         id="group.study_compact_ui"
-         inkscape:label="#study-text"><tspan
-           sodipodi:role="line"
-           id="tspan1609"
-           x="32"
-           y="172.8"
-           style="stroke-width:1.20000005">Study</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="357.59998"
-         y="222.39999"
-         id="group.hall_compact_ui"
-         inkscape:label="#hall-text"><tspan
-           sodipodi:role="line"
-           id="tspan1613"
-           x="357.59998"
-           y="222.39999"
-           style="stroke-width:1.20000005">Long Hall</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="358.39999"
-         y="172.8"
-         id="group.utility_compact_ui"
-         inkscape:label="#utility-text"><tspan
-           sodipodi:role="line"
-           id="tspan1621"
-           x="358.39999"
-           y="172.8"
-           style="stroke-width:1.20000005">Utility</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="780.79999"
-         y="172.8"
-         id="group.library_compact_ui"
-         inkscape:label="#library-text"><tspan
-           sodipodi:role="line"
-           id="tspan1633"
-           x="780.79999"
-           y="172.8"
-           style="stroke-width:1.20000005">Library</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="171.2"
+         width="134.39999"
+         id="rect5230"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="49.599998"
+         x="435.20001"
+         height="134.39999"
+         width="134.39999"
+         id="rect5232"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="49.599998"
+         x="339.20001"
+         height="134.39999"
+         width="96"
+         id="rect5238"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.38178062;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="68.800003"
+         x="243.2"
+         height="115.2"
+         width="96"
+         id="rect5240"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.36656332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="184"
+         x="915.20001"
+         height="57.599998"
+         width="96"
+         id="rect5244"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="241.60001"
+         x="876.79999"
+         height="115.2"
+         width="134.39999"
+         id="rect5246"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
          y="356.79999"
-         id="group.annex_hall_compact_ui"
-         inkscape:label="#annex-hall-text"><tspan
-           sodipodi:role="line"
-           x="171.2"
-           y="356.79999"
-           id="tspan3090"
-           style="stroke-width:1.20000005">Annex Hall</tspan></text>
+         x="819.20001"
+         height="268.79999"
+         width="192"
+         id="rect5248"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="0"
+         x="0"
+         height="0"
+         width="0"
+         id="rect5250"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="184"
+         x="12.8"
+         height="57.599998"
+         width="76.800003"
+         id="rect513" />
+      <rect
+         y="241.60001"
+         x="70.400002"
+         height="32"
+         width="57.599998"
+         id="rect1322"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="280"
+         x="70.400002"
+         height="57.599998"
+         width="57.599998"
+         id="rect1324"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="452.79999"
+         x="12.8"
+         height="134.39999"
+         width="153.60001"
+         id="rect1330"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         id="path1338"
+         d="m 339.2,184 v 57.6 h 441.6 l 38.4,19.2 v 96 h 58.83871 V 241.6 H 915.2 V 184 Z"
+         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.72194624;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1517"
+         d="M 339.2,241.6 H 296 v 19.2 H 166.4 V 184 h 172.8 z"
+         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.0911684;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1520"
+         d="M 166.4,452.8 V 184 H 89.6 v 57.6 H 128 v 211.2 z"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path1522"
+         d="M 12.8,241.6 V 452.8 H 128 V 337.6 H 70.4 v -96 z"
+         style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
-       inkscape:groupmode="layer"
-       id="layer4"
+       style="display:inline"
+       inkscape:label="Text-0"
+       id="layer3"
+       inkscape:groupmode="layer">
+      <text
+         inkscape:label="#lounge-text"
+         id="group.lounge_compact_ui"
+         y="172.8"
+         x="588.79999"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="172.8"
+           x="588.79999"
+           id="tspan1577"
+           sodipodi:role="line">Lounge</tspan></text>
+      <text
+         inkscape:label="#kitchen-text"
+         id="group.kitchen_compact_ui"
+         y="172.8"
+         x="446.39999"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="172.8"
+           x="446.39999"
+           id="tspan1581"
+           sodipodi:role="line">Kitchen</tspan></text>
+      <text
+         inkscape:label="#main2-text"
+         id="group.bedroom_main2_compact_ui"
+         y="172.8"
+         x="896"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="172.8"
+           x="896"
+           id="tspan1585"
+           sodipodi:role="line">Olga</tspan></text>
+      <text
+         inkscape:label="#thomas-text"
+         id="group.bedroom_main3_compact_ui"
+         y="343.60001"
+         x="896"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="343.60001"
+           x="896"
+           id="tspan1589"
+           sodipodi:role="line">Elle</tspan></text>
+      <text
+         inkscape:label="#ballroom-text"
+         id="group.ballroom_compact_ui"
+         y="568"
+         x="838.40002"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="568"
+           x="838.40002"
+           id="tspan1593"
+           sodipodi:role="line">Ballroom</tspan></text>
+      <text
+         inkscape:label="#anne-text"
+         id="group.anne_compact_ui"
+         y="568"
+         x="32"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="568"
+           x="32"
+           id="tspan1597"
+           sodipodi:role="line">Anne</tspan></text>
+      <text
+         inkscape:label="#annex2-text"
+         id="group.bedroom_annex2_compact_ui"
+         y="433.60001"
+         x="32"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="433.60001"
+           x="32"
+           id="tspan1601"
+           sodipodi:role="line">Monica</tspan></text>
+      <text
+         inkscape:label="#study-text"
+         id="group.study_compact_ui"
+         y="172.8"
+         x="32"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="172.8"
+           x="32"
+           id="tspan1609"
+           sodipodi:role="line">Study</tspan></text>
+      <text
+         inkscape:label="#hall-text"
+         id="group.hall_compact_ui"
+         y="222.39999"
+         x="357.59998"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="222.39999"
+           x="357.59998"
+           id="tspan1613"
+           sodipodi:role="line">Long Hall</tspan></text>
+      <text
+         inkscape:label="#utility-text"
+         id="group.utility_compact_ui"
+         y="172.8"
+         x="358.39999"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="172.8"
+           x="358.39999"
+           id="tspan1621"
+           sodipodi:role="line">Utility</tspan></text>
+      <text
+         inkscape:label="#library-text"
+         id="group.library_compact_ui"
+         y="172.8"
+         x="780.79999"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           y="172.8"
+           x="780.79999"
+           id="tspan1633"
+           sodipodi:role="line">Library</tspan></text>
+      <text
+         inkscape:label="#annex-hall-text"
+         id="group.annex_hall_compact_ui"
+         y="356.79999"
+         x="171.2"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           id="tspan3090"
+           y="356.79999"
+           x="171.2"
+           sodipodi:role="line">Annex Hall</tspan></text>
+    </g>
+    <g
+       style="display:inline"
        inkscape:label="Devices-0"
-       style="display:inline">
+       id="layer4"
+       inkscape:groupmode="layer">
       <g
-         id="g6012"
+         transform="matrix(1.2,0,0,1.2,-102.4,-65.6)"
          inkscape:label="#g_washing_machine"
-         transform="matrix(1.2,0,0,1.2,-102.4,-65.6)">
+         id="g6012">
         <use
-           inkscape:label="#use44768"
-           transform="matrix(0.0375,0,0,0.0375,371.25,111.55)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#ic_local_laundry_service_24px"
+           id="use44768"
            style="fill:#000000;stroke:none"
-           id="use44768">
+           xlink:href="#ic_local_laundry_service_24px"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.0375,0,0,0.0375,371.25,111.55)"
+           inkscape:label="#use44768">
           <title
              id="title44780">Washing Machine</title>
         </use>
         <circle
-           inkscape:label="#binary_sensor.washing_machine"
-           r="16"
-           cy="126"
-           cx="390"
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="binary_sensor.washing_machine"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           cx="390"
+           cy="126"
+           r="16"
+           inkscape:label="#binary_sensor.washing_machine" />
       </g>
       <g
-         style="display:inline"
-         id="g5956-6-1-3"
+         inkscape:label="#g_lounge_lights"
          transform="matrix(1.2,0,0,1.2,-66.4,-24)"
-         inkscape:label="#g_lounge_lights">
+         id="g5956-6-1-3"
+         style="display:inline">
         <use
-           inkscape:label="#lounge-lights-icon"
+           mask="none"
+           id="group.lounge_lights2-6-7-6"
+           style="fill:#000000;fill-rule:nonzero;stroke:none"
+           xlink:href="#lightbulb"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
            transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
+           inkscape:label="#lounge-lights-icon" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="group.lounge_lights"
+           cx="642"
+           cy="140"
+           r="16"
+           inkscape:label="#light.lounge_north" />
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_jerome_thermostat"
+         transform="matrix(1.2,0,0,1.2,342,-37.599997)"
+         id="g4713-92-36-6-3-2">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="492.33334"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-2-7-8"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.790569;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.bedroom_main2_thermostat"
+           inkscape:label="#climate.bedroom_main2_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-1-9-7">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,474,112)"
            height="100%"
            width="100%"
            y="0"
            x="0"
-           xlink:href="#lightbulb"
-           style="fill:#000000;fill-rule:nonzero;stroke:none"
-           id="group.lounge_lights2-6-7-6"
-           mask="none" />
-        <circle
-           inkscape:label="#light.lounge_north"
-           r="16"
-           cy="140"
-           cx="642"
-           id="group.lounge_lights"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           xlink:href="#symbol73567"
+           id="use36622-8-2-3" />
       </g>
       <g
-         id="g4713-92-36-6-3-2"
-         transform="matrix(1.2,0,0,1.2,340.8,-35.599997)"
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_jerome_temperature"
+         transform="matrix(1.2,0,0,1.2,340.00001,-72.4)"
+         id="g4713-92-0">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-36"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.790569;stroke-opacity:1" />
+        <use
+           id="random03509-2-8-1"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,470,110)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="sensor.bedroom_main2_mean_temperature"
+           inkscape:label="#sensor.bedroom_main2_mean_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-6">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_bedroom_annex2_thermostat"
+         transform="matrix(1.2,0,0,1.2,-553.6,246.4)"
+         id="g4713-92-36-0">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-9"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.bedroom_annex2_thermostat"
+           inkscape:label="#climate.bedroom_annex2_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-6">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-0" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_bedroom_annex2_temperature"
+         transform="matrix(1.2,0,0,1.2,-553.6,212.4)"
+         id="g4713-92-3">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-2"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-8-0"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,470,110)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="sensor.bedroom_annex2_mean_temperature"
+           inkscape:label="#sensor.bedroom_annex2_mean_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-1">99.9°C</tspan></text>
+      </g>
+      <g
+         inkscape:label="#g_ballroom_lights"
+         transform="matrix(1.2,0,0,1.2,144.8,304)"
+         id="g5956-6-1-3-9"
+         style="display:inline">
+        <use
+           mask="none"
+           id="group.lounge_lights2-6-7-6-1"
+           style="fill:#000000;fill-rule:nonzero;stroke:none"
+           xlink:href="#lightbulb"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
+           inkscape:label="#lounge-lights-icon" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="group.ballroom_lights"
+           cx="642"
+           cy="140"
+           r="16"
+           inkscape:label="#group.ballroom_lights" />
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_ballroom_thermostat"
+         transform="matrix(1.2,0,0,1.2,340.8,272.4)"
+         id="g4713-92-36-6-3-2-9">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="492.33334"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-2-7-8-4"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.ballroom_thermostat"
+           inkscape:label="#climate.ballroom_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-1-9-7-8">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,474,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-8-2-3-4" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_ballroom_temperature"
+         transform="matrix(1.2,0,0,1.2,147.2,570.4)"
+         id="g4713-9-6-0">
+        <rect
+           ry="9.5377026"
+           y="-170.00002"
+           x="654"
+           height="26.666666"
+           width="60"
+           id="rect2156-3-1-2"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-6-8-3"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,630,-168)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="656"
+           y="-150"
+           id="sensor.ballroom_temperature"
+           inkscape:label="#sensor.ballroom_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="656"
+             y="-150"
+             id="tspan933-6-2-2-5">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_library_thermostat"
+         transform="matrix(1.2,0,0,1.2,206.8,-57.6)"
+         id="g4713-92-36-6-3">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="492.33334"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-2-7"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.library_thermostat"
+           inkscape:label="#climate.library_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-1-9">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,474,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-8-2" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_library_temperature"
+         transform="matrix(1.2,0,0,1.2,12.8,241.6)"
+         id="g4713-9-6">
+        <rect
+           ry="9.5377026"
+           y="-170.00002"
+           x="654"
+           height="26.666666"
+           width="60"
+           id="rect2156-3-1"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-6-8"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,630,-168)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="656"
+           y="-150"
+           id="sensor.library_mean_temperature"
+           inkscape:label="#sensor.library_mean_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="656"
+             y="-150"
+             id="tspan933-6-2-2">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_lounge_thermostat"
+         transform="matrix(1.2,0,0,1.2,90.8,-57.6)"
+         id="g4713-92-36-6">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="492.33334"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-2"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.lounge_thermostat"
+           inkscape:label="#climate.lounge_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-1">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,474,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-8" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_lounge_temperature"
+         transform="matrix(1.2,0,0,1.2,-102.40001,241.6)"
+         id="g4713-9">
+        <rect
+           ry="9.5377026"
+           y="-170.00002"
+           x="654"
+           height="26.666666"
+           width="60"
+           id="rect2156-3"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-6"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,630,-168)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="656"
+           y="-150"
+           id="sensor.lounge_temperature"
+           inkscape:label="#sensor.lounge_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="656"
+             y="-150"
+             id="tspan933-6-2">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_kitchen_thermostat"
+         transform="matrix(1.2,0,0,1.2,-102.8,-35.599997)"
+         id="g4713-92-36-0-7">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-9-9"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.kitchen_thermostat"
+           inkscape:label="#climate.kitchen_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-6-0">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-0-2" />
+      </g>
+      <g
+         style="fill:#000000;fill-opacity:1"
+         inkscape:label="#g_kitchen_temperature"
+         transform="matrix(1.2,0,0,1.2,-102.4,-70.4)"
+         id="g4713">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,470,110)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="sensor.kitchen_mean_temperature"
+           inkscape:label="#sensor.kitchen_mean_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_hall_thermostat"
+         transform="matrix(1.2,0,0,1.2,86.8,66.400003)"
+         id="g4713-92-36-6-6">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="492.33334"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-2-1"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.hall_thermostat"
+           inkscape:label="#climate.hall_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-1-93">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,474,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-8-1" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_hall_temperature"
+         transform="matrix(1.2,0,0,1.2,-16,66.4)"
+         id="g4713-92-47">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-4"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-8-4"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,470,110)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="sensor.hall_temperature"
+           inkscape:label="#sensor.hall_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-0">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_annex_hall_thermostat"
+         transform="matrix(1.2,0,0,1.2,-419.60001,284.4)"
+         id="g4713-92-36-6-6-7">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="492.33334"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-2-1-4"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.annex_hall_thermostat"
+           inkscape:label="#climate.annex_hall_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-1-93-2">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,467.33332,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-8-1-5" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_annex_hall_temperature"
+         transform="matrix(1.2,0,0,1.2,-426.4,248.8)"
+         id="g4713-92-4">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="498"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-7"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="500"
+           y="128"
+           id="sensor.annex_hall_mean_temperature"
+           inkscape:label="#sensor.annex_hall_mean_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="500"
+             y="128"
+             id="tspan933-6-7-5">99.9°C</tspan></text>
+        <use
+           id="random03509-2-8-8"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,468,110)"
+           inkscape:label="#use50559" />
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_study_thermostat"
+         transform="matrix(1.2,0,0,1.2,-428.8,-14.4)"
+         id="g4713-92-36">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.study_thermostat"
+           inkscape:label="#climate.study_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,474,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622" />
+      </g>
+      <g
+         style="display:inline;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_study_temperature"
+         transform="matrix(1.2,0,0,1.2,-428.8,-51.2)"
+         id="g4713-92">
+        <rect
+           ry="9.5377026"
+           y="109.66669"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-8"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,468.33333,108.33333)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="sensor.study_temperature"
+           inkscape:label="#sensor.study_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7">99.9°C</tspan></text>
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_lounge"
+         transform="matrix(1.2,0,0,1.2,-167.2,-36.399994)"
+         id="g5956-6-1-3-3"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="random_media_player_lounge" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_lounge"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_lounge" />
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_library"
+         transform="matrix(1.2,0,0,1.2,19.1,-36.399994)"
+         id="g5956-6-1-3-3-3"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="random_media_player-5" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_library"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_library" />
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_kitchen2"
+         transform="matrix(1.2,0,0,1.2,-227.3,-7.4902344)"
+         id="g5956-6-1-3-3-2"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;opacity:1;fill:#000000;stroke:none;stroke-opacity:1"
+           id="random_media_player-9" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_kitchen2"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_kitchen2" />
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_study"
+         transform="matrix(1.2,0,0,1.2,-728.8,-46.399994)"
+         id="g5956-6-1-3-3-2-9"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="random_media_player-9-3" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_study"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_study" />
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_ballroom"
+         transform="matrix(1.2,0,0,1.2,211.1,361.6)"
+         id="g5956-6-1-3-3-3-0"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="random_media_player-5-6" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_ballroom"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_ballroom" />
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_outside"
+         transform="matrix(1.2,0,0,1.2,-302.5,102.4)"
+         id="g5956-6-1-3-3-3-0-6"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="random_media_player-5-6-1" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_outside"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_outside" />
+      </g>
+      <g
+         transform="matrix(1.2,0,0,1.2,300,118.69023)"
+         inkscape:label="#g_hottub"
+         id="g6012-5"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#hottub-icon"
+           transform="matrix(0.0297619,0,0,0.03132832,374.09185,113.25756)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_hot_tub_24px"
+           style="display:inline;fill:#000000;stroke:#000000;stroke-opacity:1"
+           id="hottub-icon" />
+        <circle
+           r="16"
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="group.g_hottub"
+           cx="390"
+           cy="126"
+           inkscape:label="#hottub-switch" />
+      </g>
+      <g
+         inkscape:label="#g_ap_east"
+         transform="matrix(1.2,0,0,1.2,147.2,-168.8)"
+         id="g4759-5"
+         style="display:inline">
+        <use
+           id="rand-use-39868-2"
+           style="display:inline;fill:#000000;stroke:none"
+           xlink:href="#ic_wifi_tethering_24px"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
+           inkscape:label="#ap-east-icon" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="device_tracker.ap_east"
+           cx="592"
+           cy="320"
+           r="16"
+           inkscape:label="device_tracker.ap_east" />
+      </g>
+      <g
+         inkscape:label="#g_ap_central"
+         transform="matrix(1.2,0,0,1.2,-217.8975,-169.83795)"
+         id="g4759">
+        <use
+           id="rand-use-39868"
+           style="display:inline;fill:#000000;stroke:none"
+           xlink:href="#ic_wifi_tethering_24px"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
+           inkscape:label="#ap-central-icon" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="device_tracker.ap_central"
+           cx="592"
+           cy="320"
+           r="16"
+           inkscape:label="device_tracker.ap_central" />
+      </g>
+      <g
+         style="display:inline"
+         inkscape:label="#g_ap_west"
+         transform="matrix(1.2,0,0,1.2,-563.2,-46.4)"
+         id="g4833">
+        <use
+           inkscape:label="#ap-west-icon"
+           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_wifi_tethering_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="rand-use-39868-3">
+          <title
+             id="title44786-9-6">AP Central</title>
+        </use>
+        <circle
+           inkscape:label="device_tracker.ap_west"
+           r="16"
+           cy="320"
+           cx="592"
+           id="device_tracker.ap_west"
+           style="display:inline;opacity:0.6;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+  <g
+     transform="translate(9.5367432e-8,4.0000005)"
+     style="display:inline"
+     inkscape:label="Floor-1"
+     id="layer8"
+     inkscape:groupmode="layer">
+    <g
+       style="display:inline"
+       inkscape:label="Walls-1"
+       id="layer5"
+       inkscape:groupmode="layer">
+      <rect
+         inkscape:label="#bedroom-mark"
+         y="356.79999"
+         x="396.79999"
+         height="153.60001"
+         width="153.60001"
+         id="rect5226-4"
+         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         inkscape:label="#guest_room"
+         y="356.79999"
+         x="608"
+         height="107.20001"
+         width="112"
+         id="rect5228-6"
+         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.47868633;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       style="display:inline"
+       inkscape:label="Text-1"
+       id="layer9"
+       inkscape:groupmode="layer">
+      <text
+         inkscape:label="#mark-text"
+         id="group.bedroom_mark_compact_ui"
+         y="497.20001"
+         x="414"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           id="tspan3212"
+           y="497.20001"
+           x="414"
+           sodipodi:role="line">Mark</tspan></text>
+      <text
+         inkscape:label="#guest-text"
+         id="group.guest_room_compact_ui"
+         y="453.60001"
+         x="623.20001"
+         style="font-style:normal;font-weight:normal;font-size:19.2px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2"
+         xml:space="preserve"><tspan
+           style="stroke-width:1.2"
+           id="tspan3212-8"
+           y="453.60001"
+           x="623.20001"
+           sodipodi:role="line">Guest</tspan></text>
+    </g>
+    <g
+       style="display:inline"
+       inkscape:label="Devices-1"
+       id="layer10"
+       inkscape:groupmode="layer">
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_bedroom_mark_temperature"
+         transform="matrix(1.2,0,0,1.2,-316,570.4)"
+         id="g4713-9-8">
+        <rect
+           ry="9.5377026"
+           y="-170.00002"
+           x="654"
+           height="26.666666"
+           width="60"
+           id="rect2156-3-4"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-6-3"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,630,-168)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="656"
+           y="-150"
+           id="sensor.bedroom_mark_temperature"
+           inkscape:label="#sensor.bedroom_mark_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="656"
+             y="-150"
+             id="tspan933-6-2-4">99.9°C</tspan></text>
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_guest_thermostat"
+         transform="matrix(1.2,0,0,1.2,42,270.4)"
+         id="g4713-92-36-0-7-0-6">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-9-9-6-1"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.guest_room_thermostat"
+           inkscape:label="#climate.guest_room_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-6-0-2-5">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-0-2-0-4" />
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_guest_temperature"
+         transform="matrix(1.2,0,0,1.2,-151.2,568)"
+         id="g4713-9-8-9">
+        <rect
+           ry="9.5377026"
+           y="-170.00002"
+           x="654"
+           height="26.666666"
+           width="60"
+           id="rect2156-3-4-2"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <use
+           id="random03509-2-6-3-0"
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           xlink:href="#thermometer-full"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,630,-168)"
+           inkscape:label="#use50559" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="656"
+           y="-150"
+           id="sensor.guest_room_mean_temperature"
+           inkscape:label="#sensor.guest_room_mean_temperature"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="656"
+             y="-150"
+             id="tspan933-6-2-4-8">99.9°C</tspan></text>
+      </g>
+      <g
+         inkscape:label="#g_bedroom_mark_lights"
+         transform="matrix(1.2,0,0,1.2,-255.69143,308.78743)"
+         id="g5956-6-1-3-92"
+         style="display:inline;opacity:1">
+        <use
+           mask="none"
+           id="group.lounge_lights2-6-7-6-6"
+           style="fill:#000000;fill-rule:nonzero;stroke:none"
+           xlink:href="#lightbulb"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%"
+           transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
+           inkscape:label="#group.bedroom_mark_lights_icon" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="group.bedroom_mark_lights"
+           cx="642"
+           cy="140"
+           r="16"
+           inkscape:label="#group.bedroom_mark_lights" />
+      </g>
+      <g
+         inkscape:label="#g_snapcast_client_bedroom_mark"
+         transform="matrix(1.2,0,0,1.2,-347.2,268)"
+         id="g5956-6-1-3-3-2-2"
+         style="display:inline;opacity:1">
+        <use
+           inkscape:label="#media_player_icon"
+           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#ic_speaker_24px"
+           style="display:inline;fill:#000000;stroke:none"
+           id="random_media_player-9-7" />
+        <circle
+           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="media_player.snapcast_client_bedroom_mark"
+           cx="642.75"
+           cy="139.5752"
+           r="16"
+           inkscape:label="#media_player.snapcast_client_bedroom_mark" />
+      </g>
+      <g
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1"
+         inkscape:label="#g_bedroom_mark_thermostat"
+         transform="matrix(1.2,0,0,1.2,-124,272.4)"
+         id="g4713-92-36-0-7-0">
+        <rect
+           ry="9.5377026"
+           y="108.00002"
+           x="494"
+           height="26.666666"
+           width="60"
+           id="rect2156-2-75-9-9-6"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+           x="496"
+           y="128"
+           id="climate.bedroom_mark_thermostat"
+           inkscape:label="#climate.bedroom_mark_thermostat"><tspan
+             style="fill:#000000;fill-opacity:1"
+             sodipodi:role="line"
+             x="496"
+             y="128"
+             id="tspan933-6-7-62-6-0-2">99.9°C</tspan></text>
+        <use
+           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)"
+           height="100%"
+           width="100%"
+           y="0"
+           x="0"
+           xlink:href="#symbol73567"
+           id="use36622-0-2-0" />
+      </g>
+      <g
+         id="g4713-92-36-6-3-2-3"
+         transform="matrix(1.2,0,0,1.2,342,153.19975)"
          inkscape:label="#g_jerome_thermostat"
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
         <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-2-7-8"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.790569;stroke-opacity:1"
+           id="rect2156-2-75-2-7-8-6"
            width="60"
            height="26.666666"
            x="492.33334"
@@ -653,18 +1790,18 @@
            ry="9.5377026" />
         <text
            inkscape:label="#climate.bedroom_main2_thermostat"
-           id="climate.bedroom_main2_thermostat"
+           id="climate.bedroom_main2_thermostat-7"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
            xml:space="preserve"><tspan
-             id="tspan933-6-7-62-1-9-7"
+             id="tspan933-6-7-62-1-9-7-5"
              y="128"
              x="496"
              sodipodi:role="line"
              style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
         <use
-           id="use36622-8-2-3"
+           id="use36622-8-2-3-3"
            xlink:href="#symbol73567"
            x="0"
            y="0"
@@ -673,13 +1810,13 @@
            transform="matrix(0.83333333,0,0,0.83333333,474,112)" />
       </g>
       <g
-         id="g4713-92-0"
-         transform="matrix(1.2,0,0,1.2,339.2,-70.4)"
+         id="g4713-92-0-5"
+         transform="matrix(1.2,0,0,1.2,340.00001,118.39975)"
          inkscape:label="#g_jerome_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
         <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-36"
+           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.790569;stroke-opacity:1"
+           id="rect2156-2-36-6"
            width="60"
            height="26.666666"
            x="494"
@@ -694,1096 +1831,28 @@
            x="0"
            xlink:href="#thermometer-full"
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-8-1" />
+           id="random03509-2-8-1-2" />
         <text
            inkscape:label="#sensor.bedroom_main2_mean_temperature"
-           id="sensor.bedroom_main2_mean_temperature"
+           id="sensor.bedroom_main2_mean_temperature-9"
            y="128"
            x="496"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
            xml:space="preserve"><tspan
-             id="tspan933-6-7-6"
+             id="tspan933-6-7-6-1"
              y="128"
              x="496"
              sodipodi:role="line"
              style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-0"
-         transform="matrix(1.2,0,0,1.2,-553.6,246.4)"
-         inkscape:label="#g_bedroom_annex2_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-9"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.bedroom_annex2_thermostat"
-           id="climate.bedroom_annex2_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-6"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-0"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)" />
-      </g>
-      <g
-         id="g4713-92-3"
-         transform="matrix(1.2,0,0,1.2,-553.6,212.4)"
-         inkscape:label="#g_bedroom_annex2_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-2"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,470,110)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-8-0" />
-        <text
-           inkscape:label="#sensor.bedroom_annex2_mean_temperature"
-           id="sensor.bedroom_annex2_mean_temperature"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-1"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         style="display:inline"
-         id="g5956-6-1-3-9"
-         transform="matrix(1.2,0,0,1.2,144.8,304)"
-         inkscape:label="#g_ballroom_lights">
-        <use
-           inkscape:label="#lounge-lights-icon"
-           transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#lightbulb"
-           style="fill:#000000;fill-rule:nonzero;stroke:none"
-           id="group.lounge_lights2-6-7-6-1"
-           mask="none" />
-        <circle
-           inkscape:label="#group.ballroom_lights"
-           r="16"
-           cy="140"
-           cx="642"
-           id="group.ballroom_lights"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         id="g4713-92-36-6-3-2-9"
-         transform="matrix(1.2,0,0,1.2,340.8,272.4)"
-         inkscape:label="#g_ballroom_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-2-7-8-4"
-           width="60"
-           height="26.666666"
-           x="492.33334"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.ballroom_thermostat"
-           id="climate.ballroom_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-1-9-7-8"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-8-2-3-4"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,474,112)" />
-      </g>
-      <g
-         id="g4713-9-6-0"
-         transform="matrix(1.2,0,0,1.2,147.2,570.4)"
-         inkscape:label="#g_ballroom_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-3-1-2"
-           width="60"
-           height="26.666666"
-           x="654"
-           y="-170.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,630,-168)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-6-8-3" />
-        <text
-           inkscape:label="#sensor.ballroom_temperature"
-           id="sensor.ballroom_temperature"
-           y="-150"
-           x="656"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-2-2-5"
-             y="-150"
-             x="656"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-6-3"
-         transform="matrix(1.2,0,0,1.2,206.8,-57.6)"
-         inkscape:label="#g_library_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-2-7"
-           width="60"
-           height="26.666666"
-           x="492.33334"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.library_thermostat"
-           id="climate.library_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-1-9"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-8-2"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,474,112)" />
-      </g>
-      <g
-         id="g4713-9-6"
-         transform="matrix(1.2,0,0,1.2,12.8,241.6)"
-         inkscape:label="#g_library_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-3-1"
-           width="60"
-           height="26.666666"
-           x="654"
-           y="-170.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,630,-168)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-6-8" />
-        <text
-           inkscape:label="#sensor.library_mean_temperature"
-           id="sensor.library_mean_temperature"
-           y="-150"
-           x="656"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-2-2"
-             y="-150"
-             x="656"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-6"
-         transform="matrix(1.2,0,0,1.2,90.8,-57.6)"
-         inkscape:label="#g_lounge_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-2"
-           width="60"
-           height="26.666666"
-           x="492.33334"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.lounge_thermostat"
-           id="climate.lounge_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-1"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-8"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,474,112)" />
-      </g>
-      <g
-         id="g4713-9"
-         transform="matrix(1.2,0,0,1.2,-102.40001,241.6)"
-         inkscape:label="#g_lounge_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-3"
-           width="60"
-           height="26.666666"
-           x="654"
-           y="-170.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,630,-168)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-6" />
-        <text
-           inkscape:label="#sensor.lounge_temperature"
-           id="sensor.lounge_temperature"
-           y="-150"
-           x="656"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-2"
-             y="-150"
-             x="656"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-0-7"
-         transform="matrix(1.2,0,0,1.2,-102.8,-35.599997)"
-         inkscape:label="#g_kitchen_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-9-9"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.kitchen_thermostat"
-           id="climate.kitchen_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-6-0"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-0-2"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)" />
-      </g>
-      <g
-         id="g4713"
-         transform="matrix(1.2,0,0,1.2,-102.4,-70.4)"
-         inkscape:label="#g_kitchen_temperature"
-         style="fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,470,110)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2" />
-        <text
-           inkscape:label="#sensor.kitchen_mean_temperature"
-           id="sensor.kitchen_mean_temperature"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-6-6"
-         transform="matrix(1.2,0,0,1.2,86.8,66.400003)"
-         inkscape:label="#g_hall_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-2-1"
-           width="60"
-           height="26.666666"
-           x="492.33334"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.hall_thermostat"
-           id="climate.hall_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-1-93"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-8-1"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,474,112)" />
-      </g>
-      <g
-         id="g4713-92-47"
-         transform="matrix(1.2,0,0,1.2,-16,66.4)"
-         inkscape:label="#g_hall_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-4"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,470,110)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-8-4" />
-        <text
-           inkscape:label="#sensor.hall_temperature"
-           id="sensor.hall_temperature"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-0"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-6-6-7"
-         transform="matrix(1.2,0,0,1.2,-419.60001,284.4)"
-         inkscape:label="#g_annex_hall_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-2-1-4"
-           width="60"
-           height="26.666666"
-           x="492.33334"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.annex_hall_thermostat"
-           id="climate.annex_hall_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-1-93-2"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-8-1-5"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,467.33332,112)" />
-      </g>
-      <g
-         id="g4713-92-4"
-         transform="matrix(1.2,0,0,1.2,-426.4,248.8)"
-         inkscape:label="#g_annex_hall_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-7"
-           width="60"
-           height="26.666666"
-           x="498"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#sensor.annex_hall_mean_temperature"
-           id="sensor.annex_hall_mean_temperature"
-           y="128"
-           x="500"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-5"
-             y="128"
-             x="500"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,468,110)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-8-8" />
-      </g>
-      <g
-         id="g4713-92-36"
-         transform="matrix(1.2,0,0,1.2,-428.8,-14.4)"
-         inkscape:label="#g_study_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.study_thermostat"
-           id="climate.study_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,474,112)" />
-      </g>
-      <g
-         id="g4713-92"
-         transform="matrix(1.2,0,0,1.2,-428.8,-51.2)"
-         inkscape:label="#g_study_temperature"
-         style="display:inline;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="109.66669"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,468.33333,108.33333)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-8" />
-        <text
-           inkscape:label="#sensor.study_temperature"
-           id="sensor.study_temperature"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3"
-         transform="matrix(1.2,0,0,1.2,-167.2,-36.399994)"
-         inkscape:label="#g_snapcast_client_lounge">
-        <use
-           id="random_media_player_lounge"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_lounge"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_lounge"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3-3"
-         transform="matrix(1.2,0,0,1.2,19.1,-36.399994)"
-         inkscape:label="#g_snapcast_client_library">
-        <use
-           id="random_media_player-5"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_library"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_library"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3-2"
-         transform="matrix(1.2,0,0,1.2,-227.3,-7.4902344)"
-         inkscape:label="#g_snapcast_client_kitchen2">
-        <use
-           id="random_media_player-9"
-           style="display:inline;opacity:1;fill:#000000;stroke:none;stroke-opacity:1"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_kitchen2"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_kitchen2"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3-2-9"
-         transform="matrix(1.2,0,0,1.2,-728.8,-46.399994)"
-         inkscape:label="#g_snapcast_client_study">
-        <use
-           id="random_media_player-9-3"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_study"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_study"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3-3-0"
-         transform="matrix(1.2,0,0,1.2,211.1,361.6)"
-         inkscape:label="#g_snapcast_client_ballroom">
-        <use
-           id="random_media_player-5-6"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_ballroom"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_ballroom"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3-3-0-6"
-         transform="matrix(1.2,0,0,1.2,-302.5,102.4)"
-         inkscape:label="#g_snapcast_client_outside">
-        <use
-           id="random_media_player-5-6-1"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_outside"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_outside"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g6012-5"
-         inkscape:label="#g_hottub"
-         transform="matrix(1.2,0,0,1.2,300,118.69023)">
-        <use
-           id="hottub-icon"
-           style="display:inline;fill:#000000;stroke:#000000;stroke-opacity:1"
-           xlink:href="#ic_hot_tub_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0297619,0,0,0.03132832,374.09185,113.25756)"
-           inkscape:label="#hottub-icon" />
-        <circle
-           inkscape:label="#hottub-switch"
-           cy="126"
-           cx="390"
-           id="group.g_hottub"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           r="16" />
-      </g>
-      <g
-         style="display:inline"
-         id="g4759-5"
-         transform="matrix(1.2,0,0,1.2,147.2,-168.8)"
-         inkscape:label="#g_ap_east">
-        <use
-           inkscape:label="#ap-east-icon"
-           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#ic_wifi_tethering_24px"
-           style="display:inline;fill:#000000;stroke:none"
-           id="rand-use-39868-2" />
-        <circle
-           inkscape:label="device_tracker.ap_east"
-           r="16"
-           cy="320"
-           cx="592"
-           id="device_tracker.ap_east"
-           style="display:inline;opacity:0.6;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         id="g4759"
-         transform="matrix(1.2,0,0,1.2,-217.8975,-169.83795)"
-         inkscape:label="#g_ap_central">
-        <use
-           inkscape:label="#ap-central-icon"
-           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#ic_wifi_tethering_24px"
-           style="display:inline;fill:#000000;stroke:none"
-           id="rand-use-39868" />
-        <circle
-           inkscape:label="device_tracker.ap_central"
-           r="16"
-           cy="320"
-           cx="592"
-           id="device_tracker.ap_central"
-           style="display:inline;opacity:0.6;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         id="g4833"
-         transform="matrix(1.2,0,0,1.2,-563.2,-46.4)"
-         inkscape:label="#g_ap_west"
-         style="display:inline">
-        <use
-           id="rand-use-39868-3"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_wifi_tethering_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,572.85075,304.51035)"
-           inkscape:label="#ap-west-icon">
-          <title
-             id="title44786-9-6">AP Central</title>
-        </use>
-        <circle
-           style="display:inline;opacity:0.6;fill:#000000;fill-opacity:0.15835775;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="device_tracker.ap_west"
-           cx="592"
-           cy="320"
-           r="16"
-           inkscape:label="device_tracker.ap_west" />
-      </g>
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer8"
-     inkscape:label="Floor-1"
-     style="display:inline"
-     transform="translate(9.5367432e-8,4.0000005)">
-    <g
-       inkscape:groupmode="layer"
-       id="layer5"
-       inkscape:label="Walls-1"
-       style="display:inline">
-      <rect
-         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:4.80000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5226-4"
-         width="153.60001"
-         height="153.60001"
-         x="396.79999"
-         y="356.79999"
-         inkscape:label="#bedroom-mark" />
-      <rect
-         style="display:inline;opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.47868633;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect5228-6"
-         width="112"
-         height="107.20001"
-         x="608"
-         y="356.79999"
-         inkscape:label="#guest_room" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer9"
-       inkscape:label="Text-1"
-       style="display:inline">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="414"
-         y="497.20001"
-         id="group.bedroom_mark_compact_ui"
-         inkscape:label="#mark-text"><tspan
-           sodipodi:role="line"
-           x="414"
-           y="497.20001"
-           id="tspan3212"
-           style="stroke-width:1.20000005">Mark</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:19.20000076px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20000005"
-         x="623.20001"
-         y="453.60001"
-         id="group.guest_room_compact_ui"
-         inkscape:label="#guest-text"><tspan
-           sodipodi:role="line"
-           x="623.20001"
-           y="453.60001"
-           id="tspan3212-8"
-           style="stroke-width:1.20000005">Guest</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer10"
-       inkscape:label="Devices-1"
-       style="display:inline">
-      <g
-         id="g4713-9-8"
-         transform="matrix(1.2,0,0,1.2,-316,570.4)"
-         inkscape:label="#g_bedroom_mark_temperature"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-3-4"
-           width="60"
-           height="26.666666"
-           x="654"
-           y="-170.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,630,-168)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-6-3" />
-        <text
-           inkscape:label="#sensor.bedroom_mark_temperature"
-           id="sensor.bedroom_mark_temperature"
-           y="-150"
-           x="656"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-2-4"
-             y="-150"
-             x="656"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         id="g4713-92-36-0-7-0-6"
-         transform="matrix(1.2,0,0,1.2,42,270.4)"
-         inkscape:label="#g_guest_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-9-9-6-1"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.guest_room_thermostat"
-           id="climate.guest_room_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-6-0-2-5"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-0-2-0-4"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)" />
-      </g>
-      <g
-         id="g4713-9-8-9"
-         transform="matrix(1.2,0,0,1.2,-151.2,568)"
-         inkscape:label="#g_guest_temperature"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-3-4-2"
-           width="60"
-           height="26.666666"
-           x="654"
-           y="-170.00002"
-           ry="9.5377026" />
-        <use
-           inkscape:label="#use50559"
-           transform="matrix(0.03125,0,0,0.03125,630,-168)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#thermometer-full"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           id="random03509-2-6-3-0" />
-        <text
-           inkscape:label="#sensor.guest_room_mean_temperature"
-           id="sensor.guest_room_mean_temperature"
-           y="-150"
-           x="656"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-2-4-8"
-             y="-150"
-             x="656"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-92"
-         transform="matrix(1.2,0,0,1.2,-255.69143,308.78743)"
-         inkscape:label="#g_bedroom_mark_lights">
-        <use
-           inkscape:label="#group.bedroom_mark_lights_icon"
-           transform="matrix(0.03125,0,0,0.03125,625.60682,126.84381)"
-           height="100%"
-           width="100%"
-           y="0"
-           x="0"
-           xlink:href="#lightbulb"
-           style="fill:#000000;fill-rule:nonzero;stroke:none"
-           id="group.lounge_lights2-6-7-6-6"
-           mask="none" />
-        <circle
-           inkscape:label="#group.bedroom_mark_lights"
-           r="16"
-           cy="140"
-           cx="642"
-           id="group.bedroom_mark_lights"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         style="display:inline;opacity:1"
-         id="g5956-6-1-3-3-2-2"
-         transform="matrix(1.2,0,0,1.2,-347.2,268)"
-         inkscape:label="#g_snapcast_client_bedroom_mark">
-        <use
-           id="random_media_player-9-7"
-           style="display:inline;fill:#000000;stroke:none"
-           xlink:href="#ic_speaker_24px"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.0375,0,0,0.0375,623.55,125.17519)"
-           inkscape:label="#media_player_icon" />
-        <circle
-           inkscape:label="#media_player.snapcast_client_bedroom_mark"
-           r="16"
-           cy="139.5752"
-           cx="642.75"
-           id="media_player.snapcast_client_bedroom_mark"
-           style="display:inline;opacity:0.6;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      </g>
-      <g
-         id="g4713-92-36-0-7-0"
-         transform="matrix(1.2,0,0,1.2,-124,272.4)"
-         inkscape:label="#g_bedroom_mark_thermostat"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1">
-        <rect
-           style="opacity:0.6;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.79056942;stroke-opacity:1"
-           id="rect2156-2-75-9-9-6"
-           width="60"
-           height="26.666666"
-           x="494"
-           y="108.00002"
-           ry="9.5377026" />
-        <text
-           inkscape:label="#climate.bedroom_mark_thermostat"
-           id="climate.bedroom_mark_thermostat"
-           y="128"
-           x="496"
-           style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           xml:space="preserve"><tspan
-             id="tspan933-6-7-62-6-0-2"
-             y="128"
-             x="496"
-             sodipodi:role="line"
-             style="fill:#000000;fill-opacity:1">99.9°C</tspan></text>
-        <use
-           id="use36622-0-2-0"
-           xlink:href="#symbol73567"
-           x="0"
-           y="0"
-           width="100%"
-           height="100%"
-           transform="matrix(0.83333333,0,0,0.83333333,475.66667,112)" />
       </g>
     </g>
     <rect
-       style="opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.07227802;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect3164"
-       width="57.599998"
-       height="107.20001"
-       x="550.40002"
+       ry="0"
        y="356.79999"
-       ry="0" />
+       x="550.40002"
+       height="107.20001"
+       width="57.599998"
+       id="rect3164"
+       style="opacity:1;fill:#ececec;fill-opacity:1;stroke:#000000;stroke-width:5.07227802;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>
