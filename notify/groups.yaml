@@ -53,6 +53,7 @@
   services:
     - service: html5_lianemotog
     - service: mobile_app_mark_moto_g5
+    - service: mobile_app_olga_huawei
 
 # All tablets
 - name: all_tablets
