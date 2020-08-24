@@ -1,25 +1,25 @@
 # Lights
-0a140000f40fa801010050:
+0a140000f40fa801020050:
   name: Dimmer Group 1
   device_class: light
 
-0a140016f3cf3501010080:
+0a140016f3cf3501020080:
   name: Lounge East
   device_class: light
 
-0a140022f3cf3502010080:
+0a140022f3cf3502020080:
   name: Lounge West
   device_class: light
 
-0a140023f3cf3503010080:
+0a140023f3cf3503020080:
   name: Lounge North
   device_class: light
 
-0a140024f3cf3504010080:
+0a140024f3cf3504020080:
   name: Dimmer Remote 4
   device_class: light
 
-0a140000f15c7201010080:
+0a140000f15c7201020080:
   name: bedroom_mark_lamp
   device_class: light
 
