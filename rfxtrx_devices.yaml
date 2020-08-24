@@ -1,0 +1,47 @@
+# Lights
+0a140000f40fa801010050:
+  name: Dimmer Group 1
+  device_class: light
+
+0a140016f3cf3501010080:
+  name: Lounge East
+  device_class: light
+
+0a140022f3cf3502010080:
+  name: Lounge West
+  device_class: light
+
+0a140023f3cf3503010080:
+  name: Lounge North
+  device_class: light
+
+0a140024f3cf3504010080:
+  name: Dimmer Remote 4
+  device_class: light
+
+0a140000f15c7201010080:
+  name: bedroom_mark_lamp
+  device_class: light
+
+
+# Switches
+0a140003f15c7202010080:
+  name: Switch Remote 2
+0a140006f15c7203010080:
+  name: Switch Remote 3
+0a140009f3cf3510020080:
+  name: Dimmer Group 0
+0a140002f40fa810020050:
+  name: Lounge Lights Off
+0a140001f40fa810050040:
+  name: RFX8100
+0a14000cf40fa910020040:
+  name: RFX9100
+0a140083f3cf3510020070:
+  name: Dimmer Remote Mode 0
+0a140084f3cf3510030070:
+  name: Dimmer Remote Mode 1
+0a140087f3cf3510040070:
+  name: Dimmer Remote Mode 2
+0a140086f3cf3510050070:
+  name: Dimmer Remote Mode 3

@@ -175,7 +175,9 @@ zwave:
 
 rfxtrx:
   device: /dev/ttyUSB22
-  debug: False
+  debug: false
+  devices: !include rfxtrx_devices.yaml
+
 
 device_tracker: !include device_tracker.yaml
 
