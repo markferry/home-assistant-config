@@ -11,8 +11,8 @@ group:
   g_debug_hall_heating:
     entities:
       - climate.hall_thermostat
-      - climate.hall_east_comfort_setpoint
-      - climate.hall_west_comfort_setpoint
+      - climate.hall_east_mode
+      - climate.hall_west_mode
       - switch.hall_demand
 
   g_debug_hall_temperature:
@@ -27,8 +27,8 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_hall_thermostat:
     entities:
-      - climate.hall_east_comfort_setpoint
-      - climate.hall_west_comfort_setpoint
+      - climate.hall_east_mode
+      - climate.hall_west_mode
 
 climate:
   - name: hall_thermostat

@@ -11,7 +11,7 @@ group:
   g_debug_ballroom_heating:
     entities:
       - climate.ballroom_thermostat
-      - climate.ballroom_east_comfort_setpoint
+      - climate.ballroom_east_mode
       - switch.ballroom_demand
 
   g_debug_ballroom_temperature:
@@ -24,7 +24,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_ballroom_thermostat:
     entities:
-      - climate.ballroom_east_comfort_setpoint
+      - climate.ballroom_east_mode
 
 climate:
   - name: ballroom_thermostat

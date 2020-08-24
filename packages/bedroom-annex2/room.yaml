@@ -6,7 +6,7 @@ homeassistant:
   customize:
     sensor.bedroom_annex2_battery:
       icon: mdi:battery
-    climate.bedroom_annex2_comfort_setpoint:
+    climate.bedroom_annex2_mode:
       min_temp: 5
       max_temp: 25
 
@@ -21,7 +21,7 @@ group:
 
   bedroom_annex2_setpoints:
     entities:
-    - climate.bedroom_annex2_comfort_setpoint
+    - climate.bedroom_annex2_mode
 
   bedroom_annex2_lights:
 

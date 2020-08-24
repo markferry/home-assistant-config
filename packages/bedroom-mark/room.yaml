@@ -31,8 +31,8 @@ group:
   bedroom_mark_setpoints:
     name: "Mark's Bedroom Setpoints"
     entities:
-    - climate.bedroom_mark_south_comfort_setpoint
-    - climate.bedroom_mark_north_comfort_setpoint
+    - climate.bedroom_mark_south_mode
+    - climate.bedroom_mark_north_mode
 
   bedroom_mark_lights:
     name: "Mark's Bedroom Lights"

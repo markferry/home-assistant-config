@@ -14,7 +14,7 @@ homeassistant:
       friendly_name: Ballroom Disco Light
       entity_picture: /local/wb-icons/ext_mirrorball.png
 
-    climate.ballroom_east_comfort_setpoint:
+    climate.ballroom_east_mode:
       min_temp: 5
       max_temp: 25
 
@@ -35,7 +35,7 @@ group:
   ballroom_setpoints:
     name: Ballroom Setpoints
     entities:
-    - climate.ballroom_east_comfort_setpoint
+    - climate.ballroom_east_mode
 
   ballroom_lights:
     name: Ballroom Lights

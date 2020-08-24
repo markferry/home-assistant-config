@@ -13,7 +13,7 @@ homeassistant:
       friendly_name: Lounge East Battery
       icon: mdi:battery
 
-    climate.lounge_east_comfort_setpoint:
+    climate.lounge_east_mode:
       min_temp: 5
       max_temp: 25
 
@@ -30,7 +30,7 @@ group:
   lounge_setpoints:
     name: Lounge Setpoints
     entities:
-    - climate.lounge_east_comfort_setpoint
+    - climate.lounge_east_mode
 
   lounge_lights:
     entities:

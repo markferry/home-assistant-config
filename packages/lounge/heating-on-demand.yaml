@@ -11,7 +11,7 @@ group:
   g_debug_lounge_heating:
     entities:
       - climate.lounge_thermostat
-      - climate.lounge_east_comfort_setpoint
+      - climate.lounge_east_mode
       - switch.lounge_demand
 
   g_debug_lounge_temperature:
@@ -24,7 +24,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_lounge_thermostat:
     entities:
-      - climate.lounge_east_comfort_setpoint
+      - climate.lounge_east_mode
 
 climate:
   - name: lounge_thermostat

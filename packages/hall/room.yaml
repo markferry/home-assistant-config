@@ -27,13 +27,13 @@ homeassistant:
     climate.annex_hall_thermostat:
       friendly_name: Annex Hall
 
-    climate.hall_west_comfort_setpoint:
+    climate.hall_west_mode:
       min_temp: 5
       max_temp: 25
-    climate.hall_east_comfort_setpoint:
+    climate.hall_east_mode:
       min_temp: 5
       max_temp: 25
-    climate.annex_hall_comfort_setpoint:
+    climate.annex_hall_mode:
       min_temp: 5
       max_temp: 25
 
@@ -53,9 +53,9 @@ group:
   hall_setpoints:
     name: Hall Setpoints
     entities:
-    - climate.hall_west_comfort_setpoint
-    - climate.hall_east_comfort_setpoint
-    - climate.annex_hall_comfort_setpoint
+    - climate.hall_west_mode
+    - climate.hall_east_mode
+    - climate.annex_hall_mode
 
   hall_lights:
     name: Hall Lights

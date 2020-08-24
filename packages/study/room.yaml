@@ -9,10 +9,10 @@ homeassistant:
     sensor.study_west_battery:
       icon: mdi:battery
 
-    climate.study_east_comfort_setpoint:
+    climate.study_east_mode:
       min_temp: 5
       max_temp: 25
-    climate.study_west_comfort_setpoint:
+    climate.study_west_mode:
       min_temp: 5
       max_temp: 25
 
@@ -28,8 +28,8 @@ group:
   study_setpoints:
     name: Study Setpoints
     entities:
-    - climate.study_east_comfort_setpoint
-    - climate.study_west_comfort_setpoint
+    - climate.study_east_mode
+    - climate.study_west_mode
 
   study_lights:
     name: Study Lights
