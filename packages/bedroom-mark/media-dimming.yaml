@@ -5,7 +5,6 @@
 group:
   g_bedroom_mark_media_dimming:
     name: Media Auto Dim
-    control: hidden
     entities:
       - input_boolean.bedroom_mark_dim_for_movie
       - input_boolean.bedroom_mark_dim_for_tv

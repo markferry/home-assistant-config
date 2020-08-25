@@ -11,7 +11,7 @@ group:
   g_debug_library_heating:
     entities:
       - climate.library_thermostat
-      - climate.library_comfort_setpoint
+      - climate.library_mode
       - switch.library_demand
 
   g_debug_library_temperature:
@@ -23,9 +23,8 @@ group:
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_library_thermostat:
-    view: false
     entities:
-      - climate.library_comfort_setpoint
+      - climate.library_mode
 
 climate:
   - name: library_thermostat

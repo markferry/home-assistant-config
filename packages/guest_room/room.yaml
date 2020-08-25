@@ -13,7 +13,7 @@ homeassistant:
       friendly_name: "Guest Room Battery"
       icon: mdi:battery
 
-    climate.guest_room_heat:
+    climate.guest_room_mode:
       friendly_name: Guest Room
       min_temp: 8
       max_temp: 25
@@ -22,7 +22,6 @@ group:
   # floorplan
   guest_room_compact_ui:
     name: Guest Room
-    view: false
     icon: mdi:hotel
     entities:
     - input_select.guest_room_mode
@@ -31,13 +30,11 @@ group:
 
   guest_room_setpoints:
     name: Guest Room Setpoints
-    view: false
     entities:
-    - climate.guest_room_heat
+    - climate.guest_room_mode
 
   guest_room_lights:
     name: Guest Room Lights
-    view: false
 
 scene:
   - name: guest_room_off

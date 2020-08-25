@@ -2,7 +2,6 @@ group:
   g_kitchen_settings_ui:
     name: Settings
     icon: mdi:settings
-    control: hidden
     entities:
       - input_number.kitchen_temperature_off
       - input_number.kitchen_temperature_cosy

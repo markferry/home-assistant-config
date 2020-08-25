@@ -14,7 +14,7 @@ homeassistant:
       friendly_name: Ballroom Disco Light
       entity_picture: /local/wb-icons/ext_mirrorball.png
 
-    climate.ballroom_east_comfort_setpoint:
+    climate.ballroom_east_mode:
       min_temp: 5
       max_temp: 25
 
@@ -26,9 +26,7 @@ group:
   # floorplan
   ballroom_compact_ui:
     name: Ballroom
-    view: false
     icon: mdi:projector
-    control: hidden
     entities:
     - input_select.ballroom_mode
     - climate.ballroom_thermostat
@@ -36,18 +34,15 @@ group:
 
   ballroom_setpoints:
     name: Ballroom Setpoints
-    view: false
     entities:
-    - climate.ballroom_east_comfort_setpoint
+    - climate.ballroom_east_mode
 
   ballroom_lights:
     name: Ballroom Lights
     icon: mdi:lightbulb-on
-    view: false
 
   ballroom_party_lights:
     name: Ballroom Party Lights
-    view: false
     icon: mdi:lightbulb-on
     entities:
     - switch.greenwave_powernode_62_switch

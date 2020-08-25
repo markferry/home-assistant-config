@@ -2,7 +2,6 @@ group:
   g_library_settings_ui:
     name: Settings
     icon: mdi:settings
-    control: hidden
     entities:
       - input_number.library_temperature_off
       - input_number.library_temperature_cosy

@@ -28,7 +28,6 @@ rfx_lights:
 
 settings:
   name: Settings
-  view: true
   icon: mdi:settings
   entities:
   - group.temperatures
@@ -49,7 +48,6 @@ settings:
 #
 main_heating:
   name: Main Heating
-  view: false
   entities:
   - sensor.main_heating_thermostat_temperature
   - climate.main_heating_thermostat_heating_1
@@ -57,7 +55,6 @@ main_heating:
 
 main_heating_override:
   name: Main Heating Override
-  view: false
   entities:
   - switch.main_heating_relay_switch
   - switch.main_heating_relay_boiler
@@ -69,7 +66,6 @@ main_heating_override:
 
 main_heating_demand:
   name: Main Heating Demand
-  view: false
   entities:
   - switch.kitchen_demand
   - switch.lounge_demand
@@ -84,7 +80,6 @@ main_heating_demand:
 
 annex_heating:
   name: Annex Heating
-  view: false
   entities:
   - sensor.annex_heating_thermostat_temperature
   - climate.annex_heating_thermostat_heating_1
@@ -92,7 +87,6 @@ annex_heating:
 
 annex_heating_override:
   name: Annex Heating Override
-  view: false
   entities:
   - switch.annex_heating_relay_switch
   - automation.annex_thermostat_demand_on
@@ -100,7 +94,6 @@ annex_heating_override:
 
 annex_heating_demand:
   name: Annex Heating Demand
-  view: false
   entities:
   - switch.study_demand
   - switch.annex_hall_demand
@@ -130,7 +123,6 @@ user_automations:
 #
 batteries:
   name: Battery Levels
-  view: false
   entities:
   - sensor.main_heating_thermostat_battery
   - sensor.annex_heating_thermostat_battery
@@ -151,7 +143,6 @@ batteries:
 
 dash_buttons:
   name: Amazon Dash Buttons
-  view: false
   entities:
   - switch.table_tennis
   - switch.party_mode
@@ -163,7 +154,6 @@ dash_buttons:
 
 media_players:
   name: Media Players
-  view: false
   entities:
     - media_player.study
     - media_player.lounge
@@ -177,7 +167,6 @@ media_players:
 
 temperatures:
   name: Temperatures
-  view: false
   entities:
   - sensor.main_heating_thermostat_temperature
   - sensor.annex_heating_thermostat_temperature
@@ -198,31 +187,29 @@ temperatures:
 
 thermostat_devices:
   name: Thermostat Devices
-  view: false
   entities:
-  - climate.annex_hall_comfort_setpoint
-  - climate.ballroom_east_comfort_setpoint
-  - climate.bedroom_mark_south_comfort_setpoint
-  - climate.bedroom_mark_north_comfort_setpoint
-  - climate.hall_east_comfort_setpoint
-  - climate.hall_west_comfort_setpoint
+  - climate.annex_hall_mode
+  - climate.ballroom_east_mode
+  - climate.bedroom_mark_south_mode
+  - climate.bedroom_mark_north_mode
+  - climate.hall_east_mode
+  - climate.hall_west_mode
   - climate.main_heating_thermostat_heating_1
   - climate.annex_heating_thermostat_heating_1
-  - climate.kitchen_comfort_setpoint
-  - climate.library_comfort_setpoint
-  - climate.lounge_east_comfort_setpoint
-  - climate.study_east_comfort_setpoint
-  - climate.study_west_comfort_setpoint
-  - climate.guest_room_heat
+  - climate.kitchen_mode
+  - climate.library_mode
+  - climate.lounge_east_mode
+  - climate.study_east_mode
+  - climate.study_west_mode
+  - climate.guest_room_mode
   - climate.danfoss_z_thermostat_014g0013_heating_1
-  - climate.bedroom_annex2_comfort_setpoint
+  - climate.bedroom_annex2_mode
   - climate.bedroom_main2_heat
   - climate.bedroom_main3_heat
 
 # Front-end thermostats
 thermostats:
   name: Thermostats
-  view: false
   entities:
   - climate.annex_hall_thermostat
   - climate.ballroom_east_thermostat
@@ -239,7 +226,6 @@ thermostats:
 
 virtual_appliances:
   name: Virtual Appliances
-  view: false
   entities:
   - input_boolean.washing_machine_debouncer
   - binary_sensor.washing_machine
@@ -251,11 +237,9 @@ virtual_appliances:
 #
 people:
   name: Where is Everyone?
-  view: false
   entities: !include people/whalebarn.yaml
 
 barnacles:
   name: "Who's Visiting?"
-  view: false
   entities: !include people/barnacles.yaml
 

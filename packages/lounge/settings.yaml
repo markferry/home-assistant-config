@@ -2,7 +2,6 @@ group:
   g_lounge_settings_ui:
     name: Settings
     icon: mdi:settings
-    control: hidden
     entities:
       - input_number.lounge_temperature_off
       - input_number.lounge_temperature_cosy

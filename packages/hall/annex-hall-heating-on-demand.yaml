@@ -11,7 +11,7 @@ group:
   g_debug_annex_hall_heating:
     entities:
       - climate.annex_hall_thermostat
-      - climate.annex_hall_comfort_setpoint
+      - climate.annex_hall_mode
       - switch.annex_hall_demand
 
   g_debug_annex_hall_temperature:
@@ -23,9 +23,8 @@ group:
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_annex_hall_thermostat:
-    view: false
     entities:
-      - climate.annex_hall_comfort_setpoint
+      - climate.annex_hall_mode
 
 climate:
   - name: annex_hall_thermostat

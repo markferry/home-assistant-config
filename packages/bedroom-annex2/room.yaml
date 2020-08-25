@@ -6,7 +6,7 @@ homeassistant:
   customize:
     sensor.bedroom_annex2_battery:
       icon: mdi:battery
-    climate.bedroom_annex2_comfort_setpoint:
+    climate.bedroom_annex2_mode:
       min_temp: 5
       max_temp: 25
 
@@ -14,19 +14,16 @@ group:
   # floorplan
   bedroom_annex2_compact_ui:
     name: "Monica's Bedroom"
-    view: false
     entities:
     - input_select.bedroom_annex2_mode
     - climate.bedroom_annex2_thermostat
     - group.bedroom_annex2_lights
 
   bedroom_annex2_setpoints:
-    view: false
     entities:
-    - climate.bedroom_annex2_comfort_setpoint
+    - climate.bedroom_annex2_mode
 
   bedroom_annex2_lights:
-    view: false
 
 
 scene:

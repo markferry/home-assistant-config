@@ -22,7 +22,6 @@ group:
   # floorplan
   bedroom_mark_compact_ui:
     name: "Mark's Bedroom"
-    view: false
     entities:
     - input_select.bedroom_mark_mode
     - climate.bedroom_mark_thermostat
@@ -31,25 +30,21 @@ group:
 
   bedroom_mark_setpoints:
     name: "Mark's Bedroom Setpoints"
-    view: false
     entities:
-    - climate.bedroom_mark_south_comfort_setpoint
-    - climate.bedroom_mark_north_comfort_setpoint
+    - climate.bedroom_mark_south_mode
+    - climate.bedroom_mark_north_mode
 
   bedroom_mark_lights:
     name: "Mark's Bedroom Lights"
-    view: false
     entities:
     - light.bedroom_mark_overhead_level
     - light.bedroom_mark_lamp
 
   bedroom_mark_appliances:
     name: "Mark's Bedroom Appliances"
-    view: false
     entities:
 
   bedroom_mark_media_players:
-    view: false
     entities:
     - media_player.bedroom_mark
 

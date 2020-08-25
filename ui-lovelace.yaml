@@ -507,22 +507,22 @@ views:
         title: Thermostat Devices
         show_header_toggle: false
         entities:
-          - climate.annex_hall_comfort_setpoint
-          - climate.ballroom_east_comfort_setpoint
-          - climate.bedroom_mark_south_comfort_setpoint
-          - climate.bedroom_mark_north_comfort_setpoint
-          - climate.hall_east_comfort_setpoint
-          - climate.hall_west_comfort_setpoint
+          - climate.annex_hall_mode
+          - climate.ballroom_east_mode
+          - climate.bedroom_mark_south_mode
+          - climate.bedroom_mark_north_mode
+          - climate.hall_east_mode
+          - climate.hall_west_mode
           - climate.main_heating_thermostat_heating_1
           - climate.annex_heating_thermostat_heating_1
-          - climate.kitchen_comfort_setpoint
-          - climate.library_comfort_setpoint
-          - climate.lounge_east_comfort_setpoint
-          - climate.study_east_comfort_setpoint
-          - climate.study_west_comfort_setpoint
-          - climate.guest_room_heat
+          - climate.kitchen_mode
+          - climate.library_mode
+          - climate.lounge_east_mode
+          - climate.study_east_mode
+          - climate.study_west_mode
+          - climate.guest_room_mode
           - climate.danfoss_z_thermostat_014g0013_heating_1
-          - climate.bedroom_annex2_comfort_setpoint
+          - climate.bedroom_annex2_mode
       - type: entities
         title: Battery Levels
         show_header_toggle: false

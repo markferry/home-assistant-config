@@ -11,7 +11,7 @@ group:
   g_debug_kitchen_heating:
     entities:
       - climate.kitchen_thermostat
-      - climate.kitchen_comfort_setpoint
+      - climate.kitchen_mode
       - switch.kitchen_demand
 
   g_debug_kitchen_temperature:
@@ -23,9 +23,8 @@ group:
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_kitchen_thermostat:
-    view: false
     entities:
-      - climate.kitchen_comfort_setpoint
+      - climate.kitchen_mode
 
 climate:
   - name: kitchen_thermostat

@@ -7,10 +7,10 @@ homeassistant:
       icon: mdi:thermometer
       unit_of_measurement: "\xB0C"
 
-    climate.bedroom_mark_south_comfort_setpoint:
+    climate.bedroom_mark_south_mode:
       min_temp: 5
       max_temp: 25
-    climate.bedroom_mark_north_comfort_setpoint:
+    climate.bedroom_mark_north_mode:
       min_temp: 5
       max_temp: 25
 
@@ -19,8 +19,8 @@ group:
   g_debug_bedroom_mark_heating:
     entities:
       - climate.bedroom_mark_thermostat
-      - climate.bedroom_mark_south_comfort_setpoint
-      - climate.bedroom_mark_north_comfort_setpoint
+      - climate.bedroom_mark_south_mode
+      - climate.bedroom_mark_north_mode
       - switch.bedroom_mark_demand
 
   g_debug_bedroom_mark_temperature:
@@ -34,10 +34,9 @@ group:
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_mark_thermostat:
-    view: false
     entities:
-      - climate.bedroom_mark_south_comfort_setpoint
-      - climate.bedroom_mark_north_comfort_setpoint
+      - climate.bedroom_mark_south_mode
+      - climate.bedroom_mark_north_mode
 
 climate:
   - name: bedroom_mark_thermostat

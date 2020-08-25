@@ -111,15 +111,6 @@ media_player:
     host: media
 
 group:
-  g_multiroom_audio_ui:
-    name: Multiroom Audio
-    view: true
-    icon: mdi:music
-    entities:
-      - media_player.mpd
-      - group.snapclient_volumes
-      - group.snapclients
-
   snapclients:
     name: Snapcast Clients
     entities:

@@ -113,42 +113,42 @@
   action:
     - service: climate.set_temperature
       data_template:
-        entity_id: '{{trigger.entity_id.replace("_thermostat", "_comfort_setpoint")}}'
+        entity_id: '{{trigger.entity_id.replace("_thermostat", "_mode")}}'
         temperature: '{{ trigger.to_state.attributes.temperature }}'
 
 # Map real setpoint to virtual setpoint
 #- alias: "Set Virtual Thermostat"
 #  trigger:
 #    - platform: state
-#      entity_id: climate.study_west_comfort_setpoint
+#      entity_id: climate.study_west_mode
 #    - platform: state
-#      entity_id: climate.study_east_comfort_setpoint
+#      entity_id: climate.study_east_mode
 #    - platform: state
-#      entity_id: climate.lounge_east_comfort_setpoint
+#      entity_id: climate.lounge_east_mode
 #    - platform: state
-#      entity_id: climate.bedroom_mark_north_comfort_setpoint
+#      entity_id: climate.bedroom_mark_north_mode
 #    - platform: state
-#      entity_id: climate.bedroom_mark_south_comfort_setpoint
+#      entity_id: climate.bedroom_mark_south_mode
 #    - platform: state
-#      entity_id: climate.kitchen_comfort_setpoint
+#      entity_id: climate.kitchen_mode
 #    - platform: state
-#      entity_id: climate.ballroom_east_comfort_setpoint
+#      entity_id: climate.ballroom_east_mode
 #    - platform: state
-#      entity_id: climate.library_comfort_setpoint
+#      entity_id: climate.library_mode
 #    - platform: state
-#      entity_id: climate.hall_west_comfort_setpoint
+#      entity_id: climate.hall_west_mode
 #    - platform: state
-#      entity_id: climate.hall_east_comfort_setpoint
+#      entity_id: climate.hall_east_mode
 #    - platform: state
-#      entity_id: climate.annex_hall_comfort_setpoint
+#      entity_id: climate.annex_hall_mode
 #    - platform: state
-#      entity_id: climate.bedroom_annex2_comfort_setpoint
+#      entity_id: climate.bedroom_annex2_mode
 #    - platform: state
-#      entity_id: climate.guest_room_heat
+#      entity_id: climate.guest_room_mode
 #  action:
 #    #- service: climate.set_temperature
 #    #  data_template:
-#    #    entity_id: '{{trigger.entity_id.replace("_comfort_setpoint","_thermostat")}}'
+#    #    entity_id: '{{trigger.entity_id.replace("_mode","_thermostat")}}'
 #    #    temperature: '{{ trigger.to_state.attributes.temperature }}'
 #    - service: notify.automations
 #      data:
