@@ -201,7 +201,7 @@ thermostat_devices:
   - climate.lounge_east_mode
   - climate.study_east_mode
   - climate.study_west_mode
-  - climate.guest_room_heat
+  - climate.guest_room_mode
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_annex2_mode
   - climate.bedroom_main2_heat

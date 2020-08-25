@@ -144,7 +144,7 @@
 #    - platform: state
 #      entity_id: climate.bedroom_annex2_mode
 #    - platform: state
-#      entity_id: climate.guest_room_heat
+#      entity_id: climate.guest_room_mode
 #  action:
 #    #- service: climate.set_temperature
 #    #  data_template:
