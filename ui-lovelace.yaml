@@ -524,26 +524,6 @@ views:
           - climate.danfoss_z_thermostat_014g0013_heating_1
           - climate.bedroom_annex2_mode
       - type: entities
-        title: Battery Levels
-        show_header_toggle: false
-        entities:
-          - sensor.main_heating_thermostat_battery
-          - sensor.annex_heating_thermostat_battery
-          - sensor.hall_multisensor_battery
-          - sensor.hall_west_battery
-          - sensor.hall_east_battery
-          - sensor.study_east_battery
-          - sensor.study_west_battery
-          - sensor.library_battery
-          - sensor.bedroom_mark_south_battery
-          - sensor.bedroom_mark_north_battery
-          - sensor.lounge_east_battery
-          - sensor.ballroom_east_battery
-          - sensor.kitchen_battery
-          - sensor.annex_hall_battery
-          - sensor.bedroom_annex2_battery
-          - sensor.guest_room_battery
-      - type: entities
         title: People
         show_header_toggle: false
         entities:
@@ -579,26 +559,32 @@ views:
         title: RFX Switches
         show_header_toggle: true
         entities:
-          - switch.0a140003f15c7202010080
-          - switch.0a140006f15c7203010080
-          - switch.0a140009f3cf3510020080
-          - switch.0a140002f40fa810020050
-          - switch.0a140001f40fa810050040
-          - switch.0a14000cf40fa910020040
-          - switch.0a140083f3cf3510020070
-          - switch.0a140084f3cf3510030070
-          - switch.0a140087f3cf3510040070
-          - switch.0a140086f3cf3510050070
+          - switch.lightwaverf_siemens_f15c72_1
+          - switch.lightwaverf_siemens_f15c72_2
+          - switch.lightwaverf_siemens_f15c72_3
+          - switch.lightwaverf_siemens_f3cf35_1
+          - switch.lightwaverf_siemens_f3cf35_2
+          - switch.lightwaverf_siemens_f3cf35_3
+          - switch.lightwaverf_siemens_f3cf35_4
+          - switch.lightwaverf_siemens_f3cf35_16
+          - switch.lightwaverf_siemens_f40fa8_1
+          - switch.lightwaverf_siemens_f40fa8_16
+          - switch.lightwaverf_siemens_f40fa9_16
       - type: entities
-        title: RFX Lights
+        title: RFX Binary Sensors
         show_header_toggle: true
         entities:
-          - switch.0a140000f40fa801010050
-          - switch.0a140016f3cf3501010080
-          - switch.0a140022f3cf3502010080
-          - switch.0a140023f3cf3503010080
-          - switch.0a140024f3cf3504010080
-          - switch.0a140000f15c7201010080
+          - binary_sensor.lightwaverf_siemens_f15c72_1
+          - binary_sensor.lightwaverf_siemens_f15c72_2
+          - binary_sensor.lightwaverf_siemens_f15c72_3
+          - binary_sensor.lightwaverf_siemens_f3cf35_1
+          - binary_sensor.lightwaverf_siemens_f3cf35_2
+          - binary_sensor.lightwaverf_siemens_f3cf35_3
+          - binary_sensor.lightwaverf_siemens_f3cf35_4
+          - binary_sensor.lightwaverf_siemens_f3cf35_16
+          - binary_sensor.lightwaverf_siemens_f40fa8_1
+          - binary_sensor.lightwaverf_siemens_f40fa8_16
+          - binary_sensor.lightwaverf_siemens_f40fa9_16
       - type: entities
         title: Amazon Dash Buttons
         show_header_toggle: false
