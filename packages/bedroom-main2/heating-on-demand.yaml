@@ -10,7 +10,7 @@ group:
   g_debug_bedroom_main2_heating:
     entities:
       - climate.bedroom_main2_thermostat
-      - climate.bedroom_main2_heat
+      - climate.bedroom_main2_mode
       - switch.bedroom_main2_demand
 
   g_debug_bedroom_main2_temperature:
@@ -23,7 +23,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_main2_thermostat:
     entities:
-      - climate.bedroom_main2_heat
+      - climate.bedroom_main2_mode
 
 climate:
   - name: bedroom_main2_thermostat
@@ -83,10 +83,9 @@ automation:
   - alias: "bedroom_main2_update_setpoint"
     trigger:
       - platform: state
-        entity_id: climate.bedroom_main2_heat
+        entity_id: climate.bedroom_main2_mode
     action:
       - service: climate.set_temperature
         data_template:
           entity_id: climate.bedroom_main2_thermostat
           temperature: '{{ trigger.to_state.attributes.temperature }}'
-

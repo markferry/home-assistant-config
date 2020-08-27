@@ -6,7 +6,7 @@ homeassistant:
   customize:
     sensor.bedroom_main3_battery:
       icon: mdi:battery
-    climate.bedroom_main3_heat:
+    climate.bedroom_main3_mode:
       min_temp: 8
       max_temp: 25
 
@@ -21,7 +21,7 @@ group:
 
   bedroom_main3_setpoints:
     entities:
-    - climate.bedroom_main3_heat
+    - climate.bedroom_main3_mode
 
   bedroom_main3_lights:
 
