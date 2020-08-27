@@ -91,6 +91,19 @@ sensor:
     baseoid: 1.3.6.1.4.1.17373.3.2.1.14.1
     unit_of_measurement: "\xB0C"
 
+  - platform: nut
+    name: Eaton UPS
+    host: cyclops
+    port: 3493
+    alias: eaton_ups
+    username: pixie
+    password: !secret nut_pixie
+    resources:
+      - ups.status
+      - ups.load
+      - battery.charge
+      - battery.runtime
+
 automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
 

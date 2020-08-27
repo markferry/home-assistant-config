@@ -202,7 +202,7 @@ group: !include groups.yaml
 
 media_player: !include_dir_merge_list media_players
 light: !include_dir_merge_list lights
-sensor: !include_dir_merge_list sensors
+#sensor: !include_dir_merge_list sensors
 #binary_sensor: !include_dir_merge_list binary_sensors
 switch: !include_dir_merge_list switches
 #climate: !include_dir_merge_list thermostats
