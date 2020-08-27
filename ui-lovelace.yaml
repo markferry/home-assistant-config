@@ -511,6 +511,8 @@ views:
           - climate.ballroom_east_mode
           - climate.bedroom_mark_south_mode
           - climate.bedroom_mark_north_mode
+          - climate.bedroom_main2_mode
+          - climate.bedroom_main3_mode
           - climate.hall_east_mode
           - climate.hall_west_mode
           - climate.main_heating_thermostat_heating_1

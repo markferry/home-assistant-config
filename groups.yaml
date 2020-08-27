@@ -204,8 +204,8 @@ thermostat_devices:
   - climate.guest_room_mode
   - climate.danfoss_z_thermostat_014g0013_heating_1
   - climate.bedroom_annex2_mode
-  - climate.bedroom_main2_heat
-  - climate.bedroom_main3_heat
+  - climate.bedroom_main2_mode
+  - climate.bedroom_main3_mode
 
 # Front-end thermostats
 thermostats:

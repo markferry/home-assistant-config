@@ -96,6 +96,13 @@ sensor:
         unit_of_measurement: '%'
         entity_id: zwave.bedroom_mark_north
 
+
+light:
+  - platform: switch
+    name: bedroom_mark_lamp
+    entity_id: switch.lightwaverf_siemens_f15c72_1
+
+
 switch:
   # Now for supporting mock thermostats only.
   #  Remove when mock thermostats move to mqtt hvac
