@@ -176,6 +176,7 @@ zwave:
 rfxtrx:
   device: /dev/ttyUSB22
   debug: false
+  automatic_add: true
   devices: !include rfxtrx_devices.yaml
 
 

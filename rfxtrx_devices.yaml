@@ -1,47 +1,74 @@
-# Lights
-0a140000f40fa801020050:
+# Siemens f3cf35
+#  Hand-held group remote
+#  Dip-switch supporting four dimmer channels
+#  Four-mode scene selector
+#
+0a140016f3cf3501100080:
+  # entity: "light.lightwaverf_siemens_f3cf35_1"
+  # name: light.lounge_east
+  device_class: light
+
+0a140022f3cf3502100080:
+  # entity: "light.lightwaverf_siemens_f3cf35_2"
+  # name: light.lounge_west
+  device_class: light
+
+0a140023f3cf3503100080:
+  # entity: "light.lightwaverf_siemens_f3cf35_3"
+  # name: light.lounge_north
+  device_class: light
+
+0a140024f3cf3504100080:
+  # entity: "light.lightwaverf_siemens_f3cf35_4"
+  # name: unused
+  device_class: light
+
+0a140009f3cf3510020080:
+  # entity: "lightwaverf_siemens_f3cf35_16"
+  # name: switch.dimmer_group_0
+
+0a140083f3cf3510020070:
+  # name: switch.dimmer_remote_mode_1
+0a140084f3cf3510030070:
+  # name: switch.dimmer_remote_mode_2
+0a140087f3cf3510040070:
+  # name: switch.dimmer_remote_mode_3
+0a140086f3cf3510050070:
+  # name: switch.dimmer_remote_mode_4
+
+
+# Siemens f15c72
+#
+0a140000f15c7201010080:
+  # entity: "lightwaverf_siemens_f15c72_1"
+  # name: light.bedroom_mark_lamp
+  device_class: light
+
+0a140003f15c7202010080:
+  # name: switch.mark_remote_2
+
+0a140006f15c7203010080:
+  # name: switch.mark_remote_3
+
+
+# Siemens f40fa8, f40fa9
+#  Wall-mounted group remote
+#  Single on/off switch
+#  Four-mode scene selector
+#
+0a140000f40fa801100050:
+  # entity: "switch.lightwaverf_siemens_f40fa8_1"
   # name: Dimmer Group 1
   device_class: light
 
-0a140016f3cf3501020080:
-  # name: Lounge East
-  device_class: light
+0a140000f40fa810020050:
+  # name: light.lounge_lights_off
 
-0a140022f3cf3502020080:
-  # name: Lounge West
-  device_class: light
-
-0a140023f3cf3503020080:
-  # name: Lounge North
-  device_class: light
-
-0a140024f3cf3504020080:
-  # name: Dimmer Remote 4
-  device_class: light
-
-0a140000f15c7201020080:
-  # name: bedroom_mark_lamp
-  device_class: light
-
-
-# Switches
-0a140003f15c7202010080:
-  # name: Switch Remote 2
-0a140006f15c7203010080:
-  # name: Switch Remote 3
-0a140009f3cf3510020080:
-  # name: Dimmer Group 0
-0a140002f40fa810020050:
-  # name: Lounge Lights Off
 0a140001f40fa810050040:
+  # entity: "light.lightwaverf_siemens_f40fa8_16"
   # name: RFX8100
+
 0a14000cf40fa910020040:
+  # entity: "light.lightwaverf_siemens_f40fa9_16"
   # name: RFX9100
-0a140083f3cf3510020070:
-  # name: Dimmer Remote Mode 0
-0a140084f3cf3510030070:
-  # name: Dimmer Remote Mode 1
-0a140087f3cf3510040070:
-  # name: Dimmer Remote Mode 2
-0a140086f3cf3510050070:
-  # name: Dimmer Remote Mode 3
+
