@@ -70,23 +70,17 @@ views:
             entity: input_select.bedroom_annex2_mode
             image: /local/wb-icons/wb_monica.png
 
-  - title: Bedrooms
-    icon: mdi:hotel
+  - title: "Mark's Bedroom"
+    icon: mdi:bed
+    visible:
+      #  admin
+      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
+    badges:
+      - name: "Current Temperature"
+        entity: sensor.bedroom_mark_temperature
     cards:
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: Guest Room
-            show_header_toggle: false
-            entities:
-              - name: Mode
-                entity: input_select.guest_room_mode
-              - name: Settings
-                entity: group.g_guest_room_settings_ui
-          - name: Guest Room
-            type: thermostat
-            entity: climate.guest_room_thermostat
-
       - type: vertical-stack
         cards:
           - type: entities
@@ -109,6 +103,17 @@ views:
             type: media-control
             entity: media_player.bedroom_mark
 
+  - title: "Olga's Bedroom"
+    icon: mdi:bed
+    visible:
+      #  admin
+      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  olga
+      - user: "62dae43fb98b4c86b78f485175cc4970"
+    badges:
+      - name: "Current Temperature"
+        entity: sensor.bedroom_main2_temperature
+    cards:
       - type: vertical-stack
         cards:
           - type: entities
@@ -123,6 +128,17 @@ views:
             type: thermostat
             entity: climate.bedroom_main2_thermostat
 
+  - title: "Elle's Bedroom"
+    icon: mdi:bed
+    visible:
+      #  admin
+      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  elle
+      - user: "855e6adfd173413ab52d5f1243c5ad39"
+    badges:
+      - name: "Current Temperature"
+        entity: sensor.bedroom_main3_temperature
+    cards:
       - type: vertical-stack
         cards:
           - type: entities
@@ -137,6 +153,27 @@ views:
             type: thermostat
             entity: climate.bedroom_main3_thermostat
 
+  - title: "Anne's Bedroom"
+    icon: mdi:bed
+    visible:
+      #  admin
+      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  anne
+      - user: "a3d54febf3f143edb7541ff90385a573"
+    badges:
+    cards:
+
+  - title: "Monica's Bedroom"
+    icon: mdi:bed
+    visible:
+      #  admin
+      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  monica
+      - user: "392c427af26a407bb4164e58379861bb"
+    badges:
+      - name: "Current Temperature"
+        entity: sensor.bedroom_annex2_temperature
+    cards:
       - type: vertical-stack
         cards:
           - type: entities
@@ -310,6 +347,25 @@ views:
         type: media-control
         entity: media_player.ballroom_amplifier
 
+  - title: Guest Room
+    icon: mdi:bed-empty
+    visible:
+      - user:
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Guest Room
+            show_header_toggle: false
+            entities:
+              - name: Mode
+                entity: input_select.guest_room_mode
+              - name: Settings
+                entity: group.g_guest_room_settings_ui
+          - name: Guest Room
+            type: thermostat
+            entity: climate.guest_room_thermostat
+
   - title: Armoury
     icon: mdi:security
     badges:
@@ -425,48 +481,6 @@ views:
           - switch.annex_heating_relay_switch
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
-
-      - type: entities
-        title: ZWave
-        show_header_toggle: false
-        entities:
-          # live
-          - zwave.study_east
-          - zwave.aeotec_dsb05_multisensor
-          - entity: zwave.heiman_contact_66
-            name: Gin Freezer
-          - entity: zwave.greenwave_powernode_54
-            name: Washing Machine
-          - zwave.kitchen
-          - zwave.main_heating_thermostat
-          - zwave.hall_west
-          - zwave.hall_east
-          - entity: zwave.stellaz_55
-            name: Lounge East
-          - zwave.library
-          - zwave.ballroom_east
-          - zwave.guest_room
-          - zwave.bedroom_mark_south
-          - zwave.bedroom_mark_north
-
-          # repeaters
-          - zwave.greenwave_powernode_62
-          - zwave.greenwave_powernode_64
-          - zwave.main_heating_relay
-          - entity: zwave.greenwave_powernode_53
-            name: Hot Tub
-          - zwave.bedroom_mark_overhead
-
-          # inactive
-          - zwave.annex_hall
-          - zwave.bedroom_anne
-          - entity: zwave.heiman_contact_63
-            name: Front Door
-          - entity: zwave.heiman_contact_65
-            name: Study Door
-          - zwave.study_west
-          - zwave.heiman_contact_67
-          - zwave.heiman_contact_68
 
       - type: entities
         title: Temperatures
