@@ -420,7 +420,7 @@ views:
           - input_number.snapcast_client_ballroom
           - input_number.snapcast_client_bedroom_mark
           - input_number.snapcast_client_outside
-      - type: vertical-stack
+      - type: horizontal-stack
         cards:
           - name: "Kitchen Amplifier"
             type: media-control
