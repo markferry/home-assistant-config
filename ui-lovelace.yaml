@@ -483,6 +483,52 @@ views:
           - automation.annex_thermostat_demand_off
 
       - type: entities
+        title: ZWave
+        show_header_toggle: false
+        entities:
+          # live
+          - zwave.study_east
+          - zwave.aeotec_dsb05_multisensor
+          - entity: zwave.heiman_contact_66
+            name: Gin Freezer
+          - zwave.kitchen
+          - zwave.main_heating_thermostat
+          - zwave.hall_west
+          - zwave.hall_east
+          - entity: zwave.stellaz_55
+            name: stellaz_55 (Lounge East)
+          - zwave.library
+          - zwave.ballroom_east
+          - zwave.guest_room
+          - zwave.bedroom_mark_south
+          - zwave.bedroom_mark_north
+          - zwave.bedroom_main2
+          - zwave.bedroom_main3
+
+          # repeaters
+          - entity: zwave.greenwave_powernode_54
+            name: greenwave_powernode_54 (Washing Machine)
+          - zwave.greenwave_powernode_62
+          - zwave.greenwave_powernode_64
+          - zwave.main_heating_relay
+          - entity: zwave.greenwave_powernode_53
+            name: greenwave_powernode_53 (Hot Tub)
+          - zwave.bedroom_mark_overhead
+
+          # inactive
+          - zwave.annex_hall
+          - zwave.annex_heating_relay
+          - zwave.annex_heating_thermostat
+          - zwave.bedroom_anne
+          - entity: zwave.heiman_contact_63
+            name: Front Door
+          - entity: zwave.heiman_contact_65
+            name: Study Door
+          - zwave.study_west
+          - zwave.heiman_contact_67
+          - zwave.heiman_contact_68
+
+      - type: entities
         title: Temperatures
         show_header_toggle: false
         entities:
@@ -498,6 +544,8 @@ views:
           - sensor.lounge_east_current_temperature
           - sensor.bedroom_mark_south_current_temperature
           - sensor.bedroom_mark_north_current_temperature
+          - sensor.bedroom_main2_current_temperature
+          - sensor.bedroom_main3_current_temperature
           - sensor.study_east_current_temperature
           - sensor.study_west_current_temperature
           - sensor.bedroom_annex2_current_temperature
@@ -539,26 +587,6 @@ views:
           - climate.guest_room_mode
           - climate.danfoss_z_thermostat_014g0013_heating_1
           - climate.bedroom_annex2_mode
-      - type: entities
-        title: Battery Levels
-        show_header_toggle: false
-        entities:
-          - sensor.main_heating_thermostat_battery
-          - sensor.annex_heating_thermostat_battery
-          - sensor.hall_multisensor_battery
-          - sensor.hall_west_battery
-          - sensor.hall_east_battery
-          - sensor.study_east_battery
-          - sensor.study_west_battery
-          - sensor.library_battery
-          - sensor.bedroom_mark_south_battery
-          - sensor.bedroom_mark_north_battery
-          - sensor.lounge_east_battery
-          - sensor.ballroom_east_battery
-          - sensor.kitchen_battery
-          - sensor.annex_hall_battery
-          - sensor.bedroom_annex2_battery
-          - sensor.guest_room_battery
       - type: entities
         title: People
         show_header_toggle: false
