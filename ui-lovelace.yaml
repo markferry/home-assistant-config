@@ -10,6 +10,7 @@ views:
       - sensor.lounge_temperature
       - sensor.library_mean_temperature
       - sensor.ballroom_temperature
+      - sensor.guest_room_mean_temperature
     cards:
       - type: vertical-stack
         cards:
