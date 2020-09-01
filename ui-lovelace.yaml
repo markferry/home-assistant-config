@@ -74,13 +74,8 @@ views:
   - title: "Mark's Bedroom"
     icon: mdi:bed
     visible:
-      #  admin
-      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
       #  mark
       - user: "c907a83f81d34d878c4d939b5901004b"
-    badges:
-      - name: "Current Temperature"
-        entity: sensor.bedroom_mark_temperature
     cards:
       - type: vertical-stack
         cards:
@@ -90,6 +85,8 @@ views:
             entities:
               - name: Mode
                 entity: input_select.bedroom_mark_mode
+              - name: "Current Temperature"
+                entity: sensor.bedroom_mark_temperature
               - name: Lights
                 entity: group.bedroom_mark_lights
               - name: Media Auto Dim
@@ -107,13 +104,10 @@ views:
   - title: "Olga's Bedroom"
     icon: mdi:bed
     visible:
-      #  admin
-      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
       #  olga
       - user: "62dae43fb98b4c86b78f485175cc4970"
-    badges:
-      - name: "Current Temperature"
-        entity: sensor.bedroom_main2_temperature
     cards:
       - type: vertical-stack
         cards:
@@ -123,6 +117,8 @@ views:
             entities:
               - name: Mode
                 entity: input_select.bedroom_main2_mode
+              - name: "Current Temperature"
+                entity: sensor.bedroom_main2_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_main2_settings_ui
           - name: "Olga's Bedroom"
@@ -132,13 +128,10 @@ views:
   - title: "Elle's Bedroom"
     icon: mdi:bed
     visible:
-      #  admin
-      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
       #  elle
       - user: "855e6adfd173413ab52d5f1243c5ad39"
-    badges:
-      - name: "Current Temperature"
-        entity: sensor.bedroom_main3_temperature
     cards:
       - type: vertical-stack
         cards:
@@ -148,6 +141,8 @@ views:
             entities:
               - name: Mode
                 entity: input_select.bedroom_main3_mode
+              - name: "Current Temperature"
+                entity: sensor.bedroom_main3_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_main3_settings_ui
           - name: "Elle's Bedroom"
@@ -157,23 +152,15 @@ views:
   - title: "Anne's Bedroom"
     icon: mdi:bed
     visible:
-      #  admin
-      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
       #  anne
       - user: "a3d54febf3f143edb7541ff90385a573"
-    badges:
     cards:
 
   - title: "Monica's Bedroom"
     icon: mdi:bed
     visible:
-      #  admin
-      - user: "2f4516059a7e4d02a4cecc15a6efeca3"
       #  monica
       - user: "392c427af26a407bb4164e58379861bb"
-    badges:
-      - name: "Current Temperature"
-        entity: sensor.bedroom_annex2_temperature
     cards:
       - type: vertical-stack
         cards:
@@ -183,6 +170,8 @@ views:
             entities:
               - name: Mode
                 entity: input_select.bedroom_annex2_mode
+              - name: "Current Temperature"
+                entity: sensor.bedroom_annex2_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_annex2_settings_ui
           - name: "Monica's Bedroom"
@@ -350,8 +339,6 @@ views:
 
   - title: Guest Room
     icon: mdi:bed-empty
-    visible:
-      - user:
     cards:
       - type: vertical-stack
         cards:
@@ -361,6 +348,8 @@ views:
             entities:
               - name: Mode
                 entity: input_select.guest_room_mode
+              - name: "Current Temperature"
+                entity: sensor.guest_room_mean_temperature
               - name: Settings
                 entity: group.g_guest_room_settings_ui
           - name: Guest Room
