@@ -99,5 +99,10 @@ When unused have `<device>_<id>` format
 32: main_heating_thermostat (#35)
 33: bedroom_mark_overhead (#39)
 ??: Postbox contact
+??: bedroom_annex2_west
+??: study_west (#??)
 ```
 
+# Config Migration
+* All thermostats are now `climate.<room>_<wall>_thermostat`
+* Battery levels are separate sensors
