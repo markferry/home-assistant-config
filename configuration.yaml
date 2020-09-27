@@ -189,10 +189,6 @@ google:
   client_id: !secret gcal_client_id
   client_secret: !secret gcal_client_secret
 
-tado:
-  username: !secret tado_username
-  password: !secret tado_password
-
 notify: !include_dir_merge_list notify
 ios:
 tts: !include tts.yaml
