@@ -61,19 +61,6 @@ scene:
         state: on
         brightness_pct: 100
 
-sensor:
-  - platform: template
-    sensors:
-      library_battery:
-        value_template: >
-          {% if states.zwave.library %}
-            {{ states.zwave.library.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.library
-
 media_player:
   - name: library
     platform: volumio

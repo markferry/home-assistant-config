@@ -44,18 +44,5 @@ scene:
       group.bedroom_main3_lights:
         state: on
 
-sensor:
-  - platform: template
-    sensors:
-      bedroom_main3_battery:
-        value_template: >
-          {% if states.zwave.bedroom_main3 %}
-            {{ states.zwave.bedroom_main3.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.bedroom_main3
-
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

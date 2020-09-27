@@ -72,19 +72,6 @@ scene:
       media_player.outside_amplifier_zone_2:
         state: on
 
-sensor:
-  - platform: template
-    sensors:
-      kitchen_battery:
-        value_template: >
-          {% if states.zwave.kitchen %}
-            {{ states.zwave.kitchen.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.kitchen
-
 cast:
   media_player:
     - host: kitchen-google-home

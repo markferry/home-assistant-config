@@ -68,19 +68,6 @@ scene:
         state: on
         brightness_pct: 50
 
-sensor:
-  - platform: template
-    sensors:
-      lounge_east_battery:
-        value_template: >
-          {% if states.zwave.stellaz_55 %}
-            {{ states.zwave.stellaz_55.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.stellaz_55
-
 switch:
   - name: Lounge East Demand
     platform: mqtt

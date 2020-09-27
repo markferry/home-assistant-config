@@ -7,19 +7,6 @@ group:
     - sensor.aeotec_dsb05_multisensor_relative_humidity
     - sensor.aeotec_dsb05_multisensor_temperature
 
-sensor:
-  - platform: template
-    sensors:
-      hall_multisensor_battery:
-        value_template: >
-          {% if states.zwave.aeotec_dsb05_multisensor %}
-            {{ states.zwave.aeotec_dsb05_multisensor.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.aeotec_dsb05_multisensor
-
 homeassistant:
   customize:
     sensor.hall_multisensor_battery:

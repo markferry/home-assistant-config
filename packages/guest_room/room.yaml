@@ -52,18 +52,5 @@ scene:
       group.guest_room_lights:
         state: on
 
-sensor:
-  - platform: template
-    sensors:
-      guest_room_battery:
-        value_template: >
-          {% if states.zwave.guest_room %}
-            {{ states.zwave.guest_room.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.guest_room
-
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
