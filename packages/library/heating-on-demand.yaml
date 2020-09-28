@@ -11,7 +11,7 @@ group:
   g_debug_library_heating:
     entities:
       - climate.library_thermostat
-      - climate.library_mode
+      - climate.library_east_mode
       - switch.library_demand
 
   g_debug_library_temperature:
@@ -24,7 +24,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_library_thermostat:
     entities:
-      - climate.library_mode
+      - climate.library_east_mode
 
 climate:
   - name: library_thermostat

@@ -517,20 +517,20 @@ views:
           - climate.ballroom_east_mode
           - climate.bedroom_mark_south_mode
           - climate.bedroom_mark_north_mode
-          - climate.bedroom_main2_mode
-          - climate.bedroom_main3_mode
+          - climate.bedroom_main2_east_mode
+          - climate.bedroom_main3_east_mode
           - climate.hall_east_mode
           - climate.hall_west_mode
           - climate.main_heating_thermostat_heating_1
           - climate.annex_heating_thermostat_heating_1
-          - climate.kitchen_mode
-          - climate.library_mode
+          - climate.kitchen_west_mode
+          - climate.library_east_mode
           - climate.lounge_east_mode
           - climate.study_east_mode
           - climate.study_west_mode
-          - climate.guest_room_mode
+          - climate.guest_room_north_mode
           - climate.danfoss_z_thermostat_014g0013_heating_1
-          - climate.bedroom_annex2_mode
+          - climate.bedroom_annex2_west_mode
       - type: entities
         title: People
         show_header_toggle: false

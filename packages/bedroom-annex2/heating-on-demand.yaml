@@ -11,7 +11,7 @@ group:
   g_debug_bedroom_annex2_heating:
     entities:
       - climate.bedroom_annex2_thermostat
-      - climate.bedroom_annex2_mode
+      - climate.bedroom_annex2_west_mode
       - switch.bedroom_annex2_demand
 
   g_debug_bedroom_annex2_temperature:
@@ -24,7 +24,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_annex2_thermostat:
     entities:
-      - climate.bedroom_annex2_mode
+      - climate.bedroom_annex2_west_mode
 
 climate:
   - name: bedroom_annex2_thermostat

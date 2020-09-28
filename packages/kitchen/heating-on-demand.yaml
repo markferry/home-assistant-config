@@ -11,7 +11,7 @@ group:
   g_debug_kitchen_heating:
     entities:
       - climate.kitchen_thermostat
-      - climate.kitchen_mode
+      - climate.kitchen_west_mode
       - switch.kitchen_demand
 
   g_debug_kitchen_temperature:
@@ -24,7 +24,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_kitchen_thermostat:
     entities:
-      - climate.kitchen_mode
+      - climate.kitchen_west_mode
 
 climate:
   - name: kitchen_thermostat

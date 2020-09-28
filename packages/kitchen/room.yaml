@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    climate.kitchen_mode:
+    climate.kitchen_west_mode:
       min_temp: 5
       max_temp: 25
 
@@ -32,7 +32,7 @@ group:
   kitchen_setpoints:
     name: Kitchen Setpoints
     entities:
-    - climate.kitchen_mode
+    - climate.kitchen_west_mode
 
   kitchen_lights:
     name: Kitchen Lights

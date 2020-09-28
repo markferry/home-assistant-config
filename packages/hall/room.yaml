@@ -20,13 +20,6 @@ homeassistant:
       friendly_name: Annex Hall Battery
       icon: mdi:battery
 
-    climate.hall_west_thermostat:
-      friendly_name: Hall West
-    climate.hall_east_thermostat:
-      friendly_name: Hall East
-    climate.annex_hall_thermostat:
-      friendly_name: Annex Hall
-
     climate.hall_west_mode:
       min_temp: 5
       max_temp: 25
