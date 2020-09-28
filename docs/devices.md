@@ -68,17 +68,17 @@ When unused have `<device>_<id>` format
 1: ZStick Gen 5
 2: annex_heating_relay
 3: annex_heating_thermostat
-4: ? - (was study door)
-5: ? Yale smart lock (not in nodes list)  FIXME!
+4: - (was study door)
+5: - (was front door lock)
 6: front_door_contact (#63)
 7: greenwave_powernode_7 (my desk)
 8: bedroom_main2_east (SpiritZ)
-9: study_door_contact (#65)
+9: - (was study door)
 10: study_east (#14)
 11: stellaz_11 (#43)
 12: main_heating_relay
-13: ? Thermostat?
-14: ? Thermostat?
+13: - (was main heating thermostat)
+14: - (was main heating thermostat)
 15: lounge_east (#55)  FIXME!
 16: library_east (#25)
 17: ballroom_east (#33)
@@ -98,9 +98,15 @@ When unused have `<device>_<id>` format
 31: bedroom_main3_east (SpiritZ)
 32: main_heating_thermostat (#35)
 33: bedroom_mark_overhead (#39)
+34: - (was heiman_contact)
+35: - (was heiman_contact)
+36: study_door_contact (#65)
+37: front_door_lock
+
 ??: Postbox contact
 ??: bedroom_annex2_west
 ??: study_west (#??)
+??: annex_hall_west
 ```
 
 # Config Migration
