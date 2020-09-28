@@ -140,7 +140,7 @@
 #    - platform: state
 #      entity_id: climate.hall_east_mode
 #    - platform: state
-#      entity_id: climate.annex_hall_mode
+#      entity_id: climate.annex_hall_west_mode
 #    - platform: state
 #      entity_id: climate.bedroom_annex2_west_mode
 #    - platform: state

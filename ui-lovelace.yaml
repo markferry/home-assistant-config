@@ -480,9 +480,9 @@ views:
           - sensor.annex_heating_thermostat_temperature
           - sensor.aeotec_dsb05_multisensor_temperature
           - sensor.ballroom_east_current_temperature
-          - sensor.hall_west_temperature
-          - sensor.hall_east_temperature
-          - sensor.annex_hall_temperature
+          - sensor.hall_west_air_temperature
+          - sensor.hall_east_air_temperature
+          - sensor.annex_hall_west_air_temperature
           - sensor.kitchen_current_temperature
           - sensor.library_current_temperature
           - sensor.lounge_east_current_temperature
@@ -513,7 +513,7 @@ views:
         title: Thermostat Devices
         show_header_toggle: false
         entities:
-          - climate.annex_hall_mode
+          - climate.annex_hall_west_mode
           - climate.ballroom_east_mode
           - climate.bedroom_mark_south_mode
           - climate.bedroom_mark_north_mode

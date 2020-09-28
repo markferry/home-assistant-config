@@ -11,20 +11,20 @@ group:
   g_debug_annex_hall_heating:
     entities:
       - climate.annex_hall_thermostat
-      - climate.annex_hall_mode
+      - climate.annex_hall_west_mode
       - switch.annex_hall_demand
 
   g_debug_annex_hall_temperature:
     entities:
       - sensor.annex_hall_mean_temperature
       - sensor.annex_hall_current_temperature
-      - sensor.annex_hall_temperature
+      - sensor.annex_hall_west_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_annex_hall_thermostat:
     entities:
-      - climate.annex_hall_mode
+      - climate.annex_hall_west_mode
 
 climate:
   - name: annex_hall_thermostat
@@ -46,7 +46,7 @@ switch:
 sensor:
   - name: annex_hall_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.annex_hall_temperature/state'
+    state_topic: 'ha/raw/sensor.annex_hall_west_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -64,7 +64,7 @@ automation:
   - alias: "annex_hall_update_temperature"
     trigger:
       - platform: state
-        entity_id: sensor.annex_hall_temperature
+        entity_id: sensor.annex_hall_west_air_temperature
     action:
       - service: mqtt.publish
         data_template:

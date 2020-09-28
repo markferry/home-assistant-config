@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    sensor.ballroom_east_temperature:
+    sensor.ballroom_east_air_temperature:
       friendly_name: Ballroom East
     sensor.ballroom_east_battery:
       friendly_name: Ballroom East Battery

@@ -4,11 +4,11 @@
 
 homeassistant:
   customize:
-    sensor.hall_west_temperature:
+    sensor.hall_west_air_temperature:
       friendly_name: Hall West
-    sensor.hall_east_temperature:
+    sensor.hall_east_air_temperature:
       friendly_name: Hall East
-    sensor.annex_hall_temperature:
+    sensor.annex_hall_west_air_temperature:
       friendly_name: Annex Hall
     sensor.hall_west_battery:
       friendly_name: Hall West Battery
@@ -26,7 +26,7 @@ homeassistant:
     climate.hall_east_mode:
       min_temp: 5
       max_temp: 25
-    climate.annex_hall_mode:
+    climate.annex_hall_west_mode:
       min_temp: 5
       max_temp: 25
 
@@ -48,7 +48,7 @@ group:
     entities:
     - climate.hall_west_mode
     - climate.hall_east_mode
-    - climate.annex_hall_mode
+    - climate.annex_hall_west_mode
 
   hall_lights:
     name: Hall Lights

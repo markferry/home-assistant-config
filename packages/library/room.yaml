@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    sensor.library_temperature:
+    sensor.library_east_air_temperature:
       friendly_name: Library
     sensor.library_battery:
       friendly_name: Library Battery

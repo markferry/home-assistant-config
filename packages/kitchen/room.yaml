@@ -8,7 +8,7 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
-    sensor.kitchen_temperature:
+    sensor.kitchen_west_air_temperature:
       friendly_name: Kitchen
     sensor.kitchen_battery:
       friendly_name: Kitchen Battery
