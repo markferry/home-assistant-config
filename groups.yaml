@@ -182,7 +182,6 @@ temperatures:
   - sensor.bedroom_mark_north_current_temperature
   - sensor.study_east_current_temperature
   - sensor.study_west_current_temperature
-  - sensor.js_bedroom_temperature
   - sensor.bedroom_annex2_current_temperature
 
 thermostat_devices:

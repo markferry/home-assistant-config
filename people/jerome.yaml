@@ -20,7 +20,6 @@ group:
         #- device_tracker.jdilley_macbookpro_wired
       - device_tracker.jerome_asus
       - device_tracker.jerome_asus_bt
-      - sensor.js_bedroom_present
 
 binary_sensor:
   - name: jerome_present
@@ -58,11 +57,6 @@ binary_sensor:
       - entity_id: device_tracker.jerome_asus_bt
         prob_given_true: 0.5
         prob_given_false: 0.1
-        <<: *tracker_default
-
-      - entity_id: sensor.js_bedroom_present
-        prob_given_true: 0.5
-        prob_given_false: 0.2
         <<: *tracker_default
 
 automation:

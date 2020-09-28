@@ -22,7 +22,6 @@ include:
     - sensor.bedroom_mark_north_temperature
     - sensor.study_east_temperature
     - sensor.study_west_temperature
-    - sensor.js_bedroom_temperature
     - sensor.bedroom_annex2_temperature
     - sensor.main_heating_thermostat_battery
     - sensor.annex_heating_thermostat_battery
