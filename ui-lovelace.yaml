@@ -189,7 +189,7 @@ views:
         show_header_toggle: false
         entities:
           - input_select.study_mode
-          - entity: binary_sensor.heiman_contact_65_sensor
+          - entity: binary_sensor.study_door_contact_access_control_door_window_open
             name: "Study Door Open"
           - group.g_study_settings_ui
 
@@ -212,7 +212,7 @@ views:
         entities:
           - input_select.kitchen_mode
           - binary_sensor.washing_machine
-          - entity: binary_sensor.heiman_contact_66_sensor
+          - entity: binary_sensor.gin_fridge_contact_access_control_door_window_open
             name: "Gin Freezer Open"
           - group.g_kitchen_settings_ui
 
@@ -240,7 +240,7 @@ views:
         entities:
           - climate.hall_thermostat
           - climate.annex_hall_thermostat
-          - entity: binary_sensor.heiman_contact_63_sensor
+          - entity: binary_sensor.front_door_contact_access_control_door_window_open
             name: "Front Door Open"
       - type: entities
         title: Main Heating
