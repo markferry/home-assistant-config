@@ -451,8 +451,10 @@ views:
         title: Main Heating Override
         show_header_toggle: false
         entities:
-          - switch.main_heating_relay_switch
-          - switch.main_heating_relay_hot_water
+          - entity: switch.main_heating_relay_instance_1_switch
+            name: main heating CH switch
+          - entity: switch.main_heating_relay_instance_2_switch
+            name: main heating HW switch
           - automation.main_boiler_demand_on
           - automation.main_boiler_demand_off
           - automation.hot_water_on

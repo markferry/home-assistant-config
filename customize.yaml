@@ -16,11 +16,9 @@ sensor.annex_heating_thermostat_temperature:
   friendly_name: Annex Heating Temperature
 switch.annex_heating_thermostat_switch:
   friendly_name: Annex Heating Holiday Mode
-switch.main_heating_relay_switch:
+switch.main_heating_relay_instance_1_switch:
   friendly_name: Main Heating Switch
-switch.main_heating_relay_boiler:
-  friendly_name: Main Boiler Switch
-switch.main_heating_relay_hot_water:
+switch.main_heating_relay_instance_2_switch:
   friendly_name: Main Hot Water Switch
 switch.annex_heating_relay_switch:
   friendly_name: Annex Heating Switch

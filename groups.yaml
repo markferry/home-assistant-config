@@ -56,9 +56,8 @@ main_heating:
 main_heating_override:
   name: Main Heating Override
   entities:
-  - switch.main_heating_relay_switch
-  - switch.main_heating_relay_boiler
-  - switch.main_heating_relay_hot_water
+  - switch.main_heating_relay_instance_1_switch
+  - switch.main_heating_relay_instance_2_switch
   - automation.main_boiler_demand_on
   - automation.main_boiler_demand_off
   - automation.hot_water_on
