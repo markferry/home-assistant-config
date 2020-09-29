@@ -161,7 +161,7 @@ http:
 #  base_url: !secret base_url
 
 mqtt:
-  broker: localhost
+  broker: !secret mqtt_broker
   port: 1883
   client_id: home-assistant
   keepalive: 60
