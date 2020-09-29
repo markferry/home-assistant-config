@@ -7,7 +7,7 @@ homeassistant:
     group.bedroom_mark_lights:
       icon: mdi:lightbulb-on
 
-    light.bedroom_mark_overhead_level:
+    light.bedroom_mark_overhead_instance_1_level:
       friendly_name: "Overhead"
       icon: mdi:ceiling-light
     light.bedroom_mark_lamp:
@@ -37,7 +37,7 @@ group:
   bedroom_mark_lights:
     name: "Mark's Bedroom Lights"
     entities:
-    - light.bedroom_mark_overhead_level
+    - light.bedroom_mark_overhead_instance_1_level
     - light.bedroom_mark_lamp
 
   bedroom_mark_appliances:
