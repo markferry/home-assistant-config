@@ -10,7 +10,7 @@ homeassistant:
       friendly_name: Ballroom East Battery
       icon: mdi:battery
 
-    switch.greenwave_powernode_62_switch:
+    switch.greenwave_powernode_24_switch:
       friendly_name: Ballroom Disco Light
       entity_picture: /local/wb-icons/ext_mirrorball.png
 
@@ -45,7 +45,7 @@ group:
     name: Ballroom Party Lights
     icon: mdi:lightbulb-on
     entities:
-    - switch.greenwave_powernode_62_switch
+    - switch.greenwave_powernode_24_switch
 
 scene:
   - name: ballroom_off

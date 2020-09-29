@@ -41,8 +41,8 @@ include:
     - sensor.guest_room_battery
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
-    - sensor.greenwave_powernode_53_power
-    - sensor.greenwave_powernode_54_power
+    - sensor.hottub_powernode_electric_w
+    - sensor.washing_machine_powernode_electric_w
     - sensor.cm2_temp_c
     - sensor.cm2_humidity
     - sensor.cm2_light

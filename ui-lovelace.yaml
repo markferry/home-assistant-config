@@ -203,8 +203,8 @@ views:
   - title: Kitchen
     icon: mdi:stove
     badges:
-      - sensor.greenwave_powernode_54_energy
-      - sensor.greenwave_powernode_54_power
+      - sensor.washing_machine_powernode_electric_kwh
+      - sensor.washing_machine_powernode_electric_w
     cards:
       - type: entities
         title: Kitchen
@@ -266,9 +266,9 @@ views:
         show_header_toggle: false
         entities:
           - binary_sensor.hottub
-          - switch.greenwave_powernode_53_switch
-          - sensor.greenwave_powernode_53_energy
-          - sensor.greenwave_powernode_53_power
+          - switch.hottub_powernode_switch
+          - sensor.hottub_powernode_electric_kwh
+          - sensor.hottub_powernode_electric_w
       - type: entities
         title: Oil Levels
         show_header_toggle: false

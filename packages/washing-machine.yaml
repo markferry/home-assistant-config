@@ -19,13 +19,13 @@ input_boolean:
 
 homeassistant:
   customize:
-    switch.greenwave_powernode_54_switch:
+    switch.washing_machine_powernode_switch:
       friendly_name: Washing Machine
       icon: mdi:washing-machine
-    sensor.greenwave_powernode_54_energy:
+    sensor.washing_machine_powernode_electric_kwh:
       friendly_name: Washing Machine Energy
       icon: mdi:washing-machine
-    sensor.greenwave_powernode_54_power:
+    sensor.washing_machine_powernode_electric_w:
       friendly_name: Washing Machine Power
       icon: mdi:washing-machine
 
@@ -41,9 +41,9 @@ group:
     icon: mdi:washing-machine
     entities:
     - binary_sensor.washing_machine
-    - switch.greenwave_powernode_54_switch
-    - sensor.greenwave_powernode_54_energy
-    - sensor.greenwave_powernode_54_power
+    - switch.washing_machine_powernode_switch
+    - sensor.washing_machine_powernode_electric_kwh
+    - sensor.washing_machine_powernode_electric_w
 
 
 # Power detection for the washing machine.
@@ -55,7 +55,7 @@ automation:
 - alias: 'Washing Machine Hi'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_54_power
+    entity_id: sensor.washing_machine_powernode_electric_w
     above: 30
   action:
     service: input_boolean.turn_on
@@ -64,7 +64,7 @@ automation:
 - alias: 'Washing Machine Lo'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_54_power
+    entity_id: sensor.washing_machine_powernode_electric_w
     below: 20
   action:
     service: input_boolean.turn_off
