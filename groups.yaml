@@ -49,7 +49,7 @@ settings:
 main_heating:
   name: Main Heating
   entities:
-  - sensor.main_heating_thermostat_temperature
+  - sensor.main_heating_thermostat_air_temperature
   - climate.main_heating_thermostat_heating_1
   - switch.main_heating_thermostat_switch
 
@@ -80,14 +80,14 @@ main_heating_demand:
 annex_heating:
   name: Annex Heating
   entities:
-  - sensor.annex_heating_thermostat_temperature
+  - sensor.annex_heating_thermostat_air_temperature
   - climate.annex_heating_thermostat_heating_1
   - switch.annex_heating_thermostat_switch
 
 annex_heating_override:
   name: Annex Heating Override
   entities:
-  - switch.annex_heating_relay_switch
+  - switch.annex_heating_relay_instance_1_switch
   - automation.annex_thermostat_demand_on
   - automation.annex_thermostat_demand_off
 
@@ -167,8 +167,8 @@ media_players:
 temperatures:
   name: Temperatures
   entities:
-  - sensor.main_heating_thermostat_temperature
-  - sensor.annex_heating_thermostat_temperature
+  - sensor.main_heating_thermostat_air_temperature
+  - sensor.annex_heating_thermostat_air_temperature
   - sensor.aeotec_dsb05_multisensor_temperature
   - sensor.ballroom_east_air_temperature
   - sensor.hall_west_air_temperature

@@ -245,16 +245,22 @@ views:
       - type: entities
         title: Main Heating
         entities:
-          - sensor.main_heating_thermostat_temperature
-          - climate.main_heating_thermostat_heating_1
-          - switch.main_heating_thermostat_switch
+          - entity: sensor.main_heating_thermostat_air_temperature
+            name: Main Heating Temperature
+          - entity: climate.main_heating_thermostat_heating_1
+            name: Main Heating Thermostat
+          - entity: switch.main_heating_thermostat_switch
+            name: Main Heating Holiday Mode
       - type: entities
         title: Annex Heating
         show_header_toggle: false
         entities:
-          - sensor.annex_heating_thermostat_temperature
-          - climate.annex_heating_thermostat_heating_1
-          - switch.annex_heating_thermostat_switch
+          - entity: sensor.annex_heating_thermostat_air_temperature
+            name: Annex Heating Temperature
+          - entity: climate.annex_heating_thermostat_heating_1
+            name: Annex Heating Thermostat
+          - entity: switch.annex_heating_thermostat_switch
+            name: Annex Heating Holiday Mode
       - type: entities
         title: Hot Tub
         show_header_toggle: false
@@ -452,9 +458,9 @@ views:
         show_header_toggle: false
         entities:
           - entity: switch.main_heating_relay_instance_1_switch
-            name: main heating CH switch
+            name: Main Heating Switch
           - entity: switch.main_heating_relay_instance_2_switch
-            name: main heating HW switch
+            name: Main Hot Water Switch
           - automation.main_boiler_demand_on
           - automation.main_boiler_demand_off
           - automation.hot_water_on
@@ -470,7 +476,9 @@ views:
         title: Annex Heating Override
         show_header_toggle: false
         entities:
-          - switch.annex_heating_relay_switch
+          - entity: switch.annex_heating_relay_instance_1_switch
+            name: Annex Heating Switch
+          - switch.annex_heating_relay_instance_2_switch
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
 
@@ -478,8 +486,8 @@ views:
         title: Temperatures
         show_header_toggle: false
         entities:
-          - sensor.main_heating_thermostat_temperature
-          - sensor.annex_heating_thermostat_temperature
+          - sensor.main_heating_thermostat_air_temperature
+          - sensor.annex_heating_thermostat_air_temperature
           - sensor.aeotec_dsb05_multisensor_temperature
           - sensor.ballroom_east_current_temperature
           - sensor.hall_west_air_temperature
