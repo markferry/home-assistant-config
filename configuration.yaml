@@ -145,10 +145,6 @@ recorder:
 
 influxdb: !include influxdb.yaml
 
-
-# Checks for available updates
-updater:
-
 # Enables the frontend
 frontend:
 
