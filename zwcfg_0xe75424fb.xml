@@ -11,7 +11,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="2" name="" location="" basic="4" generic="8" specific="0" type="Thermostat" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Complete">
+	<Node id="2" name="annex_heating_relay" location="" basic="4" generic="8" specific="0" type="Thermostat" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Complete">
 		<Manufacturer id="59" name="Horstmann (Secure Meters)">
 			<Product type="3" id="2" name="SSR 302 2-zone Thermostat Receiver" />
 		</Manufacturer>
@@ -71,7 +71,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="3" name="" location="" basic="1" generic="8" specific="0" type="Thermostat" listening="false" frequentListening="false" beaming="true" routing="false" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="3" name="annex_heating_thermostat" location="" basic="1" generic="8" specific="0" type="Thermostat" listening="false" frequentListening="false" beaming="true" routing="false" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="59" name="Horstmann (Secure Meters)">
 			<Product type="4" id="1" name="SCSC17 Thermostat" />
 		</Manufacturer>
@@ -174,7 +174,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="5" name="" location="" basic="4" generic="64" specific="3" type="Secure Keypad Door Lock" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="5" name="front_door_lock" location="" basic="4" generic="64" specific="3" type="Secure Keypad Door Lock" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="0" name="">
 			<Product type="0" id="0" name="" />
 		</Manufacturer>
@@ -222,7 +222,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="6" name="" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Associations">
+	<Node id="6" name="front_door_contact" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Associations">
 		<Manufacturer id="260" name="Heiman Technology Co. Ltd">
 			<Product type="168" id="168" name="Door Sensor HS1DS-Z" />
 		</Manufacturer>
@@ -327,7 +327,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="7" name="" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="7" name="greenwave_powernode_7" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="99" name="GreenWave Reality Inc">
 			<Product type="2" id="2" name="PowerNode 1 port" />
 		</Manufacturer>
@@ -429,7 +429,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="8" name="" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="8" name="bedroom_main2_east" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="3" id="1" name="EUR_SPIRITZ Wall Radiator Thermostat" />
 		</Manufacturer>
@@ -606,7 +606,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="9" name="" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="9" name="study_door_contact" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="260" name="Heiman Technology Co. Ltd">
 			<Product type="168" id="168" name="Door Sensor HS1DS-Z" />
 		</Manufacturer>
@@ -711,7 +711,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="10" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
+	<Node id="10" name="study_east" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -786,7 +786,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="11" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
+	<Node id="11" name="stellaz_11" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -860,7 +860,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="12" name="" location="" basic="4" generic="8" specific="0" type="Thermostat" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Complete">
+	<Node id="12" name="main_heating_relay" location="" basic="4" generic="8" specific="0" type="Thermostat" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Complete">
 		<Manufacturer id="59" name="Horstmann (Secure Meters)">
 			<Product type="3" id="2" name="SSR 302 2-zone Thermostat Receiver" />
 		</Manufacturer>
@@ -920,7 +920,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="15" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
+	<Node id="15" name="lounge_east" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -995,7 +995,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="16" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="16" name="library_east" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1070,7 +1070,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="17" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
+	<Node id="17" name="ballroom_east" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1145,7 +1145,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="18" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
+	<Node id="18" name="hall_east" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1220,7 +1220,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="19" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
+	<Node id="19" name="hall_west" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1295,7 +1295,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="20" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
+	<Node id="20" name="bedroom_mark_south" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1370,7 +1370,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="21" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
+	<Node id="21" name="bedroom_mark_north" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Session">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1445,7 +1445,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="22" name="" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="22" name="guest_room_north" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="3" id="1" name="EUR_SPIRITZ Wall Radiator Thermostat" />
 		</Manufacturer>
@@ -1622,7 +1622,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="23" name="" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
+	<Node id="23" name="kitchen_west" location="" basic="4" generic="8" specific="6" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="CacheLoad">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="1" id="1" name="EUR_STELLAZ Wall Radiator Thermostat Valve Control" />
 		</Manufacturer>
@@ -1697,7 +1697,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="24" name="" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="24" name="greenwave_powernode_24" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="99" name="GreenWave Reality Inc">
 			<Product type="2" id="2" name="PowerNode 1 port" />
 		</Manufacturer>
@@ -1797,7 +1797,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="25" name="" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="25" name="greenwave_powernode_25" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="99" name="GreenWave Reality Inc">
 			<Product type="2" id="2" name="PowerNode 1 port" />
 		</Manufacturer>
@@ -1897,7 +1897,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="26" name="" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="26" name="hottub_powernode" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="99" name="GreenWave Reality Inc">
 			<Product type="2" id="2" name="PowerNode 1 port" />
 		</Manufacturer>
@@ -1997,7 +1997,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="27" name="" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="27" name="washing_machine_powernode" location="" basic="4" generic="16" specific="1" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="99" name="GreenWave Reality Inc">
 			<Product type="2" id="2" name="PowerNode 1 port" />
 		</Manufacturer>
@@ -2097,7 +2097,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="28" name="" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="28" name="gin_fridge_contact" location="" basic="4" generic="7" specific="1" roletype="6" devicetype="3078" nodetype="0" type="Notification Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="260" name="Heiman Technology Co. Ltd">
 			<Product type="168" id="168" name="Door Sensor HS1DS-Z" />
 		</Manufacturer>
@@ -2203,7 +2203,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="29" name="" location="" basic="4" generic="32" specific="1" type="Routing Binary Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Session">
+	<Node id="29" name="aeotec_dsb05_multisensor" location="" basic="4" generic="32" specific="1" type="Routing Binary Sensor" listening="false" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="3" query_stage="Session">
 		<Manufacturer id="86" name="AEON Labs">
 			<Product type="2" id="5" name="DSB05 Multisensor" />
 		</Manufacturer>
@@ -2301,7 +2301,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="30" name="" location="" basic="4" generic="33" specific="1" roletype="6" devicetype="3079" nodetype="0" type="Routing Multilevel Sensor" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="30" name="aeotec_zw100_multisensor" location="" basic="4" generic="33" specific="1" roletype="6" devicetype="3079" nodetype="0" type="Routing Multilevel Sensor" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="86" name="AEON Labs">
 			<Product type="2" id="64" name="ZW100 MultiSensor 6" />
 		</Manufacturer>
@@ -2573,7 +2573,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="31" name="" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Configuration">
+	<Node id="31" name="bedroom_main3_east" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Configuration">
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="3" id="3" name="EUR_SPIRITZ Wall Radiator Thermostat" />
 		</Manufacturer>
@@ -2750,7 +2750,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="32" name="" location="" basic="1" generic="8" specific="0" type="Thermostat" listening="false" frequentListening="false" beaming="true" routing="false" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="32" name="main_heating_thermostat" location="" basic="1" generic="8" specific="0" type="Thermostat" listening="false" frequentListening="false" beaming="true" routing="false" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="59" name="Horstmann (Secure Meters)">
 			<Product type="4" id="1" name="SCSC17 Thermostat" />
 		</Manufacturer>
@@ -2838,7 +2838,7 @@
 			</CommandClass>
 		</CommandClasses>
 	</Node>
-	<Node id="33" name="" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
+	<Node id="33" name="bedroom_mark_overhead" location="" basic="4" generic="17" specific="1" roletype="5" devicetype="1536" nodetype="0" type="Multilevel Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="40000" version="4" query_stage="Complete">
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="102" id="1000" name="FGD212 Dimmer 2" />
 		</Manufacturer>
