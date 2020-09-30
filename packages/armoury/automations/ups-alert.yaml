@@ -1,33 +1,33 @@
 - alias: UPS Charging
   trigger:
     platform: state
-    entity_id: sensor.eaton_ups_status_data
+    entity_id: sensor.eaton_status_data
     to: 'OL CHRG'
   action:
     service: notify.automations
     data_template:
       title: "UPS Charging"
-      message: "Charge level is {{ states.sensor.eaton_ups_battery_charge.state }}%"
+      message: "Charge level is {{ states.sensor.eaton_battery_charge.state }}%"
 
 - alias: UPS Discharging
   trigger:
     platform: state
-    entity_id: sensor.eaton_ups_status_data
+    entity_id: sensor.eaton_status_data
     from: 'OL CHRG'
   action:
     service: notify.automations
     data_template:
       title: "UPS Discharging"
-      message: "Expected runtime is {{ states.sensor.eaton_ups_battery_runtime.state | int // 60}}m"
+      message: "Expected runtime is {{ states.sensor.eaton_battery_runtime.state | int // 60}}m"
 
 - alias: UPS Critical
   trigger:
     platform: numeric_state
-    entity_id: sensor.eaton_ups_battery_charge
+    entity_id: sensor.eaton_battery_charge
     below: 20
   action:
     service: notify.automations
     data_template:
       title: "UPS Critical"
-      message: "Remaining runtime is {{ states.sensor.eaton_ups_battery_runtime.state | int // 60}}m"
+      message: "Remaining runtime is {{ states.sensor.eaton_battery_runtime.state | int // 60}}m"
 

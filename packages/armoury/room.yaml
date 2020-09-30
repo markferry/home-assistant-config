@@ -15,24 +15,16 @@ homeassistant:
     sensor.cm2_dew_point_c:
       icon: mdi:weather-rainy
 
-    sensor.eaton_ups_status:
-      friendly_name: UPS Status
-    sensor.eaton_ups_load:
-      friendly_name: UPS Load
-    sensor.eaton_battery_charge:
-      friendly_name: UPS Charge
-    sensor.eaton_ups_battery_runtime:
-      friendly_name: UPS Runtime
-
 group:
   ups:
     name: UPS
     icon: mdi:car-battery
     entities:
-    - sensor.eaton_ups_status_data
-    - sensor.eaton_ups_load
-    - sensor.eaton_ups_battery_charge
-    - sensor.eaton_ups_battery_runtime
+    - sensor.eaton_status
+    - sensor.eaton_status_data
+    - sensor.eaton_load
+    - sensor.eaton_battery_charge
+    - sensor.eaton_battery_runtime
 
   cm2_climate_monitor:
     name: Server Climate Monitor
@@ -88,7 +80,7 @@ sensor:
     name: Eaton UPS
     host: cyclops
     port: 3493
-    alias: eaton_ups
+    alias: eaton
     username: pixie
     password: !secret nut_pixie
     resources:

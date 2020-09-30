@@ -429,10 +429,14 @@ views:
         title: UPS
         show_header_toggle: false
         entities:
-          - sensor.eaton_ups_status_data
-          - sensor.eaton_ups_load
-          - sensor.eaton_ups_battery_charge
-          - sensor.eaton_ups_battery_runtime
+          - entity: sensor.eaton_status
+            name: UPS Status
+          - entity: sensor.eaton_load
+            name: UPS Load
+          - entity: sensor.eaton_battery_charge
+            name: UPS Charge
+          - entity: sensor.eaton_battery_runtime
+            name: UPS Runtime
 
   - title: Multiroom Audio
     icon: mdi:music
