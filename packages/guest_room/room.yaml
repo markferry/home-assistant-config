@@ -9,10 +9,6 @@ homeassistant:
     automation.guest_room_off_time:
       friendly_name: "Guest Room Off Time"
 
-    sensor.guest_room_battery_level:
-      friendly_name: "Guest Room Battery"
-      icon: mdi:battery
-
     climate.guest_room_north_mode:
       friendly_name: Guest Room
       min_temp: 8

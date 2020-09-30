@@ -8,12 +8,6 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
-    sensor.kitchen_west_air_temperature:
-      friendly_name: Kitchen
-    sensor.kitchen_battery_level:
-      friendly_name: Kitchen Battery
-      icon: mdi:battery
-
     # FIXME: media-control card ignores 'name' settings
     media_player.outside_amplifier_zone_2:
       friendly_name: Kitchen Amplifier

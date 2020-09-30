@@ -4,8 +4,6 @@
 
 homeassistant:
   customize:
-    sensor.bedroom_main3_battery_level:
-      icon: mdi:battery
     climate.bedroom_main3_east_mode:
       min_temp: 8
       max_temp: 25
