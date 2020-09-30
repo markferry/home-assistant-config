@@ -4,9 +4,9 @@
 
 homeassistant:
   customize:
-    sensor.study_east_battery:
+    sensor.study_east_battery_level:
       icon: mdi:battery
-    sensor.study_west_battery:
+    sensor.study_west_battery_level:
       icon: mdi:battery
 
     climate.study_east_mode:

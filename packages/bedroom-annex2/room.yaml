@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    sensor.bedroom_annex2_battery:
+    sensor.bedroom_annex2_battery_level:
       icon: mdi:battery
     climate.bedroom_annex2_west_mode:
       min_temp: 5

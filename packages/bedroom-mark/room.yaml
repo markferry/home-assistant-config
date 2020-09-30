@@ -13,9 +13,9 @@ homeassistant:
     light.bedroom_mark_lamp:
       friendly_name: "Dressing Table"
 
-    sensor.bedroom_mark_south_battery:
+    sensor.bedroom_mark_south_battery_level:
       icon: mdi:battery
-    sensor.bedroom_mark_north_battery:
+    sensor.bedroom_mark_north_battery_level:
       icon: mdi:battery
 
 group:

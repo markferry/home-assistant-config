@@ -9,7 +9,7 @@ homeassistant:
     automation.guest_room_off_time:
       friendly_name: "Guest Room Off Time"
 
-    sensor.guest_room_battery:
+    sensor.guest_room_battery_level:
       friendly_name: "Guest Room Battery"
       icon: mdi:battery
 

@@ -10,13 +10,13 @@ homeassistant:
       friendly_name: Hall East
     sensor.annex_hall_west_air_temperature:
       friendly_name: Annex Hall
-    sensor.hall_west_battery:
+    sensor.hall_west_battery_level:
       friendly_name: Hall West Battery
       icon: mdi:battery
-    sensor.hall_east_battery:
+    sensor.hall_east_battery_level:
       friendly_name: Hall East Battery
       icon: mdi:battery
-    sensor.annex_hall_battery:
+    sensor.annex_hall_battery_level:
       friendly_name: Annex Hall Battery
       icon: mdi:battery
 

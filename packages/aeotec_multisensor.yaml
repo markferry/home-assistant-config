@@ -9,7 +9,7 @@ group:
 
 homeassistant:
   customize:
-    sensor.hall_multisensor_battery:
+    sensor.hall_multisensor_battery_level:
       friendly_name: Hall Multisensor Battery
       icon: mdi:battery
     sensor.aeotec_dsb05_multisensor_luminance:

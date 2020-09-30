@@ -9,7 +9,7 @@ homeassistant:
 
     sensor.lounge_east_air_temperature:
       friendly_name: Lounge East
-    sensor.lounge_east_battery:
+    sensor.lounge_east_battery_level:
       friendly_name: Lounge East Battery
       icon: mdi:battery
 
