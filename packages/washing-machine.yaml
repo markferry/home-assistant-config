@@ -23,14 +23,11 @@ homeassistant:
       friendly_name: Washing Machine
       icon: mdi:washing-machine
     sensor.washing_machine_powernode_electric_kwh:
-      friendly_name: Washing Machine Energy
       icon: mdi:washing-machine
     sensor.washing_machine_powernode_electric_w:
-      friendly_name: Washing Machine Power
       icon: mdi:washing-machine
 
     binary_sensor.washing_machine:
-      friendly_name: Washing Machine
       icon: mdi:washing-machine
       initial_state: off
 

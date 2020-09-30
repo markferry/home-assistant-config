@@ -4,13 +4,6 @@
 
 homeassistant:
   customize:
-    sensor.hall_west_air_temperature:
-      friendly_name: Hall West
-    sensor.hall_east_air_temperature:
-      friendly_name: Hall East
-    sensor.annex_hall_west_air_temperature:
-      friendly_name: Annex Hall
-
     climate.hall_west_mode:
       min_temp: 5
       max_temp: 25

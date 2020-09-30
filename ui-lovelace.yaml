@@ -203,15 +203,18 @@ views:
   - title: Kitchen
     icon: mdi:stove
     badges:
-      - sensor.washing_machine_powernode_electric_kwh
-      - sensor.washing_machine_powernode_electric_w
+      - entity: sensor.washing_machine_powernode_electric_kwh
+        name: Washing Machine Energy
+      - entity: sensor.washing_machine_powernode_electric_w
+        name: Washing Machine Power
     cards:
       - type: entities
         title: Kitchen
         show_header_toggle: false
         entities:
           - input_select.kitchen_mode
-          - binary_sensor.washing_machine
+          - entity: binary_sensor.washing_machine
+            name: Washing Machine
           - entity: binary_sensor.gin_fridge_contact_access_control_door_window_open
             name: "Gin Freezer"
           - group.g_kitchen_settings_ui
@@ -226,10 +229,12 @@ views:
   - title: Hall
     icon: mdi:fullscreen-exit
     badges:
-      - binary_sensor.aeotec_dsb05_multisensor_sensor
-      - sensor.aeotec_dsb05_multisensor_luminance
-      - sensor.aeotec_dsb05_multisensor_relative_humidity
-      - sensor.aeotec_dsb05_multisensor_temperature
+      - entity: binary_sensor.aeotec_dsb05_multisensor_sensor
+        name: Motion
+      - entity: sensor.aeotec_dsb05_multisensor_illuminance
+        name: Illuminance
+      - entity: sensor.aeotec_dsb05_multisensor_humidity
+        name: Humidity
       - sensor.hall_temperature
       - sensor.annex_hall_mean_temperature
       - binary_sensor.camera_0_motion_detected
@@ -267,20 +272,32 @@ views:
         title: Hot Tub
         show_header_toggle: false
         entities:
-          - binary_sensor.hottub
-          - switch.hottub_powernode_switch
-          - sensor.hottub_powernode_electric_kwh
-          - sensor.hottub_powernode_electric_w
+          - entity: binary_sensor.hottub
+            name: Heating
+          - entity: switch.hottub_powernode_switch
+            name: Power Supply
+          - entity: sensor.hottub_powernode_electric_kwh
+            name: Energy
+          - entity: sensor.hottub_powernode_electric_w
+            name: Power
       - type: entities
         title: Oil Levels
         show_header_toggle: false
         entities:
-          - sensor.oil_main_litres
-          - sensor.oil_main_percentage
-          - sensor.oil_main_days_remaining
-          - sensor.oil_annex_litres
-          - sensor.oil_annex_percentage
-          - sensor.oil_annex_days_remaining
+          - entity: sensor.oil_main_litres
+            name: "Main Oil Level"
+          - entity: sensor.oil_main_percentage
+            name: "Main Oil Percent"
+          - entity: sensor.oil_main_days_remaining
+            name: "Main Oil Days Remaining"
+          - type: divider
+          - entity: sensor.oil_annex_litres
+            name: "Annex Oil Level"
+          - entity: sensor.oil_annex_percentage
+            name: "Annex Oil Percent"
+          - entity: sensor.oil_annex_days_remaining
+            name: "Annex Oil Days Remaining"
+
       - name: Outside Amplifier
         type: media-control
         entity: media_player.outside_amplifier
@@ -367,12 +384,18 @@ views:
   - title: Armoury
     icon: mdi:security
     badges:
-      - sensor.cm2_temp_c
-      - sensor.cm2_humidity
-      - sensor.cm2_light
-      - sensor.cm2_airflow
-      - sensor.cm2_sound
-      - sensor.cm2_dew_point_c
+      - entity: sensor.cm2_temp_c
+        name: Temperature
+      - entity: sensor.cm2_humidity
+        name: Humidity
+      - entity: sensor.cm2_light
+        name: Luminance
+      - entity: sensor.cm2_airflow
+        name: Airflow
+      - entity: sensor.cm2_sound
+        name: Sound Level
+      - entity: sensor.cm2_dew_point_c
+        name: Dew Point
     cards:
       - type: entities
         title: Network
@@ -388,7 +411,6 @@ views:
           - device_tracker.cyclops
           - device_tracker.study
           - device_tracker.kitchen_tablet
-          - device_tracker.amazon_92f1b9374
           - device_tracker.kitchen_speaker
           - device_tracker.utilityamp
           - device_tracker.outside
@@ -417,6 +439,7 @@ views:
     cards:
       - type: media-control
         entity: media_player.mpd
+        name: Iris Media Player
       - type: entities
         title: Snapcast Volume
         show_header_toggle: false
@@ -490,7 +513,7 @@ views:
         entities:
           - sensor.main_heating_thermostat_air_temperature
           - sensor.annex_heating_thermostat_air_temperature
-          - sensor.aeotec_dsb05_multisensor_temperature
+          - sensor.aeotec_dsb05_multisensor_air_temperature
           - sensor.ballroom_east_current_temperature
           - sensor.hall_west_air_temperature
           - sensor.hall_east_air_temperature

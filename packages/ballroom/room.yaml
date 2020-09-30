@@ -4,9 +4,6 @@
 
 homeassistant:
   customize:
-    sensor.ballroom_east_air_temperature:
-      friendly_name: Ballroom East
-
     switch.greenwave_powernode_24_switch:
       friendly_name: Ballroom Disco Light
       entity_picture: /local/wb-icons/ext_mirrorball.png
@@ -14,10 +11,6 @@ homeassistant:
     climate.ballroom_east_mode:
       min_temp: 5
       max_temp: 25
-
-    # FIXME: media-control card ignores 'name' settings
-    media_player.ballroom_amplifier:
-      friendly_name: Ballroom Amplifier
 
 group:
   # floorplan

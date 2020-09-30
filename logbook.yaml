@@ -10,7 +10,7 @@ include:
   entities:
     - sensor.main_heating_thermostat_air_temperature
     - sensor.annex_heating_thermostat_air_temperature
-    - sensor.aeotec_dsb05_multisensor_temperature
+    - sensor.aeotec_dsb05_multisensor_air_temperature
     - sensor.ballroom_east_air_temperature
     - sensor.hall_west_air_temperature
     - sensor.hall_east_air_temperature
@@ -39,8 +39,8 @@ include:
     - sensor.annex_hall_battery_level
     - sensor.bedroom_annex2_battery_level
     - sensor.guest_room_battery_level
-    - sensor.aeotec_dsb05_multisensor_luminance
-    - sensor.aeotec_dsb05_multisensor_relative_humidity
+    - sensor.aeotec_dsb05_multisensor_illuminance
+    - sensor.aeotec_dsb05_multisensor_humidity
     - sensor.hottub_powernode_electric_w
     - sensor.washing_machine_powernode_electric_w
     - sensor.cm2_temp_c

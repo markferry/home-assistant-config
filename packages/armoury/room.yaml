@@ -4,22 +4,15 @@
 
 homeassistant:
   customize:
-    sensor.cm2_temp_c:
-      friendly_name: Temperature
     sensor.cm2_humidity:
-      friendly_name: Humidity
       icon: mdi:water-percent
     sensor.cm2_light:
-      friendly_name: Luminance
       icon: mdi:weather-sunny
     sensor.cm2_airflow:
-      friendly_name: Airflow
       icon: mdi:weather-windy
     sensor.cm2_sound:
-      friendly_name: Sound Level
       icon: mdi:microphone
     sensor.cm2_dew_point_c:
-      friendly_name: Dew Point
       icon: mdi:weather-rainy
 
     sensor.eaton_ups_status:

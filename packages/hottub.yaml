@@ -17,12 +17,13 @@ input_boolean:
 
 homeassistant:
   customize:
+    # friendly_name needed for floorplan
     binary_sensor.hottub:
       friendly_name: Hot Tub Heating
-      icon: mdi:pot
+      icon: mdi:hot-tub
     switch.hottub_powernode_switch:
       friendly_name: Hot Tub Power Supply
-      icon: mdi:pot
+      icon: mdi:power-plug
     sensor.hottub_powernode_electric_kwh:
       friendly_name: Hot Tub Energy
     sensor.hottub_powernode_electric_w:

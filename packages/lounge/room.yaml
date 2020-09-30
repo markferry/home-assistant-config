@@ -7,9 +7,6 @@ homeassistant:
     group.lounge_lights:
       icon: mdi:lightbulb-on
 
-    sensor.lounge_east_air_temperature:
-      friendly_name: Lounge East
-
     climate.lounge_east_mode:
       min_temp: 5
       max_temp: 25

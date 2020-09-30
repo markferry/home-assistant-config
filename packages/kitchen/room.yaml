@@ -8,10 +8,6 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
-    # FIXME: media-control card ignores 'name' settings
-    media_player.outside_amplifier_zone_2:
-      friendly_name: Kitchen Amplifier
-
 group:
   # floorplan
   kitchen_compact_ui:
