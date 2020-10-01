@@ -48,7 +48,7 @@ get_value_id() {
 enable_polling() {
     value_id=$1
     payload='{"ValueIDKey": '$value_id', "Intensity": '$INTENSITY'}'
-    echo ${PRETEND} mosquitto_pub -h $MQTT_SERVER -t "OpenZWave/1/command/enablepoll/" -m "$payload"
+    ${PRETEND} mosquitto_pub -h $MQTT_SERVER -t "OpenZWave/1/command/enablepoll/" -m "$payload"
 }
 
 for node_id in $@; do # $MY_NODE_IDS
