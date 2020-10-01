@@ -4,13 +4,7 @@
 
 homeassistant:
   customize:
-    sensor.library_temperature:
-      friendly_name: Library
-    sensor.library_battery:
-      friendly_name: Library Battery
-      icon: mdi:battery
-
-    climate.library_mode:
+    climate.library_east_mode:
       min_temp: 5
       max_temp: 25
 
@@ -27,7 +21,7 @@ group:
   library_setpoints:
     name: Library Setpoints
     entities:
-    - climate.library_mode
+    - climate.library_east_mode
 
   library_lights:
     name: Library Lights
@@ -60,19 +54,6 @@ scene:
       group.library_lights:
         state: on
         brightness_pct: 100
-
-sensor:
-  - platform: template
-    sensors:
-      library_battery:
-        value_template: >
-          {% if states.zwave.library %}
-            {{ states.zwave.library.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.library
 
 media_player:
   - name: library

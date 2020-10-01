@@ -4,17 +4,7 @@
 
 homeassistant:
   customize:
-    automation.guest_room_sleep_time:
-      friendly_name: "Guest Room Sleep Time"
-    automation.guest_room_off_time:
-      friendly_name: "Guest Room Off Time"
-
-    sensor.guest_room_battery:
-      friendly_name: "Guest Room Battery"
-      icon: mdi:battery
-
-    climate.guest_room_mode:
-      friendly_name: Guest Room
+    climate.guest_room_north_mode:
       min_temp: 8
       max_temp: 25
 
@@ -31,7 +21,7 @@ group:
   guest_room_setpoints:
     name: Guest Room Setpoints
     entities:
-    - climate.guest_room_mode
+    - climate.guest_room_north_mode
 
   guest_room_lights:
     name: Guest Room Lights
@@ -51,19 +41,6 @@ scene:
     entities:
       group.guest_room_lights:
         state: on
-
-sensor:
-  - platform: template
-    sensors:
-      guest_room_battery:
-        value_template: >
-          {% if states.zwave.guest_room %}
-            {{ states.zwave.guest_room.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.guest_room
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

@@ -7,12 +7,6 @@ homeassistant:
     group.lounge_lights:
       icon: mdi:lightbulb-on
 
-    sensor.lounge_east_temperature:
-      friendly_name: Lounge East
-    sensor.lounge_east_battery:
-      friendly_name: Lounge East Battery
-      icon: mdi:battery
-
     climate.lounge_east_mode:
       min_temp: 5
       max_temp: 25
@@ -67,19 +61,6 @@ scene:
       group.lounge_lights:
         state: on
         brightness_pct: 50
-
-sensor:
-  - platform: template
-    sensors:
-      lounge_east_battery:
-        value_template: >
-          {% if states.zwave.stellaz_55 %}
-            {{ states.zwave.stellaz_55.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.stellaz_55
 
 switch:
   - name: Lounge East Demand

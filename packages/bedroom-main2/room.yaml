@@ -4,9 +4,7 @@
 
 homeassistant:
   customize:
-    sensor.bedroom_main2_battery:
-      icon: mdi:battery
-    climate.bedroom_main2_mode:
+    climate.bedroom_main2_east_mode:
       min_temp: 8
       max_temp: 25
 
@@ -21,7 +19,7 @@ group:
 
   bedroom_main2_setpoints:
     entities:
-    - climate.bedroom_main2_mode
+    - climate.bedroom_main2_east_mode
 
   bedroom_main2_lights:
 
@@ -43,19 +41,6 @@ scene:
     entities:
       group.bedroom_main2_lights:
         state: on
-
-sensor:
-  - platform: template
-    sensors:
-      bedroom_main2_battery:
-        value_template: >
-          {% if states.zwave.bedroom_main2 %}
-            {{ states.zwave.bedroom_main2.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.bedroom_main2
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

@@ -1,10 +1,10 @@
 homeassistant:
   customize:
+    # friendly_names required for floorplan
     script.all_rooms_audio:
       friendly_name: Music Everywhere
       icon: mdi:music-box-outline
     media_player.mpd:
-      friendly_name: "Iris Media Player"
       icon: mdi:speaker-wireless
     media_player.snapcast_client_study:
       friendly_name: Study Snapcast
@@ -20,8 +20,6 @@ homeassistant:
       friendly_name: Outside Snapcast
     media_player.snapcast_client_bedroom_mark:
       friendly_name: "Mark's Bedroom Snapcast"
-    media_player.snapcast_client_9cb6d08b2a6f:
-      friendly_name: Canard Snapcast
 
     input_number.snapcast_client_bedroom_mark:
       entity_picture: /local/wb-icons/wb_mark.png

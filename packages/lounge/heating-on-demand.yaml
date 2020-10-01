@@ -18,7 +18,7 @@ group:
     entities:
       - sensor.lounge_temperature
       - sensor.lounge_east_current_temperature
-      - sensor.lounge_east_temperature
+      - sensor.lounge_east_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
@@ -46,7 +46,7 @@ switch:
 sensor:
   - name: lounge_east_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.lounge_east_temperature/state'
+    state_topic: 'ha/raw/sensor.lounge_east_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -70,7 +70,7 @@ automation:
   - alias: "lounge_update_temperature"
     trigger:
       - platform: state
-        entity_id: sensor.lounge_east_temperature
+        entity_id: sensor.lounge_east_air_temperature
     action:
       - service: mqtt.publish
         data_template:

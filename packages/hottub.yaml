@@ -17,20 +17,21 @@ input_boolean:
 
 homeassistant:
   customize:
+    # friendly_name needed for floorplan
     binary_sensor.hottub:
       friendly_name: Hot Tub Heating
-      icon: mdi:pot
-    switch.greenwave_powernode_53_switch:
+      icon: mdi:hot-tub
+    switch.hottub_powernode_switch:
       friendly_name: Hot Tub Power Supply
-      icon: mdi:pot
-    sensor.greenwave_powernode_53_energy:
+      icon: mdi:power-plug
+    sensor.hottub_powernode_electric_kwh:
       friendly_name: Hot Tub Energy
-    sensor.greenwave_powernode_53_power:
+    sensor.hottub_powernode_electric_w:
       friendly_name: Hot Tub Power
 
 google_assistant:
   entity_config:
-    switch.greenwave_powernode_53_switch:
+    switch.hottub_powernode_switch:
       name: "Hot Tub Power"
       expose: true
       room: "Outside"
@@ -41,9 +42,9 @@ group:
     icon: mdi:pot
     entities:
     - binary_sensor.hottub
-    - switch.greenwave_powernode_53_switch
-    - sensor.greenwave_powernode_53_energy
-    - sensor.greenwave_powernode_53_power
+    - switch.hottub_powernode_switch
+    - sensor.hottub_powernode_electric_kwh
+    - sensor.hottub_powernode_electric_w
 
 # Power detection for the hot tub
 # Debounce numeric_state with an input_boolean.
@@ -55,7 +56,7 @@ automation:
 - alias: 'Hot Tub Hi'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_53_power
+    entity_id: sensor.hottub_powernode_electric_w
     above: 1500
   action:
     service: input_boolean.turn_on
@@ -64,7 +65,7 @@ automation:
 - alias: 'Hot Tub Lo'
   trigger:
     platform: numeric_state
-    entity_id: sensor.greenwave_powernode_53_power
+    entity_id: sensor.hottub_powernode_electric_w
     below: 200
   action:
     service: input_boolean.turn_off

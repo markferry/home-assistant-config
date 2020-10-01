@@ -10,20 +10,20 @@ group:
   g_debug_bedroom_main3_heating:
     entities:
       - climate.bedroom_main3_thermostat
-      - climate.bedroom_main3_mode
+      - climate.bedroom_main3_east_mode
       - switch.bedroom_main3_demand
 
   g_debug_bedroom_main3_temperature:
     entities:
       - sensor.bedroom_main3_mean_temperature
       - sensor.bedroom_main3_current_temperature
-      - sensor.bedroom_main3_temperature
+      - sensor.bedroom_main3_east_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_main3_thermostat:
     entities:
-      - climate.bedroom_main3_mode
+      - climate.bedroom_main3_east_mode
 
 climate:
   - name: bedroom_main3_thermostat
@@ -47,7 +47,7 @@ switch:
 sensor:
   - name: bedroom_main3_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.bedroom_main3_temperature/state'
+    state_topic: 'ha/raw/sensor.bedroom_main3_east_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -72,7 +72,7 @@ automation:
   - alias: "bedroom_main3_update_temperature"
     trigger:
       - platform: state
-        entity_id: sensor.bedroom_main3_temperature
+        entity_id: sensor.bedroom_main3_east_air_temperature
     action:
       - service: mqtt.publish
         data_template:
@@ -83,7 +83,7 @@ automation:
   - alias: "bedroom_main3_update_setpoint"
     trigger:
       - platform: state
-        entity_id: climate.bedroom_main3_mode
+        entity_id: climate.bedroom_main3_east_mode
     action:
       - service: climate.set_temperature
         data_template:

@@ -7,16 +7,11 @@ homeassistant:
     group.bedroom_mark_lights:
       icon: mdi:lightbulb-on
 
-    light.bedroom_mark_overhead_level:
+    light.bedroom_mark_overhead_instance_1_level:
       friendly_name: "Overhead"
       icon: mdi:ceiling-light
     light.bedroom_mark_lamp:
       friendly_name: "Dressing Table"
-
-    sensor.bedroom_mark_south_battery:
-      icon: mdi:battery
-    sensor.bedroom_mark_north_battery:
-      icon: mdi:battery
 
 group:
   # floorplan
@@ -37,7 +32,7 @@ group:
   bedroom_mark_lights:
     name: "Mark's Bedroom Lights"
     entities:
-    - light.bedroom_mark_overhead_level
+    - light.bedroom_mark_overhead_instance_1_level
     - light.bedroom_mark_lamp
 
   bedroom_mark_appliances:
@@ -70,32 +65,6 @@ scene:
     entities:
       group.bedroom_mark_lights:
         state: on
-
-sensor:
-  - platform: template
-    sensors:
-      bedroom_mark_south_battery:
-        value_template: >
-          {% if states.zwave.bedroom_mark_south %}
-            {{ states.zwave.bedroom_mark_south.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.bedroom_mark_south
-
-  - platform: template
-    sensors:
-      bedroom_mark_north_battery:
-        value_template: >
-          {% if states.zwave.bedroom_mark_north %}
-            {{ states.zwave.bedroom_mark_north.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.bedroom_mark_north
-
 
 light:
   - platform: switch

@@ -4,11 +4,6 @@
 
 homeassistant:
   customize:
-    sensor.study_east_battery:
-      icon: mdi:battery
-    sensor.study_west_battery:
-      icon: mdi:battery
-
     climate.study_east_mode:
       min_temp: 5
       max_temp: 25
@@ -69,30 +64,6 @@ scene:
       group.study_lights:
         state: on
         brightness_pct: 100
-
-sensor:
-  - platform: template
-    sensors:
-      study_east_battery:
-        value_template: >
-          {% if states.zwave.study_east %}
-            {{ states.zwave.study_east.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.study_east
-
-      study_west_battery:
-        value_template: >
-          {% if states.zwave.study_west %}
-            {{ states.zwave.study_west.attributes.battery_level}}
-          {%  else %}
-            unknown
-          {%  endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.study_west
-
 switch:
   # Now for supporting mock thermostats only.
   #  Remove when mock thermostats move to mqtt hvac

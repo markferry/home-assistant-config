@@ -47,21 +47,16 @@ sensor:
 
 homeassistant:
   customize:
+    # No matching device classes, so set default icons here
     sensor.oil_main_litres:
-      friendly_name: "Main Oil Level"
-      icon: mdi:oil
+      icon: mdi:oil-level
     sensor.oil_main_percentage:
-      friendly_name: "Main Oil Percent"
-      icon: mdi:oil
+      icon: mdi:water-percent
     sensor.oil_main_days_remaining:
-      friendly_name: "Main Oil Days Remaining"
-      icon: mdi:oil
+      icon: mdi:timer-sand
     sensor.oil_annex_litres:
-      friendly_name: "Annex Oil Level"
-      icon: mdi:oil
+      icon: mdi:oil-level
     sensor.oil_annex_percentage:
-      friendly_name: "Annex Oil Percent"
-      icon: mdi:oil
+      icon: mdi:water-percent
     sensor.oil_annex_days_remaining:
-      friendly_name: "Annex Oil Days Remaining"
-      icon: mdi:oil
+      icon: mdi:timer-sand

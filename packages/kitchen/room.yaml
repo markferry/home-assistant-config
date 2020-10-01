@@ -4,19 +4,9 @@
 
 homeassistant:
   customize:
-    climate.kitchen_mode:
+    climate.kitchen_west_mode:
       min_temp: 5
       max_temp: 25
-
-    sensor.kitchen_temperature:
-      friendly_name: Kitchen
-    sensor.kitchen_battery:
-      friendly_name: Kitchen Battery
-      icon: mdi:battery
-
-    # FIXME: media-control card ignores 'name' settings
-    media_player.outside_amplifier_zone_2:
-      friendly_name: Kitchen Amplifier
 
 group:
   # floorplan
@@ -32,7 +22,7 @@ group:
   kitchen_setpoints:
     name: Kitchen Setpoints
     entities:
-    - climate.kitchen_mode
+    - climate.kitchen_west_mode
 
   kitchen_lights:
     name: Kitchen Lights
@@ -71,19 +61,6 @@ scene:
         brightness_pct: 100
       media_player.outside_amplifier_zone_2:
         state: on
-
-sensor:
-  - platform: template
-    sensors:
-      kitchen_battery:
-        value_template: >
-          {% if states.zwave.kitchen %}
-            {{ states.zwave.kitchen.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.kitchen
 
 cast:
   media_player:

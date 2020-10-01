@@ -20,8 +20,8 @@ group:
       - sensor.hall_temperature
       - sensor.hall_east_current_temperature
       - sensor.hall_west_current_temperature
-      - sensor.hall_east_temperature
-      - sensor.hall_west_temperature
+      - sensor.hall_east_air_temperature
+      - sensor.hall_west_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
@@ -50,7 +50,7 @@ switch:
 sensor:
   - name: hall_east_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.hall_east_temperature/state'
+    state_topic: 'ha/raw/sensor.hall_east_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -59,7 +59,7 @@ sensor:
 
   - name: hall_west_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.hall_west_temperature/state'
+    state_topic: 'ha/raw/sensor.hall_west_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -78,9 +78,9 @@ automation:
   - alias: "hall_update_temperature"
     trigger:
       - platform: state
-        entity_id: sensor.hall_east_temperature
+        entity_id: sensor.hall_east_air_temperature
       - platform: state
-        entity_id: sensor.hall_west_temperature
+        entity_id: sensor.hall_west_air_temperature
     action:
       - service: mqtt.publish
         data_template:

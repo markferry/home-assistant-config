@@ -4,30 +4,3 @@ group.all_automations:
 group.all_lights:
   icon: mdi:lightbulb-on
 
-climate.main_heating_thermostat_heating_1:
-  friendly_name: Main Heating Thermostat
-sensor.main_heating_thermostat_temperature:
-  friendly_name: Main Heating Temperature
-switch.main_heating_thermostat_switch:
-  friendly_name: Main Heating Holiday Mode
-climate.annex_heating_thermostat_heating_1:
-  friendly_name: Annex Heating Thermostat
-sensor.annex_heating_thermostat_temperature:
-  friendly_name: Annex Heating Temperature
-switch.annex_heating_thermostat_switch:
-  friendly_name: Annex Heating Holiday Mode
-switch.main_heating_relay_switch:
-  friendly_name: Main Heating Switch
-switch.main_heating_relay_boiler:
-  friendly_name: Main Boiler Switch
-switch.main_heating_relay_hot_water:
-  friendly_name: Main Hot Water Switch
-switch.annex_heating_relay_switch:
-  friendly_name: Annex Heating Switch
-
-sensor.main_heating_thermostat_battery:
-  friendly_name: Main Heating Battery
-  icon: mdi:battery
-sensor.annex_heating_thermostat_battery:
-  friendly_name: Annex Heating Battery
-  icon: mdi:battery

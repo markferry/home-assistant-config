@@ -28,8 +28,8 @@ group:
       - sensor.bedroom_mark_temperature
       - sensor.bedroom_mark_south_current_temperature
       - sensor.bedroom_mark_north_current_temperature
-      - sensor.bedroom_mark_south_temperature
-      - sensor.bedroom_mark_north_temperature
+      - sensor.bedroom_mark_south_air_temperature
+      - sensor.bedroom_mark_north_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
@@ -58,7 +58,7 @@ switch:
 sensor:
   - name: bedroom_mark_south_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.bedroom_mark_south_temperature/state'
+    state_topic: 'ha/raw/sensor.bedroom_mark_south_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -67,7 +67,7 @@ sensor:
 
   - name: bedroom_mark_north_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.bedroom_mark_north_temperature/state'
+    state_topic: 'ha/raw/sensor.bedroom_mark_north_air_temperature/state'
     ## dev: for mock mqtt devices
     #value_template: '{{ value_json.temperature }}'
     unit_of_measurement: "\xB0C"
@@ -93,9 +93,9 @@ automation:
   - alias: "bedroom_mark_update_temperature"
     trigger:
       - platform: state
-        entity_id: sensor.bedroom_mark_south_temperature
+        entity_id: sensor.bedroom_mark_south_air_temperature
       - platform: state
-        entity_id: sensor.bedroom_mark_north_temperature
+        entity_id: sensor.bedroom_mark_north_air_temperature
     action:
       - service: mqtt.publish
         data_template:

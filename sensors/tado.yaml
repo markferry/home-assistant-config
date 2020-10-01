@@ -1,5 +1,0 @@
-- platform: template
-  sensors:
-    js_bedroom_present:
-      value_template: >
-        {{ 'not_home' if states.sensor.js_bedroom_tado_mode.state == "AWAY" else 'home' }}

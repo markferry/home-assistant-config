@@ -4,23 +4,13 @@
 
 homeassistant:
   customize:
-    sensor.ballroom_east_temperature:
-      friendly_name: Ballroom East
-    sensor.ballroom_east_battery:
-      friendly_name: Ballroom East Battery
-      icon: mdi:battery
-
-    switch.greenwave_powernode_62_switch:
+    switch.greenwave_powernode_24_switch:
       friendly_name: Ballroom Disco Light
       entity_picture: /local/wb-icons/ext_mirrorball.png
 
     climate.ballroom_east_mode:
       min_temp: 5
       max_temp: 25
-
-    # FIXME: media-control card ignores 'name' settings
-    media_player.ballroom_amplifier:
-      friendly_name: Ballroom Amplifier
 
 group:
   # floorplan
@@ -45,7 +35,7 @@ group:
     name: Ballroom Party Lights
     icon: mdi:lightbulb-on
     entities:
-    - switch.greenwave_powernode_62_switch
+    - switch.greenwave_powernode_24_switch
 
 scene:
   - name: ballroom_off
@@ -84,19 +74,6 @@ scene:
         brightness_pct: 100
       group.ballroom_party_lights:
         state: off
-
-sensor:
-  - platform: template
-    sensors:
-      ballroom_east_battery:
-        value_template: >
-          {% if states.zwave.ballroom_east %}
-            {{ states.zwave.ballroom_east.attributes.battery_level }}
-          {% else %}
-            unknown
-          {% endif %}
-        unit_of_measurement: '%'
-        entity_id: zwave.ballroom_east
 
 switch:
   - name: Ballroom Demand
