@@ -28,7 +28,7 @@ rfx_lights:
 
 settings:
   name: Settings
-  icon: mdi:settings
+  icon: mdi:cog
   entities:
   - group.temperatures
   - group.thermostats

@@ -11,7 +11,7 @@ homeassistant:
 group:
   # floorplan
   bedroom_annex2_compact_ui:
-    name: "Monica's Bedroom"
+    name: "Annex Bedroom 2"
     entities:
     - input_select.bedroom_annex2_mode
     - climate.bedroom_annex2_thermostat
