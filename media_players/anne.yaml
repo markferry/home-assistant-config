@@ -1,5 +1,5 @@
 - name: "Anne's Tablet"
   platform: kodi
-  host: anne
+  host: anne.home.whalebarn.com
   port: 8080
 
