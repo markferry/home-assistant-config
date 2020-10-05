@@ -1,7 +1,7 @@
 group:
   g_bedroom_main3_settings_ui:
     name: Settings
-    icon: mdi:settings
+    icon: mdi:cog
     entities:
       - input_number.bedroom_main3_temperature_off
       - input_number.bedroom_main3_temperature_cosy

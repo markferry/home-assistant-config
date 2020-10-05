@@ -1,7 +1,7 @@
 group:
   g_guest_room_settings_ui:
     name: Settings
-    icon: mdi:settings
+    icon: mdi:cog
     entities:
       - input_number.guest_room_temperature_off
       - input_number.guest_room_temperature_cosy

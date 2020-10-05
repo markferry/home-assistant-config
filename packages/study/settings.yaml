@@ -1,7 +1,7 @@
 group:
   g_study_settings_ui:
     name: Settings
-    icon: mdi:settings
+    icon: mdi:cog
     entities:
       - input_number.study_temperature_off
       - input_number.study_temperature_cosy

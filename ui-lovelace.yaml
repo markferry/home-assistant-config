@@ -95,6 +95,7 @@ views:
                 entity: group.g_bedroom_mark_media_dimming
               - name: Settings
                 entity: group.g_bedroom_mark_settings_ui
+                icon: mdi:cog
 
           - name: "Mark's Bedroom"
             type: thermostat
@@ -123,6 +124,7 @@ views:
                 entity: sensor.bedroom_main2_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_main2_settings_ui
+                icon: mdi:cog
           - name: "Olga's Bedroom"
             type: thermostat
             entity: climate.bedroom_main2_thermostat
@@ -147,6 +149,7 @@ views:
                 entity: sensor.bedroom_main3_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_main3_settings_ui
+                icon: mdi:cog
           - name: "Elle's Bedroom"
             type: thermostat
             entity: climate.bedroom_main3_thermostat
@@ -175,6 +178,7 @@ views:
                 entity: sensor.bedroom_annex2_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_annex2_settings_ui
+                icon: mdi:cog
           - name: "Anne's Office"
             type: thermostat
             entity: climate.bedroom_annex2_thermostat
@@ -378,6 +382,7 @@ views:
                 entity: sensor.guest_room_mean_temperature
               - name: Settings
                 entity: group.g_guest_room_settings_ui
+                icon: mdi:cog
           - name: Guest Room
             type: thermostat
             entity: climate.guest_room_thermostat
@@ -469,7 +474,7 @@ views:
             entity: media_player.outside_amplifier
 
   - title: Settings
-    icon: mdi:settings
+    icon: mdi:hazard-lights
     cards:
       - type: entities
         title: Main Heating Demand
