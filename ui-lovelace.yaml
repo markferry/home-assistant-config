@@ -359,7 +359,7 @@ views:
 
       - name: "Ballroom Heat"
         type: thermostat
-        entity: climate.library_thermostat
+        entity: climate.ballroom_thermostat
       - name: Ballroom Media
         type: media-control
         entity: media_player.ballroom
