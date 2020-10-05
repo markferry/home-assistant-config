@@ -4,23 +4,23 @@
 google_assistant:
   entity_config:
     climate.bedroom_annex2_thermostat:
-      name: "Monica's Bedroom Thermostat"
+      name: "Anne's Office Thermostat"
       <<: &ga_bedroom_annex2_expose
         expose: true
-        room: "Monica's Bedroom"
+        room: "Anne's Office"
 
     group.bedroom_annex2_lights:
-      name: "Monica's Bedroom Lights"
+      name: "Anne's Office Lights"
       <<: *ga_bedroom_annex2_expose
 
     script.voice_bedroom_annex2_off:
-      name: "Monica's Bedroom Shutdown"
+      name: "Anne's Office Shutdown"
       <<: *ga_bedroom_annex2_expose
     script.voice_bedroom_annex2_sleep:
-      name: "Monica's Bedroom Sleep Mode"
+      name: "Anne's Office Sleep Mode"
       <<: *ga_bedroom_annex2_expose
     script.voice_bedroom_annex2_cosy:
-      name: "Monica's Bedroom Cosy Mode"
+      name: "Anne's Office Cosy Mode"
       <<: *ga_bedroom_annex2_expose
 
 script:

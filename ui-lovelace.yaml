@@ -22,8 +22,6 @@ views:
               name: Mark
             - entity: binary_sensor.anne_present
               name: Anne
-            - entity: binary_sensor.monica_present
-              name: Monica
             - entity: binary_sensor.olga_present
               name: Olga
             - entity: binary_sensor.elle_present
@@ -40,6 +38,8 @@ views:
               name: Aneta
             - entity: binary_sensor.thomas_present
               name: Thomas
+            - entity: binary_sensor.monica_present
+              name: Monica
           state_filter:
             - "on"
           show_empty: false
@@ -58,6 +58,7 @@ views:
         entities:
           - name: "Guest Room Mode"
             entity: input_select.guest_room_mode
+            icon: mdi:bed-empty
           - name: "Mark's Bedroom Mode"
             entity: input_select.bedroom_mark_mode
             image: /local/wb-icons/wb_mark.png
@@ -67,9 +68,10 @@ views:
           - name: "Elle's Bedroom Mode"
             entity: input_select.bedroom_main3_mode
             image: /local/wb-icons/wb_elle.png
-          - name: "Monica's Bedroom Mode"
-            entity: input_select.bedroom_annex2_mode
-            image: /local/wb-icons/wb_monica.png
+#          - type: divider
+#          - name: "Anne's Office Mode"
+#            entity: input_select.bedroom_annex2_mode
+#            image: /local/wb-icons/wb_anne.png
 
   - title: "Mark's Bedroom"
     icon: mdi:bed
@@ -156,16 +158,15 @@ views:
       - user: "a3d54febf3f143edb7541ff90385a573"
     cards:
 
-  - title: "Monica's Bedroom"
-    icon: mdi:bed
+  - title: "Anne's Office"
+    icon: mdi:desk
     visible:
-      #  monica
-      - user: "392c427af26a407bb4164e58379861bb"
+      - user: none
     cards:
       - type: vertical-stack
         cards:
           - type: entities
-            title: "Monica's Bedroom"
+            title: "Anne's Office"
             show_header_toggle: false
             entities:
               - name: Mode
@@ -174,7 +175,7 @@ views:
                 entity: sensor.bedroom_annex2_mean_temperature
               - name: Settings
                 entity: group.g_bedroom_annex2_settings_ui
-          - name: "Monica's Bedroom"
+          - name: "Anne's Office"
             type: thermostat
             entity: climate.bedroom_annex2_thermostat
 
