@@ -1,4 +1,4 @@
 - name: "Mark's Tablet"
   platform: kodi
-  host: mark
+  host: mark.home.whalebarn.com
   port: 8080

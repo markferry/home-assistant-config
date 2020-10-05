@@ -1,5 +1,5 @@
 - name: "Jerome's Tablet"
   platform: kodi
-  host: orange
+  host: orange.home.whalebarn.com
   port: 8080
 
