@@ -7,3 +7,6 @@ pyozw.sqlite
 OZW_Log.txt
 deps
 www/openhab-icons
+src
+ozwdaemon
+.vim
