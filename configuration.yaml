@@ -22,6 +22,7 @@ homeassistant:
     package_olga: !include people/olga.yaml
     package_elle: !include people/elle.yaml
 
+    package_heating_on_demand: !include packages/heating-on-demand.yaml
 
     package_aeotec_multisensor: !include packages/aeotec_multisensor.yaml
     package_camera0: !include packages/dahua-cameras.yaml

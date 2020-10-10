@@ -1,0 +1,149 @@
+homeassistant:
+  customize:
+    climate.main_heating_thermostat_heating_1:
+      min_temp: 5
+      max_temp: 25
+    climate.annex_heating_thermostat_heating_1:
+      min_temp: 5
+      max_temp: 25
+
+automation:
+  # Heating On Demand
+  #
+  - alias: main_boiler_demand_on
+    trigger:
+      platform: state
+      entity_id: group.main_heating_demand
+      to: "on"
+      for:
+        seconds: 10
+    action:
+      - service: automation.trigger
+        data:
+          entity_id: automation.main_heating_poll_on
+      - service: notify.automations
+        data:
+          message: "Main Heating Demand on"
+
+  - alias: main_heating_poll_on
+    trigger:
+      - platform: time_pattern
+        minutes: "/20"
+        seconds: 12
+    condition:
+      - condition: state
+        entity_id: group.main_heating_demand
+        state: "on"
+    action:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.main_heating_relay_instance_1_switch
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.main_heating_thermostat_heating_1
+          temperature: 22
+          hvac_mode: "heat"
+
+  - alias: main_boiler_demand_off
+    trigger:
+      platform: state
+      entity_id: group.main_heating_demand
+      to: "off"
+      for:
+        seconds: 10
+    action:
+      - service: automation.trigger
+        data:
+          entity_id: automation.main_heating_poll_off
+      - service: notify.automations
+        data:
+          message: "Main Heating Demand off"
+
+  - alias: main_heating_poll_off
+    trigger:
+      - platform: time_pattern
+        minutes: "/20"
+        seconds: 12
+    condition:
+      - condition: state
+        entity_id: group.main_heating_demand
+        state: "off"
+    action:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.main_heating_relay_instance_1_switch
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.main_heating_thermostat_heating_1
+          temperature: 10
+
+  - alias: annex_thermostat_demand_on
+    trigger:
+      - platform: state
+        entity_id: group.annex_heating_demand
+        to: "on"
+        for:
+          seconds: 10
+    action:
+      - service: switch.turn_on
+        entity_id: switch.annex_heating_relay_instance_1_switch
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.annex_heating_thermostat_heating_1
+          temperature: 22
+          hvac_mode: "heat"
+      - service: notify.automations
+        data:
+          message: "Annex Heating Demand on"
+
+  - alias: annex_thermostat_demand_off
+    trigger:
+      - platform: state
+        entity_id: group.annex_heating_demand
+        to: "off"
+        for:
+          seconds: 10
+    action:
+      - service: switch.turn_off
+        entity_id: switch.annex_heating_relay_instance_1_switch
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.annex_heating_thermostat_heating_1
+          temperature: 10
+      - service: notify.automations
+        data:
+          message: "Annex Heating Demand off"
+
+  # Map virtual setpoint climate.foo_thermostat to setpoints group.g_foo_thermostat
+  - alias: heating_on_demand_set_real_thermostats
+    trigger:
+      - platform: state
+        entity_id: climate.study_thermostat
+      - platform: state
+        entity_id: climate.kitchen_thermostat
+      - platform: state
+        entity_id: climate.hall_thermostat
+      - platform: state
+        entity_id: climate.annex_hall_thermostat
+      - platform: state
+        entity_id: climate.lounge_thermostat
+      - platform: state
+        entity_id: climate.library_thermostat
+      - platform: state
+        entity_id: climate.ballroom_thermostat
+      - platform: state
+        entity_id: climate.guest_room_thermostat
+      - platform: state
+        entity_id: climate.bedroom_mark_thermostat
+      - platform: state
+        entity_id: climate.bedroom_main2_thermostat
+      - platform: state
+        entity_id: climate.bedroom_main3_thermostat
+      - platform: state
+        entity_id: climate.bedroom_annex2_thermostat
+    action:
+      - service: climate.set_temperature
+        data_template:
+          entity_id: '{{trigger.entity_id.replace("climate.", "group.g_")}}'
+          temperature: '{{ trigger.to_state.attributes.temperature }}'
+
