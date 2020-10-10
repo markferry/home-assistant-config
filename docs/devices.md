@@ -71,7 +71,7 @@ When unused have `<device>_<id>` format
 4: - (was study door)
 5: - (was front door lock)
 6: front_door_contact (#63)
-7: greenwave_powernode_7 (my desk)
+7: greenwave_powernode_7 (under stairs)
 8: bedroom_main2_east (SpiritZ)
 9: - (was study door)
 10: study_east (#14)
@@ -102,6 +102,7 @@ When unused have `<device>_<id>` format
 35: - (was heiman_contact)
 36: study_door_contact (#65)
 37: front_door_lock
+38: study_west
 
 ??: Postbox contact
 ??: bedroom_annex2_west
