@@ -58,6 +58,7 @@ sensor:
     type: max  # minimize occasional 0 readings. Replace with median?
     entity_ids:
       - sensor.annex_hall_current_temperature
+      - sensor.annex_heating_thermostat_air_temperature
 
 automation:
   # Redirect received temperatures over mqtt
