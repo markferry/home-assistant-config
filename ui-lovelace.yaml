@@ -220,7 +220,7 @@ views:
         show_header_toggle: false
         entities:
           - input_select.kitchen_mode
-          - entity: sensor.kitchen_temperature
+          - entity: sensor.kitchen_mean_temperature
             name: "Current Temperature"
           - entity: binary_sensor.washing_machine
             name: Washing Machine
@@ -340,7 +340,7 @@ views:
         show_header_toggle: false
         entities:
           - input_select.library_mode
-          - entity: sensor.library_temperature
+          - entity: sensor.library_mean_temperature
             name: "Current Temperature"
           - group.g_library_settings_ui
 
