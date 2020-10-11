@@ -164,7 +164,7 @@ mqtt:
   client_id: home-assistant
   keepalive: 60
   discovery: true
-  discovery_prefix: ha
+  discovery_prefix: homeassistant
 
 rfxtrx:
   device: /dev/ttyUSB22
