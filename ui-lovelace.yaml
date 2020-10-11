@@ -194,6 +194,8 @@ views:
         show_header_toggle: false
         entities:
           - input_select.study_mode
+          - entity: sensor.study_temperature
+            name: "Current Temperature"
           - entity: binary_sensor.study_door_contact_access_control_door_window_open
             name: "Study Door"
           - group.g_study_settings_ui
@@ -218,6 +220,8 @@ views:
         show_header_toggle: false
         entities:
           - input_select.kitchen_mode
+          - entity: sensor.kitchen_temperature
+            name: "Current Temperature"
           - entity: binary_sensor.washing_machine
             name: Washing Machine
           - entity: binary_sensor.gin_fridge_contact_access_control_door_window_open
@@ -309,14 +313,14 @@ views:
 
   - title: Lounge
     icon: mdi:sofa
-    badges:
-      - sensor.lounge_temperature
     cards:
       - type: entities
         title: Lounge
         show_header_toggle: false
         entities:
           - input_select.lounge_mode
+          - entity: sensor.lounge_temperature
+            name: "Current Temperature"
           - group.lounge_lights
           - group.g_lounge_media_dimming
           - group.g_lounge_settings_ui
@@ -336,6 +340,8 @@ views:
         show_header_toggle: false
         entities:
           - input_select.library_mode
+          - entity: sensor.library_temperature
+            name: "Current Temperature"
           - group.g_library_settings_ui
 
       - name: "Library Heat"
@@ -353,6 +359,8 @@ views:
         show_header_toggle: false
         entities:
           - input_select.ballroom_mode
+          - entity: sensor.ballroom_temperature
+            name: "Current Temperature"
           - group.ballroom_party_lights
           - group.g_ballroom_media_dimming
           - group.g_ballroom_settings_ui
