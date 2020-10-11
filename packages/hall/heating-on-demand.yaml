@@ -72,6 +72,7 @@ sensor:
     entity_ids:
       - sensor.hall_east_current_temperature
       - sensor.hall_west_current_temperature
+      - sensor.main_heating_thermostat_air_temperature
 
 automation:
   # Redirect received temperatures over mqtt
