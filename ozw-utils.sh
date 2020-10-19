@@ -47,8 +47,9 @@ get_value_id() {
 
 enable_poll() {
     node_id=$1
+    intensity=${2:-$INTENSITY}
     value_id=$(get_value_id $node_id)
-    payload='{"ValueIDKey": '$value_id', "Intensity": '$INTENSITY'}'
+    payload='{"ValueIDKey": '$value_id', "Intensity": '$intensity'}'
     ${PRETEND} mosquitto_pub -h $MQTT_SERVER -t "OpenZWave/1/command/enablepoll/" -m "$payload"
 }
 
