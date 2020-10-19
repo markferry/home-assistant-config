@@ -78,6 +78,8 @@ views:
     visible:
       #  mark
       - user: "c907a83f81d34d878c4d939b5901004b"
+      # liane
+      - user: "6dbd46f4857d4e6db222c25155810d26"
     cards:
       - type: vertical-stack
         cards:
