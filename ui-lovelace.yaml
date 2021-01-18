@@ -459,31 +459,25 @@ views:
   - title: Multiroom Audio
     icon: mdi:music
     cards:
-      - type: media-control
-        entity: media_player.mpd
-        name: Iris Media Player
-      - type: entities
-        title: Snapcast Volume
-        show_header_toggle: false
-        entities:
-          - input_number.snapcast_client_study
-          - input_number.snapcast_client_kitchen2
-          - input_number.snapcast_client_lounge
-          - input_number.snapcast_client_library
-          - input_number.snapcast_client_ballroom
-          - input_number.snapcast_client_bedroom_mark
-          - input_number.snapcast_client_outside
-      - type: horizontal-stack
+      - type: vertical-stack
         cards:
-          - name: "Kitchen Amplifier"
-            type: media-control
-            entity: media_player.outside_amplifier_zone_2
-          - name: Ballroom Amplifier
-            type: media-control
-            entity: media_player.ballroom_amplifier
-          - name: Outside Amplifier
-            type: media-control
-            entity: media_player.outside_amplifier
+          - type: media-control
+            entity: media_player.mpd
+            name: Iris Media Player
+          - type: iframe
+            url: http://media.home.whalebarn.com:1780/
+            aspect_ratio: 100%
+          - type: horizontal-stack
+            cards:
+              - name: "Kitchen Amplifier"
+                type: media-control
+                entity: media_player.outside_amplifier_zone_2
+              - name: Ballroom Amplifier
+                type: media-control
+                entity: media_player.ballroom_amplifier
+              - name: Outside Amplifier
+                type: media-control
+                entity: media_player.outside_amplifier
 
   - title: Settings
     icon: mdi:hazard-lights
