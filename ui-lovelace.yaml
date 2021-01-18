@@ -18,28 +18,30 @@ views:
           title: Where is Everyone?
           show_header_toggle: false
           entities:
-            - entity: binary_sensor.mark_present
+            - entity: person.mark
               name: Mark
-            - entity: binary_sensor.anne_present
+            - entity: person.anne_porter
               name: Anne
-            - entity: binary_sensor.olga_present
+            - entity: person.olga_plocienniczak
               name: Olga
-            - entity: binary_sensor.elle_present
+            - entity: person.elle_higgins
               name: Elle
         - type: entity-filter
           entities:
-            - entity: binary_sensor.jerome_present
+            - entity: person.jerome_dilley
               name: Jerome
-            - entity: binary_sensor.ros_present
+            - entity: person.rosalyn_hart
               name: Ros
-            - entity: binary_sensor.liane_present
+            - entity: person.liane_smith
               name: Liane
-            - entity: binary_sensor.aneta_present
+            - entity: person.aneta_jakielaszek
               name: Aneta
-            - entity: binary_sensor.thomas_present
+            - entity: person.thomas_northcote
               name: Thomas
-            - entity: binary_sensor.monica_present
+            - entity: person.monica_commons
               name: Monica
+
+
           state_filter:
             - "on"
           show_empty: false
