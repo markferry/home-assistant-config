@@ -7,6 +7,8 @@ homeassistant:
     device_tracker.anne_phone:
       entity_picture: *ep
       friendly_name: "Anne Owntracks"
+    person.anne_porter:
+      entity_picture: *ep
 
 group:
   anne_present:

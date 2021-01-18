@@ -7,6 +7,8 @@ homeassistant:
     device_tracker.olga_phone:
       entity_picture: *ep
       friendly_name: "Olga Owntracks"
+    person.olga_plocienniczak:
+      entity_picture: *ep
 
 group:
   olga_present:

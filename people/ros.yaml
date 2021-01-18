@@ -7,6 +7,8 @@ homeassistant:
     device_tracker.ros_phone:
       entity_picture: *ep
       friendly_name: "Ros Owntracks"
+    person.rosalyn_hart:
+      entity_picture: *ep
 
 group:
   ros_present:

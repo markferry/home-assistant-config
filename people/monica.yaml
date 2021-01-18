@@ -7,6 +7,8 @@ homeassistant:
     device_tracker.monica_phone:
       entity_picture: *ep
       friendly_name: "Monica Owntracks"
+    person.monica_commons:
+      entity_picture: *ep
 
 group:
   monica_present:

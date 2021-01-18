@@ -4,6 +4,8 @@ homeassistant:
       entity_picture: &ep /local/wb-icons/wb_aneta.png
     binary_sensor.aneta_present:
       entity_picture: *ep
+    person.aneta_jakielaszek:
+      entity_picture: *ep
 
 group:
   aneta_present:

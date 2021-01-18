@@ -7,6 +7,8 @@ homeassistant:
     device_tracker.jerome_phone:
       entity_picture: *ep
       friendly_name: "Jerome Owntracks"
+    person.jerome_dilley:
+      entity_picture: *ep
 
 group:
   jerome_present:

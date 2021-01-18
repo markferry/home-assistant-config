@@ -7,6 +7,8 @@ homeassistant:
     device_tracker.mark_phone:
       entity_picture: *ep
       friendly_name: "Mark Owntracks"
+    person.mark:
+      entity_picture: *ep
 
 group:
   mark_present:

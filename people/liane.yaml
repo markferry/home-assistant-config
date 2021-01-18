@@ -4,6 +4,8 @@ homeassistant:
       entity_picture: &ep /local/wb-icons/wb_liane.png
     binary_sensor.liane_present:
       entity_picture: *ep
+    person.liane_smith:
+      entity_picture: *ep
 
 group:
   liane_present:
