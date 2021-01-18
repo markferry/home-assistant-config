@@ -106,6 +106,17 @@ views:
           - name: "Mark's Bedroom"
             type: thermostat
             entity: climate.bedroom_mark_thermostat
+          - type: conditional
+            conditions:
+              - entity: climate.bedroom_mark_thermostat
+                state: 'off'
+            card:
+              type: entities
+              entities:
+                - name: Manual Heat
+                  entity: switch.bedroom_mark_demand
+                  icon: mdi:fire
+
           - name: "Mark's Bedroom"
             type: media-control
             entity: media_player.bedroom_mark
@@ -134,6 +145,16 @@ views:
           - name: "Olga's Bedroom"
             type: thermostat
             entity: climate.bedroom_main2_thermostat
+          - type: conditional
+            conditions:
+              - entity: climate.bedroom_main2_thermostat
+                state: 'off'
+            card:
+              type: entities
+              entities:
+                - name: Manual Heat
+                  entity: switch.bedroom_main2_demand
+                  icon: mdi:fire
 
   - title: "Elle's Bedroom"
     icon: mdi:bed
@@ -159,6 +180,16 @@ views:
           - name: "Elle's Bedroom"
             type: thermostat
             entity: climate.bedroom_main3_thermostat
+          - type: conditional
+            conditions:
+              - entity: climate.bedroom_main3_thermostat
+                state: 'off'
+            card:
+              type: entities
+              entities:
+                - name: Manual Heat
+                  entity: switch.bedroom_main3_demand
+                  icon: mdi:fire
 
   - title: "Anne's Bedroom"
     icon: mdi:bed
@@ -188,6 +219,16 @@ views:
           - name: "Anne's Office"
             type: thermostat
             entity: climate.bedroom_annex2_thermostat
+          - type: conditional
+            conditions:
+              - entity: climate.bedroom_annex2_thermostat
+                state: 'off'
+            card:
+              type: entities
+              entities:
+                - name: Manual Heat
+                  entity: switch.bedroom_annex2_demand
+                  icon: mdi:fire
 
   - title: Study
     icon: mdi:printer
@@ -209,6 +250,16 @@ views:
       - name: "Study Heat"
         type: thermostat
         entity: climate.study_thermostat
+      - type: conditional
+        conditions:
+          - entity: climate.study_thermostat
+            state: 'off'
+        card:
+          type: entities
+          entities:
+            - name: Manual Heat
+              entity: switch.study_demand
+              icon: mdi:fire
       - name: Study Media
         type: media-control
         entity: media_player.study
@@ -237,6 +288,17 @@ views:
       - name: "Kitchen Heat"
         type: thermostat
         entity: climate.kitchen_thermostat
+      - type: conditional
+        conditions:
+          - entity: climate.kitchen_thermostat
+            state: 'off'
+        card:
+          type: entities
+          entities:
+            - name: Manual Heat
+              entity: switch.kitchen_demand
+              icon: mdi:fire
+
       - name: "Kitchen Amplifier"
         type: media-control
         entity: media_player.outside_amplifier_zone_2
@@ -334,6 +396,17 @@ views:
       - name: "Lounge Heat"
         type: thermostat
         entity: climate.lounge_thermostat
+      - type: conditional
+        conditions:
+          - entity: climate.lounge_thermostat
+            state: 'off'
+        card:
+          type: entities
+          entities:
+            - name: Manual Heat
+              entity: switch.lounge_demand
+              icon: mdi:fire
+
       - name: Lounge Media
         type: media-control
         entity: media_player.lounge
@@ -353,6 +426,17 @@ views:
       - name: "Library Heat"
         type: thermostat
         entity: climate.library_thermostat
+      - type: conditional
+        conditions:
+          - entity: climate.library_thermostat
+            state: 'off'
+        card:
+          type: entities
+          entities:
+            - name: Manual Heat
+              entity: switch.library_demand
+              icon: mdi:fire
+
       - name: Library Media
         type: media-control
         entity: media_player.library
@@ -374,6 +458,17 @@ views:
       - name: "Ballroom Heat"
         type: thermostat
         entity: climate.ballroom_thermostat
+      - type: conditional
+        conditions:
+          - entity: climate.ballroom_thermostat
+            state: 'off'
+        card:
+          type: entities
+          entities:
+            - name: Manual Heat
+              entity: switch.ballroom_demand
+              icon: mdi:fire
+
       - name: Ballroom Media
         type: media-control
         entity: media_player.ballroom
@@ -400,6 +495,16 @@ views:
           - name: Guest Room
             type: thermostat
             entity: climate.guest_room_thermostat
+          - type: conditional
+            conditions:
+              - entity: climate.guest_room_thermostat
+                state: 'off'
+            card:
+              type: entities
+              entities:
+                - name: Manual Heat
+                  entity: switch.guest_room_demand
+                  icon: mdi:power
 
   - title: Armoury
     icon: mdi:security
