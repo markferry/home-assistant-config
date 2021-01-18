@@ -5,6 +5,8 @@ homeassistant:
     sensor.bedroom_main2_mean_temperature:
       icon: mdi:thermometer
       unit_of_measurement: "\xB0C"
+    automation.bedroom_main2_set_real_thermostats:
+      friendly_name: Update Real Thermostats
 
 group:
   g_debug_bedroom_main2_heating:
@@ -88,4 +90,14 @@ automation:
       - service: climate.set_temperature
         data_template:
           entity_id: climate.bedroom_main2_thermostat
+          temperature: '{{ trigger.to_state.attributes.temperature }}'
+
+  - alias: bedroom_main2_set_real_thermostats
+    trigger:
+      - platform: state
+        entity_id: climate.bedroom_main2_thermostat
+    action:
+      - service: climate.set_temperature
+        data_template:
+          entity_id: group.g_bedroom_main2_thermostat
           temperature: '{{ trigger.to_state.attributes.temperature }}'

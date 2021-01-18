@@ -6,6 +6,8 @@ homeassistant:
       friendly_name: "Guest Room"
       icon: mdi:thermometer
       unit_of_measurement: "\xB0C"
+    automation.guest_room_set_real_thermostats:
+      friendly_name: Update Real Thermostats
 
 group:
   g_debug_guest_room_heating:
@@ -91,3 +93,12 @@ automation:
           entity_id: climate.guest_room_thermostat
           temperature: '{{ trigger.to_state.attributes.temperature }}'
 
+  - alias: guest_room_set_real_thermostats
+    trigger:
+      - platform: state
+        entity_id: climate.guest_room_thermostat
+    action:
+      - service: climate.set_temperature
+        data_template:
+          entity_id: group.g_guest_room_thermostat
+          temperature: '{{ trigger.to_state.attributes.temperature }}'

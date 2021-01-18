@@ -6,3 +6,4 @@ group:
       - input_number.bedroom_main3_temperature_off
       - input_number.bedroom_main3_temperature_cosy
       - input_number.bedroom_main3_temperature_sleep
+      - automation.bedroom_main3_set_real_thermostats

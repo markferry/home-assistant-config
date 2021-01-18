@@ -6,5 +6,6 @@ group:
       - input_number.guest_room_temperature_off
       - input_number.guest_room_temperature_cosy
       - input_number.guest_room_temperature_sleep
+      - automation.guest_room_set_real_thermostats
 
 
