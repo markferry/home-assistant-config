@@ -91,6 +91,8 @@ views:
                 entity: input_select.bedroom_mark_mode
               - name: "Current Temperature"
                 entity: sensor.bedroom_mark_temperature
+              - name: "Motion Detected"
+                entity: binary_sensor.aeotec_zw100_multisensor_home_security_motion_detected
               - name: Lights
                 entity: group.bedroom_mark_lights
               - name: Media Auto Dim

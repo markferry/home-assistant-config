@@ -78,6 +78,7 @@ sensor:
     platform: min_max
     type: max  # minimize occasional 0 readings. Replace with median?
     entity_ids:
+      - sensor.aeotec_zw100_multisensor_air_temperature
       - sensor.bedroom_mark_south_current_temperature
       - sensor.bedroom_mark_north_current_temperature
 
