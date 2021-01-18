@@ -62,10 +62,5 @@ scene:
       media_player.outside_amplifier_zone_2:
         state: on
 
-cast:
-  media_player:
-    - host: kitchen-google-home
-      # name: kitchen_speaker
-
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
