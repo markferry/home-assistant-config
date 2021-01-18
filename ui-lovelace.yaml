@@ -592,6 +592,7 @@ views:
           - group.olga_present
           - group.elle_present
           - group.ros_present
+          - group.liane_present
           - group.aneta_present
           - group.jerome_present
           - group.thomas_present

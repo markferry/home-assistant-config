@@ -3,6 +3,7 @@
 HOST ?= ballroom-amp
 MQTT_REMOTE_HOST ?= whalebarn.com
 MQTT_LOCAL_HOST ?= localhost
+HOSTNAME := $(shell hostname)
 
 %.test: %.yaml
 	hass -c . --script check_config -i $^
@@ -14,7 +15,7 @@ check:
 	hass -c . --script=check_config
 
 subscribe:
-	mosquitto_sub -h ${MQTT_LOCAL_HOST} -v -t '#'
+	mosquitto_sub -R -h ${MQTT_LOCAL_HOST} -v -t '#'
 
 owntracks:
 	mosquitto_sub -u pixie -P ${PASS} -h ${MQTT_REMOTE_HOST} -p 8883 -i dev --cafile /etc/ssl/certs/ca-certificates.crt -t '#' -v
