@@ -24,8 +24,6 @@ views:
               name: Anne
             - entity: person.olga_plocienniczak
               name: Olga
-            - entity: person.elle_higgins
-              name: Elle
         - type: entity-filter
           entities:
             - entity: person.jerome_dilley
@@ -40,6 +38,8 @@ views:
               name: Thomas
             - entity: person.monica_commons
               name: Monica
+            - entity: person.elle_higgins
+              name: Elle
 
 
           state_filter:
