@@ -55,11 +55,5 @@ scene:
         state: on
         brightness_pct: 100
 
-media_player:
-  - name: library
-    platform: volumio
-    host: library
-    port: 3000
-
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

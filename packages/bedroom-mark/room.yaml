@@ -89,11 +89,5 @@ switch:
     payload_on: 'ON'
     retain: true
 
-media_player:
-  - name: bedroom_mark
-    platform: volumio
-    host: "bedroom-mark"
-    port: 3000
-
 automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
