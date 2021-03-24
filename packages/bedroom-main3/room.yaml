@@ -11,7 +11,7 @@ homeassistant:
 group:
   # floorplan
   bedroom_main3_compact_ui:
-    name: "Elle's Bedroom"
+    name: "Main Bedroom 3"
     entities:
     - input_select.bedroom_main3_mode
     - climate.bedroom_main3_thermostat

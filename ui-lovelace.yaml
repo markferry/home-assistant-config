@@ -67,9 +67,6 @@ views:
           - name: "Olga's Bedroom Mode"
             entity: input_select.bedroom_main2_mode
             image: /local/wb-icons/wb_olga.png
-          - name: "Elle's Bedroom Mode"
-            entity: input_select.bedroom_main3_mode
-            image: /local/wb-icons/wb_elle.png
 #          - type: divider
 #          - name: "Anne's Office Mode"
 #            entity: input_select.bedroom_annex2_mode
@@ -156,18 +153,15 @@ views:
                   entity: switch.bedroom_main2_demand
                   icon: mdi:fire
 
-  - title: "Elle's Bedroom"
+  - title: "Bedroom Main 3"
     icon: mdi:bed
     visible:
-      #  mark
-      - user: "c907a83f81d34d878c4d939b5901004b"
-      #  elle
-      - user: "855e6adfd173413ab52d5f1243c5ad39"
+      - user: none
     cards:
       - type: vertical-stack
         cards:
           - type: entities
-            title: "Elle's Bedroom"
+            title: "Bedroom Main 3"
             show_header_toggle: false
             entities:
               - name: Mode
@@ -177,7 +171,7 @@ views:
               - name: Settings
                 entity: group.g_bedroom_main3_settings_ui
                 icon: mdi:cog
-          - name: "Elle's Bedroom"
+          - name: "Bedroom Main 3"
             type: thermostat
             entity: climate.bedroom_main3_thermostat
           - type: conditional
