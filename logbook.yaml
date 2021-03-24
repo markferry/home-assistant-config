@@ -22,7 +22,8 @@ include:
     - sensor.bedroom_mark_north_air_temperature
     - sensor.study_east_air_temperature
     - sensor.study_west_air_temperature
-    - sensor.bedroom_annex2_temperature
+    - sensor.bedroom_annex2_west_air_temperature
+
     - sensor.main_heating_thermostat_battery_level
     - sensor.annex_heating_thermostat_battery_level
     - sensor.hall_multisensor_battery_level
@@ -33,12 +34,15 @@ include:
     - sensor.library_battery_level
     - sensor.bedroom_mark_south_battery_level
     - sensor.bedroom_mark_north_battery_level
+    - sensor.bedroom_main2_east_battery_level
+    - sensor.bedroom_main3_east_battery_level
     - sensor.lounge_east_battery_level
     - sensor.ballroom_east_battery_level
     - sensor.kitchen_battery_level
     - sensor.annex_hall_battery_level
-    - sensor.bedroom_annex2_battery_level
-    - sensor.guest_room_battery_level
+    - sensor.bedroom_annex2_west_battery_level
+    - sensor.guest_room_north_battery_level
+
     - sensor.aeotec_dsb05_multisensor_illuminance
     - sensor.aeotec_dsb05_multisensor_humidity
     - sensor.hottub_powernode_electric_w

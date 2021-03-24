@@ -5,21 +5,21 @@
 homeassistant:
   customize:
     climate.bedroom_annex2_west_mode:
-      min_temp: 5
+      min_temp: 8
       max_temp: 25
 
 group:
   # floorplan
   bedroom_annex2_compact_ui:
-    name: "Annex Bedroom 2"
+    name: "Lucas's Bedroom"
     entities:
-    - input_select.bedroom_annex2_mode
-    - climate.bedroom_annex2_thermostat
-    - group.bedroom_annex2_lights
+      - input_select.bedroom_annex2_mode
+      - climate.bedroom_annex2_thermostat
+      - group.bedroom_annex2_lights
 
   bedroom_annex2_setpoints:
     entities:
-    - climate.bedroom_annex2_west_mode
+      - climate.bedroom_annex2_west_mode
 
   bedroom_annex2_lights:
 

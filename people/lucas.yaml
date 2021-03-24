@@ -1,0 +1,86 @@
+homeassistant:
+  customize:
+    group.lucas_present:
+      entity_picture: &ep /local/wb-icons/wb_lucas.png
+    binary_sensor.lucas_present:
+      entity_picture: *ep
+    person.lucas_plocienniczak:
+      entity_picture: *ep
+
+group:
+  lucas_present:
+    name: "Lucas"
+    entities: &presence_entities
+      - device_tracker.lucas_phone
+      - device_tracker.lucas_phone_bt
+      - device_tracker.lucas_laptop
+
+binary_sensor:
+  - name: lucas_present
+    device_class: 'presence'
+    platform: 'bayesian'
+    prior: 0.66
+    probability_threshold: 0.90
+    observations:
+      - entity_id: device_tracker.lucas_phone
+        prob_given_true: 0.8
+        prob_given_false: 0.2
+        <<: &tracker_default
+          platform: 'state'
+          to_state: 'home'
+
+      - entity_id: device_tracker.lucas_phone_bt
+        prob_given_true: 0.3
+        prob_given_false: 0.1
+        <<: *tracker_default
+
+      - entity_id: device_tracker.lucas_laptop
+        prob_given_true: 0.6
+        prob_given_false: 0.2
+        <<: *tracker_default
+
+automation:
+  - alias: "Calendar Lucas Scene"
+    trigger:
+      - platform: state
+        entity_id: calendar.lucas_scene
+        to: "on"
+    action:
+      - service_template: input_select.select_option
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "lucas" in l %}
+            {%   set u = "bedroom_main2" %}
+            {% endif %}
+            input_select.{{u}}_mode
+          option: >
+            {% set v = trigger.to_state.attributes.message.lower().split()|last %}
+            {{ v[0].upper() ~ v[1:].lower() }}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/lucas-scene'
+          payload: '{{trigger.to_state.attributes.message}}'
+
+  - alias: "Calendar Lucas Climate"
+    trigger:
+      - platform: state
+        entity_id: calendar.lucas_climate
+        to: "on"
+    action:
+      - service_template: climate.set_temperature
+        data_template:
+          entity_id: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {% if "lucas" in l %}
+            {%   set u = "bedroom_main2" %}
+            {% endif %}
+            climate.{{u}}_thermostat
+          temperature: >
+            {% set l = trigger.to_state.attributes.message.lower().split() %}
+            {{l|last|float}}
+      - service: mqtt.publish
+        data_template:
+          topic: 'ha/calendar/lucas-climate'
+          payload: '{{trigger.to_state.attributes.message}}'
+

@@ -12,7 +12,6 @@ homeassistant:
 
 input_select:
   bedroom_annex2_mode:
-    name: "Annex Bedroom 2 Mode"
     options:
       - 'Off'
       - 'Cosy'
@@ -27,7 +26,7 @@ input_number:
     <<: &bedroom_annex2_temp_defaults
       icon: mdi:thermostat
       unit_of_measurement: "\xB0C"
-      min: 5
+      min: 8
       max: 25
       step: 1
 
@@ -53,10 +52,10 @@ automation:
     #  condition: template  # otherwise we reset on all state updates
     #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
     action:
-        - service: input_select.select_option
-          data:
-            entity_id: input_select.bedroom_annex2_mode
-            option: 'Manual'
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_annex2_mode
+          option: 'Manual'
 
 
   - alias: bedroom_annex2_mode

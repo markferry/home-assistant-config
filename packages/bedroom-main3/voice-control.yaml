@@ -5,42 +5,42 @@
 google_assistant:
   entity_config:
     climate.bedroom_main3_thermostat:
-      name: "Elle's Bedroom Thermostat"
+      name: "Main Bedroom 3 Thermostat"
       <<: &ga_bedroom_main3_expose
         expose: true
-        room: "Elle's Bedroom"
+        room: "Main Bedroom 3"
 
     group.bedroom_main3_lights:
-      name: "Elle's Bedroom Lights"
+      name: "Main Bedroom 3 Lights"
       <<: *ga_bedroom_main3_expose
 
     script.voice_bedroom_main3_off:
-      name: "Elle's Bedroom Shutdown"
+      name: "Main Bedroom 3 Shutdown"
       <<: *ga_bedroom_main3_expose
     script.voice_bedroom_main3_cosy:
-      name: "Elle's Bedroom Cosy Mode"
+      name: "Main Bedroom 3 Cosy Mode"
       <<: *ga_bedroom_main3_expose
     script.voice_bedroom_main3_sleep:
-      name: "Elle's Bedroom Sleep Mode"
+      name: "Main Bedroom 3 Sleep Mode"
       <<: *ga_bedroom_main3_expose
 
 script:
   voice_bedroom_main3_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.bedroom_main3_mode
           option: "Off"
 
   voice_bedroom_main3_cosy:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.bedroom_main3_mode
           option: "Cosy"
 
   voice_bedroom_main3_sleep:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.bedroom_main3_mode
