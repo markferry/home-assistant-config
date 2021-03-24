@@ -14,37 +14,37 @@ views:
     cards:
       - type: vertical-stack
         cards:
-        - type: entities
-          title: Where is Everyone?
-          show_header_toggle: false
-          entities:
-            - entity: person.mark
-              name: Mark
-            - entity: person.anne_porter
-              name: Anne
-            - entity: person.olga_plocienniczak
-              name: Olga
-        - type: entity-filter
-          entities:
-            - entity: person.jerome_dilley
-              name: Jerome
-            - entity: person.rosalyn_hart
-              name: Ros
-            - entity: person.liane_smith
-              name: Liane
-            - entity: person.aneta_jakielaszek
-              name: Aneta
-            - entity: person.thomas_northcote
-              name: Thomas
-            - entity: person.monica_commons
-              name: Monica
-            - entity: person.elle_higgins
-              name: Elle
-
-
-          state_filter:
-            - "on"
-          show_empty: false
+          - type: entities
+            title: Where is Everyone?
+            show_header_toggle: false
+            entities:
+              - entity: person.mark
+                name: Mark
+              - entity: person.anne_porter
+                name: Anne
+              - entity: person.olga_plocienniczak
+                name: Olga
+              - entity: person.lucas_mogg
+                name: Lucas
+          - type: entity-filter
+            entities:
+              - entity: person.jerome_dilley
+                name: Jerome
+              - entity: person.rosalyn_hart
+                name: Ros
+              - entity: person.liane_smith
+                name: Liane
+              - entity: person.aneta_jakielaszek
+                name: Aneta
+              - entity: person.thomas_northcote
+                name: Thomas
+              - entity: person.monica_commons
+                name: Monica
+              - entity: person.elle_higgins
+                name: Elle
+            state_filter:
+              - "on"
+            show_empty: false
       - type: entities
         title: Rooms
         show_header_toggle: false
@@ -67,10 +67,9 @@ views:
           - name: "Olga's Bedroom Mode"
             entity: input_select.bedroom_main2_mode
             image: /local/wb-icons/wb_olga.png
-#          - type: divider
-#          - name: "Anne's Office Mode"
-#            entity: input_select.bedroom_annex2_mode
-#            image: /local/wb-icons/wb_anne.png
+          - name: "Lucas's Bedroom Mode"
+            entity: input_select.bedroom_annex2_mode
+            #image: /local/wb-icons/wb_anne.png
 
   - title: "Mark's Bedroom"
     icon: mdi:bed
@@ -192,15 +191,18 @@ views:
       - user: "a3d54febf3f143edb7541ff90385a573"
     cards:
 
-  - title: "Anne's Office"
-    icon: mdi:desk
+  - title: "Lucas's Bedroom"
+    icon: mdi:bed
     visible:
-      - user: none
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
+      # lucas
+      - user: "e34179027c4d4b5f991164df1ff02570"
     cards:
       - type: vertical-stack
         cards:
           - type: entities
-            title: "Anne's Office"
+            title: "Lucas's Bedroom"
             show_header_toggle: false
             entities:
               - name: Mode
@@ -210,7 +212,7 @@ views:
               - name: Settings
                 entity: group.g_bedroom_annex2_settings_ui
                 icon: mdi:cog
-          - name: "Anne's Office"
+          - name: "Lucas's Bedroom"
             type: thermostat
             entity: climate.bedroom_annex2_thermostat
           - type: conditional
@@ -689,13 +691,14 @@ views:
         entities:
           - group.mark_present
           - group.anne_present
-          - group.monica_present
           - group.olga_present
-          - group.elle_present
-          - group.ros_present
-          - group.liane_present
+          - group.lucas_present
           - group.aneta_present
+          - group.elle_present
           - group.jerome_present
+          - group.liane_present
+          - group.monica_present
+          - group.ros_present
           - group.thomas_present
       - type: entities
         title: Automations
