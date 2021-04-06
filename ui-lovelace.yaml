@@ -69,10 +69,10 @@ views:
           - name: "Olga's Bedroom Mode"
             entity: input_select.bedroom_main2_mode
             image: /local/wb-icons/wb_olga.png
-          - name: "Lucas's Bedroom Mode"
-            entity: input_select.bedroom_annex2_mode
           - name: "Emma's Bedroom Mode"
             entity: input_select.bedroom_main3_mode
+          - name: "Lucas's Bedroom Mode"
+            entity: input_select.bedroom_annex2_mode
             #image: /local/wb-icons/wb_anne.png
 
   - title: "Mark's Bedroom"
