@@ -26,6 +26,8 @@ views:
                 name: Olga
               - entity: person.lucas_mogg
                 name: Lucas
+              - entity: person.emma_jane_ditter
+                name: Emma
           - type: entity-filter
             entities:
               - entity: person.jerome_dilley
@@ -67,6 +69,8 @@ views:
           - name: "Olga's Bedroom Mode"
             entity: input_select.bedroom_main2_mode
             image: /local/wb-icons/wb_olga.png
+          - name: "Emma's Bedroom Mode"
+            entity: input_select.bedroom_main3_mode
           - name: "Lucas's Bedroom Mode"
             entity: input_select.bedroom_annex2_mode
             #image: /local/wb-icons/wb_anne.png
@@ -152,15 +156,18 @@ views:
                   entity: switch.bedroom_main2_demand
                   icon: mdi:fire
 
-  - title: "Bedroom Main 3"
+  - title: "Emma's Bedroom"
     icon: mdi:bed
     visible:
-      - user: none
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
+      #  emma
+      - user: "72e58cc393d04a4b84b62a3c85a787ee"
     cards:
       - type: vertical-stack
         cards:
           - type: entities
-            title: "Bedroom Main 3"
+            title: "Emma's Bedroom"
             show_header_toggle: false
             entities:
               - name: Mode
@@ -170,7 +177,7 @@ views:
               - name: Settings
                 entity: group.g_bedroom_main3_settings_ui
                 icon: mdi:cog
-          - name: "Bedroom Main 3"
+          - name: "Emma's Bedroom"
             type: thermostat
             entity: climate.bedroom_main3_thermostat
           - type: conditional
@@ -693,6 +700,8 @@ views:
           - group.anne_present
           - group.olga_present
           - group.lucas_present
+          - group.emma_present
+          - type: divider
           - group.aneta_present
           - group.elle_present
           - group.jerome_present
