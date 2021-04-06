@@ -22,6 +22,7 @@ homeassistant:
     package_olga: !include people/olga.yaml
     package_elle: !include people/elle.yaml
     package_lucas: !include people/lucas.yaml
+    package_emma: !include people/emma.yaml
 
     package_heating_on_demand: !include packages/heating-on-demand.yaml
 

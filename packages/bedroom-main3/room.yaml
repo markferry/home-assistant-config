@@ -11,15 +11,15 @@ homeassistant:
 group:
   # floorplan
   bedroom_main3_compact_ui:
-    name: "Main Bedroom 3"
+    name: "Emma's Bedroom"
     entities:
-    - input_select.bedroom_main3_mode
-    - climate.bedroom_main3_thermostat
-    - group.bedroom_main3_lights
+      - input_select.bedroom_main3_mode
+      - climate.bedroom_main3_thermostat
+      - group.bedroom_main3_lights
 
   bedroom_main3_setpoints:
     entities:
-    - climate.bedroom_main3_east_mode
+      - climate.bedroom_main3_east_mode
 
   bedroom_main3_lights:
 

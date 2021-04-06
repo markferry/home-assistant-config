@@ -51,10 +51,10 @@ automation:
     #  condition: template  # otherwise we reset on all state updates
     #  value_template: "{{ trigger.to_state.state != trigger.from_state.state }}"
     action:
-        - service: input_select.select_option
-          data:
-            entity_id: input_select.bedroom_main3_mode
-            option: 'Manual'
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.bedroom_main3_mode
+          option: 'Manual'
 
 
   - alias: bedroom_main3_mode
