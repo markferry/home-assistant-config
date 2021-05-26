@@ -532,6 +532,7 @@ views:
           - device_tracker.router
           - device_tracker.climate
           - device_tracker.ap_west
+          - device_tracker.ap_study
           - device_tracker.ap_central
           - device_tracker.ap_east
           - device_tracker.poe_switch

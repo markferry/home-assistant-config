@@ -135,6 +135,7 @@ groups:
   - name: Devices
     entities:
       - device_tracker.ap_west
+      - device_tracker.ap_study
       - device_tracker.ap_central
       - device_tracker.ap_east
     states:
