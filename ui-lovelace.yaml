@@ -613,6 +613,8 @@ views:
             name: Main Heating Switch
           - entity: switch.main_heating_relay_instance_2_switch
             name: Main Hot Water Switch
+          - automation.main_heating_poll_on
+          - automation.main_heating_poll_off
           - automation.main_boiler_demand_on
           - automation.main_boiler_demand_off
           - automation.hot_water_on
