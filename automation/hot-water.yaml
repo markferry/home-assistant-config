@@ -1,6 +1,5 @@
 # Hot Water
-#   Weekdays: On at 5am, off at noon, on at 4pm, off at 11pm
-#   Weekend: On at 5am, (on at 4pm,) off at 11pm
+#   On at 06h30, off at 09h00, on at 18h30, off at 20h00
 #
 # Repeat the command every 20 minutes to avoid failsafe mode.
 - alias: hot_water_off
@@ -12,13 +11,10 @@
     condition: or
     conditions:
       - condition: time
-        after: '08:30:00'
-        before: '16:00:00'
+        after: '09:00:00'
+        before: '18:30:00'
       - condition: time
-        after: '17:00:00'
-        before: '19:30:00'
-      - condition: time
-        after: '20:30:00'
+        after: '20:00:00'
         before: '06:30:00'
   action:
     service: switch.turn_off
@@ -34,13 +30,10 @@
     conditions:
       - condition: time
         after: '06:30:00'
-        before: '08:30:00'
+        before: '09:00:00'
       - condition: time
-        after: '16:00:00'
-        before: '17:00:00'
-      - condition: time
-        after: '19:30:00'
-        before: '20:30:00'
+        after: '18:30:00'
+        before: '20:00:00'
   action:
     service: switch.turn_on
     entity_id: switch.main_heating_relay_instance_2_switch
