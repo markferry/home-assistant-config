@@ -97,9 +97,9 @@ media_player:
       video2: 'TV'
       video1: 'Media'
       #video3: 'Game'
-      video6: 'Aux Cable'
+      video6: 'PC'
       #aux1: 'Ext Aux'
-      #cd: 'Analog TV'
+      cd: 'Aux Cable'
       #phono: 'Phono' # -> needs onkyo fix
       fm: 'FM' # -> needs onkyo fix
       am: 'AM' # -> needs onkyo fix
