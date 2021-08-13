@@ -14,10 +14,6 @@ homeassistant:
       min_temp: 5
       max_temp: 25
 
-    # FIXME: media-control card ignores 'name' settings
-    media_player.outside_amplifier:
-      friendly_name: Outside Amplifier
-
 group:
   hall_compact_ui:
     name: Hall
@@ -55,24 +51,6 @@ switch:
     payload_off: 'OFF'
     payload_on: 'ON'
     retain: true
-
-media_player:
-  - name: Outside Amplifier
-    platform: onkyo
-    host: utility-amp
-    sources:
-      #dvd: 'BD/DVD'
-      video1: 'Media' # STB/DVR
-      #video2: 'CBL/SAT' # Cable/SAT
-      #video3: 'Game'
-      #video6: 'PC' # PC
-      #aux1: 'Ext Aux'
-      cd: 'Kitchen Media'
-      phono: 'Aux'
-      fm: 'FM' # -> needs onkyo fix
-      am: 'AM' # -> needs onkyo fix
-      network: 'Network'
-      usb: 'USB'
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts
