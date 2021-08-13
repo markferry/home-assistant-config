@@ -1,0 +1,15 @@
+#
+# Devices exposed to voice control platforms
+#
+google_assistant:
+  entity_config:
+    media_player.outside_amplifier:
+      name: "Outside Amplifier"
+      expose: true
+      room: "Outside"
+
+    media_player.snapcast_client_outside:
+      name: "Outside Snapcast"
+      expose: true
+      room: "Outside"
+

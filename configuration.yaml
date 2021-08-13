@@ -55,6 +55,9 @@ homeassistant:
     package_annex_hall_heating: !include packages/hall/annex-hall-heating-on-demand.yaml
     package_annex_hall_voice_control: !include packages/hall/annex-hall-voice-control.yaml
 
+    package_outside: !include packages/outside/room.yaml
+    package_outside_voice_control: !include packages/outside/voice-control.yaml
+
     package_lounge: !include packages/lounge/room.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
     package_lounge_media_dimming: !include packages/lounge/media-dimming.yaml

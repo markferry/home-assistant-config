@@ -33,21 +33,21 @@ google_assistant:
 
 script:
   voice_kitchen_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.kitchen_mode
           option: "Off"
 
   voice_kitchen_cosy:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.kitchen_mode
           option: "Cosy"
 
   voice_kitchen_bright:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.kitchen_mode
