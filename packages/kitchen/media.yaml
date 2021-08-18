@@ -1,0 +1,5 @@
+media_player:
+  - platform: mpd
+    name: kitchen_mpd
+    host: media
+    port: 6611

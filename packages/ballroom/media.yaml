@@ -1,0 +1,5 @@
+media_player:
+  - platform: mpd
+    name: ballroom_mpd
+    host: media
+    port: 6609

@@ -1,0 +1,5 @@
+media_player:
+  - platform: mpd
+    name: outside_mpd
+    host: media
+    port: 6610

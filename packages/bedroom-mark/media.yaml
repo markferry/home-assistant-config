@@ -1,0 +1,5 @@
+media_player:
+  - platform: mpd
+    name: bedroom_mark_mpd
+    host: media
+    port: 6612

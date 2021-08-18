@@ -1,0 +1,5 @@
+media_player:
+  - platform: mpd
+    name: study_mpd
+    host: media
+    port: 6606
