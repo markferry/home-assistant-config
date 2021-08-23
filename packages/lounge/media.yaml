@@ -3,3 +3,8 @@ media_player:
     name: lounge_mpd
     host: media
     port: 6608
+
+  - platform: kodi
+    name: lounge_kodi
+    host: lounge.home.whalebarn.com
+    port: 8080

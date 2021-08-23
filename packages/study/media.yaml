@@ -3,3 +3,8 @@ media_player:
     name: study_mpd
     host: media
     port: 6606
+
+  - platform: kodi
+    name: study_kodi
+    host: study.home.whalebarn.com
+    port: 8080

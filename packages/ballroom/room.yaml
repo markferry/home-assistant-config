@@ -84,11 +84,6 @@ switch:
     retain: true
 
 media_player:
-  - name: ballroom
-    platform: kodi
-    host: ballroom.home.whalebarn.com
-    port: 80
-
   - name: Ballroom Amplifier
     platform: onkyo
     host: ballroom-amp

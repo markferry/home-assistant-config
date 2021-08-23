@@ -81,11 +81,6 @@ switch:
     payload_on: 'ON'
     retain: true
 
-media_player:
-  - name: study
-    platform: kodi
-    host: study.home.whalebarn.com
-    port: 80
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

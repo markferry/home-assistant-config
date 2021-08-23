@@ -3,3 +3,8 @@ media_player:
     name: ballroom_mpd
     host: media
     port: 6609
+
+  - platform: kodi
+    name: ballroom_kodi
+    host: ballroom.home.whalebarn.com
+    port: 8080

@@ -70,11 +70,5 @@ switch:
     payload_on: 'ON'
     retain: true
 
-media_player:
-  - name: lounge
-    platform: kodi
-    host: lounge.home.whalebarn.com
-    port: 80
-
 #script: !include_dir_merge_named scripts
 #automation: !include_dir_merge_list automations
