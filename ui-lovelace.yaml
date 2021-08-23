@@ -652,6 +652,33 @@ views:
                 type: media-control
                 entity: media_player.outside_amplifier
 
+          - title: Multizone Balance
+            type: entities
+            entities:
+              - entity: media_player.snapcast_client_study
+                name: Study
+                icon: mdi:cast-audio
+              - type: divider
+              - entity: media_player.snapcast_client_kitchen
+                name: Kitchen
+                icon: mdi:cast-audio
+              - type: divider
+              - entity: media_player.snapcast_client_lounge
+                name: Lounge
+                icon: mdi:cast-audio
+              - type: divider
+              - entity: media_player.snapcast_client_library
+                name: Library
+                icon: mdi:cast-audio
+              - type: divider
+              - entity: media_player.snapcast_client_ballroom
+                name: Ballroom
+                icon: mdi:cast-audio
+              - type: divider
+              - entity: media_player.snapcast_client_outside
+                name: Outside
+                icon: mdi:cast-audio
+
   - title: Settings
     icon: mdi:hazard-lights
     cards:
