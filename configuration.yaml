@@ -220,6 +220,9 @@ script: !include_dir_merge_named scripts
 
 lovelace:
   mode: yaml
+  resources:
+    - url: /local/mini-media-player-bundle.js?v=1.12.1
+      type: module
 
 owntracks:
   max_gps_accuracy: 3000

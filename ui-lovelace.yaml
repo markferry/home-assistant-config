@@ -1,3 +1,66 @@
+defaults:
+  room_mpd:
+    <<: &default_room_mpd
+      type: custom:mini-media-player
+      name: Iris
+      icon: mdi:music
+      group: true
+      artwork: none
+      hide:
+        power: true
+        progress: false
+        source: true
+  room_kodi:
+    <<: &default_room_kodi
+      type: custom:mini-media-player
+      name: Kodi
+      icon: mdi:kodi
+      group: true
+      artwork: cover
+      hide:
+        power: true
+        power_state: true
+        progress: false
+        source: false
+  room_onkyo:
+    <<: &default_room_onkyo
+      type: custom:mini-media-player
+      name: Amplifier
+      icon: mdi:amplifier
+      group: true
+      artwork: none
+      source: full
+      hide:
+        mute: true
+        play_pause: true
+        power_state: false
+        progress: true
+        volume_level: false
+  mini_mpd:
+    <<: &default_mini_mpd
+      type: custom:mini-media-player
+      group: true
+      idle_view:
+        when_paused: true
+        when_idle: false
+      artwork: none
+      toggle_power: false
+      hide:
+        power: true  # does nothing when playlist is empty
+        progress: true
+        source: true
+  mini_snapclient:
+    <<: &default_mini_snapclient
+      type: custom:mini-media-player
+      group: true
+      artwork: none
+      hide:
+        controls: true
+        mute: false
+        power: true
+        source: true
+        volume_level: false
+
 name: Whale Barn
 views:
   - title: Home
@@ -120,8 +183,7 @@ views:
           - type: entities
             entities:
               - entity: media_player.bedroom_mark_mpd
-                name: Iris
-                icon: mdi:music
+                <<: *default_room_mpd
 
 
   - title: "Olga's Bedroom"
@@ -269,12 +331,10 @@ views:
       - type: entities
         entities:
           - entity: media_player.study_mpd
-            name: Iris
-            icon: mdi:music
+            <<: *default_room_mpd
           - type: divider
           - entity: media_player.study_kodi
-            name: Kodi
-            icon: mdi:kodi
+            <<: *default_room_kodi
 
 
   - title: Kitchen
@@ -315,12 +375,10 @@ views:
       - type: entities
         entities:
           - entity: media_player.kitchen_mpd
-            name: Iris
-            icon: mdi:music
+            <<: *default_room_mpd
           - type: divider
           - entity: media_player.outside_amplifier_zone_2
-            name: Amplifier
-            icon: mdi:amplifier
+            <<: *default_room_onkyo
 
   - title: Hall
     icon: mdi:fullscreen-exit
@@ -398,12 +456,10 @@ views:
         title: Outside Media
         entities:
           - entity: media_player.outside_mpd
-            name: Iris
-            icon: mdi:music
+            <<: *default_room_mpd
           - type: divider
           - entity: media_player.outside_amplifier
-            name: Amplifier
-            icon: mdi:amplifier
+            <<: *default_room_onkyo
 
 
   - title: Lounge
@@ -437,12 +493,10 @@ views:
       - type: entities
         entities:
           - entity: media_player.lounge_mpd
-            name: Iris
-            icon: mdi:music
+            <<: *default_room_mpd
           - type: divider
           - entity: media_player.lounge_kodi
-            name: Kodi
-            icon: mdi:kodi
+            <<: *default_room_kodi
 
 
   - title: Library
@@ -474,8 +528,7 @@ views:
       - type: entities
         entities:
           - entity: media_player.library_mpd
-            name: Iris
-            icon: mdi:music
+            <<: *default_room_mpd
 
 
   - title: Ballroom
@@ -509,16 +562,13 @@ views:
       - type: entities
         entities:
           - entity: media_player.ballroom_mpd
-            name: Iris
-            icon: mdi:music
+            <<: *default_room_mpd
           - type: divider
           - entity: media_player.ballroom_kodi
-            name: Kodi
-            icon: mdi:kodi
+            <<: *default_room_kodi
           - type: divider
           - entity: media_player.ballroom_amplifier
-            name: Amplifier
-            icon: mdi:amplifier
+            <<: *default_room_onkyo
 
   - title: Guest Room
     icon: mdi:bed-empty
@@ -613,71 +663,78 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - title: Iris Players
+          - title: Players
             type: entities
             entities:
               - entity: media_player.study_mpd
-                name: Study
+                name: Study Iris
                 icon: mdi:printer
-              - type: divider
+                <<: *default_mini_mpd
               - entity: media_player.kitchen_mpd
-                name: Kitchen
+                name: Kitchen Iris
                 icon: mdi:stove
-              - type: divider
+                <<: *default_mini_mpd
               - entity: media_player.lounge_mpd
-                name: Lounge
+                name: Lounge Iris
                 icon: mdi:sofa
-              - type: divider
+                <<: *default_mini_mpd
               - entity: media_player.library_mpd
-                name: Library
+                name: Library Iris
                 icon: mdi:library
-              - type: divider
+                <<: *default_mini_mpd
               - entity: media_player.ballroom_mpd
-                name: Ballroom
+                name: Ballroom Iris
                 icon: mdi:projector
-              - type: divider
+                <<: *default_mini_mpd
               - entity: media_player.outside_mpd
-                name: Outside
+                name: Outside Iris
                 icon: mdi:pine-tree
+                <<: *default_mini_mpd
 
-          - type: horizontal-stack
-            cards:
-              - name: "Kitchen Amplifier"
-                type: media-control
+          - title: Amplifiers
+            type: entities
+            entities:
+              - name: Kitchen Amplifier
                 entity: media_player.outside_amplifier_zone_2
+                icon: mdi:stove
+                <<: *default_room_onkyo
               - name: Ballroom Amplifier
-                type: media-control
                 entity: media_player.ballroom_amplifier
+                icon: mdi:projector
+                <<: *default_room_onkyo
               - name: Outside Amplifier
-                type: media-control
                 entity: media_player.outside_amplifier
+                icon: mdi:pine-tree
+                <<: *default_room_onkyo
 
-          - title: Multizone Balance
+          - title: Balance
             type: entities
             entities:
               - entity: media_player.snapcast_client_study
                 name: Study
-                icon: mdi:cast-audio
-              - type: divider
+                icon: mdi:printer
+                <<: *default_mini_snapclient
               - entity: media_player.snapcast_client_kitchen
                 name: Kitchen
-                icon: mdi:cast-audio
-              - type: divider
+                icon: mdi:stove
+                <<: *default_mini_snapclient
               - entity: media_player.snapcast_client_lounge
                 name: Lounge
-                icon: mdi:cast-audio
-              - type: divider
+                icon: mdi:sofa
+                <<: *default_mini_snapclient
               - entity: media_player.snapcast_client_library
                 name: Library
-                icon: mdi:cast-audio
-              - type: divider
+                icon: mdi:library
+                <<: *default_mini_snapclient
               - entity: media_player.snapcast_client_ballroom
                 name: Ballroom
-                icon: mdi:cast-audio
-              - type: divider
+                icon: mdi:projector
+                <<: *default_mini_snapclient
               - entity: media_player.snapcast_client_outside
                 name: Outside
-                icon: mdi:cast-audio
+                icon: mdi:pine-tree
+                <<: *default_mini_snapclient
+
 
   - title: Settings
     icon: mdi:hazard-lights
