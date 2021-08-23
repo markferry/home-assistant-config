@@ -3,3 +3,8 @@ media_player:
     name: kitchen_mpd
     host: media
     port: 6611
+
+group:
+  kitchen_multizone_audio_players:
+    entities:
+      - media_player.kitchen_mpd

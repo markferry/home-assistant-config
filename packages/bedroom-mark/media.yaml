@@ -3,3 +3,8 @@ media_player:
     name: bedroom_mark_mpd
     host: media
     port: 6612
+
+group:
+  bedroom_mark_multizone_audio_players:
+    entities:
+      - media_player.bedroom_mark_mpd

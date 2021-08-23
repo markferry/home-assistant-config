@@ -3,3 +3,8 @@ media_player:
     name: outside_mpd
     host: media
     port: 6610
+
+group:
+  outside_multizone_audio_players:
+    entities:
+      - media_player.outside_mpd

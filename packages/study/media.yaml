@@ -8,3 +8,9 @@ media_player:
     name: study_kodi
     host: study.home.whalebarn.com
     port: 8080
+
+group:
+  study_multizone_audio_players:
+    entities:
+      - media_player.study_mpd
+      - media_player.study_kodi
