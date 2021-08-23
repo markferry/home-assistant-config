@@ -32,7 +32,7 @@ homeassistant:
     package_washing_machine: !include packages/washing-machine.yaml
     #package_stream_radio: !include packages/stream-radio.yaml
     package_oil_monitor: !include packages/myolive.yaml
-    package_multiroom_audio: !include packages/multiroom_audio.yaml
+    package_multizone_audio: !include packages/multizone-audio.yaml
     package_mode: !include packages/mode.yaml
 
     package_everwhere: !include packages/everywhere.yaml
