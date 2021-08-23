@@ -14,23 +14,19 @@ group:
     name: Kitchen
     icon: mdi:stove
     entities:
-    - input_select.kitchen_mode
-    - climate.kitchen_thermostat
-    - binary_sensor.washing_machine
-    - group.kitchen_lights
+      - input_select.kitchen_mode
+      - climate.kitchen_thermostat
+      - binary_sensor.washing_machine
+      - group.kitchen_lights
+      - group.kitchen_multizone_audio_players
 
   kitchen_setpoints:
     name: Kitchen Setpoints
     entities:
-    - climate.kitchen_west_mode
+      - climate.kitchen_west_mode
 
   kitchen_lights:
     name: Kitchen Lights
-
-  kitchen_media_players:
-    entities:
-    - media_player.kitchen_speaker
-    - media_player.outside_amplifier_zone_2
 
 scene:
   - name: kitchen_off
@@ -39,12 +35,11 @@ scene:
         state: off
       media_player.kitchen_speaker:
         state: paused
+      group.kitchen_multizone_audio_players:
+        state: paused
       ## Leave it on for now
       #media_player.kitchen_amplifier:
       #  state: off
-      #media_player.snapcast_client_kitchen_2:
-      #  state: on
-      #  is_volume_muted: true
 
   - name: kitchen_cosy
     entities:

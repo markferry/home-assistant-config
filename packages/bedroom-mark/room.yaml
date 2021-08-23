@@ -18,30 +18,26 @@ group:
   bedroom_mark_compact_ui:
     name: "Mark's Bedroom"
     entities:
-    - input_select.bedroom_mark_mode
-    - climate.bedroom_mark_thermostat
-    - group.bedroom_mark_lights
-    - media_player.bedroom_mark
+      - input_select.bedroom_mark_mode
+      - climate.bedroom_mark_thermostat
+      - group.bedroom_mark_lights
+      - group.bedroom_mark_multizone_audio_players
 
   bedroom_mark_setpoints:
     name: "Mark's Bedroom Setpoints"
     entities:
-    - climate.bedroom_mark_south_mode
-    - climate.bedroom_mark_north_mode
+      - climate.bedroom_mark_south_mode
+      - climate.bedroom_mark_north_mode
 
   bedroom_mark_lights:
     name: "Mark's Bedroom Lights"
     entities:
-    - light.bedroom_mark_overhead_instance_1_level
-    - light.bedroom_mark_lamp
+      - light.bedroom_mark_overhead_instance_1_level
+      - light.bedroom_mark_lamp
 
   bedroom_mark_appliances:
     name: "Mark's Bedroom Appliances"
     entities:
-
-  bedroom_mark_media_players:
-    entities:
-    - media_player.bedroom_mark
 
 scene:
   - name: bedroom_mark_off
@@ -50,11 +46,8 @@ scene:
         state: off
       switch.bedroom_mark_appliances:
         state: off
-      media_player.bedroom_mark:
+      group.bedroom_mark_multizone_audio_players:
         state: paused
-      media_player.snapcast_client_bedroommark:
-        state: on
-        is_volume_muted: true
 
   - name: bedroom_mark_sleep
     entities:

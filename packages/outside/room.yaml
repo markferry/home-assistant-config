@@ -9,11 +9,6 @@ homeassistant:
       friendly_name: Outside Amplifier
 
 
-group:
-  outside_media_players:
-    entities:
-      - media_player.outside_amplifier
-
 media_player:
   - name: Outside Amplifier
     platform: onkyo
