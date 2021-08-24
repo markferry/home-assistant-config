@@ -4,7 +4,7 @@ media_player:
     host: media
     port: 6607
 
-group:
-  library_multizone_audio_players:
+  - platform: group
+    name: library_multizone_audio
     entities:
       - media_player.library_mpd

@@ -4,7 +4,7 @@ media_player:
     host: media
     port: 6612
 
-group:
-  bedroom_mark_multizone_audio_players:
+  - platform: group
+    name: bedroom_mark_multizone_audio
     entities:
       - media_player.bedroom_mark_mpd

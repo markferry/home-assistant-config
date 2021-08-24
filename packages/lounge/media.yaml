@@ -9,8 +9,8 @@ media_player:
     host: lounge.home.whalebarn.com
     port: 8080
 
-group:
-  lounge_multizone_audio_players:
+  - platform: group
+    name: lounge_multizone_audio
     entities:
       - media_player.lounge_mpd
       - media_player.lounge_kodi
