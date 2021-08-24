@@ -16,15 +16,16 @@ group:
   study_compact_ui:
     name: Study
     entities:
-    - input_select.study_mode
-    - climate.study_thermostat
-    - group.study_lights
+      - input_select.study_mode
+      - climate.study_thermostat
+      - group.study_lights
+      - group.study_multizone_audio_players
 
   study_setpoints:
     name: Study Setpoints
     entities:
-    - climate.study_east_mode
-    - climate.study_west_mode
+      - climate.study_east_mode
+      - climate.study_west_mode
 
   study_lights:
     name: Study Lights
@@ -33,20 +34,16 @@ group:
   study_appliances:
     name: Study Appliances
     entities:
-    - device_tracker.ricoh213w
-    - device_tracker.canonmg5550
+      - device_tracker.ricoh213w
+      - device_tracker.canonmg5550
 
 scene:
   - name: study_off
     entities:
       group.study_lights:
         state: off
-      media_player.study:
+      group.study_multizone_audio_players:
         state: paused
-      media_player.snapcast_client_study:
-        state: on
-        is_volume_muted: true
-
   - name: study_cosy
     entities:
       group.study_lights:
@@ -81,11 +78,6 @@ switch:
     payload_on: 'ON'
     retain: true
 
-media_player:
-  - name: study
-    platform: kodi
-    host: study.home.whalebarn.com
-    port: 80
 
 #automation: !include_dir_merge_list automations
 #script: !include_dir_merge_named scripts

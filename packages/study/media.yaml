@@ -1,0 +1,16 @@
+media_player:
+  - platform: mpd
+    name: study_mpd
+    host: media
+    port: 6606
+
+  - platform: kodi
+    name: study_kodi
+    host: study.home.whalebarn.com
+    port: 8080
+
+group:
+  study_multizone_audio_players:
+    entities:
+      - media_player.study_mpd
+      - media_player.study_kodi

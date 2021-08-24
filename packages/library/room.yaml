@@ -14,14 +14,15 @@ group:
     name: Library
     icon: mdi:library
     entities:
-    - input_select.library_mode
-    - climate.library_thermostat
-    - group.library_lights
+      - input_select.library_mode
+      - climate.library_thermostat
+      - group.library_lights
+      - group.library_multizone_audio_players
 
   library_setpoints:
     name: Library Setpoints
     entities:
-    - climate.library_east_mode
+      - climate.library_east_mode
 
   library_lights:
     name: Library Lights
@@ -31,11 +32,8 @@ scene:
     entities:
       group.library_lights:
         state: off
-      media_player.library:
+      group.library_multizone_audio_players:
         state: paused
-      media_player.snapcast_client_library:
-        state: on
-        is_volume_muted: true
 
   - name: library_cosy
     entities:

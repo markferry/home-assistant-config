@@ -17,20 +17,21 @@ group:
     name: Lounge
     icon: mdi:sofa
     entities:
-    - input_select.lounge_mode
-    - climate.lounge_thermostat
-    - group.lounge_lights
+      - input_select.lounge_mode
+      - climate.lounge_thermostat
+      - group.lounge_lights
+      - group.lounge_multizone_audio_players
 
   lounge_setpoints:
     name: Lounge Setpoints
     entities:
-    - climate.lounge_east_mode
+      - climate.lounge_east_mode
 
   lounge_lights:
     entities:
-    - light.lounge_east
-    - light.lounge_north
-    - light.lounge_west
+      - light.lounge_east
+      - light.lounge_north
+      - light.lounge_west
     name: Lounge Lights
 
 scene:
@@ -38,11 +39,8 @@ scene:
     entities:
       group.lounge_lights:
         state: off
-      media_player.lounge:
+      group.lounge_multizone_audio_players:
         state: paused
-      media_player.snapcast_client_lounge:
-        state: on
-        is_volume_muted: true
 
   - name: lounge_cosy
     entities:
@@ -69,12 +67,6 @@ switch:
     payload_off: 'OFF'
     payload_on: 'ON'
     retain: true
-
-media_player:
-  - name: lounge
-    platform: kodi
-    host: lounge.home.whalebarn.com
-    port: 80
 
 #script: !include_dir_merge_named scripts
 #automation: !include_dir_merge_list automations

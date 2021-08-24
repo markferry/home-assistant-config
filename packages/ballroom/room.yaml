@@ -18,14 +18,15 @@ group:
     name: Ballroom
     icon: mdi:projector
     entities:
-    - input_select.ballroom_mode
-    - climate.ballroom_thermostat
-    - group.ballroom_party_lights
+      - input_select.ballroom_mode
+      - climate.ballroom_thermostat
+      - group.ballroom_party_lights
+      - group.ballroom_multizone_audio_players
 
   ballroom_setpoints:
     name: Ballroom Setpoints
     entities:
-    - climate.ballroom_east_mode
+      - climate.ballroom_east_mode
 
   ballroom_lights:
     name: Ballroom Lights
@@ -35,7 +36,7 @@ group:
     name: Ballroom Party Lights
     icon: mdi:lightbulb-on
     entities:
-    - switch.greenwave_powernode_24_switch
+      - switch.greenwave_powernode_24_switch
 
 scene:
   - name: ballroom_off
@@ -44,13 +45,10 @@ scene:
         state: off
       group.ballroom_party_lights:
         state: off
-      media_player.ballroom:
+      group.ballroom_multizone_audio_players:
         state: paused
       media_player.ballroom_amplifier:
         state: off
-      media_player.snapcast_client_ballroom:
-        state: on
-        is_volume_muted: true
 
   - name: ballroom_party
     entities:
@@ -84,11 +82,6 @@ switch:
     retain: true
 
 media_player:
-  - name: ballroom
-    platform: kodi
-    host: ballroom.home.whalebarn.com
-    port: 80
-
   - name: Ballroom Amplifier
     platform: onkyo
     host: ballroom-amp

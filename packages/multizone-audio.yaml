@@ -1,0 +1,4 @@
+media_player:
+  - platform: snapcast
+    host: !secret snapcast_host
+

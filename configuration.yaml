@@ -32,7 +32,7 @@ homeassistant:
     package_washing_machine: !include packages/washing-machine.yaml
     #package_stream_radio: !include packages/stream-radio.yaml
     package_oil_monitor: !include packages/myolive.yaml
-    package_multiroom_audio: !include packages/multiroom_audio.yaml
+    package_multizone_audio: !include packages/multizone-audio.yaml
     package_mode: !include packages/mode.yaml
 
     package_everwhere: !include packages/everywhere.yaml
@@ -42,12 +42,14 @@ homeassistant:
     package_study_mode: !include packages/study/mode.yaml
     package_study_settings: !include packages/study/settings.yaml
     package_study_voice_control: !include packages/study/voice-control.yaml
+    package_study_media: !include packages/study/media.yaml
 
     package_kitchen: !include packages/kitchen/room.yaml
     package_kitchen_heating: !include packages/kitchen/heating-on-demand.yaml
     package_kitchen_mode: !include packages/kitchen/mode.yaml
     package_kitchen_settings: !include packages/kitchen/settings.yaml
     package_kitchen_voice_control: !include packages/kitchen/voice-control.yaml
+    package_kitchen_media: !include packages/kitchen/media.yaml
 
     package_hall: !include packages/hall/room.yaml
     package_hall_heating: !include packages/hall/heating-on-demand.yaml
@@ -57,6 +59,7 @@ homeassistant:
 
     package_outside: !include packages/outside/room.yaml
     package_outside_voice_control: !include packages/outside/voice-control.yaml
+    package_outside_media: !include packages/outside/media.yaml
 
     package_lounge: !include packages/lounge/room.yaml
     package_lounge_heating: !include packages/lounge/heating-on-demand.yaml
@@ -64,12 +67,14 @@ homeassistant:
     package_lounge_mode: !include packages/lounge/mode.yaml
     package_lounge_settings: !include packages/lounge/settings.yaml
     package_lounge_voice_control: !include packages/lounge/voice-control.yaml
+    package_lounge_media: !include packages/lounge/media.yaml
 
     package_library: !include packages/library/room.yaml
     package_library_heating: !include packages/library/heating-on-demand.yaml
     package_library_mode: !include packages/library/mode.yaml
     package_library_settings: !include packages/library/settings.yaml
     package_library_voice_control: !include packages/library/voice-control.yaml
+    package_library_media: !include packages/library/media.yaml
 
     package_ballroom: !include packages/ballroom/room.yaml
     package_ballroom_heating: !include packages/ballroom/heating-on-demand.yaml
@@ -77,6 +82,7 @@ homeassistant:
     package_ballroom_mode: !include packages/ballroom/mode.yaml
     package_ballroom_settings: !include packages/ballroom/settings.yaml
     package_ballroom_voice_control: !include packages/ballroom/voice-control.yaml
+    package_ballroom_media: !include packages/ballroom/media.yaml
 
     package_armoury: !include packages/armoury/room.yaml
 
@@ -92,6 +98,7 @@ homeassistant:
     package_bedroom_mark_mode: !include packages/bedroom-mark/mode.yaml
     package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
     package_bedroom_mark_voice_control: !include packages/bedroom-mark/voice-control.yaml
+    package_bedroom_mark_media: !include packages/bedroom-mark/media.yaml
 
     # Jerome's room
     package_bedroom_main2: !include packages/bedroom-main2/room.yaml
@@ -213,6 +220,9 @@ script: !include_dir_merge_named scripts
 
 lovelace:
   mode: yaml
+  resources:
+    - url: /local/mini-media-player-bundle.js?v=1.12.1
+      type: module
 
 owntracks:
   max_gps_accuracy: 3000

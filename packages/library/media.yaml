@@ -1,0 +1,10 @@
+media_player:
+  - platform: mpd
+    name: library_mpd
+    host: media
+    port: 6607
+
+group:
+  library_multizone_audio_players:
+    entities:
+      - media_player.library_mpd

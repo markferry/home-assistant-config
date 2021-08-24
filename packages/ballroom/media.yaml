@@ -1,0 +1,16 @@
+media_player:
+  - platform: mpd
+    name: ballroom_mpd
+    host: media
+    port: 6609
+
+  - platform: kodi
+    name: ballroom_kodi
+    host: ballroom.home.whalebarn.com
+    port: 8080
+
+group:
+  ballroom_multizone_audio_players:
+    entities:
+      - media_player.ballroom_mpd
+      - media_player.ballroom_kodi
