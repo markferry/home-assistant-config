@@ -1,0 +1,28 @@
+# Unused: yaml configuration no longer supported
+#
+
+sensor:
+  - platform: nut
+    name: Eaton UPS
+    host: cyclops
+    port: 3493
+    alias: eaton
+    username: pixie
+    password: !secret nut_pixie
+    resources:
+      - ups.status
+      - ups.status_data
+      - ups.load
+      - battery.charge
+      - battery.runtime
+
+group:
+  ups:
+    name: UPS
+    icon: mdi:car-battery
+    entities:
+    - sensor.eaton_status
+    - sensor.eaton_load
+    - sensor.eaton_battery_charge
+    - sensor.eaton_battery_runtime
+
