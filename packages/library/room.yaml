@@ -17,7 +17,7 @@ group:
       - input_select.library_mode
       - climate.library_thermostat
       - group.library_lights
-      - group.library_multizone_audio_players
+      - media_player.library_multizone_audio
 
   library_setpoints:
     name: Library Setpoints
@@ -32,7 +32,7 @@ scene:
     entities:
       group.library_lights:
         state: off
-      group.library_multizone_audio_players:
+      media_player.library_multizone_audio:
         state: paused
 
   - name: library_cosy

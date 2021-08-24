@@ -19,7 +19,7 @@ group:
       - input_select.study_mode
       - climate.study_thermostat
       - group.study_lights
-      - group.study_multizone_audio_players
+      - media_player.study_multizone_audio
 
   study_setpoints:
     name: Study Setpoints
@@ -42,8 +42,15 @@ scene:
     entities:
       group.study_lights:
         state: off
-      group.study_multizone_audio_players:
+      media_player.study_multizone_audio:
         state: paused
+      media_player.study_multizone_audio:
+        state: "paused"
+        #media_player.study_mpd:
+        #  state: paused
+        #media_player.study_kodi:
+        #  state: paused
+
   - name: study_cosy
     entities:
       group.study_lights:

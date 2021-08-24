@@ -18,7 +18,7 @@ group:
       - climate.kitchen_thermostat
       - binary_sensor.washing_machine
       - group.kitchen_lights
-      - group.kitchen_multizone_audio_players
+      - media_player.kitchen_multizone_audio
 
   kitchen_setpoints:
     name: Kitchen Setpoints
@@ -35,7 +35,7 @@ scene:
         state: off
       media_player.kitchen_speaker:
         state: paused
-      group.kitchen_multizone_audio_players:
+      media_player.kitchen_multizone_audio:
         state: paused
       ## Leave it on for now
       #media_player.kitchen_amplifier:

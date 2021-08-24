@@ -20,7 +20,7 @@ group:
       - input_select.lounge_mode
       - climate.lounge_thermostat
       - group.lounge_lights
-      - group.lounge_multizone_audio_players
+      - media_player.lounge_multizone_audio
 
   lounge_setpoints:
     name: Lounge Setpoints
@@ -39,7 +39,7 @@ scene:
     entities:
       group.lounge_lights:
         state: off
-      group.lounge_multizone_audio_players:
+      media_player.lounge_multizone_audio:
         state: paused
 
   - name: lounge_cosy
