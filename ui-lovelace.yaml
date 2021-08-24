@@ -391,7 +391,6 @@ views:
         name: Humidity
       - sensor.hall_temperature
       - sensor.annex_hall_mean_temperature
-      - binary_sensor.camera_0_motion_detected
     cards:
       - type: entities
         title: Hall
@@ -422,45 +421,6 @@ views:
             name: Annex Heating Thermostat
           - entity: switch.annex_heating_thermostat_switch
             name: Annex Heating Holiday Mode
-      - type: entities
-        title: Hot Tub
-        show_header_toggle: false
-        entities:
-          - entity: binary_sensor.hottub
-            name: Heating
-          - entity: switch.hottub_powernode_switch
-            name: Power Supply
-          - entity: sensor.hottub_powernode_electric_kwh
-            name: Energy
-          - entity: sensor.hottub_powernode_electric_w
-            name: Power
-      - type: entities
-        title: Oil Levels
-        show_header_toggle: false
-        entities:
-          - entity: sensor.oil_main_litres
-            name: "Main Oil Level"
-          - entity: sensor.oil_main_percentage
-            name: "Main Oil Percent"
-          - entity: sensor.oil_main_days_remaining
-            name: "Main Oil Days Remaining"
-          - type: divider
-          - entity: sensor.oil_annex_litres
-            name: "Annex Oil Level"
-          - entity: sensor.oil_annex_percentage
-            name: "Annex Oil Percent"
-          - entity: sensor.oil_annex_days_remaining
-            name: "Annex Oil Days Remaining"
-
-      - type: entities
-        title: Outside Media
-        entities:
-          - entity: media_player.outside_mpd
-            <<: *default_room_mpd
-          - type: divider
-          - entity: media_player.outside_amplifier
-            <<: *default_room_onkyo
-
 
   - title: Lounge
     icon: mdi:sofa
@@ -599,6 +559,50 @@ views:
                 - name: Manual Heat
                   entity: switch.guest_room_demand
                   icon: mdi:power
+
+
+  - title: Outside
+    icon: mdi:pine-tree
+    cards:
+      - type: entities
+        entities:
+          - entity: media_player.outside_mpd
+            <<: *default_room_mpd
+          - type: divider
+          - entity: media_player.outside_amplifier
+            <<: *default_room_onkyo
+
+      - type: entities
+        title: Oil Levels
+        show_header_toggle: false
+        entities:
+          - entity: sensor.oil_main_litres
+            name: "Main Oil Level"
+          - entity: sensor.oil_main_percentage
+            name: "Main Oil Percent"
+          - entity: sensor.oil_main_days_remaining
+            name: "Main Oil Days Remaining"
+          - type: divider
+          - entity: sensor.oil_annex_litres
+            name: "Annex Oil Level"
+          - entity: sensor.oil_annex_percentage
+            name: "Annex Oil Percent"
+          - entity: sensor.oil_annex_days_remaining
+            name: "Annex Oil Days Remaining"
+
+      - type: entities
+        title: Hot Tub
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.hottub
+            name: Heating
+          - entity: switch.hottub_powernode_switch
+            name: Power Supply
+          - entity: sensor.hottub_powernode_electric_kwh
+            name: Energy
+          - entity: sensor.hottub_powernode_electric_w
+            name: Power
+
 
   - title: Armoury
     icon: mdi:security
