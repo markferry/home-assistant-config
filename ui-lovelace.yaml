@@ -615,6 +615,9 @@ views:
 
   - title: Armoury
     icon: mdi:security
+    visible:
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
     badges:
       - entity: sensor.cm2_temp_c
         name: Temperature
