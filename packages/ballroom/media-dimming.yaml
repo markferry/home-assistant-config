@@ -2,6 +2,46 @@
 # Dim lights based on media player status
 #
 
+homeassistant:
+  customize:
+    group.g_ballroom_media_dimming:
+      icon: mdi:brightness-auto
+    input_boolean.ballroom_dim_for_movie:
+      icon: mdi:movie
+    input_boolean.ballroom_dim_for_tv:
+      icon: mdi:television-classic
+    input_number.ballroom_media_dimmer_level:
+      icon: mdi:brightness-6
+
+    package.ballroom_media_dimming: &ballroom_dim_condition
+      condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: "below_horizon"
+          - condition: state
+            entity_id: group.ballroom_lights
+            state: "on"
+          - condition: or
+            conditions:
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity_id: input_boolean.ballroom_dim_for_movie
+                    state: "on"
+                  - condition: template
+                    value_template: >
+                      {{ trigger.to_state.attributes.media_content_type == "movie" }}
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity_id: input_boolean.ballroom_dim_for_tv
+                    state: "on"
+                  - condition: template
+                    value_template: >
+                      {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
+
 group:
   g_ballroom_media_dimming:
     name: Media Auto Dim
@@ -18,143 +58,47 @@ input_boolean:
 
 input_number:
   ballroom_media_dimmer_level:
-    name: 'Dim Level'
+    name: "Dim Level"
     min: 0
     max: 40
     step: 5
 
 automation:
-- alias: "Ballroom Dim on Media Playing"
-  trigger:
-    - platform: state
-      entity_id: media_player.ballroom
-      to: 'playing'
-      for:
-        seconds: 2
-
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: state
+  - alias: "Ballroom Dim on Media Playing"
+    trigger:
+      - platform: state
+        entity_id: media_player.ballroom_kodi
+        to: "playing"
+        for:
+          seconds: 2
+    <<: *ballroom_dim_condition
+    action:
+      service: light.turn_on
+      data_template:
         entity_id: group.ballroom_lights
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.ballroom_dim_for_movie
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "movie" }}
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.ballroom_dim_for_tv
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
+        brightness_pct: "{{ states.input_number.ballroom_media_dimmer_level.state | int }}"
+        transition: "2"
 
-  action:
-    service: light.turn_on
-    data_template:
-      entity_id: group.ballroom_lights
-      brightness_pct: '{{ states.input_number.ballroom_media_dimmer_level.state | int }}'
-      transition: '2'
-
-
-- alias: "Ballroom Dim on Media Paused"
-  trigger:
-    - platform: state
-      entity_id: media_player.ballroom
-      to: 'paused'
-
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: state
+  - alias: "Ballroom Dim on Media Paused"
+    trigger:
+      - platform: state
+        entity_id: media_player.ballroom_kodi
+        to: "paused"
+    <<: *ballroom_dim_condition
+    action:
+      service: light.turn_on
+      data:
         entity_id: group.ballroom_lights
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.ballroom_dim_for_movie
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "movie" }}
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.ballroom_dim_for_tv
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
+        brightness_pct: "50"
+        transition: "3"
 
-  action:
-    service: light.turn_on
-    data:
-      entity_id: group.ballroom_lights
-      brightness_pct: '50'
-      transition: '3'
-
-- alias: "Ballroom Dim on Media Stopped"
-  trigger:
-    - platform: state
-      entity_id: media_player.ballroom
-      from: 'playing'
-      to: 'idle'
-
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: state
-        entity_id: group.ballroom_lights
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.ballroom_dim_for_movie
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "movie" }}
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.ballroom_dim_for_tv
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
-
-  action:
-    service: scene.turn_on
-    entity_id: scene.ballroom_bright
-
-homeassistant:
-  customize:
-    group.g_ballroom_media_dimming:
-      icon: mdi:brightness-auto
-    input_boolean.ballroom_dim_for_movie:
-      icon: mdi:movie
-    input_boolean.ballroom_dim_for_tv:
-      icon: mdi:television-classic
-    input_number.ballroom_media_dimmer_level:
-      icon: mdi:brightness-6
+  - alias: "Ballroom Dim on Media Stopped"
+    trigger:
+      - platform: state
+        entity_id: media_player.ballroom_kodi
+        from: "playing"
+        to: "idle"
+    <<: *ballroom_dim_condition
+    action:
+      service: scene.turn_on
+      entity_id: scene.ballroom_bright

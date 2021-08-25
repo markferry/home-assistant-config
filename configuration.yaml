@@ -40,6 +40,7 @@ homeassistant:
 
     package_study: !include packages/study/room.yaml
     package_study_heating: !include packages/study/heating-on-demand.yaml
+    package_study_media_dimming: !include packages/study/media-dimming.yaml
     package_study_mode: !include packages/study/mode.yaml
     package_study_settings: !include packages/study/settings.yaml
     package_study_voice_control: !include packages/study/voice-control.yaml
