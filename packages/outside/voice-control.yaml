@@ -5,11 +5,10 @@ google_assistant:
   entity_config:
     media_player.outside_amplifier:
       name: "Outside Amplifier"
-      expose: true
-      room: "Outside"
+      <<: &ga_outside_expose
+        expose: true
+        room: "Outside"
 
-    media_player.snapcast_client_outside:
-      name: "Outside Snapcast"
-      expose: true
-      room: "Outside"
-
+    media_player.outside_mpd:
+      name: "Outside Music Player"
+      <<: *ga_outside_expose

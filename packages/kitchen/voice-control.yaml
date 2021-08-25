@@ -27,8 +27,8 @@ google_assistant:
       name: "Kitchen Amplifier"
       <<: *ga_kitchen_expose
 
-    media_player.snapcast_client_kitchen2:
-      name: "Kitchen Snapcast"
+    media_player.kitchen_mpd:
+      name: "Kitchen Music Player"
       <<: *ga_kitchen_expose
 
 script:
@@ -52,4 +52,3 @@ script:
         data:
           entity_id: input_select.kitchen_mode
           option: "Bright"
-

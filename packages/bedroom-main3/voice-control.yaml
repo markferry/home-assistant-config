@@ -45,4 +45,3 @@ script:
         data:
           entity_id: input_select.bedroom_main3_mode
           option: "Sleep"
-

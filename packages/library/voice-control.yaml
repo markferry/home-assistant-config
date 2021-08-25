@@ -26,36 +26,35 @@ google_assistant:
       name: "Library Read Mode"
       <<: *ga_library_expose
 
-    media_player.snapcast_client_library:
-      name: "Library Snapcast"
+    media_player.library_mpd:
+      name: "Library Music Player"
       <<: *ga_library_expose
 
 script:
   voice_library_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.library_mode
           option: "Off"
 
   voice_library_cosy:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.library_mode
           option: "Cosy"
 
   voice_library_bright:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.library_mode
           option: "Bright"
 
   voice_library_read:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.library_mode
           option: "Read"
-

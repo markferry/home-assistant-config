@@ -23,29 +23,28 @@ google_assistant:
       name: "Mark's Bedroom Sleep Mode"
       <<: *ga_bedroom_mark_expose
 
-    media_player.snapcast_client_bedroom_mark:
-      name: "Mark's Bedroom Snapcast"
+    media_player.bedroom_mark_mpd:
+      name: "Mark's Bedroom Music Player"
       <<: *ga_bedroom_mark_expose
 
 script:
   voice_bedroom_mark_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.bedroom_mark_mode
           option: "Off"
 
   voice_bedroom_mark_play:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.bedroom_mark_mode
           option: "Play"
 
   voice_bedroom_mark_sleep:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.bedroom_mark_mode
           option: "Sleep"
-

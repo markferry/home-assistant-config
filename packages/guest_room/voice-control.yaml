@@ -25,23 +25,22 @@ google_assistant:
 
 script:
   voice_guest_room_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.guest_room_mode
           option: "Off"
 
   voice_guest_room_cosy:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.guest_room_mode
           option: "Cosy"
 
   voice_guest_room_sleep:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.guest_room_mode
           option: "Sleep"
-

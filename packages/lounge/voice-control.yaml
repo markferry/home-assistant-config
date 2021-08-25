@@ -38,38 +38,42 @@ google_assistant:
         - "Sitting Room Movie Mode"
       <<: *ga_lounge_expose
 
-    media_player.snapcast_client_lounge:
-      name: "Lounge Snapcast"
+    media_player.lounge_mpd:
+      name: "Lounge Music Player"
       aliases:
-        - "Sitting Room Snapcast"
+        - "Sitting Room Music Player"
       <<: *ga_lounge_expose
+
+    media_player.lounge_kodi:
+      name: "Lounge Kodi"
+      <<: *ga_lounge_expose
+
 
 script:
   voice_lounge_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.lounge_mode
           option: "Off"
 
   voice_lounge_cosy:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.lounge_mode
           option: "Cosy"
 
   voice_lounge_bright:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.lounge_mode
           option: "Bright"
 
   voice_lounge_movie:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.lounge_mode
           option: "Movie"
-
