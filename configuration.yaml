@@ -222,8 +222,5 @@ lovelace:
     - url: /local/mini-media-player-bundle.js?v=1.12.1
       type: module
 
-owntracks:
-  max_gps_accuracy: 3000
-
 google_assistant: !include google-assistant.yaml
 mobile_app:
