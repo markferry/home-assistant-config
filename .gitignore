@@ -1,5 +1,7 @@
 *.log
 *.db
+*.db-shm
+*.db-wal
 *.swp
 *.swo
 .HA_VERSION
@@ -10,3 +12,4 @@ www/openhab-icons
 src
 ozwdaemon
 .vim
+blueprints
