@@ -18,9 +18,6 @@ homeassistant:
         condition: and
         conditions:
           - condition: state
-            entity_id: sun.sun
-            state: "below_horizon"
-          - condition: state
             entity_id: group.study_lights
             state: "on"
           - condition: or
@@ -59,7 +56,7 @@ input_boolean:
 input_number:
   study_media_dimmer_level:
     name: "Dim Level"
-    min: 0
+    min: 5
     max: 40
     step: 5
 

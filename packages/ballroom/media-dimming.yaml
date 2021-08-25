@@ -17,12 +17,6 @@ homeassistant:
       condition:
         condition: and
         conditions:
-          - condition: state
-            entity_id: sun.sun
-            state: "below_horizon"
-          - condition: state
-            entity_id: group.ballroom_lights
-            state: "on"
           - condition: or
             conditions:
               - condition: and
