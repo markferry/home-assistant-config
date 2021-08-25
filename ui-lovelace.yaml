@@ -160,8 +160,6 @@ views:
                 entity: binary_sensor.aeotec_zw100_multisensor_home_security_motion_detected
               - name: Lights
                 entity: group.bedroom_mark_lights
-              - name: Media Auto Dim
-                entity: group.g_bedroom_mark_media_dimming
               - name: Settings
                 entity: group.g_bedroom_mark_settings_ui
                 icon: mdi:cog

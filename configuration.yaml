@@ -95,7 +95,6 @@ homeassistant:
 
     package_bedroom_mark: !include packages/bedroom-mark/room.yaml
     package_bedroom_mark_heating: !include packages/bedroom-mark/heating-on-demand.yaml
-    package_bedroom_mark_media_dimming: !include packages/bedroom-mark/media-dimming.yaml
     package_bedroom_mark_mode: !include packages/bedroom-mark/mode.yaml
     package_bedroom_mark_settings: !include packages/bedroom-mark/settings.yaml
     package_bedroom_mark_voice_control: !include packages/bedroom-mark/voice-control.yaml
