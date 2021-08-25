@@ -30,36 +30,39 @@ google_assistant:
       name: "Ballroom Amplifier"
       <<: *ga_ballroom_expose
 
-    media_player.snapcast_client_ballroom:
-      name: "Ballroom Snapcast"
+    media_player.ballroom_mpd:
+      name: "Ballroom Music Player"
+      <<: *ga_ballroom_expose
+
+    media_player.ballroom_kodi:
+      name: "Ballroom Kodi"
       <<: *ga_ballroom_expose
 
 script:
   voice_ballroom_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.ballroom_mode
           option: "Off"
 
   voice_ballroom_party:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.ballroom_mode
           option: "Party"
 
   voice_ballroom_bright:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.ballroom_mode
           option: "Bright"
 
   voice_ballroom_movie:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.ballroom_mode
           option: "Movie"
-

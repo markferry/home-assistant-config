@@ -15,40 +15,40 @@ switch:
     platform: mqtt
     command_topic: ha/dash/party
     state_topic: ha/dash/party
-    payload_on: 'active'
-    payload_off: 'inactive'
+    payload_on: "active"
+    payload_off: "inactive"
 
 script:
   party_mode:
     sequence:
-    - service: mqtt.publish
-      data_template:
-        topic: 'ha/event/party'
-        payload: "It's PARTY time!"
-    - service: notify.whalebarn
-      data:
-        message: "Party Mode activated"
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.ballroom_mode
-        option: "Party"
-    - service: media_player.turn_on
-      data:
-        entity_id: media_player.ballroom_amplifier
-    - delay:
-        seconds: 2
-    - service: media_player.select_source
-      data:
-        entity_id: media_player.ballroom_amplifier
-        source: Media
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.ballroom
-        volume_level: 0.9
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.ballroom_amplifier
-        volume_level: 0.5
+      - service: mqtt.publish
+        data_template:
+          topic: "ha/event/party"
+          payload: "It's PARTY time!"
+      - service: notify.whalebarn
+        data:
+          message: "Party Mode activated"
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.ballroom_mode
+          option: "Party"
+      - service: media_player.turn_on
+        data:
+          entity_id: media_player.ballroom_amplifier
+      - delay:
+          seconds: 2
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.ballroom_amplifier
+          source: Media
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.ballroom_mpd
+          volume_level: 0.5
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.ballroom_amplifier
+          volume_level: 0.5
 
 automation:
   - alias: "Party Mode"

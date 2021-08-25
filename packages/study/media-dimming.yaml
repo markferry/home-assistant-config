@@ -4,25 +4,28 @@
 
 homeassistant:
   customize:
-    group.g_ballroom_media_dimming:
+    group.g_study_media_dimming:
       icon: mdi:brightness-auto
-    input_boolean.ballroom_dim_for_movie:
+    input_boolean.study_dim_for_movie:
       icon: mdi:movie
-    input_boolean.ballroom_dim_for_tv:
+    input_boolean.study_dim_for_tv:
       icon: mdi:television-classic
-    input_number.ballroom_media_dimmer_level:
+    input_number.study_media_dimmer_level:
       icon: mdi:brightness-6
 
-    package.ballroom_media_dimming: &ballroom_dim_condition
+    package.study_media_dimming: &study_dim_condition
       condition:
         condition: and
         conditions:
+          - condition: state
+            entity_id: group.study_lights
+            state: "on"
           - condition: or
             conditions:
               - condition: and
                 conditions:
                   - condition: state
-                    entity_id: input_boolean.ballroom_dim_for_movie
+                    entity_id: input_boolean.study_dim_for_movie
                     state: "on"
                   - condition: template
                     value_template: >
@@ -30,69 +33,69 @@ homeassistant:
               - condition: and
                 conditions:
                   - condition: state
-                    entity_id: input_boolean.ballroom_dim_for_tv
+                    entity_id: input_boolean.study_dim_for_tv
                     state: "on"
                   - condition: template
                     value_template: >
                       {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
 
 group:
-  g_ballroom_media_dimming:
+  g_study_media_dimming:
     name: Media Auto Dim
     entities:
-      - input_boolean.ballroom_dim_for_movie
-      - input_boolean.ballroom_dim_for_tv
-      - input_number.ballroom_media_dimmer_level
+      - input_boolean.study_dim_for_movie
+      - input_boolean.study_dim_for_tv
+      - input_number.study_media_dimmer_level
 
 input_boolean:
-  ballroom_dim_for_tv:
+  study_dim_for_tv:
     name: Dim during TV shows
-  ballroom_dim_for_movie:
+  study_dim_for_movie:
     name: Dim during Movies
 
 input_number:
-  ballroom_media_dimmer_level:
+  study_media_dimmer_level:
     name: "Dim Level"
-    min: 0
+    min: 5
     max: 40
     step: 5
 
 automation:
-  - alias: "Ballroom Dim on Media Playing"
+  - alias: "Study Dim on Media Playing"
     trigger:
       - platform: state
-        entity_id: media_player.ballroom_kodi
+        entity_id: media_player.study_kodi
         to: "playing"
         for:
           seconds: 2
-    <<: *ballroom_dim_condition
+    <<: *study_dim_condition
     action:
-      service: light.turn_on
-      data_template:
-        entity_id: group.ballroom_lights
-        brightness_pct: "{{ states.input_number.ballroom_media_dimmer_level.state | int }}"
-        transition: "2"
+      - service: light.turn_on
+        data_template:
+          entity_id: group.study_lights
+          brightness_pct: "{{ states.input_number.study_media_dimmer_level.state | int }}"
+          transition: "2"
 
-  - alias: "Ballroom Dim on Media Paused"
+  - alias: "Study Dim on Media Paused"
     trigger:
       - platform: state
-        entity_id: media_player.ballroom_kodi
+        entity_id: media_player.study_kodi
         to: "paused"
-    <<: *ballroom_dim_condition
+    <<: *study_dim_condition
     action:
       service: light.turn_on
       data:
-        entity_id: group.ballroom_lights
+        entity_id: group.study_lights
         brightness_pct: "50"
         transition: "3"
 
-  - alias: "Ballroom Dim on Media Stopped"
+  - alias: "Study Dim on Media Stopped"
     trigger:
       - platform: state
-        entity_id: media_player.ballroom_kodi
+        entity_id: media_player.study_kodi
         from: "playing"
         to: "idle"
-    <<: *ballroom_dim_condition
+    <<: *study_dim_condition
     action:
       service: scene.turn_on
-      entity_id: scene.ballroom_bright
+      entity_id: scene.study_bright

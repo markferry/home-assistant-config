@@ -160,8 +160,6 @@ views:
                 entity: binary_sensor.aeotec_zw100_multisensor_home_security_motion_detected
               - name: Lights
                 entity: group.bedroom_mark_lights
-              - name: Media Auto Dim
-                entity: group.g_bedroom_mark_media_dimming
               - name: Settings
                 entity: group.g_bedroom_mark_settings_ui
                 icon: mdi:cog
@@ -313,6 +311,7 @@ views:
             name: "Current Temperature"
           - entity: binary_sensor.study_door_contact_access_control_door_window_open
             name: "Study Door"
+          - group.g_study_media_dimming
           - group.g_study_settings_ui
 
       - name: "Study Heat"

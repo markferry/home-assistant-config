@@ -21,7 +21,7 @@ group:
       - input_select.bedroom_mark_mode
       - climate.bedroom_mark_thermostat
       - group.bedroom_mark_lights
-      - group.bedroom_mark_multizone_audio_players
+      - media_player.bedroom_mark_multizone_audio
 
   bedroom_mark_setpoints:
     name: "Mark's Bedroom Setpoints"
@@ -46,7 +46,7 @@ scene:
         state: off
       switch.bedroom_mark_appliances:
         state: off
-      group.bedroom_mark_multizone_audio_players:
+      media_player.bedroom_mark_multizone_audio:
         state: paused
 
   - name: bedroom_mark_sleep

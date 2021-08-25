@@ -26,36 +26,39 @@ google_assistant:
       name: "Study Work Mode"
       <<: *ga_study_expose
 
-    media_player.snapcast_client_study:
-      name: "Study Snapcast"
+    media_player.study_mpd:
+      name: "Study Music Player"
+      <<: *ga_study_expose
+
+    media_player.study_kodi:
+      name: "Study Kodi"
       <<: *ga_study_expose
 
 script:
   voice_study_off:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.study_mode
           option: "Off"
 
   voice_study_cosy:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.study_mode
           option: "Cosy"
 
   voice_study_bright:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.study_mode
           option: "Bright"
 
   voice_study_work:
-      sequence:
+    sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.study_mode
           option: "Work"
-

@@ -4,7 +4,7 @@ media_player:
     host: media
     port: 6611
 
-group:
-  kitchen_multizone_audio_players:
+  - platform: group
+    name: kitchen_multizone_audio
     entities:
       - media_player.kitchen_mpd

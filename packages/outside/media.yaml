@@ -4,7 +4,7 @@ media_player:
     host: media
     port: 6610
 
-group:
-  outside_multizone_audio_players:
+  - platform: group
+    name: outside_multizone_audio
     entities:
       - media_player.outside_mpd

@@ -21,7 +21,7 @@ group:
       - input_select.ballroom_mode
       - climate.ballroom_thermostat
       - group.ballroom_party_lights
-      - group.ballroom_multizone_audio_players
+      - media_player.ballroom_multizone_audio
 
   ballroom_setpoints:
     name: Ballroom Setpoints
@@ -45,7 +45,7 @@ scene:
         state: off
       group.ballroom_party_lights:
         state: off
-      group.ballroom_multizone_audio_players:
+      media_player.ballroom_multizone_audio:
         state: paused
       media_player.ballroom_amplifier:
         state: off

@@ -2,6 +2,43 @@
 # Dim lights based on media player status
 #
 
+homeassistant:
+  customize:
+    group.g_lounge_media_dimming:
+      icon: mdi:brightness-auto
+    input_boolean.lounge_dim_for_movie:
+      icon: mdi:movie
+    input_boolean.lounge_dim_for_tv:
+      icon: mdi:television-classic
+    input_number.lounge_media_dimmer_level:
+      icon: mdi:brightness-6
+
+    package.lounge_media_dimming: &lounge_dim_condition
+      condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: group.lounge_lights
+            state: "on"
+          - condition: or
+            conditions:
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity_id: input_boolean.lounge_dim_for_movie
+                    state: "on"
+                  - condition: template
+                    value_template: >
+                      {{ trigger.to_state.attributes.media_content_type == "movie" }}
+              - condition: and
+                conditions:
+                  - condition: state
+                    entity_id: input_boolean.lounge_dim_for_tv
+                    state: "on"
+                  - condition: template
+                    value_template: >
+                      {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
+
 group:
   g_lounge_media_dimming:
     name: Media Auto Dim
@@ -18,143 +55,47 @@ input_boolean:
 
 input_number:
   lounge_media_dimmer_level:
-    name: 'Dim Level'
-    min: 0
+    name: "Dim Level"
+    min: 5
     max: 40
     step: 5
 
 automation:
-- alias: "Lounge Dim on Media Playing"
-  trigger:
-    - platform: state
-      entity_id: media_player.lounge
-      to: 'playing'
-      for:
-        seconds: 2
+  - alias: "Lounge Dim on Media Playing"
+    trigger:
+      - platform: state
+        entity_id: media_player.lounge_kodi
+        to: "playing"
+        for:
+          seconds: 2
+    <<: *lounge_dim_condition
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id: group.lounge_lights
+          brightness_pct: "{{ states.input_number.lounge_media_dimmer_level.state | int }}"
+          transition: "2"
 
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: state
+  - alias: "Lounge Dim on Media Paused"
+    trigger:
+      - platform: state
+        entity_id: media_player.lounge_kodi
+        to: "paused"
+    <<: *lounge_dim_condition
+    action:
+      service: light.turn_on
+      data:
         entity_id: group.lounge_lights
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.lounge_dim_for_movie
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "movie" }}
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.lounge_dim_for_tv
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
+        brightness_pct: "50"
+        transition: "3"
 
-  action:
-    service: light.turn_on
-    data_template:
-      entity_id: group.lounge_lights
-      brightness_pct: '{{ states.input_number.lounge_media_dimmer_level.state | int }}'
-      transition: '2'
-
-
-- alias: "Lounge Dim on Media Paused"
-  trigger:
-    - platform: state
-      entity_id: media_player.lounge
-      to: 'paused'
-
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: state
-        entity_id: group.lounge_lights
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.lounge_dim_for_movie
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "movie" }}
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.lounge_dim_for_tv
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
-
-  action:
-    service: light.turn_on
-    data:
-      entity_id: group.lounge_lights
-      brightness_pct: '50'
-      transition: '3'
-
-- alias: "Lounge Dim on Media Stopped"
-  trigger:
-    - platform: state
-      entity_id: media_player.lounge
-      from: 'playing'
-      to: 'idle'
-
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: state
-        entity_id: group.lounge_lights
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.lounge_dim_for_movie
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "movie" }}
-        - condition: and
-          conditions:
-          - condition: state
-            entity_id: input_boolean.lounge_dim_for_tv
-            state: 'on'
-          - condition: template
-            value_template: >
-              {{ trigger.to_state.attributes.media_content_type == "tvshow" }}
-
-  action:
-    service: scene.turn_on
-    entity_id: scene.lounge_bright
-
-homeassistant:
-  customize:
-    group.g_lounge_media_dimming:
-      icon: mdi:brightness-auto
-    input_boolean.lounge_dim_for_movie:
-      icon: mdi:movie
-    input_boolean.lounge_dim_for_tv:
-      icon: mdi:television-classic
-    input_number.lounge_media_dimmer_level:
-      icon: mdi:brightness-6
+  - alias: "Lounge Dim on Media Stopped"
+    trigger:
+      - platform: state
+        entity_id: media_player.lounge_kodi
+        from: "playing"
+        to: "idle"
+    <<: *lounge_dim_condition
+    action:
+      service: scene.turn_on
+      entity_id: scene.lounge_bright
