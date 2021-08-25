@@ -44,12 +44,6 @@ scene:
         state: off
       media_player.study_multizone_audio:
         state: paused
-      media_player.study_multizone_audio:
-        state: "paused"
-        #media_player.study_mpd:
-        #  state: paused
-        #media_player.study_kodi:
-        #  state: paused
 
   - name: study_cosy
     entities:
