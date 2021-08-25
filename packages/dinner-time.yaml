@@ -53,9 +53,5 @@ group:
   dinner_announcers:
     name: Dinner Announcers
     entities:
-      - media_player.study
-      - media_player.lounge
-      - media_player.library
-      - media_player.ballroom
-      - media_player.bedroom_mark
+      - media_player.bedroom_mark_multizone_audio
 

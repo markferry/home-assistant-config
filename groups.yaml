@@ -30,18 +30,18 @@ settings:
   name: Settings
   icon: mdi:cog
   entities:
-  - group.temperatures
-  - group.thermostats
-  - group.thermostat_devices
-  - group.annex_heating_demand
-  - group.main_heating_demand
-  - group.batteries
-  - group.main_heating_override
-  - group.annex_heating_override
-  - group.user_automations
-  - group.rfx_switches
-  - group.rfx_lights
-  - group.dash_buttons
+    - group.temperatures
+    - group.thermostats
+    - group.thermostat_devices
+    - group.annex_heating_demand
+    - group.main_heating_demand
+    - group.batteries
+    - group.main_heating_override
+    - group.annex_heating_override
+    - group.user_automations
+    - group.rfx_switches
+    - group.rfx_lights
+    - group.dash_buttons
 
 #
 # Functional Groups
@@ -49,73 +49,73 @@ settings:
 main_heating:
   name: Main Heating
   entities:
-  - sensor.main_heating_thermostat_air_temperature
-  - climate.main_heating_thermostat_heating_1
-  - switch.main_heating_thermostat_switch
+    - sensor.main_heating_thermostat_air_temperature
+    - climate.main_heating_thermostat_heating_1
+    - switch.main_heating_thermostat_switch
 
 main_heating_override:
   name: Main Heating Override
   entities:
-  - switch.main_heating_relay_instance_1_switch
-  - switch.main_heating_relay_instance_2_switch
-  - automation.main_boiler_demand_on
-  - automation.main_boiler_demand_off
-  - automation.hot_water_on
-  - automation.hot_water_off
+    - switch.main_heating_relay_instance_1_switch
+    - switch.main_heating_relay_instance_2_switch
+    - automation.main_boiler_demand_on
+    - automation.main_boiler_demand_off
+    - automation.hot_water_on
+    - automation.hot_water_off
 
 main_heating_demand:
   name: Main Heating Demand
   entities:
-  - switch.kitchen_demand
-  - switch.lounge_demand
-  - switch.library_demand
-  ## temporarily disable hall demand
-  #- switch.hall_demand
-  - switch.ballroom_demand
-  - switch.guest_room_demand
-  - switch.bedroom_mark_demand
-  - switch.bedroom_main2_demand
-  - switch.bedroom_main3_demand
+    - switch.kitchen_demand
+    - switch.lounge_demand
+    - switch.library_demand
+    ## temporarily disable hall demand
+    #- switch.hall_demand
+    - switch.ballroom_demand
+    - switch.guest_room_demand
+    - switch.bedroom_mark_demand
+    - switch.bedroom_main2_demand
+    - switch.bedroom_main3_demand
 
 annex_heating:
   name: Annex Heating
   entities:
-  - sensor.annex_heating_thermostat_air_temperature
-  - climate.annex_heating_thermostat_heating_1
-  - switch.annex_heating_thermostat_switch
+    - sensor.annex_heating_thermostat_air_temperature
+    - climate.annex_heating_thermostat_heating_1
+    - switch.annex_heating_thermostat_switch
 
 annex_heating_override:
   name: Annex Heating Override
   entities:
-  - switch.annex_heating_relay_instance_1_switch
-  - automation.annex_thermostat_demand_on
-  - automation.annex_thermostat_demand_off
+    - switch.annex_heating_relay_instance_1_switch
+    - automation.annex_thermostat_demand_on
+    - automation.annex_thermostat_demand_off
 
 annex_heating_demand:
   name: Annex Heating Demand
   entities:
-  - switch.study_demand
-  - switch.annex_hall_demand
-  - switch.bedroom_annex2_demand
+    - switch.study_demand
+    - switch.annex_hall_demand
+    - switch.bedroom_annex2_demand
 
 user_automations:
   name: Automations
   entities:
-  - automation.guest_room_sleep_time
-  - automation.guest_room_off_time
-  - automation.kitchen_cosy_time
-  - automation.bedroom_mark_sleep_time
-  - automation.bedroom_mark_off_time
-  - automation.reset_modes
-  - automation.study_work_time
-  - automation.calendar_scene
-  - automation.calendar_climate
-  - automation.calendar_mark_scene
-  - automation.calendar_mark_climate
-  - automation.calendar_jerome_scene
-  - automation.calendar_jerome_climate
-  - automation.calendar_ros_scene
-  - automation.calendar_ros_climate
+    - automation.guest_room_sleep_time
+    - automation.guest_room_off_time
+    - automation.kitchen_cosy_time
+    - automation.bedroom_mark_sleep_time
+    - automation.bedroom_mark_off_time
+    - automation.reset_modes
+    - automation.study_work_time
+    - automation.calendar_scene
+    - automation.calendar_climate
+    - automation.calendar_mark_scene
+    - automation.calendar_mark_climate
+    - automation.calendar_jerome_scene
+    - automation.calendar_jerome_climate
+    - automation.calendar_ros_scene
+    - automation.calendar_ros_climate
 
 #
 # Type Groups
@@ -123,94 +123,81 @@ user_automations:
 dash_buttons:
   name: Amazon Dash Buttons
   entities:
-  - switch.table_tennis
-  - switch.party_mode
-  - switch.dinner_time
-  - switch.ariel
-  - switch.optimum_nutrition
-  - switch.philips_sonicare
-  - switch.right_guard
-
-media_players:
-  name: Media Players
-  entities:
-    - media_player.study
-    - media_player.lounge
-    # kitchen
-    - media_player.outside_amplifier_zone_2
-    - media_player.library
-    - media_player.ballroom
-    - media_player.ballroom_amplifier
-    - media_player.bedroom_mark
-    - media_player.outside_amplifier
+    - switch.table_tennis
+    - switch.party_mode
+    - switch.dinner_time
+    - switch.ariel
+    - switch.optimum_nutrition
+    - switch.philips_sonicare
+    - switch.right_guard
 
 temperatures:
   name: Temperatures
   entities:
-  - sensor.main_heating_thermostat_air_temperature
-  - sensor.annex_heating_thermostat_air_temperature
-  - sensor.aeotec_dsb05_multisensor_air_temperature
-  - sensor.ballroom_east_air_temperature
-  - sensor.hall_west_air_temperature
-  - sensor.hall_east_air_temperature
-  - sensor.annex_hall_west_air_temperature
-  - sensor.kitchen_west_air_temperature
-  - sensor.library_east_air_temperature
-  - sensor.lounge_east_air_temperature
-  - sensor.bedroom_mark_south_air_temperature
-  - sensor.bedroom_mark_north_air_temperature
-  - sensor.bedroom_main2_east_air_temperature
-  - sensor.bedroom_main3_east_air_temperature
-  - sensor.study_east_air_temperature
-  - sensor.study_west_air_temperature
-  - sensor.bedroom_annex2_air_temperature
+    - sensor.main_heating_thermostat_air_temperature
+    - sensor.annex_heating_thermostat_air_temperature
+    - sensor.aeotec_dsb05_multisensor_air_temperature
+    - sensor.ballroom_east_air_temperature
+    - sensor.hall_west_air_temperature
+    - sensor.hall_east_air_temperature
+    - sensor.annex_hall_west_air_temperature
+    - sensor.kitchen_west_air_temperature
+    - sensor.library_east_air_temperature
+    - sensor.lounge_east_air_temperature
+    - sensor.bedroom_mark_south_air_temperature
+    - sensor.bedroom_mark_north_air_temperature
+    - sensor.bedroom_main2_east_air_temperature
+    - sensor.bedroom_main3_east_air_temperature
+    - sensor.study_east_air_temperature
+    - sensor.study_west_air_temperature
+    - sensor.bedroom_annex2_air_temperature
 
 thermostat_devices:
   name: Thermostat Devices
   entities:
-  - climate.annex_hall_west_mode
-  - climate.ballroom_east_mode
-  - climate.bedroom_mark_south_mode
-  - climate.bedroom_mark_north_mode
-  - climate.hall_east_mode
-  - climate.hall_west_mode
-  - climate.main_heating_thermostat_heating_1
-  - climate.annex_heating_thermostat_heating_1
-  - climate.kitchen_west_mode
-  - climate.library_east_mode
-  - climate.lounge_east_mode
-  - climate.study_east_mode
-  - climate.study_west_mode
-  - climate.guest_room_north_mode
-  - climate.danfoss_z_thermostat_014g0013_heating_1
-  - climate.bedroom_annex2_west_mode
-  - climate.bedroom_main2_east_mode
-  - climate.bedroom_main3_east_mode
+    - climate.annex_hall_west_mode
+    - climate.ballroom_east_mode
+    - climate.bedroom_mark_south_mode
+    - climate.bedroom_mark_north_mode
+    - climate.hall_east_mode
+    - climate.hall_west_mode
+    - climate.main_heating_thermostat_heating_1
+    - climate.annex_heating_thermostat_heating_1
+    - climate.kitchen_west_mode
+    - climate.library_east_mode
+    - climate.lounge_east_mode
+    - climate.study_east_mode
+    - climate.study_west_mode
+    - climate.guest_room_north_mode
+    - climate.danfoss_z_thermostat_014g0013_heating_1
+    - climate.bedroom_annex2_west_mode
+    - climate.bedroom_main2_east_mode
+    - climate.bedroom_main3_east_mode
 
 # Front-end thermostats
 thermostats:
   name: Thermostats
   entities:
-  - climate.annex_hall_thermostat
-  - climate.ballroom_east_mode
-  - climate.bedroom_mark_thermostat
-  - climate.hall_east_mode
-  - climate.hall_west_mode
-  - climate.kitchen_thermostat
-  - climate.library_thermostat
-  - climate.lounge_east_mode
-  - climate.study_thermostat
-  - climate.guest_room_thermostat
-  - climate.bedroom_jerome_thermostat
-  - climate.bedroom_annex2_thermostat
+    - climate.annex_hall_thermostat
+    - climate.ballroom_east_mode
+    - climate.bedroom_mark_thermostat
+    - climate.hall_east_mode
+    - climate.hall_west_mode
+    - climate.kitchen_thermostat
+    - climate.library_thermostat
+    - climate.lounge_east_mode
+    - climate.study_thermostat
+    - climate.guest_room_thermostat
+    - climate.bedroom_jerome_thermostat
+    - climate.bedroom_annex2_thermostat
 
 virtual_appliances:
   name: Virtual Appliances
   entities:
-  - input_boolean.washing_machine_debouncer
-  - binary_sensor.washing_machine
-  - input_boolean.hottub_debouncer
-  - binary_sensor.hottub
+    - input_boolean.washing_machine_debouncer
+    - binary_sensor.washing_machine
+    - input_boolean.hottub_debouncer
+    - binary_sensor.hottub
 
 #
 # Presence Groups - still useful for automations
@@ -222,4 +209,3 @@ people:
 barnacles:
   name: "Who's Visiting?"
   entities: !include people/barnacles.yaml
-
