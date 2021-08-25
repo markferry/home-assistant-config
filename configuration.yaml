@@ -146,9 +146,6 @@ conversation:
 logger:
   default: error
 
-# Enables support for tracking state changes over time.
-history: !include history.yaml
-
 # View all events in a logbook
 logbook: !include logbook.yaml
 
