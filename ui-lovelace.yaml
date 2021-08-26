@@ -164,6 +164,11 @@ views:
                 entity: group.g_bedroom_mark_settings_ui
                 icon: mdi:cog
 
+          - type: entities
+            entities:
+              - entity: media_player.bedroom_mark_mpd
+                <<: *default_room_mpd
+
           - name: "Mark's Bedroom"
             type: thermostat
             entity: climate.bedroom_mark_thermostat
@@ -177,11 +182,6 @@ views:
                 - name: Manual Heat
                   entity: switch.bedroom_mark_demand
                   icon: mdi:fire
-
-          - type: entities
-            entities:
-              - entity: media_player.bedroom_mark_mpd
-                <<: *default_room_mpd
 
 
   - title: "Olga's Bedroom"
@@ -314,6 +314,14 @@ views:
           - group.g_study_media_dimming
           - group.g_study_settings_ui
 
+      - type: entities
+        entities:
+          - entity: media_player.study_mpd
+            <<: *default_room_mpd
+          - type: divider
+          - entity: media_player.study_kodi
+            <<: *default_room_kodi
+
       - name: "Study Heat"
         type: thermostat
         entity: climate.study_thermostat
@@ -327,14 +335,6 @@ views:
             - name: Manual Heat
               entity: switch.study_demand
               icon: mdi:fire
-      - type: entities
-        entities:
-          - entity: media_player.study_mpd
-            <<: *default_room_mpd
-          - type: divider
-          - entity: media_player.study_kodi
-            <<: *default_room_kodi
-
 
   - title: Kitchen
     icon: mdi:stove
@@ -357,6 +357,14 @@ views:
             name: "Gin Freezer"
           - group.g_kitchen_settings_ui
 
+      - type: entities
+        entities:
+          - entity: media_player.kitchen_mpd
+            <<: *default_room_mpd
+          - type: divider
+          - entity: media_player.outside_amplifier_zone_2
+            <<: *default_room_onkyo
+
       - name: "Kitchen Heat"
         type: thermostat
         entity: climate.kitchen_thermostat
@@ -370,14 +378,6 @@ views:
             - name: Manual Heat
               entity: switch.kitchen_demand
               icon: mdi:fire
-
-      - type: entities
-        entities:
-          - entity: media_player.kitchen_mpd
-            <<: *default_room_mpd
-          - type: divider
-          - entity: media_player.outside_amplifier_zone_2
-            <<: *default_room_onkyo
 
   - title: Hall
     icon: mdi:fullscreen-exit
@@ -435,6 +435,14 @@ views:
           - group.g_lounge_media_dimming
           - group.g_lounge_settings_ui
 
+      - type: entities
+        entities:
+          - entity: media_player.lounge_mpd
+            <<: *default_room_mpd
+          - type: divider
+          - entity: media_player.lounge_kodi
+            <<: *default_room_kodi
+
       - name: "Lounge Heat"
         type: thermostat
         entity: climate.lounge_thermostat
@@ -449,14 +457,6 @@ views:
               entity: switch.lounge_demand
               icon: mdi:fire
 
-      - type: entities
-        entities:
-          - entity: media_player.lounge_mpd
-            <<: *default_room_mpd
-          - type: divider
-          - entity: media_player.lounge_kodi
-            <<: *default_room_kodi
-
 
   - title: Library
     icon: mdi:library
@@ -469,6 +469,11 @@ views:
           - entity: sensor.library_mean_temperature
             name: "Current Temperature"
           - group.g_library_settings_ui
+
+      - type: entities
+        entities:
+          - entity: media_player.library_mpd
+            <<: *default_room_mpd
 
       - name: "Library Heat"
         type: thermostat
@@ -483,11 +488,6 @@ views:
             - name: Manual Heat
               entity: switch.library_demand
               icon: mdi:fire
-
-      - type: entities
-        entities:
-          - entity: media_player.library_mpd
-            <<: *default_room_mpd
 
 
   - title: Ballroom
@@ -504,6 +504,17 @@ views:
           - group.g_ballroom_media_dimming
           - group.g_ballroom_settings_ui
 
+      - type: entities
+        entities:
+          - entity: media_player.ballroom_mpd
+            <<: *default_room_mpd
+          - type: divider
+          - entity: media_player.ballroom_kodi
+            <<: *default_room_kodi
+          - type: divider
+          - entity: media_player.ballroom_amplifier
+            <<: *default_room_onkyo
+
       - name: "Ballroom Heat"
         type: thermostat
         entity: climate.ballroom_thermostat
@@ -517,17 +528,6 @@ views:
             - name: Manual Heat
               entity: switch.ballroom_demand
               icon: mdi:fire
-
-      - type: entities
-        entities:
-          - entity: media_player.ballroom_mpd
-            <<: *default_room_mpd
-          - type: divider
-          - entity: media_player.ballroom_kodi
-            <<: *default_room_kodi
-          - type: divider
-          - entity: media_player.ballroom_amplifier
-            <<: *default_room_onkyo
 
   - title: Guest Room
     icon: mdi:bed-empty
