@@ -50,8 +50,8 @@ main_heating:
   name: Main Heating
   entities:
     - sensor.main_heating_thermostat_air_temperature
-    - climate.main_heating_thermostat_heating_1
-    - switch.main_heating_thermostat_switch
+    - climate.main_heating_thermostat_climate
+    - switch.main_heating_thermostat_switch_2
 
 main_heating_override:
   name: Main Heating Override
@@ -81,8 +81,8 @@ annex_heating:
   name: Annex Heating
   entities:
     - sensor.annex_heating_thermostat_air_temperature
-    - climate.annex_heating_thermostat_heating_1
-    - switch.annex_heating_thermostat_switch
+    - climate.annex_heating_thermostat_climate
+    - switch.annex_heating_thermostat_switch_2
 
 annex_heating_override:
   name: Annex Heating Override
@@ -161,8 +161,8 @@ thermostat_devices:
     - climate.bedroom_mark_north_mode
     - climate.hall_east_mode
     - climate.hall_west_mode
-    - climate.main_heating_thermostat_heating_1
-    - climate.annex_heating_thermostat_heating_1
+    - climate.main_heating_thermostat_climate
+    - climate.annex_heating_thermostat_climate
     - climate.kitchen_west_mode
     - climate.library_east_mode
     - climate.lounge_east_mode

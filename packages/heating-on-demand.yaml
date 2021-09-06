@@ -1,9 +1,9 @@
 homeassistant:
   customize:
-    climate.main_heating_thermostat_heating_1:
+    climate.main_heating_thermostat_climate:
       min_temp: 5
       max_temp: 25
-    climate.annex_heating_thermostat_heating_1:
+    climate.annex_heating_thermostat_climate:
       min_temp: 5
       max_temp: 25
 
@@ -40,7 +40,7 @@ automation:
           entity_id: switch.main_heating_relay_switch_1
       - service: climate.set_temperature
         data:
-          entity_id: climate.main_heating_thermostat_heating_1
+          entity_id: climate.main_heating_thermostat_climate
           temperature: 22
           hvac_mode: "heat"
 
@@ -74,7 +74,7 @@ automation:
           entity_id: switch.main_heating_relay_switch_1
       - service: climate.set_temperature
         data:
-          entity_id: climate.main_heating_thermostat_heating_1
+          entity_id: climate.main_heating_thermostat_climate
           temperature: 10
 
   - alias: annex_thermostat_demand_on
@@ -89,7 +89,7 @@ automation:
         entity_id: switch.annex_heating_relay_switch_1
       - service: climate.set_temperature
         data:
-          entity_id: climate.annex_heating_thermostat_heating_1
+          entity_id: climate.annex_heating_thermostat_climate
           temperature: 22
           hvac_mode: "heat"
       - service: notify.automations
@@ -108,7 +108,7 @@ automation:
         entity_id: switch.annex_heating_relay_switch_1
       - service: climate.set_temperature
         data:
-          entity_id: climate.annex_heating_thermostat_heating_1
+          entity_id: climate.annex_heating_thermostat_climate
           temperature: 10
       - service: notify.automations
         data:
