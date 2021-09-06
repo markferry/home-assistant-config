@@ -770,9 +770,9 @@ views:
         title: Main Heating Override
         show_header_toggle: false
         entities:
-          - entity: switch.main_heating_relay_instance_1_switch
+          - entity: switch.main_heating_relay_switch_1
             name: Main Heating Switch
-          - entity: switch.main_heating_relay_instance_2_switch
+          - entity: switch.main_heating_relay_switch_2
             name: Main Hot Water Switch
           - automation.main_heating_poll_on
           - automation.main_heating_poll_off
@@ -791,9 +791,9 @@ views:
         title: Annex Heating Override
         show_header_toggle: false
         entities:
-          - entity: switch.annex_heating_relay_instance_1_switch
+          - entity: switch.annex_heating_relay_switch_1
             name: Annex Heating Switch
-          - switch.annex_heating_relay_instance_2_switch
+          - switch.annex_heating_relay_switch_2
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
 

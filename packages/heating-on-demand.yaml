@@ -37,7 +37,7 @@ automation:
     action:
       - service: switch.turn_on
         data:
-          entity_id: switch.main_heating_relay_instance_1_switch
+          entity_id: switch.main_heating_relay_switch_1
       - service: climate.set_temperature
         data:
           entity_id: climate.main_heating_thermostat_heating_1
@@ -71,7 +71,7 @@ automation:
     action:
       - service: switch.turn_off
         data:
-          entity_id: switch.main_heating_relay_instance_1_switch
+          entity_id: switch.main_heating_relay_switch_1
       - service: climate.set_temperature
         data:
           entity_id: climate.main_heating_thermostat_heating_1
@@ -86,7 +86,7 @@ automation:
           seconds: 10
     action:
       - service: switch.turn_on
-        entity_id: switch.annex_heating_relay_instance_1_switch
+        entity_id: switch.annex_heating_relay_switch_1
       - service: climate.set_temperature
         data:
           entity_id: climate.annex_heating_thermostat_heating_1
@@ -105,7 +105,7 @@ automation:
           seconds: 10
     action:
       - service: switch.turn_off
-        entity_id: switch.annex_heating_relay_instance_1_switch
+        entity_id: switch.annex_heating_relay_switch_1
       - service: climate.set_temperature
         data:
           entity_id: climate.annex_heating_thermostat_heating_1
