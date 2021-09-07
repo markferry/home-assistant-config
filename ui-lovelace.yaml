@@ -408,7 +408,7 @@ views:
             name: Main Heating Temperature
           - entity: climate.main_heating_thermostat_climate
             name: Main Heating Thermostat
-          - entity: switch.main_heating_thermostat_switch_2
+          - entity: switch.main_heating_thermostat_switch
             name: Main Heating Holiday Mode
       - type: entities
         title: Annex Heating
@@ -418,7 +418,7 @@ views:
             name: Annex Heating Temperature
           - entity: climate.annex_heating_thermostat_climate
             name: Annex Heating Thermostat
-          - entity: switch.annex_heating_thermostat_switch_2
+          - entity: switch.annex_heating_thermostat_switch
             name: Annex Heating Holiday Mode
 
   - title: Lounge

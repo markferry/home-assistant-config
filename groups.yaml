@@ -51,7 +51,7 @@ main_heating:
   entities:
     - sensor.main_heating_thermostat_air_temperature
     - climate.main_heating_thermostat_climate
-    - switch.main_heating_thermostat_switch_2
+    - switch.main_heating_thermostat_switch
 
 main_heating_override:
   name: Main Heating Override
@@ -82,7 +82,7 @@ annex_heating:
   entities:
     - sensor.annex_heating_thermostat_air_temperature
     - climate.annex_heating_thermostat_climate
-    - switch.annex_heating_thermostat_switch_2
+    - switch.annex_heating_thermostat_switch
 
 annex_heating_override:
   name: Annex Heating Override
