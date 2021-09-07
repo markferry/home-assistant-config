@@ -40,6 +40,13 @@ switch:
     retain: true
 
 sensor:
+  - name: main_heating_thermostat_air_temperature
+    platform: mqtt
+    state_topic: 'zwave/main_heating_thermostat/49/0/Air_temperature'
+    value_template: '{{ value_json.value }}'
+    unit_of_measurement: "\xB0C"
+    force_update: true
+
   - name: hall_east_current_temperature
     platform: mqtt
     state_topic: 'zwave/hall_east/49/0/Air_temperature'

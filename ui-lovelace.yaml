@@ -404,8 +404,6 @@ views:
       - type: entities
         title: Main Heating
         entities:
-          - entity: sensor.main_heating_thermostat_air_temperature
-            name: Main Heating Temperature
           - entity: climate.main_heating_thermostat_climate
             name: Main Heating Thermostat
           - entity: switch.main_heating_thermostat_switch
@@ -414,8 +412,6 @@ views:
         title: Annex Heating
         show_header_toggle: false
         entities:
-          - entity: sensor.annex_heating_thermostat_air_temperature
-            name: Annex Heating Temperature
           - entity: climate.annex_heating_thermostat_climate
             name: Annex Heating Thermostat
           - entity: switch.annex_heating_thermostat_switch
