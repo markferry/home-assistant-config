@@ -40,7 +40,7 @@ switch:
 sensor:
   - name: kitchen_current_temperature
     platform: mqtt
-    state_topic: 'ha/kitchen_west/49/1/1'
+    state_topic: 'zwave/kitchen_west/49/0/Air_temperature'
     value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins

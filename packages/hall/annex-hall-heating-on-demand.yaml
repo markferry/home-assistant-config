@@ -40,7 +40,7 @@ switch:
 sensor:
   - name: annex_hall_west_current_temperature
     platform: mqtt
-    state_topic: 'ha/annex_hall_west/49/1/1'
+    state_topic: 'zwave/annex_hall_west/49/0/Air_temperature'
     value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins

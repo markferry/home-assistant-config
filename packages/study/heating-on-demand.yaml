@@ -42,7 +42,7 @@ switch:
 sensor:
   - name: study_east_current_temperature
     platform: mqtt
-    state_topic: 'ha/study_east/49/1/1'
+    state_topic: 'zwave/study_east/49/0/Air_temperature'
     value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
@@ -50,7 +50,7 @@ sensor:
 
   - name: study_west_current_temperature
     platform: mqtt
-    state_topic: 'ha/study_west/49/1/1'
+    state_topic: 'zwave/study_east/49/0/Air_temperature'
     value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
