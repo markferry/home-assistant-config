@@ -309,7 +309,7 @@ views:
           - input_select.study_mode
           - entity: sensor.study_temperature
             name: "Current Temperature"
-          - entity: binary_sensor.study_door_contact_access_control_door_window_open
+          - entity: binary_sensor.study_door_contact_door_state
             name: "Study Door"
           - group.g_study_media_dimming
           - group.g_study_settings_ui
@@ -353,7 +353,7 @@ views:
             name: "Current Temperature"
           - entity: binary_sensor.washing_machine
             name: Washing Machine
-          - entity: binary_sensor.gin_fridge_contact_access_control_door_window_open
+          - entity: binary_sensor.gin_fridge_contact_door_state
             name: "Gin Freezer"
           - group.g_kitchen_settings_ui
 
@@ -399,7 +399,7 @@ views:
           - climate.annex_hall_thermostat
           - entity: lock.front_door_lock_lock
             name: "Front Door Lock"
-          - entity: binary_sensor.front_door_contact_access_control_door_window_open
+          - entity: binary_sensor.front_door_contact_door_state
             name: "Front Door"
       - type: entities
         title: Main Heating
