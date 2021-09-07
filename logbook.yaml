@@ -45,8 +45,8 @@ include:
 
     - sensor.aeotec_dsb05_multisensor_illuminance
     - sensor.aeotec_dsb05_multisensor_humidity
-    - sensor.hottub_powernode_electric_w
-    - sensor.washing_machine_powernode_electric_w
+    - sensor.hottub_powernode_electric_w_value
+    - sensor.washing_machine_powernode_electric_w_value
     - sensor.cm2_temp_c
     - sensor.cm2_humidity
     - sensor.cm2_light

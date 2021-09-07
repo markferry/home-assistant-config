@@ -339,9 +339,9 @@ views:
   - title: Kitchen
     icon: mdi:stove
     badges:
-      - entity: sensor.washing_machine_powernode_electric_kwh
+      - entity: sensor.washing_machine_powernode_electric_kwh_value
         name: Washing Machine Energy
-      - entity: sensor.washing_machine_powernode_electric_w
+      - entity: sensor.washing_machine_powernode_electric_w_value
         name: Washing Machine Power
     cards:
       - type: entities
@@ -606,9 +606,9 @@ views:
             name: Heating
           - entity: switch.hottub_powernode_switch
             name: Power Supply
-          - entity: sensor.hottub_powernode_electric_kwh
+          - entity: sensor.hottub_powernode_electric_kwh_value
             name: Energy
-          - entity: sensor.hottub_powernode_electric_w
+          - entity: sensor.hottub_powernode_electric_w_value
             name: Power
 
 
