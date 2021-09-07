@@ -382,7 +382,7 @@ views:
   - title: Hall
     icon: mdi:fullscreen-exit
     badges:
-      - entity: binary_sensor.aeotec_dsb05_multisensor_sensor
+      - entity: binary_sensor.aeotec_dsb05_multisensor_any
         name: Motion
       - entity: sensor.aeotec_dsb05_multisensor_illuminance
         name: Illuminance
