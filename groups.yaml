@@ -136,7 +136,7 @@ temperatures:
   entities:
     - sensor.main_heating_thermostat_air_temperature
     - sensor.annex_heating_thermostat_air_temperature
-    - sensor.aeotec_dsb05_multisensor_air_temperature
+    - sensor.aeotec_dsb05_multisensor_temperature_air
     - sensor.ballroom_east_air_temperature
     - sensor.hall_west_air_temperature
     - sensor.hall_east_air_temperature
