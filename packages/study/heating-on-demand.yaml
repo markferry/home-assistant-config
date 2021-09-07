@@ -11,8 +11,8 @@ group:
   g_debug_study_heating:
     entities:
       - climate.study_thermostat
-      - climate.study_east_mode
-      - climate.study_west_mode
+      - climate.study_east_thermostat
+      - climate.study_west_thermostat
       - switch.study_demand
 
   g_debug_study_temperature:
@@ -27,8 +27,8 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_study_thermostat:
     entities:
-      - climate.study_east_mode
-      - climate.study_west_mode
+      - climate.study_east_thermostat
+      - climate.study_west_thermostat
 
 climate:
   - name: study_thermostat

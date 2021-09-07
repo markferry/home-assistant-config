@@ -13,7 +13,7 @@ group:
   g_debug_guest_room_heating:
     entities:
       - climate.guest_room_thermostat
-      - climate.guest_room_north_mode
+      - climate.guest_room_north_thermostat
       - switch.guest_room_demand
 
   g_debug_guest_room_temperature:
@@ -26,7 +26,7 @@ group:
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_guest_room_thermostat:
     entities:
-      - climate.guest_room_north_mode
+      - climate.guest_room_north_thermostat
 
 climate:
   - name: guest_room_thermostat
@@ -86,7 +86,7 @@ automation:
   - alias: "guest_room_update_setpoint"
     trigger:
       - platform: state
-        entity_id: climate.guest_room_north_mode
+        entity_id: climate.guest_room_north_thermostat
     action:
       - service: climate.set_temperature
         data_template:

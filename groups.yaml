@@ -155,37 +155,37 @@ temperatures:
 thermostat_devices:
   name: Thermostat Devices
   entities:
-    - climate.annex_hall_west_mode
-    - climate.ballroom_east_mode
-    - climate.bedroom_mark_south_mode
-    - climate.bedroom_mark_north_mode
-    - climate.hall_east_mode
-    - climate.hall_west_mode
+    - climate.annex_hall_west_thermostat
+    - climate.ballroom_east_thermostat
+    - climate.bedroom_mark_south_thermostat
+    - climate.bedroom_mark_north_thermostat
+    - climate.hall_east_thermostat
+    - climate.hall_west_thermostat
     - climate.main_heating_thermostat_climate
     - climate.annex_heating_thermostat_climate
-    - climate.kitchen_west_mode
-    - climate.library_east_mode
-    - climate.lounge_east_mode
-    - climate.study_east_mode
-    - climate.study_west_mode
-    - climate.guest_room_north_mode
+    - climate.kitchen_west_thermostat
+    - climate.library_east_thermostat
+    - climate.lounge_east_thermostat
+    - climate.study_east_thermostat
+    - climate.study_west_thermostat
+    - climate.guest_room_north_thermostat
     - climate.danfoss_z_thermostat_014g0013_heating_1
-    - climate.bedroom_annex2_west_mode
-    - climate.bedroom_main2_east_mode
-    - climate.bedroom_main3_east_mode
+    - climate.bedroom_annex2_west_thermostat
+    - climate.bedroom_main2_east_thermostat
+    - climate.bedroom_main3_east_thermostat
 
 # Front-end thermostats
 thermostats:
   name: Thermostats
   entities:
     - climate.annex_hall_thermostat
-    - climate.ballroom_east_mode
+    - climate.ballroom_east_thermostat
     - climate.bedroom_mark_thermostat
-    - climate.hall_east_mode
-    - climate.hall_west_mode
+    - climate.hall_east_thermostat
+    - climate.hall_west_thermostat
     - climate.kitchen_thermostat
     - climate.library_thermostat
-    - climate.lounge_east_mode
+    - climate.lounge_east_thermostat
     - climate.study_thermostat
     - climate.guest_room_thermostat
     - climate.bedroom_jerome_thermostat

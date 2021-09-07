@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    climate.library_east_mode:
+    climate.library_east_thermostat:
       min_temp: 5
       max_temp: 25
 
@@ -22,7 +22,7 @@ group:
   library_setpoints:
     name: Library Setpoints
     entities:
-      - climate.library_east_mode
+      - climate.library_east_thermostat
 
   library_lights:
     name: Library Lights

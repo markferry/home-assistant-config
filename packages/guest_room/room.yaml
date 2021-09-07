@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    climate.guest_room_north_mode:
+    climate.guest_room_north_thermostat:
       min_temp: 8
       max_temp: 25
 
@@ -21,7 +21,7 @@ group:
   guest_room_setpoints:
     name: Guest Room Setpoints
     entities:
-    - climate.guest_room_north_mode
+    - climate.guest_room_north_thermostat
 
   guest_room_lights:
     name: Guest Room Lights

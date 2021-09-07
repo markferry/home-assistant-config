@@ -4,10 +4,10 @@
 
 homeassistant:
   customize:
-    climate.study_east_mode:
+    climate.study_east_thermostat:
       min_temp: 5
       max_temp: 25
-    climate.study_west_mode:
+    climate.study_west_thermostat:
       min_temp: 5
       max_temp: 25
 
@@ -24,8 +24,8 @@ group:
   study_setpoints:
     name: Study Setpoints
     entities:
-      - climate.study_east_mode
-      - climate.study_west_mode
+      - climate.study_east_thermostat
+      - climate.study_west_thermostat
 
   study_lights:
     name: Study Lights
