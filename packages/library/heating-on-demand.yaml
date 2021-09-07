@@ -14,12 +14,6 @@ group:
       - climate.library_east_thermostat
       - switch.library_demand
 
-  g_debug_library_temperature:
-    entities:
-      - sensor.library_mean_temperature
-      - sensor.library_current_temperature
-      - sensor.library_east_air_temperature
-
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_library_thermostat:
@@ -46,9 +40,8 @@ switch:
 sensor:
   - name: library_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.library_east_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'ha/library_east/49/1/1'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -64,16 +57,3 @@ sensor:
       library_setpoint:
         value_template: "{{ states.climate.library_thermostat.attributes.temperature }}"
         unit_of_measurement: "\xB0C"
-
-automation:
-  # Redirect received temperatures over mqtt
-  - alias: "library_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.library_east_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
-

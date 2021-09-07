@@ -16,12 +16,6 @@ group:
       - climate.guest_room_north_thermostat
       - switch.guest_room_demand
 
-  g_debug_guest_room_temperature:
-    entities:
-      - sensor.guest_room_mean_temperature
-      - sensor.guest_room_current_temperature
-      - sensor.guest_room_north_air_temperature
-
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_guest_room_thermostat:
@@ -50,9 +44,8 @@ switch:
 sensor:
   - name: guest_room_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.guest_room_north_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'ha/guest_room_north/49/1/1'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -71,17 +64,6 @@ sensor:
 
 
 automation:
-  # Redirect received temperatures over mqtt
-  - alias: "guest_room_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.guest_room_north_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
-
   # Sync all thermostats (real and virtual)
   - alias: "guest_room_update_setpoint"
     trigger:

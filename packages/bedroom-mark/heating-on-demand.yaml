@@ -23,14 +23,6 @@ group:
       - climate.bedroom_mark_north_thermostat
       - switch.bedroom_mark_demand
 
-  g_debug_bedroom_mark_temperature:
-    entities:
-      - sensor.bedroom_mark_temperature
-      - sensor.bedroom_mark_south_current_temperature
-      - sensor.bedroom_mark_north_current_temperature
-      - sensor.bedroom_mark_south_air_temperature
-      - sensor.bedroom_mark_north_air_temperature
-
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_mark_thermostat:
@@ -58,18 +50,16 @@ switch:
 sensor:
   - name: bedroom_mark_south_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.bedroom_mark_south_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'ha/bedroom_mark_south/49/1/1'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
 
   - name: bedroom_mark_north_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.bedroom_mark_north_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'ha/bedroom_mark_north/49/1/1'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -87,19 +77,3 @@ sensor:
       bedroom_mark_setpoint:
         value_template: "{{ states.climate.bedroom_mark_thermostat.attributes.temperature }}"
         unit_of_measurement: "\xB0C"
-
-
-automation:
-  # Redirect received temperatures over mqtt
-  - alias: "bedroom_mark_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.bedroom_mark_south_air_temperature
-      - platform: state
-        entity_id: sensor.bedroom_mark_north_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
-

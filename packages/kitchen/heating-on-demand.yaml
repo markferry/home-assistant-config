@@ -14,12 +14,6 @@ group:
       - climate.kitchen_west_thermostat
       - switch.kitchen_demand
 
-  g_debug_kitchen_temperature:
-    entities:
-      - sensor.kitchen_mean_temperature
-      - sensor.kitchen_current_temperature
-      - sensor.kitchen_west_air_temperature
-
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_kitchen_thermostat:
@@ -46,9 +40,8 @@ switch:
 sensor:
   - name: kitchen_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.kitchen_west_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'ha/kitchen_west/49/1/1'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -64,16 +57,3 @@ sensor:
       kitchen_setpoint:
         value_template: "{{ states.climate.kitchen_thermostat.attributes.temperature }}"
         unit_of_measurement: "\xB0C"
-
-automation:
-  # Redirect received temperatures over mqtt
-  - alias: "kitchen_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.kitchen_west_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
-

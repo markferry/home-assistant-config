@@ -11,18 +11,21 @@ include:
     - sensor.main_heating_thermostat_air_temperature
     - sensor.annex_heating_thermostat_air_temperature
     - sensor.aeotec_dsb05_multisensor_temperature_air
-    - sensor.ballroom_east_air_temperature
-    - sensor.hall_west_air_temperature
-    - sensor.hall_east_air_temperature
-    - sensor.annex_hall_west_air_temperature
-    - sensor.kitchen_west_air_temperature
-    - sensor.library_east_air_temperature
-    - sensor.lounge_east_air_temperature
-    - sensor.bedroom_mark_south_air_temperature
-    - sensor.bedroom_mark_north_air_temperature
-    - sensor.study_east_air_temperature
-    - sensor.study_west_air_temperature
-    - sensor.bedroom_annex2_west_air_temperature
+
+    - sensor.ballroom_east_current_temperature
+    - sensor.hall_west_current_temperature
+    - sensor.hall_east_current_temperature
+    - sensor.annex_hall_west_current_temperature
+    - sensor.kitchen_west_current_temperature
+    - sensor.library_east_current_temperature
+    - sensor.lounge_east_current_temperature
+    - sensor.bedroom_mark_south_current_temperature
+    - sensor.bedroom_mark_north_current_temperature
+    - sensor.bedroom_main2_east_current_temperature
+    - sensor.bedroom_main3_east_current_temperature
+    - sensor.study_east_current_temperature
+    - sensor.study_west_current_temperature
+    - sensor.bedroom_annex2_west_current_temperature
 
     - sensor.main_heating_thermostat_battery_level
     - sensor.annex_heating_thermostat_battery_level

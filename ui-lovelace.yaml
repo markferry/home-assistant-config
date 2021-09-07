@@ -805,9 +805,9 @@ views:
           - sensor.annex_heating_thermostat_air_temperature
           - sensor.aeotec_dsb05_multisensor_temperature_air
           - sensor.ballroom_east_current_temperature
-          - sensor.hall_west_air_temperature
-          - sensor.hall_east_air_temperature
-          - sensor.annex_hall_west_air_temperature
+          - sensor.hall_west_current_temperature
+          - sensor.hall_east_current_temperature
+          - sensor.annex_hall_west_current_temperature
           - sensor.kitchen_current_temperature
           - sensor.library_current_temperature
           - sensor.lounge_east_current_temperature

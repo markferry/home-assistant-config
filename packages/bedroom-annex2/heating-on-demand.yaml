@@ -15,12 +15,6 @@ group:
       - climate.bedroom_annex2_west_thermostat
       - switch.bedroom_annex2_demand
 
-  g_debug_bedroom_annex2_temperature:
-    entities:
-      - sensor.bedroom_annex2_mean_temperature
-      - sensor.bedroom_annex2_current_temperature
-      - sensor.bedroom_annex2_west_air_temperature
-
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_bedroom_annex2_thermostat:
@@ -49,9 +43,8 @@ switch:
 sensor:
   - name: bedroom_annex2_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.bedroom_annex2_west_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'ha/bedroom_annex2_west/49/1/1'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -67,19 +60,6 @@ sensor:
       bedroom_annex2_setpoint:
         value_template: "{{ states.climate.bedroom_annex2_thermostat.attributes.temperature }}"
         unit_of_measurement: "\xB0C"
-
-
-automation:
-  # Redirect received temperatures over mqtt
-  - alias: "bedroom_annex2_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.bedroom_annex2_west_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
 
   # Sync all thermostats (real and virtual)
   - alias: "bedroom_annex2_update_setpoint"
