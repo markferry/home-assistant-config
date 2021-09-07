@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    climate.bedroom_annex2_west_mode:
+    climate.bedroom_annex2_west_thermostat:
       min_temp: 8
       max_temp: 25
 
@@ -19,7 +19,7 @@ group:
 
   bedroom_annex2_setpoints:
     entities:
-      - climate.bedroom_annex2_west_mode
+      - climate.bedroom_annex2_west_thermostat
 
   bedroom_annex2_lights:
 

@@ -22,9 +22,9 @@ homeassistant:
     switch.washing_machine_powernode_switch:
       friendly_name: Washing Machine
       icon: mdi:washing-machine
-    sensor.washing_machine_powernode_electric_kwh:
+    sensor.washing_machine_powernode_electric_kwh_value:
       icon: mdi:washing-machine
-    sensor.washing_machine_powernode_electric_w:
+    sensor.washing_machine_powernode_electric_w_value:
       icon: mdi:washing-machine
 
     binary_sensor.washing_machine:
@@ -39,8 +39,8 @@ group:
     entities:
     - binary_sensor.washing_machine
     - switch.washing_machine_powernode_switch
-    - sensor.washing_machine_powernode_electric_kwh
-    - sensor.washing_machine_powernode_electric_w
+    - sensor.washing_machine_powernode_electric_kwh_value
+    - sensor.washing_machine_powernode_electric_w_value
 
 
 # Power detection for the washing machine.
@@ -52,7 +52,7 @@ automation:
 - alias: 'Washing Machine Hi'
   trigger:
     platform: numeric_state
-    entity_id: sensor.washing_machine_powernode_electric_w
+    entity_id: sensor.washing_machine_powernode_electric_w_value
     above: 30
   action:
     service: input_boolean.turn_on
@@ -61,7 +61,7 @@ automation:
 - alias: 'Washing Machine Lo'
   trigger:
     platform: numeric_state
-    entity_id: sensor.washing_machine_powernode_electric_w
+    entity_id: sensor.washing_machine_powernode_electric_w_value
     below: 20
   action:
     service: input_boolean.turn_off

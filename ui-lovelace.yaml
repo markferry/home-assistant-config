@@ -157,7 +157,7 @@ views:
               - name: "Current Temperature"
                 entity: sensor.bedroom_mark_temperature
               - name: "Motion Detected"
-                entity: binary_sensor.aeotec_zw100_multisensor_home_security_motion_detected
+                entity: binary_sensor.aeotec_zw100_multisensor_motion_sensor_status
               - name: Lights
                 entity: group.bedroom_mark_lights
               - name: Settings
@@ -339,9 +339,9 @@ views:
   - title: Kitchen
     icon: mdi:stove
     badges:
-      - entity: sensor.washing_machine_powernode_electric_kwh
+      - entity: sensor.washing_machine_powernode_electric_kwh_value
         name: Washing Machine Energy
-      - entity: sensor.washing_machine_powernode_electric_w
+      - entity: sensor.washing_machine_powernode_electric_w_value
         name: Washing Machine Power
     cards:
       - type: entities
@@ -382,11 +382,11 @@ views:
   - title: Hall
     icon: mdi:fullscreen-exit
     badges:
-      - entity: binary_sensor.aeotec_dsb05_multisensor_sensor
+      - entity: binary_sensor.aeotec_dsb05_multisensor_any
         name: Motion
       - entity: sensor.aeotec_dsb05_multisensor_illuminance
         name: Illuminance
-      - entity: sensor.aeotec_dsb05_multisensor_humidity
+      - entity: sensor.aeotec_dsb05_multisensor_humidity_air
         name: Humidity
       - sensor.hall_temperature
       - sensor.annex_hall_mean_temperature
@@ -397,16 +397,14 @@ views:
         entities:
           - climate.hall_thermostat
           - climate.annex_hall_thermostat
-          - entity: lock.front_door_lock_locked
+          - entity: lock.front_door_lock_lock
             name: "Front Door Lock"
           - entity: binary_sensor.front_door_contact_access_control_door_window_open
             name: "Front Door"
       - type: entities
         title: Main Heating
         entities:
-          - entity: sensor.main_heating_thermostat_air_temperature
-            name: Main Heating Temperature
-          - entity: climate.main_heating_thermostat_heating_1
+          - entity: climate.main_heating_thermostat_climate
             name: Main Heating Thermostat
           - entity: switch.main_heating_thermostat_switch
             name: Main Heating Holiday Mode
@@ -414,9 +412,7 @@ views:
         title: Annex Heating
         show_header_toggle: false
         entities:
-          - entity: sensor.annex_heating_thermostat_air_temperature
-            name: Annex Heating Temperature
-          - entity: climate.annex_heating_thermostat_heating_1
+          - entity: climate.annex_heating_thermostat_climate
             name: Annex Heating Thermostat
           - entity: switch.annex_heating_thermostat_switch
             name: Annex Heating Holiday Mode
@@ -606,9 +602,9 @@ views:
             name: Heating
           - entity: switch.hottub_powernode_switch
             name: Power Supply
-          - entity: sensor.hottub_powernode_electric_kwh
+          - entity: sensor.hottub_powernode_electric_kwh_value
             name: Energy
-          - entity: sensor.hottub_powernode_electric_w
+          - entity: sensor.hottub_powernode_electric_w_value
             name: Power
 
 
@@ -770,9 +766,9 @@ views:
         title: Main Heating Override
         show_header_toggle: false
         entities:
-          - entity: switch.main_heating_relay_instance_1_switch
+          - entity: switch.main_heating_relay_switch_1
             name: Main Heating Switch
-          - entity: switch.main_heating_relay_instance_2_switch
+          - entity: switch.main_heating_relay_switch_2
             name: Main Hot Water Switch
           - automation.main_heating_poll_on
           - automation.main_heating_poll_off
@@ -791,9 +787,9 @@ views:
         title: Annex Heating Override
         show_header_toggle: false
         entities:
-          - entity: switch.annex_heating_relay_instance_1_switch
+          - entity: switch.annex_heating_relay_switch_1
             name: Annex Heating Switch
-          - switch.annex_heating_relay_instance_2_switch
+          - switch.annex_heating_relay_switch_2
           - automation.annex_thermostat_demand_on
           - automation.annex_thermostat_demand_off
 
@@ -803,11 +799,11 @@ views:
         entities:
           - sensor.main_heating_thermostat_air_temperature
           - sensor.annex_heating_thermostat_air_temperature
-          - sensor.aeotec_dsb05_multisensor_air_temperature
+          - sensor.aeotec_dsb05_multisensor_temperature_air
           - sensor.ballroom_east_current_temperature
-          - sensor.hall_west_air_temperature
-          - sensor.hall_east_air_temperature
-          - sensor.annex_hall_west_air_temperature
+          - sensor.hall_west_current_temperature
+          - sensor.hall_east_current_temperature
+          - sensor.annex_hall_west_current_temperature
           - sensor.kitchen_current_temperature
           - sensor.library_current_temperature
           - sensor.lounge_east_current_temperature
@@ -838,24 +834,24 @@ views:
         title: Thermostat Devices
         show_header_toggle: false
         entities:
-          - climate.annex_hall_west_mode
-          - climate.ballroom_east_mode
-          - climate.bedroom_mark_south_mode
-          - climate.bedroom_mark_north_mode
-          - climate.bedroom_main2_east_mode
-          - climate.bedroom_main3_east_mode
-          - climate.hall_east_mode
-          - climate.hall_west_mode
-          - climate.main_heating_thermostat_heating_1
-          - climate.annex_heating_thermostat_heating_1
-          - climate.kitchen_west_mode
-          - climate.library_east_mode
-          - climate.lounge_east_mode
-          - climate.study_east_mode
-          - climate.study_west_mode
-          - climate.guest_room_north_mode
+          - climate.annex_hall_west_thermostat
+          - climate.ballroom_east_thermostat
+          - climate.bedroom_mark_south_thermostat
+          - climate.bedroom_mark_north_thermostat
+          - climate.bedroom_main2_east_thermostat
+          - climate.bedroom_main3_east_thermostat
+          - climate.hall_east_thermostat
+          - climate.hall_west_thermostat
+          - climate.main_heating_thermostat_climate
+          - climate.annex_heating_thermostat_climate
+          - climate.kitchen_west_thermostat
+          - climate.library_east_thermostat
+          - climate.lounge_east_thermostat
+          - climate.study_east_thermostat
+          - climate.study_west_thermostat
+          - climate.guest_room_north_thermostat
           - climate.danfoss_z_thermostat_014g0013_heating_1
-          - climate.bedroom_annex2_west_mode
+          - climate.bedroom_annex2_west_thermostat
       - type: entities
         title: People
         show_header_toggle: false

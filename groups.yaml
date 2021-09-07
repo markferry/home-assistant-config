@@ -50,14 +50,14 @@ main_heating:
   name: Main Heating
   entities:
     - sensor.main_heating_thermostat_air_temperature
-    - climate.main_heating_thermostat_heating_1
+    - climate.main_heating_thermostat_climate
     - switch.main_heating_thermostat_switch
 
 main_heating_override:
   name: Main Heating Override
   entities:
-    - switch.main_heating_relay_instance_1_switch
-    - switch.main_heating_relay_instance_2_switch
+    - switch.main_heating_relay_switch_1
+    - switch.main_heating_relay_switch_2
     - automation.main_boiler_demand_on
     - automation.main_boiler_demand_off
     - automation.hot_water_on
@@ -81,13 +81,13 @@ annex_heating:
   name: Annex Heating
   entities:
     - sensor.annex_heating_thermostat_air_temperature
-    - climate.annex_heating_thermostat_heating_1
+    - climate.annex_heating_thermostat_climate
     - switch.annex_heating_thermostat_switch
 
 annex_heating_override:
   name: Annex Heating Override
   entities:
-    - switch.annex_heating_relay_instance_1_switch
+    - switch.annex_heating_relay_switch_1
     - automation.annex_thermostat_demand_on
     - automation.annex_thermostat_demand_off
 
@@ -136,56 +136,56 @@ temperatures:
   entities:
     - sensor.main_heating_thermostat_air_temperature
     - sensor.annex_heating_thermostat_air_temperature
-    - sensor.aeotec_dsb05_multisensor_air_temperature
-    - sensor.ballroom_east_air_temperature
-    - sensor.hall_west_air_temperature
-    - sensor.hall_east_air_temperature
-    - sensor.annex_hall_west_air_temperature
-    - sensor.kitchen_west_air_temperature
-    - sensor.library_east_air_temperature
-    - sensor.lounge_east_air_temperature
-    - sensor.bedroom_mark_south_air_temperature
-    - sensor.bedroom_mark_north_air_temperature
-    - sensor.bedroom_main2_east_air_temperature
-    - sensor.bedroom_main3_east_air_temperature
-    - sensor.study_east_air_temperature
-    - sensor.study_west_air_temperature
-    - sensor.bedroom_annex2_air_temperature
+    - sensor.aeotec_dsb05_multisensor_temperature_air
+    - sensor.ballroom_east_current_temperature
+    - sensor.hall_west_current_temperature
+    - sensor.hall_east_current_temperature
+    - sensor.annex_hall_west_current_temperature
+    - sensor.kitchen_west_current_temperature
+    - sensor.library_east_current_temperature
+    - sensor.lounge_east_current_temperature
+    - sensor.bedroom_mark_south_current_temperature
+    - sensor.bedroom_mark_north_current_temperature
+    - sensor.bedroom_main2_east_current_temperature
+    - sensor.bedroom_main3_east_current_temperature
+    - sensor.study_east_current_temperature
+    - sensor.study_west_current_temperature
+    - sensor.bedroom_annex2_current_temperature
 
 thermostat_devices:
   name: Thermostat Devices
   entities:
-    - climate.annex_hall_west_mode
-    - climate.ballroom_east_mode
-    - climate.bedroom_mark_south_mode
-    - climate.bedroom_mark_north_mode
-    - climate.hall_east_mode
-    - climate.hall_west_mode
-    - climate.main_heating_thermostat_heating_1
-    - climate.annex_heating_thermostat_heating_1
-    - climate.kitchen_west_mode
-    - climate.library_east_mode
-    - climate.lounge_east_mode
-    - climate.study_east_mode
-    - climate.study_west_mode
-    - climate.guest_room_north_mode
+    - climate.annex_hall_west_thermostat
+    - climate.ballroom_east_thermostat
+    - climate.bedroom_mark_south_thermostat
+    - climate.bedroom_mark_north_thermostat
+    - climate.hall_east_thermostat
+    - climate.hall_west_thermostat
+    - climate.main_heating_thermostat_climate
+    - climate.annex_heating_thermostat_climate
+    - climate.kitchen_west_thermostat
+    - climate.library_east_thermostat
+    - climate.lounge_east_thermostat
+    - climate.study_east_thermostat
+    - climate.study_west_thermostat
+    - climate.guest_room_north_thermostat
     - climate.danfoss_z_thermostat_014g0013_heating_1
-    - climate.bedroom_annex2_west_mode
-    - climate.bedroom_main2_east_mode
-    - climate.bedroom_main3_east_mode
+    - climate.bedroom_annex2_west_thermostat
+    - climate.bedroom_main2_east_thermostat
+    - climate.bedroom_main3_east_thermostat
 
 # Front-end thermostats
 thermostats:
   name: Thermostats
   entities:
     - climate.annex_hall_thermostat
-    - climate.ballroom_east_mode
+    - climate.ballroom_east_thermostat
     - climate.bedroom_mark_thermostat
-    - climate.hall_east_mode
-    - climate.hall_west_mode
+    - climate.hall_east_thermostat
+    - climate.hall_west_thermostat
     - climate.kitchen_thermostat
     - climate.library_thermostat
-    - climate.lounge_east_mode
+    - climate.lounge_east_thermostat
     - climate.study_thermostat
     - climate.guest_room_thermostat
     - climate.bedroom_jerome_thermostat

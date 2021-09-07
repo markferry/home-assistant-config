@@ -4,7 +4,7 @@
 
 homeassistant:
   customize:
-    climate.bedroom_main3_east_mode:
+    climate.bedroom_main3_east_thermostat:
       min_temp: 8
       max_temp: 25
 
@@ -19,7 +19,7 @@ group:
 
   bedroom_main3_setpoints:
     entities:
-      - climate.bedroom_main3_east_mode
+      - climate.bedroom_main3_east_thermostat
 
   bedroom_main3_lights:
 

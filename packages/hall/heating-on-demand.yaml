@@ -11,24 +11,16 @@ group:
   g_debug_hall_heating:
     entities:
       - climate.hall_thermostat
-      - climate.hall_east_mode
-      - climate.hall_west_mode
+      - climate.hall_east_thermostat
+      - climate.hall_west_thermostat
       - switch.hall_demand
-
-  g_debug_hall_temperature:
-    entities:
-      - sensor.hall_temperature
-      - sensor.hall_east_current_temperature
-      - sensor.hall_west_current_temperature
-      - sensor.hall_east_air_temperature
-      - sensor.hall_west_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_hall_thermostat:
     entities:
-      - climate.hall_east_mode
-      - climate.hall_west_mode
+      - climate.hall_east_thermostat
+      - climate.hall_west_thermostat
 
 climate:
   - name: hall_thermostat
@@ -48,20 +40,25 @@ switch:
     retain: true
 
 sensor:
+  - name: main_heating_thermostat_air_temperature
+    platform: mqtt
+    state_topic: 'zwave/main_heating_thermostat/49/0/Air_temperature'
+    value_template: '{{ value_json.value }}'
+    unit_of_measurement: "\xB0C"
+    force_update: true
+
   - name: hall_east_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.hall_east_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'zwave/hall_east/49/0/Air_temperature'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
 
   - name: hall_west_current_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.hall_west_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'zwave/hall_west/49/0/Air_temperature'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -73,18 +70,3 @@ sensor:
       - sensor.hall_east_current_temperature
       - sensor.hall_west_current_temperature
       - sensor.main_heating_thermostat_air_temperature
-
-automation:
-  # Redirect received temperatures over mqtt
-  - alias: "hall_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.hall_east_air_temperature
-      - platform: state
-        entity_id: sensor.hall_west_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
-

@@ -4,13 +4,13 @@
 
 homeassistant:
   customize:
-    climate.hall_west_mode:
+    climate.hall_west_thermostat:
       min_temp: 5
       max_temp: 25
-    climate.hall_east_mode:
+    climate.hall_east_thermostat:
       min_temp: 5
       max_temp: 25
-    climate.annex_hall_west_mode:
+    climate.annex_hall_west_thermostat:
       min_temp: 5
       max_temp: 25
 
@@ -26,9 +26,9 @@ group:
   hall_setpoints:
     name: Hall Setpoints
     entities:
-    - climate.hall_west_mode
-    - climate.hall_east_mode
-    - climate.annex_hall_west_mode
+    - climate.hall_west_thermostat
+    - climate.hall_east_thermostat
+    - climate.annex_hall_west_thermostat
 
   hall_lights:
     name: Hall Lights

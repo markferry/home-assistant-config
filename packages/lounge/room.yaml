@@ -7,7 +7,7 @@ homeassistant:
     group.lounge_lights:
       icon: mdi:lightbulb-on
 
-    climate.lounge_east_mode:
+    climate.lounge_east_thermostat:
       min_temp: 5
       max_temp: 25
 
@@ -25,7 +25,7 @@ group:
   lounge_setpoints:
     name: Lounge Setpoints
     entities:
-      - climate.lounge_east_mode
+      - climate.lounge_east_thermostat
 
   lounge_lights:
     entities:

@@ -11,20 +11,14 @@ group:
   g_debug_annex_hall_heating:
     entities:
       - climate.annex_hall_thermostat
-      - climate.annex_hall_west_mode
+      - climate.annex_hall_west_thermostat
       - switch.annex_hall_demand
-
-  g_debug_annex_hall_temperature:
-    entities:
-      - sensor.annex_hall_mean_temperature
-      - sensor.annex_hall_current_temperature
-      - sensor.annex_hall_west_air_temperature
 
   # Non-UI group which forwards setpoint updates
   #  Name is mapped from climate.foo_thermostat -> group.g_foo_thermostat
   g_annex_hall_thermostat:
     entities:
-      - climate.annex_hall_west_mode
+      - climate.annex_hall_west_thermostat
 
 climate:
   - name: annex_hall_thermostat
@@ -44,11 +38,17 @@ switch:
     retain: true
 
 sensor:
-  - name: annex_hall_current_temperature
+  - name: annex_heating_thermostat_air_temperature
     platform: mqtt
-    state_topic: 'ha/raw/sensor.annex_hall_west_air_temperature/state'
-    ## dev: for mock mqtt devices
-    #value_template: '{{ value_json.temperature }}'
+    state_topic: 'zwave/annex_heating_thermostat/49/0/Air_temperature'
+    value_template: '{{ value_json.value }}'
+    unit_of_measurement: "\xB0C"
+    force_update: true
+
+  - name: annex_hall_west_current_temperature
+    platform: mqtt
+    state_topic: 'zwave/annex_hall_west/49/0/Air_temperature'
+    value_template: '{{ value_json.value }}'
     unit_of_measurement: "\xB0C"
     expire_after: 1800  # 30mins
     force_update: true
@@ -57,18 +57,5 @@ sensor:
     platform: min_max
     type: max  # minimize occasional 0 readings. Replace with median?
     entity_ids:
-      - sensor.annex_hall_current_temperature
+      - sensor.annex_hall_west_current_temperature
       - sensor.annex_heating_thermostat_air_temperature
-
-automation:
-  # Redirect received temperatures over mqtt
-  - alias: "annex_hall_update_temperature"
-    trigger:
-      - platform: state
-        entity_id: sensor.annex_hall_west_air_temperature
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: 'ha/raw/{{trigger.entity_id}}/state'
-          payload: '{{ trigger.to_state.state }}'
-

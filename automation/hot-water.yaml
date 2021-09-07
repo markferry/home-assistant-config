@@ -18,7 +18,7 @@
         before: '06:30:00'
   action:
     service: switch.turn_off
-    entity_id: switch.main_heating_relay_instance_2_switch
+    entity_id: switch.main_heating_relay_switch_2
 
 - alias: hot_water_on
   trigger:
@@ -36,12 +36,12 @@
         before: '20:00:00'
   action:
     service: switch.turn_on
-    entity_id: switch.main_heating_relay_instance_2_switch
+    entity_id: switch.main_heating_relay_switch_2
 
 - alias: hot_water_notify
   trigger:
     - platform: state
-      entity_id: switch.main_heating_relay_instance_2_switch
+      entity_id: switch.main_heating_relay_switch_2
   action:
     - service: notify.automations
       data_template:
