@@ -26,7 +26,6 @@ homeassistant:
 
     package_heating_on_demand: !include packages/heating-on-demand.yaml
 
-    package_aeotec_multisensor: !include packages/aeotec_multisensor.yaml
     #package_eaton_ups: !include packages/eaton-ups.yaml
     package_camera0: !include packages/dahua-cameras.yaml
     package_hottub: !include packages/hottub.yaml

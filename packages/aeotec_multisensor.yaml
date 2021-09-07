@@ -1,8 +1,0 @@
-group:
-  g_aeotec_multisensor:
-    name: Aeotec Multisensor
-    entities:
-    - binary_sensor.aeotec_dsb05_multisensor_sensor
-    - sensor.aeotec_dsb05_multisensor_illuminance
-    - sensor.aeotec_dsb05_multisensor_humidity
-    - sensor.aeotec_dsb05_multisensor_air_temperature
