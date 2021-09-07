@@ -397,7 +397,7 @@ views:
         entities:
           - climate.hall_thermostat
           - climate.annex_hall_thermostat
-          - entity: lock.front_door_lock_locked
+          - entity: lock.front_door_lock_lock
             name: "Front Door Lock"
           - entity: binary_sensor.front_door_contact_access_control_door_window_open
             name: "Front Door"
