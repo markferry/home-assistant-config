@@ -61,6 +61,8 @@ sensor:
         value_template: "{{ states.climate.bedroom_annex2_thermostat.attributes.temperature }}"
         unit_of_measurement: "\xB0C"
 
+
+automation:
   # Sync all thermostats (real and virtual)
   - alias: "bedroom_annex2_update_setpoint"
     trigger:
