@@ -6,7 +6,7 @@ media_player:
 
   - platform: kodi
     name: study_kodi
-    host: study.home.whalebarn.com
+    host: study
     port: 8080
 
   - platform: group

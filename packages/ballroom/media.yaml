@@ -6,7 +6,7 @@ media_player:
 
   - platform: kodi
     name: ballroom_kodi
-    host: ballroom.home.whalebarn.com
+    host: ballroom
     port: 8080
 
   - platform: group

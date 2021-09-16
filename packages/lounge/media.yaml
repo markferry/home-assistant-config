@@ -6,7 +6,7 @@ media_player:
 
   - platform: kodi
     name: lounge_kodi
-    host: lounge.home.whalebarn.com
+    host: lounge
     port: 8080
 
   - platform: group
