@@ -168,6 +168,11 @@ views:
             entities:
               - entity: media_player.bedroom_mark_mpd
                 <<: *default_room_mpd
+              - type: divider
+              - entity: media_player.snapcast_client_bedroom_mark
+                name: Snapcast
+                icon: mdi:music
+                <<: *default_mini_snapclient
 
           - name: "Mark's Bedroom"
             type: thermostat
