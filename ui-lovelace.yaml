@@ -55,10 +55,10 @@ defaults:
       group: true
       artwork: none
       hide:
-        controls: true
         mute: false
+        play_pause: true
         power: true
-        source: true
+        progress: true
         volume_level: false
 
 name: Whale Barn
@@ -701,7 +701,6 @@ views:
                 name: Outside Iris
                 icon: mdi:pine-tree
                 <<: *default_mini_mpd
-
           - title: Amplifiers
             type: entities
             entities:
@@ -718,7 +717,7 @@ views:
                 icon: mdi:pine-tree
                 <<: *default_room_onkyo
 
-          - title: Balance
+          - title: Zones
             type: entities
             entities:
               - entity: media_player.snapcast_client_study

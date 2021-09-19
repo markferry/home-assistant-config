@@ -4,7 +4,7 @@
 sensor:
   - platform: nut
     name: Eaton UPS
-    host: cyclops
+    host: router0
     port: 3493
     alias: eaton
     username: pixie
