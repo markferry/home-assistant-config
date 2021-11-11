@@ -75,7 +75,7 @@ automation:
       - service: climate.set_temperature
         data:
           entity_id: climate.main_heating_thermostat_climate
-          temperature: 10
+          temperature: 15
 
   - alias: annex_thermostat_demand_on
     trigger:
@@ -109,7 +109,7 @@ automation:
       - service: climate.set_temperature
         data:
           entity_id: climate.annex_heating_thermostat_climate
-          temperature: 10
+          temperature: 15
       - service: notify.automations
         data:
           message: "Annex Heating Demand off"
