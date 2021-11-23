@@ -57,7 +57,7 @@ input_number:
       <<: *snapclient_defaults
     snapcast_client_9cb6d08b2a6f:
       name: Canard Volume
-      icon: mdi:laptop-chromebook
+      icon: mdi:laptop
       <<: *snapclient_defaults
 
 automation:
