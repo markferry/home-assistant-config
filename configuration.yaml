@@ -222,6 +222,8 @@ lovelace:
   resources:
     - url: /local/mini-media-player-bundle.js?v=1.12.1
       type: module
+    - url: /local/scheduler-card/scheduler-card.js?v=0
+      type: module
 
 google_assistant: !include google-assistant.yaml
 mobile_app:

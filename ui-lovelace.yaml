@@ -414,6 +414,11 @@ views:
           - entity: switch.main_heating_thermostat_switch
             name: Main Heating Holiday Mode
             icon: mdi:bag-checked
+      - type: custom:scheduler-card
+        title: Main Hot Water
+        include:
+          - switch.main_heating_relay_switch_2
+
       - type: entities
         title: Annex Heating
         show_header_toggle: false
