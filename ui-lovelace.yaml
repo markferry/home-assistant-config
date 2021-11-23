@@ -263,9 +263,6 @@ views:
 
   - title: Study
     icon: mdi:printer
-    badges:
-      - device_tracker.ricoh213w
-      - device_tracker.canonmg5550
     cards:
       - type: entities
         title: Study
@@ -279,6 +276,11 @@ views:
             icon: mdi:fire
           - entity: binary_sensor.study_door_contact_door_state
             name: "Study Door"
+          - type: divider
+          - entity: device_tracker.ricoh213w
+            icon: mdi:printer-alert
+          - entity: device_tracker.canonmg5550
+            icon: mdi:printer-wireless
 
       - type: entities
         entities:
