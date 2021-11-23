@@ -66,14 +66,9 @@ views:
   - title: Home
     icon: mdi:home
     badges:
-      - sensor.study_temperature
-      - sensor.kitchen_mean_temperature
       - sensor.hall_temperature
       - sensor.annex_hall_mean_temperature
-      - sensor.lounge_temperature
-      - sensor.library_mean_temperature
-      - sensor.ballroom_temperature
-      - sensor.guest_room_mean_temperature
+      - sensor.bedroom_mark_temperature
     cards:
       - type: vertical-stack
         cards:
@@ -123,20 +118,97 @@ views:
         title: Bedrooms
         show_header_toggle: false
         entities:
-          - name: "Guest Room Mode"
-            entity: input_select.guest_room_mode
-            icon: mdi:bed-empty
           - name: "Mark's Bedroom Mode"
             entity: input_select.bedroom_mark_mode
             image: /local/wb-icons/wb_mark.png
-          - name: "Olga's Bedroom Mode"
-            entity: input_select.bedroom_main2_mode
-            image: /local/wb-icons/wb_olga.png
-          - name: "Emma's Bedroom Mode"
-            entity: input_select.bedroom_main3_mode
-          - name: "Lucas's Bedroom Mode"
-            entity: input_select.bedroom_annex2_mode
-            #image: /local/wb-icons/wb_anne.png
+          - name: Olga Heat
+            entity: switch.bedroom_main2_demand
+            icon: mdi:fire
+          - name: Emma Heat
+            entity: switch.bedroom_main3_demand
+            icon: mdi:fire
+          - name: Lucas Heat
+            entity: switch.bedroom_annex2_demand
+            icon: mdi:fire
+          - name: Guest Room Heat
+            entity: switch.guest_room_demand
+            icon: mdi:fire
+
+  - title: Multizone Audio
+    icon: mdi:music
+    cards:
+      - type: vertical-stack
+        cards:
+          - title: Players
+            type: entities
+            entities:
+              - entity: media_player.study_mpd
+                name: Study Iris
+                icon: mdi:printer
+                <<: *default_mini_mpd
+              - entity: media_player.kitchen_mpd
+                name: Kitchen Iris
+                icon: mdi:stove
+                <<: *default_mini_mpd
+              - entity: media_player.lounge_mpd
+                name: Lounge Iris
+                icon: mdi:sofa
+                <<: *default_mini_mpd
+              - entity: media_player.library_mpd
+                name: Library Iris
+                icon: mdi:library
+                <<: *default_mini_mpd
+              - entity: media_player.ballroom_mpd
+                name: Ballroom Iris
+                icon: mdi:projector
+                <<: *default_mini_mpd
+              - entity: media_player.outside_mpd
+                name: Outside Iris
+                icon: mdi:pine-tree
+                <<: *default_mini_mpd
+          - title: Amplifiers
+            type: entities
+            entities:
+              - name: Kitchen Amplifier
+                entity: media_player.outside_amplifier_zone_2
+                icon: mdi:stove
+                <<: *default_room_onkyo
+              - name: Ballroom Amplifier
+                entity: media_player.ballroom_amplifier
+                icon: mdi:projector
+                <<: *default_room_onkyo
+              - name: Outside Amplifier
+                entity: media_player.outside_amplifier
+                icon: mdi:pine-tree
+                <<: *default_room_onkyo
+          - title: Zones
+            type: entities
+            entities:
+              - entity: media_player.snapcast_client_study
+                name: Study
+                icon: mdi:printer
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_kitchen
+                name: Kitchen
+                icon: mdi:stove
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_lounge
+                name: Lounge
+                icon: mdi:sofa
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_library
+                name: Library
+                icon: mdi:library
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_ballroom
+                name: Ballroom
+                icon: mdi:projector
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_outside
+                name: Outside
+                icon: mdi:pine-tree
+                <<: *default_mini_snapclient
+
 
   - title: "Mark's Bedroom"
     icon: mdi:bed
@@ -189,123 +261,8 @@ views:
                   icon: mdi:fire
 
 
-  - title: "Olga's Bedroom"
-    icon: mdi:bed
-    visible:
-      #  mark
-      - user: "c907a83f81d34d878c4d939b5901004b"
-      #  olga
-      - user: "62dae43fb98b4c86b78f485175cc4970"
-    cards:
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: "Olga's Bedroom"
-            show_header_toggle: false
-            entities:
-              - name: Mode
-                entity: input_select.bedroom_main2_mode
-              - name: "Current Temperature"
-                entity: sensor.bedroom_main2_mean_temperature
-              - name: Settings
-                entity: group.g_bedroom_main2_settings_ui
-                icon: mdi:cog
-          - name: "Olga's Bedroom"
-            type: thermostat
-            entity: climate.bedroom_main2_thermostat
-          - type: conditional
-            conditions:
-              - entity: climate.bedroom_main2_thermostat
-                state: 'off'
-            card:
-              type: entities
-              entities:
-                - name: Manual Heat
-                  entity: switch.bedroom_main2_demand
-                  icon: mdi:fire
-
-  - title: "Emma's Bedroom"
-    icon: mdi:bed
-    visible:
-      #  mark
-      - user: "c907a83f81d34d878c4d939b5901004b"
-      #  emma
-      - user: "72e58cc393d04a4b84b62a3c85a787ee"
-    cards:
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: "Emma's Bedroom"
-            show_header_toggle: false
-            entities:
-              - name: Mode
-                entity: input_select.bedroom_main3_mode
-              - name: "Current Temperature"
-                entity: sensor.bedroom_main3_mean_temperature
-              - name: Settings
-                entity: group.g_bedroom_main3_settings_ui
-                icon: mdi:cog
-          - name: "Emma's Bedroom"
-            type: thermostat
-            entity: climate.bedroom_main3_thermostat
-          - type: conditional
-            conditions:
-              - entity: climate.bedroom_main3_thermostat
-                state: 'off'
-            card:
-              type: entities
-              entities:
-                - name: Manual Heat
-                  entity: switch.bedroom_main3_demand
-                  icon: mdi:fire
-
-  - title: "Anne's Bedroom"
-    icon: mdi:bed
-    visible:
-      #  anne
-      - user: "a3d54febf3f143edb7541ff90385a573"
-    cards:
-
-  - title: "Lucas's Bedroom"
-    icon: mdi:bed
-    visible:
-      #  mark
-      - user: "c907a83f81d34d878c4d939b5901004b"
-      # lucas
-      - user: "e34179027c4d4b5f991164df1ff02570"
-    cards:
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: "Lucas's Bedroom"
-            show_header_toggle: false
-            entities:
-              - name: Mode
-                entity: input_select.bedroom_annex2_mode
-              - name: "Current Temperature"
-                entity: sensor.bedroom_annex2_mean_temperature
-              - name: Settings
-                entity: group.g_bedroom_annex2_settings_ui
-                icon: mdi:cog
-          - name: "Lucas's Bedroom"
-            type: thermostat
-            entity: climate.bedroom_annex2_thermostat
-          - type: conditional
-            conditions:
-              - entity: climate.bedroom_annex2_thermostat
-                state: 'off'
-            card:
-              type: entities
-              entities:
-                - name: Manual Heat
-                  entity: switch.bedroom_annex2_demand
-                  icon: mdi:fire
-
   - title: Study
     icon: mdi:printer
-    badges:
-      - device_tracker.ricoh213w
-      - device_tracker.canonmg5550
     cards:
       - type: entities
         title: Study
@@ -314,10 +271,16 @@ views:
           - input_select.study_mode
           - entity: sensor.study_temperature
             name: "Current Temperature"
+          - name: Manual Heat
+            entity: switch.study_demand
+            icon: mdi:fire
           - entity: binary_sensor.study_door_contact_door_state
             name: "Study Door"
-          - group.g_study_media_dimming
-          - group.g_study_settings_ui
+          - type: divider
+          - entity: device_tracker.ricoh213w
+            icon: mdi:printer-alert
+          - entity: device_tracker.canonmg5550
+            icon: mdi:printer-wireless
 
       - type: entities
         entities:
@@ -327,27 +290,9 @@ views:
           - entity: media_player.study_kodi
             <<: *default_room_kodi
 
-      - name: "Study Heat"
-        type: thermostat
-        entity: climate.study_thermostat
-      - type: conditional
-        conditions:
-          - entity: climate.study_thermostat
-            state: 'off'
-        card:
-          type: entities
-          entities:
-            - name: Manual Heat
-              entity: switch.study_demand
-              icon: mdi:fire
 
   - title: Kitchen
     icon: mdi:stove
-    badges:
-      - entity: sensor.washing_machine_powernode_electric_kwh_value
-        name: Washing Machine Energy
-      - entity: sensor.washing_machine_powernode_electric_w_value
-        name: Washing Machine Power
     cards:
       - type: entities
         title: Kitchen
@@ -356,11 +301,14 @@ views:
           - input_select.kitchen_mode
           - entity: sensor.kitchen_mean_temperature
             name: "Current Temperature"
+          - name: Manual Heat
+            entity: switch.kitchen_demand
+            icon: mdi:fire
+          - type: divider
           - entity: binary_sensor.washing_machine
             name: Washing Machine
           - entity: binary_sensor.gin_fridge_contact_door_state
             name: "Gin Freezer"
-          - group.g_kitchen_settings_ui
 
       - type: entities
         entities:
@@ -370,19 +318,6 @@ views:
           - entity: media_player.outside_amplifier_zone_2
             <<: *default_room_onkyo
 
-      - name: "Kitchen Heat"
-        type: thermostat
-        entity: climate.kitchen_thermostat
-      - type: conditional
-        conditions:
-          - entity: climate.kitchen_thermostat
-            state: 'off'
-        card:
-          type: entities
-          entities:
-            - name: Manual Heat
-              entity: switch.kitchen_demand
-              icon: mdi:fire
 
   - title: Hall
     icon: mdi:fullscreen-exit
@@ -400,8 +335,6 @@ views:
         title: Hall
         show_header_toggle: false
         entities:
-          - climate.hall_thermostat
-          - climate.annex_hall_thermostat
           - entity: lock.front_door_lock_lock
             name: "Front Door Lock"
           - entity: binary_sensor.front_door_contact_door_state
@@ -439,9 +372,12 @@ views:
           - input_select.lounge_mode
           - entity: sensor.lounge_temperature
             name: "Current Temperature"
+          - name: Manual Heat
+            entity: switch.lounge_demand
+            icon: mdi:fire
+          - type: divider
           - group.lounge_lights
           - group.g_lounge_media_dimming
-          - group.g_lounge_settings_ui
 
       - type: entities
         entities:
@@ -450,20 +386,6 @@ views:
           - type: divider
           - entity: media_player.lounge_kodi
             <<: *default_room_kodi
-
-      - name: "Lounge Heat"
-        type: thermostat
-        entity: climate.lounge_thermostat
-      - type: conditional
-        conditions:
-          - entity: climate.lounge_thermostat
-            state: 'off'
-        card:
-          type: entities
-          entities:
-            - name: Manual Heat
-              entity: switch.lounge_demand
-              icon: mdi:fire
 
 
   - title: Library
@@ -476,26 +398,14 @@ views:
           - input_select.library_mode
           - entity: sensor.library_mean_temperature
             name: "Current Temperature"
-          - group.g_library_settings_ui
+          - name: Manual Heat
+            entity: switch.library_demand
+            icon: mdi:fire
 
       - type: entities
         entities:
           - entity: media_player.library_mpd
             <<: *default_room_mpd
-
-      - name: "Library Heat"
-        type: thermostat
-        entity: climate.library_thermostat
-      - type: conditional
-        conditions:
-          - entity: climate.library_thermostat
-            state: 'off'
-        card:
-          type: entities
-          entities:
-            - name: Manual Heat
-              entity: switch.library_demand
-              icon: mdi:fire
 
 
   - title: Ballroom
@@ -508,9 +418,12 @@ views:
           - input_select.ballroom_mode
           - entity: sensor.ballroom_temperature
             name: "Current Temperature"
+          - name: Manual Heat
+            entity: switch.ballroom_demand
+            icon: mdi:fire
+          - type: divider
           - group.ballroom_party_lights
           - group.g_ballroom_media_dimming
-          - group.g_ballroom_settings_ui
 
       - type: entities
         entities:
@@ -522,50 +435,6 @@ views:
           - type: divider
           - entity: media_player.ballroom_amplifier
             <<: *default_room_onkyo
-
-      - name: "Ballroom Heat"
-        type: thermostat
-        entity: climate.ballroom_thermostat
-      - type: conditional
-        conditions:
-          - entity: climate.ballroom_thermostat
-            state: 'off'
-        card:
-          type: entities
-          entities:
-            - name: Manual Heat
-              entity: switch.ballroom_demand
-              icon: mdi:fire
-
-  - title: Guest Room
-    icon: mdi:bed-empty
-    cards:
-      - type: vertical-stack
-        cards:
-          - type: entities
-            title: Guest Room
-            show_header_toggle: false
-            entities:
-              - name: Mode
-                entity: input_select.guest_room_mode
-              - name: "Current Temperature"
-                entity: sensor.guest_room_mean_temperature
-              - name: Settings
-                entity: group.g_guest_room_settings_ui
-                icon: mdi:cog
-          - name: Guest Room
-            type: thermostat
-            entity: climate.guest_room_thermostat
-          - type: conditional
-            conditions:
-              - entity: climate.guest_room_thermostat
-                state: 'off'
-            card:
-              type: entities
-              entities:
-                - name: Manual Heat
-                  entity: switch.guest_room_demand
-                  icon: mdi:power
 
 
   - title: Outside
@@ -680,82 +549,6 @@ views:
             name: UPS Charge
           - entity: sensor.eaton_battery_runtime
             name: UPS Runtime
-
-  - title: Multizone Audio
-    icon: mdi:music
-    cards:
-      - type: vertical-stack
-        cards:
-          - title: Players
-            type: entities
-            entities:
-              - entity: media_player.study_mpd
-                name: Study Iris
-                icon: mdi:printer
-                <<: *default_mini_mpd
-              - entity: media_player.kitchen_mpd
-                name: Kitchen Iris
-                icon: mdi:stove
-                <<: *default_mini_mpd
-              - entity: media_player.lounge_mpd
-                name: Lounge Iris
-                icon: mdi:sofa
-                <<: *default_mini_mpd
-              - entity: media_player.library_mpd
-                name: Library Iris
-                icon: mdi:library
-                <<: *default_mini_mpd
-              - entity: media_player.ballroom_mpd
-                name: Ballroom Iris
-                icon: mdi:projector
-                <<: *default_mini_mpd
-              - entity: media_player.outside_mpd
-                name: Outside Iris
-                icon: mdi:pine-tree
-                <<: *default_mini_mpd
-          - title: Amplifiers
-            type: entities
-            entities:
-              - name: Kitchen Amplifier
-                entity: media_player.outside_amplifier_zone_2
-                icon: mdi:stove
-                <<: *default_room_onkyo
-              - name: Ballroom Amplifier
-                entity: media_player.ballroom_amplifier
-                icon: mdi:projector
-                <<: *default_room_onkyo
-              - name: Outside Amplifier
-                entity: media_player.outside_amplifier
-                icon: mdi:pine-tree
-                <<: *default_room_onkyo
-
-          - title: Zones
-            type: entities
-            entities:
-              - entity: media_player.snapcast_client_study
-                name: Study
-                icon: mdi:printer
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_kitchen
-                name: Kitchen
-                icon: mdi:stove
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_lounge
-                name: Lounge
-                icon: mdi:sofa
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_library
-                name: Library
-                icon: mdi:library
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_ballroom
-                name: Ballroom
-                icon: mdi:projector
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_outside
-                name: Outside
-                icon: mdi:pine-tree
-                <<: *default_mini_snapclient
 
 
   - title: Settings
