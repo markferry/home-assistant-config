@@ -413,6 +413,7 @@ views:
             name: Main Heating Thermostat
           - entity: switch.main_heating_thermostat_switch
             name: Main Heating Holiday Mode
+            icon: mdi:bag-checked
       - type: entities
         title: Annex Heating
         show_header_toggle: false
@@ -421,6 +422,7 @@ views:
             name: Annex Heating Thermostat
           - entity: switch.annex_heating_thermostat_switch
             name: Annex Heating Holiday Mode
+            icon: mdi:bag-checked
 
   - title: Lounge
     icon: mdi:sofa
