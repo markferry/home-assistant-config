@@ -134,6 +134,82 @@ views:
             entity: switch.guest_room_demand
             icon: mdi:fire
 
+  - title: Multizone Audio
+    icon: mdi:music
+    cards:
+      - type: vertical-stack
+        cards:
+          - title: Players
+            type: entities
+            entities:
+              - entity: media_player.study_mpd
+                name: Study Iris
+                icon: mdi:printer
+                <<: *default_mini_mpd
+              - entity: media_player.kitchen_mpd
+                name: Kitchen Iris
+                icon: mdi:stove
+                <<: *default_mini_mpd
+              - entity: media_player.lounge_mpd
+                name: Lounge Iris
+                icon: mdi:sofa
+                <<: *default_mini_mpd
+              - entity: media_player.library_mpd
+                name: Library Iris
+                icon: mdi:library
+                <<: *default_mini_mpd
+              - entity: media_player.ballroom_mpd
+                name: Ballroom Iris
+                icon: mdi:projector
+                <<: *default_mini_mpd
+              - entity: media_player.outside_mpd
+                name: Outside Iris
+                icon: mdi:pine-tree
+                <<: *default_mini_mpd
+          - title: Amplifiers
+            type: entities
+            entities:
+              - name: Kitchen Amplifier
+                entity: media_player.outside_amplifier_zone_2
+                icon: mdi:stove
+                <<: *default_room_onkyo
+              - name: Ballroom Amplifier
+                entity: media_player.ballroom_amplifier
+                icon: mdi:projector
+                <<: *default_room_onkyo
+              - name: Outside Amplifier
+                entity: media_player.outside_amplifier
+                icon: mdi:pine-tree
+                <<: *default_room_onkyo
+          - title: Zones
+            type: entities
+            entities:
+              - entity: media_player.snapcast_client_study
+                name: Study
+                icon: mdi:printer
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_kitchen
+                name: Kitchen
+                icon: mdi:stove
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_lounge
+                name: Lounge
+                icon: mdi:sofa
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_library
+                name: Library
+                icon: mdi:library
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_ballroom
+                name: Ballroom
+                icon: mdi:projector
+                <<: *default_mini_snapclient
+              - entity: media_player.snapcast_client_outside
+                name: Outside
+                icon: mdi:pine-tree
+                <<: *default_mini_snapclient
+
+
   - title: "Mark's Bedroom"
     icon: mdi:bed
     visible:
@@ -471,82 +547,6 @@ views:
             name: UPS Charge
           - entity: sensor.eaton_battery_runtime
             name: UPS Runtime
-
-  - title: Multizone Audio
-    icon: mdi:music
-    cards:
-      - type: vertical-stack
-        cards:
-          - title: Players
-            type: entities
-            entities:
-              - entity: media_player.study_mpd
-                name: Study Iris
-                icon: mdi:printer
-                <<: *default_mini_mpd
-              - entity: media_player.kitchen_mpd
-                name: Kitchen Iris
-                icon: mdi:stove
-                <<: *default_mini_mpd
-              - entity: media_player.lounge_mpd
-                name: Lounge Iris
-                icon: mdi:sofa
-                <<: *default_mini_mpd
-              - entity: media_player.library_mpd
-                name: Library Iris
-                icon: mdi:library
-                <<: *default_mini_mpd
-              - entity: media_player.ballroom_mpd
-                name: Ballroom Iris
-                icon: mdi:projector
-                <<: *default_mini_mpd
-              - entity: media_player.outside_mpd
-                name: Outside Iris
-                icon: mdi:pine-tree
-                <<: *default_mini_mpd
-          - title: Amplifiers
-            type: entities
-            entities:
-              - name: Kitchen Amplifier
-                entity: media_player.outside_amplifier_zone_2
-                icon: mdi:stove
-                <<: *default_room_onkyo
-              - name: Ballroom Amplifier
-                entity: media_player.ballroom_amplifier
-                icon: mdi:projector
-                <<: *default_room_onkyo
-              - name: Outside Amplifier
-                entity: media_player.outside_amplifier
-                icon: mdi:pine-tree
-                <<: *default_room_onkyo
-
-          - title: Zones
-            type: entities
-            entities:
-              - entity: media_player.snapcast_client_study
-                name: Study
-                icon: mdi:printer
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_kitchen
-                name: Kitchen
-                icon: mdi:stove
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_lounge
-                name: Lounge
-                icon: mdi:sofa
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_library
-                name: Library
-                icon: mdi:library
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_ballroom
-                name: Ballroom
-                icon: mdi:projector
-                <<: *default_mini_snapclient
-              - entity: media_player.snapcast_client_outside
-                name: Outside
-                icon: mdi:pine-tree
-                <<: *default_mini_snapclient
 
 
   - title: Settings
