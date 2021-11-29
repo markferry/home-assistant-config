@@ -106,13 +106,12 @@ views:
               - "on"
             show_empty: false
           - type: entities
-            title: "TP-Link Power Switches"
+            title: "Annex Water"
             show_header_toggle: false
             entities:
-              - entity: switch.growtowerwhalepowermonitor
-                name: Grow Tower
               - entity: switch.whale_power_tracker_2
-                name: Whale Power Tracker 2
+                name: Annex Water Pump
+                icon: mdi:water-pump
       - type: entities
         title: Rooms
         show_header_toggle: false
