@@ -105,6 +105,14 @@ views:
             state_filter:
               - "on"
             show_empty: false
+          - type: entities
+            title: "TP-Link Power Switches"
+            show_header_toggle: false
+            entities:
+              - entity: switch.growtowerwhalepowermonitor
+                name: Grow Tower
+              - entity: switch.whale_power_tracker_2
+                name: Whale Power Tracker 2
       - type: entities
         title: Rooms
         show_header_toggle: false
@@ -208,6 +216,36 @@ views:
                 name: Outside
                 icon: mdi:pine-tree
                 <<: *default_mini_snapclient
+
+
+  - title: "Grow Tower"
+    icon: mdi:sprout
+    visible:
+      #  mark
+      - user: "c907a83f81d34d878c4d939b5901004b"
+      # lucas
+      - user: "e34179027c4d4b5f991164df1ff02570"
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: "Grow Tower 1"
+            show_header_toggle: false
+            entities:
+              - name: Lights Isolate
+                icon: mdi:lightbulb
+                entity: switch.whalebargrowtower1lightsisolate
+              - name: Pump
+                entity: switch.whalebarngrowtower1pump
+                icon: mdi:water-pump
+          - type: entities
+            title: "Whale Power Monitor"
+            show_header_toggle: false
+            entities:
+              - name: Switch
+                entity: switch.growtowerwhalepowermonitor
+              - name: Current Consumption
+                entity: sensor.growtowerwhalepowermonitor_current_consumption
 
 
   - title: "Mark's Bedroom"
