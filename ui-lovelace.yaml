@@ -105,13 +105,6 @@ views:
             state_filter:
               - "on"
             show_empty: false
-          - type: entities
-            title: "Annex Water"
-            show_header_toggle: false
-            entities:
-              - entity: switch.whale_power_tracker_2
-                name: Annex Water Pump
-                icon: mdi:water-pump
       - type: entities
         title: Rooms
         show_header_toggle: false
