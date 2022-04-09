@@ -72,6 +72,8 @@ views:
     cards:
       - type: vertical-stack
         cards:
+          - type: weather-forecast
+            entity: weather.home
           - type: entities
             title: Where is Everyone?
             show_header_toggle: false
