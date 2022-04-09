@@ -108,16 +108,26 @@ views:
               - "on"
             show_empty: false
       - type: entities
-        title: Rooms
+        title: Room Heating
         show_header_toggle: false
         entities:
-          - input_select.study_mode
-          - input_select.kitchen_mode
-          - input_select.lounge_mode
-          - input_select.library_mode
-          - input_select.ballroom_mode
+          - name: Study Heat
+            entity: switch.study_demand
+            icon: mdi:fire
+          - name: Kitchen Heat
+            entity: switch.study_demand
+            icon: mdi:fire
+          - name: Lounge Heat
+            entity: switch.lounge_demand
+            icon: mdi:fire
+          - name: Library Heat
+            entity: switch.library_demand
+            icon: mdi:fire
+          - name: Ballroom Heat
+            entity: switch.ballroom_demand
+            icon: mdi:fire
       - type: entities
-        title: Bedrooms
+        title: Bedroom Heating
         show_header_toggle: false
         entities:
           - name: "Mark's Bedroom Mode"
