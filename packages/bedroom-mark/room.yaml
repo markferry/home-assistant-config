@@ -26,7 +26,7 @@ group:
   bedroom_mark_setpoints:
     name: "Mark's Bedroom Setpoints"
     entities:
-      - climate.bedroom_mark_south_thermostat
+      - climate.shellytrv_60a423d3f714
       - climate.bedroom_mark_north_thermostat
 
   bedroom_mark_lights:

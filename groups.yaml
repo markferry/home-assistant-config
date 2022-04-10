@@ -144,7 +144,7 @@ temperatures:
     - sensor.kitchen_west_current_temperature
     - sensor.library_east_current_temperature
     - sensor.lounge_east_current_temperature
-    - sensor.bedroom_mark_south_current_temperature
+    - sensor.shellytrv_60a423d3f714_temperature
     - sensor.bedroom_mark_north_current_temperature
     - sensor.bedroom_main2_east_current_temperature
     - sensor.bedroom_main3_east_current_temperature
@@ -157,7 +157,7 @@ thermostat_devices:
   entities:
     - climate.annex_hall_west_thermostat
     - climate.ballroom_east_thermostat
-    - climate.bedroom_mark_south_thermostat
+    - climate.shellytrv_60a423d3f714
     - climate.bedroom_mark_north_thermostat
     - climate.hall_east_thermostat
     - climate.hall_west_thermostat
