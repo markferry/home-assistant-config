@@ -661,7 +661,8 @@ views:
           - sensor.kitchen_current_temperature
           - sensor.library_current_temperature
           - sensor.lounge_east_current_temperature
-          - sensor.bedroom_mark_south_current_temperature
+          - name: Bedroom Mark South Temperature
+            entity: sensor.shellytrv_60a423d3f714_temperature
           - sensor.bedroom_mark_north_current_temperature
           - sensor.bedroom_main2_current_temperature
           - sensor.bedroom_main3_current_temperature
@@ -690,7 +691,8 @@ views:
         entities:
           - climate.annex_hall_west_thermostat
           - climate.ballroom_east_thermostat
-          - climate.bedroom_mark_south_thermostat
+          - name: Bedroom Mark South Thermostat
+            entity: climate.shellytrv_60a423d3f714
           - climate.bedroom_mark_north_thermostat
           - climate.bedroom_main2_east_thermostat
           - climate.bedroom_main3_east_thermostat
