@@ -147,6 +147,7 @@ logger:
 
 # View all events in a logbook
 logbook: !include logbook.yaml
+history: !include history.yaml
 
 # Customize database
 recorder:
