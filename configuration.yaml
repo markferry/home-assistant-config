@@ -220,7 +220,7 @@ script: !include_dir_merge_named scripts
 lovelace:
   mode: yaml
   resources:
-    - url: /local/mini-media-player-bundle.js?v=1.15.0
+    - url: /local/mini-media-player-bundle.js?v=1.16.2
       type: module
     - url: /local/scheduler-card/scheduler-card.js?v=0
       type: module
