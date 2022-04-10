@@ -482,14 +482,22 @@ views:
   - title: Outside
     icon: mdi:pine-tree
     cards:
-      - type: picture-glance
-        entities:
-          - entity: binary_sensor.camera_0_motion_detected
-            name: Driveway Motion
-        title: Driveway
-        entity: camera.camera_0
-        camera_image: camera.camera_0
-        camera_view: live
+      - type: horizontal-stack
+        cards:
+          - type: picture-glance
+            entities:
+              - entity: binary_sensor.camera_0_motion_detected
+                name: Driveway Motion
+            title: Driveway
+            entity: camera.camera_0
+            camera_image: camera.camera_0
+            camera_view: live
+          - type: picture-glance
+            title: East Lawn
+            entities: []
+            entity: camera.camera_c100_mainstream
+            camera_image: camera.camera_c100_mainstream
+            camera_view: live
 
       - type: entities
         entities:
