@@ -1,15 +1,17 @@
-# Used by both history and logbook
-exclude:
-  domains:
-    - automation
-    - updater
-    - device_tracker
-  entities:
-    - sun.sun   # Don't record sun data
-    - input_boolean.washing_machine_debouncer
-    - input_boolean.hottub_debouncer
+# on-demand-heating data only
 include:
-  domains:
-    - ups
-    - switch
-    - sensor
+  entities:
+    - group.main_heating_demand
+    - group.annex_heating_demand
+    - climate.annex_hall_thermostat
+    - climate.ballroom_east_thermostat
+    - climate.bedroom_mark_thermostat
+    - climate.hall_east_thermostat
+    - climate.hall_west_thermostat
+    - climate.kitchen_thermostat
+    - climate.library_thermostat
+    - climate.lounge_east_thermostat
+    - climate.study_thermostat
+    - climate.guest_room_thermostat
+    - climate.bedroom_jerome_thermostat
+    - climate.bedroom_annex2_thermostat
