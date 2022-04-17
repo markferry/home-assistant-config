@@ -132,7 +132,6 @@ homeassistant:
     package_table_tennis: !include packages/table-tennis.yaml
 
 config:
-discovery:
 
 zone: !include zone.yaml
 
