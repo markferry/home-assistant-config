@@ -81,7 +81,9 @@ automation:
   condition:
     - condition: state
       entity_id: binary_sensor.hottub
-      state: 'off'
+      state:
+        - 'off'
+        - 'unknown'
   action:
     # turn on binary_sensor.hottub
     - service: mqtt.publish
@@ -103,7 +105,9 @@ automation:
   condition:
     - condition: state
       entity_id: binary_sensor.hottub
-      state: 'on'
+      state:
+        - 'on'
+        - 'unknown'
   action:
     # turn off binary_sensor.hottub
     - service: mqtt.publish
