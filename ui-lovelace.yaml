@@ -113,7 +113,7 @@ views:
             entity: switch.study_demand
             icon: mdi:fire
           - name: Kitchen Heat
-            entity: switch.study_demand
+            entity: switch.kitchen_demand
             icon: mdi:fire
           - name: Lounge Heat
             entity: switch.lounge_demand
