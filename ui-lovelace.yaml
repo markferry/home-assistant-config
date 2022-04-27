@@ -523,19 +523,6 @@ views:
           - entity: sensor.oil_annex_days_remaining
             name: "Annex Oil Days Remaining"
 
-      - type: entities
-        title: Hot Tub
-        show_header_toggle: false
-        entities:
-          - entity: binary_sensor.hottub
-            name: Heating
-          - entity: switch.hottub_powernode_switch
-            name: Power Supply
-          - entity: sensor.hottub_powernode_electric_kwh_value
-            name: Energy
-          - entity: sensor.hottub_powernode_electric_w_value
-            name: Power
-
 
   - title: Armoury
     icon: mdi:security
