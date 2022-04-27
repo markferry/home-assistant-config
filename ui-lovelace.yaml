@@ -191,7 +191,7 @@ views:
                 entity: media_player.outside_amplifier
                 icon: mdi:pine-tree
                 <<: *default_room_onkyo
-          - title: Zones
+          - title: Zone Balance
             type: entities
             entities:
               - entity: media_player.snapcast_client_study
