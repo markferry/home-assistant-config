@@ -95,6 +95,8 @@ views:
                 name: Aneta
               - entity: person.elle_higgins
                 name: Elle
+              - entity: person.goody_emma
+                name: Goody
               - entity: person.jerome_dilley
                 name: Jerome
               - entity: person.krzysztof_olga
