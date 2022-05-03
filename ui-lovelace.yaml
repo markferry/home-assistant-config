@@ -73,7 +73,7 @@ views:
       - type: vertical-stack
         cards:
           - type: entities
-            title: Where is Everyone?
+            title: "Who's Home?"
             show_header_toggle: false
             entities:
               - entity: person.mark
@@ -87,24 +87,28 @@ views:
               - entity: person.emma_jane_ditter
                 name: Emma
           - type: entity-filter
+            state_filter:
+              - "home"
+            show_empty: false
             entities:
-              - entity: person.jerome_dilley
-                name: Jerome
-              - entity: person.rosalyn_hart
-                name: Ros
-              - entity: person.liane_smith
-                name: Liane
               - entity: person.aneta_jakielaszek
                 name: Aneta
-              - entity: person.thomas_northcote
-                name: Thomas
-              - entity: person.monica_commons
-                name: Monica
               - entity: person.elle_higgins
                 name: Elle
-            state_filter:
-              - "on"
-            show_empty: false
+              - entity: person.jerome_dilley
+                name: Jerome
+              - entity: person.krzysztof_olga
+                name: Krzysztof
+              - entity: person.liane_smith
+                name: Liane
+              - entity: person.meena_nayagam
+                name: Meena
+              - entity: person.monica_commons
+                name: Monica
+              - entity: person.rosalyn_hart
+                name: Ros
+              - entity: person.thomas_northcote
+                name: Thomas
       - type: entities
         title: Room Heating
         show_header_toggle: false
