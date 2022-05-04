@@ -99,6 +99,8 @@ views:
                 name: Goody
               - entity: person.jerome_dilley
                 name: Jerome
+              - entity: person.julia_vellacott
+                name: Julia
               - entity: person.krzysztof_olga
                 name: Krzysztof
               - entity: person.liane_smith
