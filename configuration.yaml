@@ -170,11 +170,8 @@ http:
     - ::1
 
 mqtt:
-  broker: !secret mqtt_broker
-  port: 1883
   client_id: home-assistant
   keepalive: 60
-  discovery: true
   discovery_prefix: homeassistant
 
 rfxtrx:
