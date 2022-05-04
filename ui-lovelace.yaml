@@ -109,7 +109,7 @@ views:
                 name: Meena
               - entity: person.monica_commons
                 name: Monica
-              - entity: person.rosalyn_hart
+              - entity: person.ros_hart
                 name: Ros
               - entity: person.thomas_northcote
                 name: Thomas
