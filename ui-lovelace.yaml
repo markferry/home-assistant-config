@@ -73,7 +73,7 @@ views:
       - type: vertical-stack
         cards:
           - type: entities
-            title: Where is Everyone?
+            title: "Who's Home?"
             show_header_toggle: false
             entities:
               - entity: person.mark
@@ -87,24 +87,32 @@ views:
               - entity: person.emma_jane_ditter
                 name: Emma
           - type: entity-filter
+            state_filter:
+              - "home"
+            show_empty: false
             entities:
-              - entity: person.jerome_dilley
-                name: Jerome
-              - entity: person.rosalyn_hart
-                name: Ros
-              - entity: person.liane_smith
-                name: Liane
               - entity: person.aneta_jakielaszek
                 name: Aneta
-              - entity: person.thomas_northcote
-                name: Thomas
-              - entity: person.monica_commons
-                name: Monica
               - entity: person.elle_higgins
                 name: Elle
-            state_filter:
-              - "on"
-            show_empty: false
+              - entity: person.goody_emma
+                name: Goody
+              - entity: person.jerome_dilley
+                name: Jerome
+              - entity: person.julia_vellacott
+                name: Julia
+              - entity: person.krzysztof_olga
+                name: Krzysztof
+              - entity: person.liane_smith
+                name: Liane
+              - entity: person.meena_nayagam
+                name: Meena
+              - entity: person.monica_commons
+                name: Monica
+              - entity: person.ros_hart
+                name: Ros
+              - entity: person.thomas_northcote
+                name: Thomas
       - type: entities
         title: Room Heating
         show_header_toggle: false
@@ -113,7 +121,7 @@ views:
             entity: switch.study_demand
             icon: mdi:fire
           - name: Kitchen Heat
-            entity: switch.study_demand
+            entity: switch.kitchen_demand
             icon: mdi:fire
           - name: Lounge Heat
             entity: switch.lounge_demand
@@ -191,7 +199,7 @@ views:
                 entity: media_player.outside_amplifier
                 icon: mdi:pine-tree
                 <<: *default_room_onkyo
-          - title: Zones
+          - title: Zone Balance
             type: entities
             entities:
               - entity: media_player.snapcast_client_study
@@ -522,19 +530,6 @@ views:
             name: "Annex Oil Percent"
           - entity: sensor.oil_annex_days_remaining
             name: "Annex Oil Days Remaining"
-
-      - type: entities
-        title: Hot Tub
-        show_header_toggle: false
-        entities:
-          - entity: binary_sensor.hottub
-            name: Heating
-          - entity: switch.hottub_powernode_switch
-            name: Power Supply
-          - entity: sensor.hottub_powernode_electric_kwh_value
-            name: Energy
-          - entity: sensor.hottub_powernode_electric_w_value
-            name: Power
 
 
   - title: Armoury
