@@ -92,31 +92,41 @@
         topic: 'ha/calendar/climate'
         payload: '{{trigger.to_state.attributes.message}}'
 
+# Trigger a Bin notification with an offset of <some> hours before the start time.
+# Cannot trigger on calendar state because of this so trigger every hour but
+# guard with a condition.
+#
+# One notification for any or all bins.
+#
 - alias: "Calendar Bin"
   trigger:
-    - platform: state
-      entity_id: calendar.bin
-      to: "on"
+    # Every hour at 5 mins past
+    - platform: time_pattern
+      minutes: "5"
+  variables:
+    # notify only between now+11h30m to now+12h00m
+    in_12h00m: "{{ now().timestamp() + 1*60*60 }}"
+    in_11h30m: "{{ in_12h00m - 0.5*60*60 }}"
+    is_black: "{{ in_12h00m >= (states.calendar.black_bin.attributes.start_time | as_timestamp) > in_11h30m }}"
+    is_blue: "{{ in_12h00m >= (states.calendar.blue_bin.attributes.start_time | as_timestamp) > in_11h30m }}"
+    is_green: "{{ in_12h00m >= (states.calendar.green_bin.attributes.start_time | as_timestamp) > in_11h30m }}"
+    event_title: >
+      {{ 'Bins Tomorrow: ' + ["Black" if is_black, "Blue" if is_blue, "Green" if is_green]|select('defined')|join(', ') }}
+  condition: >
+    {{ is_black or is_blue or is_green }}
   action:
     - service: mqtt.publish
       data_template:
         topic: 'ha/calendar/bin'
-        payload: >
-          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
-          {{l}}
+        payload: "{{event_title}}"
     - service: notify.whalebarn
       data_template:
-        message: >
-          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
-          {{"Bin Day: "+l}}
+        message: "{{event_title}}"
     - service: persistent_notification.create
       data_template:
         title: 'Bin Day'
-        message: >
-          {% set l = trigger.to_state.attributes.message.split(": ")|last %}
-          {{"Bin Day: "+l}}
+        message: "{{event_title}}"
         notification_id: 'bin-day'
-
 - alias: "Calendar Oil"
   trigger:
     - platform: state
