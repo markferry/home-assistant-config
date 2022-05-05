@@ -105,7 +105,7 @@
       minutes: "5"
   variables:
     # notify only between now+11h30m to now+12h00m
-    in_12h00m: "{{ now().timestamp() + 1*60*60 }}"
+    in_12h00m: "{{ now().timestamp() + 12*60*60 }}"
     in_11h30m: "{{ in_12h00m - 0.5*60*60 }}"
     is_black: "{{ in_12h00m >= (states.calendar.black_bin.attributes.start_time | as_timestamp) > in_11h30m }}"
     is_blue: "{{ in_12h00m >= (states.calendar.blue_bin.attributes.start_time | as_timestamp) > in_11h30m }}"
